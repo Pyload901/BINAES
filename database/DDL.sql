@@ -1,6 +1,6 @@
 --Creacion de tablas
 --PROYECTO POO Y BD 
---Version 1
+--Version 2 Agregando las llaves foranes
 
 CREATE DATABASE DataBank_Project
 
@@ -9,7 +9,7 @@ USE DataBank_Project
 CREATE TABLE EJEMPLAR(
 	id INT PRIMARY KEY,
 	nombre VARCHAR(50) NOT NULL,
-	--Imagen falta 
+	--Imagen falta, estaba de tipo IMAGE pero eso se cambiara
 	fecha_publicacion DATETIME NOT NULL,
 	disponibilidad VARCHAR(50) NOT NULL,
 	id_coleccion INT NOT NULL,
@@ -53,10 +53,14 @@ CREATE TABLE COLECCION(
 	id_tipo INT NOT NULL,
 	id_genero INT NOT NULL
 );
+CREATE TABLE AUTORXEJEMPLAR(
+    [id_autor] INTEGER NOT NULL,
+    [id_ejemplar] INTEGER NOT NULL
+);
 
 CREATE TABLE IDIOMA_EJEMPLAR(
 	id INT PRIMARY KEY,
-	idioma VARCHAR(50) NOT NULL
+	idioma CHAR(20) NOT NULL
 );
 
 CREATE TABLE ETIQUETA(
@@ -98,9 +102,8 @@ CREATE TABLE RESERVA(
 
 CREATE TABLE USUARIO(
 	id INT PRIMARY KEY,
-	nombre VARCHAR(50) NOT NULL,
 	institucion VARCHAR(50) NOT NULL,
-	telefono INT NOT NULL,
+	telefono CHAR(12) NOT NULL,
 	--fotografia
 	correo_electronico VARCHAR(50) NOT NULL,
 	id_rol INT NOT NULL,
@@ -109,6 +112,7 @@ CREATE TABLE USUARIO(
 
 CREATE TABLE DIRECCION(
 	id INT PRIMARY KEY,
+	nombre VARCHAR(30) NOT NULL,
 	residencia VARCHAR(100) NOT NULL,
 	departamente VARCHAR(50) NOT NULL,
 	municipio VARCHAR(50) NOT NULL,
@@ -118,8 +122,8 @@ CREATE TABLE DIRECCION(
 CREATE TABLE AREA(
 	id INT PRIMARY KEY,
 	nombre VARCHAR(50) NOT NULL,
-	descripcion VARCHAR(100) NOT NULL,
-	horario_abierto DATE NOT NULL,
+	descripcion VARCHAR(280) NOT NULL,
+	horario_abierto DATETIME NOT NULL,
 	nombre_responsable VARCHAR(50) NOT NULL
 );
 
@@ -136,10 +140,16 @@ CREATE TABLE OCUPACION_USUARIO(
 	ocupacion VARCHAR(50) NOT NULL
 );
 
+CREATE TABLE ROL(
+	id INT PRIMARY KEY,
+    nombre CHAR(30)
+);
+
 CREATE TABLE EVENTO(
 	id INT PRIMARY KEY,
 	titulo VARCHAR(50) NOT NULL,
-	Imagen IMAGE,
+    --La variable esta de tipo IMAGE pero eso se cambiara
+    Imagen IMAGE,
 	fecha_inicio DATE NOT NULL,
 	numero_asistentes INT NOT NULL,
 	id_area INT NOT NULL
@@ -151,4 +161,42 @@ CREATE TABLE OBJETIVO_EVENTO(
 	id_evento INT NOT NULL
 );
 GO
+
+--Creacion de llaves foraneas
+ALTER TABLE ETIQUETA ADD CONSTRAINT fk_ejemplar FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR(id);
+ALTER TABLE COLECCION ADD CONSTRAINT fk_coleccion_genero FOREIGN KEY (id_genero) REFERENCES GENERO_COLECCION(id);
+ALTER TABLE COLECCION ADD CONSTRAINT fk_tipo_coleccion FOREIGN KEY (id_tipo) REFERENCES TIPO_COLECCION(id);
+ALTER TABLE EJEMPLAR ADD CONSTRAINT fk_coleccion_ejemplar FOREIGN KEY (id_coleccion) REFERENCES COLECCION (id);
+ALTER TABLE EJEMPLAR ADD CONSTRAINT fk_idioma_ejemplar FOREIGN KEY (id_idioma) REFERENCES IDIOMA_EJEMPLAR(id);
+ALTER TABLE EJEMPLAR ADD CONSTRAINT fk_editorial_ejempalr FOREIGN KEY (id_editorial) REFERENCES EDITORIAL (id);
+ALTER TABLE EJEMPLAR ADD CONSTRAINT fk_formato_ejemplar FOREIGN KEY (id_formato) REFERENCES FORMATO (id);
+ALTER TABLE PRESTAMO ADD CONSTRAINT fk_ejemplar_prestamo FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR (id);
+ALTER TABLE PRESTAMO ADD CONSTRAINT fk_usuario_prestamo FOREIGN KEY (id_usuario) REFERENCES USUARIO(id);
+ALTER TABLE AUTORXEJEMPLAR ADD CONSTRAINT fk_autorxejemplar PRIMARY KEY (id_autor, id_ejemplar);
+ALTER TABLE PALABRA_CLAVE ADD CONSTRAINT fk_ejemplar_palabra_clave FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR(id);
+ALTER TABLE RESERVA ADD CONSTRAINT fk_reserva_ejemplar FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR(id);
+ALTER TABLE RESERVA ADD CONSTRAINT fk_usuario_reserva FOREIGN KEY (id_usuario) REFERENCES USUARIO(id);
+ALTER TABLE USUARIO ADD CONSTRAINT fk_rol_usuario FOREIGN KEY (id_rol) REFERENCES ROL(id);
+ALTER TABLE USUARIO ADD CONSTRAINT fk_ocupacion_usuario FOREIGN KEY (id_ocupacion) REFERENCES OCUPACION_USUARIO(id);
+ALTER TABLE INGRESO ADD CONSTRAINT fk_usuario_ingreso FOREIGN KEY (id_usuario) REFERENCES USUARIO(id);
+ALTER TABLE EVENTO ADD CONSTRAINT fk_area_evento FOREIGN KEY (id_area) REFERENCES AREA(id);
+ALTER TABLE OBJETIVO_EVENTO ADD CONSTRAINT fk_objetivo_evento FOREIGN KEY (id_evento) REFERENCES EVENTO(id);
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
