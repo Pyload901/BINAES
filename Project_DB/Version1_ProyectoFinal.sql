@@ -1,0 +1,154 @@
+--Creacion de tablas
+--PROYECTO POO Y BD 
+--Version 1
+
+CREATE DATABASE DataBank_Project
+
+USE DataBank_Project
+
+CREATE TABLE EJEMPLAR(
+	id INT PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL,
+	--Imagen falta 
+	fecha_publicacion DATETIME NOT NULL,
+	disponibilidad VARCHAR(50) NOT NULL,
+	id_coleccion INT NOT NULL,
+	id_idioma INT NOT NULL,
+	id_editorial INT NOT NULL,
+	id_formato INT NOT NULL,
+	id_autor INT NOT NULL
+);
+
+CREATE TABLE EDITORIAL(
+	id INT PRIMARY KEY,
+	editorial VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE FORMATO(
+	id INT PRIMARY KEY,
+	formato VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE PRESTAMO(
+	id INT PRIMARY KEY,
+	fecha_prestamo DATETIME NOT NULL,
+	fecha_devolucion DATETIME NOT NULL,
+	id_ejemplar INT NOT NULL,
+	id_usuario INT NOT NULL
+);
+
+CREATE TABLE GENERO_COLECCION(
+	id INT PRIMARY KEY,
+	formato VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE TIPO_COLECCION(
+	id INT PRIMARY KEY,
+	formato VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE COLECCION(
+	id INT PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL,
+	id_tipo INT NOT NULL,
+	id_genero INT NOT NULL
+);
+
+CREATE TABLE IDIOMA_EJEMPLAR(
+	id INT PRIMARY KEY,
+	idioma VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE ETIQUETA(
+	id INT PRIMARY KEY,
+	etiqueta VARCHAR(50) NOT NULL,
+	tipo_etiqueta VARCHAR(50) NOT NULL,
+	id_ejemplar INT NOT NULL
+);
+
+CREATE TABLE NOMBRE_ETIQUETA(
+	id INT PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE FORMATO_EJEMPLAR(
+	id INT PRIMARY KEY,
+	formato VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE AUTOR(
+	id INT PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE PALABRA_CLAVE(
+	id INT PRIMARY KEY,
+	palabra VARCHAR(50) NOT NULL,
+	id_ejemplar INT NOT NULL
+);
+
+CREATE TABLE RESERVA(
+	id INT PRIMARY KEY,
+	fecha_reserva DATETIME NOT NULL,
+	fecha_prestamo DATETIME NOT NULL,
+	fecha_devolucion DATETIME NOT NULL,
+	id_ejemplar INT NOT NULL,
+	id_usuario INT NOT NULL
+);
+
+CREATE TABLE USUARIO(
+	id INT PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL,
+	institucion VARCHAR(50) NOT NULL,
+	telefono INT NOT NULL,
+	--fotografia
+	correo_electronico VARCHAR(50) NOT NULL,
+	id_rol INT NOT NULL,
+	id_ocupacion INT NOT NULL
+);
+
+CREATE TABLE DIRECCION(
+	id INT PRIMARY KEY,
+	residencia VARCHAR(100) NOT NULL,
+	departamente VARCHAR(50) NOT NULL,
+	municipio VARCHAR(50) NOT NULL,
+	id_usuario INT NOT NULL
+);
+
+CREATE TABLE AREA(
+	id INT PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL,
+	descripcion VARCHAR(100) NOT NULL,
+	horario_abierto DATE NOT NULL,
+	nombre_responsable VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE INGRESO(
+	id INT PRIMARY KEY,
+	fecha_entrada DATE NOT NULL,
+	fecha_salida DATE NOT NULL,
+	id_area INT NOT NULL,
+	id_usuario INT NOT NULL
+);
+
+CREATE TABLE OCUPACION_USUARIO(
+	id INT PRIMARY KEY,
+	ocupacion VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE EVENTO(
+	id INT PRIMARY KEY,
+	titulo VARCHAR(50) NOT NULL,
+	Imagen IMAGE,
+	fecha_inicio DATE NOT NULL,
+	numero_asistentes INT NOT NULL,
+	id_area INT NOT NULL
+);
+
+CREATE TABLE OBJETIVO_EVENTO(
+	id INT PRIMARY KEY,
+	objetivo VARCHAR(50) NOT NULL,
+	id_evento INT NOT NULL
+);
+GO
+
