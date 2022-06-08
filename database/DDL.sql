@@ -1,17 +1,15 @@
---Creacion de tablas
---PROYECTO POO Y BD 
---Version 2 Agregando las llaves foranes
+--PROYECTO BINAES
 
-CREATE DATABASE DataBank_Project
+CREATE DATABASE BINAES
 
-USE DataBank_Project
+USE BINAES
 
 CREATE TABLE EJEMPLAR(
 	id INT PRIMARY KEY,
-	nombre VARCHAR(50) NOT NULL,
-	--Imagen falta, estaba de tipo IMAGE pero eso se cambiara
+	nombre VARCHAR(100) NOT NULL,
+	imagen VARCHAR(50) NOT NULL,
 	fecha_publicacion DATETIME NOT NULL,
-	disponibilidad VARCHAR(50) NOT NULL,
+	disponibilidad INT NOT NULL,
 	id_coleccion INT NOT NULL,
 	id_idioma INT NOT NULL,
 	id_editorial INT NOT NULL,
@@ -24,27 +22,36 @@ CREATE TABLE EDITORIAL(
 	editorial VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE FORMATO(
+CREATE TABLE FORMATO_EJEMPLAR(
 	id INT PRIMARY KEY,
-	formato VARCHAR(50) NOT NULL
+	formato VARCHAR(10) NOT NULL
 );
 
-CREATE TABLE PRESTAMO(
+CREATE TABLE IDIOMA_EJEMPLAR(
 	id INT PRIMARY KEY,
-	fecha_prestamo DATETIME NOT NULL,
-	fecha_devolucion DATETIME NOT NULL,
-	id_ejemplar INT NOT NULL,
-	id_usuario INT NOT NULL
+	idioma CHAR(20) NOT NULL
+);
+
+CREATE TABLE NOMBRE_ETIQUETA(
+	id INT PRIMARY KEY,
+	nombre VARCHAR(4) NOT NULL
+);
+
+CREATE TABLE ETIQUETA(
+	id INT PRIMARY KEY,
+	etiqueta VARCHAR(50) NOT NULL,
+	id_nombre_etiqueta INT NOT NULL,
+	id_ejemplar INT NOT NULL
 );
 
 CREATE TABLE GENERO_COLECCION(
 	id INT PRIMARY KEY,
-	formato VARCHAR(50) NOT NULL
+	formato VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE TIPO_COLECCION(
 	id INT PRIMARY KEY,
-	formato VARCHAR(50) NOT NULL
+	formato VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE COLECCION(
@@ -53,36 +60,15 @@ CREATE TABLE COLECCION(
 	id_tipo INT NOT NULL,
 	id_genero INT NOT NULL
 );
-CREATE TABLE AUTORXEJEMPLAR(
-    [id_autor] INTEGER NOT NULL,
-    [id_ejemplar] INTEGER NOT NULL
-);
-
-CREATE TABLE IDIOMA_EJEMPLAR(
-	id INT PRIMARY KEY,
-	idioma CHAR(20) NOT NULL
-);
-
-CREATE TABLE ETIQUETA(
-	id INT PRIMARY KEY,
-	etiqueta VARCHAR(50) NOT NULL,
-	tipo_etiqueta VARCHAR(50) NOT NULL,
-	id_ejemplar INT NOT NULL
-);
-
-CREATE TABLE NOMBRE_ETIQUETA(
-	id INT PRIMARY KEY,
-	nombre VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE FORMATO_EJEMPLAR(
-	id INT PRIMARY KEY,
-	formato VARCHAR(50) NOT NULL
-);
 
 CREATE TABLE AUTOR(
 	id INT PRIMARY KEY,
 	nombre VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE AUTORXEJEMPLAR(
+    id_autor INT NOT NULL,
+    id_ejemplar INT NOT NULL
 );
 
 CREATE TABLE PALABRA_CLAVE(
@@ -94,10 +80,28 @@ CREATE TABLE PALABRA_CLAVE(
 CREATE TABLE RESERVA(
 	id INT PRIMARY KEY,
 	fecha_reserva DATETIME NOT NULL,
-	fecha_prestamo DATETIME NOT NULL,
-	fecha_devolucion DATETIME NOT NULL,
+	fecha_prestamo DATETIME NULL,
+	fecha_devolucion DATETIME NULL,
 	id_ejemplar INT NOT NULL,
 	id_usuario INT NOT NULL
+);
+
+CREATE TABLE PRESTAMO(
+	id INT PRIMARY KEY,
+	fecha_prestamo DATETIME NOT NULL,
+	fecha_devolucion DATETIME NULL,
+	id_ejemplar INT NOT NULL,
+	id_usuario INT NOT NULL
+);
+
+CREATE TABLE ROL(
+	id CHAR(6) PRIMARY KEY,
+    nombre CHAR(20)
+);
+
+CREATE TABLE OCUPACION_USUARIO(
+	id INT PRIMARY KEY,
+	ocupacion VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE USUARIO(
@@ -110,54 +114,34 @@ CREATE TABLE USUARIO(
 	id_ocupacion INT NOT NULL
 );
 
-CREATE TABLE DIRECCION(
-	id INT PRIMARY KEY,
-	nombre VARCHAR(30) NOT NULL,
-	residencia VARCHAR(100) NOT NULL,
-	departamente VARCHAR(50) NOT NULL,
-	municipio VARCHAR(50) NOT NULL,
-	id_usuario INT NOT NULL
-);
-
 CREATE TABLE AREA(
 	id INT PRIMARY KEY,
-	nombre VARCHAR(50) NOT NULL,
+	nombre VARCHAR(40) NOT NULL,
 	descripcion VARCHAR(280) NOT NULL,
-	horario_abierto DATETIME NOT NULL,
+	horario_abierto VARCHAR(20) NOT NULL,
 	nombre_responsable VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE INGRESO(
 	id INT PRIMARY KEY,
-	fecha_entrada DATE NOT NULL,
-	fecha_salida DATE NOT NULL,
+	fecha_entrada DATETIME NOT NULL,
+	fecha_salida DATETIME NULL,
 	id_area INT NOT NULL,
 	id_usuario INT NOT NULL
-);
-
-CREATE TABLE OCUPACION_USUARIO(
-	id INT PRIMARY KEY,
-	ocupacion VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE ROL(
-	id INT PRIMARY KEY,
-    nombre CHAR(30)
 );
 
 CREATE TABLE EVENTO(
 	id INT PRIMARY KEY,
 	titulo VARCHAR(50) NOT NULL,
-    --La variable esta de tipo IMAGE pero eso se cambiara
-    Imagen IMAGE,
-	fecha_inicio DATE NOT NULL,
+    Imagen VARCHAR(100) NOT NULL,
+	fecha_inicio DATETIME NOT NULL,
 	numero_asistentes INT NOT NULL,
 	id_area INT NOT NULL
 );
 
 CREATE TABLE OBJETIVO_EVENTO(
 	id INT PRIMARY KEY,
-	objetivo VARCHAR(50) NOT NULL,
+	objetivo VARCHAR(150) NOT NULL,
 	id_evento INT NOT NULL
 );
 GO
