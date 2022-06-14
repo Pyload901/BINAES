@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.tabAdmin = new System.Windows.Forms.TabControl();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.tabPrestamo = new System.Windows.Forms.TabPage();
@@ -60,8 +59,6 @@
             this.tabEventos = new System.Windows.Forms.TabPage();
             this.tlpAdminEventos = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -74,8 +71,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.mspMenu = new System.Windows.Forms.MenuStrip();
@@ -93,7 +90,6 @@
             this.tabEventos.SuspendLayout();
             this.tlpAdminEventos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.mspMenu.SuspendLayout();
@@ -464,30 +460,25 @@
             this.tlpAdminEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tlpAdminEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tlpAdminEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlpAdminEventos.Controls.Add(this.dataGridView2, 1, 3);
-            this.tlpAdminEventos.Controls.Add(this.pictureBox1, 1, 0);
-            this.tlpAdminEventos.Controls.Add(this.label11, 1, 1);
-            this.tlpAdminEventos.Controls.Add(this.label12, 0, 2);
-            this.tlpAdminEventos.Controls.Add(this.textBox1, 0, 3);
-            this.tlpAdminEventos.Controls.Add(this.label13, 0, 4);
-            this.tlpAdminEventos.Controls.Add(this.dateTimePicker1, 0, 5);
-            this.tlpAdminEventos.Controls.Add(this.label14, 0, 6);
-            this.tlpAdminEventos.Controls.Add(this.dateTimePicker2, 0, 7);
-            this.tlpAdminEventos.Controls.Add(this.label16, 0, 8);
-            this.tlpAdminEventos.Controls.Add(this.comboBox1, 0, 11);
-            this.tlpAdminEventos.Controls.Add(this.numericUpDown1, 0, 13);
-            this.tlpAdminEventos.Controls.Add(this.label15, 0, 10);
-            this.tlpAdminEventos.Controls.Add(this.label17, 0, 12);
-            this.tlpAdminEventos.Controls.Add(this.richTextBox1, 0, 9);
-            this.tlpAdminEventos.Controls.Add(this.button2, 0, 15);
-            this.tlpAdminEventos.Controls.Add(this.button1, 1, 15);
-            this.tlpAdminEventos.Controls.Add(this.dataGridView3, 2, 3);
+            this.tlpAdminEventos.Controls.Add(this.dataGridView2, 1, 0);
+            this.tlpAdminEventos.Controls.Add(this.button2, 0, 12);
+            this.tlpAdminEventos.Controls.Add(this.button1, 1, 12);
+            this.tlpAdminEventos.Controls.Add(this.dataGridView3, 2, 0);
+            this.tlpAdminEventos.Controls.Add(this.numericUpDown1, 0, 11);
+            this.tlpAdminEventos.Controls.Add(this.label17, 0, 10);
+            this.tlpAdminEventos.Controls.Add(this.comboBox1, 0, 9);
+            this.tlpAdminEventos.Controls.Add(this.label15, 0, 8);
+            this.tlpAdminEventos.Controls.Add(this.richTextBox1, 0, 7);
+            this.tlpAdminEventos.Controls.Add(this.label16, 0, 6);
+            this.tlpAdminEventos.Controls.Add(this.dateTimePicker2, 0, 5);
+            this.tlpAdminEventos.Controls.Add(this.label14, 0, 4);
+            this.tlpAdminEventos.Controls.Add(this.dateTimePicker1, 0, 3);
+            this.tlpAdminEventos.Controls.Add(this.label13, 0, 2);
+            this.tlpAdminEventos.Controls.Add(this.textBox1, 0, 1);
+            this.tlpAdminEventos.Controls.Add(this.label12, 0, 0);
             this.tlpAdminEventos.Location = new System.Drawing.Point(0, 0);
             this.tlpAdminEventos.Name = "tlpAdminEventos";
-            this.tlpAdminEventos.RowCount = 16;
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventos.RowCount = 13;
             this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
@@ -513,36 +504,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(379, 117);
+            this.dataGridView2.Location = new System.Drawing.Point(379, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.tlpAdminEventos.SetRowSpan(this.dataGridView2, 11);
-            this.dataGridView2.Size = new System.Drawing.Size(370, 412);
+            this.tlpAdminEventos.SetRowSpan(this.dataGridView2, 12);
+            this.dataGridView2.Size = new System.Drawing.Size(370, 558);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(513, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 32);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(379, 38);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(370, 38);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "GESTIÓN DE EVENTOS";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -550,9 +517,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 76);
+            this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(370, 38);
+            this.label12.Size = new System.Drawing.Size(370, 47);
             this.label12.TabIndex = 3;
             this.label12.Text = "Titulo del evento:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -563,7 +530,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(3, 117);
+            this.textBox1.Location = new System.Drawing.Point(3, 50);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(370, 29);
             this.textBox1.TabIndex = 4;
@@ -574,16 +541,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 152);
+            this.label13.Location = new System.Drawing.Point(3, 94);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(370, 38);
+            this.label13.Size = new System.Drawing.Size(370, 47);
             this.label13.TabIndex = 5;
             this.label13.Text = "Fecha de inicio:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 193);
+            this.dateTimePicker1.Location = new System.Drawing.Point(3, 144);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(310, 29);
             this.dateTimePicker1.TabIndex = 17;
@@ -594,16 +561,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 228);
+            this.label14.Location = new System.Drawing.Point(3, 188);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(370, 38);
+            this.label14.Size = new System.Drawing.Size(370, 47);
             this.label14.TabIndex = 18;
             this.label14.Text = "Fecha de finalización:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(3, 269);
+            this.dateTimePicker2.Location = new System.Drawing.Point(3, 238);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(310, 29);
             this.dateTimePicker2.TabIndex = 19;
@@ -614,9 +581,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 304);
+            this.label16.Location = new System.Drawing.Point(3, 282);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(370, 38);
+            this.label16.Size = new System.Drawing.Size(370, 47);
             this.label16.TabIndex = 13;
             this.label16.Text = "Objetivos del evento:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -627,7 +594,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 421);
+            this.comboBox1.Location = new System.Drawing.Point(3, 426);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(370, 29);
             this.comboBox1.TabIndex = 14;
@@ -637,7 +604,7 @@
             this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Location = new System.Drawing.Point(3, 497);
+            this.numericUpDown1.Location = new System.Drawing.Point(3, 520);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(370, 29);
             this.numericUpDown1.TabIndex = 16;
@@ -648,9 +615,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 380);
+            this.label15.Location = new System.Drawing.Point(3, 376);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(370, 38);
+            this.label15.Size = new System.Drawing.Size(370, 47);
             this.label15.TabIndex = 20;
             this.label15.Text = "Tipo de salón: ";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -661,9 +628,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 456);
+            this.label17.Location = new System.Drawing.Point(3, 470);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(370, 38);
+            this.label17.Size = new System.Drawing.Size(370, 47);
             this.label17.TabIndex = 21;
             this.label17.Text = "Número de asistentes:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -673,43 +640,43 @@
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(3, 345);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 332);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(370, 32);
+            this.richTextBox1.Size = new System.Drawing.Size(370, 41);
             this.richTextBox1.TabIndex = 23;
             this.richTextBox1.Text = "";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(379, 573);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(370, 42);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(3, 573);
+            this.button2.Location = new System.Drawing.Point(3, 567);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(370, 42);
+            this.button2.Size = new System.Drawing.Size(370, 48);
             this.button2.TabIndex = 24;
             this.button2.Text = "Dejar de editar";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(379, 567);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(370, 48);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(755, 117);
+            this.dataGridView3.Location = new System.Drawing.Point(755, 3);
             this.dataGridView3.Name = "dataGridView3";
             this.tlpAdminEventos.SetRowSpan(this.dataGridView3, 13);
-            this.dataGridView3.Size = new System.Drawing.Size(498, 498);
+            this.dataGridView3.Size = new System.Drawing.Size(498, 612);
             this.dataGridView3.TabIndex = 26;
             // 
             // tabUsuarios
@@ -814,7 +781,6 @@
             this.tlpAdminEventos.ResumeLayout(false);
             this.tlpAdminEventos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.mspMenu.ResumeLayout(false);
@@ -866,8 +832,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaPublicacionEjemplar;
         private System.Windows.Forms.TableLayoutPanel tlpAdminEventos;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label13;
