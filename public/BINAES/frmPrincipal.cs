@@ -38,9 +38,17 @@ namespace BINAES
         }
         private void tabAdmin_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control && e.KeyValue == 'F')
+            if (e.Control)
             {
-                tabAdmin.SelectedIndex = 0;
+                switch (e.KeyValue)
+                {
+                    case 'F':
+                        tabAdmin.SelectedIndex = 0;
+                        break;
+                    case 'N':
+                        tabAdmin.SelectedIndex = 3;
+                        break;
+                }
             }
         }
 
@@ -49,5 +57,9 @@ namespace BINAES
             this.Text = tabAdmin.SelectedTab.Text;
         }
 
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            tabAdmin.Select();
+        }
     }
 }

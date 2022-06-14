@@ -209,9 +209,9 @@
             // añadirToolStripMenuItem
             // 
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.añadirToolStripMenuItem.Tag = "3";
-            this.añadirToolStripMenuItem.Text = "Añadir";
+            this.añadirToolStripMenuItem.Text = "Agregar [Ctrl + N]";
             // 
             // administradorDeEventosToolStripMenuItem
             // 
@@ -522,6 +522,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.tabAdmin.ResumeLayout(false);
             this.tabAgregar.ResumeLayout(false);
             this.mspMenu.ResumeLayout(false);
