@@ -58,7 +58,6 @@
             this.dtpFechaPublicacionEjemplar = new System.Windows.Forms.DateTimePicker();
             this.tabEventos = new System.Windows.Forms.TabPage();
             this.tlpAdminEventos = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -73,6 +72,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.mspMenu = new System.Windows.Forms.MenuStrip();
             this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +83,6 @@
             this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorDeEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label11 = new System.Windows.Forms.Label();
             this.tabAdmin.SuspendLayout();
             this.tabAgregar.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -494,18 +494,6 @@
             this.tlpAdminEventos.Size = new System.Drawing.Size(1256, 618);
             this.tlpAdminEventos.TabIndex = 0;
             // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(3, 567);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(333, 48);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Dejar de editar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -665,6 +653,30 @@
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(3, 567);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(333, 48);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Dejar de editar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(342, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(367, 47);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Imagen";
+            // 
             // tabUsuarios
             // 
             this.tabUsuarios.Location = new System.Drawing.Point(4, 33);
@@ -744,18 +756,6 @@
             this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(158, 20);
             this.administradorDeUsuariosToolStripMenuItem.Tag = "5";
             this.administradorDeUsuariosToolStripMenuItem.Text = "Administrador de usuarios";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(342, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(367, 47);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Imagen";
             // 
             // frmPrincipal
             // 
