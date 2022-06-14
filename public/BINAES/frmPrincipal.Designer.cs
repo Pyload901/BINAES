@@ -30,6 +30,7 @@
         {
             this.tabAdmin = new System.Windows.Forms.TabControl();
             this.tabBuscar = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPrestamo = new System.Windows.Forms.TabPage();
             this.tabReserva = new System.Windows.Forms.TabPage();
             this.tabAnadir = new System.Windows.Forms.TabPage();
@@ -43,8 +44,20 @@
             this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorDeEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabAdmin.SuspendLayout();
+            this.tabBuscar.SuspendLayout();
             this.mspMenu.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabAdmin
@@ -64,65 +77,77 @@
             this.tabAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabAdmin.Name = "tabAdmin";
             this.tabAdmin.SelectedIndex = 0;
-            this.tabAdmin.Size = new System.Drawing.Size(1095, 510);
+            this.tabAdmin.Size = new System.Drawing.Size(1264, 655);
             this.tabAdmin.TabIndex = 0;
             this.tabAdmin.TabStop = false;
+            this.tabAdmin.SelectedIndexChanged += new System.EventHandler(this.tabAdmin_SelectedIndexChanged);
+            this.tabAdmin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabAdmin_KeyDown);
             // 
             // tabBuscar
             // 
+            this.tabBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.tabBuscar.Controls.Add(this.tableLayoutPanel1);
             this.tabBuscar.Location = new System.Drawing.Point(4, 34);
             this.tabBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBuscar.Name = "tabBuscar";
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabBuscar.Size = new System.Drawing.Size(1087, 472);
+            this.tabBuscar.Size = new System.Drawing.Size(1256, 617);
             this.tabBuscar.TabIndex = 0;
             this.tabBuscar.Text = "Búscar";
-            this.tabBuscar.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Código ejemplar";
             // 
             // tabPrestamo
             // 
-            this.tabPrestamo.Location = new System.Drawing.Point(4, 5);
+            this.tabPrestamo.Location = new System.Drawing.Point(4, 34);
             this.tabPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPrestamo.Name = "tabPrestamo";
             this.tabPrestamo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPrestamo.Size = new System.Drawing.Size(1087, 501);
+            this.tabPrestamo.Size = new System.Drawing.Size(1256, 617);
             this.tabPrestamo.TabIndex = 1;
             this.tabPrestamo.Text = "Préstamo";
             this.tabPrestamo.UseVisualStyleBackColor = true;
             // 
             // tabReserva
             // 
-            this.tabReserva.Location = new System.Drawing.Point(4, 5);
+            this.tabReserva.Location = new System.Drawing.Point(4, 34);
             this.tabReserva.Name = "tabReserva";
             this.tabReserva.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReserva.Size = new System.Drawing.Size(1087, 501);
+            this.tabReserva.Size = new System.Drawing.Size(1256, 617);
             this.tabReserva.TabIndex = 2;
             this.tabReserva.Text = "Reserva";
             this.tabReserva.UseVisualStyleBackColor = true;
             // 
             // tabAnadir
             // 
-            this.tabAnadir.Location = new System.Drawing.Point(4, 5);
+            this.tabAnadir.Location = new System.Drawing.Point(4, 34);
             this.tabAnadir.Name = "tabAnadir";
-            this.tabAnadir.Size = new System.Drawing.Size(1087, 501);
+            this.tabAnadir.Size = new System.Drawing.Size(1256, 617);
             this.tabAnadir.TabIndex = 3;
             this.tabAnadir.Text = "Añadir";
             this.tabAnadir.UseVisualStyleBackColor = true;
             // 
             // tabEventos
             // 
-            this.tabEventos.Location = new System.Drawing.Point(4, 5);
+            this.tabEventos.Location = new System.Drawing.Point(4, 34);
             this.tabEventos.Name = "tabEventos";
-            this.tabEventos.Size = new System.Drawing.Size(1087, 501);
+            this.tabEventos.Size = new System.Drawing.Size(1256, 617);
             this.tabEventos.TabIndex = 4;
             this.tabEventos.Text = "Administrar eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
             // 
             // tabUsuarios
             // 
-            this.tabUsuarios.Location = new System.Drawing.Point(4, 5);
+            this.tabUsuarios.Location = new System.Drawing.Point(4, 34);
             this.tabUsuarios.Name = "tabUsuarios";
-            this.tabUsuarios.Size = new System.Drawing.Size(1087, 501);
+            this.tabUsuarios.Size = new System.Drawing.Size(1256, 617);
             this.tabUsuarios.TabIndex = 5;
             this.tabUsuarios.Text = "Administrar usuarios";
             this.tabUsuarios.UseVisualStyleBackColor = true;
@@ -137,7 +162,7 @@
             this.mspMenu.Location = new System.Drawing.Point(0, 0);
             this.mspMenu.Name = "mspMenu";
             this.mspMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mspMenu.Size = new System.Drawing.Size(1095, 24);
+            this.mspMenu.Size = new System.Drawing.Size(1264, 24);
             this.mspMenu.TabIndex = 1;
             this.mspMenu.Text = "menuStrip1";
             this.mspMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mspMenu_ItemClicked);
@@ -159,28 +184,28 @@
             // búscarToolStripMenuItem
             // 
             this.búscarToolStripMenuItem.Name = "búscarToolStripMenuItem";
-            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.búscarToolStripMenuItem.Tag = "0";
-            this.búscarToolStripMenuItem.Text = "Búscar";
+            this.búscarToolStripMenuItem.Text = "Búscar [Ctrl + F]";
             // 
             // prestarToolStripMenuItem
             // 
             this.prestarToolStripMenuItem.Name = "prestarToolStripMenuItem";
-            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.prestarToolStripMenuItem.Tag = "1";
             this.prestarToolStripMenuItem.Text = "Préstamos";
             // 
             // devolucionesToolStripMenuItem
             // 
             this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.devolucionesToolStripMenuItem.Tag = "2";
             this.devolucionesToolStripMenuItem.Text = "Reservas";
             // 
             // añadirToolStripMenuItem
             // 
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.añadirToolStripMenuItem.Tag = "3";
             this.añadirToolStripMenuItem.Text = "Añadir";
             // 
@@ -198,11 +223,127 @@
             this.administradorDeUsuariosToolStripMenuItem.Tag = "5";
             this.administradorDeUsuariosToolStripMenuItem.Text = "Administrador de usuarios";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(629, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Editorial";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 21);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nombre";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 21);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Autor";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 282);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 21);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Idioma";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 376);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 21);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Formato";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 470);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 21);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Etiquetas";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(629, 94);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(154, 21);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Fecha de publicación";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(629, 188);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 21);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Tipo de colección";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(629, 282);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 21);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Imagen";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 13;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1253, 614);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 536);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tabAdmin);
             this.Controls.Add(this.mspMenu);
             this.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,8 +352,11 @@
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.tabAdmin.ResumeLayout(false);
+            this.tabBuscar.ResumeLayout(false);
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +379,16 @@
         private System.Windows.Forms.TabPage tabAnadir;
         private System.Windows.Forms.TabPage tabEventos;
         private System.Windows.Forms.TabPage tabUsuarios;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
     }
 }

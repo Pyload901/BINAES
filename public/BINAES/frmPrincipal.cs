@@ -25,14 +25,29 @@ namespace BINAES
 
         private void mspMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            if (e.ClickedItem.Tag != null)
+            if (e.ClickedItem.Tag.ToString() != "")
+            {
                 tabAdmin.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
-                
+            }
         }
 
         private void búsquedaToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             tabAdmin.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
+
         }
+        private void tabAdmin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyValue == 'F')
+            {
+                tabAdmin.SelectedIndex = 0;
+            }
+        }
+
+        private void tabAdmin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Text = tabAdmin.SelectedTab.Text;
+        }
+
     }
 }
