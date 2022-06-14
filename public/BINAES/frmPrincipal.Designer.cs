@@ -619,7 +619,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(326, 30);
             this.label11.TabIndex = 2;
-            this.label11.Text = "Gestión de Eventos";
+            this.label11.Text = "GESTIÓN DE EVENTOS";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
