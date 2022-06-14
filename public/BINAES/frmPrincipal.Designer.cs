@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.tabAdmin = new System.Windows.Forms.TabControl();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.tabPrestamo = new System.Windows.Forms.TabPage();
@@ -60,8 +59,6 @@
             this.tabEventos = new System.Windows.Forms.TabPage();
             this.tlpAdminEventos = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -95,7 +92,6 @@
             this.tabEventos.SuspendLayout();
             this.tlpAdminEventos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.mspMenu.SuspendLayout();
@@ -467,8 +463,6 @@
             this.tlpAdminEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.7994F));
             this.tlpAdminEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.39714F));
             this.tlpAdminEventos.Controls.Add(this.dataGridView2, 1, 3);
-            this.tlpAdminEventos.Controls.Add(this.pictureBox1, 1, 0);
-            this.tlpAdminEventos.Controls.Add(this.label11, 1, 1);
             this.tlpAdminEventos.Controls.Add(this.label12, 0, 2);
             this.tlpAdminEventos.Controls.Add(this.textBox1, 0, 3);
             this.tlpAdminEventos.Controls.Add(this.label13, 0, 4);
@@ -489,8 +483,8 @@
             this.tlpAdminEventos.Location = new System.Drawing.Point(8, 19);
             this.tlpAdminEventos.Name = "tlpAdminEventos";
             this.tlpAdminEventos.RowCount = 16;
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.77963F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.242794F));
+            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.809847F));
+            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.923599F));
             this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.299755F));
             this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.299755F));
             this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.299755F));
@@ -505,6 +499,7 @@
             this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.299755F));
             this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.17376F));
             this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.103282F));
+            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpAdminEventos.Size = new System.Drawing.Size(1240, 589);
             this.tlpAdminEventos.TabIndex = 0;
             // 
@@ -520,30 +515,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(326, 394);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(447, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 39);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(335, 45);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(326, 30);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "GESTIÓN DE EVENTOS";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -835,7 +806,6 @@
             this.tlpAdminEventos.ResumeLayout(false);
             this.tlpAdminEventos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.mspMenu.ResumeLayout(false);
@@ -887,8 +857,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaPublicacionEjemplar;
         private System.Windows.Forms.TableLayoutPanel tlpAdminEventos;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label13;
