@@ -28,72 +28,181 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tabControl1.SuspendLayout();
+            this.tabAdmin = new System.Windows.Forms.TabControl();
+            this.tabBuscar = new System.Windows.Forms.TabPage();
+            this.tabPrestamo = new System.Windows.Forms.TabPage();
+            this.mspMenu = new System.Windows.Forms.MenuStrip();
+            this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.búscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prestarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.devolucionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administradorDeEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administradorDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabReserva = new System.Windows.Forms.TabPage();
+            this.tabAnadir = new System.Windows.Forms.TabPage();
+            this.tabEventos = new System.Windows.Forms.TabPage();
+            this.tabUsuarios = new System.Windows.Forms.TabPage();
+            this.tabAdmin.SuspendLayout();
+            this.mspMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabAdmin
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(11, 15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1577, 983);
-            this.tabControl1.TabIndex = 0;
+            this.tabAdmin.Controls.Add(this.tabBuscar);
+            this.tabAdmin.Controls.Add(this.tabPrestamo);
+            this.tabAdmin.Controls.Add(this.tabReserva);
+            this.tabAdmin.Controls.Add(this.tabAnadir);
+            this.tabAdmin.Controls.Add(this.tabEventos);
+            this.tabAdmin.Controls.Add(this.tabUsuarios);
+            this.tabAdmin.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabAdmin.ItemSize = new System.Drawing.Size(0, 1);
+            this.tabAdmin.Location = new System.Drawing.Point(0, 28);
+            this.tabAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabAdmin.Name = "tabAdmin";
+            this.tabAdmin.SelectedIndex = 0;
+            this.tabAdmin.Size = new System.Drawing.Size(1095, 510);
+            this.tabAdmin.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabAdmin.TabIndex = 0;
+            this.tabAdmin.TabStop = false;
             // 
-            // tabPage1
+            // tabBuscar
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 54);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1569, 925);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabBuscar.Location = new System.Drawing.Point(4, 5);
+            this.tabBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabBuscar.Name = "tabBuscar";
+            this.tabBuscar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabBuscar.Size = new System.Drawing.Size(1087, 501);
+            this.tabBuscar.TabIndex = 0;
+            this.tabBuscar.Text = "Búscar";
+            this.tabBuscar.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabPrestamo
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 54);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1569, 925);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPrestamo.Location = new System.Drawing.Point(4, 5);
+            this.tabPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPrestamo.Name = "tabPrestamo";
+            this.tabPrestamo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPrestamo.Size = new System.Drawing.Size(1087, 501);
+            this.tabPrestamo.TabIndex = 1;
+            this.tabPrestamo.Text = "Préstamo";
+            this.tabPrestamo.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // mspMenu
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1600, 36);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mspMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.búsquedaToolStripMenuItem,
+            this.administradorDeEventosToolStripMenuItem,
+            this.administradorDeUsuariosToolStripMenuItem});
+            this.mspMenu.Location = new System.Drawing.Point(0, 0);
+            this.mspMenu.Name = "mspMenu";
+            this.mspMenu.Size = new System.Drawing.Size(1095, 24);
+            this.mspMenu.TabIndex = 1;
+            this.mspMenu.Text = "menuStrip1";
+            // 
+            // búsquedaToolStripMenuItem
+            // 
+            this.búsquedaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.búscarToolStripMenuItem,
+            this.prestarToolStripMenuItem,
+            this.devolucionesToolStripMenuItem,
+            this.añadirToolStripMenuItem});
+            this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
+            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
+            this.búsquedaToolStripMenuItem.Text = "Administrador de ejemplares";
+            // 
+            // búscarToolStripMenuItem
+            // 
+            this.búscarToolStripMenuItem.Name = "búscarToolStripMenuItem";
+            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.búscarToolStripMenuItem.Text = "Búscar";
+            // 
+            // prestarToolStripMenuItem
+            // 
+            this.prestarToolStripMenuItem.Name = "prestarToolStripMenuItem";
+            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prestarToolStripMenuItem.Text = "Préstamos";
+            // 
+            // devolucionesToolStripMenuItem
+            // 
+            this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.devolucionesToolStripMenuItem.Text = "Reservas";
+            // 
+            // añadirToolStripMenuItem
+            // 
+            this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.añadirToolStripMenuItem.Text = "Añadir";
+            // 
+            // administradorDeEventosToolStripMenuItem
+            // 
+            this.administradorDeEventosToolStripMenuItem.Name = "administradorDeEventosToolStripMenuItem";
+            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
+            this.administradorDeEventosToolStripMenuItem.Text = "Administrador de eventos";
+            // 
+            // administradorDeUsuariosToolStripMenuItem
+            // 
+            this.administradorDeUsuariosToolStripMenuItem.Name = "administradorDeUsuariosToolStripMenuItem";
+            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(158, 20);
+            this.administradorDeUsuariosToolStripMenuItem.Text = "Administrador de usuarios";
+            // 
+            // tabReserva
+            // 
+            this.tabReserva.Location = new System.Drawing.Point(4, 5);
+            this.tabReserva.Name = "tabReserva";
+            this.tabReserva.Padding = new System.Windows.Forms.Padding(3);
+            this.tabReserva.Size = new System.Drawing.Size(1087, 501);
+            this.tabReserva.TabIndex = 2;
+            this.tabReserva.Text = "Reserva";
+            this.tabReserva.UseVisualStyleBackColor = true;
+            // 
+            // tabAnadir
+            // 
+            this.tabAnadir.Location = new System.Drawing.Point(4, 5);
+            this.tabAnadir.Name = "tabAnadir";
+            this.tabAnadir.Size = new System.Drawing.Size(1087, 501);
+            this.tabAnadir.TabIndex = 3;
+            this.tabAnadir.Text = "Añadir";
+            this.tabAnadir.UseVisualStyleBackColor = true;
+            // 
+            // tabEventos
+            // 
+            this.tabEventos.Location = new System.Drawing.Point(4, 5);
+            this.tabEventos.Name = "tabEventos";
+            this.tabEventos.Size = new System.Drawing.Size(1087, 501);
+            this.tabEventos.TabIndex = 4;
+            this.tabEventos.Text = "Administrar eventos";
+            this.tabEventos.UseVisualStyleBackColor = true;
+            // 
+            // tabUsuarios
+            // 
+            this.tabUsuarios.Location = new System.Drawing.Point(4, 5);
+            this.tabUsuarios.Name = "tabUsuarios";
+            this.tabUsuarios.Size = new System.Drawing.Size(1087, 501);
+            this.tabUsuarios.TabIndex = 5;
+            this.tabUsuarios.Text = "Administrar usuarios";
+            this.tabUsuarios.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 45F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 1012);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(1095, 536);
+            this.Controls.Add(this.tabAdmin);
+            this.Controls.Add(this.mspMenu);
             this.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.mspMenu;
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
-            this.tabControl1.ResumeLayout(false);
+            this.tabAdmin.ResumeLayout(false);
+            this.mspMenu.ResumeLayout(false);
+            this.mspMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,9 +210,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.TabControl tabAdmin;
+        private System.Windows.Forms.TabPage tabBuscar;
+        private System.Windows.Forms.TabPage tabPrestamo;
+        private System.Windows.Forms.MenuStrip mspMenu;
+        private System.Windows.Forms.ToolStripMenuItem búsquedaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem búscarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prestarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem devolucionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem añadirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administradorDeEventosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administradorDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabReserva;
+        private System.Windows.Forms.TabPage tabAnadir;
+        private System.Windows.Forms.TabPage tabEventos;
+        private System.Windows.Forms.TabPage tabUsuarios;
     }
 }
