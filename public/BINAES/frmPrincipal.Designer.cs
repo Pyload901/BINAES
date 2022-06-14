@@ -76,7 +76,6 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.mspMenu = new System.Windows.Forms.MenuStrip();
@@ -480,7 +479,6 @@
             this.tlpAdminEventos.Controls.Add(this.label15, 0, 10);
             this.tlpAdminEventos.Controls.Add(this.label17, 0, 12);
             this.tlpAdminEventos.Controls.Add(this.richTextBox1, 0, 9);
-            this.tlpAdminEventos.Controls.Add(this.button3, 1, 14);
             this.tlpAdminEventos.Controls.Add(this.button2, 0, 15);
             this.tlpAdminEventos.Controls.Add(this.button1, 1, 15);
             this.tlpAdminEventos.Controls.Add(this.dataGridView3, 2, 3);
@@ -705,16 +703,6 @@
             this.button2.Text = "Dejar de editar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button3.Location = new System.Drawing.Point(526, 535);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(76, 32);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Cargar ";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -894,7 +882,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView3;
     }
 }
