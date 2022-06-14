@@ -17,5 +17,22 @@ namespace BINAES
             InitializeComponent();
         }
 
+        private void búsquedaToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            ToolStripMenuItem toolStripMenuItem = sender as ToolStripMenuItem;
+            toolStripMenuItem.ShowDropDown();
+        }
+
+        private void mspMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem.Tag != null)
+                tabAdmin.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
+                
+        }
+
+        private void búsquedaToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            tabAdmin.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
+        }
     }
 }

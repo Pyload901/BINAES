@@ -31,6 +31,10 @@
             this.tabAdmin = new System.Windows.Forms.TabControl();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.tabPrestamo = new System.Windows.Forms.TabPage();
+            this.tabReserva = new System.Windows.Forms.TabPage();
+            this.tabAnadir = new System.Windows.Forms.TabPage();
+            this.tabEventos = new System.Windows.Forms.TabPage();
+            this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.mspMenu = new System.Windows.Forms.MenuStrip();
             this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.búscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,10 +43,6 @@
             this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorDeEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabReserva = new System.Windows.Forms.TabPage();
-            this.tabAnadir = new System.Windows.Forms.TabPage();
-            this.tabEventos = new System.Windows.Forms.TabPage();
-            this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.tabAdmin.SuspendLayout();
             this.mspMenu.SuspendLayout();
             this.SuspendLayout();
@@ -59,23 +59,22 @@
             this.tabAdmin.Controls.Add(this.tabEventos);
             this.tabAdmin.Controls.Add(this.tabUsuarios);
             this.tabAdmin.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabAdmin.ItemSize = new System.Drawing.Size(0, 1);
+            this.tabAdmin.ItemSize = new System.Drawing.Size(132, 30);
             this.tabAdmin.Location = new System.Drawing.Point(0, 28);
             this.tabAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabAdmin.Name = "tabAdmin";
             this.tabAdmin.SelectedIndex = 0;
             this.tabAdmin.Size = new System.Drawing.Size(1095, 510);
-            this.tabAdmin.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabAdmin.TabIndex = 0;
             this.tabAdmin.TabStop = false;
             // 
             // tabBuscar
             // 
-            this.tabBuscar.Location = new System.Drawing.Point(4, 5);
+            this.tabBuscar.Location = new System.Drawing.Point(4, 34);
             this.tabBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBuscar.Name = "tabBuscar";
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabBuscar.Size = new System.Drawing.Size(1087, 501);
+            this.tabBuscar.Size = new System.Drawing.Size(1087, 472);
             this.tabBuscar.TabIndex = 0;
             this.tabBuscar.Text = "Búscar";
             this.tabBuscar.UseVisualStyleBackColor = true;
@@ -90,66 +89,6 @@
             this.tabPrestamo.TabIndex = 1;
             this.tabPrestamo.Text = "Préstamo";
             this.tabPrestamo.UseVisualStyleBackColor = true;
-            // 
-            // mspMenu
-            // 
-            this.mspMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.búsquedaToolStripMenuItem,
-            this.administradorDeEventosToolStripMenuItem,
-            this.administradorDeUsuariosToolStripMenuItem});
-            this.mspMenu.Location = new System.Drawing.Point(0, 0);
-            this.mspMenu.Name = "mspMenu";
-            this.mspMenu.Size = new System.Drawing.Size(1095, 24);
-            this.mspMenu.TabIndex = 1;
-            this.mspMenu.Text = "menuStrip1";
-            // 
-            // búsquedaToolStripMenuItem
-            // 
-            this.búsquedaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.búscarToolStripMenuItem,
-            this.prestarToolStripMenuItem,
-            this.devolucionesToolStripMenuItem,
-            this.añadirToolStripMenuItem});
-            this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
-            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
-            this.búsquedaToolStripMenuItem.Text = "Administrador de ejemplares";
-            // 
-            // búscarToolStripMenuItem
-            // 
-            this.búscarToolStripMenuItem.Name = "búscarToolStripMenuItem";
-            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.búscarToolStripMenuItem.Text = "Búscar";
-            // 
-            // prestarToolStripMenuItem
-            // 
-            this.prestarToolStripMenuItem.Name = "prestarToolStripMenuItem";
-            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.prestarToolStripMenuItem.Text = "Préstamos";
-            // 
-            // devolucionesToolStripMenuItem
-            // 
-            this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.devolucionesToolStripMenuItem.Text = "Reservas";
-            // 
-            // añadirToolStripMenuItem
-            // 
-            this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.añadirToolStripMenuItem.Text = "Añadir";
-            // 
-            // administradorDeEventosToolStripMenuItem
-            // 
-            this.administradorDeEventosToolStripMenuItem.Name = "administradorDeEventosToolStripMenuItem";
-            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
-            this.administradorDeEventosToolStripMenuItem.Text = "Administrador de eventos";
-            // 
-            // administradorDeUsuariosToolStripMenuItem
-            // 
-            this.administradorDeUsuariosToolStripMenuItem.Name = "administradorDeUsuariosToolStripMenuItem";
-            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(158, 20);
-            this.administradorDeUsuariosToolStripMenuItem.Text = "Administrador de usuarios";
             // 
             // tabReserva
             // 
@@ -187,6 +126,77 @@
             this.tabUsuarios.TabIndex = 5;
             this.tabUsuarios.Text = "Administrar usuarios";
             this.tabUsuarios.UseVisualStyleBackColor = true;
+            // 
+            // mspMenu
+            // 
+            this.mspMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.búsquedaToolStripMenuItem,
+            this.administradorDeEventosToolStripMenuItem,
+            this.administradorDeUsuariosToolStripMenuItem});
+            this.mspMenu.Location = new System.Drawing.Point(0, 0);
+            this.mspMenu.Name = "mspMenu";
+            this.mspMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.mspMenu.Size = new System.Drawing.Size(1095, 24);
+            this.mspMenu.TabIndex = 1;
+            this.mspMenu.Text = "menuStrip1";
+            this.mspMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mspMenu_ItemClicked);
+            // 
+            // búsquedaToolStripMenuItem
+            // 
+            this.búsquedaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.búscarToolStripMenuItem,
+            this.prestarToolStripMenuItem,
+            this.devolucionesToolStripMenuItem,
+            this.añadirToolStripMenuItem});
+            this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
+            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
+            this.búsquedaToolStripMenuItem.Tag = "";
+            this.búsquedaToolStripMenuItem.Text = "Administrador de ejemplares";
+            this.búsquedaToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.búsquedaToolStripMenuItem_DropDownItemClicked);
+            this.búsquedaToolStripMenuItem.MouseHover += new System.EventHandler(this.búsquedaToolStripMenuItem_MouseHover);
+            // 
+            // búscarToolStripMenuItem
+            // 
+            this.búscarToolStripMenuItem.Name = "búscarToolStripMenuItem";
+            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.búscarToolStripMenuItem.Tag = "0";
+            this.búscarToolStripMenuItem.Text = "Búscar";
+            // 
+            // prestarToolStripMenuItem
+            // 
+            this.prestarToolStripMenuItem.Name = "prestarToolStripMenuItem";
+            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prestarToolStripMenuItem.Tag = "1";
+            this.prestarToolStripMenuItem.Text = "Préstamos";
+            // 
+            // devolucionesToolStripMenuItem
+            // 
+            this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.devolucionesToolStripMenuItem.Tag = "2";
+            this.devolucionesToolStripMenuItem.Text = "Reservas";
+            // 
+            // añadirToolStripMenuItem
+            // 
+            this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.añadirToolStripMenuItem.Tag = "3";
+            this.añadirToolStripMenuItem.Text = "Añadir";
+            // 
+            // administradorDeEventosToolStripMenuItem
+            // 
+            this.administradorDeEventosToolStripMenuItem.Name = "administradorDeEventosToolStripMenuItem";
+            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
+            this.administradorDeEventosToolStripMenuItem.Tag = "4";
+            this.administradorDeEventosToolStripMenuItem.Text = "Administrador de eventos";
+            // 
+            // administradorDeUsuariosToolStripMenuItem
+            // 
+            this.administradorDeUsuariosToolStripMenuItem.Name = "administradorDeUsuariosToolStripMenuItem";
+            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(158, 20);
+            this.administradorDeUsuariosToolStripMenuItem.Tag = "5";
+            this.administradorDeUsuariosToolStripMenuItem.Text = "Administrador de usuarios";
             // 
             // frmPrincipal
             // 
