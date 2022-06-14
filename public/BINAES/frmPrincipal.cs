@@ -61,5 +61,35 @@ namespace BINAES
         {
             tabAdmin.Select();
         }
+
+        private void tabBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabEventos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
