@@ -82,11 +82,13 @@
             this.dtpFechaPublicacionEjemplarAG = new System.Windows.Forms.DateTimePicker();
             this.tabReserva = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.nudIdUsuarioRE = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txtCodigoEjemplarRE = new System.Windows.Forms.TextBox();
             this.dgvReservasRE = new System.Windows.Forms.DataGridView();
+            this.txtCodigoEjemplarRE = new System.Windows.Forms.TextBox();
+            this.nudIdUsuarioRE = new System.Windows.Forms.NumericUpDown();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.btnBuscarRE = new System.Windows.Forms.Button();
+            this.btnPrestarRE = new System.Windows.Forms.Button();
             this.tabPrestamo = new System.Windows.Forms.TabPage();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.tabAdmin = new System.Windows.Forms.TabControl();
@@ -96,8 +98,6 @@
             this.lblVision = new System.Windows.Forms.Label();
             this.lblInfoMision = new System.Windows.Forms.Label();
             this.lblInfoVision = new System.Windows.Forms.Label();
-            this.btnPrestarRE = new System.Windows.Forms.Button();
-            this.btnBuscarRE = new System.Windows.Forms.Button();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tlpAdminEventos.SuspendLayout();
@@ -108,8 +108,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresAG)).BeginInit();
             this.tabReserva.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).BeginInit();
             this.tabAdmin.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -147,28 +147,28 @@
             // búscarToolStripMenuItem
             // 
             this.búscarToolStripMenuItem.Name = "búscarToolStripMenuItem";
-            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.búscarToolStripMenuItem.Tag = "0";
             this.búscarToolStripMenuItem.Text = "Búscar [Ctrl + F]";
             // 
             // prestarToolStripMenuItem
             // 
             this.prestarToolStripMenuItem.Name = "prestarToolStripMenuItem";
-            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.prestarToolStripMenuItem.Tag = "1";
             this.prestarToolStripMenuItem.Text = "Préstamos";
             // 
             // devolucionesToolStripMenuItem
             // 
             this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.devolucionesToolStripMenuItem.Tag = "2";
             this.devolucionesToolStripMenuItem.Text = "Reservas";
             // 
             // añadirToolStripMenuItem
             // 
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.añadirToolStripMenuItem.Tag = "3";
             this.añadirToolStripMenuItem.Text = "Agregar [Ctrl + N]";
             // 
@@ -192,7 +192,7 @@
             this.tabUsuarios.Name = "tabUsuarios";
             this.tabUsuarios.Size = new System.Drawing.Size(1256, 618);
             this.tabUsuarios.TabIndex = 5;
-            this.tabUsuarios.Text = "Administrador de usuarios";
+            this.tabUsuarios.Text = "Usuarios";
             this.tabUsuarios.UseVisualStyleBackColor = true;
             // 
             // tabEventos
@@ -202,7 +202,7 @@
             this.tabEventos.Name = "tabEventos";
             this.tabEventos.Size = new System.Drawing.Size(1256, 618);
             this.tabEventos.TabIndex = 4;
-            this.tabEventos.Text = "Administrador de eventos";
+            this.tabEventos.Text = "Eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
             // 
             // tlpAdminEventos
@@ -764,36 +764,17 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1253, 618);
             this.tableLayoutPanel2.TabIndex = 12;
             // 
-            // label26
+            // dgvReservasRE
             // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(128, 287);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(81, 21);
-            this.label26.TabIndex = 8;
-            this.label26.Text = "ID usuario";
-            // 
-            // nudIdUsuarioRE
-            // 
-            this.nudIdUsuarioRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvReservasRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.SetColumnSpan(this.nudIdUsuarioRE, 2);
-            this.nudIdUsuarioRE.Location = new System.Drawing.Point(128, 311);
-            this.nudIdUsuarioRE.Name = "nudIdUsuarioRE";
-            this.nudIdUsuarioRE.Size = new System.Drawing.Size(368, 29);
-            this.nudIdUsuarioRE.TabIndex = 30;
-            // 
-            // label23
-            // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(128, 133);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(125, 21);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "Código ejemplar";
+            this.dgvReservasRE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReservasRE.Location = new System.Drawing.Point(502, 80);
+            this.dgvReservasRE.Name = "dgvReservasRE";
+            this.tableLayoutPanel2.SetRowSpan(this.dgvReservasRE, 6);
+            this.dgvReservasRE.Size = new System.Drawing.Size(620, 456);
+            this.dgvReservasRE.TabIndex = 31;
             // 
             // txtCodigoEjemplarRE
             // 
@@ -806,17 +787,60 @@
             this.txtCodigoEjemplarRE.Size = new System.Drawing.Size(368, 29);
             this.txtCodigoEjemplarRE.TabIndex = 22;
             // 
-            // dgvReservasRE
+            // nudIdUsuarioRE
             // 
-            this.dgvReservasRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.nudIdUsuarioRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvReservasRE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservasRE.Location = new System.Drawing.Point(502, 80);
-            this.dgvReservasRE.Name = "dgvReservasRE";
-            this.tableLayoutPanel2.SetRowSpan(this.dgvReservasRE, 6);
-            this.dgvReservasRE.Size = new System.Drawing.Size(620, 456);
-            this.dgvReservasRE.TabIndex = 31;
+            this.tableLayoutPanel2.SetColumnSpan(this.nudIdUsuarioRE, 2);
+            this.nudIdUsuarioRE.Location = new System.Drawing.Point(128, 311);
+            this.nudIdUsuarioRE.Name = "nudIdUsuarioRE";
+            this.nudIdUsuarioRE.Size = new System.Drawing.Size(368, 29);
+            this.nudIdUsuarioRE.TabIndex = 30;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(128, 287);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(81, 21);
+            this.label26.TabIndex = 8;
+            this.label26.Text = "ID usuario";
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(128, 133);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(125, 21);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Código ejemplar";
+            // 
+            // btnBuscarRE
+            // 
+            this.btnBuscarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarRE.Location = new System.Drawing.Point(128, 388);
+            this.btnBuscarRE.Name = "btnBuscarRE";
+            this.btnBuscarRE.Size = new System.Drawing.Size(181, 71);
+            this.btnBuscarRE.TabIndex = 33;
+            this.btnBuscarRE.Text = "Búscar";
+            this.btnBuscarRE.UseVisualStyleBackColor = true;
+            // 
+            // btnPrestarRE
+            // 
+            this.btnPrestarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrestarRE.Location = new System.Drawing.Point(315, 388);
+            this.btnPrestarRE.Name = "btnPrestarRE";
+            this.btnPrestarRE.Size = new System.Drawing.Size(181, 71);
+            this.btnPrestarRE.TabIndex = 32;
+            this.btnPrestarRE.Text = "Completar";
+            this.btnPrestarRE.UseVisualStyleBackColor = true;
             // 
             // tabPrestamo
             // 
@@ -960,30 +984,6 @@
             this.lblInfoVision.Text = resources.GetString("lblInfoVision.Text");
             this.lblInfoVision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnPrestarRE
-            // 
-            this.btnPrestarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrestarRE.Location = new System.Drawing.Point(315, 388);
-            this.btnPrestarRE.Name = "btnPrestarRE";
-            this.btnPrestarRE.Size = new System.Drawing.Size(181, 71);
-            this.btnPrestarRE.TabIndex = 32;
-            this.btnPrestarRE.Text = "Completar";
-            this.btnPrestarRE.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarRE
-            // 
-            this.btnBuscarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarRE.Location = new System.Drawing.Point(128, 388);
-            this.btnBuscarRE.Name = "btnBuscarRE";
-            this.btnBuscarRE.Size = new System.Drawing.Size(181, 71);
-            this.btnBuscarRE.TabIndex = 33;
-            this.btnBuscarRE.Text = "Búscar";
-            this.btnBuscarRE.UseVisualStyleBackColor = true;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
@@ -1010,8 +1010,8 @@
             this.tabReserva.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).EndInit();
             this.tabAdmin.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
