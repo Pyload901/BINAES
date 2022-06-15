@@ -27,13 +27,13 @@ namespace BINAES
         {
             if (e.ClickedItem.Tag.ToString() != "")
             {
-                tabAdminKeyDown.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
+                tabAdmin.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
             }
         }
 
         private void búsquedaToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            tabAdminKeyDown.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
+            tabAdmin.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
 
         }
         private void tabAdmin_KeyDown(object sender, KeyEventArgs e)
@@ -43,10 +43,10 @@ namespace BINAES
                 switch (e.KeyValue)
                 {
                     case 'F':
-                        tabAdminKeyDown.SelectedIndex = 0;
+                        tabAdmin.SelectedIndex = 0;
                         break;
                     case 'N':
-                        tabAdminKeyDown.SelectedIndex = 3;
+                        tabAdmin.SelectedIndex = 3;
                         break;
                 }
             }
@@ -54,12 +54,13 @@ namespace BINAES
 
         private void tabAdmin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Text = tabAdminKeyDown.SelectedTab.Text;
+            this.Text = tabAdmin.SelectedTab.Text;
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            tabAdminKeyDown.Select();
+            tabAdmin.Select();
+            this.Text = tabAdmin.SelectedTab.Text;
         }
     }
 }

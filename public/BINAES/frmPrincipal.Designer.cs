@@ -58,9 +58,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tabAgregar = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSalirEdicionEjemplar = new System.Windows.Forms.Button();
-            this.btnAgregarEjemplar = new System.Windows.Forms.Button();
-            this.txtEditorialEjemplar = new System.Windows.Forms.TextBox();
+            this.btnSalirEdicionEjemplarAG = new System.Windows.Forms.Button();
+            this.btnAgregarEjemplarAG = new System.Windows.Forms.Button();
+            this.txtEditorialEjemplarAG = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,33 +71,33 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCodigoEjemplar = new System.Windows.Forms.TextBox();
-            this.cmbIdiomaEjemplar = new System.Windows.Forms.ComboBox();
-            this.btnEtiquetasEjemplar = new System.Windows.Forms.Button();
-            this.txtNombreEjemplar = new System.Windows.Forms.TextBox();
-            this.txtAutorEjemplar = new System.Windows.Forms.TextBox();
-            this.cmbTipoColeccionEjemplar = new System.Windows.Forms.ComboBox();
-            this.cmbFormatoEjemplar = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dtpFechaPublicacionEjemplar = new System.Windows.Forms.DateTimePicker();
+            this.txtCodigoEjemplarAG = new System.Windows.Forms.TextBox();
+            this.cmbIdiomaEjemplarAG = new System.Windows.Forms.ComboBox();
+            this.btnEtiquetasEjemplarAG = new System.Windows.Forms.Button();
+            this.txtNombreEjemplarAG = new System.Windows.Forms.TextBox();
+            this.txtAutorEjemplarAG = new System.Windows.Forms.TextBox();
+            this.cmbTipoColeccionEjemplarAG = new System.Windows.Forms.ComboBox();
+            this.cmbFormatoEjemplarAG = new System.Windows.Forms.ComboBox();
+            this.dgvEjemplaresAG = new System.Windows.Forms.DataGridView();
+            this.dtpFechaPublicacionEjemplarAG = new System.Windows.Forms.DateTimePicker();
             this.tabReserva = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.nudIdUsuarioRE = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txtCodigoEjemplarRE = new System.Windows.Forms.TextBox();
+            this.dgvReservasRE = new System.Windows.Forms.DataGridView();
             this.tabPrestamo = new System.Windows.Forms.TabPage();
             this.tabBuscar = new System.Windows.Forms.TabPage();
-            this.tabAdminKeyDown = new System.Windows.Forms.TabControl();
+            this.tabAdmin = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMision = new System.Windows.Forms.Label();
             this.lblVision = new System.Windows.Forms.Label();
             this.lblInfoMision = new System.Windows.Forms.Label();
             this.lblInfoVision = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnPrestarRE = new System.Windows.Forms.Button();
+            this.btnBuscarRE = new System.Windows.Forms.Button();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tlpAdminEventos.SuspendLayout();
@@ -105,12 +105,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabAgregar.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresAG)).BeginInit();
             this.tabReserva.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.tabAdminKeyDown.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).BeginInit();
+            this.tabAdmin.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -147,28 +147,28 @@
             // búscarToolStripMenuItem
             // 
             this.búscarToolStripMenuItem.Name = "búscarToolStripMenuItem";
-            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.búscarToolStripMenuItem.Tag = "0";
             this.búscarToolStripMenuItem.Text = "Búscar [Ctrl + F]";
             // 
             // prestarToolStripMenuItem
             // 
             this.prestarToolStripMenuItem.Name = "prestarToolStripMenuItem";
-            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.prestarToolStripMenuItem.Tag = "1";
             this.prestarToolStripMenuItem.Text = "Préstamos";
             // 
             // devolucionesToolStripMenuItem
             // 
             this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.devolucionesToolStripMenuItem.Tag = "2";
             this.devolucionesToolStripMenuItem.Text = "Reservas";
             // 
             // añadirToolStripMenuItem
             // 
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.añadirToolStripMenuItem.Tag = "3";
             this.añadirToolStripMenuItem.Text = "Agregar [Ctrl + N]";
             // 
@@ -192,7 +192,7 @@
             this.tabUsuarios.Name = "tabUsuarios";
             this.tabUsuarios.Size = new System.Drawing.Size(1256, 618);
             this.tabUsuarios.TabIndex = 5;
-            this.tabUsuarios.Text = "Administrar usuarios";
+            this.tabUsuarios.Text = "Administrador de usuarios";
             this.tabUsuarios.UseVisualStyleBackColor = true;
             // 
             // tabEventos
@@ -202,7 +202,7 @@
             this.tabEventos.Name = "tabEventos";
             this.tabEventos.Size = new System.Drawing.Size(1256, 618);
             this.tabEventos.TabIndex = 4;
-            this.tabEventos.Text = "Administrar eventos";
+            this.tabEventos.Text = "Administrador de eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
             // 
             // tlpAdminEventos
@@ -445,9 +445,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.Controls.Add(this.btnSalirEdicionEjemplar, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.btnAgregarEjemplar, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.txtEditorialEjemplar, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnSalirEdicionEjemplarAG, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.btnAgregarEjemplarAG, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.txtEditorialEjemplarAG, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label10, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
@@ -458,15 +458,15 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.label9, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtCodigoEjemplar, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cmbIdiomaEjemplar, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.btnEtiquetasEjemplar, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.txtNombreEjemplar, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtAutorEjemplar, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.cmbTipoColeccionEjemplar, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.cmbFormatoEjemplar, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dtpFechaPublicacionEjemplar, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtCodigoEjemplarAG, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cmbIdiomaEjemplarAG, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.btnEtiquetasEjemplarAG, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.txtNombreEjemplarAG, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtAutorEjemplarAG, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.cmbTipoColeccionEjemplarAG, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.cmbFormatoEjemplarAG, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.dgvEjemplaresAG, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dtpFechaPublicacionEjemplarAG, 1, 3);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -487,39 +487,39 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1253, 618);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
-            // btnSalirEdicionEjemplar
+            // btnSalirEdicionEjemplarAG
             // 
-            this.btnSalirEdicionEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnSalirEdicionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalirEdicionEjemplar.Location = new System.Drawing.Point(3, 567);
-            this.btnSalirEdicionEjemplar.Name = "btnSalirEdicionEjemplar";
-            this.btnSalirEdicionEjemplar.Size = new System.Drawing.Size(244, 48);
-            this.btnSalirEdicionEjemplar.TabIndex = 28;
-            this.btnSalirEdicionEjemplar.Text = "Dejar de editar";
-            this.btnSalirEdicionEjemplar.UseVisualStyleBackColor = true;
+            this.btnSalirEdicionEjemplarAG.Location = new System.Drawing.Point(3, 567);
+            this.btnSalirEdicionEjemplarAG.Name = "btnSalirEdicionEjemplarAG";
+            this.btnSalirEdicionEjemplarAG.Size = new System.Drawing.Size(244, 48);
+            this.btnSalirEdicionEjemplarAG.TabIndex = 28;
+            this.btnSalirEdicionEjemplarAG.Text = "Dejar de editar";
+            this.btnSalirEdicionEjemplarAG.UseVisualStyleBackColor = true;
             // 
-            // btnAgregarEjemplar
+            // btnAgregarEjemplarAG
             // 
-            this.btnAgregarEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnAgregarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarEjemplar.Location = new System.Drawing.Point(253, 567);
-            this.btnAgregarEjemplar.Name = "btnAgregarEjemplar";
-            this.btnAgregarEjemplar.Size = new System.Drawing.Size(244, 48);
-            this.btnAgregarEjemplar.TabIndex = 27;
-            this.btnAgregarEjemplar.Text = "Agregar";
-            this.btnAgregarEjemplar.UseVisualStyleBackColor = true;
+            this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(253, 567);
+            this.btnAgregarEjemplarAG.Name = "btnAgregarEjemplarAG";
+            this.btnAgregarEjemplarAG.Size = new System.Drawing.Size(244, 48);
+            this.btnAgregarEjemplarAG.TabIndex = 27;
+            this.btnAgregarEjemplarAG.Text = "Agregar";
+            this.btnAgregarEjemplarAG.UseVisualStyleBackColor = true;
             // 
-            // txtEditorialEjemplar
+            // txtEditorialEjemplarAG
             // 
-            this.txtEditorialEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtEditorialEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEditorialEjemplar.Location = new System.Drawing.Point(253, 50);
-            this.txtEditorialEjemplar.Name = "txtEditorialEjemplar";
-            this.txtEditorialEjemplar.Size = new System.Drawing.Size(244, 29);
-            this.txtEditorialEjemplar.TabIndex = 22;
+            this.txtEditorialEjemplarAG.Location = new System.Drawing.Point(253, 50);
+            this.txtEditorialEjemplarAG.Name = "txtEditorialEjemplarAG";
+            this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(244, 29);
+            this.txtEditorialEjemplarAG.TabIndex = 22;
             // 
             // label10
             // 
@@ -621,107 +621,107 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código ejemplar";
             // 
-            // txtCodigoEjemplar
+            // txtCodigoEjemplarAG
             // 
-            this.txtCodigoEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtCodigoEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodigoEjemplar.Location = new System.Drawing.Point(3, 50);
-            this.txtCodigoEjemplar.Name = "txtCodigoEjemplar";
-            this.txtCodigoEjemplar.Size = new System.Drawing.Size(244, 29);
-            this.txtCodigoEjemplar.TabIndex = 10;
+            this.txtCodigoEjemplarAG.Location = new System.Drawing.Point(3, 50);
+            this.txtCodigoEjemplarAG.Name = "txtCodigoEjemplarAG";
+            this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(244, 29);
+            this.txtCodigoEjemplarAG.TabIndex = 10;
             // 
-            // cmbIdiomaEjemplar
+            // cmbIdiomaEjemplarAG
             // 
-            this.cmbIdiomaEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbIdiomaEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbIdiomaEjemplar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIdiomaEjemplar.FormattingEnabled = true;
-            this.cmbIdiomaEjemplar.Location = new System.Drawing.Point(3, 332);
-            this.cmbIdiomaEjemplar.Name = "cmbIdiomaEjemplar";
-            this.cmbIdiomaEjemplar.Size = new System.Drawing.Size(244, 29);
-            this.cmbIdiomaEjemplar.TabIndex = 13;
+            this.cmbIdiomaEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdiomaEjemplarAG.FormattingEnabled = true;
+            this.cmbIdiomaEjemplarAG.Location = new System.Drawing.Point(3, 332);
+            this.cmbIdiomaEjemplarAG.Name = "cmbIdiomaEjemplarAG";
+            this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(244, 29);
+            this.cmbIdiomaEjemplarAG.TabIndex = 13;
             // 
-            // btnEtiquetasEjemplar
+            // btnEtiquetasEjemplarAG
             // 
-            this.btnEtiquetasEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnEtiquetasEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEtiquetasEjemplar.Location = new System.Drawing.Point(3, 520);
-            this.btnEtiquetasEjemplar.Name = "btnEtiquetasEjemplar";
-            this.btnEtiquetasEjemplar.Size = new System.Drawing.Size(244, 41);
-            this.btnEtiquetasEjemplar.TabIndex = 15;
-            this.btnEtiquetasEjemplar.Text = "Seleccionar";
-            this.btnEtiquetasEjemplar.UseVisualStyleBackColor = true;
+            this.btnEtiquetasEjemplarAG.Location = new System.Drawing.Point(3, 520);
+            this.btnEtiquetasEjemplarAG.Name = "btnEtiquetasEjemplarAG";
+            this.btnEtiquetasEjemplarAG.Size = new System.Drawing.Size(244, 41);
+            this.btnEtiquetasEjemplarAG.TabIndex = 15;
+            this.btnEtiquetasEjemplarAG.Text = "Seleccionar";
+            this.btnEtiquetasEjemplarAG.UseVisualStyleBackColor = true;
             // 
-            // txtNombreEjemplar
+            // txtNombreEjemplarAG
             // 
-            this.txtNombreEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtNombreEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreEjemplar.Location = new System.Drawing.Point(3, 144);
-            this.txtNombreEjemplar.Name = "txtNombreEjemplar";
-            this.txtNombreEjemplar.Size = new System.Drawing.Size(244, 29);
-            this.txtNombreEjemplar.TabIndex = 23;
+            this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 144);
+            this.txtNombreEjemplarAG.Name = "txtNombreEjemplarAG";
+            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(244, 29);
+            this.txtNombreEjemplarAG.TabIndex = 23;
             // 
-            // txtAutorEjemplar
+            // txtAutorEjemplarAG
             // 
-            this.txtAutorEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtAutorEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAutorEjemplar.Location = new System.Drawing.Point(3, 238);
-            this.txtAutorEjemplar.Name = "txtAutorEjemplar";
-            this.txtAutorEjemplar.Size = new System.Drawing.Size(244, 29);
-            this.txtAutorEjemplar.TabIndex = 24;
+            this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 238);
+            this.txtAutorEjemplarAG.Name = "txtAutorEjemplarAG";
+            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(244, 29);
+            this.txtAutorEjemplarAG.TabIndex = 24;
             // 
-            // cmbTipoColeccionEjemplar
+            // cmbTipoColeccionEjemplarAG
             // 
-            this.cmbTipoColeccionEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbTipoColeccionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbTipoColeccionEjemplar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoColeccionEjemplar.FormattingEnabled = true;
-            this.cmbTipoColeccionEjemplar.Location = new System.Drawing.Point(253, 238);
-            this.cmbTipoColeccionEjemplar.Name = "cmbTipoColeccionEjemplar";
-            this.cmbTipoColeccionEjemplar.Size = new System.Drawing.Size(244, 29);
-            this.cmbTipoColeccionEjemplar.TabIndex = 25;
+            this.cmbTipoColeccionEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoColeccionEjemplarAG.FormattingEnabled = true;
+            this.cmbTipoColeccionEjemplarAG.Location = new System.Drawing.Point(253, 238);
+            this.cmbTipoColeccionEjemplarAG.Name = "cmbTipoColeccionEjemplarAG";
+            this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(244, 29);
+            this.cmbTipoColeccionEjemplarAG.TabIndex = 25;
             // 
-            // cmbFormatoEjemplar
+            // cmbFormatoEjemplarAG
             // 
-            this.cmbFormatoEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbFormatoEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbFormatoEjemplar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFormatoEjemplar.FormattingEnabled = true;
-            this.cmbFormatoEjemplar.Location = new System.Drawing.Point(3, 426);
-            this.cmbFormatoEjemplar.Name = "cmbFormatoEjemplar";
-            this.cmbFormatoEjemplar.Size = new System.Drawing.Size(244, 29);
-            this.cmbFormatoEjemplar.TabIndex = 26;
+            this.cmbFormatoEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFormatoEjemplarAG.FormattingEnabled = true;
+            this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 426);
+            this.cmbFormatoEjemplarAG.Name = "cmbFormatoEjemplarAG";
+            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(244, 29);
+            this.cmbFormatoEjemplarAG.TabIndex = 26;
             // 
-            // dataGridView1
+            // dgvEjemplaresAG
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(503, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.tableLayoutPanel1.SetRowSpan(this.dataGridView1, 13);
-            this.dataGridView1.Size = new System.Drawing.Size(747, 612);
-            this.dataGridView1.TabIndex = 29;
+            this.dgvEjemplaresAG.AllowUserToAddRows = false;
+            this.dgvEjemplaresAG.AllowUserToDeleteRows = false;
+            this.dgvEjemplaresAG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEjemplaresAG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEjemplaresAG.Location = new System.Drawing.Point(503, 3);
+            this.dgvEjemplaresAG.Name = "dgvEjemplaresAG";
+            this.dgvEjemplaresAG.ReadOnly = true;
+            this.dgvEjemplaresAG.RowHeadersWidth = 51;
+            this.tableLayoutPanel1.SetRowSpan(this.dgvEjemplaresAG, 13);
+            this.dgvEjemplaresAG.Size = new System.Drawing.Size(747, 612);
+            this.dgvEjemplaresAG.TabIndex = 29;
             // 
-            // dtpFechaPublicacionEjemplar
+            // dtpFechaPublicacionEjemplarAG
             // 
-            this.dtpFechaPublicacionEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtpFechaPublicacionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpFechaPublicacionEjemplar.Location = new System.Drawing.Point(253, 144);
-            this.dtpFechaPublicacionEjemplar.Name = "dtpFechaPublicacionEjemplar";
-            this.dtpFechaPublicacionEjemplar.Size = new System.Drawing.Size(244, 29);
-            this.dtpFechaPublicacionEjemplar.TabIndex = 30;
+            this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(253, 144);
+            this.dtpFechaPublicacionEjemplarAG.Name = "dtpFechaPublicacionEjemplarAG";
+            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(244, 29);
+            this.dtpFechaPublicacionEjemplarAG.TabIndex = 30;
             // 
             // tabReserva
             // 
@@ -731,7 +731,7 @@
             this.tabReserva.Padding = new System.Windows.Forms.Padding(3);
             this.tabReserva.Size = new System.Drawing.Size(1256, 618);
             this.tabReserva.TabIndex = 2;
-            this.tabReserva.Text = "Reservar ejemplar";
+            this.tabReserva.Text = "Reservas de ejemplares";
             this.tabReserva.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
@@ -742,13 +742,13 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Controls.Add(this.dataGridView2, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox2, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.numericUpDown2, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.dgvReservasRE, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtCodigoEjemplarRE, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.nudIdUsuarioRE, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.label26, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.label23, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button4, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 2, 5);
+            this.tableLayoutPanel2.Controls.Add(this.btnBuscarRE, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.btnPrestarRE, 2, 5);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -774,16 +774,16 @@
             this.label26.TabIndex = 8;
             this.label26.Text = "ID usuario";
             // 
-            // numericUpDown2
+            // nudIdUsuarioRE
             // 
-            this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.nudIdUsuarioRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.SetColumnSpan(this.numericUpDown2, 2);
-            this.numericUpDown2.Location = new System.Drawing.Point(128, 311);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(368, 29);
-            this.numericUpDown2.TabIndex = 30;
+            this.tableLayoutPanel2.SetColumnSpan(this.nudIdUsuarioRE, 2);
+            this.nudIdUsuarioRE.Location = new System.Drawing.Point(128, 311);
+            this.nudIdUsuarioRE.Name = "nudIdUsuarioRE";
+            this.nudIdUsuarioRE.Size = new System.Drawing.Size(368, 29);
+            this.nudIdUsuarioRE.TabIndex = 30;
             // 
             // label23
             // 
@@ -795,28 +795,28 @@
             this.label23.TabIndex = 1;
             this.label23.Text = "Código ejemplar";
             // 
-            // textBox2
+            // txtCodigoEjemplarRE
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtCodigoEjemplarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.SetColumnSpan(this.textBox2, 2);
-            this.textBox2.Location = new System.Drawing.Point(128, 157);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(368, 29);
-            this.textBox2.TabIndex = 22;
+            this.tableLayoutPanel2.SetColumnSpan(this.txtCodigoEjemplarRE, 2);
+            this.txtCodigoEjemplarRE.Location = new System.Drawing.Point(128, 157);
+            this.txtCodigoEjemplarRE.Name = "txtCodigoEjemplarRE";
+            this.txtCodigoEjemplarRE.Size = new System.Drawing.Size(368, 29);
+            this.txtCodigoEjemplarRE.TabIndex = 22;
             // 
-            // dataGridView2
+            // dgvReservasRE
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvReservasRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(502, 80);
-            this.dataGridView2.Name = "dataGridView2";
-            this.tableLayoutPanel2.SetRowSpan(this.dataGridView2, 6);
-            this.dataGridView2.Size = new System.Drawing.Size(620, 456);
-            this.dataGridView2.TabIndex = 31;
+            this.dgvReservasRE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReservasRE.Location = new System.Drawing.Point(502, 80);
+            this.dgvReservasRE.Name = "dgvReservasRE";
+            this.tableLayoutPanel2.SetRowSpan(this.dgvReservasRE, 6);
+            this.dgvReservasRE.Size = new System.Drawing.Size(620, 456);
+            this.dgvReservasRE.TabIndex = 31;
             // 
             // tabPrestamo
             // 
@@ -826,7 +826,7 @@
             this.tabPrestamo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPrestamo.Size = new System.Drawing.Size(1256, 618);
             this.tabPrestamo.TabIndex = 1;
-            this.tabPrestamo.Text = "Prestar ejemplar";
+            this.tabPrestamo.Text = "Préstamo de ejemplares";
             this.tabPrestamo.UseVisualStyleBackColor = true;
             // 
             // tabBuscar
@@ -838,35 +838,35 @@
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBuscar.Size = new System.Drawing.Size(1256, 618);
             this.tabBuscar.TabIndex = 0;
-            this.tabBuscar.Text = "Búscar ejemplar";
+            this.tabBuscar.Text = "Búsqueda de ejemplares";
             // 
-            // tabAdminKeyDown
+            // tabAdmin
             // 
-            this.tabAdminKeyDown.AccessibleDescription = "";
-            this.tabAdminKeyDown.AccessibleName = "";
-            this.tabAdminKeyDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabAdmin.AccessibleDescription = "";
+            this.tabAdmin.AccessibleName = "";
+            this.tabAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabAdminKeyDown.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabAdminKeyDown.CausesValidation = false;
-            this.tabAdminKeyDown.Controls.Add(this.tabBuscar);
-            this.tabAdminKeyDown.Controls.Add(this.tabPrestamo);
-            this.tabAdminKeyDown.Controls.Add(this.tabReserva);
-            this.tabAdminKeyDown.Controls.Add(this.tabAgregar);
-            this.tabAdminKeyDown.Controls.Add(this.tabEventos);
-            this.tabAdminKeyDown.Controls.Add(this.tabUsuarios);
-            this.tabAdminKeyDown.Controls.Add(this.tabPage1);
-            this.tabAdminKeyDown.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabAdminKeyDown.Location = new System.Drawing.Point(0, 28);
-            this.tabAdminKeyDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabAdminKeyDown.Name = "tabAdminKeyDown";
-            this.tabAdminKeyDown.SelectedIndex = 0;
-            this.tabAdminKeyDown.Size = new System.Drawing.Size(1264, 655);
-            this.tabAdminKeyDown.TabIndex = 0;
-            this.tabAdminKeyDown.TabStop = false;
-            this.tabAdminKeyDown.Tag = "";
-            this.tabAdminKeyDown.SelectedIndexChanged += new System.EventHandler(this.tabAdmin_SelectedIndexChanged);
-            this.tabAdminKeyDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabAdmin_KeyDown);
+            this.tabAdmin.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabAdmin.CausesValidation = false;
+            this.tabAdmin.Controls.Add(this.tabBuscar);
+            this.tabAdmin.Controls.Add(this.tabPrestamo);
+            this.tabAdmin.Controls.Add(this.tabReserva);
+            this.tabAdmin.Controls.Add(this.tabAgregar);
+            this.tabAdmin.Controls.Add(this.tabEventos);
+            this.tabAdmin.Controls.Add(this.tabUsuarios);
+            this.tabAdmin.Controls.Add(this.tabPage1);
+            this.tabAdmin.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabAdmin.Location = new System.Drawing.Point(0, 28);
+            this.tabAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabAdmin.Name = "tabAdmin";
+            this.tabAdmin.SelectedIndex = 0;
+            this.tabAdmin.Size = new System.Drawing.Size(1264, 655);
+            this.tabAdmin.TabIndex = 0;
+            this.tabAdmin.TabStop = false;
+            this.tabAdmin.Tag = "";
+            this.tabAdmin.SelectedIndexChanged += new System.EventHandler(this.tabAdmin_SelectedIndexChanged);
+            this.tabAdmin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabAdmin_KeyDown);
             // 
             // tabPage1
             // 
@@ -960,42 +960,41 @@
             this.lblInfoVision.Text = resources.GetString("lblInfoVision.Text");
             this.lblInfoVision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button3
+            // btnPrestarRE
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnPrestarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(315, 388);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(181, 71);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnPrestarRE.Location = new System.Drawing.Point(315, 388);
+            this.btnPrestarRE.Name = "btnPrestarRE";
+            this.btnPrestarRE.Size = new System.Drawing.Size(181, 71);
+            this.btnPrestarRE.TabIndex = 32;
+            this.btnPrestarRE.Text = "Completar";
+            this.btnPrestarRE.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnBuscarRE
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnBuscarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(128, 388);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(181, 71);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnBuscarRE.Location = new System.Drawing.Point(128, 388);
+            this.btnBuscarRE.Name = "btnBuscarRE";
+            this.btnBuscarRE.Size = new System.Drawing.Size(181, 71);
+            this.btnBuscarRE.TabIndex = 33;
+            this.btnBuscarRE.Text = "Búscar";
+            this.btnBuscarRE.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.tabAdminKeyDown);
+            this.Controls.Add(this.tabAdmin);
             this.Controls.Add(this.mspMenu);
             this.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.mspMenu;
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmPrincipal";
-            this.Text = "Búscar ejemplar";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();
@@ -1007,13 +1006,13 @@
             this.tabAgregar.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresAG)).EndInit();
             this.tabReserva.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.tabAdminKeyDown.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).EndInit();
+            this.tabAdmin.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -1052,9 +1051,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabPage tabAgregar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnSalirEdicionEjemplar;
-        private System.Windows.Forms.Button btnAgregarEjemplar;
-        private System.Windows.Forms.TextBox txtEditorialEjemplar;
+        private System.Windows.Forms.Button btnSalirEdicionEjemplarAG;
+        private System.Windows.Forms.Button btnAgregarEjemplarAG;
+        private System.Windows.Forms.TextBox txtEditorialEjemplarAG;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -1065,19 +1064,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodigoEjemplar;
-        private System.Windows.Forms.ComboBox cmbIdiomaEjemplar;
-        private System.Windows.Forms.Button btnEtiquetasEjemplar;
-        private System.Windows.Forms.TextBox txtNombreEjemplar;
-        private System.Windows.Forms.TextBox txtAutorEjemplar;
-        private System.Windows.Forms.ComboBox cmbTipoColeccionEjemplar;
-        private System.Windows.Forms.ComboBox cmbFormatoEjemplar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dtpFechaPublicacionEjemplar;
+        private System.Windows.Forms.TextBox txtCodigoEjemplarAG;
+        private System.Windows.Forms.ComboBox cmbIdiomaEjemplarAG;
+        private System.Windows.Forms.Button btnEtiquetasEjemplarAG;
+        private System.Windows.Forms.TextBox txtNombreEjemplarAG;
+        private System.Windows.Forms.TextBox txtAutorEjemplarAG;
+        private System.Windows.Forms.ComboBox cmbTipoColeccionEjemplarAG;
+        private System.Windows.Forms.ComboBox cmbFormatoEjemplarAG;
+        private System.Windows.Forms.DataGridView dgvEjemplaresAG;
+        private System.Windows.Forms.DateTimePicker dtpFechaPublicacionEjemplarAG;
         private System.Windows.Forms.TabPage tabReserva;
         private System.Windows.Forms.TabPage tabPrestamo;
         private System.Windows.Forms.TabPage tabBuscar;
-        private System.Windows.Forms.TabControl tabAdminKeyDown;
+        private System.Windows.Forms.TabControl tabAdmin;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lblMision;
@@ -1086,11 +1085,11 @@
         private System.Windows.Forms.Label lblInfoVision;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown nudIdUsuarioRE;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtCodigoEjemplarRE;
+        private System.Windows.Forms.DataGridView dgvReservasRE;
+        private System.Windows.Forms.Button btnBuscarRE;
+        private System.Windows.Forms.Button btnPrestarRE;
     }
 }
