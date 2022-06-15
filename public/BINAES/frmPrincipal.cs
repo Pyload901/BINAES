@@ -27,13 +27,13 @@ namespace BINAES
         {
             if (e.ClickedItem.Tag.ToString() != "")
             {
-                tabAdmin.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
+                tabMisionVision.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
             }
         }
 
         private void búsquedaToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            tabAdmin.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
+            tabMisionVision.SelectedIndex = Convert.ToInt32(e.ClickedItem.Tag);
 
         }
         private void tabAdmin_KeyDown(object sender, KeyEventArgs e)
@@ -43,10 +43,10 @@ namespace BINAES
                 switch (e.KeyValue)
                 {
                     case 'F':
-                        tabAdmin.SelectedIndex = 0;
+                        tabMisionVision.SelectedIndex = 0;
                         break;
                     case 'N':
-                        tabAdmin.SelectedIndex = 3;
+                        tabMisionVision.SelectedIndex = 3;
                         break;
                 }
             }
@@ -54,12 +54,12 @@ namespace BINAES
 
         private void tabAdmin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Text = tabAdmin.SelectedTab.Text;
+            this.Text = tabMisionVision.SelectedTab.Text;
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            tabAdmin.Select();
+            tabMisionVision.Select();
         }
 
         private void tabBuscar_Click(object sender, EventArgs e)
@@ -88,6 +88,10 @@ namespace BINAES
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+        private void tabBuscar_Click_1(object sender, EventArgs e)
         {
 
         }
