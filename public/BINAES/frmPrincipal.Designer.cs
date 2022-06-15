@@ -84,14 +84,14 @@
             this.administradorDeEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblCodigoEjemplar = new System.Windows.Forms.Label();
+            this.txtCodEjemplar = new System.Windows.Forms.TextBox();
+            this.lblIDUsuario = new System.Windows.Forms.Label();
+            this.txtIDUsuario = new System.Windows.Forms.TextBox();
+            this.btnMostrarPrestamo = new System.Windows.Forms.Button();
+            this.btnAgregarPrestamo = new System.Windows.Forms.Button();
+            this.dgvInformacionPrestamos = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabMisionVision.SuspendLayout();
             this.tabReserva.SuspendLayout();
             this.tabAgregar.SuspendLayout();
@@ -103,8 +103,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.mspMenu.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInformacionPrestamos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabMisionVision
@@ -157,7 +157,7 @@
             // 
             // tabReserva
             // 
-            this.tabReserva.Controls.Add(this.dataGridView2);
+            this.tabReserva.Controls.Add(this.dgvInformacionPrestamos);
             this.tabReserva.Controls.Add(this.tableLayoutPanel2);
             this.tabReserva.Location = new System.Drawing.Point(4, 40);
             this.tabReserva.Name = "tabReserva";
@@ -738,28 +738,28 @@
             // búscarToolStripMenuItem
             // 
             this.búscarToolStripMenuItem.Name = "búscarToolStripMenuItem";
-            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.búscarToolStripMenuItem.Tag = "0";
             this.búscarToolStripMenuItem.Text = "Búscar [Ctrl + F]";
             // 
             // prestarToolStripMenuItem
             // 
             this.prestarToolStripMenuItem.Name = "prestarToolStripMenuItem";
-            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.prestarToolStripMenuItem.Tag = "1";
             this.prestarToolStripMenuItem.Text = "Préstamos";
             // 
             // devolucionesToolStripMenuItem
             // 
             this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.devolucionesToolStripMenuItem.Tag = "2";
             this.devolucionesToolStripMenuItem.Text = "Reservas";
             // 
             // añadirToolStripMenuItem
             // 
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.añadirToolStripMenuItem.Tag = "3";
             this.añadirToolStripMenuItem.Text = "Agregar [Ctrl + N]";
             // 
@@ -783,14 +783,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.86047F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.13953F));
-            this.tableLayoutPanel2.Controls.Add(this.label18, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label19, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox3, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.button4, 1, 4);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.lblCodigoEjemplar, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtCodEjemplar, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblIDUsuario, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtIDUsuario, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnMostrarPrestamo, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.btnAgregarPrestamo, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -803,51 +803,88 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(775, 595);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // label18
+            // lblCodigoEjemplar
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblCodigoEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(318, 119);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Codigo del Ejemplar:";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCodigoEjemplar.AutoSize = true;
+            this.lblCodigoEjemplar.Location = new System.Drawing.Point(3, 0);
+            this.lblCodigoEjemplar.Name = "lblCodigoEjemplar";
+            this.lblCodigoEjemplar.Size = new System.Drawing.Size(381, 119);
+            this.lblCodigoEjemplar.TabIndex = 0;
+            this.lblCodigoEjemplar.Text = "Codigo del Ejemplar:";
+            this.lblCodigoEjemplar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // txtCodEjemplar
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtCodEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(3, 122);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(318, 34);
-            this.textBox2.TabIndex = 1;
+            this.txtCodEjemplar.Location = new System.Drawing.Point(3, 122);
+            this.txtCodEjemplar.Name = "txtCodEjemplar";
+            this.txtCodEjemplar.Size = new System.Drawing.Size(381, 34);
+            this.txtCodEjemplar.TabIndex = 1;
             // 
-            // label19
+            // lblIDUsuario
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblIDUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(3, 238);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(318, 119);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "ID Usuario:";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblIDUsuario.AutoSize = true;
+            this.lblIDUsuario.Location = new System.Drawing.Point(3, 238);
+            this.lblIDUsuario.Name = "lblIDUsuario";
+            this.lblIDUsuario.Size = new System.Drawing.Size(381, 119);
+            this.lblIDUsuario.TabIndex = 2;
+            this.lblIDUsuario.Text = "ID Usuario:";
+            this.lblIDUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // txtIDUsuario
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtIDUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(3, 360);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(318, 34);
-            this.textBox3.TabIndex = 3;
+            this.txtIDUsuario.Location = new System.Drawing.Point(3, 360);
+            this.txtIDUsuario.Name = "txtIDUsuario";
+            this.txtIDUsuario.Size = new System.Drawing.Size(381, 34);
+            this.txtIDUsuario.TabIndex = 3;
+            // 
+            // btnMostrarPrestamo
+            // 
+            this.btnMostrarPrestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMostrarPrestamo.Location = new System.Drawing.Point(3, 479);
+            this.btnMostrarPrestamo.Name = "btnMostrarPrestamo";
+            this.btnMostrarPrestamo.Size = new System.Drawing.Size(381, 113);
+            this.btnMostrarPrestamo.TabIndex = 8;
+            this.btnMostrarPrestamo.Text = "Mostar Prestamos";
+            this.btnMostrarPrestamo.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarPrestamo
+            // 
+            this.btnAgregarPrestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarPrestamo.Location = new System.Drawing.Point(390, 479);
+            this.btnAgregarPrestamo.Name = "btnAgregarPrestamo";
+            this.btnAgregarPrestamo.Size = new System.Drawing.Size(382, 113);
+            this.btnAgregarPrestamo.TabIndex = 9;
+            this.btnAgregarPrestamo.Text = "Agregar Prestamo";
+            this.btnAgregarPrestamo.UseVisualStyleBackColor = true;
+            // 
+            // dgvInformacionPrestamos
+            // 
+            this.dgvInformacionPrestamos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvInformacionPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInformacionPrestamos.Location = new System.Drawing.Point(781, 9);
+            this.dgvInformacionPrestamos.Name = "dgvInformacionPrestamos";
+            this.dgvInformacionPrestamos.RowHeadersWidth = 51;
+            this.dgvInformacionPrestamos.RowTemplate.Height = 24;
+            this.dgvInformacionPrestamos.Size = new System.Drawing.Size(461, 589);
+            this.dgvInformacionPrestamos.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -855,49 +892,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::BINAES.Properties.Resources.Propuesta_de_Logo__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(327, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(390, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(445, 113);
+            this.pictureBox1.Size = new System.Drawing.Size(382, 113);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(3, 479);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(318, 113);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Mostar Prestamos";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(327, 479);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(445, 113);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Agregar Prestamo";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(781, 9);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(461, 589);
-            this.dataGridView2.TabIndex = 1;
             // 
             // frmPrincipal
             // 
@@ -927,8 +927,8 @@
             this.mspMenu.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInformacionPrestamos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -992,13 +992,13 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label lblCodigoEjemplar;
+        private System.Windows.Forms.TextBox txtCodEjemplar;
+        private System.Windows.Forms.Label lblIDUsuario;
+        private System.Windows.Forms.TextBox txtIDUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btnMostrarPrestamo;
+        private System.Windows.Forms.Button btnAgregarPrestamo;
+        private System.Windows.Forms.DataGridView dgvInformacionPrestamos;
     }
 }
