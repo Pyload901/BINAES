@@ -98,6 +98,14 @@
             this.lblVision = new System.Windows.Forms.Label();
             this.lblInfoMision = new System.Windows.Forms.Label();
             this.lblInfoVision = new System.Windows.Forms.Label();
+            this.tlpBusquedaEjemplaresBE = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tlpAdminEventosEV.SuspendLayout();
@@ -110,9 +118,13 @@
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).BeginInit();
+            this.tabBuscar.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tlpBusquedaEjemplaresBE.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // mspMenu
@@ -857,6 +869,8 @@
             // tabBuscar
             // 
             this.tabBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.tabBuscar.Controls.Add(this.tableLayoutPanel4);
+            this.tabBuscar.Controls.Add(this.tlpBusquedaEjemplaresBE);
             this.tabBuscar.Location = new System.Drawing.Point(4, 33);
             this.tabBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBuscar.Name = "tabBuscar";
@@ -985,6 +999,101 @@
             this.lblInfoVision.Text = resources.GetString("lblInfoVision.Text");
             this.lblInfoVision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // tlpBusquedaEjemplaresBE
+            // 
+            this.tlpBusquedaEjemplaresBE.ColumnCount = 3;
+            this.tlpBusquedaEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.92896F));
+            this.tlpBusquedaEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.540984F));
+            this.tlpBusquedaEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.42076F));
+            this.tlpBusquedaEjemplaresBE.Controls.Add(this.textBox1, 0, 0);
+            this.tlpBusquedaEjemplaresBE.Controls.Add(this.button1, 1, 0);
+            this.tlpBusquedaEjemplaresBE.Controls.Add(this.comboBox1, 2, 0);
+            this.tlpBusquedaEjemplaresBE.Location = new System.Drawing.Point(165, 72);
+            this.tlpBusquedaEjemplaresBE.Name = "tlpBusquedaEjemplaresBE";
+            this.tlpBusquedaEjemplaresBE.RowCount = 1;
+            this.tlpBusquedaEjemplaresBE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpBusquedaEjemplaresBE.Size = new System.Drawing.Size(915, 40);
+            this.tlpBusquedaEjemplaresBE.TabIndex = 0;
+            this.tlpBusquedaEjemplaresBE.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpBusquedaEjemplaresBE_Paint);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(643, 29);
+            this.textBox1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(652, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(63, 34);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(721, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(191, 29);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.button2, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button3, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(236, 139);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.624413F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.37559F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(766, 426);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button2.Location = new System.Drawing.Point(139, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 35);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button3.Location = new System.Drawing.Point(485, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(178, 35);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableLayoutPanel4.SetColumnSpan(this.dataGridView1, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 44);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(760, 379);
+            this.dataGridView1.TabIndex = 2;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
@@ -1013,10 +1122,15 @@
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).EndInit();
+            this.tabBuscar.ResumeLayout(false);
             this.tabAdmin.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tlpBusquedaEjemplaresBE.ResumeLayout(false);
+            this.tlpBusquedaEjemplaresBE.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1093,6 +1207,14 @@
         private System.Windows.Forms.DataGridView dgvReservasRE;
         private System.Windows.Forms.Button btnBuscarRE;
         private System.Windows.Forms.Button btnPrestarRE;
+        private System.Windows.Forms.TableLayoutPanel tlpBusquedaEjemplaresBE;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
 =======
         private System.Windows.Forms.TextBox txtCodigoEjemplar;
         private System.Windows.Forms.ComboBox cmbIdiomaEjemplar;

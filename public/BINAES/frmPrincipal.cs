@@ -62,5 +62,10 @@ namespace BINAES
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
         }
+
+        private void tlpBusquedaEjemplaresBE_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
