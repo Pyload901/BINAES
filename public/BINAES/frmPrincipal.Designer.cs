@@ -39,22 +39,22 @@
             this.administradorDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.tabEventos = new System.Windows.Forms.TabPage();
-            this.tlpAdminEventosE = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAgregarE = new System.Windows.Forms.Button();
-            this.dgvMostrarInfoEventoE = new System.Windows.Forms.DataGridView();
-            this.nudNumeroAsistentesE = new System.Windows.Forms.NumericUpDown();
+            this.tlpAdminEventosEV = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAgregarEV = new System.Windows.Forms.Button();
+            this.dgvMostrarInfoEventoEV = new System.Windows.Forms.DataGridView();
+            this.nudNumeroAsistentesEV = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
-            this.cmbTipoSalonE = new System.Windows.Forms.ComboBox();
+            this.cmbTipoSalonEV = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.rtbObjetivoEventoE = new System.Windows.Forms.RichTextBox();
+            this.rtbObjetivoEventoEV = new System.Windows.Forms.RichTextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.dtpFechaFinalizacionE = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaFinalizacionEV = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
-            this.dtpFechaInicioE = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaInicioEV = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtTituloEventoE = new System.Windows.Forms.TextBox();
+            this.txtTituloEventoEV = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnDejarDeEditarE = new System.Windows.Forms.Button();
+            this.btnDejarDeEditarEV = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.tabAgregar = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -100,9 +100,9 @@
             this.lblInfoVision = new System.Windows.Forms.Label();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
-            this.tlpAdminEventosE.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarInfoEventoE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesE)).BeginInit();
+            this.tlpAdminEventosEV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarInfoEventoEV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesEV)).BeginInit();
             this.tabAgregar.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresAG)).BeginInit();
@@ -197,7 +197,7 @@
             // 
             // tabEventos
             // 
-            this.tabEventos.Controls.Add(this.tlpAdminEventosE);
+            this.tabEventos.Controls.Add(this.tlpAdminEventosEV);
             this.tabEventos.Location = new System.Drawing.Point(4, 33);
             this.tabEventos.Name = "tabEventos";
             this.tabEventos.Size = new System.Drawing.Size(1256, 618);
@@ -205,81 +205,81 @@
             this.tabEventos.Text = "Eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
             // 
-            // tlpAdminEventosE
+            // tlpAdminEventosEV
             // 
-            this.tlpAdminEventosE.ColumnCount = 3;
-            this.tlpAdminEventosE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.01243F));
-            this.tlpAdminEventosE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.76769F));
-            this.tlpAdminEventosE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.21988F));
-            this.tlpAdminEventosE.Controls.Add(this.btnAgregarE, 1, 12);
-            this.tlpAdminEventosE.Controls.Add(this.dgvMostrarInfoEventoE, 2, 0);
-            this.tlpAdminEventosE.Controls.Add(this.nudNumeroAsistentesE, 0, 11);
-            this.tlpAdminEventosE.Controls.Add(this.label17, 0, 10);
-            this.tlpAdminEventosE.Controls.Add(this.cmbTipoSalonE, 0, 9);
-            this.tlpAdminEventosE.Controls.Add(this.label15, 0, 8);
-            this.tlpAdminEventosE.Controls.Add(this.rtbObjetivoEventoE, 0, 7);
-            this.tlpAdminEventosE.Controls.Add(this.label16, 0, 6);
-            this.tlpAdminEventosE.Controls.Add(this.dtpFechaFinalizacionE, 0, 5);
-            this.tlpAdminEventosE.Controls.Add(this.label14, 0, 4);
-            this.tlpAdminEventosE.Controls.Add(this.dtpFechaInicioE, 0, 3);
-            this.tlpAdminEventosE.Controls.Add(this.label13, 0, 2);
-            this.tlpAdminEventosE.Controls.Add(this.txtTituloEventoE, 0, 1);
-            this.tlpAdminEventosE.Controls.Add(this.label12, 0, 0);
-            this.tlpAdminEventosE.Controls.Add(this.btnDejarDeEditarE, 0, 12);
-            this.tlpAdminEventosE.Controls.Add(this.label11, 1, 0);
-            this.tlpAdminEventosE.Location = new System.Drawing.Point(0, 0);
-            this.tlpAdminEventosE.Name = "tlpAdminEventosE";
-            this.tlpAdminEventosE.RowCount = 13;
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosE.Size = new System.Drawing.Size(1256, 618);
-            this.tlpAdminEventosE.TabIndex = 0;
+            this.tlpAdminEventosEV.ColumnCount = 3;
+            this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.01243F));
+            this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.76769F));
+            this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.21988F));
+            this.tlpAdminEventosEV.Controls.Add(this.btnAgregarEV, 1, 12);
+            this.tlpAdminEventosEV.Controls.Add(this.dgvMostrarInfoEventoEV, 2, 0);
+            this.tlpAdminEventosEV.Controls.Add(this.nudNumeroAsistentesEV, 0, 11);
+            this.tlpAdminEventosEV.Controls.Add(this.label17, 0, 10);
+            this.tlpAdminEventosEV.Controls.Add(this.cmbTipoSalonEV, 0, 9);
+            this.tlpAdminEventosEV.Controls.Add(this.label15, 0, 8);
+            this.tlpAdminEventosEV.Controls.Add(this.rtbObjetivoEventoEV, 0, 7);
+            this.tlpAdminEventosEV.Controls.Add(this.label16, 0, 6);
+            this.tlpAdminEventosEV.Controls.Add(this.dtpFechaFinalizacionEV, 0, 5);
+            this.tlpAdminEventosEV.Controls.Add(this.label14, 0, 4);
+            this.tlpAdminEventosEV.Controls.Add(this.dtpFechaInicioEV, 0, 3);
+            this.tlpAdminEventosEV.Controls.Add(this.label13, 0, 2);
+            this.tlpAdminEventosEV.Controls.Add(this.txtTituloEventoEV, 0, 1);
+            this.tlpAdminEventosEV.Controls.Add(this.label12, 0, 0);
+            this.tlpAdminEventosEV.Controls.Add(this.btnDejarDeEditarEV, 0, 12);
+            this.tlpAdminEventosEV.Controls.Add(this.label11, 1, 0);
+            this.tlpAdminEventosEV.Location = new System.Drawing.Point(0, 0);
+            this.tlpAdminEventosEV.Name = "tlpAdminEventosEV";
+            this.tlpAdminEventosEV.RowCount = 13;
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tlpAdminEventosEV.Size = new System.Drawing.Size(1256, 618);
+            this.tlpAdminEventosEV.TabIndex = 0;
             // 
-            // btnAgregarE
+            // btnAgregarEV
             // 
-            this.btnAgregarE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnAgregarEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarE.Location = new System.Drawing.Point(342, 567);
-            this.btnAgregarE.Name = "btnAgregarE";
-            this.btnAgregarE.Size = new System.Drawing.Size(367, 48);
-            this.btnAgregarE.TabIndex = 22;
-            this.btnAgregarE.Text = "Agregar";
-            this.btnAgregarE.UseVisualStyleBackColor = true;
+            this.btnAgregarEV.Location = new System.Drawing.Point(342, 567);
+            this.btnAgregarEV.Name = "btnAgregarEV";
+            this.btnAgregarEV.Size = new System.Drawing.Size(367, 48);
+            this.btnAgregarEV.TabIndex = 22;
+            this.btnAgregarEV.Text = "Agregar";
+            this.btnAgregarEV.UseVisualStyleBackColor = true;
             // 
-            // dgvMostrarInfoEventoE
+            // dgvMostrarInfoEventoEV
             // 
-            this.dgvMostrarInfoEventoE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvMostrarInfoEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMostrarInfoEventoE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrarInfoEventoE.Location = new System.Drawing.Point(715, 3);
-            this.dgvMostrarInfoEventoE.Name = "dgvMostrarInfoEventoE";
-            this.dgvMostrarInfoEventoE.RowHeadersWidth = 51;
-            this.tlpAdminEventosE.SetRowSpan(this.dgvMostrarInfoEventoE, 13);
-            this.dgvMostrarInfoEventoE.Size = new System.Drawing.Size(538, 612);
-            this.dgvMostrarInfoEventoE.TabIndex = 26;
+            this.dgvMostrarInfoEventoEV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrarInfoEventoEV.Location = new System.Drawing.Point(715, 3);
+            this.dgvMostrarInfoEventoEV.Name = "dgvMostrarInfoEventoEV";
+            this.dgvMostrarInfoEventoEV.RowHeadersWidth = 51;
+            this.tlpAdminEventosEV.SetRowSpan(this.dgvMostrarInfoEventoEV, 13);
+            this.dgvMostrarInfoEventoEV.Size = new System.Drawing.Size(538, 612);
+            this.dgvMostrarInfoEventoEV.TabIndex = 26;
             // 
-            // nudNumeroAsistentesE
+            // nudNumeroAsistentesEV
             // 
-            this.nudNumeroAsistentesE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.nudNumeroAsistentesEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudNumeroAsistentesE.Location = new System.Drawing.Point(3, 520);
-            this.nudNumeroAsistentesE.Name = "nudNumeroAsistentesE";
-            this.nudNumeroAsistentesE.Size = new System.Drawing.Size(333, 29);
-            this.nudNumeroAsistentesE.TabIndex = 16;
+            this.nudNumeroAsistentesEV.Location = new System.Drawing.Point(3, 520);
+            this.nudNumeroAsistentesEV.Name = "nudNumeroAsistentesEV";
+            this.nudNumeroAsistentesEV.Size = new System.Drawing.Size(333, 29);
+            this.nudNumeroAsistentesEV.TabIndex = 16;
             // 
             // label17
             // 
@@ -294,16 +294,16 @@
             this.label17.Text = "Número de asistentes:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cmbTipoSalonE
+            // cmbTipoSalonEV
             // 
-            this.cmbTipoSalonE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbTipoSalonEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbTipoSalonE.FormattingEnabled = true;
-            this.cmbTipoSalonE.Location = new System.Drawing.Point(3, 426);
-            this.cmbTipoSalonE.Name = "cmbTipoSalonE";
-            this.cmbTipoSalonE.Size = new System.Drawing.Size(333, 29);
-            this.cmbTipoSalonE.TabIndex = 14;
+            this.cmbTipoSalonEV.FormattingEnabled = true;
+            this.cmbTipoSalonEV.Location = new System.Drawing.Point(3, 426);
+            this.cmbTipoSalonEV.Name = "cmbTipoSalonEV";
+            this.cmbTipoSalonEV.Size = new System.Drawing.Size(333, 29);
+            this.cmbTipoSalonEV.TabIndex = 14;
             // 
             // label15
             // 
@@ -318,16 +318,16 @@
             this.label15.Text = "Tipo de salón: ";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // rtbObjetivoEventoE
+            // rtbObjetivoEventoEV
             // 
-            this.rtbObjetivoEventoE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.rtbObjetivoEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbObjetivoEventoE.Location = new System.Drawing.Point(3, 332);
-            this.rtbObjetivoEventoE.Name = "rtbObjetivoEventoE";
-            this.rtbObjetivoEventoE.Size = new System.Drawing.Size(333, 41);
-            this.rtbObjetivoEventoE.TabIndex = 23;
-            this.rtbObjetivoEventoE.Text = "";
+            this.rtbObjetivoEventoEV.Location = new System.Drawing.Point(3, 332);
+            this.rtbObjetivoEventoEV.Name = "rtbObjetivoEventoEV";
+            this.rtbObjetivoEventoEV.Size = new System.Drawing.Size(333, 41);
+            this.rtbObjetivoEventoEV.TabIndex = 23;
+            this.rtbObjetivoEventoEV.Text = "";
             // 
             // label16
             // 
@@ -342,12 +342,12 @@
             this.label16.Text = "Objetivos del evento:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dtpFechaFinalizacionE
+            // dtpFechaFinalizacionEV
             // 
-            this.dtpFechaFinalizacionE.Location = new System.Drawing.Point(3, 238);
-            this.dtpFechaFinalizacionE.Name = "dtpFechaFinalizacionE";
-            this.dtpFechaFinalizacionE.Size = new System.Drawing.Size(310, 29);
-            this.dtpFechaFinalizacionE.TabIndex = 19;
+            this.dtpFechaFinalizacionEV.Location = new System.Drawing.Point(3, 238);
+            this.dtpFechaFinalizacionEV.Name = "dtpFechaFinalizacionEV";
+            this.dtpFechaFinalizacionEV.Size = new System.Drawing.Size(310, 29);
+            this.dtpFechaFinalizacionEV.TabIndex = 19;
             // 
             // label14
             // 
@@ -362,12 +362,12 @@
             this.label14.Text = "Fecha de finalización:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dtpFechaInicioE
+            // dtpFechaInicioEV
             // 
-            this.dtpFechaInicioE.Location = new System.Drawing.Point(3, 144);
-            this.dtpFechaInicioE.Name = "dtpFechaInicioE";
-            this.dtpFechaInicioE.Size = new System.Drawing.Size(310, 29);
-            this.dtpFechaInicioE.TabIndex = 17;
+            this.dtpFechaInicioEV.Location = new System.Drawing.Point(3, 144);
+            this.dtpFechaInicioEV.Name = "dtpFechaInicioEV";
+            this.dtpFechaInicioEV.Size = new System.Drawing.Size(310, 29);
+            this.dtpFechaInicioEV.TabIndex = 17;
             // 
             // label13
             // 
@@ -382,15 +382,15 @@
             this.label13.Text = "Fecha de inicio:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtTituloEventoE
+            // txtTituloEventoEV
             // 
-            this.txtTituloEventoE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtTituloEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTituloEventoE.Location = new System.Drawing.Point(3, 50);
-            this.txtTituloEventoE.Name = "txtTituloEventoE";
-            this.txtTituloEventoE.Size = new System.Drawing.Size(333, 29);
-            this.txtTituloEventoE.TabIndex = 4;
+            this.txtTituloEventoEV.Location = new System.Drawing.Point(3, 50);
+            this.txtTituloEventoEV.Name = "txtTituloEventoEV";
+            this.txtTituloEventoEV.Size = new System.Drawing.Size(333, 29);
+            this.txtTituloEventoEV.TabIndex = 4;
             // 
             // label12
             // 
@@ -405,17 +405,17 @@
             this.label12.Text = "Titulo del evento:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnDejarDeEditarE
+            // btnDejarDeEditarEV
             // 
-            this.btnDejarDeEditarE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnDejarDeEditarEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDejarDeEditarE.Location = new System.Drawing.Point(3, 567);
-            this.btnDejarDeEditarE.Name = "btnDejarDeEditarE";
-            this.btnDejarDeEditarE.Size = new System.Drawing.Size(333, 48);
-            this.btnDejarDeEditarE.TabIndex = 24;
-            this.btnDejarDeEditarE.Text = "Dejar de editar";
-            this.btnDejarDeEditarE.UseVisualStyleBackColor = true;
+            this.btnDejarDeEditarEV.Location = new System.Drawing.Point(3, 567);
+            this.btnDejarDeEditarEV.Name = "btnDejarDeEditarEV";
+            this.btnDejarDeEditarEV.Size = new System.Drawing.Size(333, 48);
+            this.btnDejarDeEditarEV.TabIndex = 24;
+            this.btnDejarDeEditarEV.Text = "Dejar de editar";
+            this.btnDejarDeEditarEV.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -1000,10 +1000,10 @@
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();
             this.tabEventos.ResumeLayout(false);
-            this.tlpAdminEventosE.ResumeLayout(false);
-            this.tlpAdminEventosE.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarInfoEventoE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesE)).EndInit();
+            this.tlpAdminEventosEV.ResumeLayout(false);
+            this.tlpAdminEventosEV.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarInfoEventoEV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesEV)).EndInit();
             this.tabAgregar.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -1033,22 +1033,22 @@
         private System.Windows.Forms.ToolStripMenuItem administradorDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.TabPage tabUsuarios;
         private System.Windows.Forms.TabPage tabEventos;
-        private System.Windows.Forms.TableLayoutPanel tlpAdminEventosE;
-        private System.Windows.Forms.Button btnAgregarE;
-        private System.Windows.Forms.DataGridView dgvMostrarInfoEventoE;
-        private System.Windows.Forms.NumericUpDown nudNumeroAsistentesE;
+        private System.Windows.Forms.TableLayoutPanel tlpAdminEventosEV;
+        private System.Windows.Forms.Button btnAgregarEV;
+        private System.Windows.Forms.DataGridView dgvMostrarInfoEventoEV;
+        private System.Windows.Forms.NumericUpDown nudNumeroAsistentesEV;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox cmbTipoSalonE;
+        private System.Windows.Forms.ComboBox cmbTipoSalonEV;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.RichTextBox rtbObjetivoEventoE;
+        private System.Windows.Forms.RichTextBox rtbObjetivoEventoEV;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DateTimePicker dtpFechaFinalizacionE;
+        private System.Windows.Forms.DateTimePicker dtpFechaFinalizacionEV;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dtpFechaInicioE;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicioEV;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtTituloEventoE;
+        private System.Windows.Forms.TextBox txtTituloEventoEV;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnDejarDeEditarE;
+        private System.Windows.Forms.Button btnDejarDeEditarEV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabPage tabAgregar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
