@@ -124,7 +124,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAMrhJREFUeF7t3QeYHHeZ53H24nIsC9yx7BGe5TbALXsHt4Fnl707L0dcgw04YCNH
+        wgAADsIBFShKgAAAMrhJREFUeF7t3QeYHHeZ53H24nIsC9yx7BGe5TbALXsHt4Fnl707L0dcgw04YCNH
         HHHExjbGNs44Z8tyjsJRsiUr5zySrGBJI2msnHOa0UiaqPhevV1VVmvmXzNdnarq7e/ned7HttTTXdVT
         rl////0PHxEAAJB5BDoAAAYQ6AAAGECgAwBgAIEOAIABBDoAAAYQ6AAAGECgAwBgAIEOAIABBDoAAAYQ
         6AAAGECgAwBgAIEOAIABBDoAAAYQ6AAAGECgAwBgAIEOAIABBDoAAAYQ6AAAGECgAwBgAIEOAIABBDoA
@@ -348,6 +348,12 @@
   </data>
   <data name="lblInfoVision.Text" xml:space="preserve">
     <value>La Biblioteca Nacional de El Salvador (BINAES) estara orientada a la prestacion de servicios  de calidad, buscando consolidarse como un espacio activo, cultural, educativo y ludico donde se formen personas criticas, creativas y autonomas que sean referentes en todos los sentidos del conocimiento.</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>BINAES es miembro del Consorcio de Bibliotecas Universitarias de El Salvador (CBUES), lo que le ha permitido ampliar sus colecciones en formato electrónico, gozar de beneficios como subvención de ayudas y capacitaciones; así como ser parte del Repositorio de Ciencia y Cultura de El Salvador REDICCES brindándole la visibilidad a una parte de sus colecciones antiguas a nivel mundial, las que han tenido un número considerable de consultas según reportes estadísticos.</value>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>Además es miembro del Comité de Memoria del Mundo, de la Asociación de Bibliotecas Nacionales de Iberoamérica (ABINIA), Organismo Salvadoreño de Normalización (OSN) a través de Comité Técnico No. 40 Información y Documentación; lo que le permite proyectarse institucionalmente a nivel nacional e internacional.</value>
   </data>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>123, 17</value>
