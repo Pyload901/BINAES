@@ -91,6 +91,14 @@
             this.btnPrestarRE = new System.Windows.Forms.Button();
             this.tabPrestamo = new System.Windows.Forms.TabPage();
             this.tabBuscar = new System.Windows.Forms.TabPage();
+            this.tlpMostrarEjemplaresBE = new System.Windows.Forms.TableLayoutPanel();
+            this.btnReservarEjemplarBE = new System.Windows.Forms.Button();
+            this.dgvMostrarEjemplaresBE = new System.Windows.Forms.DataGridView();
+            this.btnPrestarEjemplarBE = new System.Windows.Forms.Button();
+            this.tlpBusquedaEjemplaresBE = new System.Windows.Forms.TableLayoutPanel();
+            this.txtBusquedaBE = new System.Windows.Forms.TextBox();
+            this.btnBuscarBE = new System.Windows.Forms.Button();
+            this.cmbFiltroBE = new System.Windows.Forms.ComboBox();
             this.tabAdmin = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -98,14 +106,6 @@
             this.lblVision = new System.Windows.Forms.Label();
             this.lblInfoMision = new System.Windows.Forms.Label();
             this.lblInfoVision = new System.Windows.Forms.Label();
-            this.tlpBusquedaEjemplaresBE = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBusquedaBE = new System.Windows.Forms.TextBox();
-            this.btnBuscarBE = new System.Windows.Forms.Button();
-            this.cmbFiltroBE = new System.Windows.Forms.ComboBox();
-            this.tlpMostrarEjemplaresBE = new System.Windows.Forms.TableLayoutPanel();
-            this.btnPrestarEjemplarBE = new System.Windows.Forms.Button();
-            this.btnReservarEjemplarBE = new System.Windows.Forms.Button();
-            this.dgvMostrarEjemplaresBE = new System.Windows.Forms.DataGridView();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tlpAdminEventosEV.SuspendLayout();
@@ -119,12 +119,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).BeginInit();
             this.tabBuscar.SuspendLayout();
+            this.tlpMostrarEjemplaresBE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarEjemplaresBE)).BeginInit();
+            this.tlpBusquedaEjemplaresBE.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tlpBusquedaEjemplaresBE.SuspendLayout();
-            this.tlpMostrarEjemplaresBE.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarEjemplaresBE)).BeginInit();
             this.SuspendLayout();
             // 
             // mspMenu
@@ -879,6 +879,105 @@
             this.tabBuscar.TabIndex = 0;
             this.tabBuscar.Text = "Búsqueda de ejemplares";
             // 
+            // tlpMostrarEjemplaresBE
+            // 
+            this.tlpMostrarEjemplaresBE.ColumnCount = 2;
+            this.tlpMostrarEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpMostrarEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpMostrarEjemplaresBE.Controls.Add(this.btnReservarEjemplarBE, 1, 0);
+            this.tlpMostrarEjemplaresBE.Controls.Add(this.dgvMostrarEjemplaresBE, 0, 1);
+            this.tlpMostrarEjemplaresBE.Controls.Add(this.btnPrestarEjemplarBE, 0, 0);
+            this.tlpMostrarEjemplaresBE.Location = new System.Drawing.Point(236, 139);
+            this.tlpMostrarEjemplaresBE.Name = "tlpMostrarEjemplaresBE";
+            this.tlpMostrarEjemplaresBE.RowCount = 2;
+            this.tlpMostrarEjemplaresBE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.624413F));
+            this.tlpMostrarEjemplaresBE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.37559F));
+            this.tlpMostrarEjemplaresBE.Size = new System.Drawing.Size(766, 426);
+            this.tlpMostrarEjemplaresBE.TabIndex = 1;
+            // 
+            // btnReservarEjemplarBE
+            // 
+            this.btnReservarEjemplarBE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnReservarEjemplarBE.Location = new System.Drawing.Point(485, 3);
+            this.btnReservarEjemplarBE.Name = "btnReservarEjemplarBE";
+            this.btnReservarEjemplarBE.Size = new System.Drawing.Size(178, 34);
+            this.btnReservarEjemplarBE.TabIndex = 1;
+            this.btnReservarEjemplarBE.Text = "Reservar Ejemplar";
+            this.btnReservarEjemplarBE.UseVisualStyleBackColor = true;
+            // 
+            // dgvMostrarEjemplaresBE
+            // 
+            this.dgvMostrarEjemplaresBE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tlpMostrarEjemplaresBE.SetColumnSpan(this.dgvMostrarEjemplaresBE, 2);
+            this.dgvMostrarEjemplaresBE.Location = new System.Drawing.Point(3, 43);
+            this.dgvMostrarEjemplaresBE.Name = "dgvMostrarEjemplaresBE";
+            this.dgvMostrarEjemplaresBE.RowHeadersWidth = 123;
+            this.dgvMostrarEjemplaresBE.Size = new System.Drawing.Size(760, 379);
+            this.dgvMostrarEjemplaresBE.TabIndex = 2;
+            // 
+            // btnPrestarEjemplarBE
+            // 
+            this.btnPrestarEjemplarBE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnPrestarEjemplarBE.Location = new System.Drawing.Point(114, 3);
+            this.btnPrestarEjemplarBE.Name = "btnPrestarEjemplarBE";
+            this.btnPrestarEjemplarBE.Size = new System.Drawing.Size(155, 34);
+            this.btnPrestarEjemplarBE.TabIndex = 0;
+            this.btnPrestarEjemplarBE.Text = "Prestar Ejemplar";
+            this.btnPrestarEjemplarBE.UseVisualStyleBackColor = true;
+            // 
+            // tlpBusquedaEjemplaresBE
+            // 
+            this.tlpBusquedaEjemplaresBE.ColumnCount = 3;
+            this.tlpBusquedaEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.92896F));
+            this.tlpBusquedaEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.540984F));
+            this.tlpBusquedaEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.42076F));
+            this.tlpBusquedaEjemplaresBE.Controls.Add(this.txtBusquedaBE, 0, 0);
+            this.tlpBusquedaEjemplaresBE.Controls.Add(this.btnBuscarBE, 1, 0);
+            this.tlpBusquedaEjemplaresBE.Controls.Add(this.cmbFiltroBE, 2, 0);
+            this.tlpBusquedaEjemplaresBE.Location = new System.Drawing.Point(165, 72);
+            this.tlpBusquedaEjemplaresBE.Name = "tlpBusquedaEjemplaresBE";
+            this.tlpBusquedaEjemplaresBE.RowCount = 1;
+            this.tlpBusquedaEjemplaresBE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpBusquedaEjemplaresBE.Size = new System.Drawing.Size(915, 40);
+            this.tlpBusquedaEjemplaresBE.TabIndex = 0;
+            this.tlpBusquedaEjemplaresBE.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpBusquedaEjemplaresBE_Paint);
+            // 
+            // txtBusquedaBE
+            // 
+            this.txtBusquedaBE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBusquedaBE.Location = new System.Drawing.Point(3, 3);
+            this.txtBusquedaBE.Name = "txtBusquedaBE";
+            this.txtBusquedaBE.Size = new System.Drawing.Size(643, 29);
+            this.txtBusquedaBE.TabIndex = 0;
+            this.txtBusquedaBE.Text = "Búsqueda";
+            this.txtBusquedaBE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnBuscarBE
+            // 
+            this.btnBuscarBE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarBE.Location = new System.Drawing.Point(652, 3);
+            this.btnBuscarBE.Name = "btnBuscarBE";
+            this.btnBuscarBE.Size = new System.Drawing.Size(63, 34);
+            this.btnBuscarBE.TabIndex = 1;
+            this.btnBuscarBE.Text = "Lupita";
+            this.btnBuscarBE.UseVisualStyleBackColor = true;
+            // 
+            // cmbFiltroBE
+            // 
+            this.cmbFiltroBE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbFiltroBE.FormattingEnabled = true;
+            this.cmbFiltroBE.Location = new System.Drawing.Point(721, 3);
+            this.cmbFiltroBE.Name = "cmbFiltroBE";
+            this.cmbFiltroBE.Size = new System.Drawing.Size(191, 29);
+            this.cmbFiltroBE.TabIndex = 2;
+            this.cmbFiltroBE.Text = "Filtro";
+            // 
             // tabAdmin
             // 
             this.tabAdmin.AccessibleDescription = "";
@@ -999,104 +1098,6 @@
             this.lblInfoVision.Text = resources.GetString("lblInfoVision.Text");
             this.lblInfoVision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // tlpBusquedaEjemplaresBE
-            // 
-            this.tlpBusquedaEjemplaresBE.ColumnCount = 3;
-            this.tlpBusquedaEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.92896F));
-            this.tlpBusquedaEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.540984F));
-            this.tlpBusquedaEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.42076F));
-            this.tlpBusquedaEjemplaresBE.Controls.Add(this.txtBusquedaBE, 0, 0);
-            this.tlpBusquedaEjemplaresBE.Controls.Add(this.btnBuscarBE, 1, 0);
-            this.tlpBusquedaEjemplaresBE.Controls.Add(this.cmbFiltroBE, 2, 0);
-            this.tlpBusquedaEjemplaresBE.Location = new System.Drawing.Point(165, 72);
-            this.tlpBusquedaEjemplaresBE.Name = "tlpBusquedaEjemplaresBE";
-            this.tlpBusquedaEjemplaresBE.RowCount = 1;
-            this.tlpBusquedaEjemplaresBE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBusquedaEjemplaresBE.Size = new System.Drawing.Size(915, 40);
-            this.tlpBusquedaEjemplaresBE.TabIndex = 0;
-            this.tlpBusquedaEjemplaresBE.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpBusquedaEjemplaresBE_Paint);
-            // 
-            // txtBusquedaBE
-            // 
-            this.txtBusquedaBE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBusquedaBE.Location = new System.Drawing.Point(3, 3);
-            this.txtBusquedaBE.Name = "txtBusquedaBE";
-            this.txtBusquedaBE.Size = new System.Drawing.Size(643, 29);
-            this.txtBusquedaBE.TabIndex = 0;
-            this.txtBusquedaBE.Text = "Búsqueda";
-            this.txtBusquedaBE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnBuscarBE
-            // 
-            this.btnBuscarBE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarBE.Location = new System.Drawing.Point(652, 3);
-            this.btnBuscarBE.Name = "btnBuscarBE";
-            this.btnBuscarBE.Size = new System.Drawing.Size(63, 34);
-            this.btnBuscarBE.TabIndex = 1;
-            this.btnBuscarBE.Text = "Lupita";
-            this.btnBuscarBE.UseVisualStyleBackColor = true;
-            // 
-            // cmbFiltroBE
-            // 
-            this.cmbFiltroBE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbFiltroBE.FormattingEnabled = true;
-            this.cmbFiltroBE.Location = new System.Drawing.Point(721, 3);
-            this.cmbFiltroBE.Name = "cmbFiltroBE";
-            this.cmbFiltroBE.Size = new System.Drawing.Size(191, 29);
-            this.cmbFiltroBE.TabIndex = 2;
-            this.cmbFiltroBE.Text = "Filtro";
-            // 
-            // tlpMostrarEjemplaresBE
-            // 
-            this.tlpMostrarEjemplaresBE.ColumnCount = 2;
-            this.tlpMostrarEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpMostrarEjemplaresBE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpMostrarEjemplaresBE.Controls.Add(this.btnReservarEjemplarBE, 1, 0);
-            this.tlpMostrarEjemplaresBE.Controls.Add(this.dgvMostrarEjemplaresBE, 0, 1);
-            this.tlpMostrarEjemplaresBE.Controls.Add(this.btnPrestarEjemplarBE, 0, 0);
-            this.tlpMostrarEjemplaresBE.Location = new System.Drawing.Point(236, 139);
-            this.tlpMostrarEjemplaresBE.Name = "tlpMostrarEjemplaresBE";
-            this.tlpMostrarEjemplaresBE.RowCount = 2;
-            this.tlpMostrarEjemplaresBE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.624413F));
-            this.tlpMostrarEjemplaresBE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.37559F));
-            this.tlpMostrarEjemplaresBE.Size = new System.Drawing.Size(766, 426);
-            this.tlpMostrarEjemplaresBE.TabIndex = 1;
-            // 
-            // btnPrestarEjemplarBE
-            // 
-            this.btnPrestarEjemplarBE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnPrestarEjemplarBE.Location = new System.Drawing.Point(114, 3);
-            this.btnPrestarEjemplarBE.Name = "btnPrestarEjemplarBE";
-            this.btnPrestarEjemplarBE.Size = new System.Drawing.Size(155, 35);
-            this.btnPrestarEjemplarBE.TabIndex = 0;
-            this.btnPrestarEjemplarBE.Text = "Prestar Ejemplar";
-            this.btnPrestarEjemplarBE.UseVisualStyleBackColor = true;
-            // 
-            // btnReservarEjemplarBE
-            // 
-            this.btnReservarEjemplarBE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnReservarEjemplarBE.Location = new System.Drawing.Point(485, 3);
-            this.btnReservarEjemplarBE.Name = "btnReservarEjemplarBE";
-            this.btnReservarEjemplarBE.Size = new System.Drawing.Size(178, 35);
-            this.btnReservarEjemplarBE.TabIndex = 1;
-            this.btnReservarEjemplarBE.Text = "Reservar Ejemplar";
-            this.btnReservarEjemplarBE.UseVisualStyleBackColor = true;
-            // 
-            // dgvMostrarEjemplaresBE
-            // 
-            this.dgvMostrarEjemplaresBE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tlpMostrarEjemplaresBE.SetColumnSpan(this.dgvMostrarEjemplaresBE, 2);
-            this.dgvMostrarEjemplaresBE.Location = new System.Drawing.Point(3, 44);
-            this.dgvMostrarEjemplaresBE.Name = "dgvMostrarEjemplaresBE";
-            this.dgvMostrarEjemplaresBE.Size = new System.Drawing.Size(760, 379);
-            this.dgvMostrarEjemplaresBE.TabIndex = 2;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
@@ -1126,14 +1127,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).EndInit();
             this.tabBuscar.ResumeLayout(false);
+            this.tlpMostrarEjemplaresBE.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarEjemplaresBE)).EndInit();
+            this.tlpBusquedaEjemplaresBE.ResumeLayout(false);
+            this.tlpBusquedaEjemplaresBE.PerformLayout();
             this.tabAdmin.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tlpBusquedaEjemplaresBE.ResumeLayout(false);
-            this.tlpBusquedaEjemplaresBE.PerformLayout();
-            this.tlpMostrarEjemplaresBE.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarEjemplaresBE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
