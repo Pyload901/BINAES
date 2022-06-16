@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.mspMenu = new System.Windows.Forms.MenuStrip();
             this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +57,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+=======
+            this.tabAdmin = new System.Windows.Forms.TabControl();
+            this.tabBuscar = new System.Windows.Forms.TabPage();
+            this.tabPrestamo = new System.Windows.Forms.TabPage();
+            this.tabReserva = new System.Windows.Forms.TabPage();
+>>>>>>> Carlos
             this.tabAgregar = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalirEdicionEjemplarAG = new System.Windows.Forms.Button();
@@ -71,6 +78,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.txtCodigoEjemplarAG = new System.Windows.Forms.TextBox();
             this.cmbIdiomaEjemplarAG = new System.Windows.Forms.ComboBox();
             this.btnEtiquetasEjemplarAG = new System.Windows.Forms.Button();
@@ -113,6 +121,54 @@
             this.tabAdmin.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+=======
+            this.txtCodigoEjemplar = new System.Windows.Forms.TextBox();
+            this.cmbIdiomaEjemplar = new System.Windows.Forms.ComboBox();
+            this.btnEtiquetasEjemplar = new System.Windows.Forms.Button();
+            this.txtNombreEjemplar = new System.Windows.Forms.TextBox();
+            this.txtAutorEjemplar = new System.Windows.Forms.TextBox();
+            this.cmbTipoColeccionEjemplar = new System.Windows.Forms.ComboBox();
+            this.cmbFormatoEjemplar = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtpFechaPublicacionEjemplar = new System.Windows.Forms.DateTimePicker();
+            this.tabEventos = new System.Windows.Forms.TabPage();
+            this.tlpAdminEventosAE = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvCargarImagenesAE = new System.Windows.Forms.DataGridView();
+            this.btnDejar_de_EditarAE = new System.Windows.Forms.Button();
+            this.btnAgregarEventoAE = new System.Windows.Forms.Button();
+            this.dgvMostrarInfoEventoAE = new System.Windows.Forms.DataGridView();
+            this.nudNumeroAsistentesAE = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cmbTipoSalonAE = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dtpFechaFinalizacionAE = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dtpFechaInicioAE = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtTituloEventoAE = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tabUsuarios = new System.Windows.Forms.TabPage();
+            this.mspMenu = new System.Windows.Forms.MenuStrip();
+            this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.búscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prestarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.devolucionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administradorDeEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administradorDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabAdmin.SuspendLayout();
+            this.tabAgregar.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabEventos.SuspendLayout();
+            this.tlpAdminEventosAE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCargarImagenesAE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarInfoEventoAE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesAE)).BeginInit();
+            this.mspMenu.SuspendLayout();
+>>>>>>> Carlos
             this.SuspendLayout();
             // 
             // mspMenu
@@ -492,24 +548,42 @@
             this.btnSalirEdicionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.btnSalirEdicionEjemplarAG.Location = new System.Drawing.Point(3, 567);
             this.btnSalirEdicionEjemplarAG.Name = "btnSalirEdicionEjemplarAG";
             this.btnSalirEdicionEjemplarAG.Size = new System.Drawing.Size(244, 48);
             this.btnSalirEdicionEjemplarAG.TabIndex = 28;
             this.btnSalirEdicionEjemplarAG.Text = "Dejar de editar";
             this.btnSalirEdicionEjemplarAG.UseVisualStyleBackColor = true;
+=======
+            this.btnSalirEdicionEjemplar.Location = new System.Drawing.Point(3, 567);
+            this.btnSalirEdicionEjemplar.Name = "btnSalirEdicionEjemplar";
+            this.btnSalirEdicionEjemplar.Size = new System.Drawing.Size(244, 48);
+            this.btnSalirEdicionEjemplar.TabIndex = 28;
+            this.btnSalirEdicionEjemplar.Text = "Dejar de editar";
+            this.btnSalirEdicionEjemplar.UseVisualStyleBackColor = true;
+>>>>>>> Carlos
             // 
             // btnAgregarEjemplarAG
             // 
             this.btnAgregarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(253, 567);
             this.btnAgregarEjemplarAG.Name = "btnAgregarEjemplarAG";
             this.btnAgregarEjemplarAG.Size = new System.Drawing.Size(244, 48);
             this.btnAgregarEjemplarAG.TabIndex = 27;
             this.btnAgregarEjemplarAG.Text = "Agregar";
             this.btnAgregarEjemplarAG.UseVisualStyleBackColor = true;
+=======
+            this.btnAgregarEjemplar.Location = new System.Drawing.Point(253, 567);
+            this.btnAgregarEjemplar.Name = "btnAgregarEjemplar";
+            this.btnAgregarEjemplar.Size = new System.Drawing.Size(244, 48);
+            this.btnAgregarEjemplar.TabIndex = 27;
+            this.btnAgregarEjemplar.Text = "Agregar";
+            this.btnAgregarEjemplar.UseVisualStyleBackColor = true;
+>>>>>>> Carlos
             // 
             // txtEditorialEjemplarAG
             // 
@@ -701,6 +775,7 @@
             // 
             // dgvEjemplaresAG
             // 
+<<<<<<< HEAD
             this.dgvEjemplaresAG.AllowUserToAddRows = false;
             this.dgvEjemplaresAG.AllowUserToDeleteRows = false;
             this.dgvEjemplaresAG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -712,6 +787,18 @@
             this.tableLayoutPanel1.SetRowSpan(this.dgvEjemplaresAG, 13);
             this.dgvEjemplaresAG.Size = new System.Drawing.Size(747, 612);
             this.dgvEjemplaresAG.TabIndex = 29;
+=======
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(503, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.tableLayoutPanel1.SetRowSpan(this.dataGridView1, 13);
+            this.dataGridView1.Size = new System.Drawing.Size(747, 612);
+            this.dataGridView1.TabIndex = 29;
+>>>>>>> Carlos
             // 
             // dtpFechaPublicacionEjemplarAG
             // 
@@ -725,6 +812,7 @@
             // 
             // tabReserva
             // 
+<<<<<<< HEAD
             this.tabReserva.Controls.Add(this.tableLayoutPanel2);
             this.tabReserva.Location = new System.Drawing.Point(4, 40);
             this.tabReserva.Name = "tabReserva";
@@ -969,12 +1057,123 @@
             this.lblInfoMision.TabIndex = 2;
             this.lblInfoMision.Text = resources.GetString("lblInfoMision.Text");
             this.lblInfoMision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+=======
+            this.tabEventos.Controls.Add(this.tlpAdminEventosAE);
+            this.tabEventos.Location = new System.Drawing.Point(4, 33);
+            this.tabEventos.Name = "tabEventos";
+            this.tabEventos.Size = new System.Drawing.Size(1256, 618);
+            this.tabEventos.TabIndex = 4;
+            this.tabEventos.Text = "Administrar eventos";
+            this.tabEventos.UseVisualStyleBackColor = true;
+            this.tabEventos.Click += new System.EventHandler(this.tabEventos_Click);
+            // 
+            // tlpAdminEventosAE
+            // 
+            this.tlpAdminEventosAE.ColumnCount = 3;
+            this.tlpAdminEventosAE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpAdminEventosAE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpAdminEventosAE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tlpAdminEventosAE.Controls.Add(this.dgvCargarImagenesAE, 1, 0);
+            this.tlpAdminEventosAE.Controls.Add(this.btnDejar_de_EditarAE, 0, 12);
+            this.tlpAdminEventosAE.Controls.Add(this.btnAgregarEventoAE, 1, 12);
+            this.tlpAdminEventosAE.Controls.Add(this.dgvMostrarInfoEventoAE, 2, 0);
+            this.tlpAdminEventosAE.Controls.Add(this.nudNumeroAsistentesAE, 0, 11);
+            this.tlpAdminEventosAE.Controls.Add(this.label17, 0, 10);
+            this.tlpAdminEventosAE.Controls.Add(this.cmbTipoSalonAE, 0, 9);
+            this.tlpAdminEventosAE.Controls.Add(this.label15, 0, 8);
+            this.tlpAdminEventosAE.Controls.Add(this.richTextBox1, 0, 7);
+            this.tlpAdminEventosAE.Controls.Add(this.label16, 0, 6);
+            this.tlpAdminEventosAE.Controls.Add(this.dtpFechaFinalizacionAE, 0, 5);
+            this.tlpAdminEventosAE.Controls.Add(this.label14, 0, 4);
+            this.tlpAdminEventosAE.Controls.Add(this.dtpFechaInicioAE, 0, 3);
+            this.tlpAdminEventosAE.Controls.Add(this.label13, 0, 2);
+            this.tlpAdminEventosAE.Controls.Add(this.txtTituloEventoAE, 0, 1);
+            this.tlpAdminEventosAE.Controls.Add(this.label12, 0, 0);
+            this.tlpAdminEventosAE.Location = new System.Drawing.Point(0, 0);
+            this.tlpAdminEventosAE.Name = "tlpAdminEventosAE";
+            this.tlpAdminEventosAE.RowCount = 13;
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpAdminEventosAE.Size = new System.Drawing.Size(1256, 618);
+            this.tlpAdminEventosAE.TabIndex = 0;
+            // 
+            // dgvCargarImagenesAE
+            // 
+            this.dgvCargarImagenesAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCargarImagenesAE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCargarImagenesAE.Location = new System.Drawing.Point(379, 3);
+            this.dgvCargarImagenesAE.Name = "dgvCargarImagenesAE";
+            this.tlpAdminEventosAE.SetRowSpan(this.dgvCargarImagenesAE, 12);
+            this.dgvCargarImagenesAE.Size = new System.Drawing.Size(370, 558);
+            this.dgvCargarImagenesAE.TabIndex = 0;
+            this.dgvCargarImagenesAE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // btnDejar_de_EditarAE
+            // 
+            this.btnDejar_de_EditarAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDejar_de_EditarAE.Location = new System.Drawing.Point(3, 567);
+            this.btnDejar_de_EditarAE.Name = "btnDejar_de_EditarAE";
+            this.btnDejar_de_EditarAE.Size = new System.Drawing.Size(370, 48);
+            this.btnDejar_de_EditarAE.TabIndex = 24;
+            this.btnDejar_de_EditarAE.Text = "Dejar de editar";
+            this.btnDejar_de_EditarAE.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarEventoAE
+            // 
+            this.btnAgregarEventoAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarEventoAE.Location = new System.Drawing.Point(379, 567);
+            this.btnAgregarEventoAE.Name = "btnAgregarEventoAE";
+            this.btnAgregarEventoAE.Size = new System.Drawing.Size(370, 48);
+            this.btnAgregarEventoAE.TabIndex = 22;
+            this.btnAgregarEventoAE.Text = "Agregar";
+            this.btnAgregarEventoAE.UseVisualStyleBackColor = true;
+            // 
+            // dgvMostrarInfoEventoAE
+            // 
+            this.dgvMostrarInfoEventoAE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrarInfoEventoAE.Location = new System.Drawing.Point(755, 3);
+            this.dgvMostrarInfoEventoAE.Name = "dgvMostrarInfoEventoAE";
+            this.tlpAdminEventosAE.SetRowSpan(this.dgvMostrarInfoEventoAE, 13);
+            this.dgvMostrarInfoEventoAE.Size = new System.Drawing.Size(498, 612);
+            this.dgvMostrarInfoEventoAE.TabIndex = 26;
+            // 
+            // nudNumeroAsistentesAE
+            // 
+            this.nudNumeroAsistentesAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudNumeroAsistentesAE.Location = new System.Drawing.Point(3, 520);
+            this.nudNumeroAsistentesAE.Name = "nudNumeroAsistentesAE";
+            this.nudNumeroAsistentesAE.Size = new System.Drawing.Size(370, 29);
+            this.nudNumeroAsistentesAE.TabIndex = 16;
+>>>>>>> Carlos
             // 
             // lblInfoVision
             // 
             this.lblInfoVision.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.lblInfoVision.AutoSize = true;
             this.lblInfoVision.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblInfoVision.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -984,6 +1183,207 @@
             this.lblInfoVision.TabIndex = 3;
             this.lblInfoVision.Text = resources.GetString("lblInfoVision.Text");
             this.lblInfoVision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+=======
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(3, 470);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(370, 47);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "Número de asistentes:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbTipoSalonAE
+            // 
+            this.cmbTipoSalonAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTipoSalonAE.FormattingEnabled = true;
+            this.cmbTipoSalonAE.Location = new System.Drawing.Point(3, 426);
+            this.cmbTipoSalonAE.Name = "cmbTipoSalonAE";
+            this.cmbTipoSalonAE.Size = new System.Drawing.Size(370, 29);
+            this.cmbTipoSalonAE.TabIndex = 14;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(3, 376);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(370, 47);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "Tipo de salón: ";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.Location = new System.Drawing.Point(3, 332);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(370, 41);
+            this.richTextBox1.TabIndex = 23;
+            this.richTextBox1.Text = "";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(3, 282);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(370, 47);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Objetivos del evento:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dtpFechaFinalizacionAE
+            // 
+            this.dtpFechaFinalizacionAE.Location = new System.Drawing.Point(3, 238);
+            this.dtpFechaFinalizacionAE.Name = "dtpFechaFinalizacionAE";
+            this.dtpFechaFinalizacionAE.Size = new System.Drawing.Size(310, 29);
+            this.dtpFechaFinalizacionAE.TabIndex = 19;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 188);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(370, 47);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Fecha de finalización:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dtpFechaInicioAE
+            // 
+            this.dtpFechaInicioAE.Location = new System.Drawing.Point(3, 144);
+            this.dtpFechaInicioAE.Name = "dtpFechaInicioAE";
+            this.dtpFechaInicioAE.Size = new System.Drawing.Size(310, 29);
+            this.dtpFechaInicioAE.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 94);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(370, 47);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Fecha de inicio:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtTituloEventoAE
+            // 
+            this.txtTituloEventoAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTituloEventoAE.Location = new System.Drawing.Point(3, 50);
+            this.txtTituloEventoAE.Name = "txtTituloEventoAE";
+            this.txtTituloEventoAE.Size = new System.Drawing.Size(370, 29);
+            this.txtTituloEventoAE.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(370, 47);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Titulo del evento:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // tabUsuarios
+            // 
+            this.tabUsuarios.Location = new System.Drawing.Point(4, 33);
+            this.tabUsuarios.Name = "tabUsuarios";
+            this.tabUsuarios.Size = new System.Drawing.Size(1256, 618);
+            this.tabUsuarios.TabIndex = 5;
+            this.tabUsuarios.Text = "Administrar usuarios";
+            this.tabUsuarios.UseVisualStyleBackColor = true;
+            // 
+            // mspMenu
+            // 
+            this.mspMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.búsquedaToolStripMenuItem,
+            this.administradorDeEventosToolStripMenuItem,
+            this.administradorDeUsuariosToolStripMenuItem});
+            this.mspMenu.Location = new System.Drawing.Point(0, 0);
+            this.mspMenu.Name = "mspMenu";
+            this.mspMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.mspMenu.Size = new System.Drawing.Size(1264, 24);
+            this.mspMenu.TabIndex = 1;
+            this.mspMenu.Text = "menuStrip1";
+            this.mspMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mspMenu_ItemClicked);
+            // 
+            // búsquedaToolStripMenuItem
+            // 
+            this.búsquedaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.búscarToolStripMenuItem,
+            this.prestarToolStripMenuItem,
+            this.devolucionesToolStripMenuItem,
+            this.añadirToolStripMenuItem});
+            this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
+            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
+            this.búsquedaToolStripMenuItem.Tag = "";
+            this.búsquedaToolStripMenuItem.Text = "Administrador de ejemplares";
+            this.búsquedaToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.búsquedaToolStripMenuItem_DropDownItemClicked);
+            this.búsquedaToolStripMenuItem.MouseHover += new System.EventHandler(this.búsquedaToolStripMenuItem_MouseHover);
+            // 
+            // búscarToolStripMenuItem
+            // 
+            this.búscarToolStripMenuItem.Name = "búscarToolStripMenuItem";
+            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.búscarToolStripMenuItem.Tag = "0";
+            this.búscarToolStripMenuItem.Text = "Búscar [Ctrl + F]";
+            // 
+            // prestarToolStripMenuItem
+            // 
+            this.prestarToolStripMenuItem.Name = "prestarToolStripMenuItem";
+            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.prestarToolStripMenuItem.Tag = "1";
+            this.prestarToolStripMenuItem.Text = "Préstamos";
+            // 
+            // devolucionesToolStripMenuItem
+            // 
+            this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.devolucionesToolStripMenuItem.Tag = "2";
+            this.devolucionesToolStripMenuItem.Text = "Reservas";
+            // 
+            // añadirToolStripMenuItem
+            // 
+            this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.añadirToolStripMenuItem.Tag = "3";
+            this.añadirToolStripMenuItem.Text = "Agregar [Ctrl + N]";
+            // 
+            // administradorDeEventosToolStripMenuItem
+            // 
+            this.administradorDeEventosToolStripMenuItem.Name = "administradorDeEventosToolStripMenuItem";
+            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
+            this.administradorDeEventosToolStripMenuItem.Tag = "4";
+            this.administradorDeEventosToolStripMenuItem.Text = "Administrador de eventos";
+            // 
+            // administradorDeUsuariosToolStripMenuItem
+            // 
+            this.administradorDeUsuariosToolStripMenuItem.Name = "administradorDeUsuariosToolStripMenuItem";
+            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(158, 20);
+            this.administradorDeUsuariosToolStripMenuItem.Tag = "5";
+            this.administradorDeUsuariosToolStripMenuItem.Text = "Administrador de usuarios";
+>>>>>>> Carlos
             // 
             // frmPrincipal
             // 
@@ -1000,6 +1400,7 @@
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();
             this.tabEventos.ResumeLayout(false);
+<<<<<<< HEAD
             this.tlpAdminEventos.ResumeLayout(false);
             this.tlpAdminEventos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -1017,6 +1418,15 @@
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+=======
+            this.tlpAdminEventosAE.ResumeLayout(false);
+            this.tlpAdminEventosAE.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCargarImagenesAE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarInfoEventoAE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesAE)).EndInit();
+            this.mspMenu.ResumeLayout(false);
+            this.mspMenu.PerformLayout();
+>>>>>>> Carlos
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1065,6 +1475,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
+<<<<<<< HEAD
         private System.Windows.Forms.TextBox txtCodigoEjemplarAG;
         private System.Windows.Forms.ComboBox cmbIdiomaEjemplarAG;
         private System.Windows.Forms.Button btnEtiquetasEjemplarAG;
@@ -1092,5 +1503,33 @@
         private System.Windows.Forms.DataGridView dgvReservasRE;
         private System.Windows.Forms.Button btnBuscarRE;
         private System.Windows.Forms.Button btnPrestarRE;
+=======
+        private System.Windows.Forms.TextBox txtCodigoEjemplar;
+        private System.Windows.Forms.ComboBox cmbIdiomaEjemplar;
+        private System.Windows.Forms.Button btnEtiquetasEjemplar;
+        private System.Windows.Forms.TextBox txtNombreEjemplar;
+        private System.Windows.Forms.TextBox txtAutorEjemplar;
+        private System.Windows.Forms.ComboBox cmbTipoColeccionEjemplar;
+        private System.Windows.Forms.ComboBox cmbFormatoEjemplar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dtpFechaPublicacionEjemplar;
+        private System.Windows.Forms.TableLayoutPanel tlpAdminEventosAE;
+        private System.Windows.Forms.DataGridView dgvCargarImagenesAE;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtTituloEventoAE;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicioAE;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker dtpFechaFinalizacionAE;
+        private System.Windows.Forms.ComboBox cmbTipoSalonAE;
+        private System.Windows.Forms.NumericUpDown nudNumeroAsistentesAE;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnAgregarEventoAE;
+        private System.Windows.Forms.Button btnDejar_de_EditarAE;
+        private System.Windows.Forms.DataGridView dgvMostrarInfoEventoAE;
+>>>>>>> Carlos
     }
 }
