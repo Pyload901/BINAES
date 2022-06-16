@@ -1,9 +1,5 @@
 --PROYECTO BINAES
 
-CREATE DATABASE BINAES
-
-USE BINAES
-
 CREATE TABLE EJEMPLAR(
 	id INT PRIMARY KEY,
 	nombre VARCHAR(100) NOT NULL,
@@ -107,9 +103,15 @@ CREATE TABLE USUARIO(
 	id INT PRIMARY KEY,
 	nombre VARCHAR(50) NOT NULL,
 	institucion VARCHAR(50) NOT NULL,
-	telefono CHAR(9) NOT NULL,
+	telefono CHAR(9) 
+					 NOT NULL	
+					 UNIQUE
+					 CHECK(telefono LIKE '[2|6|7][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 	fotografia VARCHAR(100) NOT NULL DEFAULT 'user.png',
-	correo_electronico VARCHAR(50) NOT NULL,
+	correo_electronico VARCHAR(50) 
+					   NOT NULL
+					   UNIQUE
+					   CHECK(correo_electronico LIKE '%@[gmail|hotmail|outlook|yahoo].com'),							
 	contrasenia VARCHAR(100) NULL,
 	id_rol CHAR(6) NOT NULL DEFAULT 'ROL_00',
 	id_ocupacion INT NOT NULL
