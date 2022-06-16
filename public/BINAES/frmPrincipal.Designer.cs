@@ -977,6 +977,7 @@
             this.cmbFiltroBE.Size = new System.Drawing.Size(191, 29);
             this.cmbFiltroBE.TabIndex = 2;
             this.cmbFiltroBE.Text = "Filtro";
+            this.cmbFiltroBE.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroBE_SelectedIndexChanged);
             // 
             // tabAdmin
             // 
@@ -1183,7 +1184,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
-<<<<<<< HEAD
         private System.Windows.Forms.TextBox txtCodigoEjemplarAG;
         private System.Windows.Forms.ComboBox cmbIdiomaEjemplarAG;
         private System.Windows.Forms.Button btnEtiquetasEjemplarAG;
@@ -1219,33 +1219,5 @@
         private System.Windows.Forms.DataGridView dgvMostrarEjemplaresBE;
         private System.Windows.Forms.Button btnBuscarBE;
         private System.Windows.Forms.ComboBox cmbFiltroBE;
-=======
-        private System.Windows.Forms.TextBox txtCodigoEjemplar;
-        private System.Windows.Forms.ComboBox cmbIdiomaEjemplar;
-        private System.Windows.Forms.Button btnEtiquetasEjemplar;
-        private System.Windows.Forms.TextBox txtNombreEjemplar;
-        private System.Windows.Forms.TextBox txtAutorEjemplar;
-        private System.Windows.Forms.ComboBox cmbTipoColeccionEjemplar;
-        private System.Windows.Forms.ComboBox cmbFormatoEjemplar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dtpFechaPublicacionEjemplar;
-        private System.Windows.Forms.TableLayoutPanel tlpAdminEventosAE;
-        private System.Windows.Forms.DataGridView dgvCargarImagenesAE;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtTituloEventoAE;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DateTimePicker dtpFechaInicioAE;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dtpFechaFinalizacionAE;
-        private System.Windows.Forms.ComboBox cmbTipoSalonAE;
-        private System.Windows.Forms.NumericUpDown nudNumeroAsistentesAE;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button btnAgregarEventoAE;
-        private System.Windows.Forms.Button btnDejar_de_EditarAE;
-        private System.Windows.Forms.DataGridView dgvMostrarInfoEventoAE;
->>>>>>> Carlos
     }
 }

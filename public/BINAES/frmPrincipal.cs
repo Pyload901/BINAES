@@ -67,5 +67,10 @@ namespace BINAES
         {
 
         }
+
+        private void cmbFiltroBE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
