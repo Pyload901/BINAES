@@ -57,23 +57,23 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dtpFechaPublicacionEjemplar = new System.Windows.Forms.DateTimePicker();
             this.tabEventos = new System.Windows.Forms.TabPage();
-            this.tlpAdminEventos = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
+            this.tlpAdminEventosAE = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvCargarImagenesAE = new System.Windows.Forms.DataGridView();
+            this.btnDejar_de_EditarAE = new System.Windows.Forms.Button();
+            this.btnAgregarEventoAE = new System.Windows.Forms.Button();
+            this.dgvMostrarInfoEventoAE = new System.Windows.Forms.DataGridView();
+            this.nudNumeroAsistentesAE = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
+            this.cmbTipoSalonAE = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dtpFechaFinalizacionAE = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dtpFechaInicioAE = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtTituloEventoAE = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.mspMenu = new System.Windows.Forms.MenuStrip();
             this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,10 +88,10 @@
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabEventos.SuspendLayout();
-            this.tlpAdminEventos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tlpAdminEventosAE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCargarImagenesAE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarInfoEventoAE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesAE)).BeginInit();
             this.mspMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -445,7 +445,7 @@
             // 
             // tabEventos
             // 
-            this.tabEventos.Controls.Add(this.tlpAdminEventos);
+            this.tabEventos.Controls.Add(this.tlpAdminEventosAE);
             this.tabEventos.Location = new System.Drawing.Point(4, 33);
             this.tabEventos.Name = "tabEventos";
             this.tabEventos.Size = new System.Drawing.Size(1256, 618);
@@ -454,173 +454,105 @@
             this.tabEventos.UseVisualStyleBackColor = true;
             this.tabEventos.Click += new System.EventHandler(this.tabEventos_Click);
             // 
-            // tlpAdminEventos
+            // tlpAdminEventosAE
             // 
-            this.tlpAdminEventos.ColumnCount = 3;
-            this.tlpAdminEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tlpAdminEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tlpAdminEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlpAdminEventos.Controls.Add(this.dataGridView2, 1, 0);
-            this.tlpAdminEventos.Controls.Add(this.button2, 0, 12);
-            this.tlpAdminEventos.Controls.Add(this.button1, 1, 12);
-            this.tlpAdminEventos.Controls.Add(this.dataGridView3, 2, 0);
-            this.tlpAdminEventos.Controls.Add(this.numericUpDown1, 0, 11);
-            this.tlpAdminEventos.Controls.Add(this.label17, 0, 10);
-            this.tlpAdminEventos.Controls.Add(this.comboBox1, 0, 9);
-            this.tlpAdminEventos.Controls.Add(this.label15, 0, 8);
-            this.tlpAdminEventos.Controls.Add(this.richTextBox1, 0, 7);
-            this.tlpAdminEventos.Controls.Add(this.label16, 0, 6);
-            this.tlpAdminEventos.Controls.Add(this.dateTimePicker2, 0, 5);
-            this.tlpAdminEventos.Controls.Add(this.label14, 0, 4);
-            this.tlpAdminEventos.Controls.Add(this.dateTimePicker1, 0, 3);
-            this.tlpAdminEventos.Controls.Add(this.label13, 0, 2);
-            this.tlpAdminEventos.Controls.Add(this.textBox1, 0, 1);
-            this.tlpAdminEventos.Controls.Add(this.label12, 0, 0);
-            this.tlpAdminEventos.Location = new System.Drawing.Point(0, 0);
-            this.tlpAdminEventos.Name = "tlpAdminEventos";
-            this.tlpAdminEventos.RowCount = 13;
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpAdminEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpAdminEventos.Size = new System.Drawing.Size(1256, 618);
-            this.tlpAdminEventos.TabIndex = 0;
+            this.tlpAdminEventosAE.ColumnCount = 3;
+            this.tlpAdminEventosAE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpAdminEventosAE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpAdminEventosAE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tlpAdminEventosAE.Controls.Add(this.dgvCargarImagenesAE, 1, 0);
+            this.tlpAdminEventosAE.Controls.Add(this.btnDejar_de_EditarAE, 0, 12);
+            this.tlpAdminEventosAE.Controls.Add(this.btnAgregarEventoAE, 1, 12);
+            this.tlpAdminEventosAE.Controls.Add(this.dgvMostrarInfoEventoAE, 2, 0);
+            this.tlpAdminEventosAE.Controls.Add(this.nudNumeroAsistentesAE, 0, 11);
+            this.tlpAdminEventosAE.Controls.Add(this.label17, 0, 10);
+            this.tlpAdminEventosAE.Controls.Add(this.cmbTipoSalonAE, 0, 9);
+            this.tlpAdminEventosAE.Controls.Add(this.label15, 0, 8);
+            this.tlpAdminEventosAE.Controls.Add(this.richTextBox1, 0, 7);
+            this.tlpAdminEventosAE.Controls.Add(this.label16, 0, 6);
+            this.tlpAdminEventosAE.Controls.Add(this.dtpFechaFinalizacionAE, 0, 5);
+            this.tlpAdminEventosAE.Controls.Add(this.label14, 0, 4);
+            this.tlpAdminEventosAE.Controls.Add(this.dtpFechaInicioAE, 0, 3);
+            this.tlpAdminEventosAE.Controls.Add(this.label13, 0, 2);
+            this.tlpAdminEventosAE.Controls.Add(this.txtTituloEventoAE, 0, 1);
+            this.tlpAdminEventosAE.Controls.Add(this.label12, 0, 0);
+            this.tlpAdminEventosAE.Location = new System.Drawing.Point(0, 0);
+            this.tlpAdminEventosAE.Name = "tlpAdminEventosAE";
+            this.tlpAdminEventosAE.RowCount = 13;
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpAdminEventosAE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpAdminEventosAE.Size = new System.Drawing.Size(1256, 618);
+            this.tlpAdminEventosAE.TabIndex = 0;
             // 
-            // dataGridView2
+            // dgvCargarImagenesAE
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvCargarImagenesAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(379, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.tlpAdminEventos.SetRowSpan(this.dataGridView2, 12);
-            this.dataGridView2.Size = new System.Drawing.Size(370, 558);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dgvCargarImagenesAE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCargarImagenesAE.Location = new System.Drawing.Point(379, 3);
+            this.dgvCargarImagenesAE.Name = "dgvCargarImagenesAE";
+            this.tlpAdminEventosAE.SetRowSpan(this.dgvCargarImagenesAE, 12);
+            this.dgvCargarImagenesAE.Size = new System.Drawing.Size(370, 558);
+            this.dgvCargarImagenesAE.TabIndex = 0;
+            this.dgvCargarImagenesAE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // label12
+            // btnDejar_de_EditarAE
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnDejar_de_EditarAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(370, 47);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Titulo del evento:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.btnDejar_de_EditarAE.Location = new System.Drawing.Point(3, 567);
+            this.btnDejar_de_EditarAE.Name = "btnDejar_de_EditarAE";
+            this.btnDejar_de_EditarAE.Size = new System.Drawing.Size(370, 48);
+            this.btnDejar_de_EditarAE.TabIndex = 24;
+            this.btnDejar_de_EditarAE.Text = "Dejar de editar";
+            this.btnDejar_de_EditarAE.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // btnAgregarEventoAE
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnAgregarEventoAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(3, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(370, 29);
-            this.textBox1.TabIndex = 4;
+            this.btnAgregarEventoAE.Location = new System.Drawing.Point(379, 567);
+            this.btnAgregarEventoAE.Name = "btnAgregarEventoAE";
+            this.btnAgregarEventoAE.Size = new System.Drawing.Size(370, 48);
+            this.btnAgregarEventoAE.TabIndex = 22;
+            this.btnAgregarEventoAE.Text = "Agregar";
+            this.btnAgregarEventoAE.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // dgvMostrarInfoEventoAE
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvMostrarInfoEventoAE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrarInfoEventoAE.Location = new System.Drawing.Point(755, 3);
+            this.dgvMostrarInfoEventoAE.Name = "dgvMostrarInfoEventoAE";
+            this.tlpAdminEventosAE.SetRowSpan(this.dgvMostrarInfoEventoAE, 13);
+            this.dgvMostrarInfoEventoAE.Size = new System.Drawing.Size(498, 612);
+            this.dgvMostrarInfoEventoAE.TabIndex = 26;
+            // 
+            // nudNumeroAsistentesAE
+            // 
+            this.nudNumeroAsistentesAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 94);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(370, 47);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Fecha de inicio:";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 144);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(310, 29);
-            this.dateTimePicker1.TabIndex = 17;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 188);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(370, 47);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Fecha de finalización:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(3, 238);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(310, 29);
-            this.dateTimePicker2.TabIndex = 19;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 282);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(370, 47);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "Objetivos del evento:";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 426);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(370, 29);
-            this.comboBox1.TabIndex = 14;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Location = new System.Drawing.Point(3, 520);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(370, 29);
-            this.numericUpDown1.TabIndex = 16;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 376);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(370, 47);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "Tipo de salón: ";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nudNumeroAsistentesAE.Location = new System.Drawing.Point(3, 520);
+            this.nudNumeroAsistentesAE.Name = "nudNumeroAsistentesAE";
+            this.nudNumeroAsistentesAE.Size = new System.Drawing.Size(370, 29);
+            this.nudNumeroAsistentesAE.TabIndex = 16;
             // 
             // label17
             // 
@@ -635,6 +567,30 @@
             this.label17.Text = "Número de asistentes:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cmbTipoSalonAE
+            // 
+            this.cmbTipoSalonAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTipoSalonAE.FormattingEnabled = true;
+            this.cmbTipoSalonAE.Location = new System.Drawing.Point(3, 426);
+            this.cmbTipoSalonAE.Name = "cmbTipoSalonAE";
+            this.cmbTipoSalonAE.Size = new System.Drawing.Size(370, 29);
+            this.cmbTipoSalonAE.TabIndex = 14;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(3, 376);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(370, 47);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "Tipo de salón: ";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // richTextBox1
             // 
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -646,38 +602,82 @@
             this.richTextBox1.TabIndex = 23;
             this.richTextBox1.Text = "";
             // 
-            // button2
+            // label16
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(3, 567);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(370, 48);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Dejar de editar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(3, 282);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(370, 47);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Objetivos del evento:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // dtpFechaFinalizacionAE
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtpFechaFinalizacionAE.Location = new System.Drawing.Point(3, 238);
+            this.dtpFechaFinalizacionAE.Name = "dtpFechaFinalizacionAE";
+            this.dtpFechaFinalizacionAE.Size = new System.Drawing.Size(310, 29);
+            this.dtpFechaFinalizacionAE.TabIndex = 19;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(379, 567);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(370, 48);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 188);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(370, 47);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Fecha de finalización:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dataGridView3
+            // dtpFechaInicioAE
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(755, 3);
-            this.dataGridView3.Name = "dataGridView3";
-            this.tlpAdminEventos.SetRowSpan(this.dataGridView3, 13);
-            this.dataGridView3.Size = new System.Drawing.Size(498, 612);
-            this.dataGridView3.TabIndex = 26;
+            this.dtpFechaInicioAE.Location = new System.Drawing.Point(3, 144);
+            this.dtpFechaInicioAE.Name = "dtpFechaInicioAE";
+            this.dtpFechaInicioAE.Size = new System.Drawing.Size(310, 29);
+            this.dtpFechaInicioAE.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 94);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(370, 47);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Fecha de inicio:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtTituloEventoAE
+            // 
+            this.txtTituloEventoAE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTituloEventoAE.Location = new System.Drawing.Point(3, 50);
+            this.txtTituloEventoAE.Name = "txtTituloEventoAE";
+            this.txtTituloEventoAE.Size = new System.Drawing.Size(370, 29);
+            this.txtTituloEventoAE.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(370, 47);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Titulo del evento:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // tabUsuarios
             // 
@@ -778,11 +778,11 @@
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabEventos.ResumeLayout(false);
-            this.tlpAdminEventos.ResumeLayout(false);
-            this.tlpAdminEventos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tlpAdminEventosAE.ResumeLayout(false);
+            this.tlpAdminEventosAE.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCargarImagenesAE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarInfoEventoAE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesAE)).EndInit();
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -830,22 +830,22 @@
         private System.Windows.Forms.ComboBox cmbFormatoEjemplar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dtpFechaPublicacionEjemplar;
-        private System.Windows.Forms.TableLayoutPanel tlpAdminEventos;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TableLayoutPanel tlpAdminEventosAE;
+        private System.Windows.Forms.DataGridView dgvCargarImagenesAE;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTituloEventoAE;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicioAE;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DateTimePicker dtpFechaFinalizacionAE;
+        private System.Windows.Forms.ComboBox cmbTipoSalonAE;
+        private System.Windows.Forms.NumericUpDown nudNumeroAsistentesAE;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button btnAgregarEventoAE;
+        private System.Windows.Forms.Button btnDejar_de_EditarAE;
+        private System.Windows.Forms.DataGridView dgvMostrarInfoEventoAE;
     }
 }
