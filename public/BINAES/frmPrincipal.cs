@@ -77,5 +77,10 @@ namespace BINAES
         {
 
         }
+
+        private void administradorDeEventosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
