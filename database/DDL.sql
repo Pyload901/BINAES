@@ -106,7 +106,7 @@ CREATE TABLE USUARIO(
 	telefono CHAR(9) 
 					 NOT NULL	
 					 UNIQUE
-					 CHECK(telefono LIKE '+503[2|6|7][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
+					 CHECK(telefono LIKE '[2|6|7][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 	fotografia VARCHAR(100) NOT NULL DEFAULT 'user.png',
 	correo_electronico VARCHAR(50) 
 					   NOT NULL
