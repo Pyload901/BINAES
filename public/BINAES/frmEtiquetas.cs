@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BINAES
 {
-    public partial class login : Form
+    public partial class frmEtiquetas : Form
     {
-        public login()
+        public frmEtiquetas()
         {
             InitializeComponent();
         }

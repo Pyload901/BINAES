@@ -1,7 +1,7 @@
 ﻿
 namespace BINAES
 {
-    partial class login
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace BINAES
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
