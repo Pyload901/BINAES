@@ -108,9 +108,9 @@
             this.txtCodigoEjemplarRE = new System.Windows.Forms.TextBox();
             this.nudIdUsuarioRE = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.btnBuscarRE = new System.Windows.Forms.Button();
             this.btnPrestarRE = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabPrestamo = new System.Windows.Forms.TabPage();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -269,6 +269,9 @@
             // 
             // tableLayoutPanel5
             // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.ColumnCount = 5;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.999001F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66734F));
@@ -544,6 +547,9 @@
             // 
             // tlpAdminEventosEV
             // 
+            this.tlpAdminEventosEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpAdminEventosEV.ColumnCount = 3;
             this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.01243F));
             this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.76769F));
@@ -791,6 +797,9 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1099,6 +1108,9 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 5;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -1174,18 +1186,6 @@
             this.label26.TabIndex = 8;
             this.label26.Text = "ID usuario";
             // 
-            // label23
-            // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.label23, 2);
-            this.label23.Location = new System.Drawing.Point(128, 122);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(368, 32);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "Código ejemplar";
-            // 
             // btnBuscarRE
             // 
             this.btnBuscarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1209,6 +1209,18 @@
             this.btnPrestarRE.TabIndex = 32;
             this.btnPrestarRE.Text = "Completar";
             this.btnPrestarRE.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.label23, 2);
+            this.label23.Location = new System.Drawing.Point(128, 122);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(368, 32);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Código ejemplar";
             // 
             // tabPrestamo
             // 
@@ -1235,6 +1247,10 @@
             // 
             // tableLayoutPanel7
             // 
+            this.tableLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel7.AutoSize = true;
             this.tableLayoutPanel7.ColumnCount = 5;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
@@ -1264,6 +1280,7 @@
             this.txtBuscarEjemplarBU.Name = "txtBuscarEjemplarBU";
             this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(873, 42);
             this.txtBuscarEjemplarBU.TabIndex = 0;
+            this.txtBuscarEjemplarBU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarEjemplarBU_KeyDown);
             // 
             // btnBuscarEjemplarBU
             // 
@@ -1275,6 +1292,7 @@
             this.btnBuscarEjemplarBU.TabIndex = 3;
             this.btnBuscarEjemplarBU.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarEjemplarBU.UseVisualStyleBackColor = true;
+            this.btnBuscarEjemplarBU.Click += new System.EventHandler(this.btnBuscarEjemplarBU_Click);
             // 
             // dgvEjemplaresBU
             // 
@@ -1294,7 +1312,7 @@
             // 
             this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 40);
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 46);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
             this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 40);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
@@ -1640,14 +1658,14 @@
             this.tableLayoutPanel3.Controls.Add(this.lblVision, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.lblInfoMision, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.lblInfoVision, 0, 3);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1245, 602);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1256, 604);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // lblMision
@@ -1660,7 +1678,7 @@
             this.lblMision.Font = new System.Drawing.Font("Nirmala UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMision.Location = new System.Drawing.Point(3, 0);
             this.lblMision.Name = "lblMision";
-            this.lblMision.Size = new System.Drawing.Size(1239, 120);
+            this.lblMision.Size = new System.Drawing.Size(1250, 120);
             this.lblMision.TabIndex = 0;
             this.lblMision.Text = "MISION";
             this.lblMision.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1673,9 +1691,9 @@
             this.lblVision.AutoSize = true;
             this.lblVision.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblVision.Font = new System.Drawing.Font("Nirmala UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVision.Location = new System.Drawing.Point(3, 300);
+            this.lblVision.Location = new System.Drawing.Point(3, 301);
             this.lblVision.Name = "lblVision";
-            this.lblVision.Size = new System.Drawing.Size(1239, 120);
+            this.lblVision.Size = new System.Drawing.Size(1250, 120);
             this.lblVision.TabIndex = 1;
             this.lblVision.Text = "VISION";
             this.lblVision.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1690,7 +1708,7 @@
             this.lblInfoMision.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoMision.Location = new System.Drawing.Point(3, 120);
             this.lblInfoMision.Name = "lblInfoMision";
-            this.lblInfoMision.Size = new System.Drawing.Size(1239, 180);
+            this.lblInfoMision.Size = new System.Drawing.Size(1250, 181);
             this.lblInfoMision.TabIndex = 2;
             this.lblInfoMision.Text = resources.GetString("lblInfoMision.Text");
             this.lblInfoMision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1703,9 +1721,9 @@
             this.lblInfoVision.AutoSize = true;
             this.lblInfoVision.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblInfoVision.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoVision.Location = new System.Drawing.Point(3, 420);
+            this.lblInfoVision.Location = new System.Drawing.Point(3, 421);
             this.lblInfoVision.Name = "lblInfoVision";
-            this.lblInfoVision.Size = new System.Drawing.Size(1239, 182);
+            this.lblInfoVision.Size = new System.Drawing.Size(1250, 183);
             this.lblInfoVision.TabIndex = 3;
             this.lblInfoVision.Text = resources.GetString("lblInfoVision.Text");
             this.lblInfoVision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1731,13 +1749,13 @@
             this.tableLayoutPanel6.Controls.Add(this.label31, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.label32, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.label33, 0, 2);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(6, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1247, 612);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1256, 604);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // label31
@@ -1750,7 +1768,7 @@
             this.label31.Font = new System.Drawing.Font("Nirmala UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(3, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(1241, 122);
+            this.label31.Size = new System.Drawing.Size(1250, 120);
             this.label31.TabIndex = 0;
             this.label31.Text = "Quienes somos?";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1763,9 +1781,9 @@
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label32.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(3, 122);
+            this.label32.Location = new System.Drawing.Point(3, 120);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(1241, 244);
+            this.label32.Size = new System.Drawing.Size(1250, 241);
             this.label32.TabIndex = 1;
             this.label32.Text = resources.GetString("label32.Text");
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1778,9 +1796,9 @@
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label33.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(3, 366);
+            this.label33.Location = new System.Drawing.Point(3, 361);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(1241, 246);
+            this.label33.Size = new System.Drawing.Size(1250, 243);
             this.label33.TabIndex = 2;
             this.label33.Text = resources.GetString("label33.Text");
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1820,6 +1838,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).EndInit();
             this.tabBuscar.ResumeLayout(false);
+            this.tabBuscar.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresBU)).EndInit();

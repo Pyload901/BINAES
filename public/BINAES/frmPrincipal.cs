@@ -65,5 +65,19 @@ namespace BINAES
             // Renderizar imagen de btnBuscarEjemplar
             btnBuscarEjemplarBU.Image = (Image)new Bitmap(global::BINAES.Properties.Resources.lupa, new Size(btnBuscarEjemplarBU.Size.Height, btnBuscarEjemplarBU.Size.Height));
         }
+
+        private void txtBuscarEjemplarBU_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnBuscarEjemplarBU.PerformClick();
+            }
+        }
+
+        private void btnBuscarEjemplarBU_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Buscar");
+        }
+
     }
 }
