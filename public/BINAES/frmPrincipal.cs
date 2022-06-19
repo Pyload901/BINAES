@@ -61,27 +61,9 @@ namespace BINAES
         {
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
+
+            // Renderizar imagen de btnBuscarEjemplar
+            btnBuscarEjemplarBU.Image = (Image)new Bitmap(global::BINAES.Properties.Resources.lupa, new Size(btnBuscarEjemplarBU.Size.Height, btnBuscarEjemplarBU.Size.Height));
         }
-
-        private void tlpBusquedaEjemplaresBE_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cmbFiltroBE_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void administradorDeEventosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
