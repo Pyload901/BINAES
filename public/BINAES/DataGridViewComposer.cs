@@ -21,12 +21,6 @@ namespace BINAES
             else if (e.ColumnIndex == dgv.ColumnCount - 1)
                 DAO.Delete(getId(dgv, e));
         }
-        private static void Complete_ClickHandler(object sender, DataGridViewCellEventArgs e, ITask DAO)
-        {
-            DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == dgv.ColumnCount - 1)
-                DAO.Complete(getId(dgv, e));
-        }
         public static void CleanDataGridView (DataGridView dgv)
         {
             dgv.DataSource = null;
@@ -47,19 +41,6 @@ namespace BINAES
             dgv.CellClick += delegate (object sender, DataGridViewCellEventArgs e)
             {
                 UpdateDelete_ClickHandler(sender, e, DAO);
-            };
-        }
-        public static void BuildDataGridView_Complete (DataGridView dgv, ITask DAO)
-        {
-            dgv.Columns.Add(new DataGridViewButtonColumn());
-            foreach (DataGridViewRow row in dgv.Rows)
-            {
-                row.Cells[dgv.Columns.Count - 1].Value = "Completar";
-                row.Cells[dgv.Columns.Count - 1].Tag = row.Cells[0].Value;
-            }
-            dgv.CellClick += delegate (object sender, DataGridViewCellEventArgs e)
-            {
-                Complete_ClickHandler(sender, e, DAO);
             };
         }
 

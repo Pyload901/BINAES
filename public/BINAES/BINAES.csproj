@@ -65,8 +65,13 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSeleccionCamara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeleccionCamara.Designer.cs">
+      <DependentUpon>frmSeleccionCamara.cs</DependentUpon>
+    </Compile>
     <Compile Include="ICRUD.cs" />
-    <Compile Include="ITask.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmEtiquetas.resx">
@@ -77,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionCamara.resx">
+      <DependentUpon>frmSeleccionCamara.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

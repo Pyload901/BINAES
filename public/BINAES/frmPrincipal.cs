@@ -84,5 +84,16 @@ namespace BINAES
             tabAdmin.SelectedIndex = 0;
             txtBuscarEjemplarBU.Select();
         }
+
+        private void btnTomarFotoUS_Click(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.Camara == null)
+                using (frmSeleccionCamara ventana = new frmSeleccionCamara())
+                {
+                    ventana.ShowDialog();
+                }
+            
+            /*using (frmTomarFoto )*/
+        }
     }
 }
