@@ -87,12 +87,8 @@ namespace BINAES
 
         private void btnTomarFotoUS_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.Camara == null)
-                using (frmSeleccionCamara ventana = new frmSeleccionCamara())
-                {
-                    ventana.ShowDialog();
-                }
-            
+
+            Camara.Abrir(picFotoUS);
             /*using (frmTomarFoto )*/
         }
     }
