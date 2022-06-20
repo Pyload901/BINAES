@@ -196,7 +196,7 @@
             this.mspMenu.Location = new System.Drawing.Point(0, 0);
             this.mspMenu.Name = "mspMenu";
             this.mspMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mspMenu.Size = new System.Drawing.Size(1264, 33);
+            this.mspMenu.Size = new System.Drawing.Size(1264, 36);
             this.mspMenu.TabIndex = 1;
             this.mspMenu.Text = "menuStrip1";
             this.mspMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mspMenu_ItemClicked);
@@ -828,7 +828,7 @@
             this.tableLayoutPanel1.Controls.Add(this.dtpFechaPublicacionEjemplarAG, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 7);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 13;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
@@ -845,7 +845,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1253, 618);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1256, 618);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // btnSalirEdicionEjemplarAG
@@ -855,7 +855,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalirEdicionEjemplarAG.Location = new System.Drawing.Point(3, 567);
             this.btnSalirEdicionEjemplarAG.Name = "btnSalirEdicionEjemplarAG";
-            this.btnSalirEdicionEjemplarAG.Size = new System.Drawing.Size(244, 48);
+            this.btnSalirEdicionEjemplarAG.Size = new System.Drawing.Size(245, 48);
             this.btnSalirEdicionEjemplarAG.TabIndex = 28;
             this.btnSalirEdicionEjemplarAG.Text = "Dejar de editar";
             this.btnSalirEdicionEjemplarAG.UseVisualStyleBackColor = true;
@@ -865,9 +865,9 @@
             this.btnAgregarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(253, 567);
+            this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(254, 567);
             this.btnAgregarEjemplarAG.Name = "btnAgregarEjemplarAG";
-            this.btnAgregarEjemplarAG.Size = new System.Drawing.Size(244, 48);
+            this.btnAgregarEjemplarAG.Size = new System.Drawing.Size(245, 48);
             this.btnAgregarEjemplarAG.TabIndex = 27;
             this.btnAgregarEjemplarAG.Text = "Agregar";
             this.btnAgregarEjemplarAG.UseVisualStyleBackColor = true;
@@ -877,16 +877,16 @@
             this.txtEditorialEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEditorialEjemplarAG.Location = new System.Drawing.Point(253, 50);
+            this.txtEditorialEjemplarAG.Location = new System.Drawing.Point(254, 50);
             this.txtEditorialEjemplarAG.Name = "txtEditorialEjemplarAG";
-            this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(244, 39);
+            this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(245, 39);
             this.txtEditorialEjemplarAG.TabIndex = 22;
             // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(253, 297);
+            this.label10.Location = new System.Drawing.Point(254, 297);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 32);
             this.label10.TabIndex = 9;
@@ -916,7 +916,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(253, 109);
+            this.label8.Location = new System.Drawing.Point(254, 109);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(239, 32);
             this.label8.TabIndex = 7;
@@ -936,7 +936,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(253, 15);
+            this.label2.Location = new System.Drawing.Point(254, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 32);
             this.label2.TabIndex = 1;
@@ -966,7 +966,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(253, 203);
+            this.label9.Location = new System.Drawing.Point(254, 203);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(202, 32);
             this.label9.TabIndex = 8;
@@ -989,7 +989,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodigoEjemplarAG.Location = new System.Drawing.Point(3, 50);
             this.txtCodigoEjemplarAG.Name = "txtCodigoEjemplarAG";
-            this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(244, 39);
+            this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(245, 39);
             this.txtCodigoEjemplarAG.TabIndex = 10;
             // 
             // cmbIdiomaEjemplarAG
@@ -1001,7 +1001,7 @@
             this.cmbIdiomaEjemplarAG.FormattingEnabled = true;
             this.cmbIdiomaEjemplarAG.Location = new System.Drawing.Point(3, 332);
             this.cmbIdiomaEjemplarAG.Name = "cmbIdiomaEjemplarAG";
-            this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(244, 40);
+            this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(245, 40);
             this.cmbIdiomaEjemplarAG.TabIndex = 13;
             // 
             // btnEtiquetasEjemplarAG
@@ -1011,7 +1011,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEtiquetasEjemplarAG.Location = new System.Drawing.Point(3, 520);
             this.btnEtiquetasEjemplarAG.Name = "btnEtiquetasEjemplarAG";
-            this.btnEtiquetasEjemplarAG.Size = new System.Drawing.Size(244, 41);
+            this.btnEtiquetasEjemplarAG.Size = new System.Drawing.Size(245, 41);
             this.btnEtiquetasEjemplarAG.TabIndex = 15;
             this.btnEtiquetasEjemplarAG.Text = "Seleccionar";
             this.btnEtiquetasEjemplarAG.UseVisualStyleBackColor = true;
@@ -1023,7 +1023,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 144);
             this.txtNombreEjemplarAG.Name = "txtNombreEjemplarAG";
-            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(244, 39);
+            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(245, 39);
             this.txtNombreEjemplarAG.TabIndex = 23;
             // 
             // txtAutorEjemplarAG
@@ -1033,7 +1033,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 238);
             this.txtAutorEjemplarAG.Name = "txtAutorEjemplarAG";
-            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(244, 39);
+            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(245, 39);
             this.txtAutorEjemplarAG.TabIndex = 24;
             // 
             // cmbTipoColeccionEjemplarAG
@@ -1043,9 +1043,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTipoColeccionEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoColeccionEjemplarAG.FormattingEnabled = true;
-            this.cmbTipoColeccionEjemplarAG.Location = new System.Drawing.Point(253, 238);
+            this.cmbTipoColeccionEjemplarAG.Location = new System.Drawing.Point(254, 238);
             this.cmbTipoColeccionEjemplarAG.Name = "cmbTipoColeccionEjemplarAG";
-            this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(244, 40);
+            this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(245, 40);
             this.cmbTipoColeccionEjemplarAG.TabIndex = 25;
             // 
             // cmbFormatoEjemplarAG
@@ -1057,7 +1057,7 @@
             this.cmbFormatoEjemplarAG.FormattingEnabled = true;
             this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 426);
             this.cmbFormatoEjemplarAG.Name = "cmbFormatoEjemplarAG";
-            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(244, 40);
+            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(245, 40);
             this.cmbFormatoEjemplarAG.TabIndex = 26;
             // 
             // dgvEjemplaresAG
@@ -1066,12 +1066,12 @@
             this.dgvEjemplaresAG.AllowUserToDeleteRows = false;
             this.dgvEjemplaresAG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEjemplaresAG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEjemplaresAG.Location = new System.Drawing.Point(503, 3);
+            this.dgvEjemplaresAG.Location = new System.Drawing.Point(505, 3);
             this.dgvEjemplaresAG.Name = "dgvEjemplaresAG";
             this.dgvEjemplaresAG.ReadOnly = true;
             this.dgvEjemplaresAG.RowHeadersWidth = 51;
             this.tableLayoutPanel1.SetRowSpan(this.dgvEjemplaresAG, 13);
-            this.dgvEjemplaresAG.Size = new System.Drawing.Size(747, 612);
+            this.dgvEjemplaresAG.Size = new System.Drawing.Size(748, 612);
             this.dgvEjemplaresAG.TabIndex = 29;
             // 
             // dtpFechaPublicacionEjemplarAG
@@ -1079,9 +1079,9 @@
             this.dtpFechaPublicacionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(253, 144);
+            this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(254, 144);
             this.dtpFechaPublicacionEjemplarAG.Name = "dtpFechaPublicacionEjemplarAG";
-            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(244, 39);
+            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(245, 39);
             this.dtpFechaPublicacionEjemplarAG.TabIndex = 30;
             // 
             // pictureBox1
@@ -1089,10 +1089,10 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(253, 332);
+            this.pictureBox1.Location = new System.Drawing.Point(254, 332);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 5);
-            this.pictureBox1.Size = new System.Drawing.Size(244, 229);
+            this.pictureBox1.Size = new System.Drawing.Size(245, 229);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
