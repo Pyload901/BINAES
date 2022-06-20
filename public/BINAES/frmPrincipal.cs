@@ -79,5 +79,10 @@ namespace BINAES
             Console.WriteLine("Buscar");
         }
 
+        private void btnBuscarEjemplarRE_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 0;
+            txtBuscarEjemplarBU.Select();
+        }
     }
 }
