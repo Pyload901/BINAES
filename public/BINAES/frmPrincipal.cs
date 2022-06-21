@@ -88,6 +88,7 @@ namespace BINAES
                 {
                     Camara.GuardarFoto(foto);
                     Camara.Cerrar();
+                    btnCancelarFotoUS.Enabled = false;
                 }
                 else
                     Camara.Reanudar();
