@@ -33,15 +33,16 @@ namespace BINAES
         }
         private static void camara_NewFrame (object sender, NewFrameEventArgs e, PictureBox pic)
         {
-            /*if (imagen != null)
-                imagen.Dispose();
-            if (imagenRedimensionada != null)
-                imagenRedimensionada.Dispose();*/
-
-            imagen = (Bitmap)e.Frame.Clone();
-            imagen.RotateFlip(RotateFlipType.RotateNoneFlipX);
-            Resize(pic.Size);
-            pic.Image = imagenRedimensionada;
+            using (imagen)
+            {
+                imagen = (Bitmap)e.Frame.Clone();
+                imagen.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            }
+            using (imagenRedimensionada)
+            {
+                Resize(pic.Size);
+                pic.Image = imagenRedimensionada;
+            }
         }
         public static void GuardarFoto(Image imagen)
         {
@@ -84,10 +85,6 @@ namespace BINAES
             } catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-            } finally
-            {
-                imagen.Dispose();
-                imagenRedimensionada.Dispose();
             }
         }
         public static Bitmap TomarFoto()
