@@ -8,9 +8,9 @@ namespace BINAES
 {
     public interface ICRUD
     {
-        void Create();
-        void Read();
-        void Update(int id);
-        void Delete(int id);
+        void Insertar();
+        void Leer();
+        void Actualizar(int id);
+        void Eliminar(int id);
     }
 }
