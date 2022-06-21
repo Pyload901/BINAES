@@ -33,10 +33,10 @@ namespace BINAES
         }
         private static void camara_NewFrame (object sender, NewFrameEventArgs e, PictureBox pic)
         {
-            if (imagen != null)
+            /*if (imagen != null)
                 imagen.Dispose();
             if (imagenRedimensionada != null)
-                imagenRedimensionada.Dispose();
+                imagenRedimensionada.Dispose();*/
 
             imagen = (Bitmap)e.Frame.Clone();
             imagen.RotateFlip(RotateFlipType.RotateNoneFlipX);
@@ -45,13 +45,13 @@ namespace BINAES
         }
         public static void GuardarFoto(Image imagen)
         {
-            string filepath = Properties.Resources.UsersImagesPath + '/' + Utils.GenerateNonEncryptedHash() + ".png";
+            string filepath = Properties.Resources.UsersImagesPath + '/' + Path.GetRandomFileName() + ".png";
             if (!Directory.Exists(Properties.Resources.UsersImagesPath))
                 Directory.CreateDirectory(Properties.Resources.UsersImagesPath);
             
             while (File.Exists(filepath))
             {
-                filepath = Properties.Resources.UsersImagesPath + '/' + Utils.GenerateNonEncryptedHash() + ".png";
+                filepath = Properties.Resources.UsersImagesPath + '/' + Path.GetRandomFileName() + ".png";
             }
             imagen.Save(filepath);
         }
@@ -71,24 +71,38 @@ namespace BINAES
             if (Properties.Settings.Default.Camara == "")
                 if (!Seleccionar())
                     return;
-            camara.Source = Properties.Settings.Default.Camara;
+                else
+                    camara.Source = Properties.Settings.Default.Camara;
             camara.Start();
-            Console.WriteLine("Inicializada la camara");
-            camara.NewFrame += delegate (object sender, NewFrameEventArgs e)
+            try
             {
-                camara_NewFrame(sender, e, pic);
-            };
+                camara.NewFrame += delegate (object sender, NewFrameEventArgs e)
+                {
+                    camara_NewFrame(sender, e, pic);
+                };
+
+            } catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            } finally
+            {
+                imagen.Dispose();
+                imagenRedimensionada.Dispose();
+            }
         }
-        public static Bitmap TomarFoto(PictureBox pic)
+        public static Bitmap TomarFoto()
         {
             camara.SignalToStop();
-            return (Bitmap)pic.Image;
+            return imagen;
         }
-        public static void Cerrar(PictureBox pic)
+        public static void Cerrar()
         {
             camara.SignalToStop();
             camara.WaitForStop();
-            pic.Image.Dispose();
+        }
+        public static void Reanudar ()
+        {
+            camara.Start();
         }
         public static bool Activada ()
         {

@@ -75,18 +75,24 @@ namespace BINAES
             tabAdmin.SelectedIndex = 0;
             txtBuscarEjemplarBU.Select();
         }
+        // Aún está en desarrollo, es susceptible a errores
         private void btnTomarFotoUS_Click(object sender, EventArgs e)
         {
 
+            btnCancelarFotoUS.Enabled = true;
             if (Camara.Activada())
             {
-                btnCancelarFotoUS.Enabled = true;
-                Bitmap foto = Camara.TomarFoto(picFotoUS);
+                Bitmap foto = Camara.TomarFoto();
                 DialogResult resultado = MessageBox.Show("¿Guardar foto?", "Has capturado la foto", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
+                {
                     Camara.GuardarFoto(foto);
+                    Camara.Cerrar();
+                }
                 else
-                    Camara.Abrir(picFotoUS);
+                    Camara.Reanudar();
+                foto.Dispose();
+
             }
             else
             {
@@ -95,7 +101,7 @@ namespace BINAES
         }
         private void btnCancelarFotoUS_Click(object sender, EventArgs e)
         {
-            Camara.Cerrar(picFotoUS);
+            Camara.Cerrar();
             if (!Camara.Activada())
             {
                 btnCancelarFotoUS.Enabled = false;
