@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace BINAES
 {
-    public interface ICRUD
+    public interface ICrearLeer
     {
-        void Insertar();
+        void Crear();
         void Leer();
-        void Actualizar(int id);
-        void Eliminar(int id);
     }
 }

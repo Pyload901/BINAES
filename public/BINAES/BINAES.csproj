@@ -120,7 +120,9 @@
     <Compile Include="frmSeleccionCamara.Designer.cs">
       <DependentUpon>frmSeleccionCamara.cs</DependentUpon>
     </Compile>
-    <Compile Include="ICRUD.cs" />
+    <Compile Include="IEditar.cs" />
+    <Compile Include="ICrearLeer.cs" />
+    <Compile Include="IEliminar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
