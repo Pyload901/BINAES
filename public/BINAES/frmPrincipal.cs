@@ -89,6 +89,12 @@ namespace BINAES
         {
 
             Camara.Abrir(picFotoUS);
+            if (Camara.Activada())
+            {
+                Console.WriteLine("Running");
+            } else
+                Console.WriteLine("Stopped");
+
             /*using (frmTomarFoto )*/
         }
     }

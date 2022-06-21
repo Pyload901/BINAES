@@ -12,8 +12,8 @@ namespace BINAES
     public static class Camara
     {
         private static Bitmap imagen = null;
-        private static VideoCaptureDevice camara = null;
-        private static Image Resize(Image imagen, Size tamañoDestino)
+        private static VideoCaptureDevice camara = new VideoCaptureDevice();
+        private static Bitmap Resize(Image imagen, Size tamañoDestino)
         {
             float porcentaje = 0;
             float cambioAltura = 0;
@@ -36,7 +36,8 @@ namespace BINAES
                 imagen.Dispose();
             imagen = (Bitmap)e.Frame.Clone();
             imagen.RotateFlip(RotateFlipType.RotateNoneFlipX);
-            pic.Image = Resize(imagen, pic.Size);
+            imagen = Resize(imagen, pic.Size);
+            pic.Image = imagen;
             
         }
         public static bool Seleccionar ()
@@ -55,8 +56,9 @@ namespace BINAES
             if (Properties.Settings.Default.Camara == "")
                 if (!Seleccionar())
                     return;
-            camara = new VideoCaptureDevice(Properties.Settings.Default.Camara);
+            camara.Source = Properties.Settings.Default.Camara;
             camara.Start();
+            Console.WriteLine("Inicializada la camara");
             camara.NewFrame += delegate (object sender, NewFrameEventArgs e)
             {
                 camara_NewFrame(sender, e, pic);
@@ -71,6 +73,10 @@ namespace BINAES
         {
             camara.SignalToStop();
             camara.WaitForStop();
+        }
+        public static bool Activada ()
+        {
+            return camara.IsRunning;
         }
     }
 }
