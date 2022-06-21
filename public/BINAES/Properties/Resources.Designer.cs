@@ -61,6 +61,15 @@ namespace BINAES.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Server=localhost;Database=BINAES;Trusted_Connection=True;.
+        /// </summary>
+        internal static string CadenaConexion {
+            get {
+                return ResourceManager.GetString("CadenaConexion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logo {
@@ -83,9 +92,9 @@ namespace BINAES.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a ../../Resources/users.
         /// </summary>
-        internal static string UsersImagesPath {
+        internal static string RutaImagenesUsuarios {
             get {
-                return ResourceManager.GetString("UsersImagesPath", resourceCulture);
+                return ResourceManager.GetString("RutaImagenesUsuarios", resourceCulture);
             }
         }
     }

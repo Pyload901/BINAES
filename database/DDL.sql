@@ -1,5 +1,5 @@
 --PROYECTO BINAES
-DROP DATABASE BINAES;
+drop database BINAES;
 CREATE DATABASE BINAES;
 
 USE BINAES;
@@ -115,22 +115,27 @@ CREATE TABLE USUARIO(
 					 UNIQUE
 					 CHECK(telefono LIKE '[2|6|7][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 	fotografia VARCHAR(100) NOT NULL DEFAULT 'user.png',
-	correo_electronico VARCHAR(50) 
+	email VARCHAR(50) 
 					   NOT NULL
 					   UNIQUE
-					   CHECK(correo_electronico LIKE '%@[gmail|hotmail|outlook|yahoo].com'),							
+					   CHECK(email LIKE '%@%.%'),							
 	contrasenia VARCHAR(100) NULL,
 	id_rol CHAR(6) NOT NULL DEFAULT 'ROL_00',
 	id_ocupacion INT NULL
 );
 
+CREATE TABLE DESCRIPCION_AREA (
+	id CHAR(6) PRIMARY KEY,
+	nombre VARCHAR(40) NOT NULL,
+	descripcion VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE AREA(
 	id INT PRIMARY KEY IDENTITY,
-	nombre VARCHAR(40) NOT NULL,
-	descripcion VARCHAR(280) NOT NULL,
 	horario_abierto VARCHAR(20) NOT NULL,
 	nombre_responsable VARCHAR(50) NOT NULL,
-	piso INT NOT NULL
+	piso INT NOT NULL,
+	id_descripcion_area CHAR(6) NOT NULL
 );
 
 CREATE TABLE INGRESO(
@@ -268,5 +273,10 @@ ALTER TABLE OBJETIVO_EVENTO
 ADD CONSTRAINT fk_objetivo_evento_evento 
 FOREIGN KEY (id_evento) REFERENCES EVENTO(id)
 ON DELETE CASCADE;
+
+ALTER TABLE AREA
+ADD CONSTRAINT fk_area_descripcion_area
+FOREIGN KEY (id_descripcion_area) REFERENCES DESCRIPCION_AREA(id)
+ON DELETE CASCADE; 
 GO
 

@@ -39,11 +39,11 @@ INSERT INTO EDITORIAL (editorial) VALUES ('Edisal');
 INSERT INTO EDITORIAL (editorial) VALUES ('Ocean Sur');
 
 
-INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('National Geographic');
-INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('Cipotes');
-INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('Vida nueva');
-INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('El dia y la noche');
-INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('Cuentos asombrosos');
+INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('National Geographic', 1, 1);
+INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('Cipotes', 2, 1);
+INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('Vida nueva', 4, 2);
+INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('El dia y la noche', 5, 4);
+INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('Cuentos asombrosos', 3, 5);
 
 
 INSERT INTO AUTOR (nombre) VALUES ('Malissia Siggs');
@@ -58,6 +58,7 @@ INSERT INTO AUTOR (nombre) VALUES ('Merwin Eaklee');
 INSERT INTO AUTOR (nombre) VALUES ('Korie Goble');
 
 
+INSERT INTO OCUPACION_USUARIO (ocupacion) VALUES ('Admin');
 INSERT INTO OCUPACION_USUARIO (ocupacion) VALUES ('Quality Control Specialist');
 INSERT INTO OCUPACION_USUARIO (ocupacion) VALUES ('Legal Assistant');
 INSERT INTO OCUPACION_USUARIO (ocupacion) VALUES ('Chief Design Engineer');
@@ -70,46 +71,48 @@ INSERT INTO OCUPACION_USUARIO (ocupacion) VALUES ('Software Engineer I');
 INSERT INTO OCUPACION_USUARIO (ocupacion) VALUES ('Programmer Analyst IV');
 
 
-INSERT INTO DESCRIPCION_AREA (nombre, descripcion) VALUES ('Salón lúdico', 'área para juegos, creatividad y aprendizaje de los niños y niñas');
-INSERT INTO DESCRIPCION_AREA (nombre, descripcion) VALUES ('Auditórium', 'área para eventos grandes');
-INSERT INTO DESCRIPCION_AREA (nombre, descripcion) VALUES ('Sala de proyección', 'área para eventos grandes donde se necesite realizar presentaciones digitales');
-INSERT INTO DESCRIPCION_AREA (nombre, descripcion) VALUES ('Área de computación', 'área de acceso a computadoras e internet');
-INSERT INTO DESCRIPCION_AREA (nombre, descripcion) VALUES ('Área de promoción de inclusión', 'área para promover la inclusión de todas las personas en la sociedad');
-INSERT INTO DESCRIPCION_AREA (nombre, descripcion) VALUES ('Sala de investigación', 'área especializada para realizar todo tipo de investigaciones');
-INSERT INTO DESCRIPCION_AREA (nombre, descripcion) VALUES ('Área de biblioteca', 'área para estudiar, leer y prestar ejemplares');
+INSERT INTO DESCRIPCION_AREA VALUES ('AR_LUD', 'Salón lúdico', 'área para juegos, creatividad y aprendizaje de los niños y niñas');
+INSERT INTO DESCRIPCION_AREA VALUES ('AR_AUD', 'Auditórium', 'área para eventos grandes');
+INSERT INTO DESCRIPCION_AREA VALUES ('AR_PRO', 'Sala de proyección', 'área para eventos grandes donde se necesite realizar presentaciones digitales');
+INSERT INTO DESCRIPCION_AREA VALUES ('AR_COM', 'Área de computación', 'área de acceso a computadoras e internet');
+INSERT INTO DESCRIPCION_AREA VALUES ('AR_INC', 'Área de promoción de inclusión', 'área para promover la inclusión de todas las personas en la sociedad');
+INSERT INTO DESCRIPCION_AREA VALUES ('AR_INV', 'Sala de investigación', 'área especializada para realizar todo tipo de investigaciones');
+INSERT INTO DESCRIPCION_AREA VALUES ('AR_BIB', 'Área de biblioteca', 'área para estudiar, leer y prestar ejemplares');
 
 
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'John Doe', 1, 1);
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'John Doe', 1, 'AR_LUD');
 
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Claudius De Giorgi', 2, 1);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Elmer Kittel', 1, 2);
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Claudius De Giorgi', 2, 'AR_LUD');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Elmer Kittel', 1, 'AR_AUD');
 
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Tobias Huws', 2, 3);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Janella Lehrmann', 3, 3);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Lauretta Savoury', 4, 3);
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Tobias Huws', 2, 'AR_PRO');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Janella Lehrmann', 3, 'AR_PRO');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Lauretta Savoury', 4, 'AR_PRO');
 
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Jeremias Franke', 1, 4);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Derrick Salvati', 1, 4);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Reese Pennycuick', 2, 4);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Rob Secretan', 2, 4);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Minny Sushams', 3, 4);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Kristien Bree', 3, 4);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Berget Jedrzejczak', 4, 4);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Joy Vousden', 4, 4);
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Jeremias Franke', 1, 'AR_COM');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Derrick Salvati', 1, 'AR_COM');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Reese Pennycuick', 2, 'AR_COM');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Rob Secretan', 2, 'AR_COM');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Minny Sushams', 3, 'AR_COM');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Kristien Bree', 3, 'AR_COM');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Berget Jedrzejczak', 4, 'AR_COM');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Joy Vousden', 4, 'AR_COM');
 
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Tadeas Havard', 1, 5);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Danyelle Bligh', 1, 5);
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Tadeas Havard', 1, 'AR_INC');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('12 HORAS', 'Danyelle Bligh', 1, 'AR_INC');
 
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Ciro Pallas', 4, 6);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Mei Sabbin', 4, 6);
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Ciro Pallas', 4, 'AR_INV');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Mei Sabbin', 4, 'AR_INV');
 
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Reina Croix', 1, 7);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Quinton Sneden', 1, 7);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Petronilla Baurerich', 2, 7);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Clarey Manning', 2, 7);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Kennith Wellsman', 3, 7);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Martha Perassi', 3, 7);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Johnna Manicomb', 4, 7);
-INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Debbie Readmire', 4, 7);
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Reina Croix', 1, 'AR_BIB');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Quinton Sneden', 1, 'AR_BIB');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Petronilla Baurerich', 2, 'AR_BIB');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Clarey Manning', 2, 'AR_BIB');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Kennith Wellsman', 3, 'AR_BIB');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Martha Perassi', 3, 'AR_BIB');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Johnna Manicomb', 4, 'AR_BIB');
+INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area) VALUES ('24 HORAS', 'Debbie Readmire', 4, 'AR_BIB');
 
+
+INSERT INTO USUARIO (nombre, institucion, direccion, telefono, fotografia, email, contrasenia, id_rol, id_ocupacion) VALUES ('admin', 'Institucion', 'BINAES', 70756423, 'user.png', 'admin@gmail.com', '$2a$11$jK8uFrwOMi5l5gz99ksFaecw1oZ.dZyAZnD2RgtroeTGSx.MmZy0G', 'ROL_01', 1);
 

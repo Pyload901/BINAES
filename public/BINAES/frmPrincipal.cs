@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCrypt.Net;
 namespace BINAES
 {
     public partial class frmPrincipal : Form
@@ -17,6 +18,7 @@ namespace BINAES
         }
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            Console.WriteLine(BCrypt.Net.BCrypt.HashPassword("admin"));
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
 

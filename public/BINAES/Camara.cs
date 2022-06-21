@@ -46,13 +46,13 @@ namespace BINAES
         }
         public static void GuardarFoto(Image imagen)
         {
-            string filepath = Properties.Resources.UsersImagesPath + '/' + Path.GetRandomFileName() + ".png";
-            if (!Directory.Exists(Properties.Resources.UsersImagesPath))
-                Directory.CreateDirectory(Properties.Resources.UsersImagesPath);
+            string filepath = Properties.Resources.RutaImagenesUsuarios + '/' + Path.GetRandomFileName() + ".png";
+            if (!Directory.Exists(Properties.Resources.RutaImagenesUsuarios))
+                Directory.CreateDirectory(Properties.Resources.RutaImagenesUsuarios);
             
             while (File.Exists(filepath))
             {
-                filepath = Properties.Resources.UsersImagesPath + '/' + Path.GetRandomFileName() + ".png";
+                filepath = Properties.Resources.RutaImagenesUsuarios + '/' + Path.GetRandomFileName() + ".png";
             }
             imagen.Save(filepath);
         }
