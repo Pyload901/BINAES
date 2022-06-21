@@ -13,13 +13,30 @@ namespace BINAES
     {
         private static Bitmap imagen = null;
         private static VideoCaptureDevice camara = null;
+        private static Image Resize(Image imagen, Size tamañoDestino)
+        {
+            float porcentaje = 0;
+            float cambioAltura = 0;
+            float cambioAncho = 0;
+            cambioAncho = (float)tamañoDestino.Width / (float)imagen.Width;
+            cambioAltura = (float)tamañoDestino.Height / (float)imagen.Height;
+            porcentaje = (cambioAncho < cambioAltura ? cambioAncho : cambioAltura);
+            int nuevaAltura = (int)(imagen.Height * porcentaje);
+            int nuevoAncho = (int)(imagen.Width * porcentaje);
+            Bitmap bitmap = new Bitmap(nuevoAncho, nuevaAltura);
+            Graphics g = Graphics.FromImage(bitmap);
+            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            g.DrawImage(imagen, 0, 0, nuevoAncho, nuevaAltura);
+            g.Dispose();
+            return bitmap;
+        }
         private static void camara_NewFrame (object sender, NewFrameEventArgs e, PictureBox pic)
         {
             if (imagen != null)
                 imagen.Dispose();
             imagen = (Bitmap)e.Frame.Clone();
             imagen.RotateFlip(RotateFlipType.RotateNoneFlipX);
-            pic.Image = imagen;
+            pic.Image = Resize(imagen, pic.Size);
             
         }
         public static bool Seleccionar ()
