@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace BINAES
     {
         private static Bitmap imagen = null;
         private static Bitmap imagenRedimensionada = null;
-        private static VideoCaptureDevice camara = null;
+        private static VideoCaptureDevice camara = new VideoCaptureDevice();
         private static void Resize(Size tamañoDestino)
         {
             float porcentaje = 0;
@@ -41,7 +42,18 @@ namespace BINAES
             imagen.RotateFlip(RotateFlipType.RotateNoneFlipX);
             Resize(pic.Size);
             pic.Image = imagenRedimensionada;
+        }
+        public static void GuardarFoto(Image imagen)
+        {
+            string filepath = Properties.Resources.UsersImagesPath + '/' + Utils.GenerateNonEncryptedHash() + ".png";
+            if (!Directory.Exists(Properties.Resources.UsersImagesPath))
+                Directory.CreateDirectory(Properties.Resources.UsersImagesPath);
             
+            while (File.Exists(filepath))
+            {
+                filepath = Properties.Resources.UsersImagesPath + '/' + Utils.GenerateNonEncryptedHash() + ".png";
+            }
+            imagen.Save(filepath);
         }
         public static bool Seleccionar ()
         {
@@ -67,15 +79,16 @@ namespace BINAES
                 camara_NewFrame(sender, e, pic);
             };
         }
-        public static void TomarFoto(PictureBox pic)
+        public static Bitmap TomarFoto(PictureBox pic)
         {
             camara.SignalToStop();
-            Bitmap imagen = (Bitmap)pic.Image;
+            return (Bitmap)pic.Image;
         }
         public static void Cerrar(PictureBox pic)
         {
             camara.SignalToStop();
             camara.WaitForStop();
+            pic.Image.Dispose();
         }
         public static bool Activada ()
         {

@@ -27,13 +27,13 @@ namespace BINAES
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Camara = dispositivos[cmbCamara.SelectedIndex].MonikerString;
-            this.DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK;
             Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            DialogResult = DialogResult.Cancel;
             Close();
         }
     }
