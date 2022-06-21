@@ -22,17 +22,22 @@ namespace BINAES
             pic.Image = imagen;
             
         }
-        public static void Seleccionar ()
+        public static bool Seleccionar ()
         {
             using (frmSeleccionCamara ventana = new frmSeleccionCamara())
             {
-                ventana.ShowDialog();
+                bool flag = false;
+                DialogResult resultado = ventana.ShowDialog();
+                if (resultado == DialogResult.OK)
+                    flag = true;
+                return flag;
             }
         }
         public static void Abrir (PictureBox pic)
         {
             if (Properties.Settings.Default.Camara == "")
-                Seleccionar();
+                if (!Seleccionar())
+                    return;
             camara = new VideoCaptureDevice(Properties.Settings.Default.Camara);
             camara.Start();
             camara.NewFrame += delegate (object sender, NewFrameEventArgs e)
