@@ -10,10 +10,6 @@ namespace BINAES
 {
     public static class EventoDAO
     {
-        public static Enum getType ()
-        {
-            return EnumerateDAOs.Evento;
-        }
         public static void Crear()
         {
         }

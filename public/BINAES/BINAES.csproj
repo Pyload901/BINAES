@@ -93,7 +93,6 @@
   <ItemGroup>
     <Compile Include="Camara.cs" />
     <Compile Include="DataGridViewComposer.cs" />
-    <Compile Include="EnumerateDAOs.cs" />
     <Compile Include="Evento.cs" />
     <Compile Include="EventoDAO.cs" />
     <Compile Include="frmEtiquetas.cs">
