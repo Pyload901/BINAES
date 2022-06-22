@@ -8,5 +8,6 @@ namespace BINAES
 {
     internal class Busqueda
     {
+        
     }
 }
