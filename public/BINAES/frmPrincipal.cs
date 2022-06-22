@@ -12,6 +12,7 @@ namespace BINAES
 {
     public partial class frmPrincipal : Form
     {
+        // Formulario general
         public frmPrincipal()
         {
             InitializeComponent();
@@ -71,6 +72,8 @@ namespace BINAES
                     break;
             }
         }
+
+        // Formulario de busqueda
         private void txtBuscarEjemplarBU_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -87,7 +90,33 @@ namespace BINAES
             tabAdmin.SelectedIndex = 0;
             txtBuscarEjemplarBU.Select();
         }
-        // Aún está en desarrollo, es susceptible a errores
+
+        // Formulario de prestamo
+        
+        // Formulario de reserva
+
+        // Formulario de ejemplares
+
+        // Formulario de eventos
+        private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView senderDgv = (DataGridView)sender;
+            int id = DataGridViewComposer.getId(senderDgv, e);
+            if (senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Editar")
+            {
+                Evento evento = EventoDAO.LeerUno(id);
+                txtTituloEventoEV.Text = evento.titulo;
+                dtpFechaInicioEV.Value = evento.fechaInicio;
+                dtpFechaFinalizacionEV.Value = evento.fechaFin;
+                nudNumeroAsistentesEV.Value = evento.numero_asistentes;
+            }
+            else if (senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Eliminar")
+            {
+                EventoDAO.Eliminar(Convert.ToInt32(senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Tag));
+            }
+        }
+
+        // Formulario de usuarios
         private void btnTomarFotoUS_Click(object sender, EventArgs e)
         {
 
@@ -118,20 +147,6 @@ namespace BINAES
             if (!Camara.Activada())
             {
                 btnCancelarFotoUS.Enabled = false;
-            }
-        }
-
-        private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridView senderDgv = (DataGridView)sender;
-            int id = DataGridViewComposer.getId(senderDgv, e);
-            if (senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Editar")
-            {
-                Evento evento = EventoDAO.LeerUno(id);
-                txtTituloEventoEV.Text = evento.titulo;
-                dtpFechaInicioEV.Value = evento.fechaInicio;
-                dtpFechaFinalizacionEV.Value = evento.fechaFin;
-                nudNumeroAsistentesEV.Value = evento.numero_asistentes;
             }
         }
     }

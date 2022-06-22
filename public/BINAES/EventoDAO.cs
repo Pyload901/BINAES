@@ -31,7 +31,8 @@ namespace BINAES
                            reader["imagen"].ToString(),
                            Convert.ToDateTime(reader["fecha_inicio"]),
                            Convert.ToDateTime(reader["fecha_fin"]),
-                           Convert.ToInt32(reader["numero_asistentes"])
+                           Convert.ToInt32(reader["numero_asistentes"]),
+                           Convert.ToInt32(reader["id_area"])
                         ));
                     }
                 }
@@ -65,7 +66,8 @@ namespace BINAES
                             reader["imagen"].ToString(),
                             Convert.ToDateTime(reader["fecha_inicio"]),
                             Convert.ToDateTime(reader["fecha_fin"]),
-                            Convert.ToInt32(reader["numero_asistentes"])
+                            Convert.ToInt32(reader["numero_asistentes"]),
+                            Convert.ToInt32(reader["id_area"])
                         );
                     }
                 }
