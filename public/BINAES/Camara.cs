@@ -94,8 +94,10 @@ namespace BINAES
         }
         public static void Cerrar()
         {
-            imagen.Dispose();
-            imagenRedimensionada.Dispose();
+            if (imagen != null)
+                imagen.Dispose();
+            if (imagenRedimensionada != null)
+                imagenRedimensionada.Dispose();
             camara.SignalToStop();
             camara.WaitForStop();
         }

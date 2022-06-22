@@ -18,7 +18,8 @@ namespace BINAES
         }
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            Console.WriteLine(BCrypt.Net.BCrypt.HashPassword("admin"));
+            
+            /*DatagridViewComposer.BuildDataGridView_Editar(dgvEventosEV, EventoDAO.getType());*/
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
 
@@ -60,6 +61,15 @@ namespace BINAES
         private void tabAdmin_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.Text = tabAdmin.SelectedTab.Text;
+            switch (tabAdmin.SelectedIndex)
+            {
+                case 4:
+                    dgvEventosEV.DataSource = EventoDAO.Leer();
+                    DataGridViewComposer.BuildDataGridView_Editar(dgvEventosEV, EventoDAO.getType());
+                    break;
+                default:
+                    break;
+            }
         }
         private void txtBuscarEjemplarBU_KeyDown(object sender, KeyEventArgs e)
         {
@@ -108,6 +118,20 @@ namespace BINAES
             if (!Camara.Activada())
             {
                 btnCancelarFotoUS.Enabled = false;
+            }
+        }
+
+        private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView senderDgv = (DataGridView)sender;
+            int id = DataGridViewComposer.getId(senderDgv, e);
+            if (senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Editar")
+            {
+                Evento evento = EventoDAO.LeerUno(id);
+                txtTituloEventoEV.Text = evento.titulo;
+                dtpFechaInicioEV.Value = evento.fechaInicio;
+                dtpFechaFinalizacionEV.Value = evento.fechaFin;
+                nudNumeroAsistentesEV.Value = evento.numero_asistentes;
             }
         }
     }

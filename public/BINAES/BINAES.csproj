@@ -93,6 +93,9 @@
   <ItemGroup>
     <Compile Include="Camara.cs" />
     <Compile Include="DataGridViewComposer.cs" />
+    <Compile Include="EnumerateDAOs.cs" />
+    <Compile Include="Evento.cs" />
+    <Compile Include="EventoDAO.cs" />
     <Compile Include="frmEtiquetas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,9 +120,6 @@
     <Compile Include="frmSeleccionCamara.Designer.cs">
       <DependentUpon>frmSeleccionCamara.cs</DependentUpon>
     </Compile>
-    <Compile Include="IEditar.cs" />
-    <Compile Include="ICrearLeer.cs" />
-    <Compile Include="IEliminar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BINAES
 {
-    public interface ICrearLeer
+    enum EnumerateDAOs
     {
-        void Crear();
-        void Leer();
+        Ejemplar,
+        Evento
     }
 }

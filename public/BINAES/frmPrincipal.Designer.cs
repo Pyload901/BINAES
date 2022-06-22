@@ -62,7 +62,7 @@
             this.tabEventos = new System.Windows.Forms.TabPage();
             this.tlpAdminEventosEV = new System.Windows.Forms.TableLayoutPanel();
             this.btnAgregarEV = new System.Windows.Forms.Button();
-            this.dgvMostrarInfoEventoEV = new System.Windows.Forms.DataGridView();
+            this.dgvEventosEV = new System.Windows.Forms.DataGridView();
             this.nudNumeroAsistentesEV = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.cmbTipoSalonEV = new System.Windows.Forms.ComboBox();
@@ -137,7 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).BeginInit();
             this.tabEventos.SuspendLayout();
             this.tlpAdminEventosEV.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarInfoEventoEV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEventosEV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesEV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabAgregar.SuspendLayout();
@@ -546,7 +546,7 @@
             this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.76769F));
             this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.21988F));
             this.tlpAdminEventosEV.Controls.Add(this.btnAgregarEV, 1, 12);
-            this.tlpAdminEventosEV.Controls.Add(this.dgvMostrarInfoEventoEV, 2, 0);
+            this.tlpAdminEventosEV.Controls.Add(this.dgvEventosEV, 2, 0);
             this.tlpAdminEventosEV.Controls.Add(this.nudNumeroAsistentesEV, 0, 11);
             this.tlpAdminEventosEV.Controls.Add(this.label17, 0, 10);
             this.tlpAdminEventosEV.Controls.Add(this.cmbTipoSalonEV, 0, 9);
@@ -593,18 +593,19 @@
             this.btnAgregarEV.Text = "Agregar";
             this.btnAgregarEV.UseVisualStyleBackColor = true;
             // 
-            // dgvMostrarInfoEventoEV
+            // dgvEventosEV
             // 
-            this.dgvMostrarInfoEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvEventosEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMostrarInfoEventoEV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrarInfoEventoEV.Location = new System.Drawing.Point(715, 3);
-            this.dgvMostrarInfoEventoEV.Name = "dgvMostrarInfoEventoEV";
-            this.dgvMostrarInfoEventoEV.RowHeadersWidth = 51;
-            this.tlpAdminEventosEV.SetRowSpan(this.dgvMostrarInfoEventoEV, 13);
-            this.dgvMostrarInfoEventoEV.Size = new System.Drawing.Size(538, 612);
-            this.dgvMostrarInfoEventoEV.TabIndex = 26;
+            this.dgvEventosEV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEventosEV.Location = new System.Drawing.Point(715, 3);
+            this.dgvEventosEV.Name = "dgvEventosEV";
+            this.dgvEventosEV.RowHeadersWidth = 51;
+            this.tlpAdminEventosEV.SetRowSpan(this.dgvEventosEV, 13);
+            this.dgvEventosEV.Size = new System.Drawing.Size(538, 612);
+            this.dgvEventosEV.TabIndex = 26;
+            this.dgvEventosEV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellContentClick);
             // 
             // nudNumeroAsistentesEV
             // 
@@ -1295,7 +1296,7 @@
             // 
             this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 45);
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 49);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
             this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 29);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
@@ -1519,7 +1520,7 @@
             this.tabEventos.ResumeLayout(false);
             this.tlpAdminEventosEV.ResumeLayout(false);
             this.tlpAdminEventosEV.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarInfoEventoEV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEventosEV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesEV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabAgregar.ResumeLayout(false);
@@ -1562,7 +1563,7 @@
         private System.Windows.Forms.TabPage tabEventos;
         private System.Windows.Forms.TableLayoutPanel tlpAdminEventosEV;
         private System.Windows.Forms.Button btnAgregarEV;
-        private System.Windows.Forms.DataGridView dgvMostrarInfoEventoEV;
+        private System.Windows.Forms.DataGridView dgvEventosEV;
         private System.Windows.Forms.NumericUpDown nudNumeroAsistentesEV;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cmbTipoSalonEV;
