@@ -190,28 +190,28 @@
             // búscarToolStripMenuItem
             // 
             this.búscarToolStripMenuItem.Name = "búscarToolStripMenuItem";
-            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.búscarToolStripMenuItem.Tag = "0";
             this.búscarToolStripMenuItem.Text = "Búscar [Ctrl + F]";
             // 
             // prestarToolStripMenuItem
             // 
             this.prestarToolStripMenuItem.Name = "prestarToolStripMenuItem";
-            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.prestarToolStripMenuItem.Tag = "1";
             this.prestarToolStripMenuItem.Text = "Préstamos";
             // 
             // devolucionesToolStripMenuItem
             // 
             this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.devolucionesToolStripMenuItem.Tag = "2";
             this.devolucionesToolStripMenuItem.Text = "Reservas";
             // 
             // añadirToolStripMenuItem
             // 
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.añadirToolStripMenuItem.Tag = "3";
             this.añadirToolStripMenuItem.Text = "Agregar [Ctrl + N]";
             // 
@@ -232,9 +232,9 @@
             // tabUsuarios
             // 
             this.tabUsuarios.Controls.Add(this.tableLayoutPanel5);
-            this.tabUsuarios.Location = new System.Drawing.Point(4, 44);
+            this.tabUsuarios.Location = new System.Drawing.Point(4, 40);
             this.tabUsuarios.Name = "tabUsuarios";
-            this.tabUsuarios.Size = new System.Drawing.Size(1256, 606);
+            this.tabUsuarios.Size = new System.Drawing.Size(1256, 610);
             this.tabUsuarios.TabIndex = 5;
             this.tabUsuarios.Text = "Usuarios";
             this.tabUsuarios.UseVisualStyleBackColor = true;
@@ -321,7 +321,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreUS.Location = new System.Drawing.Point(462, 103);
             this.txtNombreUS.Name = "txtNombreUS";
-            this.txtNombreUS.Size = new System.Drawing.Size(328, 39);
+            this.txtNombreUS.Size = new System.Drawing.Size(328, 34);
             this.txtNombreUS.TabIndex = 8;
             // 
             // label34
@@ -344,7 +344,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmailUS.Location = new System.Drawing.Point(796, 103);
             this.txtEmailUS.Name = "txtEmailUS";
-            this.txtEmailUS.Size = new System.Drawing.Size(328, 39);
+            this.txtEmailUS.Size = new System.Drawing.Size(328, 34);
             this.txtEmailUS.TabIndex = 9;
             // 
             // label30
@@ -379,7 +379,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccionUS.Location = new System.Drawing.Point(462, 303);
             this.txtDireccionUS.Name = "txtDireccionUS";
-            this.txtDireccionUS.Size = new System.Drawing.Size(328, 39);
+            this.txtDireccionUS.Size = new System.Drawing.Size(328, 34);
             this.txtDireccionUS.TabIndex = 16;
             // 
             // label38
@@ -401,7 +401,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContraseñaUS.Location = new System.Drawing.Point(796, 303);
             this.txtContraseñaUS.Name = "txtContraseñaUS";
-            this.txtContraseñaUS.Size = new System.Drawing.Size(328, 39);
+            this.txtContraseñaUS.Size = new System.Drawing.Size(328, 34);
             this.txtContraseñaUS.TabIndex = 17;
             // 
             // label40
@@ -437,7 +437,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefonoUS.Location = new System.Drawing.Point(796, 403);
             this.txtTelefonoUS.Name = "txtTelefonoUS";
-            this.txtTelefonoUS.Size = new System.Drawing.Size(328, 39);
+            this.txtTelefonoUS.Size = new System.Drawing.Size(328, 34);
             this.txtTelefonoUS.TabIndex = 21;
             // 
             // btnAgregarUS
@@ -460,7 +460,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInstitucionUS.Location = new System.Drawing.Point(462, 403);
             this.txtInstitucionUS.Name = "txtInstitucionUS";
-            this.txtInstitucionUS.Size = new System.Drawing.Size(328, 39);
+            this.txtInstitucionUS.Size = new System.Drawing.Size(328, 34);
             this.txtInstitucionUS.TabIndex = 20;
             // 
             // cmbOcupacionUS
@@ -471,7 +471,7 @@
             this.cmbOcupacionUS.FormattingEnabled = true;
             this.cmbOcupacionUS.Location = new System.Drawing.Point(462, 203);
             this.cmbOcupacionUS.Name = "cmbOcupacionUS";
-            this.cmbOcupacionUS.Size = new System.Drawing.Size(328, 40);
+            this.cmbOcupacionUS.Size = new System.Drawing.Size(328, 36);
             this.cmbOcupacionUS.TabIndex = 23;
             // 
             // cmbRolUS
@@ -482,7 +482,7 @@
             this.cmbRolUS.FormattingEnabled = true;
             this.cmbRolUS.Location = new System.Drawing.Point(796, 203);
             this.cmbRolUS.Name = "cmbRolUS";
-            this.cmbRolUS.Size = new System.Drawing.Size(328, 40);
+            this.cmbRolUS.Size = new System.Drawing.Size(328, 36);
             this.cmbRolUS.TabIndex = 24;
             // 
             // picFotoUS
@@ -531,7 +531,7 @@
             this.tabEventos.Controls.Add(this.tlpAdminEventosEV);
             this.tabEventos.Location = new System.Drawing.Point(4, 40);
             this.tabEventos.Name = "tabEventos";
-            this.tabEventos.Size = new System.Drawing.Size(1256, 606);
+            this.tabEventos.Size = new System.Drawing.Size(1256, 610);
             this.tabEventos.TabIndex = 4;
             this.tabEventos.Text = "Eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
@@ -782,7 +782,7 @@
             this.tabAgregar.Controls.Add(this.tableLayoutPanel1);
             this.tabAgregar.Location = new System.Drawing.Point(4, 40);
             this.tabAgregar.Name = "tabAgregar";
-            this.tabAgregar.Size = new System.Drawing.Size(1256, 606);
+            this.tabAgregar.Size = new System.Drawing.Size(1256, 610);
             this.tabAgregar.TabIndex = 3;
             this.tabAgregar.Text = "Agregar ejemplar";
             this.tabAgregar.UseVisualStyleBackColor = true;
@@ -871,14 +871,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditorialEjemplarAG.Location = new System.Drawing.Point(254, 50);
             this.txtEditorialEjemplarAG.Name = "txtEditorialEjemplarAG";
-            this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(245, 39);
+            this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(245, 34);
             this.txtEditorialEjemplarAG.TabIndex = 22;
             // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(254, 297);
+            this.label10.Location = new System.Drawing.Point(254, 301);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 28);
             this.label10.TabIndex = 9;
@@ -908,7 +908,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(254, 109);
+            this.label8.Location = new System.Drawing.Point(254, 113);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(195, 28);
             this.label8.TabIndex = 7;
@@ -928,7 +928,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(254, 15);
+            this.label2.Location = new System.Drawing.Point(254, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 28);
             this.label2.TabIndex = 1;
@@ -958,7 +958,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(254, 203);
+            this.label9.Location = new System.Drawing.Point(254, 207);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(165, 28);
             this.label9.TabIndex = 8;
@@ -981,7 +981,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodigoEjemplarAG.Location = new System.Drawing.Point(3, 50);
             this.txtCodigoEjemplarAG.Name = "txtCodigoEjemplarAG";
-            this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(245, 39);
+            this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(245, 34);
             this.txtCodigoEjemplarAG.TabIndex = 10;
             // 
             // cmbIdiomaEjemplarAG
@@ -993,7 +993,7 @@
             this.cmbIdiomaEjemplarAG.FormattingEnabled = true;
             this.cmbIdiomaEjemplarAG.Location = new System.Drawing.Point(3, 332);
             this.cmbIdiomaEjemplarAG.Name = "cmbIdiomaEjemplarAG";
-            this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(245, 40);
+            this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(245, 36);
             this.cmbIdiomaEjemplarAG.TabIndex = 13;
             // 
             // btnEtiquetasEjemplarAG
@@ -1015,7 +1015,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 144);
             this.txtNombreEjemplarAG.Name = "txtNombreEjemplarAG";
-            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(245, 39);
+            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(245, 34);
             this.txtNombreEjemplarAG.TabIndex = 23;
             // 
             // txtAutorEjemplarAG
@@ -1025,7 +1025,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 238);
             this.txtAutorEjemplarAG.Name = "txtAutorEjemplarAG";
-            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(245, 39);
+            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(245, 34);
             this.txtAutorEjemplarAG.TabIndex = 24;
             // 
             // cmbTipoColeccionEjemplarAG
@@ -1037,7 +1037,7 @@
             this.cmbTipoColeccionEjemplarAG.FormattingEnabled = true;
             this.cmbTipoColeccionEjemplarAG.Location = new System.Drawing.Point(254, 238);
             this.cmbTipoColeccionEjemplarAG.Name = "cmbTipoColeccionEjemplarAG";
-            this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(245, 40);
+            this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(245, 36);
             this.cmbTipoColeccionEjemplarAG.TabIndex = 25;
             // 
             // cmbFormatoEjemplarAG
@@ -1049,7 +1049,7 @@
             this.cmbFormatoEjemplarAG.FormattingEnabled = true;
             this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 426);
             this.cmbFormatoEjemplarAG.Name = "cmbFormatoEjemplarAG";
-            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(245, 40);
+            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(245, 36);
             this.cmbFormatoEjemplarAG.TabIndex = 26;
             // 
             // dgvEjemplaresAG
@@ -1073,7 +1073,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(254, 144);
             this.dtpFechaPublicacionEjemplarAG.Name = "dtpFechaPublicacionEjemplarAG";
-            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(245, 39);
+            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(245, 34);
             this.dtpFechaPublicacionEjemplarAG.TabIndex = 30;
             // 
             // pictureBox1
@@ -1094,7 +1094,7 @@
             this.tabReserva.Location = new System.Drawing.Point(4, 40);
             this.tabReserva.Name = "tabReserva";
             this.tabReserva.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReserva.Size = new System.Drawing.Size(1256, 606);
+            this.tabReserva.Size = new System.Drawing.Size(1256, 610);
             this.tabReserva.TabIndex = 2;
             this.tabReserva.Text = "Reservas de ejemplares";
             this.tabReserva.UseVisualStyleBackColor = true;
@@ -1161,9 +1161,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label26, 2);
-            this.label26.Location = new System.Drawing.Point(128, 276);
+            this.label26.Location = new System.Drawing.Point(128, 280);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(368, 32);
+            this.label26.Size = new System.Drawing.Size(368, 28);
             this.label26.TabIndex = 8;
             this.label26.Text = "ID usuario";
             // 
@@ -1173,9 +1173,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label23, 2);
-            this.label23.Location = new System.Drawing.Point(128, 122);
+            this.label23.Location = new System.Drawing.Point(128, 126);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(368, 32);
+            this.label23.Size = new System.Drawing.Size(368, 28);
             this.label23.TabIndex = 1;
             this.label23.Text = "Ejemplar";
             // 
@@ -1212,7 +1212,7 @@
             this.tabPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPrestamo.Name = "tabPrestamo";
             this.tabPrestamo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPrestamo.Size = new System.Drawing.Size(1256, 606);
+            this.tabPrestamo.Size = new System.Drawing.Size(1256, 610);
             this.tabPrestamo.TabIndex = 1;
             this.tabPrestamo.Text = "Préstamo de ejemplares";
             this.tabPrestamo.UseVisualStyleBackColor = true;
@@ -1225,7 +1225,7 @@
             this.tabBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBuscar.Name = "tabBuscar";
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabBuscar.Size = new System.Drawing.Size(1256, 606);
+            this.tabBuscar.Size = new System.Drawing.Size(1256, 610);
             this.tabBuscar.TabIndex = 0;
             this.tabBuscar.Text = "Búsqueda de ejemplares";
             // 
@@ -1296,9 +1296,9 @@
             // 
             this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 46);
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 42);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
-            this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 40);
+            this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 36);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
             this.cmbFiltrarEjemplarBU.Text = "Filtro";
             // 
@@ -1337,7 +1337,7 @@
             this.tabMisionVision.Location = new System.Drawing.Point(4, 40);
             this.tabMisionVision.Name = "tabMisionVision";
             this.tabMisionVision.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMisionVision.Size = new System.Drawing.Size(1256, 606);
+            this.tabMisionVision.Size = new System.Drawing.Size(1256, 610);
             this.tabMisionVision.TabIndex = 6;
             this.tabMisionVision.Text = "Mision y Vision";
             this.tabMisionVision.UseVisualStyleBackColor = true;
@@ -1429,7 +1429,7 @@
             this.tabIntroduccion.Location = new System.Drawing.Point(4, 40);
             this.tabIntroduccion.Name = "tabIntroduccion";
             this.tabIntroduccion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIntroduccion.Size = new System.Drawing.Size(1256, 606);
+            this.tabIntroduccion.Size = new System.Drawing.Size(1256, 610);
             this.tabIntroduccion.TabIndex = 8;
             this.tabIntroduccion.Text = "Introduccion";
             this.tabIntroduccion.UseVisualStyleBackColor = true;
