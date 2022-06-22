@@ -61,12 +61,40 @@ namespace BINAES.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Server=localhost;Database=BINAES;Trusted_Connection=True;.
+        /// </summary>
+        internal static string CadenaConexion {
+            get {
+                return ResourceManager.GetString("CadenaConexion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lupa {
+            get {
+                object obj = ResourceManager.GetObject("lupa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ../../Resources/users.
+        /// </summary>
+        internal static string RutaImagenesUsuarios {
+            get {
+                return ResourceManager.GetString("RutaImagenesUsuarios", resourceCulture);
             }
         }
     }
