@@ -136,7 +136,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.txtNombreCO = new System.Windows.Forms.TextBox();
-            this.btnSeleccionarCO = new System.Windows.Forms.Button();
             this.cmbTipoColeccionCO = new System.Windows.Forms.ComboBox();
             this.dgvVistaColeccionCO = new System.Windows.Forms.DataGridView();
             this.btnAgregarCO = new System.Windows.Forms.Button();
@@ -1539,12 +1538,11 @@
             this.tlpColeccionCO.Controls.Add(this.label20, 0, 4);
             this.tlpColeccionCO.Controls.Add(this.label29, 0, 0);
             this.tlpColeccionCO.Controls.Add(this.dgvVistaColeccionCO, 1, 0);
-            this.tlpColeccionCO.Controls.Add(this.btnSeleccionarCO, 0, 6);
-            this.tlpColeccionCO.Controls.Add(this.btnAgregarCO, 0, 7);
-            this.tlpColeccionCO.Controls.Add(this.btnDejardeEditarCO, 0, 8);
             this.tlpColeccionCO.Controls.Add(this.txtNombreCO, 0, 1);
             this.tlpColeccionCO.Controls.Add(this.cmbTipoColeccionCO, 0, 3);
             this.tlpColeccionCO.Controls.Add(this.cmbGeneroColeccionCO, 0, 5);
+            this.tlpColeccionCO.Controls.Add(this.btnAgregarCO, 0, 6);
+            this.tlpColeccionCO.Controls.Add(this.btnDejardeEditarCO, 0, 7);
             this.tlpColeccionCO.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tlpColeccionCO.Location = new System.Drawing.Point(8, 6);
             this.tlpColeccionCO.Name = "tlpColeccionCO";
@@ -1602,18 +1600,6 @@
             this.txtNombreCO.Size = new System.Drawing.Size(308, 29);
             this.txtNombreCO.TabIndex = 10;
             // 
-            // btnSeleccionarCO
-            // 
-            this.btnSeleccionarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSeleccionarCO.Location = new System.Drawing.Point(3, 411);
-            this.btnSeleccionarCO.Name = "btnSeleccionarCO";
-            this.btnSeleccionarCO.Size = new System.Drawing.Size(308, 62);
-            this.btnSeleccionarCO.TabIndex = 15;
-            this.btnSeleccionarCO.Text = "Seleccionar";
-            this.btnSeleccionarCO.UseVisualStyleBackColor = true;
-            // 
             // cmbTipoColeccionCO
             // 
             this.cmbTipoColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1645,12 +1631,13 @@
             this.btnAgregarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarCO.Location = new System.Drawing.Point(3, 479);
+            this.btnAgregarCO.Location = new System.Drawing.Point(3, 411);
             this.btnAgregarCO.Name = "btnAgregarCO";
             this.btnAgregarCO.Size = new System.Drawing.Size(308, 62);
             this.btnAgregarCO.TabIndex = 27;
             this.btnAgregarCO.Text = "Agregar";
             this.btnAgregarCO.UseVisualStyleBackColor = true;
+            this.btnAgregarCO.Click += new System.EventHandler(this.btnAgregarCO_Click);
             // 
             // cmbGeneroColeccionCO
             // 
@@ -1670,9 +1657,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDejardeEditarCO.Enabled = false;
-            this.btnDejardeEditarCO.Location = new System.Drawing.Point(3, 547);
+            this.btnDejardeEditarCO.Location = new System.Drawing.Point(3, 479);
             this.btnDejardeEditarCO.Name = "btnDejardeEditarCO";
-            this.btnDejardeEditarCO.Size = new System.Drawing.Size(308, 67);
+            this.btnDejardeEditarCO.Size = new System.Drawing.Size(308, 62);
             this.btnDejardeEditarCO.TabIndex = 28;
             this.btnDejardeEditarCO.Text = "Dejar de editar";
             this.btnDejardeEditarCO.UseVisualStyleBackColor = true;
@@ -1970,7 +1957,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.DataGridView dgvVistaColeccionCO;
-        private System.Windows.Forms.Button btnSeleccionarCO;
         private System.Windows.Forms.Button btnAgregarCO;
         private System.Windows.Forms.Button btnDejardeEditarCO;
         private System.Windows.Forms.TextBox txtNombreCO;

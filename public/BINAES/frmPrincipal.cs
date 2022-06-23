@@ -83,6 +83,13 @@ namespace BINAES
                     break;
                 default:
                     break;
+
+                case 8:
+                    dgvVistaColeccionCO.DataSource = ColeccionDAO.Leer();
+                    DataGridViewComposer.BuildDataGridView_Editar(dgvVistaColeccionCO);
+                    DataGridViewComposer.BuildDataGridView_Eliminar(dgvVistaColeccionCO);
+                default:
+                    break;
             }
         }
 
@@ -174,6 +181,14 @@ namespace BINAES
             }
         }
 
-        
+        private void btnAgregarCO_Click(object sender, EventArgs e)
+        {
+            Coleccion cole = new Coleccion();
+            cole.nombre = txtNombreCO.Text;
+            cole.genero_coleccion = cmbGeneroColeccionCO.Text;
+            cole.tipo_coleccion = cmbTipoColeccionCO.Text;
+
+            ColeccionDAO.Insertar(cole);
+        }
     }
 }
