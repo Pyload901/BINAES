@@ -182,6 +182,7 @@
             this.añadirToolStripMenuItem});
             this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
             this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
+            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(257, 30);
             this.búsquedaToolStripMenuItem.Tag = "";
             this.búsquedaToolStripMenuItem.Text = "Administrador de ejemplares";
             this.búsquedaToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.búsquedaToolStripMenuItem_DropDownItemClicked);
@@ -218,14 +219,14 @@
             // administradorDeEventosToolStripMenuItem
             // 
             this.administradorDeEventosToolStripMenuItem.Name = "administradorDeEventosToolStripMenuItem";
-            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
+            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(234, 30);
             this.administradorDeEventosToolStripMenuItem.Tag = "4";
             this.administradorDeEventosToolStripMenuItem.Text = "Administrador de eventos";
             // 
             // administradorDeUsuariosToolStripMenuItem
             // 
             this.administradorDeUsuariosToolStripMenuItem.Name = "administradorDeUsuariosToolStripMenuItem";
-            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
+            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(238, 30);
             this.administradorDeUsuariosToolStripMenuItem.Tag = "5";
             this.administradorDeUsuariosToolStripMenuItem.Text = "Administrador de usuarios";
             // 
@@ -845,12 +846,14 @@
             this.btnSalirEdicionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalirEdicionEjemplarAG.Enabled = false;
             this.btnSalirEdicionEjemplarAG.Location = new System.Drawing.Point(3, 567);
             this.btnSalirEdicionEjemplarAG.Name = "btnSalirEdicionEjemplarAG";
             this.btnSalirEdicionEjemplarAG.Size = new System.Drawing.Size(245, 47);
             this.btnSalirEdicionEjemplarAG.TabIndex = 28;
             this.btnSalirEdicionEjemplarAG.Text = "Dejar de editar";
             this.btnSalirEdicionEjemplarAG.UseVisualStyleBackColor = true;
+            this.btnSalirEdicionEjemplarAG.Click += new System.EventHandler(this.btnSalirEdicionEjemplarAG_Click);
             // 
             // btnAgregarEjemplarAG
             // 

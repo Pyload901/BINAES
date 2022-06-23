@@ -13,48 +13,36 @@ namespace BINAES
     public static class Camara
     {
         private static Bitmap imagen = null;
-        private static Bitmap imagenRedimensionada = null;
-        private static VideoCaptureDevice camara = new VideoCaptureDevice();
-        private static void Resize(Size tamañoDestino)
-        {
-            float porcentaje = 0;
-            float cambioAltura = 0;
-            float cambioAncho = 0;
-            cambioAncho = (float)tamañoDestino.Width / (float)imagen.Width;
-            cambioAltura = (float)tamañoDestino.Height / (float)imagen.Height;
-            porcentaje = (cambioAncho < cambioAltura ? cambioAncho : cambioAltura);
-            int nuevaAltura = (int)(imagen.Height * porcentaje);
-            int nuevoAncho = (int)(imagen.Width * porcentaje);
-            imagenRedimensionada = new Bitmap(nuevoAncho, nuevaAltura);
-            Graphics g = Graphics.FromImage(imagenRedimensionada);
-            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            g.DrawImage(imagen, 0, 0, nuevoAncho, nuevaAltura);
-            g.Dispose();
-        }
+        private static VideoCaptureDevice camara = null;
         private static void camara_NewFrame (object sender, NewFrameEventArgs e, PictureBox pic)
         {
-            using (imagen)
-            {
-                imagen = (Bitmap)e.Frame.Clone();
-                imagen.RotateFlip(RotateFlipType.RotateNoneFlipX);
-            }
-            using (imagenRedimensionada)
-            {
-                Resize(pic.Size);
-                pic.Image = imagenRedimensionada;
-            }
+            
+            imagen = (Bitmap) pic.Image;
+            Bitmap bmp = (Bitmap)e.Frame.Clone();
+            bmp.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            pic.Image = bmp;
+            if (imagen != null) 
+                imagen.Dispose();
         }
         public static void GuardarFoto(Image imagen)
         {
-            string filepath = Properties.Resources.RutaImagenesUsuarios + '/' + Path.GetRandomFileName() + ".png";
-            if (!Directory.Exists(Properties.Resources.RutaImagenesUsuarios))
-                Directory.CreateDirectory(Properties.Resources.RutaImagenesUsuarios);
-            
-            while (File.Exists(filepath))
+            try
             {
-                filepath = Properties.Resources.RutaImagenesUsuarios + '/' + Path.GetRandomFileName() + ".png";
+                string filepath = Properties.Resources.RutaImagenesUsuarios + '/' + Path.GetRandomFileName() + ".png";
+                if (!Directory.Exists(Properties.Resources.RutaImagenesUsuarios))
+                    Directory.CreateDirectory(Properties.Resources.RutaImagenesUsuarios);
+            
+                while (File.Exists(filepath))
+                {
+                    filepath = Properties.Resources.RutaImagenesUsuarios + '/' + Path.GetRandomFileName() + ".png";
+                }
+                imagen.Save(filepath);
+
+            } catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                MessageBox.Show("No se pudo guardar, intente nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            imagen.Save(filepath);
         }
         public static bool Seleccionar ()
         {
@@ -69,37 +57,32 @@ namespace BINAES
         }
         public static void Abrir (PictureBox pic)
         {
+            camara = new VideoCaptureDevice();
             if (Properties.Settings.Default.Camara == "")
                 if (!Seleccionar())
                     return;
-                else
-                    camara.Source = Properties.Settings.Default.Camara;
+            camara.Source = Properties.Settings.Default.Camara;
             camara.Start();
-            try
+            camara.NewFrame += delegate (object sender, NewFrameEventArgs e)
             {
-                camara.NewFrame += delegate (object sender, NewFrameEventArgs e)
-                {
-                    camara_NewFrame(sender, e, pic);
-                };
-
-            } catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+                camara_NewFrame(sender, e, pic);
+            };
         }
         public static Bitmap TomarFoto()
         {
             camara.SignalToStop();
             return imagen;
         }
-        public static void Cerrar()
+        public static void Parar ()
         {
+            camara.SignalToStop();
+        }
+        public static void Cerrar(PictureBox pic)
+        {
+            pic.Image = null;
             if (imagen != null)
                 imagen.Dispose();
-            if (imagenRedimensionada != null)
-                imagenRedimensionada.Dispose();
             camara.SignalToStop();
-            camara.WaitForStop();
         }
         public static void Reanudar ()
         {
@@ -107,7 +90,10 @@ namespace BINAES
         }
         public static bool Activada ()
         {
-            return camara.IsRunning;
+            bool flag = false;
+            if (camara != null && camara.IsRunning)
+                flag = true;
+            return flag;
         }
     }
 }
