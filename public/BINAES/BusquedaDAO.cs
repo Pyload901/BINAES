@@ -10,19 +10,33 @@ namespace BINAES
     public static class BusquedaDAO
     {
 
-        public static Busqueda FiltrarPorTituloExacto(string Titulo)
+        public static Ejemplar FiltrarPorTituloExacto(string Titulo)
         {
             string cadena = Properties.Resources.CadenaConexion;
 
-            Busqueda bus = new Busqueda();
+            Ejemplar ejem = new Ejemplar();
 
             using (SqlConnection connection = new SqlConnection(cadena))
             {
-                string query = "SELECT * FROM EJEMPLAR where "
+                string query = "SELECT * FROM EJEMPLAR where Busqueda.nombre = @nombrebuscado";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@nombrebuscado", Titulo);
+
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ejem.id = Convert.ToInt32(reader["id"].ToString());
+                        ejem.nombre = reader["nombre"].ToString();
+                        ejem.imagen = reader["imagen"].ToString();
+                        ejem.fecha_publicacion = reader["fecha_publicacion"].ToString();
+
+                    }
+                }
+                connection.Close();
             }
-
-
+            return ejem;
         }
-        
     }
 }

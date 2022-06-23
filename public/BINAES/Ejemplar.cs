@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BINAES
 {
-    public class Busqueda
+    public class Ejemplar
     {
         public int id { get; set; }
         public string nombre { get; set; }
@@ -18,7 +18,7 @@ namespace BINAES
         public int id_editorial { get; set; }
         public int id_formato { get; set; }
 
-        public Busqueda(int id, string nombre, string imagen, string fecha_publicacion, int stock, 
+        public Ejemplar(int id, string nombre, string imagen, string fecha_publicacion, int stock,
             int id_coleccion, int id_idioma, int id_editorial, int id_formato)
         {
             this.id = id;
@@ -30,6 +30,11 @@ namespace BINAES
             this.id_idioma = id_idioma;
             this.id_editorial = id_editorial;
             this.id_formato = id_formato;
+        }
+
+        public Ejemplar()
+        {
+                
         }
     }
 }
