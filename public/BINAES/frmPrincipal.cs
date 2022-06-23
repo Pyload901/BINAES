@@ -19,10 +19,19 @@ namespace BINAES
         }
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            
+
+            //Conversion de colores Hexadecimales 
+            System.Drawing.Color col1= System.Drawing.ColorTranslator.FromHtml("#238bba");
+            System.Drawing.Color col2= System.Drawing.ColorTranslator.FromHtml("#239aba");
+            System.Drawing.Color col3= System.Drawing.ColorTranslator.FromHtml("#237cba");
+
             /*DatagridViewComposer.BuildDataGridView_Editar(dgvEventosEV, EventoDAO.getType());*/
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
+
+          
+            tabBuscar.BackColor = Color.FromArgb(50, 149, 196);
+            tabEventos.BackColor = col1;
 
             // Renderizar imagen de btnBuscarEjemplar
             btnBuscarEjemplarBU.Image = (Image)new Bitmap(global::BINAES.Properties.Resources.lupa, new Size(btnBuscarEjemplarBU.Size.Height, btnBuscarEjemplarBU.Size.Height));
@@ -154,5 +163,6 @@ namespace BINAES
         {
 
         }
+
     }
 }

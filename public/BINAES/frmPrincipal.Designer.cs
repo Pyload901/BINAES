@@ -1208,6 +1208,7 @@
             // 
             // tabPrestamo
             // 
+            this.tabPrestamo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.tabPrestamo.Location = new System.Drawing.Point(4, 40);
             this.tabPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPrestamo.Name = "tabPrestamo";
@@ -1235,6 +1236,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel7.AutoSize = true;
+            this.tableLayoutPanel7.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel7.ColumnCount = 5;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
@@ -1510,7 +1512,7 @@
             this.MainMenuStrip = this.mspMenu;
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmPrincipal";
-            this.Text = "mn";
+            this.Text = "BINAES";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();
