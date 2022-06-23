@@ -47,8 +47,8 @@ namespace BINAES
                     default:
                         break;
                 }
-                *//*SqlCommand cmd = new SqlCommand(query, connection);*/
-                /*cmd.Parameters.AddWithValue("@nombrebuscado", Titulo);*//*
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@nombrebuscado", Titulo);
                 
                 connection.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -58,7 +58,7 @@ namespace BINAES
                         /*ejem.id = Convert.ToInt32(reader["id"].ToString());
                         ejem.nombre = reader["nombre"].ToString();
                         ejem.imagen = reader["imagen"].ToString();
-                        ejem.fecha_publicacion = reader["fecha_publicacion"].ToString();*/
+                        ejem.fecha_publicacion = reader["fecha_publicacion"].ToString();
 
                     }
                 }

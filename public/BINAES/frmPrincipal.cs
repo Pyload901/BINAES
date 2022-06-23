@@ -93,13 +93,12 @@ namespace BINAES
                     DataGridViewComposer.BuildDataGridView_Editar(dgvEventosEV);
                     DataGridViewComposer.BuildDataGridView_Eliminar(dgvEventosEV);
                     break;
-                default:
-                    break;
 
                 case 8:
-                    dgvVistaColeccionCO.DataSource = ColeccionDAO.Leer();
+                    /*dgvVistaColeccionCO.DataSource = ColeccionDAO.Leer();
                     DataGridViewComposer.BuildDataGridView_Editar(dgvVistaColeccionCO);
-                    DataGridViewComposer.BuildDataGridView_Eliminar(dgvVistaColeccionCO);
+                    DataGridViewComposer.BuildDataGridView_Eliminar(dgvVistaColeccionCO);*/
+                    break;
                 default:
                     break;
             }
