@@ -99,11 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ejemplar.cs" />
-    <Compile Include="BusquedaDAO.cs" />
+    <Compile Include="EjemplarDAO.cs" />
     <Compile Include="Camara.cs" />
     <Compile Include="DataGridViewComposer.cs" />
     <Compile Include="Evento.cs" />
     <Compile Include="EventoDAO.cs" />
+    <Compile Include="FiltroEnumerate.cs" />
     <Compile Include="frmEtiquetas.cs">
       <SubType>Form</SubType>
     </Compile>

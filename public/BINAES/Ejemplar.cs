@@ -14,6 +14,7 @@ namespace BINAES
         public string fecha_publicacion { get; set; }
         public int stock { get; set; }
         public int id_coleccion { get; set; }
+        public string nombre_coleccion { get; set; }
         public int id_idioma { get; set; }
         public int id_editorial { get; set; }
         public int id_formato { get; set; }
