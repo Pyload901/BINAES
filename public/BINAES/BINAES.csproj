@@ -189,5 +189,8 @@
   <ItemGroup>
     <None Include="Resources\LOGOBINAES_nobackground.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubirImagen.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

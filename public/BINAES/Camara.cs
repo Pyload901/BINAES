@@ -68,14 +68,10 @@ namespace BINAES
                 camara_NewFrame(sender, e, pic);
             };
         }
-        public static Bitmap TomarFoto()
+        public static Bitmap TomarFoto(PictureBox pic)
         {
             camara.SignalToStop();
-            return imagen;
-        }
-        public static void Parar ()
-        {
-            camara.SignalToStop();
+            return (Bitmap)pic.Image;
         }
         public static void Cerrar(PictureBox pic)
         {
@@ -83,10 +79,8 @@ namespace BINAES
             if (imagen != null)
                 imagen.Dispose();
             camara.SignalToStop();
-        }
-        public static void Reanudar ()
-        {
-            camara.Start();
+            camara.WaitForStop();
+            camara = null;
         }
         public static bool Activada ()
         {

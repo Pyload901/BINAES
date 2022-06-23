@@ -146,7 +146,7 @@ namespace BINAES
             btnCancelarFotoUS.Enabled = true;
             if (Camara.Activada())
             {
-                Bitmap foto = Camara.TomarFoto();
+                Bitmap foto = Camara.TomarFoto(picFotoUS);
                 DialogResult resultado = MessageBox.Show("¿Guardar foto?", "Has capturado la foto", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
                 {

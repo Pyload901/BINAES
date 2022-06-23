@@ -160,7 +160,6 @@
             // 
             // mspMenu
             // 
-            this.mspMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mspMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.búsquedaToolStripMenuItem,
@@ -492,6 +491,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.SetColumnSpan(this.picFotoUS, 2);
+            this.picFotoUS.Image = global::BINAES.Properties.Resources.SubirImagen;
             this.picFotoUS.Location = new System.Drawing.Point(128, 103);
             this.picFotoUS.Name = "picFotoUS";
             this.tableLayoutPanel5.SetRowSpan(this.picFotoUS, 6);
@@ -768,13 +768,13 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::BINAES.Properties.Resources.SubirImagen;
             this.pictureBox2.Location = new System.Drawing.Point(342, 50);
             this.pictureBox2.Name = "pictureBox2";
             this.tlpAdminEventosEV.SetRowSpan(this.pictureBox2, 11);
             this.pictureBox2.Size = new System.Drawing.Size(367, 511);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
             // 
@@ -1084,10 +1084,12 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::BINAES.Properties.Resources.SubirImagen;
             this.pictureBox1.Location = new System.Drawing.Point(254, 332);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 5);
             this.pictureBox1.Size = new System.Drawing.Size(245, 229);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
@@ -1212,7 +1214,7 @@
             // tabPrestamo
             // 
             this.tabPrestamo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tabPrestamo.Location = new System.Drawing.Point(4, 40);
+            this.tabPrestamo.Location = new System.Drawing.Point(4, 44);
             this.tabPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPrestamo.Name = "tabPrestamo";
             this.tabPrestamo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
