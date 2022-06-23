@@ -9,7 +9,7 @@ namespace BINAES
 {
     public static class BusquedaDAO
     {
-        public static List<Ejemplar> Leer (List<object> listaObjetos, FiltroEnumerate filtro)
+        /*public static List<Ejemplar> Leer (List<object> listaObjetos, FiltroEnumerate filtro)
         {
             string cadena = Properties.Resources.CadenaConexion;
 
@@ -47,8 +47,8 @@ namespace BINAES
                     default:
                         break;
                 }
-                /*SqlCommand cmd = new SqlCommand(query, connection);*/
-                /*cmd.Parameters.AddWithValue("@nombrebuscado", Titulo);*/
+                *//*SqlCommand cmd = new SqlCommand(query, connection);*/
+                /*cmd.Parameters.AddWithValue("@nombrebuscado", Titulo);*//*
                 
                 connection.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -65,7 +65,7 @@ namespace BINAES
                 connection.Close();
             }
             return list;
-        }
+        }*/
 
         public static Ejemplar FiltrarPorTituloExacto(string Titulo)
         {

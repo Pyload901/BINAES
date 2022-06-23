@@ -4,14 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Reflection;
 namespace BINAES
 {
     public static class DataGridViewComposer
     {
-        public static int getId (DataGridView dgv, DataGridViewCellEventArgs e)
+        private static List<string> indicesNulos = new List<string>();
+        public static void GetNullProperties (object obj)
         {
-            return Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Tag);
+            PropertyInfo[] properties = obj.GetType().GetProperties();
+            foreach (var propertie in properties)
+            {
+                if (propertie.GetValue(obj) == null && !indicesNulos.Contains(propertie.Name))
+                {
+                    indicesNulos.Add(propertie.Name);
+                }
+                else if (indicesNulos.Contains(propertie.Name))
+                {
+                    indicesNulos.Remove(propertie.Name);
+                }
+            }
+        }
+        public static void Compose(DataGridView dgv)
+        {
+            foreach (string i in indicesNulos)
+                dgv.Columns.Remove(dgv.Columns[i]);
+            indicesNulos.Clear();
         }
         public static void LimpiarDataGridView (DataGridView dgv)
         {

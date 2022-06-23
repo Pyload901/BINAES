@@ -117,5 +117,15 @@ namespace BINAES.Properties {
                 return ResourceManager.GetString("RutaImagenesUsuarios", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SubirImagen {
+            get {
+                object obj = ResourceManager.GetObject("SubirImagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

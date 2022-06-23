@@ -25,7 +25,7 @@ namespace BINAES
                 {
                     while (reader.Read())
                     {
-                       list.Add(new Evento(
+                        Evento evento = new Evento(
                            Convert.ToInt32(reader["id"]),
                            reader["titulo"].ToString(),
                            reader["imagen"].ToString(),
@@ -33,7 +33,9 @@ namespace BINAES
                            Convert.ToDateTime(reader["fecha_fin"]),
                            Convert.ToInt32(reader["numero_asistentes"]),
                            Convert.ToInt32(reader["id_area"])
-                        ));
+                        );
+                        DataGridViewComposer.GetNullProperties(evento);
+                        list.Add(evento);
                     }
                 }
                 conn.Close();
