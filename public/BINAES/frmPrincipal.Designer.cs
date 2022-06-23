@@ -1485,7 +1485,6 @@
             this.label32.TabIndex = 1;
             this.label32.Text = resources.GetString("label32.Text");
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // label33
             // 
