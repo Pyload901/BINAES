@@ -185,10 +185,15 @@ namespace BINAES
         {
             Coleccion cole = new Coleccion();
             cole.nombre = txtNombreCO.Text;
-            cole.genero_coleccion = cmbGeneroColeccionCO.Text;
-            cole.tipo_coleccion = cmbTipoColeccionCO.Text;
+            cole.id_genero = Convert.ToInt32(cmbGeneroColeccionCO.ValueMember);
+            cole.id_coleccion = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
 
             ColeccionDAO.Insertar(cole);
+        }
+
+        private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

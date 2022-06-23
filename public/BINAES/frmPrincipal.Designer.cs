@@ -1625,6 +1625,7 @@
             this.tlpColeccionCO.SetRowSpan(this.dgvVistaColeccionCO, 9);
             this.dgvVistaColeccionCO.Size = new System.Drawing.Size(936, 611);
             this.dgvVistaColeccionCO.TabIndex = 29;
+            this.dgvVistaColeccionCO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVistaColeccionCO_CellContentClick);
             // 
             // btnAgregarCO
             // 
