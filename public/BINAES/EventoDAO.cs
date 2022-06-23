@@ -46,6 +46,7 @@ namespace BINAES
         }
         public static void Eliminar(int id)
         {
+            Console.WriteLine("Eliminando...");
         }
         public static Evento LeerUno (int id)
         {

@@ -12,6 +12,8 @@ namespace BINAES
 {
     public partial class frmPrincipal : Form
     {
+        // Variables globales
+
         // Formulario general
         public frmPrincipal()
         {
@@ -67,6 +69,7 @@ namespace BINAES
                 case 4:
                     dgvEventosEV.DataSource = EventoDAO.Leer();
                     DataGridViewComposer.BuildDataGridView_Editar(dgvEventosEV);
+                    DataGridViewComposer.BuildDataGridView_Eliminar(dgvEventosEV);
                     break;
                 default:
                     break;
@@ -109,11 +112,21 @@ namespace BINAES
                 dtpFechaInicioEV.Value = evento.fechaInicio;
                 dtpFechaFinalizacionEV.Value = evento.fechaFin;
                 nudNumeroAsistentesEV.Value = evento.numero_asistentes;
+                btnDejarDeEditarEV.Enabled = true;
             }
             else if (senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Eliminar")
             {
                 EventoDAO.Eliminar(Convert.ToInt32(senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Tag));
             }
+        }
+
+        private void btnSalirEdicionEjemplarAG_Click(object sender, EventArgs e)
+        {
+            txtTituloEventoEV.Clear();
+            /*dtpFechaInicioEV;
+            dtpFechaFinalizacionEV.Value = evento.fechaFin;
+            nudNumeroAsistentesEV.Value = evento.numero_asistentes;*/
+            btnDejarDeEditarEV.Enabled = false;
         }
 
         // Formulario de usuarios
@@ -128,7 +141,7 @@ namespace BINAES
                 if (resultado == DialogResult.Yes)
                 {
                     Camara.GuardarFoto(foto);
-                    Camara.Cerrar();
+                    Camara.Cerrar(picFotoUS);
                     btnCancelarFotoUS.Enabled = false;
                 }
                 else
@@ -137,17 +150,18 @@ namespace BINAES
 
             }
             else
-            {
                 Camara.Abrir(picFotoUS);
-            }
+
         }
         private void btnCancelarFotoUS_Click(object sender, EventArgs e)
         {
-            Camara.Cerrar();
+            Camara.Cerrar(picFotoUS);
             if (!Camara.Activada())
             {
                 btnCancelarFotoUS.Enabled = false;
             }
         }
+
+        
     }
 }
