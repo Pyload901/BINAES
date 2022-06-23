@@ -15,6 +15,7 @@ namespace BINAES
         public DateTime fechaFin { get; set; }
         public int numero_asistentes { get; set; }
         public int id_area { get; set; }
+        public string area { set; get; }
 
         public Evento (int id, string titulo, string imagen, DateTime fechaInicio, DateTime fechaFin, int numero_asistentes, int id_area)
         {

@@ -160,6 +160,7 @@
             // 
             // mspMenu
             // 
+            this.mspMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mspMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.búsquedaToolStripMenuItem,

@@ -78,6 +78,7 @@ namespace BINAES
             {
                 case 4:
                     dgvEventosEV.DataSource = EventoDAO.Leer();
+                    DataGridViewComposer.Compose(dgvEventosEV);
                     DataGridViewComposer.BuildDataGridView_Editar(dgvEventosEV);
                     DataGridViewComposer.BuildDataGridView_Eliminar(dgvEventosEV);
                     break;
