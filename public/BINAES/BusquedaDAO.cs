@@ -10,7 +10,7 @@ namespace BINAES
     public static class BusquedaDAO
     {
 
-        public static Busqueda FiltrarPorTituloExacto(int Titulo)
+        public static Busqueda FiltrarPorTituloExacto(string Titulo)
         {
             string cadena = Properties.Resources.CadenaConexion;
 
@@ -18,7 +18,7 @@ namespace BINAES
 
             using (SqlConnection connection = new SqlConnection(cadena))
             {
-                string query = ""
+                string query = "SELECT * FROM EJEMPLAR where "
             }
 
 
