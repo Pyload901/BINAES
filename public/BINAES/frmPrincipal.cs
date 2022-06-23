@@ -96,7 +96,9 @@ namespace BINAES
         }
         private void btnBuscarEjemplarBU_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Buscar");
+            string Titulo = txtBuscarEjemplarBU.Text;
+
+            Ejemplar ejem = BusquedaDAO.FiltrarPorTituloExacto(Titulo);
         }
         private void btnBuscarEjemplarRE_Click(object sender, EventArgs e)
         {

@@ -98,6 +98,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ejemplar.cs" />
+    <Compile Include="BusquedaDAO.cs" />
     <Compile Include="Camara.cs" />
     <Compile Include="DataGridViewComposer.cs" />
     <Compile Include="Evento.cs" />
