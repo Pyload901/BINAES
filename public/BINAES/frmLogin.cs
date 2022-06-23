@@ -30,11 +30,14 @@ namespace BINAES
                 Usuario usuario = new Usuario();
                 usuario.nombre = txtUsuarioLogin.Text;
                 usuario.contrasenia = txtContraseniaLogin.Text;
-                if (UsuarioDAO.Login(usuario))
+                usuario = UsuarioDAO.Login(usuario);
+                if (usuario != null)
                 {
-                    MessageBox.Show("Entra");
-                } else
-                    MessageBox.Show("No entra");
+                    this.Hide();
+                    new frmPrincipal(usuario).Show();
+                }
+                else
+                    MessageBox.Show("Usuario o contraseña inválidas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else

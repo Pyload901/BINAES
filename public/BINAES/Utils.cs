@@ -13,5 +13,16 @@ namespace BINAES
         {
             return Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Tag);
         }
+        public static OpcionesEnumerate VerificarOpcion(DataGridView dgv, DataGridViewCellEventArgs e)
+        {
+            OpcionesEnumerate result = new OpcionesEnumerate();
+            if (dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Editar")
+            {
+                result = OpcionesEnumerate.Editar;
+            }
+            else if (dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Eliminar")
+                result = OpcionesEnumerate.Eliminar;
+            return result;
+        }
     }
 }

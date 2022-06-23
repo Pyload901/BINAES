@@ -131,6 +131,9 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.sspStatus = new System.Windows.Forms.StatusStrip();
+            this.sspRol = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sspNombre = new System.Windows.Forms.ToolStripStatusLabel();
             this.mspMenu.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -156,6 +159,7 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tabIntroduccion.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.sspStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // mspMenu
@@ -169,7 +173,7 @@
             this.mspMenu.Location = new System.Drawing.Point(0, 0);
             this.mspMenu.Name = "mspMenu";
             this.mspMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mspMenu.Size = new System.Drawing.Size(1264, 33);
+            this.mspMenu.Size = new System.Drawing.Size(1264, 36);
             this.mspMenu.TabIndex = 1;
             this.mspMenu.Text = "menuStrip1";
             this.mspMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mspMenu_ItemClicked);
@@ -182,7 +186,7 @@
             this.devolucionesToolStripMenuItem,
             this.añadirToolStripMenuItem});
             this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
-            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(257, 29);
+            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(257, 30);
             this.búsquedaToolStripMenuItem.Tag = "";
             this.búsquedaToolStripMenuItem.Text = "Administrador de ejemplares";
             this.búsquedaToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.búsquedaToolStripMenuItem_DropDownItemClicked);
@@ -219,14 +223,14 @@
             // administradorDeEventosToolStripMenuItem
             // 
             this.administradorDeEventosToolStripMenuItem.Name = "administradorDeEventosToolStripMenuItem";
-            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(234, 29);
+            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(234, 30);
             this.administradorDeEventosToolStripMenuItem.Tag = "4";
             this.administradorDeEventosToolStripMenuItem.Text = "Administrador de eventos";
             // 
             // administradorDeUsuariosToolStripMenuItem
             // 
             this.administradorDeUsuariosToolStripMenuItem.Name = "administradorDeUsuariosToolStripMenuItem";
-            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(238, 29);
+            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(238, 30);
             this.administradorDeUsuariosToolStripMenuItem.Tag = "5";
             this.administradorDeUsuariosToolStripMenuItem.Text = "Administrador de usuarios";
             // 
@@ -1304,7 +1308,7 @@
             // 
             this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 46);
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 40);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
             this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 40);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
@@ -1506,11 +1510,35 @@
             this.label33.Text = resources.GetString("label33.Text");
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // sspStatus
+            // 
+            this.sspStatus.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.sspStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sspNombre,
+            this.sspRol});
+            this.sspStatus.Location = new System.Drawing.Point(0, 649);
+            this.sspStatus.Name = "sspStatus";
+            this.sspStatus.Size = new System.Drawing.Size(1264, 32);
+            this.sspStatus.TabIndex = 2;
+            // 
+            // sspRol
+            // 
+            this.sspRol.Name = "sspRol";
+            this.sspRol.Size = new System.Drawing.Size(46, 25);
+            this.sspRol.Text = "Rol: ";
+            // 
+            // sspNombre
+            // 
+            this.sspNombre.Name = "sspNombre";
+            this.sspNombre.Size = new System.Drawing.Size(87, 25);
+            this.sspNombre.Text = "Nombre: ";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 45F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.sspStatus);
             this.Controls.Add(this.tabAdmin);
             this.Controls.Add(this.mspMenu);
             this.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1518,6 +1546,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmPrincipal";
             this.Text = "BINAES";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();
@@ -1553,6 +1582,8 @@
             this.tabIntroduccion.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            this.sspStatus.ResumeLayout(false);
+            this.sspStatus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1661,5 +1692,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBuscarEjemplarRE;
         private System.Windows.Forms.Button btnCancelarFotoUS;
+        private System.Windows.Forms.StatusStrip sspStatus;
+        private System.Windows.Forms.ToolStripStatusLabel sspNombre;
+        private System.Windows.Forms.ToolStripStatusLabel sspRol;
     }
 }

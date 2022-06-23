@@ -10,12 +10,12 @@ namespace BINAES
 {
     public static class UsuarioDAO
     {
-        public static bool Login (Usuario usuario)
+        public static Usuario Login (Usuario usuario)
         {
-            bool flag = true;
+            
             using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
             {
-                string query = "SELECT nombre, contrasenia FROM USUARIO WHERE nombre = @nombre";
+                string query = "SELECT U.nombre, U.contrasenia, R.rol 'rol' FROM USUARIO U INNER JOIN ROL R ON U.id_rol = R.id WHERE nombre = @nombre";
                 SqlCommand command = new SqlCommand(query, conn);
                 command.Parameters.AddWithValue("@nombre", usuario.nombre);
                 conn.Open();
@@ -25,13 +25,17 @@ namespace BINAES
                     {
                         if (!BCrypt.Net.BCrypt.Verify(usuario.contrasenia, reader["contrasenia"].ToString()))
                         {
-                            flag = false;
+                            usuario = null;
+                        }
+                        else
+                        {
+                            usuario.rol = reader["rol"].ToString();
                         }
                     }
                 }
                 conn.Close();
             }
-            return flag;
+            return usuario;
         }
     }
 }

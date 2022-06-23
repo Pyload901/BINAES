@@ -20,6 +20,9 @@ namespace BINAES
         public frmPrincipal(Usuario usuario)
         {
             InitializeComponent();
+            id_usuario = usuario.id;
+            nombre_usuario = usuario.nombre;
+            rol_usuario = usuario.rol;
         }
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
@@ -40,6 +43,12 @@ namespace BINAES
 
             // Renderizar imagen de btnBuscarEjemplar
             btnBuscarEjemplarBU.Image = (Image)new Bitmap(global::BINAES.Properties.Resources.lupa, new Size(btnBuscarEjemplarBU.Size.Height, btnBuscarEjemplarBU.Size.Height));
+            sspNombre.Text += nombre_usuario;
+            sspRol.Text += rol_usuario;
+        }
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
         private void búsquedaToolStripMenuItem_MouseHover(object sender, EventArgs e)
         {
@@ -118,11 +127,10 @@ namespace BINAES
         // Formulario de eventos
         private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView senderDgv = (DataGridView)sender;
+            DataGridView dgv = (DataGridView)sender;
 
-            int id = Utils.getDataGridViewCellId(senderDgv, e);
-
-            if (senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Editar")
+            int id = Utils.getDataGridViewCellId(dgv, e);
+            if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Editar)
             {
                 Evento evento = EventoDAO.LeerUno(id);
                 txtTituloEventoEV.Text = evento.titulo;
@@ -131,7 +139,7 @@ namespace BINAES
                 nudNumeroAsistentesEV.Value = evento.numero_asistentes;
                 btnDejarDeEditarEV.Enabled = true;
             }
-            else if (senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Eliminar")
+            else if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Eliminar)
             {
                 EventoDAO.Eliminar(id);
             }
@@ -178,7 +186,5 @@ namespace BINAES
                 btnCancelarFotoUS.Enabled = false;
             }
         }
-
-        
     }
 }
