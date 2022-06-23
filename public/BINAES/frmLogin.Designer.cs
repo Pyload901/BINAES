@@ -67,6 +67,7 @@ namespace BINAES
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1259, 665);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
@@ -87,9 +88,9 @@ namespace BINAES
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(191, 167);
+            this.label29.Location = new System.Drawing.Point(191, 175);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(308, 45);
+            this.label29.Size = new System.Drawing.Size(308, 37);
             this.label29.TabIndex = 2;
             this.label29.Text = "Usuario";
             // 
@@ -98,9 +99,9 @@ namespace BINAES
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(191, 325);
+            this.label30.Location = new System.Drawing.Point(191, 333);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(308, 45);
+            this.label30.Size = new System.Drawing.Size(308, 37);
             this.label30.TabIndex = 3;
             this.label30.Text = "Contraseña";
             // 
@@ -111,7 +112,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox9.Location = new System.Drawing.Point(191, 215);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(308, 50);
+            this.textBox9.Size = new System.Drawing.Size(308, 43);
             this.textBox9.TabIndex = 4;
             // 
             // textBox10
@@ -121,7 +122,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox10.Location = new System.Drawing.Point(191, 373);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(308, 50);
+            this.textBox10.Size = new System.Drawing.Size(308, 43);
             this.textBox10.TabIndex = 5;
             // 
             // button3
@@ -134,16 +135,18 @@ namespace BINAES
             this.button3.Text = "Iniciar Sesión";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // login
+            // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 45F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "login";
+            this.Name = "frmLogin";
             this.Text = "Inicio de sesión";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
