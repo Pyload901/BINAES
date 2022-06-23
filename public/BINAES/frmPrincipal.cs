@@ -119,7 +119,9 @@ namespace BINAES
         private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView senderDgv = (DataGridView)sender;
+
             int id = Utils.getDataGridViewCellId(senderDgv, e);
+
             if (senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Editar")
             {
                 Evento evento = EventoDAO.LeerUno(id);
