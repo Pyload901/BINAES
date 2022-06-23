@@ -95,6 +95,13 @@ namespace BINAES
                     break;
                 default:
                     break;
+
+                case 8:
+                    dgvVistaColeccionCO.DataSource = ColeccionDAO.Leer();
+                    DataGridViewComposer.BuildDataGridView_Editar(dgvVistaColeccionCO);
+                    DataGridViewComposer.BuildDataGridView_Eliminar(dgvVistaColeccionCO);
+                default:
+                    break;
             }
         }
 
@@ -185,6 +192,21 @@ namespace BINAES
             {
                 btnCancelarFotoUS.Enabled = false;
             }
+        }
+
+        private void btnAgregarCO_Click(object sender, EventArgs e)
+        {
+            Coleccion cole = new Coleccion();
+            cole.nombre = txtNombreCO.Text;
+            cole.id_genero = Convert.ToInt32(cmbGeneroColeccionCO.ValueMember);
+            cole.id_coleccion = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
+
+            ColeccionDAO.Insertar(cole);
+        }
+
+        private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void btnEscanearQrRE_Click(object sender, EventArgs e)
