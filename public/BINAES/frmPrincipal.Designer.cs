@@ -131,6 +131,18 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tlpColeccionCO = new System.Windows.Forms.TableLayoutPanel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtNombreCO = new System.Windows.Forms.TextBox();
+            this.btnSeleccionarCO = new System.Windows.Forms.Button();
+            this.cmbTipoColeccionCO = new System.Windows.Forms.ComboBox();
+            this.dgvVistaColeccionCO = new System.Windows.Forms.DataGridView();
+            this.btnAgregarCO = new System.Windows.Forms.Button();
+            this.cmbGeneroColeccionCO = new System.Windows.Forms.ComboBox();
+            this.btnDejardeEditarCO = new System.Windows.Forms.Button();
             this.mspMenu.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -156,6 +168,9 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tabIntroduccion.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tlpColeccionCO.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVistaColeccionCO)).BeginInit();
             this.SuspendLayout();
             // 
             // mspMenu
@@ -1247,8 +1262,8 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel7.Controls.Add(this.txtBuscarEjemplarBU, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.btnBuscarEjemplarBU, 2, 1);
-            this.tableLayoutPanel7.Controls.Add(this.dgvEjemplaresBU, 1, 2);
             this.tableLayoutPanel7.Controls.Add(this.cmbFiltrarEjemplarBU, 3, 1);
+            this.tableLayoutPanel7.Controls.Add(this.dgvEjemplaresBU, 1, 2);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 4;
@@ -1300,7 +1315,7 @@
             // 
             this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 45);
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 49);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
             this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 29);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
@@ -1323,6 +1338,7 @@
             this.tabAdmin.Controls.Add(this.tabUsuarios);
             this.tabAdmin.Controls.Add(this.tabMisionVision);
             this.tabAdmin.Controls.Add(this.tabIntroduccion);
+            this.tabAdmin.Controls.Add(this.tabPage1);
             this.tabAdmin.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAdmin.Location = new System.Drawing.Point(0, 28);
             this.tabAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1502,6 +1518,167 @@
             this.label33.Text = resources.GetString("label33.Text");
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.tlpColeccionCO);
+            this.tabPage1.Location = new System.Drawing.Point(4, 33);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1256, 617);
+            this.tabPage1.TabIndex = 9;
+            this.tabPage1.Text = "Colección";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tlpColeccionCO
+            // 
+            this.tlpColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpColeccionCO.ColumnCount = 2;
+            this.tlpColeccionCO.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpColeccionCO.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tlpColeccionCO.Controls.Add(this.label19, 0, 2);
+            this.tlpColeccionCO.Controls.Add(this.label20, 0, 4);
+            this.tlpColeccionCO.Controls.Add(this.label29, 0, 0);
+            this.tlpColeccionCO.Controls.Add(this.dgvVistaColeccionCO, 1, 0);
+            this.tlpColeccionCO.Controls.Add(this.btnSeleccionarCO, 0, 6);
+            this.tlpColeccionCO.Controls.Add(this.btnAgregarCO, 0, 7);
+            this.tlpColeccionCO.Controls.Add(this.btnDejardeEditarCO, 0, 8);
+            this.tlpColeccionCO.Controls.Add(this.txtNombreCO, 0, 1);
+            this.tlpColeccionCO.Controls.Add(this.cmbTipoColeccionCO, 0, 3);
+            this.tlpColeccionCO.Controls.Add(this.cmbGeneroColeccionCO, 0, 5);
+            this.tlpColeccionCO.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tlpColeccionCO.Location = new System.Drawing.Point(8, 6);
+            this.tlpColeccionCO.Name = "tlpColeccionCO";
+            this.tlpColeccionCO.RowCount = 9;
+            this.tlpColeccionCO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlpColeccionCO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlpColeccionCO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlpColeccionCO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlpColeccionCO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlpColeccionCO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlpColeccionCO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlpColeccionCO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlpColeccionCO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlpColeccionCO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpColeccionCO.Size = new System.Drawing.Size(1256, 617);
+            this.tlpColeccionCO.TabIndex = 12;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(3, 183);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(132, 21);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Tipo de colección:";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(3, 319);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(153, 21);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Genero de colección:";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(3, 47);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(71, 21);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Nombre:";
+            // 
+            // txtNombreCO
+            // 
+            this.txtNombreCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreCO.Location = new System.Drawing.Point(3, 71);
+            this.txtNombreCO.Name = "txtNombreCO";
+            this.txtNombreCO.Size = new System.Drawing.Size(308, 29);
+            this.txtNombreCO.TabIndex = 10;
+            // 
+            // btnSeleccionarCO
+            // 
+            this.btnSeleccionarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSeleccionarCO.Location = new System.Drawing.Point(3, 411);
+            this.btnSeleccionarCO.Name = "btnSeleccionarCO";
+            this.btnSeleccionarCO.Size = new System.Drawing.Size(308, 62);
+            this.btnSeleccionarCO.TabIndex = 15;
+            this.btnSeleccionarCO.Text = "Seleccionar";
+            this.btnSeleccionarCO.UseVisualStyleBackColor = true;
+            // 
+            // cmbTipoColeccionCO
+            // 
+            this.cmbTipoColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTipoColeccionCO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoColeccionCO.FormattingEnabled = true;
+            this.cmbTipoColeccionCO.Location = new System.Drawing.Point(3, 207);
+            this.cmbTipoColeccionCO.Name = "cmbTipoColeccionCO";
+            this.cmbTipoColeccionCO.Size = new System.Drawing.Size(308, 29);
+            this.cmbTipoColeccionCO.TabIndex = 26;
+            // 
+            // dgvVistaColeccionCO
+            // 
+            this.dgvVistaColeccionCO.AllowUserToAddRows = false;
+            this.dgvVistaColeccionCO.AllowUserToDeleteRows = false;
+            this.dgvVistaColeccionCO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVistaColeccionCO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvVistaColeccionCO.Location = new System.Drawing.Point(317, 3);
+            this.dgvVistaColeccionCO.Name = "dgvVistaColeccionCO";
+            this.dgvVistaColeccionCO.ReadOnly = true;
+            this.dgvVistaColeccionCO.RowHeadersWidth = 51;
+            this.tlpColeccionCO.SetRowSpan(this.dgvVistaColeccionCO, 9);
+            this.dgvVistaColeccionCO.Size = new System.Drawing.Size(936, 611);
+            this.dgvVistaColeccionCO.TabIndex = 29;
+            // 
+            // btnAgregarCO
+            // 
+            this.btnAgregarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarCO.Location = new System.Drawing.Point(3, 479);
+            this.btnAgregarCO.Name = "btnAgregarCO";
+            this.btnAgregarCO.Size = new System.Drawing.Size(308, 62);
+            this.btnAgregarCO.TabIndex = 27;
+            this.btnAgregarCO.Text = "Agregar";
+            this.btnAgregarCO.UseVisualStyleBackColor = true;
+            // 
+            // cmbGeneroColeccionCO
+            // 
+            this.cmbGeneroColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbGeneroColeccionCO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGeneroColeccionCO.FormattingEnabled = true;
+            this.cmbGeneroColeccionCO.Location = new System.Drawing.Point(3, 343);
+            this.cmbGeneroColeccionCO.Name = "cmbGeneroColeccionCO";
+            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(308, 29);
+            this.cmbGeneroColeccionCO.TabIndex = 30;
+            // 
+            // btnDejardeEditarCO
+            // 
+            this.btnDejardeEditarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDejardeEditarCO.Enabled = false;
+            this.btnDejardeEditarCO.Location = new System.Drawing.Point(3, 547);
+            this.btnDejardeEditarCO.Name = "btnDejardeEditarCO";
+            this.btnDejardeEditarCO.Size = new System.Drawing.Size(308, 67);
+            this.btnDejardeEditarCO.TabIndex = 28;
+            this.btnDejardeEditarCO.Text = "Dejar de editar";
+            this.btnDejardeEditarCO.UseVisualStyleBackColor = true;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
@@ -1549,6 +1726,10 @@
             this.tabIntroduccion.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tlpColeccionCO.ResumeLayout(false);
+            this.tlpColeccionCO.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVistaColeccionCO)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1657,5 +1838,17 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBuscarEjemplarRE;
         private System.Windows.Forms.Button btnCancelarFotoUS;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TableLayoutPanel tlpColeccionCO;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.DataGridView dgvVistaColeccionCO;
+        private System.Windows.Forms.Button btnSeleccionarCO;
+        private System.Windows.Forms.Button btnAgregarCO;
+        private System.Windows.Forms.Button btnDejardeEditarCO;
+        private System.Windows.Forms.TextBox txtNombreCO;
+        private System.Windows.Forms.ComboBox cmbTipoColeccionCO;
+        private System.Windows.Forms.ComboBox cmbGeneroColeccionCO;
     }
 }
