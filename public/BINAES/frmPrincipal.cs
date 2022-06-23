@@ -13,9 +13,11 @@ namespace BINAES
     public partial class frmPrincipal : Form
     {
         // Variables globales
-
+        public int id_usuario = 0;
+        public string nombre_usuario = null;
+        public string rol_usuario = null;
         // Formulario general
-        public frmPrincipal()
+        public frmPrincipal(Usuario usuario)
         {
             InitializeComponent();
         }
@@ -117,7 +119,7 @@ namespace BINAES
         private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView senderDgv = (DataGridView)sender;
-            int id = DataGridViewComposer.getId(senderDgv, e);
+            int id = Utils.getDataGridViewCellId(senderDgv, e);
             if (senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Editar")
             {
                 Evento evento = EventoDAO.LeerUno(id);
@@ -129,7 +131,7 @@ namespace BINAES
             }
             else if (senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Eliminar")
             {
-                EventoDAO.Eliminar(Convert.ToInt32(senderDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Tag));
+                EventoDAO.Eliminar(id);
             }
         }
 

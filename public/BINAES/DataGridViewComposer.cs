@@ -10,10 +10,6 @@ namespace BINAES
     public static class DataGridViewComposer
     {
         private static List<string> indicesNulos = new List<string>();
-        public static int getId (DataGridView dgv, DataGridViewCellEventArgs e)
-        {
-            return Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Tag);
-        }
         public static void GetNullProperties (object obj)
         {
             PropertyInfo[] properties = obj.GetType().GetProperties();
