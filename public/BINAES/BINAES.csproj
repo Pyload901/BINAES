@@ -91,7 +91,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Busqueda.cs" />
+    <Compile Include="Ejemplar.cs" />
     <Compile Include="BusquedaDAO.cs" />
     <Compile Include="Camara.cs" />
     <Compile Include="DataGridViewComposer.cs" />
