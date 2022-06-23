@@ -34,9 +34,9 @@ namespace BINAES
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtUsuarioLogin = new System.Windows.Forms.TextBox();
+            this.txtContrasenaLogin = new System.Windows.Forms.TextBox();
+            this.btnInicioSesion = new System.Windows.Forms.Button();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,9 +53,9 @@ namespace BINAES
             this.tableLayoutPanel5.Controls.Add(this.pictureBox1, 3, 1);
             this.tableLayoutPanel5.Controls.Add(this.label29, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.label30, 1, 3);
-            this.tableLayoutPanel5.Controls.Add(this.textBox9, 1, 2);
-            this.tableLayoutPanel5.Controls.Add(this.textBox10, 1, 4);
-            this.tableLayoutPanel5.Controls.Add(this.button3, 1, 5);
+            this.tableLayoutPanel5.Controls.Add(this.txtUsuarioLogin, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.txtContrasenaLogin, 1, 4);
+            this.tableLayoutPanel5.Controls.Add(this.btnInicioSesion, 1, 5);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 7;
@@ -74,7 +74,7 @@ namespace BINAES
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::BINAES.Properties.Resources.LOGOBINAES_nobackground;
             this.pictureBox1.Location = new System.Drawing.Point(599, 136);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel5.SetRowSpan(this.pictureBox1, 5);
@@ -105,35 +105,37 @@ namespace BINAES
             this.label30.TabIndex = 3;
             this.label30.Text = "Contraseña";
             // 
-            // textBox9
+            // txtUsuarioLogin
             // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtUsuarioLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Location = new System.Drawing.Point(191, 215);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(308, 43);
-            this.textBox9.TabIndex = 4;
+            this.txtUsuarioLogin.Location = new System.Drawing.Point(191, 215);
+            this.txtUsuarioLogin.Name = "txtUsuarioLogin";
+            this.txtUsuarioLogin.Size = new System.Drawing.Size(308, 43);
+            this.txtUsuarioLogin.TabIndex = 4;
             // 
-            // textBox10
+            // txtContrasenaLogin
             // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtContrasenaLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.Location = new System.Drawing.Point(191, 373);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(308, 43);
-            this.textBox10.TabIndex = 5;
+            this.txtContrasenaLogin.Location = new System.Drawing.Point(191, 373);
+            this.txtContrasenaLogin.Name = "txtContrasenaLogin";
+            this.txtContrasenaLogin.PasswordChar = '*';
+            this.txtContrasenaLogin.Size = new System.Drawing.Size(308, 43);
+            this.txtContrasenaLogin.TabIndex = 5;
+            this.txtContrasenaLogin.UseSystemPasswordChar = true;
             // 
-            // button3
+            // btnInicioSesion
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(191, 459);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(308, 59);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Iniciar Sesión";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnInicioSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInicioSesion.Location = new System.Drawing.Point(191, 459);
+            this.btnInicioSesion.Name = "btnInicioSesion";
+            this.btnInicioSesion.Size = new System.Drawing.Size(308, 59);
+            this.btnInicioSesion.TabIndex = 6;
+            this.btnInicioSesion.Text = "Iniciar Sesión";
+            this.btnInicioSesion.UseVisualStyleBackColor = true;
             // 
             // frmLogin
             // 
@@ -145,6 +147,7 @@ namespace BINAES
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -160,9 +163,9 @@ namespace BINAES
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtUsuarioLogin;
+        private System.Windows.Forms.TextBox txtContrasenaLogin;
+        private System.Windows.Forms.Button btnInicioSesion;
     }
 }
 
