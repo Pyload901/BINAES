@@ -12,22 +12,15 @@ namespace BINAES
 {
     public static class Camara
     {
-        public static int cont = 0;
         private static Bitmap imagen = null;
-        private static VideoCaptureDevice camara = new VideoCaptureDevice();
+        private static VideoCaptureDevice camara = null;
         private static void camara_NewFrame (object sender, NewFrameEventArgs e, PictureBox pic)
         {
             
             imagen = (Bitmap) pic.Image;
-            Graphics g = Graphics.FromImage((Bitmap)e.Frame.Clone());
-            if (g != null)
-            {
-                /*g.ScaleTransform(0, -1);*/
-                g.DrawImage(pic.Image, 0, 0);
-                g.Dispose();
-
-            }
-            /*pic.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);*/
+            Bitmap bmp = (Bitmap)e.Frame.Clone();
+            bmp.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            pic.Image = bmp;
             if (imagen != null) 
                 imagen.Dispose();
         }
@@ -64,6 +57,7 @@ namespace BINAES
         }
         public static void Abrir (PictureBox pic)
         {
+            camara = new VideoCaptureDevice();
             if (Properties.Settings.Default.Camara == "")
                 if (!Seleccionar())
                     return;
@@ -89,7 +83,6 @@ namespace BINAES
             if (imagen != null)
                 imagen.Dispose();
             camara.SignalToStop();
-            cont++;
         }
         public static void Reanudar ()
         {
@@ -97,7 +90,10 @@ namespace BINAES
         }
         public static bool Activada ()
         {
-           return camara.IsRunning;
+            bool flag = false;
+            if (camara != null && camara.IsRunning)
+                flag = true;
+            return flag;
         }
     }
 }

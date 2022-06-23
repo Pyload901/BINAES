@@ -145,7 +145,7 @@ namespace BINAES
                     btnCancelarFotoUS.Enabled = false;
                 }
                 else
-                    Camara.Reanudar();
+                    Camara.Abrir(picFotoUS);
                 foto.Dispose();
 
             }
