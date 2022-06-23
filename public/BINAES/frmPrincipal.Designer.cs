@@ -132,8 +132,9 @@
             this.label33 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.sspStatus = new System.Windows.Forms.StatusStrip();
-            this.sspRol = new System.Windows.Forms.ToolStripStatusLabel();
             this.sspNombre = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sspRol = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnEscanearQrRE = new System.Windows.Forms.Button();
             this.mspMenu.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -173,7 +174,7 @@
             this.mspMenu.Location = new System.Drawing.Point(0, 0);
             this.mspMenu.Name = "mspMenu";
             this.mspMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mspMenu.Size = new System.Drawing.Size(1264, 36);
+            this.mspMenu.Size = new System.Drawing.Size(1264, 33);
             this.mspMenu.TabIndex = 1;
             this.mspMenu.Text = "menuStrip1";
             this.mspMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mspMenu_ItemClicked);
@@ -186,7 +187,7 @@
             this.devolucionesToolStripMenuItem,
             this.añadirToolStripMenuItem});
             this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
-            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(257, 30);
+            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(257, 29);
             this.búsquedaToolStripMenuItem.Tag = "";
             this.búsquedaToolStripMenuItem.Text = "Administrador de ejemplares";
             this.búsquedaToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.búsquedaToolStripMenuItem_DropDownItemClicked);
@@ -223,14 +224,14 @@
             // administradorDeEventosToolStripMenuItem
             // 
             this.administradorDeEventosToolStripMenuItem.Name = "administradorDeEventosToolStripMenuItem";
-            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(234, 30);
+            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(234, 29);
             this.administradorDeEventosToolStripMenuItem.Tag = "4";
             this.administradorDeEventosToolStripMenuItem.Text = "Administrador de eventos";
             // 
             // administradorDeUsuariosToolStripMenuItem
             // 
             this.administradorDeUsuariosToolStripMenuItem.Name = "administradorDeUsuariosToolStripMenuItem";
-            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(238, 30);
+            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(238, 29);
             this.administradorDeUsuariosToolStripMenuItem.Tag = "5";
             this.administradorDeUsuariosToolStripMenuItem.Text = "Administrador de usuarios";
             // 
@@ -1126,6 +1127,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label23, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnPrestarRE, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.btnBuscarEjemplarRE, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnEscanearQrRE, 2, 4);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -1159,10 +1161,9 @@
             this.nudIdUsuarioRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.SetColumnSpan(this.nudIdUsuarioRE, 2);
             this.nudIdUsuarioRE.Location = new System.Drawing.Point(128, 311);
             this.nudIdUsuarioRE.Name = "nudIdUsuarioRE";
-            this.nudIdUsuarioRE.Size = new System.Drawing.Size(368, 39);
+            this.nudIdUsuarioRE.Size = new System.Drawing.Size(181, 39);
             this.nudIdUsuarioRE.TabIndex = 30;
             // 
             // label26
@@ -1308,7 +1309,7 @@
             // 
             this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 40);
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 46);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
             this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 40);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
@@ -1521,17 +1522,29 @@
             this.sspStatus.Size = new System.Drawing.Size(1264, 32);
             this.sspStatus.TabIndex = 2;
             // 
+            // sspNombre
+            // 
+            this.sspNombre.Name = "sspNombre";
+            this.sspNombre.Size = new System.Drawing.Size(87, 25);
+            this.sspNombre.Text = "Nombre: ";
+            // 
             // sspRol
             // 
             this.sspRol.Name = "sspRol";
             this.sspRol.Size = new System.Drawing.Size(46, 25);
             this.sspRol.Text = "Rol: ";
             // 
-            // sspNombre
+            // btnEscanearQrRE
             // 
-            this.sspNombre.Name = "sspNombre";
-            this.sspNombre.Size = new System.Drawing.Size(87, 25);
-            this.sspNombre.Text = "Nombre: ";
+            this.btnEscanearQrRE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEscanearQrRE.Location = new System.Drawing.Point(315, 311);
+            this.btnEscanearQrRE.Name = "btnEscanearQrRE";
+            this.btnEscanearQrRE.Size = new System.Drawing.Size(181, 39);
+            this.btnEscanearQrRE.TabIndex = 34;
+            this.btnEscanearQrRE.Text = "Escanear QR";
+            this.btnEscanearQrRE.UseVisualStyleBackColor = true;
+            this.btnEscanearQrRE.Click += new System.EventHandler(this.btnEscanearQrRE_Click);
             // 
             // frmPrincipal
             // 
@@ -1695,5 +1708,6 @@
         private System.Windows.Forms.StatusStrip sspStatus;
         private System.Windows.Forms.ToolStripStatusLabel sspNombre;
         private System.Windows.Forms.ToolStripStatusLabel sspRol;
+        private System.Windows.Forms.Button btnEscanearQrRE;
     }
 }

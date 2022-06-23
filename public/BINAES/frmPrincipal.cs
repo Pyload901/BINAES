@@ -186,5 +186,17 @@ namespace BINAES
                 btnCancelarFotoUS.Enabled = false;
             }
         }
+
+        private void btnEscanearQrRE_Click(object sender, EventArgs e)
+        {
+            using (frmEscaner ventana = new frmEscaner())
+            {
+                DialogResult resultado = ventana.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    
+                }
+            }
+        }
     }
 }
