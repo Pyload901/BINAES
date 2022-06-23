@@ -88,9 +88,9 @@ namespace BINAES
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(191, 167);
+            this.label29.Location = new System.Drawing.Point(191, 182);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(308, 45);
+            this.label29.Size = new System.Drawing.Size(308, 30);
             this.label29.TabIndex = 2;
             this.label29.Text = "Usuario";
             // 
@@ -99,9 +99,9 @@ namespace BINAES
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(191, 325);
+            this.label30.Location = new System.Drawing.Point(191, 340);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(308, 45);
+            this.label30.Size = new System.Drawing.Size(308, 30);
             this.label30.TabIndex = 3;
             this.label30.Text = "Contraseña";
             // 
@@ -112,7 +112,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuarioLogin.Location = new System.Drawing.Point(191, 215);
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
-            this.txtUsuarioLogin.Size = new System.Drawing.Size(308, 50);
+            this.txtUsuarioLogin.Size = new System.Drawing.Size(308, 36);
             this.txtUsuarioLogin.TabIndex = 4;
             // 
             // txtContraseniaLogin
@@ -123,7 +123,7 @@ namespace BINAES
             this.txtContraseniaLogin.Location = new System.Drawing.Point(191, 373);
             this.txtContraseniaLogin.Name = "txtContraseniaLogin";
             this.txtContraseniaLogin.PasswordChar = '*';
-            this.txtContraseniaLogin.Size = new System.Drawing.Size(308, 50);
+            this.txtContraseniaLogin.Size = new System.Drawing.Size(308, 36);
             this.txtContraseniaLogin.TabIndex = 5;
             this.txtContraseniaLogin.UseSystemPasswordChar = true;
             this.txtContraseniaLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseniaLogin_KeyDown);
@@ -141,7 +141,7 @@ namespace BINAES
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 45F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.tableLayoutPanel5);
