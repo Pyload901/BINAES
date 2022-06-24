@@ -248,13 +248,13 @@ namespace BINAES
 
         private void btnAgregarEjemplarAG_Click(object sender, EventArgs e)
         {
-            File.Copy(Path.Combine(@"Ruta de la imagen donde se alamacenara", Path.GetRandomFileName()) + ".png");
+            File.Exists(Path.Combine(@"Ruta de la imagen donde se alamacenara", Path.GetRandomFileName()) + ".png");
             MessageBox.Show(">>>Imagen Guardada con Exito<<<");
         }
 
         private void btnAgregarEV_Click(object sender, EventArgs e)
         {
-            File.Copy(Path.Combine(@"Ruta de la imagen donde se alamacenara", Path.GetRandomFileName()) + ".png");
+            File.Exists(Path.Combine(@"Ruta de la imagen donde se alamacenara", Path.GetRandomFileName()) + ".png");
             MessageBox.Show(">>>Imagen Guardada con Exito<<<");
         }
     }
