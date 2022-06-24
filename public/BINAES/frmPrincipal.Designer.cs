@@ -626,6 +626,7 @@ namespace BINAES
             this.btnAgregarEV.TabIndex = 22;
             this.btnAgregarEV.Text = "Agregar";
             this.btnAgregarEV.UseVisualStyleBackColor = true;
+            this.btnAgregarEV.Click += new System.EventHandler(this.btnAgregarEV_Click);
             // 
             // dgvEventosEV
             // 
@@ -900,6 +901,7 @@ namespace BINAES
             this.btnAgregarEjemplarAG.TabIndex = 27;
             this.btnAgregarEjemplarAG.Text = "Agregar";
             this.btnAgregarEjemplarAG.UseVisualStyleBackColor = true;
+            this.btnAgregarEjemplarAG.Click += new System.EventHandler(this.btnAgregarEjemplarAG_Click);
             // 
             // txtEditorialEjemplarAG
             // 

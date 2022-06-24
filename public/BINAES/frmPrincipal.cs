@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -243,6 +244,18 @@ namespace BINAES
             }
             else
                 MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
+        }
+
+        private void btnAgregarEjemplarAG_Click(object sender, EventArgs e)
+        {
+            File.Copy(Path.Combine(@"Ruta de la imagen donde se alamacenara", Path.GetRandomFileName()) + ".png");
+            MessageBox.Show(">>>Imagen Guardada con Exito<<<");
+        }
+
+        private void btnAgregarEV_Click(object sender, EventArgs e)
+        {
+            File.Copy(Path.Combine(@"Ruta de la imagen donde se alamacenara", Path.GetRandomFileName()) + ".png");
+            MessageBox.Show(">>>Imagen Guardada con Exito<<<");
         }
     }
 }
