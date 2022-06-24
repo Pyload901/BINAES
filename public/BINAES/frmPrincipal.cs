@@ -53,8 +53,8 @@ namespace BINAES
             filtros.Add(FiltroEnumerate.Titulo, "Titulo");
             filtros.Add(FiltroEnumerate.Autor, "Autor");
             filtros.Add(FiltroEnumerate.PalabrasClave, "Palabras clave");
-            filtros.Add(FiltroEnumerate.Formato, "Digital");
-            filtros.Add(FiltroEnumerate.Formato, "Físico");
+            /*filtros.Add(FiltroEnumerate.Formato, "Digital");
+            filtros.Add(FiltroEnumerate.Formato, "Físico");*/
             cmbFiltrarEjemplarBU.DisplayMember = "Value";
             cmbFiltrarEjemplarBU.ValueMember = "Key";
             cmbFiltrarEjemplarBU.DataSource = filtros.ToList();
@@ -225,11 +225,6 @@ namespace BINAES
             cole.id_coleccion = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
 
             ColeccionDAO.Insertar(cole);
-        }
-
-        private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
         //Se implementara con funciones
 

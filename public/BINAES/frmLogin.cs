@@ -42,30 +42,6 @@ namespace BINAES
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-                        
-        private void btnInicioSesion_Click(object sender, EventArgs e)
-        {
-            if (txtUsuarioLogin.Text != "" && txtContraseniaLogin.Text != "")
-            {
-                Usuario usuario = new Usuario();
-                usuario.nombre = txtUsuarioLogin.Text;
-                usuario.contrasenia = txtContraseniaLogin.Text;
-                usuario = UsuarioDAO.Login(usuario);
-                if (usuario != null)
-                {
-                    this.Hide();
-                    new frmPrincipal(usuario).Show();
-                }
-                else
-                    MessageBox.Show("Usuario o contraseña inválidas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
-                MessageBox.Show("No se han completado los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void txtContraseniaLogin_KeyDown(object sender, KeyEventArgs e)
         {
         if (e.KeyCode == Keys.Enter)
@@ -92,7 +68,25 @@ namespace BINAES
 
         private void btnIniciarSesionLogin_Click(object sender, EventArgs e)
         {
+            if (txtUsuarioLogin.Text != "" && txtContraseniaLogin.Text != "")
+            {
+                Usuario usuario = new Usuario();
+                usuario.nombre = txtUsuarioLogin.Text;
+                usuario.contrasenia = txtContraseniaLogin.Text;
+                usuario = UsuarioDAO.Login(usuario);
+                if (usuario != null)
+                {
+                    this.Hide();
+                    new frmPrincipal(usuario).Show();
+                }
+                else
+                    MessageBox.Show("Usuario o contraseña inválidas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+            else
+            {
+                MessageBox.Show("No se han completado los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
