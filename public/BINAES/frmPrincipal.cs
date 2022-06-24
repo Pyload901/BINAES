@@ -207,5 +207,42 @@ namespace BINAES
         {
 
         }
+        //Evento agregar Imagen "Agregar Ejemplar"
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                picAgregarEjemplar.Image = new Bitmap(open.FileName);
+            }
+            else
+                MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
+        }
+
+        //Evento para implementar Imagen "Eventos"
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                picEventos.Image = new Bitmap(open.FileName);
+            }
+            else
+                MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
+        }
+
+        private void picFotoUS_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                picFotoUS.Image = new Bitmap(open.FileName);
+            }
+            else
+                MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
+        }
     }
 }

@@ -80,7 +80,7 @@ namespace BINAES
             this.label12 = new System.Windows.Forms.Label();
             this.btnDejarDeEditarEV = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picEventos = new System.Windows.Forms.PictureBox();
             this.tabAgregar = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalirEdicionEjemplarAG = new System.Windows.Forms.Button();
@@ -105,7 +105,7 @@ namespace BINAES
             this.cmbFormatoEjemplarAG = new System.Windows.Forms.ComboBox();
             this.dgvEjemplaresAG = new System.Windows.Forms.DataGridView();
             this.dtpFechaPublicacionEjemplarAG = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picAgregarEjemplar = new System.Windows.Forms.PictureBox();
             this.tabReserva = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvReservasRE = new System.Windows.Forms.DataGridView();
@@ -166,11 +166,11 @@ namespace BINAES
             this.tlpAdminEventosEV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEventosEV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesEV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEventos)).BeginInit();
             this.tabAgregar.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresAG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAgregarEjemplar)).BeginInit();
             this.tabReserva.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).BeginInit();
@@ -531,6 +531,7 @@ namespace BINAES
             this.picFotoUS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFotoUS.TabIndex = 25;
             this.picFotoUS.TabStop = false;
+            this.picFotoUS.Click += new System.EventHandler(this.picFotoUS_Click);
             // 
             // btnTomarFotoUS
             // 
@@ -594,7 +595,7 @@ namespace BINAES
             this.tlpAdminEventosEV.Controls.Add(this.label12, 0, 0);
             this.tlpAdminEventosEV.Controls.Add(this.btnDejarDeEditarEV, 0, 12);
             this.tlpAdminEventosEV.Controls.Add(this.label11, 1, 0);
-            this.tlpAdminEventosEV.Controls.Add(this.pictureBox2, 1, 1);
+            this.tlpAdminEventosEV.Controls.Add(this.picEventos, 1, 1);
             this.tlpAdminEventosEV.Location = new System.Drawing.Point(0, 0);
             this.tlpAdminEventosEV.Name = "tlpAdminEventosEV";
             this.tlpAdminEventosEV.RowCount = 13;
@@ -798,17 +799,18 @@ namespace BINAES
             this.label11.TabIndex = 27;
             this.label11.Text = "Imagen";
             // 
-            // pictureBox2
+            // picEventos
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::BINAES.Properties.Resources.SubirImagen;
-            this.pictureBox2.Location = new System.Drawing.Point(342, 50);
-            this.pictureBox2.Name = "pictureBox2";
-            this.tlpAdminEventosEV.SetRowSpan(this.pictureBox2, 11);
-            this.pictureBox2.Size = new System.Drawing.Size(367, 511);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
+            this.picEventos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picEventos.Image = global::BINAES.Properties.Resources.SubirImagen;
+            this.picEventos.Location = new System.Drawing.Point(342, 50);
+            this.picEventos.Name = "picEventos";
+            this.tlpAdminEventosEV.SetRowSpan(this.picEventos, 11);
+            this.picEventos.Size = new System.Drawing.Size(367, 511);
+            this.picEventos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEventos.TabIndex = 28;
+            this.picEventos.TabStop = false;
+            this.picEventos.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // tabAgregar
             // 
@@ -851,7 +853,7 @@ namespace BINAES
             this.tableLayoutPanel1.Controls.Add(this.cmbFormatoEjemplarAG, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.dgvEjemplaresAG, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpFechaPublicacionEjemplarAG, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.picAgregarEjemplar, 1, 7);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -1111,19 +1113,20 @@ namespace BINAES
             this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(245, 34);
             this.dtpFechaPublicacionEjemplarAG.TabIndex = 30;
             // 
-            // pictureBox1
+            // picAgregarEjemplar
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.picAgregarEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::BINAES.Properties.Resources.SubirImagen;
-            this.pictureBox1.Location = new System.Drawing.Point(254, 332);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 5);
-            this.pictureBox1.Size = new System.Drawing.Size(245, 229);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
+            this.picAgregarEjemplar.Image = global::BINAES.Properties.Resources.SubirImagen;
+            this.picAgregarEjemplar.Location = new System.Drawing.Point(254, 332);
+            this.picAgregarEjemplar.Name = "picAgregarEjemplar";
+            this.tableLayoutPanel1.SetRowSpan(this.picAgregarEjemplar, 5);
+            this.picAgregarEjemplar.Size = new System.Drawing.Size(245, 229);
+            this.picAgregarEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAgregarEjemplar.TabIndex = 31;
+            this.picAgregarEjemplar.TabStop = false;
+            this.picAgregarEjemplar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // tabReserva
             // 
@@ -1442,7 +1445,7 @@ namespace BINAES
             // 
             this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 42);
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 48);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
             this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 36);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
@@ -1790,12 +1793,12 @@ namespace BINAES
             this.tlpAdminEventosEV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEventosEV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesEV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEventos)).EndInit();
             this.tabAgregar.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresAG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAgregarEjemplar)).EndInit();
             this.tabReserva.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -1924,8 +1927,8 @@ namespace BINAES
         private System.Windows.Forms.ComboBox cmbOcupacionUS;
         private System.Windows.Forms.ComboBox cmbRolUS;
         private System.Windows.Forms.PictureBox picFotoUS;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picEventos;
+        private System.Windows.Forms.PictureBox picAgregarEjemplar;
         private System.Windows.Forms.Button btnBuscarEjemplarRE;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnCancelarFotoUS;
