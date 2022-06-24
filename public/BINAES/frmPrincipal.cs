@@ -208,6 +208,8 @@ namespace BINAES
         {
 
         }
+        //Se implementara con funciones
+
         //Evento agregar Imagen "Agregar Ejemplar"
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -220,7 +222,7 @@ namespace BINAES
             else
                 MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
         }
-        //Se implementara con funciones
+    
         //Evento para implementar Imagen "Eventos"
         private void pictureBox2_Click(object sender, EventArgs e)
         {
