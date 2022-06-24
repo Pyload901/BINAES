@@ -17,6 +17,9 @@ namespace BINAES
         public int id_usuario = 0;
         public string nombre_usuario = null;
         public string rol_usuario = null;
+
+        Dictionary<FiltroEnumerate, string> filtros = new Dictionary<FiltroEnumerate, string>();
+
         // Formulario general
         public frmPrincipal(Usuario usuario)
         {
@@ -39,13 +42,22 @@ namespace BINAES
 
             //Cambios de color a ciertas partes
           
-            tabBuscar.BackColor = Color.FromArgb(50, 149, 196);
-            tabEventos.BackColor = col1;
+            //tabBuscar.BackColor = Color.FromArgb(50, 149, 196);
+            //tabEventos.BackColor = col1;
 
             // Renderizar imagen de btnBuscarEjemplar
             btnBuscarEjemplarBU.Image = (Image)new Bitmap(global::BINAES.Properties.Resources.lupa, new Size(btnBuscarEjemplarBU.Size.Height, btnBuscarEjemplarBU.Size.Height));
             sspNombre.Text += nombre_usuario;
             sspRol.Text += rol_usuario;
+
+            filtros.Add(FiltroEnumerate.Titulo, "Titulo");
+            filtros.Add(FiltroEnumerate.Autor, "Autor");
+            filtros.Add(FiltroEnumerate.PalabrasClave, "Palabras clave");
+            filtros.Add(FiltroEnumerate.Formato, "Digital");
+            filtros.Add(FiltroEnumerate.Formato, "Físico");
+            cmbFiltrarEjemplarBU.DisplayMember = "Value";
+            cmbFiltrarEjemplarBU.ValueMember = "Key";
+            cmbFiltrarEjemplarBU.DataSource = filtros.ToList();
         }
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -115,9 +127,10 @@ namespace BINAES
         }
         private void btnBuscarEjemplarBU_Click(object sender, EventArgs e)
         {
-            string Titulo = txtBuscarEjemplarBU.Text;
-
-            Ejemplar ejem = BusquedaDAO.FiltrarPorTituloExacto(Titulo);
+            List<Ejemplar> list = EjemplarDAO.Leer(txtBuscarEjemplarBU.Text, (FiltroEnumerate)cmbFiltrarEjemplarBU.SelectedValue);
+            //Console.WriteLine(list[0]);
+            dgvEjemplaresBU.DataSource =  list;
+            DataGridViewComposer.Compose(dgvEjemplaresBU);
         }
         private void btnBuscarEjemplarRE_Click(object sender, EventArgs e)
         {
@@ -126,10 +139,20 @@ namespace BINAES
         }
 
         // Formulario de prestamo
-        
+
         // Formulario de reserva
+        private void btnQrRE_Click(object sender, EventArgs e)
+        {
+
+        }
 
         // Formulario de ejemplares
+
+        // Formulario coleccion
+        private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
 
         // Formulario de eventos
         private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)

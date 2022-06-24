@@ -110,8 +110,11 @@ namespace BINAES
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvReservasRE = new System.Windows.Forms.DataGridView();
             this.label23 = new System.Windows.Forms.Label();
-            this.btnPrestarRE = new System.Windows.Forms.Button();
             this.btnBuscarEjemplarRE = new System.Windows.Forms.Button();
+            this.btnPrestarRE = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.btnQrRE = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.nudIdUsuarioRE = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -127,10 +130,12 @@ namespace BINAES
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBuscarEjemplarBU = new System.Windows.Forms.TextBox();
-            this.btnBuscarEjemplarBU = new System.Windows.Forms.Button();
-            this.cmbFiltrarEjemplarBU = new System.Windows.Forms.ComboBox();
             this.dgvEjemplaresBU = new System.Windows.Forms.DataGridView();
+            this.btnBuscarEjemplarBU = new System.Windows.Forms.Button();
+            this.txtBuscarEjemplarBU = new System.Windows.Forms.TextBox();
+            this.chkBusquedaExactaBU = new System.Windows.Forms.CheckBox();
+            this.cmbFiltrarEjemplarBU = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.tabAdmin = new System.Windows.Forms.TabControl();
             this.tabMisionVision = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -174,6 +179,7 @@ namespace BINAES
             this.tabReserva.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).BeginInit();
             this.tabPrestamo.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -192,6 +198,7 @@ namespace BINAES
             // 
             // mspMenu
             // 
+            this.mspMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mspMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.búsquedaToolStripMenuItem,
@@ -1146,29 +1153,33 @@ namespace BINAES
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnCount = 6;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.2482F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.389465F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.2506F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Controls.Add(this.dgvReservasRE, 3, 1);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.Controls.Add(this.dgvReservasRE, 4, 1);
             this.tableLayoutPanel2.Controls.Add(this.label23, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnPrestarRE, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.btnBuscarEjemplarRE, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnPrestarRE, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label22, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnQrRE, 2, 4);
+            this.tableLayoutPanel2.Controls.Add(this.numericUpDown1, 1, 4);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.090615F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.796116F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.32686F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.928802F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.090615F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.81877F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1253, 618);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1253, 574);
             this.tableLayoutPanel2.TabIndex = 12;
             // 
             // dgvReservasRE
@@ -1177,11 +1188,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReservasRE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservasRE.Location = new System.Drawing.Point(349, 79);
+            this.dgvReservasRE.Location = new System.Drawing.Point(440, 60);
             this.dgvReservasRE.Name = "dgvReservasRE";
             this.dgvReservasRE.RowHeadersWidth = 51;
-            this.tableLayoutPanel2.SetRowSpan(this.dgvReservasRE, 7);
-            this.dgvReservasRE.Size = new System.Drawing.Size(774, 536);
+            this.tableLayoutPanel2.SetRowSpan(this.dgvReservasRE, 6);
+            this.dgvReservasRE.Size = new System.Drawing.Size(683, 450);
             this.dgvReservasRE.TabIndex = 31;
             // 
             // label23
@@ -1196,30 +1207,64 @@ namespace BINAES
             this.label23.TabIndex = 1;
             this.label23.Text = "Ejemplar:";
             // 
-            // btnPrestarRE
-            // 
-            this.btnPrestarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrestarRE.Location = new System.Drawing.Point(128, 314);
-            this.btnPrestarRE.Name = "btnPrestarRE";
-            this.btnPrestarRE.Size = new System.Drawing.Size(160, 42);
-            this.btnPrestarRE.TabIndex = 32;
-            this.btnPrestarRE.Text = "Completar";
-            this.btnPrestarRE.UseVisualStyleBackColor = true;
-            // 
             // btnBuscarEjemplarRE
             // 
             this.btnBuscarEjemplarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(128, 155);
+            this.tableLayoutPanel2.SetColumnSpan(this.btnBuscarEjemplarRE, 2);
+            this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(128, 136);
             this.btnBuscarEjemplarRE.Name = "btnBuscarEjemplarRE";
-            this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(160, 43);
+            this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(244, 70);
             this.btnBuscarEjemplarRE.TabIndex = 33;
             this.btnBuscarEjemplarRE.Text = "Búscar";
             this.btnBuscarEjemplarRE.UseVisualStyleBackColor = true;
             this.btnBuscarEjemplarRE.Click += new System.EventHandler(this.btnBuscarEjemplarRE_Click);
+            // 
+            // btnPrestarRE
+            // 
+            this.btnPrestarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.SetColumnSpan(this.btnPrestarRE, 2);
+            this.btnPrestarRE.Location = new System.Drawing.Point(128, 440);
+            this.btnPrestarRE.Name = "btnPrestarRE";
+            this.btnPrestarRE.Size = new System.Drawing.Size(244, 70);
+            this.btnPrestarRE.TabIndex = 32;
+            this.btnPrestarRE.Text = "Completar";
+            this.btnPrestarRE.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.label22, 2);
+            this.label22.Location = new System.Drawing.Point(128, 253);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(244, 32);
+            this.label22.TabIndex = 34;
+            this.label22.Text = "ID Usuario";
+            // 
+            // btnQrRE
+            // 
+            this.btnQrRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQrRE.Location = new System.Drawing.Point(253, 288);
+            this.btnQrRE.Name = "btnQrRE";
+            this.btnQrRE.Size = new System.Drawing.Size(119, 70);
+            this.btnQrRE.TabIndex = 35;
+            this.btnQrRE.Text = "QR";
+            this.btnQrRE.UseVisualStyleBackColor = true;
+            this.btnQrRE.Click += new System.EventHandler(this.btnQrRE_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(128, 288);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(119, 39);
+            this.numericUpDown1.TabIndex = 36;
             // 
             // nudIdUsuarioRE
             // 
@@ -1400,58 +1445,29 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel7.AutoSize = true;
             this.tableLayoutPanel7.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel7.ColumnCount = 5;
+            this.tableLayoutPanel7.ColumnCount = 6;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.Controls.Add(this.txtBuscarEjemplarBU, 1, 1);
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel7.Controls.Add(this.dgvEjemplaresBU, 1, 3);
+            this.tableLayoutPanel7.Controls.Add(this.chkBusquedaExactaBU, 3, 1);
             this.tableLayoutPanel7.Controls.Add(this.btnBuscarEjemplarBU, 2, 1);
-            this.tableLayoutPanel7.Controls.Add(this.cmbFiltrarEjemplarBU, 3, 1);
-            this.tableLayoutPanel7.Controls.Add(this.dgvEjemplaresBU, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.txtBuscarEjemplarBU, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.cmbFiltrarEjemplarBU, 4, 2);
+            this.tableLayoutPanel7.Controls.Add(this.label24, 3, 2);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 4;
+            this.tableLayoutPanel7.RowCount = 5;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1256, 607);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1256, 574);
             this.tableLayoutPanel7.TabIndex = 2;
-            // 
-            // txtBuscarEjemplarBU
-            // 
-            this.txtBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(65, 45);
-            this.txtBuscarEjemplarBU.Multiline = true;
-            this.txtBuscarEjemplarBU.Name = "txtBuscarEjemplarBU";
-            this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(873, 42);
-            this.txtBuscarEjemplarBU.TabIndex = 0;
-            this.txtBuscarEjemplarBU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarEjemplarBU_KeyDown);
-            // 
-            // btnBuscarEjemplarBU
-            // 
-            this.btnBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarEjemplarBU.Location = new System.Drawing.Point(944, 45);
-            this.btnBuscarEjemplarBU.Name = "btnBuscarEjemplarBU";
-            this.btnBuscarEjemplarBU.Size = new System.Drawing.Size(56, 42);
-            this.btnBuscarEjemplarBU.TabIndex = 3;
-            this.btnBuscarEjemplarBU.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarEjemplarBU.UseVisualStyleBackColor = true;
-            this.btnBuscarEjemplarBU.Click += new System.EventHandler(this.btnBuscarEjemplarBU_Click);
-            // 
-            // cmbFiltrarEjemplarBU
-            // 
-            this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1006, 48);
-            this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
-            this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 36);
-            this.cmbFiltrarEjemplarBU.TabIndex = 2;
-            this.cmbFiltrarEjemplarBU.Text = "Filtro";
             // 
             // dgvEjemplaresBU
             // 
@@ -1459,13 +1475,72 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEjemplaresBU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel7.SetColumnSpan(this.dgvEjemplaresBU, 3);
-            this.dgvEjemplaresBU.Location = new System.Drawing.Point(65, 93);
+            this.tableLayoutPanel7.SetColumnSpan(this.dgvEjemplaresBU, 4);
+            this.dgvEjemplaresBU.Location = new System.Drawing.Point(65, 117);
             this.dgvEjemplaresBU.Name = "dgvEjemplaresBU";
             this.dgvEjemplaresBU.RowHeadersWidth = 62;
             this.dgvEjemplaresBU.RowTemplate.Height = 28;
-            this.dgvEjemplaresBU.Size = new System.Drawing.Size(1123, 479);
+            this.dgvEjemplaresBU.Size = new System.Drawing.Size(1122, 424);
             this.dgvEjemplaresBU.TabIndex = 4;
+            // 
+            // btnBuscarEjemplarBU
+            // 
+            this.btnBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarEjemplarBU.Location = new System.Drawing.Point(944, 50);
+            this.btnBuscarEjemplarBU.Name = "btnBuscarEjemplarBU";
+            this.tableLayoutPanel7.SetRowSpan(this.btnBuscarEjemplarBU, 2);
+            this.btnBuscarEjemplarBU.Size = new System.Drawing.Size(56, 42);
+            this.btnBuscarEjemplarBU.TabIndex = 3;
+            this.btnBuscarEjemplarBU.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarEjemplarBU.UseVisualStyleBackColor = true;
+            this.btnBuscarEjemplarBU.Click += new System.EventHandler(this.btnBuscarEjemplarBU_Click);
+            // 
+            // txtBuscarEjemplarBU
+            // 
+            this.txtBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarEjemplarBU.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(65, 46);
+            this.txtBuscarEjemplarBU.Name = "txtBuscarEjemplarBU";
+            this.tableLayoutPanel7.SetRowSpan(this.txtBuscarEjemplarBU, 2);
+            this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(873, 50);
+            this.txtBuscarEjemplarBU.TabIndex = 0;
+            this.txtBuscarEjemplarBU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarEjemplarBU_KeyDown);
+            // 
+            // chkBusquedaExactaBU
+            // 
+            this.chkBusquedaExactaBU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkBusquedaExactaBU.AutoSize = true;
+            this.tableLayoutPanel7.SetColumnSpan(this.chkBusquedaExactaBU, 2);
+            this.chkBusquedaExactaBU.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBusquedaExactaBU.Location = new System.Drawing.Point(1006, 36);
+            this.chkBusquedaExactaBU.Name = "chkBusquedaExactaBU";
+            this.chkBusquedaExactaBU.Size = new System.Drawing.Size(181, 32);
+            this.chkBusquedaExactaBU.TabIndex = 5;
+            this.chkBusquedaExactaBU.Text = "Búsqueda exacta";
+            this.chkBusquedaExactaBU.UseVisualStyleBackColor = true;
+            // 
+            // cmbFiltrarEjemplarBU
+            // 
+            this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(1068, 74);
+            this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
+            this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(119, 40);
+            this.cmbFiltrarEjemplarBU.TabIndex = 2;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(1006, 71);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(56, 43);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "Filtro:";
             // 
             // tabAdmin
             // 
@@ -1805,6 +1880,7 @@ namespace BINAES
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).EndInit();
             this.tabPrestamo.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1904,11 +1980,6 @@ namespace BINAES
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button btnBuscarEjemplarBU;
-        private System.Windows.Forms.ComboBox cmbFiltrarEjemplarBU;
-        private System.Windows.Forms.TextBox txtBuscarEjemplarBU;
-        private System.Windows.Forms.DataGridView dgvEjemplaresBU;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TextBox txtNombreUS;
         private System.Windows.Forms.Button btnTomarFotoUS;
@@ -1957,5 +2028,15 @@ namespace BINAES
         private Button btnAgregarCO;
         private Button btnDejardeEditarCO;
         private NumericUpDown nudIdUsuarioRE;
+        private Label label22;
+        private Button btnQrRE;
+        private NumericUpDown numericUpDown1;
+        private TableLayoutPanel tableLayoutPanel7;
+        private TextBox txtBuscarEjemplarBU;
+        private Button btnBuscarEjemplarBU;
+        private DataGridView dgvEjemplaresBU;
+        private CheckBox chkBusquedaExactaBU;
+        private ComboBox cmbFiltrarEjemplarBU;
+        private Label label24;
     }
 }
