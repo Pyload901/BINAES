@@ -14,9 +14,9 @@ namespace BINAES
     public partial class frmPrincipal : Form
     {
         // Variables globales
-        public int id_usuario = 0;
-        public string nombre_usuario = null;
-        public string rol_usuario = null;
+        public int idUsuario = 0;
+        public string nombreUsuario = null;
+        public string rolUsuario = null;
 
         Dictionary<FiltroEnumerate, string> filtros = new Dictionary<FiltroEnumerate, string>();
 
@@ -24,9 +24,9 @@ namespace BINAES
         public frmPrincipal(Usuario usuario)
         {
             InitializeComponent();
-            id_usuario = usuario.id;
-            nombre_usuario = usuario.nombre;
-            rol_usuario = usuario.rol;
+            idUsuario = usuario.id;
+            nombreUsuario = usuario.nombre;
+            rolUsuario = usuario.rol;
         }
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
@@ -47,14 +47,12 @@ namespace BINAES
 
             // Renderizar imagen de btnBuscarEjemplar
             btnBuscarEjemplarBU.Image = (Image)new Bitmap(global::BINAES.Properties.Resources.lupa, new Size(btnBuscarEjemplarBU.Size.Height, btnBuscarEjemplarBU.Size.Height));
-            sspNombre.Text += nombre_usuario;
-            sspRol.Text += rol_usuario;
+            sspNombre.Text += nombreUsuario;
+            sspRol.Text += rolUsuario;
 
             filtros.Add(FiltroEnumerate.Titulo, "Titulo");
             filtros.Add(FiltroEnumerate.Autor, "Autor");
             filtros.Add(FiltroEnumerate.PalabrasClave, "Palabras clave");
-            /*filtros.Add(FiltroEnumerate.Formato, "Digital");
-            filtros.Add(FiltroEnumerate.Formato, "Físico");*/
             cmbFiltrarEjemplarBU.DisplayMember = "Value";
             cmbFiltrarEjemplarBU.ValueMember = "Key";
             cmbFiltrarEjemplarBU.DataSource = filtros.ToList();
@@ -127,8 +125,18 @@ namespace BINAES
         }
         private void btnBuscarEjemplarBU_Click(object sender, EventArgs e)
         {
-            List<Ejemplar> list = EjemplarDAO.Leer(txtBuscarEjemplarBU.Text, (FiltroEnumerate)cmbFiltrarEjemplarBU.SelectedValue);
-            //Console.WriteLine(list[0]);
+            FiltroEnumerate filtroFormato;
+            if ((chkDigitalBU.Checked && chkFísicoBU.Checked) || (!chkDigitalBU.Checked && !chkFísicoBU.Checked))
+                filtroFormato = FiltroEnumerate.DigitalFisico;
+            else if (chkFísicoBU.Checked)
+                filtroFormato = FiltroEnumerate.Fisico;
+            else
+                filtroFormato = FiltroEnumerate.Digital;
+
+            FiltroEnumerate filtroBusqueda = (chkBusquedaExactaBU.Checked ? FiltroEnumerate.Exacta : FiltroEnumerate.Parcial);
+
+            List<Ejemplar> list = EjemplarDAO.Leer(txtBuscarEjemplarBU.Text, (FiltroEnumerate)cmbFiltrarEjemplarBU.SelectedValue, filtroBusqueda, filtroFormato);
+
             dgvEjemplaresBU.DataSource =  list;
             DataGridViewComposer.Compose(dgvEjemplaresBU);
         }
@@ -136,6 +144,11 @@ namespace BINAES
         {
             tabAdmin.SelectedIndex = 0;
             txtBuscarEjemplarBU.Select();
+        }
+
+        private void cmbFiltrarEjemplarBU_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
 
         // Formulario de prestamo
@@ -275,5 +288,7 @@ namespace BINAES
         {
            
         }
+
+       
     }
 }

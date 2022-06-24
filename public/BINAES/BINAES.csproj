@@ -107,6 +107,8 @@
     <Compile Include="Evento.cs" />
     <Compile Include="EventoDAO.cs" />
     <Compile Include="FiltroEnumerate.cs" />
+    <Compile Include="Formato.cs" />
+    <Compile Include="FormatoDAO.cs" />
     <Compile Include="frmEtiquetas.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -11,7 +11,10 @@ namespace BINAES
         Titulo,
         PalabrasClave,
         Autor,
-        FormatoDigital,
-        FormatoFisico
+        Digital,
+        Fisico,
+        DigitalFisico,
+        Exacta,
+        Parcial
     }
 }
