@@ -143,6 +143,7 @@ namespace BINAES
             this.picFotoUS = new System.Windows.Forms.PictureBox();
             this.btnTomarFotoUS = new System.Windows.Forms.Button();
             this.btnCancelarFotoUS = new System.Windows.Forms.Button();
+            this.btnActualizarUS = new System.Windows.Forms.Button();
             this.tabMisionVision = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMision = new System.Windows.Forms.Label();
@@ -176,7 +177,6 @@ namespace BINAES
             this.sspStatus = new System.Windows.Forms.StatusStrip();
             this.sspNombre = new System.Windows.Forms.ToolStripStatusLabel();
             this.sspRol = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnActualizarUS = new System.Windows.Forms.Button();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tlpAdminEventosEV.SuspendLayout();
@@ -1697,6 +1697,18 @@ namespace BINAES
             this.btnCancelarFotoUS.UseVisualStyleBackColor = true;
             this.btnCancelarFotoUS.Click += new System.EventHandler(this.btnCancelarFotoUS_Click);
             // 
+            // btnActualizarUS
+            // 
+            this.btnActualizarUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarUS.Location = new System.Drawing.Point(471, 531);
+            this.btnActualizarUS.Name = "btnActualizarUS";
+            this.btnActualizarUS.Size = new System.Drawing.Size(150, 39);
+            this.btnActualizarUS.TabIndex = 50;
+            this.btnActualizarUS.Text = "Actualizar";
+            this.btnActualizarUS.UseVisualStyleBackColor = true;
+            // 
             // tabMisionVision
             // 
             this.tabMisionVision.Controls.Add(this.tableLayoutPanel3);
@@ -2094,18 +2106,6 @@ namespace BINAES
             this.sspRol.Name = "sspRol";
             this.sspRol.Size = new System.Drawing.Size(30, 17);
             this.sspRol.Text = "Rol: ";
-            // 
-            // btnActualizarUS
-            // 
-            this.btnActualizarUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizarUS.Location = new System.Drawing.Point(471, 531);
-            this.btnActualizarUS.Name = "btnActualizarUS";
-            this.btnActualizarUS.Size = new System.Drawing.Size(150, 39);
-            this.btnActualizarUS.TabIndex = 50;
-            this.btnActualizarUS.Text = "Actualizar";
-            this.btnActualizarUS.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
