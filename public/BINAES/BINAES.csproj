@@ -98,6 +98,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Area.cs" />
+    <Compile Include="AreaDAO.cs" />
     <Compile Include="Coleccion.cs" />
     <Compile Include="ColeccionDAO.cs" />
     <Compile Include="Ejemplar.cs" />
@@ -139,6 +141,8 @@
     <Compile Include="frmSeleccionCamara.Designer.cs">
       <DependentUpon>frmSeleccionCamara.cs</DependentUpon>
     </Compile>
+    <Compile Include="ObjetivoEvento.cs" />
+    <Compile Include="ObjetivoEventoDAO.cs" />
     <Compile Include="OpcionesEnumerate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

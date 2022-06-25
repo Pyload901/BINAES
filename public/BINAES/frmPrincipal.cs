@@ -99,10 +99,13 @@ namespace BINAES
             switch (tabAdmin.SelectedIndex)
             {
                 case 4:
+                    cmbAreaEventoEV.ValueMember = "id";
+                    cmbAreaEventoEV.DisplayMember = "nombre";
+                    cmbAreaEventoEV.DataSource = AreaDAO.Leer();
                     dgvEventosEV.DataSource = EventoDAO.Leer();
                     DataGridViewComposer.Compose(dgvEventosEV);
-                    DataGridViewComposer.BuildDataGridView_Editar(dgvEventosEV);
-                    DataGridViewComposer.BuildDataGridView_Eliminar(dgvEventosEV);
+                    /*DataGridViewComposer.BuildDataGridView_Editar(dgvEventosEV);
+                    DataGridViewComposer.BuildDataGridView_Eliminar(dgvEventosEV);*/
                     break;
 
                 case 8:
@@ -175,24 +178,40 @@ namespace BINAES
         }
 
         // Formulario de eventos
-        private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvEventosEV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
+            txtTituloEventoEV.Text = dgv.Rows[e.RowIndex].Cells["titulo"].Value.ToString();
+            try
+            {
+                picImagenEV.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + "/" + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
+            }
+            catch (Exception ex)
+            {
+                picImagenEV.Image = Properties.Resources._default;
+            }
+            dtpFechaInicioEV.Text = dgv.Rows[e.RowIndex].Cells["fechaInicio"].Value.ToString();
+            dtpFechaFinalizacionEV.Text = dgv.Rows[e.RowIndex].Cells["fechaFin"].Value.ToString();
+            cmbAreaEventoEV.SelectedValue = dgv.Rows[e.RowIndex].Cells["id_area"].Value;
+            nudNumeroAsistentesEV.Value = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["numero_asistentes"].Value);
+        }
+        private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
 
-            int id = Utils.getDataGridViewCellId(dgv, e);
-            if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Editar)
-            {
-                Evento evento = EventoDAO.LeerUno(id);
-                txtTituloEventoEV.Text = evento.titulo;
-                dtpFechaInicioEV.Value = evento.fechaInicio;
-                dtpFechaFinalizacionEV.Value = evento.fechaFin;
-                nudNumeroAsistentesEV.Value = evento.numero_asistentes;
-                btnDejarDeEditarEV.Enabled = true;
-            }
-            else if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Eliminar)
-            {
-                EventoDAO.Eliminar(id);
-            }
+            /* if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Editar)
+             {
+                 Evento evento = EventoDAO.LeerUno(id);
+                 txtTituloEventoEV.Text = evento.titulo;
+                 dtpFechaInicioEV.Value = evento.fechaInicio;
+                 dtpFechaFinalizacionEV.Value = evento.fechaFin;
+                 nudNumeroAsistentesEV.Value = evento.numero_asistentes;
+                 btnDejarDeEditarEV.Enabled = true;
+             }
+             else if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Eliminar)
+             {
+                 EventoDAO.Eliminar(id);
+             }*/
         }
 
         private void btnSalirEdicionEjemplarAG_Click(object sender, EventArgs e)
