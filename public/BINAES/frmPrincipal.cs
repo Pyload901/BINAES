@@ -62,25 +62,31 @@ namespace BINAES
         {
 
             //Conversion de colores Hexadecimales 
-            System.Drawing.Color col1= System.Drawing.ColorTranslator.FromHtml("#238bba");
-            System.Drawing.Color col2= System.Drawing.ColorTranslator.FromHtml("#19384b"); //Buen Color
-            System.Drawing.Color col3= System.Drawing.ColorTranslator.FromHtml("#237cba");
+            System.Drawing.Color col1= System.Drawing.ColorTranslator.FromHtml("#52b7f5"); // #52b7f5 - #19384b
+            System.Drawing.Color col2 = System.Drawing.ColorTranslator.FromHtml("#19384b");
+           
 
             /*DatagridViewComposer.BuildDataGridView_Editar(dgvEventosEV, EventoDAO.getType());*/
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
 
-            //Cambios de color a ciertas partes
+            //Cambios de color a todos los tab y sus componentes
           
-            tabBuscar.BackColor = Color.FromArgb(50, 149, 196);
-
+            //tab eventos
             tabEventos.BackColor = col1;
-
-
-            // Renderizar imagen de btnBuscarEjemplar
-            btnBuscarEjemplarBU.Image = (Image)new Bitmap(global::BINAES.Properties.Resources.lupa, new Size(btnBuscarEjemplarBU.Size.Height, btnBuscarEjemplarBU.Size.Height));
-            sspNombre.Text += nombre_usuario;
-            sspRol.Text += rol_usuario;
+            //tab buscar
+            tabBuscar.BackColor = col1;
+            txtBuscarEjemplarBU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            //tab agregar
+            tabAgregar.BackColor = col1;
+            //tab intro
+            tabIntroduccion.BackColor = col1;
+            //tab prestamo
+            tabPrestamo.BackColor = col1;
+            //tab reserva
+            tabReserva.BackColor = col1;
+            //tab usuario
+            tabUsuarios.BackColor = col1;
         }
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -311,6 +317,12 @@ namespace BINAES
             WindowState = FormWindowState.Minimized;
         }
 
+        private void btnBusquedaEjemplarBU_Click(object sender, EventArgs e)
+        {
+            string Titulo = txtBuscarEjemplarBU.Text;
+
+            Ejemplar ejem = BusquedaDAO.FiltrarPorTituloExacto(Titulo);
+        }
 
     }
 }
