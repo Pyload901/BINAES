@@ -114,7 +114,6 @@ namespace BINAES
             this.btnPrestarRE = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.btnQrRE = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.nudIdUsuarioRE = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -181,7 +180,6 @@ namespace BINAES
             this.tabReserva.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).BeginInit();
             this.tabPrestamo.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -200,7 +198,6 @@ namespace BINAES
             // 
             // mspMenu
             // 
-            this.mspMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mspMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.búsquedaToolStripMenuItem,
@@ -1167,8 +1164,7 @@ namespace BINAES
             this.tableLayoutPanel2.Controls.Add(this.btnBuscarEjemplarRE, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnPrestarRE, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.label22, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.btnQrRE, 2, 4);
-            this.tableLayoutPanel2.Controls.Add(this.numericUpDown1, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.btnQrRE, 1, 4);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -1253,20 +1249,14 @@ namespace BINAES
             this.btnQrRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQrRE.Location = new System.Drawing.Point(251, 280);
+            this.tableLayoutPanel2.SetColumnSpan(this.btnQrRE, 2);
+            this.btnQrRE.Location = new System.Drawing.Point(127, 280);
             this.btnQrRE.Name = "btnQrRE";
-            this.btnQrRE.Size = new System.Drawing.Size(118, 68);
+            this.btnQrRE.Size = new System.Drawing.Size(242, 68);
             this.btnQrRE.TabIndex = 35;
             this.btnQrRE.Text = "QR";
             this.btnQrRE.UseVisualStyleBackColor = true;
             this.btnQrRE.Click += new System.EventHandler(this.btnQrRE_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(127, 280);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(118, 39);
-            this.numericUpDown1.TabIndex = 36;
             // 
             // nudIdUsuarioRE
             // 
@@ -1914,7 +1904,6 @@ namespace BINAES
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).EndInit();
             this.tabPrestamo.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -2064,7 +2053,6 @@ namespace BINAES
         private NumericUpDown nudIdUsuarioRE;
         private Label label22;
         private Button btnQrRE;
-        private NumericUpDown numericUpDown1;
         private TableLayoutPanel tableLayoutPanel7;
         private TextBox txtBuscarEjemplarBU;
         private Button btnBuscarEjemplarBU;

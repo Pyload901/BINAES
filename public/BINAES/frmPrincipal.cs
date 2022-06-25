@@ -156,7 +156,10 @@ namespace BINAES
         // Formulario de reserva
         private void btnQrRE_Click(object sender, EventArgs e)
         {
-
+            using (frmEscanerQR ventana = new frmEscanerQR())
+            {
+                DialogResult resultado = ventana.ShowDialog();
+            }
         }
 
         // Formulario de ejemplares

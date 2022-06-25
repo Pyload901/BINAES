@@ -35,9 +35,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +58,7 @@
             this.cmbCamara.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.cmbCamara, 2);
+            this.tableLayoutPanel2.SetColumnSpan(this.cmbCamara, 2);
             this.cmbCamara.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCamara.FormattingEnabled = true;
             this.cmbCamara.Location = new System.Drawing.Point(3, 115);
@@ -74,7 +72,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cmbCamara, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
@@ -114,13 +111,16 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cmbCamara, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnAceptar, 1, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
@@ -143,19 +143,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.SetColumnSpan(this.comboBox1, 2);
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 115);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(428, 53);
-            this.comboBox1.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -169,18 +156,18 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Seleccione la cámara para tomar fotografías";
             // 
-            // button2
+            // btnAceptar
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(220, 227);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 50);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Location = new System.Drawing.Point(220, 227);
+            this.btnAceptar.Name = "button2";
+            this.btnAceptar.Size = new System.Drawing.Size(211, 50);
+            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // frmSeleccionCamara
             // 
@@ -207,13 +194,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ComboBox cmbCamara;
-        private System.Windows.Forms.Button btnAceptar;
         private AForge.Video.DirectShow.FilterInfoCollection dispositivos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.ComboBox cmbCamara;
     }
 }

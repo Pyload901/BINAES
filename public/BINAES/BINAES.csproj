@@ -109,6 +109,12 @@
     <Compile Include="FiltroEnumerate.cs" />
     <Compile Include="Formato.cs" />
     <Compile Include="FormatoDAO.cs" />
+    <Compile Include="frmEscanerQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEscanerQR.Designer.cs">
+      <DependentUpon>frmEscanerQR.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEtiquetas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioDAO.cs" />
     <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="frmEscanerQR.resx">
+      <DependentUpon>frmEscanerQR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEtiquetas.resx">
       <DependentUpon>frmEtiquetas.cs</DependentUpon>
     </EmbeddedResource>

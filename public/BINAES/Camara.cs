@@ -73,6 +73,10 @@ namespace BINAES
             camara.SignalToStop();
             return (Bitmap)pic.Image;
         }
+        public static void Parar()
+        {
+            camara.SignalToStop();
+        }
         public static void Cerrar(PictureBox pic)
         {
             pic.Image = null;
