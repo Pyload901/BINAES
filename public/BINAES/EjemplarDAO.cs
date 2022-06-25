@@ -98,9 +98,11 @@ namespace BINAES
             }
         }
 
-        public static List<Ejemplar> Leer(string texto, FiltroEnumerate filtro)
+        public static List<Ejemplar> Leer(string texto, FiltroEnumerate filtroEjemplar, FiltroEnumerate filtroBusqueda, FiltroEnumerate filtroFormato)
         {
             List<Ejemplar> list = new List<Ejemplar>();
+            SqlCommand cmd = null;
+
             using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
             {
 
@@ -114,23 +116,51 @@ namespace BINAES
                                         ON EJ.id_editorial = ED.id
                                     INNER JOIN FORMATO_EJEMPLAR F
                                         ON EJ.id_formato = F.id ";
-
-                SqlCommand cmd = null;
-                switch (filtro)
+                if (filtroEjemplar == FiltroEnumerate.Autor)
+                    query += @"INNER JOIN AUTORXEJEMPLAR AXE
+                                    ON AXE.id_ejemplar = EJ.id
+                                INNER JOIN AUTOR A
+                                    ON AXE.id_autor = A.id ";
+                switch (filtroFormato)
+                {
+                    case FiltroEnumerate.Digital:
+                        query += "WHERE F.id = 2 ";
+                        break;
+                    case FiltroEnumerate.Fisico:
+                        query += "WHERE F.id = 1 ";
+                        break;
+                    default:
+                        break;
+                }
+                switch (filtroEjemplar)
                 {
                     case FiltroEnumerate.Titulo:
-                        query += "WHERE EJ.nombre LIKE @titulo";
+                        query += "AND EJ.nombre ";
+                        if (filtroBusqueda == FiltroEnumerate.Exacta)
+                            query += "= @titulo ";
+                        else
+                            query += "LIKE '%'+@titulo+'%' ";
                         cmd = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@titulo", texto);
                         break;
                     case FiltroEnumerate.Autor:
-                        query += @"INNER JOIN AUTORXEJEMPLAR AXE
-                                        ON AXE.id_ejemplar = EJ.id
-                                    INNER JOIN AUTOR A
-                                        ON AXE.id_autor = A.id
-                                    WHERE A.nombre LIKE '%'+@nombre_autor+'%'";
+                        query += "AND A.nombre ";
+                        if (filtroBusqueda == FiltroEnumerate.Exacta)
+                            query += "= @nombre_autor";
+                        else
+                            query += "LIKE '%'+@nombre_autor+'%' ";
                         cmd = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@nombre_autor", texto);
+                        break;
+                    case FiltroEnumerate.PalabrasClave:
+                        if (texto.Contains(", "))
+                        {
+                            texto.Replace(", ", ",");
+                        }
+                        texto.Replace(' ', ',');
+                        query += "AND EJ.id IN (SELECT * FROM dbo.GET_EJEMPLARES_IN_PALABRA_CLAVE(@palabras_clave))";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@palabras_clave", texto);
                         break;
                     default:
                         break;
@@ -139,59 +169,33 @@ namespace BINAES
                 conn.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (reader.HasRows)
                     {
-                        Ejemplar ejemplar = new Ejemplar();
-                        ejemplar.id = Convert.ToInt32(reader["id"]);
-                        ejemplar.nombre = reader["nombre_ejemplar"].ToString();
-                        ejemplar.imagen = reader["imagen"].ToString();
-                        ejemplar.fecha_publicacion = reader["fecha_publicacion"].ToString();
-                        ejemplar.stock = Convert.ToInt32(reader["stock"]);
-                        ejemplar.coleccion = reader["coleccion"].ToString();
-                        ejemplar.idioma = reader["idioma"].ToString();
-                        ejemplar.editorial = reader["editorial"].ToString();
-                        ejemplar.formato = reader["formato"].ToString();
-                        ejemplar.autores = LeerAutores(ejemplar.id);
+                        while (reader.Read())
+                        {
+                            Ejemplar ejemplar = new Ejemplar();
+                            ejemplar.id = Convert.ToInt32(reader["id"]);
+                            ejemplar.nombre = reader["nombre_ejemplar"].ToString();
+                            ejemplar.imagen = reader["imagen"].ToString();
+                            ejemplar.fecha_publicacion = reader["fecha_publicacion"].ToString();
+                            ejemplar.stock = Convert.ToInt32(reader["stock"]);
+                            ejemplar.coleccion = reader["coleccion"].ToString();
+                            ejemplar.idioma = reader["idioma"].ToString();
+                            ejemplar.editorial = reader["editorial"].ToString();
+                            ejemplar.formato = reader["formato"].ToString();
+                            ejemplar.autores = LeerAutores(ejemplar.id);
 
-                        ejemplar.palabras_clave = LeerPalabrasClave(ejemplar.id);
+                            ejemplar.palabras_clave = LeerPalabrasClave(ejemplar.id);
 
-                        LeerEtiquetas(ejemplar);
-                        DataGridViewComposer.GetNullProperties(ejemplar);
-                        list.Add(ejemplar);
+                            LeerEtiquetas(ejemplar);
+                            DataGridViewComposer.GetNullProperties(ejemplar);
+                            list.Add(ejemplar);
+                        }
                     }
                 }
                 conn.Close();
             }
             return list;
-        }
-
-        public static Ejemplar FiltrarPorTituloExacto(string Titulo)
-        {
-            string cadena = Properties.Resources.CadenaConexion;
-
-            Ejemplar ejem = new Ejemplar();
-
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query = "SELECT * FROM EJEMPLAR where Busqueda.nombre = @nombrebuscado";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@nombrebuscado", Titulo);
-
-                connection.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        ejem.id = Convert.ToInt32(reader["id"].ToString());
-                        ejem.nombre = reader["nombre"].ToString();
-                        ejem.imagen = reader["imagen"].ToString();
-                        ejem.fecha_publicacion = reader["fecha_publicacion"].ToString();
-
-                    }
-                }
-                connection.Close();
-            }
-            return ejem;
         }
     }
 }
