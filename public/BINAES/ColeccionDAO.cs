@@ -6,10 +6,43 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 namespace BINAES
-{ 
+{
 
     public static class ColeccionDAO
     {
+        public static Coleccion Buscar()
+        {
+            Coleccion cole = new Coleccion();
+            string cadena = Properties.Resources.CadenaConexion;
+
+            using (SqlConnection conn = new SqlConnection(cadena))
+            {
+                string query = @"SELECT c.nombre, tc.tipo, gc.genero FROM
+                    COLECCION c
+                    INNER JOIN TIPO_COLECCION tc
+                        ON c.id_tipo = tc.id
+                    INNER JOIN GENERO_COLECCION gc
+                        ON c.id_genero = gc.id ";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                conn.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        cole.nombre = reader["nombre"].ToString();
+                        cole.tipo_coleccion = reader["tipo"].ToString();
+                        cole.genero_coleccion = reader["genero"].ToString();
+                    }
+                }
+
+                conn.Close();
+            }
+            return cole;
+        } 
+
         public static void Insertar(Coleccion coleccion)
         {
             string cadena = Properties.Resources.CadenaConexion;

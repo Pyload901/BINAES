@@ -269,5 +269,20 @@ namespace BINAES
            
         }
 
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label47_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarCO_Click(object sender, EventArgs e)
+        {
+            dgvColeccionesCO.DataSource = null;
+            dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
+        }
     }
 }
