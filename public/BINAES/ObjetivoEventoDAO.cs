@@ -38,7 +38,7 @@ namespace BINAES
             int cont = 0;
             using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
             {
-                string query = "SELECT COUNT(O.id) 'cont' FROM OBJETIVO_EVENTO WHERE id_evento = @id_evento";
+                string query = "SELECT COUNT(O.id) 'cont' FROM OBJETIVO_EVENTO O WHERE id_evento = @id_evento";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id_evento", id_evento);
                 conn.Open();
