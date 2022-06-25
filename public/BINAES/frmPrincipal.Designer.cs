@@ -42,7 +42,7 @@ namespace BINAES
             this.administradorDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAgregarUS = new System.Windows.Forms.Button();
             this.tabEventos = new System.Windows.Forms.TabPage();
-            this.tlpAdminEventosEV = new System.Windows.Forms.TableLayoutPanel();
+            this.tblEventos = new System.Windows.Forms.TableLayoutPanel();
             this.dgvEventosEV = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTituloEventoEV = new System.Windows.Forms.TextBox();
@@ -63,7 +63,7 @@ namespace BINAES
             this.btnAgregarEventoEV = new System.Windows.Forms.Button();
             this.btnEditarEventoEV = new System.Windows.Forms.Button();
             this.tabAgregar = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblEjemplares = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalirEdicionEjemplarAG = new System.Windows.Forms.Button();
             this.btnAgregarEjemplarAG = new System.Windows.Forms.Button();
             this.txtEditorialEjemplarAG = new System.Windows.Forms.TextBox();
@@ -88,7 +88,7 @@ namespace BINAES
             this.dtpFechaPublicacionEjemplarAG = new System.Windows.Forms.DateTimePicker();
             this.picEjemplarAG = new System.Windows.Forms.PictureBox();
             this.tabReserva = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblReserva = new System.Windows.Forms.TableLayoutPanel();
             this.dgvReservasRE = new System.Windows.Forms.DataGridView();
             this.label23 = new System.Windows.Forms.Label();
             this.btnBuscarEjemplarRE = new System.Windows.Forms.Button();
@@ -100,7 +100,7 @@ namespace BINAES
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPrestamo = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblPrestamo = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -109,7 +109,7 @@ namespace BINAES
             this.button2 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabBuscar = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblBusqueda = new System.Windows.Forms.TableLayoutPanel();
             this.dgvEjemplaresBU = new System.Windows.Forms.DataGridView();
             this.txtBuscarEjemplarBU = new System.Windows.Forms.TextBox();
             this.btnBuscarEjemplarBU = new System.Windows.Forms.Button();
@@ -120,7 +120,7 @@ namespace BINAES
             this.chkDigitalBU = new System.Windows.Forms.CheckBox();
             this.tabAdmin = new System.Windows.Forms.TabControl();
             this.tabUsuarios = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblUsuarios = new System.Windows.Forms.TableLayoutPanel();
             this.lblFotoUsuarioUS = new System.Windows.Forms.Label();
             this.btnDejarDeEditarUS = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -145,13 +145,13 @@ namespace BINAES
             this.btnCancelarFotoUS = new System.Windows.Forms.Button();
             this.btnActualizarUS = new System.Windows.Forms.Button();
             this.tabMisionVision = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblMisionVision = new System.Windows.Forms.TableLayoutPanel();
             this.lblMision = new System.Windows.Forms.Label();
             this.lblVision = new System.Windows.Forms.Label();
             this.lblInfoMision = new System.Windows.Forms.Label();
             this.lblInfoVision = new System.Windows.Forms.Label();
             this.tabIntroduccion = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblQuienesSomos = new System.Windows.Forms.TableLayoutPanel();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -179,33 +179,33 @@ namespace BINAES
             this.sspRol = new System.Windows.Forms.ToolStripStatusLabel();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
-            this.tlpAdminEventosEV.SuspendLayout();
+            this.tblEventos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEventosEV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesEV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenEV)).BeginInit();
             this.tabAgregar.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tblEjemplares.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresAG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEjemplarAG)).BeginInit();
             this.tabReserva.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tblReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).BeginInit();
             this.tabPrestamo.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.tblPrestamo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabBuscar.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
+            this.tblBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresBU)).BeginInit();
             this.tabAdmin.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
+            this.tblUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).BeginInit();
             this.tabMisionVision.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.tblMisionVision.SuspendLayout();
             this.tabIntroduccion.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
+            this.tblQuienesSomos.SuspendLayout();
             this.tabColeccion.SuspendLayout();
             this.tblColeccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColeccionesCO)).BeginInit();
@@ -299,7 +299,7 @@ namespace BINAES
             // 
             // tabEventos
             // 
-            this.tabEventos.Controls.Add(this.tlpAdminEventosEV);
+            this.tabEventos.Controls.Add(this.tblEventos);
             this.tabEventos.Location = new System.Drawing.Point(4, 33);
             this.tabEventos.Name = "tabEventos";
             this.tabEventos.Size = new System.Drawing.Size(1250, 601);
@@ -307,54 +307,54 @@ namespace BINAES
             this.tabEventos.Text = "Eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
             // 
-            // tlpAdminEventosEV
+            // tblEventos
             // 
-            this.tlpAdminEventosEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tblEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpAdminEventosEV.ColumnCount = 5;
-            this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAdminEventosEV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpAdminEventosEV.Controls.Add(this.dgvEventosEV, 4, 0);
-            this.tlpAdminEventosEV.Controls.Add(this.label12, 0, 0);
-            this.tlpAdminEventosEV.Controls.Add(this.txtTituloEventoEV, 0, 1);
-            this.tlpAdminEventosEV.Controls.Add(this.label13, 0, 2);
-            this.tlpAdminEventosEV.Controls.Add(this.dtpFechaInicioEV, 0, 3);
-            this.tlpAdminEventosEV.Controls.Add(this.label14, 0, 4);
-            this.tlpAdminEventosEV.Controls.Add(this.dtpFechaFinalizacionEV, 0, 5);
-            this.tlpAdminEventosEV.Controls.Add(this.label16, 0, 6);
-            this.tlpAdminEventosEV.Controls.Add(this.rtbObjetivoEventoEV, 0, 7);
-            this.tlpAdminEventosEV.Controls.Add(this.label15, 0, 8);
-            this.tlpAdminEventosEV.Controls.Add(this.cmbAreaEventoEV, 0, 9);
-            this.tlpAdminEventosEV.Controls.Add(this.label17, 0, 10);
-            this.tlpAdminEventosEV.Controls.Add(this.nudNumeroAsistentesEV, 0, 11);
-            this.tlpAdminEventosEV.Controls.Add(this.btnDejarDeEditarEV, 0, 12);
-            this.tlpAdminEventosEV.Controls.Add(this.picImagenEV, 2, 1);
-            this.tlpAdminEventosEV.Controls.Add(this.label11, 2, 0);
-            this.tlpAdminEventosEV.Controls.Add(this.btnEliminarEventoEV, 1, 12);
-            this.tlpAdminEventosEV.Controls.Add(this.btnAgregarEventoEV, 3, 12);
-            this.tlpAdminEventosEV.Controls.Add(this.btnEditarEventoEV, 2, 12);
-            this.tlpAdminEventosEV.Location = new System.Drawing.Point(0, 0);
-            this.tlpAdminEventosEV.Name = "tlpAdminEventosEV";
-            this.tlpAdminEventosEV.RowCount = 13;
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.Size = new System.Drawing.Size(1250, 601);
-            this.tlpAdminEventosEV.TabIndex = 0;
+            this.tblEventos.ColumnCount = 5;
+            this.tblEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblEventos.Controls.Add(this.dgvEventosEV, 4, 0);
+            this.tblEventos.Controls.Add(this.label12, 0, 0);
+            this.tblEventos.Controls.Add(this.txtTituloEventoEV, 0, 1);
+            this.tblEventos.Controls.Add(this.label13, 0, 2);
+            this.tblEventos.Controls.Add(this.dtpFechaInicioEV, 0, 3);
+            this.tblEventos.Controls.Add(this.label14, 0, 4);
+            this.tblEventos.Controls.Add(this.dtpFechaFinalizacionEV, 0, 5);
+            this.tblEventos.Controls.Add(this.label16, 0, 6);
+            this.tblEventos.Controls.Add(this.rtbObjetivoEventoEV, 0, 7);
+            this.tblEventos.Controls.Add(this.label15, 0, 8);
+            this.tblEventos.Controls.Add(this.cmbAreaEventoEV, 0, 9);
+            this.tblEventos.Controls.Add(this.label17, 0, 10);
+            this.tblEventos.Controls.Add(this.nudNumeroAsistentesEV, 0, 11);
+            this.tblEventos.Controls.Add(this.btnDejarDeEditarEV, 0, 12);
+            this.tblEventos.Controls.Add(this.picImagenEV, 2, 1);
+            this.tblEventos.Controls.Add(this.label11, 2, 0);
+            this.tblEventos.Controls.Add(this.btnEliminarEventoEV, 1, 12);
+            this.tblEventos.Controls.Add(this.btnAgregarEventoEV, 3, 12);
+            this.tblEventos.Controls.Add(this.btnEditarEventoEV, 2, 12);
+            this.tblEventos.Location = new System.Drawing.Point(0, 0);
+            this.tblEventos.Name = "tblEventos";
+            this.tblEventos.RowCount = 13;
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEventos.Size = new System.Drawing.Size(1250, 601);
+            this.tblEventos.TabIndex = 0;
             // 
             // dgvEventosEV
             // 
@@ -365,7 +365,7 @@ namespace BINAES
             this.dgvEventosEV.Location = new System.Drawing.Point(627, 3);
             this.dgvEventosEV.Name = "dgvEventosEV";
             this.dgvEventosEV.RowHeadersWidth = 51;
-            this.tlpAdminEventosEV.SetRowSpan(this.dgvEventosEV, 13);
+            this.tblEventos.SetRowSpan(this.dgvEventosEV, 13);
             this.dgvEventosEV.Size = new System.Drawing.Size(620, 595);
             this.dgvEventosEV.TabIndex = 26;
             this.dgvEventosEV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellClick);
@@ -376,7 +376,7 @@ namespace BINAES
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.tlpAdminEventosEV.SetColumnSpan(this.label12, 2);
+            this.tblEventos.SetColumnSpan(this.label12, 2);
             this.label12.Location = new System.Drawing.Point(3, 25);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(306, 21);
@@ -389,7 +389,7 @@ namespace BINAES
             this.txtTituloEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpAdminEventosEV.SetColumnSpan(this.txtTituloEventoEV, 2);
+            this.tblEventos.SetColumnSpan(this.txtTituloEventoEV, 2);
             this.txtTituloEventoEV.Location = new System.Drawing.Point(3, 49);
             this.txtTituloEventoEV.Name = "txtTituloEventoEV";
             this.txtTituloEventoEV.Size = new System.Drawing.Size(306, 29);
@@ -400,7 +400,7 @@ namespace BINAES
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.tlpAdminEventosEV.SetColumnSpan(this.label13, 2);
+            this.tblEventos.SetColumnSpan(this.label13, 2);
             this.label13.Location = new System.Drawing.Point(3, 117);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(306, 21);
@@ -410,7 +410,7 @@ namespace BINAES
             // 
             // dtpFechaInicioEV
             // 
-            this.tlpAdminEventosEV.SetColumnSpan(this.dtpFechaInicioEV, 2);
+            this.tblEventos.SetColumnSpan(this.dtpFechaInicioEV, 2);
             this.dtpFechaInicioEV.Location = new System.Drawing.Point(3, 141);
             this.dtpFechaInicioEV.Name = "dtpFechaInicioEV";
             this.dtpFechaInicioEV.Size = new System.Drawing.Size(306, 29);
@@ -421,7 +421,7 @@ namespace BINAES
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.tlpAdminEventosEV.SetColumnSpan(this.label14, 2);
+            this.tblEventos.SetColumnSpan(this.label14, 2);
             this.label14.Location = new System.Drawing.Point(3, 209);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(306, 21);
@@ -431,7 +431,7 @@ namespace BINAES
             // 
             // dtpFechaFinalizacionEV
             // 
-            this.tlpAdminEventosEV.SetColumnSpan(this.dtpFechaFinalizacionEV, 2);
+            this.tblEventos.SetColumnSpan(this.dtpFechaFinalizacionEV, 2);
             this.dtpFechaFinalizacionEV.Location = new System.Drawing.Point(3, 233);
             this.dtpFechaFinalizacionEV.Name = "dtpFechaFinalizacionEV";
             this.dtpFechaFinalizacionEV.Size = new System.Drawing.Size(306, 29);
@@ -442,7 +442,7 @@ namespace BINAES
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.tlpAdminEventosEV.SetColumnSpan(this.label16, 2);
+            this.tblEventos.SetColumnSpan(this.label16, 2);
             this.label16.Location = new System.Drawing.Point(3, 301);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(306, 21);
@@ -455,7 +455,7 @@ namespace BINAES
             this.rtbObjetivoEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpAdminEventosEV.SetColumnSpan(this.rtbObjetivoEventoEV, 2);
+            this.tblEventos.SetColumnSpan(this.rtbObjetivoEventoEV, 2);
             this.rtbObjetivoEventoEV.Location = new System.Drawing.Point(3, 325);
             this.rtbObjetivoEventoEV.Name = "rtbObjetivoEventoEV";
             this.rtbObjetivoEventoEV.Size = new System.Drawing.Size(306, 40);
@@ -467,7 +467,7 @@ namespace BINAES
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
-            this.tlpAdminEventosEV.SetColumnSpan(this.label15, 2);
+            this.tblEventos.SetColumnSpan(this.label15, 2);
             this.label15.Location = new System.Drawing.Point(3, 393);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(306, 21);
@@ -480,7 +480,7 @@ namespace BINAES
             this.cmbAreaEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpAdminEventosEV.SetColumnSpan(this.cmbAreaEventoEV, 2);
+            this.tblEventos.SetColumnSpan(this.cmbAreaEventoEV, 2);
             this.cmbAreaEventoEV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAreaEventoEV.FormattingEnabled = true;
             this.cmbAreaEventoEV.Location = new System.Drawing.Point(3, 417);
@@ -493,7 +493,7 @@ namespace BINAES
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
-            this.tlpAdminEventosEV.SetColumnSpan(this.label17, 2);
+            this.tblEventos.SetColumnSpan(this.label17, 2);
             this.label17.Location = new System.Drawing.Point(3, 485);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(306, 21);
@@ -506,7 +506,7 @@ namespace BINAES
             this.nudNumeroAsistentesEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpAdminEventosEV.SetColumnSpan(this.nudNumeroAsistentesEV, 2);
+            this.tblEventos.SetColumnSpan(this.nudNumeroAsistentesEV, 2);
             this.nudNumeroAsistentesEV.Location = new System.Drawing.Point(3, 509);
             this.nudNumeroAsistentesEV.Name = "nudNumeroAsistentesEV";
             this.nudNumeroAsistentesEV.Size = new System.Drawing.Size(306, 29);
@@ -531,11 +531,11 @@ namespace BINAES
             this.picImagenEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpAdminEventosEV.SetColumnSpan(this.picImagenEV, 2);
+            this.tblEventos.SetColumnSpan(this.picImagenEV, 2);
             this.picImagenEV.Image = global::BINAES.Properties.Resources._default;
             this.picImagenEV.Location = new System.Drawing.Point(315, 49);
             this.picImagenEV.Name = "picImagenEV";
-            this.tlpAdminEventosEV.SetRowSpan(this.picImagenEV, 11);
+            this.tblEventos.SetRowSpan(this.picImagenEV, 11);
             this.picImagenEV.Size = new System.Drawing.Size(306, 500);
             this.picImagenEV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImagenEV.TabIndex = 28;
@@ -547,7 +547,7 @@ namespace BINAES
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.tlpAdminEventosEV.SetColumnSpan(this.label11, 2);
+            this.tblEventos.SetColumnSpan(this.label11, 2);
             this.label11.Location = new System.Drawing.Point(315, 25);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(306, 21);
@@ -596,7 +596,7 @@ namespace BINAES
             // 
             // tabAgregar
             // 
-            this.tabAgregar.Controls.Add(this.tableLayoutPanel1);
+            this.tabAgregar.Controls.Add(this.tblEjemplares);
             this.tabAgregar.Location = new System.Drawing.Point(4, 33);
             this.tabAgregar.Name = "tabAgregar";
             this.tabAgregar.Size = new System.Drawing.Size(1250, 601);
@@ -604,58 +604,58 @@ namespace BINAES
             this.tabAgregar.Text = "Agregar ejemplar";
             this.tabAgregar.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // tblEjemplares
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tblEjemplares.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.Controls.Add(this.btnSalirEdicionEjemplarAG, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.btnAgregarEjemplarAG, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.txtEditorialEjemplarAG, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtCodigoEjemplarAG, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cmbIdiomaEjemplarAG, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.btnEtiquetasEjemplarAG, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.txtNombreEjemplarAG, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtAutorEjemplarAG, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.cmbTipoColeccionEjemplarAG, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.cmbFormatoEjemplarAG, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.dgvEjemplaresAG, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dtpFechaPublicacionEjemplarAG, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.picEjemplarAG, 1, 7);
-            this.tableLayoutPanel1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 13;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1250, 601);
-            this.tableLayoutPanel1.TabIndex = 11;
+            this.tblEjemplares.ColumnCount = 3;
+            this.tblEjemplares.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tblEjemplares.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tblEjemplares.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tblEjemplares.Controls.Add(this.btnSalirEdicionEjemplarAG, 0, 12);
+            this.tblEjemplares.Controls.Add(this.btnAgregarEjemplarAG, 0, 12);
+            this.tblEjemplares.Controls.Add(this.txtEditorialEjemplarAG, 1, 1);
+            this.tblEjemplares.Controls.Add(this.label10, 1, 6);
+            this.tblEjemplares.Controls.Add(this.label3, 0, 2);
+            this.tblEjemplares.Controls.Add(this.label4, 0, 4);
+            this.tblEjemplares.Controls.Add(this.label8, 1, 2);
+            this.tblEjemplares.Controls.Add(this.label5, 0, 6);
+            this.tblEjemplares.Controls.Add(this.label2, 1, 0);
+            this.tblEjemplares.Controls.Add(this.label7, 0, 10);
+            this.tblEjemplares.Controls.Add(this.label6, 0, 8);
+            this.tblEjemplares.Controls.Add(this.label9, 1, 4);
+            this.tblEjemplares.Controls.Add(this.label1, 0, 0);
+            this.tblEjemplares.Controls.Add(this.txtCodigoEjemplarAG, 0, 1);
+            this.tblEjemplares.Controls.Add(this.cmbIdiomaEjemplarAG, 0, 7);
+            this.tblEjemplares.Controls.Add(this.btnEtiquetasEjemplarAG, 0, 11);
+            this.tblEjemplares.Controls.Add(this.txtNombreEjemplarAG, 0, 3);
+            this.tblEjemplares.Controls.Add(this.txtAutorEjemplarAG, 0, 5);
+            this.tblEjemplares.Controls.Add(this.cmbTipoColeccionEjemplarAG, 1, 5);
+            this.tblEjemplares.Controls.Add(this.cmbFormatoEjemplarAG, 0, 9);
+            this.tblEjemplares.Controls.Add(this.dgvEjemplaresAG, 2, 0);
+            this.tblEjemplares.Controls.Add(this.dtpFechaPublicacionEjemplarAG, 1, 3);
+            this.tblEjemplares.Controls.Add(this.picEjemplarAG, 1, 7);
+            this.tblEjemplares.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblEjemplares.Location = new System.Drawing.Point(0, 0);
+            this.tblEjemplares.Name = "tblEjemplares";
+            this.tblEjemplares.RowCount = 13;
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEjemplares.Size = new System.Drawing.Size(1250, 601);
+            this.tblEjemplares.TabIndex = 11;
             // 
             // btnSalirEdicionEjemplarAG
             // 
@@ -882,7 +882,7 @@ namespace BINAES
             this.dgvEjemplaresAG.Name = "dgvEjemplaresAG";
             this.dgvEjemplaresAG.ReadOnly = true;
             this.dgvEjemplaresAG.RowHeadersWidth = 51;
-            this.tableLayoutPanel1.SetRowSpan(this.dgvEjemplaresAG, 13);
+            this.tblEjemplares.SetRowSpan(this.dgvEjemplaresAG, 13);
             this.dgvEjemplaresAG.Size = new System.Drawing.Size(744, 595);
             this.dgvEjemplaresAG.TabIndex = 29;
             // 
@@ -904,7 +904,7 @@ namespace BINAES
             this.picEjemplarAG.Image = global::BINAES.Properties.Resources._default;
             this.picEjemplarAG.Location = new System.Drawing.Point(253, 325);
             this.picEjemplarAG.Name = "picEjemplarAG";
-            this.tableLayoutPanel1.SetRowSpan(this.picEjemplarAG, 5);
+            this.tblEjemplares.SetRowSpan(this.picEjemplarAG, 5);
             this.picEjemplarAG.Size = new System.Drawing.Size(244, 224);
             this.picEjemplarAG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picEjemplarAG.TabIndex = 31;
@@ -913,7 +913,7 @@ namespace BINAES
             // 
             // tabReserva
             // 
-            this.tabReserva.Controls.Add(this.tableLayoutPanel2);
+            this.tabReserva.Controls.Add(this.tblReserva);
             this.tabReserva.Location = new System.Drawing.Point(4, 33);
             this.tabReserva.Name = "tabReserva";
             this.tabReserva.Padding = new System.Windows.Forms.Padding(3);
@@ -922,38 +922,38 @@ namespace BINAES
             this.tabReserva.Text = "Reservas de ejemplares";
             this.tabReserva.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel2
+            // tblReserva
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tblReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 6;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Controls.Add(this.dgvReservasRE, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label23, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnBuscarEjemplarRE, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btnPrestarRE, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.label22, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.btnQrRE, 1, 4);
-            this.tableLayoutPanel2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1250, 601);
-            this.tableLayoutPanel2.TabIndex = 12;
+            this.tblReserva.ColumnCount = 6;
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblReserva.Controls.Add(this.dgvReservasRE, 4, 1);
+            this.tblReserva.Controls.Add(this.label23, 1, 1);
+            this.tblReserva.Controls.Add(this.btnBuscarEjemplarRE, 1, 2);
+            this.tblReserva.Controls.Add(this.btnPrestarRE, 1, 6);
+            this.tblReserva.Controls.Add(this.label22, 1, 3);
+            this.tblReserva.Controls.Add(this.btnQrRE, 1, 4);
+            this.tblReserva.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblReserva.Location = new System.Drawing.Point(0, 0);
+            this.tblReserva.Name = "tblReserva";
+            this.tblReserva.RowCount = 8;
+            this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
+            this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
+            this.tblReserva.Size = new System.Drawing.Size(1250, 601);
+            this.tblReserva.TabIndex = 12;
             // 
             // dgvReservasRE
             // 
@@ -964,7 +964,7 @@ namespace BINAES
             this.dgvReservasRE.Location = new System.Drawing.Point(440, 63);
             this.dgvReservasRE.Name = "dgvReservasRE";
             this.dgvReservasRE.RowHeadersWidth = 51;
-            this.tableLayoutPanel2.SetRowSpan(this.dgvReservasRE, 6);
+            this.tblReserva.SetRowSpan(this.dgvReservasRE, 6);
             this.dgvReservasRE.Size = new System.Drawing.Size(681, 474);
             this.dgvReservasRE.TabIndex = 31;
             // 
@@ -973,7 +973,7 @@ namespace BINAES
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.label23, 2);
+            this.tblReserva.SetColumnSpan(this.label23, 2);
             this.label23.Location = new System.Drawing.Point(128, 119);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(244, 21);
@@ -985,7 +985,7 @@ namespace BINAES
             this.btnBuscarEjemplarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.SetColumnSpan(this.btnBuscarEjemplarRE, 2);
+            this.tblReserva.SetColumnSpan(this.btnBuscarEjemplarRE, 2);
             this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(128, 143);
             this.btnBuscarEjemplarRE.Name = "btnBuscarEjemplarRE";
             this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(244, 74);
@@ -999,7 +999,7 @@ namespace BINAES
             this.btnPrestarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.SetColumnSpan(this.btnPrestarRE, 2);
+            this.tblReserva.SetColumnSpan(this.btnPrestarRE, 2);
             this.btnPrestarRE.Location = new System.Drawing.Point(128, 463);
             this.btnPrestarRE.Name = "btnPrestarRE";
             this.btnPrestarRE.Size = new System.Drawing.Size(244, 74);
@@ -1012,7 +1012,7 @@ namespace BINAES
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.label22, 2);
+            this.tblReserva.SetColumnSpan(this.label22, 2);
             this.label22.Location = new System.Drawing.Point(128, 279);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(244, 21);
@@ -1024,7 +1024,7 @@ namespace BINAES
             this.btnQrRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.SetColumnSpan(this.btnQrRE, 2);
+            this.tblReserva.SetColumnSpan(this.btnQrRE, 2);
             this.btnQrRE.Location = new System.Drawing.Point(128, 303);
             this.btnQrRE.Name = "btnQrRE";
             this.btnQrRE.Size = new System.Drawing.Size(244, 74);
@@ -1073,7 +1073,7 @@ namespace BINAES
             // 
             // tabPrestamo
             // 
-            this.tabPrestamo.Controls.Add(this.tableLayoutPanel4);
+            this.tabPrestamo.Controls.Add(this.tblPrestamo);
             this.tabPrestamo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.tabPrestamo.Location = new System.Drawing.Point(4, 33);
             this.tabPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1084,38 +1084,38 @@ namespace BINAES
             this.tabPrestamo.Text = "Préstamo de ejemplares";
             this.tabPrestamo.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel4
+            // tblPrestamo
             // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tblPrestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel4.ColumnCount = 5;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.2482F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.389465F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.2506F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel4.Controls.Add(this.dataGridView1, 3, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label18, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.button1, 1, 6);
-            this.tableLayoutPanel4.Controls.Add(this.textBox3, 1, 5);
-            this.tableLayoutPanel4.Controls.Add(this.label21, 1, 4);
-            this.tableLayoutPanel4.Controls.Add(this.button2, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.textBox4, 1, 2);
-            this.tableLayoutPanel4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 8;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.090615F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.796116F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.32686F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.928802F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.090615F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.81877F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1250, 601);
-            this.tableLayoutPanel4.TabIndex = 13;
+            this.tblPrestamo.ColumnCount = 5;
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.2482F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.389465F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.2506F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblPrestamo.Controls.Add(this.dataGridView1, 3, 1);
+            this.tblPrestamo.Controls.Add(this.label18, 1, 1);
+            this.tblPrestamo.Controls.Add(this.button1, 1, 6);
+            this.tblPrestamo.Controls.Add(this.textBox3, 1, 5);
+            this.tblPrestamo.Controls.Add(this.label21, 1, 4);
+            this.tblPrestamo.Controls.Add(this.button2, 1, 3);
+            this.tblPrestamo.Controls.Add(this.textBox4, 1, 2);
+            this.tblPrestamo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblPrestamo.Location = new System.Drawing.Point(0, 0);
+            this.tblPrestamo.Name = "tblPrestamo";
+            this.tblPrestamo.RowCount = 8;
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.090615F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.796116F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.32686F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.928802F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.090615F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.81877F));
+            this.tblPrestamo.Size = new System.Drawing.Size(1250, 601);
+            this.tblPrestamo.TabIndex = 13;
             // 
             // dataGridView1
             // 
@@ -1126,7 +1126,7 @@ namespace BINAES
             this.dataGridView1.Location = new System.Drawing.Point(347, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.tableLayoutPanel4.SetRowSpan(this.dataGridView1, 7);
+            this.tblPrestamo.SetRowSpan(this.dataGridView1, 7);
             this.dataGridView1.Size = new System.Drawing.Size(773, 521);
             this.dataGridView1.TabIndex = 31;
             // 
@@ -1196,7 +1196,7 @@ namespace BINAES
             // tabBuscar
             // 
             this.tabBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.tabBuscar.Controls.Add(this.tableLayoutPanel7);
+            this.tabBuscar.Controls.Add(this.tblBusqueda);
             this.tabBuscar.Location = new System.Drawing.Point(4, 33);
             this.tabBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBuscar.Name = "tabBuscar";
@@ -1205,39 +1205,39 @@ namespace BINAES
             this.tabBuscar.TabIndex = 0;
             this.tabBuscar.Text = "Búsqueda de ejemplares";
             // 
-            // tableLayoutPanel7
+            // tblBusqueda
             // 
-            this.tableLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tblBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel7.AutoSize = true;
-            this.tableLayoutPanel7.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel7.ColumnCount = 7;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.Controls.Add(this.dgvEjemplaresBU, 1, 3);
-            this.tableLayoutPanel7.Controls.Add(this.txtBuscarEjemplarBU, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.btnBuscarEjemplarBU, 2, 1);
-            this.tableLayoutPanel7.Controls.Add(this.chkBusquedaExactaBU, 3, 1);
-            this.tableLayoutPanel7.Controls.Add(this.label24, 3, 2);
-            this.tableLayoutPanel7.Controls.Add(this.cmbFiltrarEjemplarBU, 4, 2);
-            this.tableLayoutPanel7.Controls.Add(this.chkFísicoBU, 5, 1);
-            this.tableLayoutPanel7.Controls.Add(this.chkDigitalBU, 5, 2);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 5;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1250, 606);
-            this.tableLayoutPanel7.TabIndex = 2;
+            this.tblBusqueda.AutoSize = true;
+            this.tblBusqueda.BackColor = System.Drawing.Color.Transparent;
+            this.tblBusqueda.ColumnCount = 7;
+            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblBusqueda.Controls.Add(this.dgvEjemplaresBU, 1, 3);
+            this.tblBusqueda.Controls.Add(this.txtBuscarEjemplarBU, 1, 1);
+            this.tblBusqueda.Controls.Add(this.btnBuscarEjemplarBU, 2, 1);
+            this.tblBusqueda.Controls.Add(this.chkBusquedaExactaBU, 3, 1);
+            this.tblBusqueda.Controls.Add(this.label24, 3, 2);
+            this.tblBusqueda.Controls.Add(this.cmbFiltrarEjemplarBU, 4, 2);
+            this.tblBusqueda.Controls.Add(this.chkFísicoBU, 5, 1);
+            this.tblBusqueda.Controls.Add(this.chkDigitalBU, 5, 2);
+            this.tblBusqueda.Location = new System.Drawing.Point(0, 0);
+            this.tblBusqueda.Name = "tblBusqueda";
+            this.tblBusqueda.RowCount = 5;
+            this.tblBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
+            this.tblBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
+            this.tblBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tblBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblBusqueda.Size = new System.Drawing.Size(1250, 606);
+            this.tblBusqueda.TabIndex = 2;
             // 
             // dgvEjemplaresBU
             // 
@@ -1245,7 +1245,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEjemplaresBU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel7.SetColumnSpan(this.dgvEjemplaresBU, 5);
+            this.tblBusqueda.SetColumnSpan(this.dgvEjemplaresBU, 5);
             this.dgvEjemplaresBU.Location = new System.Drawing.Point(65, 123);
             this.dgvEjemplaresBU.Name = "dgvEjemplaresBU";
             this.dgvEjemplaresBU.RowHeadersWidth = 62;
@@ -1259,7 +1259,7 @@ namespace BINAES
             this.txtBuscarEjemplarBU.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(65, 57);
             this.txtBuscarEjemplarBU.Name = "txtBuscarEjemplarBU";
-            this.tableLayoutPanel7.SetRowSpan(this.txtBuscarEjemplarBU, 2);
+            this.tblBusqueda.SetRowSpan(this.txtBuscarEjemplarBU, 2);
             this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(744, 36);
             this.txtBuscarEjemplarBU.TabIndex = 0;
             this.txtBuscarEjemplarBU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarEjemplarBU_KeyDown);
@@ -1269,7 +1269,7 @@ namespace BINAES
             this.btnBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarEjemplarBU.Location = new System.Drawing.Point(815, 54);
             this.btnBuscarEjemplarBU.Name = "btnBuscarEjemplarBU";
-            this.tableLayoutPanel7.SetRowSpan(this.btnBuscarEjemplarBU, 2);
+            this.tblBusqueda.SetRowSpan(this.btnBuscarEjemplarBU, 2);
             this.btnBuscarEjemplarBU.Size = new System.Drawing.Size(56, 42);
             this.btnBuscarEjemplarBU.TabIndex = 3;
             this.btnBuscarEjemplarBU.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1281,7 +1281,7 @@ namespace BINAES
             this.chkBusquedaExactaBU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkBusquedaExactaBU.AutoSize = true;
-            this.tableLayoutPanel7.SetColumnSpan(this.chkBusquedaExactaBU, 2);
+            this.tblBusqueda.SetColumnSpan(this.chkBusquedaExactaBU, 2);
             this.chkBusquedaExactaBU.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkBusquedaExactaBU.Location = new System.Drawing.Point(877, 49);
             this.chkBusquedaExactaBU.Name = "chkBusquedaExactaBU";
@@ -1374,78 +1374,78 @@ namespace BINAES
             // 
             // tabUsuarios
             // 
-            this.tabUsuarios.Controls.Add(this.tableLayoutPanel8);
+            this.tabUsuarios.Controls.Add(this.tblUsuarios);
             this.tabUsuarios.Location = new System.Drawing.Point(4, 33);
             this.tabUsuarios.Name = "tabUsuarios";
             this.tabUsuarios.Size = new System.Drawing.Size(1250, 601);
             this.tabUsuarios.TabIndex = 9;
             this.tabUsuarios.Text = "Usuarios";
             // 
-            // tableLayoutPanel8
+            // tblUsuarios
             // 
-            this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tblUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel8.ColumnCount = 4;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.lblFotoUsuarioUS, 1, 4);
-            this.tableLayoutPanel8.Controls.Add(this.btnDejarDeEditarUS, 0, 12);
-            this.tableLayoutPanel8.Controls.Add(this.btnAgregarUS, 0, 12);
-            this.tableLayoutPanel8.Controls.Add(this.dataGridView2, 3, 0);
-            this.tableLayoutPanel8.Controls.Add(this.lblNombreUsuarioUS, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.txtNombreUS, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.lblInstitucionUsuarioUS, 0, 6);
-            this.tableLayoutPanel8.Controls.Add(this.txtInstitucionUS, 0, 7);
-            this.tableLayoutPanel8.Controls.Add(this.cmbOcupacionUS, 0, 11);
-            this.tableLayoutPanel8.Controls.Add(this.lblOcupacionUsuarioUS, 0, 10);
-            this.tableLayoutPanel8.Controls.Add(this.lblContraseniaUsuarioUS, 0, 2);
-            this.tableLayoutPanel8.Controls.Add(this.txtContraseñaUS, 0, 3);
-            this.tableLayoutPanel8.Controls.Add(this.lblDireccionUsuarioUS, 0, 8);
-            this.tableLayoutPanel8.Controls.Add(this.txtDireccionUS, 0, 9);
-            this.tableLayoutPanel8.Controls.Add(this.txtEmailUS, 0, 5);
-            this.tableLayoutPanel8.Controls.Add(this.lblEmailUsuarioUS, 0, 4);
-            this.tableLayoutPanel8.Controls.Add(this.txtTelefonoUS, 1, 1);
-            this.tableLayoutPanel8.Controls.Add(this.lblTelefonoUsuarioUS, 1, 0);
-            this.tableLayoutPanel8.Controls.Add(this.lblRolUsuarioUS, 1, 2);
-            this.tableLayoutPanel8.Controls.Add(this.cmbRolUS, 1, 3);
-            this.tableLayoutPanel8.Controls.Add(this.picFotoUS, 1, 5);
-            this.tableLayoutPanel8.Controls.Add(this.btnTomarFotoUS, 1, 11);
-            this.tableLayoutPanel8.Controls.Add(this.btnCancelarFotoUS, 2, 11);
-            this.tableLayoutPanel8.Controls.Add(this.btnActualizarUS, 2, 12);
-            this.tableLayoutPanel8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 13;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1250, 601);
-            this.tableLayoutPanel8.TabIndex = 12;
+            this.tblUsuarios.ColumnCount = 4;
+            this.tblUsuarios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblUsuarios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblUsuarios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tblUsuarios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblUsuarios.Controls.Add(this.lblFotoUsuarioUS, 1, 4);
+            this.tblUsuarios.Controls.Add(this.btnDejarDeEditarUS, 0, 12);
+            this.tblUsuarios.Controls.Add(this.btnAgregarUS, 0, 12);
+            this.tblUsuarios.Controls.Add(this.dataGridView2, 3, 0);
+            this.tblUsuarios.Controls.Add(this.lblNombreUsuarioUS, 0, 0);
+            this.tblUsuarios.Controls.Add(this.txtNombreUS, 0, 1);
+            this.tblUsuarios.Controls.Add(this.lblInstitucionUsuarioUS, 0, 6);
+            this.tblUsuarios.Controls.Add(this.txtInstitucionUS, 0, 7);
+            this.tblUsuarios.Controls.Add(this.cmbOcupacionUS, 0, 11);
+            this.tblUsuarios.Controls.Add(this.lblOcupacionUsuarioUS, 0, 10);
+            this.tblUsuarios.Controls.Add(this.lblContraseniaUsuarioUS, 0, 2);
+            this.tblUsuarios.Controls.Add(this.txtContraseñaUS, 0, 3);
+            this.tblUsuarios.Controls.Add(this.lblDireccionUsuarioUS, 0, 8);
+            this.tblUsuarios.Controls.Add(this.txtDireccionUS, 0, 9);
+            this.tblUsuarios.Controls.Add(this.txtEmailUS, 0, 5);
+            this.tblUsuarios.Controls.Add(this.lblEmailUsuarioUS, 0, 4);
+            this.tblUsuarios.Controls.Add(this.txtTelefonoUS, 1, 1);
+            this.tblUsuarios.Controls.Add(this.lblTelefonoUsuarioUS, 1, 0);
+            this.tblUsuarios.Controls.Add(this.lblRolUsuarioUS, 1, 2);
+            this.tblUsuarios.Controls.Add(this.cmbRolUS, 1, 3);
+            this.tblUsuarios.Controls.Add(this.picFotoUS, 1, 5);
+            this.tblUsuarios.Controls.Add(this.btnTomarFotoUS, 1, 11);
+            this.tblUsuarios.Controls.Add(this.btnCancelarFotoUS, 2, 11);
+            this.tblUsuarios.Controls.Add(this.btnActualizarUS, 2, 12);
+            this.tblUsuarios.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.tblUsuarios.Name = "tblUsuarios";
+            this.tblUsuarios.RowCount = 13;
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblUsuarios.Size = new System.Drawing.Size(1250, 601);
+            this.tblUsuarios.TabIndex = 12;
             // 
             // lblFotoUsuarioUS
             // 
             this.lblFotoUsuarioUS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFotoUsuarioUS.AutoSize = true;
-            this.tableLayoutPanel8.SetColumnSpan(this.lblFotoUsuarioUS, 2);
+            this.tblUsuarios.SetColumnSpan(this.lblFotoUsuarioUS, 2);
             this.lblFotoUsuarioUS.Location = new System.Drawing.Point(315, 209);
             this.lblFotoUsuarioUS.Name = "lblFotoUsuarioUS";
             this.lblFotoUsuarioUS.Size = new System.Drawing.Size(306, 21);
@@ -1475,7 +1475,7 @@ namespace BINAES
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
-            this.tableLayoutPanel8.SetRowSpan(this.dataGridView2, 13);
+            this.tblUsuarios.SetRowSpan(this.dataGridView2, 13);
             this.dataGridView2.Size = new System.Drawing.Size(620, 595);
             this.dataGridView2.TabIndex = 29;
             // 
@@ -1614,7 +1614,7 @@ namespace BINAES
             this.txtTelefonoUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel8.SetColumnSpan(this.txtTelefonoUS, 2);
+            this.tblUsuarios.SetColumnSpan(this.txtTelefonoUS, 2);
             this.txtTelefonoUS.Location = new System.Drawing.Point(315, 49);
             this.txtTelefonoUS.Name = "txtTelefonoUS";
             this.txtTelefonoUS.Size = new System.Drawing.Size(306, 29);
@@ -1625,7 +1625,7 @@ namespace BINAES
             this.lblTelefonoUsuarioUS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTelefonoUsuarioUS.AutoSize = true;
-            this.tableLayoutPanel8.SetColumnSpan(this.lblTelefonoUsuarioUS, 2);
+            this.tblUsuarios.SetColumnSpan(this.lblTelefonoUsuarioUS, 2);
             this.lblTelefonoUsuarioUS.Location = new System.Drawing.Point(315, 25);
             this.lblTelefonoUsuarioUS.Name = "lblTelefonoUsuarioUS";
             this.lblTelefonoUsuarioUS.Size = new System.Drawing.Size(306, 21);
@@ -1638,7 +1638,7 @@ namespace BINAES
             this.lblRolUsuarioUS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRolUsuarioUS.AutoSize = true;
-            this.tableLayoutPanel8.SetColumnSpan(this.lblRolUsuarioUS, 2);
+            this.tblUsuarios.SetColumnSpan(this.lblRolUsuarioUS, 2);
             this.lblRolUsuarioUS.Location = new System.Drawing.Point(315, 117);
             this.lblRolUsuarioUS.Name = "lblRolUsuarioUS";
             this.lblRolUsuarioUS.Size = new System.Drawing.Size(306, 21);
@@ -1650,7 +1650,7 @@ namespace BINAES
             this.cmbRolUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel8.SetColumnSpan(this.cmbRolUS, 2);
+            this.tblUsuarios.SetColumnSpan(this.cmbRolUS, 2);
             this.cmbRolUS.FormattingEnabled = true;
             this.cmbRolUS.Location = new System.Drawing.Point(315, 141);
             this.cmbRolUS.Name = "cmbRolUS";
@@ -1659,12 +1659,12 @@ namespace BINAES
             // 
             // picFotoUS
             // 
-            this.tableLayoutPanel8.SetColumnSpan(this.picFotoUS, 2);
+            this.tblUsuarios.SetColumnSpan(this.picFotoUS, 2);
             this.picFotoUS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picFotoUS.Image = global::BINAES.Properties.Resources._default;
             this.picFotoUS.Location = new System.Drawing.Point(315, 233);
             this.picFotoUS.Name = "picFotoUS";
-            this.tableLayoutPanel8.SetRowSpan(this.picFotoUS, 6);
+            this.tblUsuarios.SetRowSpan(this.picFotoUS, 6);
             this.picFotoUS.Size = new System.Drawing.Size(306, 270);
             this.picFotoUS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFotoUS.TabIndex = 46;
@@ -1712,7 +1712,7 @@ namespace BINAES
             // 
             // tabMisionVision
             // 
-            this.tabMisionVision.Controls.Add(this.tableLayoutPanel3);
+            this.tabMisionVision.Controls.Add(this.tblMisionVision);
             this.tabMisionVision.Location = new System.Drawing.Point(4, 33);
             this.tabMisionVision.Name = "tabMisionVision";
             this.tabMisionVision.Padding = new System.Windows.Forms.Padding(3);
@@ -1721,26 +1721,26 @@ namespace BINAES
             this.tabMisionVision.Text = "Mision y Vision";
             this.tabMisionVision.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel3
+            // tblMisionVision
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tblMisionVision.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.lblMision, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblVision, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lblInfoMision, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lblInfoVision, 0, 3);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1256, 605);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.tblMisionVision.ColumnCount = 1;
+            this.tblMisionVision.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblMisionVision.Controls.Add(this.lblMision, 0, 0);
+            this.tblMisionVision.Controls.Add(this.lblVision, 0, 2);
+            this.tblMisionVision.Controls.Add(this.lblInfoMision, 0, 1);
+            this.tblMisionVision.Controls.Add(this.lblInfoVision, 0, 3);
+            this.tblMisionVision.Location = new System.Drawing.Point(0, 0);
+            this.tblMisionVision.Name = "tblMisionVision";
+            this.tblMisionVision.RowCount = 4;
+            this.tblMisionVision.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tblMisionVision.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tblMisionVision.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tblMisionVision.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tblMisionVision.Size = new System.Drawing.Size(1256, 605);
+            this.tblMisionVision.TabIndex = 0;
             // 
             // lblMision
             // 
@@ -1806,7 +1806,7 @@ namespace BINAES
             // 
             // tabIntroduccion
             // 
-            this.tabIntroduccion.Controls.Add(this.tableLayoutPanel6);
+            this.tabIntroduccion.Controls.Add(this.tblQuienesSomos);
             this.tabIntroduccion.Location = new System.Drawing.Point(4, 33);
             this.tabIntroduccion.Name = "tabIntroduccion";
             this.tabIntroduccion.Padding = new System.Windows.Forms.Padding(3);
@@ -1815,24 +1815,24 @@ namespace BINAES
             this.tabIntroduccion.Text = "Introduccion";
             this.tabIntroduccion.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel6
+            // tblQuienesSomos
             // 
-            this.tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tblQuienesSomos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.label31, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label32, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label33, 0, 2);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 3;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1256, 605);
-            this.tableLayoutPanel6.TabIndex = 0;
+            this.tblQuienesSomos.ColumnCount = 1;
+            this.tblQuienesSomos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblQuienesSomos.Controls.Add(this.label31, 0, 0);
+            this.tblQuienesSomos.Controls.Add(this.label32, 0, 1);
+            this.tblQuienesSomos.Controls.Add(this.label33, 0, 2);
+            this.tblQuienesSomos.Location = new System.Drawing.Point(0, 0);
+            this.tblQuienesSomos.Name = "tblQuienesSomos";
+            this.tblQuienesSomos.RowCount = 3;
+            this.tblQuienesSomos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tblQuienesSomos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tblQuienesSomos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tblQuienesSomos.Size = new System.Drawing.Size(1256, 605);
+            this.tblQuienesSomos.TabIndex = 0;
             // 
             // label31
             // 
@@ -2127,42 +2127,42 @@ namespace BINAES
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();
             this.tabEventos.ResumeLayout(false);
-            this.tlpAdminEventosEV.ResumeLayout(false);
-            this.tlpAdminEventosEV.PerformLayout();
+            this.tblEventos.ResumeLayout(false);
+            this.tblEventos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEventosEV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAsistentesEV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenEV)).EndInit();
             this.tabAgregar.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tblEjemplares.ResumeLayout(false);
+            this.tblEjemplares.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresAG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEjemplarAG)).EndInit();
             this.tabReserva.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tblReserva.ResumeLayout(false);
+            this.tblReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).EndInit();
             this.tabPrestamo.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
+            this.tblPrestamo.ResumeLayout(false);
+            this.tblPrestamo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabBuscar.ResumeLayout(false);
             this.tabBuscar.PerformLayout();
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel7.PerformLayout();
+            this.tblBusqueda.ResumeLayout(false);
+            this.tblBusqueda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresBU)).EndInit();
             this.tabAdmin.ResumeLayout(false);
             this.tabUsuarios.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
+            this.tblUsuarios.ResumeLayout(false);
+            this.tblUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).EndInit();
             this.tabMisionVision.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
+            this.tblMisionVision.ResumeLayout(false);
+            this.tblMisionVision.PerformLayout();
             this.tabIntroduccion.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
+            this.tblQuienesSomos.ResumeLayout(false);
+            this.tblQuienesSomos.PerformLayout();
             this.tabColeccion.ResumeLayout(false);
             this.tblColeccion.ResumeLayout(false);
             this.tblColeccion.PerformLayout();
@@ -2185,7 +2185,7 @@ namespace BINAES
         private System.Windows.Forms.ToolStripMenuItem administradorDeEventosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administradorDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.TabPage tabEventos;
-        private System.Windows.Forms.TableLayoutPanel tlpAdminEventosEV;
+        private System.Windows.Forms.TableLayoutPanel tblEventos;
         private System.Windows.Forms.Button btnAgregarEventoEV;
         private System.Windows.Forms.DataGridView dgvEventosEV;
         private System.Windows.Forms.NumericUpDown nudNumeroAsistentesEV;
@@ -2203,7 +2203,7 @@ namespace BINAES
         private System.Windows.Forms.Button btnDejarDeEditarEV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabPage tabAgregar;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tblEjemplares;
         private System.Windows.Forms.Button btnSalirEdicionEjemplarAG;
         private System.Windows.Forms.Button btnAgregarEjemplarAG;
         private System.Windows.Forms.TextBox txtEditorialEjemplarAG;
@@ -2231,12 +2231,12 @@ namespace BINAES
         private System.Windows.Forms.TabPage tabBuscar;
         private System.Windows.Forms.TabControl tabAdmin;
         private System.Windows.Forms.TabPage tabMisionVision;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tblMisionVision;
         private System.Windows.Forms.Label lblMision;
         private System.Windows.Forms.Label lblVision;
         private System.Windows.Forms.Label lblInfoMision;
         private System.Windows.Forms.Label lblInfoVision;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tblReserva;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.DataGridView dgvReservasRE;
@@ -2244,7 +2244,7 @@ namespace BINAES
         private System.Windows.Forms.TextBox textBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TabPage tabIntroduccion;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tblQuienesSomos;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
@@ -2255,7 +2255,7 @@ namespace BINAES
         private System.Windows.Forms.StatusStrip sspStatus;
         private System.Windows.Forms.ToolStripStatusLabel sspNombre;
         private System.Windows.Forms.ToolStripStatusLabel sspRol;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tblPrestamo;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label18;
         private Button button1;
@@ -2274,7 +2274,7 @@ namespace BINAES
         private NumericUpDown nudIdUsuarioRE;
         private Label label22;
         private Button btnQrRE;
-        private TableLayoutPanel tableLayoutPanel7;
+        private TableLayoutPanel tblBusqueda;
         private TextBox txtBuscarEjemplarBU;
         private Button btnBuscarEjemplarBU;
         private DataGridView dgvEjemplaresBU;
@@ -2283,7 +2283,7 @@ namespace BINAES
         private Label label24;
         private CheckBox chkFísicoBU;
         private CheckBox chkDigitalBU;
-        private TableLayoutPanel tableLayoutPanel8;
+        private TableLayoutPanel tblUsuarios;
         private Button btnDejarDeEditarUS;
         private Button btnAgregarUS;
         private DataGridView dataGridView2;
