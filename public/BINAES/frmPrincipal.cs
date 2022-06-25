@@ -292,6 +292,14 @@ namespace BINAES
            
         }
 
-       
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label47_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
