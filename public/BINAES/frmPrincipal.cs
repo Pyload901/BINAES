@@ -342,5 +342,10 @@ namespace BINAES
             dgvColeccionesCO.DataSource = null;
             dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
         }
+
+        private void btnAgregarUS_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
