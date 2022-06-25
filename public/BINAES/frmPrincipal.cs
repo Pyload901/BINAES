@@ -163,6 +163,10 @@ namespace BINAES
         }
 
         // Formulario de ejemplares
+        private void picEjemplarAG_Click(object sender, EventArgs e)
+        {
+            Utils.SeleccionarImagen(picEjemplarAG);
+        }
 
         // Formulario coleccion
         private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -200,10 +204,15 @@ namespace BINAES
             btnDejarDeEditarEV.Enabled = false;
         }
 
+        private void picImagenEV_Click(object sender, EventArgs e)
+        {
+            Utils.SeleccionarImagen(picImagenEV);
+        }
+
+
         // Formulario de usuarios
         private void btnTomarFotoUS_Click(object sender, EventArgs e)
         {
-
             btnCancelarFotoUS.Enabled = true;
             if (Camara.Activada())
             {
@@ -213,6 +222,7 @@ namespace BINAES
                 {
                     Camara.GuardarFoto(foto);
                     Camara.Cerrar(picFotoUS);
+                    picFotoUS.Image = foto;
                     btnCancelarFotoUS.Enabled = false;
                 }
                 else
@@ -231,6 +241,7 @@ namespace BINAES
             {
                 btnCancelarFotoUS.Enabled = false;
             }
+            picFotoUS.Image = global::BINAES.Properties.Resources._default;
         }
 
         private void btnAgregarCO_Click(object sender, EventArgs e)
@@ -242,44 +253,10 @@ namespace BINAES
 
             ColeccionDAO.Insertar(cole);
         }
-        //Se implementara con funciones
-
-        //Evento agregar Imagen "Agregar Ejemplar"
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                picAgregarEjemplar.Image = new Bitmap(open.FileName);
-            }
-            else
-                MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
-        }
-    
-        //Evento para implementar Imagen "Eventos"
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                picEventos.Image = new Bitmap(open.FileName);
-            }
-            else
-                MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
-        }
 
         private void picFotoUS_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                picFotoUS.Image = new Bitmap(open.FileName);
-            }
-            else
-                MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
+            Utils.SeleccionarImagen(picFotoUS);
         }
 
         private void btnAgregarEjemplarAG_Click(object sender, EventArgs e)
@@ -292,6 +269,5 @@ namespace BINAES
            
         }
 
-       
     }
 }
