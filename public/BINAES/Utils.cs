@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 namespace BINAES
 {
     public static class Utils
@@ -23,6 +24,18 @@ namespace BINAES
             else if (dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Eliminar")
                 result = OpcionesEnumerate.Eliminar;
             return result;
+        }
+        public static void SeleccionarImagen(PictureBox pic)
+        {
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    pic.Image = Image.FromFile(dialog.FileName);
+                }
+            }
         }
     }
 }

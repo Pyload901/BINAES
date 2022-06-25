@@ -15,46 +15,19 @@ namespace BINAES
     public partial class frmPrincipal : Form
     {
         // Variables globales
-        public int id_usuario = 0;
-        public string nombre_usuario = null;
-        public string rol_usuario = null;
+        public int idUsuario = 0;
+        public string nombreUsuario = null;
+        public string rolUsuario = null;
 
-
-        public frmPrincipal()
-        {
-            InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Name = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
-        }
-
-        // Mover Form
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void frmPrincipal_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        private void panelBarraTituloPrincpal_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
+        Dictionary<FiltroEnumerate, string> filtros = new Dictionary<FiltroEnumerate, string>();
 
         // Formulario general
         public frmPrincipal(Usuario usuario)
         {
             InitializeComponent();
-            id_usuario = usuario.id;
-            nombre_usuario = usuario.nombre;
-            rol_usuario = usuario.rol;
+            idUsuario = usuario.id;
+            nombreUsuario = usuario.nombre;
+            rolUsuario = usuario.rol;
         }
 
 
@@ -72,15 +45,21 @@ namespace BINAES
 
             //Cambios de color a ciertas partes
           
-            tabBuscar.BackColor = Color.FromArgb(50, 149, 196);
-
-            tabEventos.BackColor = col1;
+            //tabBuscar.BackColor = Color.FromArgb(50, 149, 196);
+            //tabEventos.BackColor = col1;
 
 
             // Renderizar imagen de btnBuscarEjemplar
             btnBuscarEjemplarBU.Image = (Image)new Bitmap(global::BINAES.Properties.Resources.lupa, new Size(btnBuscarEjemplarBU.Size.Height, btnBuscarEjemplarBU.Size.Height));
-            sspNombre.Text += nombre_usuario;
-            sspRol.Text += rol_usuario;
+            sspNombre.Text += nombreUsuario;
+            sspRol.Text += rolUsuario;
+
+            filtros.Add(FiltroEnumerate.Titulo, "Titulo");
+            filtros.Add(FiltroEnumerate.Autor, "Autor");
+            filtros.Add(FiltroEnumerate.PalabrasClave, "Palabras clave");
+            cmbFiltrarEjemplarBU.DisplayMember = "Value";
+            cmbFiltrarEjemplarBU.ValueMember = "Key";
+            cmbFiltrarEjemplarBU.DataSource = filtros.ToList();
         }
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -124,10 +103,13 @@ namespace BINAES
             switch (tabAdmin.SelectedIndex)
             {
                 case 4:
+                    cmbAreaEventoEV.ValueMember = "id";
+                    cmbAreaEventoEV.DisplayMember = "nombre";
+                    cmbAreaEventoEV.DataSource = AreaDAO.Leer();
                     dgvEventosEV.DataSource = EventoDAO.Leer();
                     DataGridViewComposer.Compose(dgvEventosEV);
-                    DataGridViewComposer.BuildDataGridView_Editar(dgvEventosEV);
-                    DataGridViewComposer.BuildDataGridView_Eliminar(dgvEventosEV);
+                    /*DataGridViewComposer.BuildDataGridView_Editar(dgvEventosEV);
+                    DataGridViewComposer.BuildDataGridView_Eliminar(dgvEventosEV);*/
                     break;
 
                 case 8:
@@ -150,9 +132,20 @@ namespace BINAES
         }
         private void btnBuscarEjemplarBU_Click(object sender, EventArgs e)
         {
-            string Titulo = txtBuscarEjemplarBU.Text;
+            FiltroEnumerate filtroFormato;
+            if ((chkDigitalBU.Checked && chkFísicoBU.Checked) || (!chkDigitalBU.Checked && !chkFísicoBU.Checked))
+                filtroFormato = FiltroEnumerate.DigitalFisico;
+            else if (chkFísicoBU.Checked)
+                filtroFormato = FiltroEnumerate.Fisico;
+            else
+                filtroFormato = FiltroEnumerate.Digital;
 
-            Ejemplar ejem = BusquedaDAO.FiltrarPorTituloExacto(Titulo);
+            FiltroEnumerate filtroBusqueda = (chkBusquedaExactaBU.Checked ? FiltroEnumerate.Exacta : FiltroEnumerate.Parcial);
+
+            List<Ejemplar> list = EjemplarDAO.Leer(txtBuscarEjemplarBU.Text, (FiltroEnumerate)cmbFiltrarEjemplarBU.SelectedValue, filtroBusqueda, filtroFormato);
+
+            dgvEjemplaresBU.DataSource =  list;
+            DataGridViewComposer.Compose(dgvEjemplaresBU);
         }
         private void btnBuscarEjemplarRE_Click(object sender, EventArgs e)
         {
@@ -160,31 +153,97 @@ namespace BINAES
             txtBuscarEjemplarBU.Select();
         }
 
+        private void cmbFiltrarEjemplarBU_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
         // Formulario de prestamo
-        
+
         // Formulario de reserva
+        private void btnQrRE_Click(object sender, EventArgs e)
+        {
+            using (frmEscanerQR ventana = new frmEscanerQR())
+            {
+                DialogResult resultado = ventana.ShowDialog();
+            }
+        }
 
         // Formulario de ejemplares
+        private void picEjemplarAG_Click(object sender, EventArgs e)
+        {
+            Utils.SeleccionarImagen(picEjemplarAG);
+        }
+
+        // Formulario coleccion
+        private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
 
         // Formulario de eventos
+        private void dgvEventosEV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridView dgv = (DataGridView)sender;
+                txtTituloEventoEV.Text = dgv.Rows[e.RowIndex].Cells["titulo"].Value.ToString();
+                try
+                {
+                    picImagenEV.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + "/" + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
+                }
+                catch (Exception ex2)
+                {
+                    picImagenEV.Image = Properties.Resources._default;
+                }
+                dtpFechaInicioEV.Text = dgv.Rows[e.RowIndex].Cells["fechaInicio"].Value.ToString();
+                dtpFechaFinalizacionEV.Text = dgv.Rows[e.RowIndex].Cells["fechaFin"].Value.ToString();
+                cmbAreaEventoEV.SelectedValue = dgv.Rows[e.RowIndex].Cells["id_area"].Value;
+                rtbObjetivoEventoEV.Clear();
+                List<ObjetivoEvento> objetivos = ObjetivoEventoDAO.Leer(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["id"].Value));
+                foreach (ObjetivoEvento obj in objetivos)
+                {
+                    rtbObjetivoEventoEV.AppendText(obj.objetivo + Environment.NewLine);
+                }
+                nudNumeroAsistentesEV.Value = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["numero_asistentes"].Value);
+                btnDejarDeEditarEV.Enabled = true;
+                btnEliminarEventoEV.Enabled = true;
+                btnAgregarEventoEV.Tag = null;
+            }
+            catch (Exception ex1)
+            {
+
+            }
+        }
+        private void btnDejarDeEditarEV_Click(object sender, EventArgs e)
+        {
+            txtTituloEventoEV.Clear();
+            picImagenEV.Image = Properties.Resources._default;
+            dtpFechaInicioEV.ResetText();
+            dtpFechaFinalizacionEV.ResetText();
+            rtbObjetivoEventoEV.Clear();
+            nudNumeroAsistentesEV.Value = 0;
+            btnDejarDeEditarEV.Enabled = false;
+            btnEliminarEventoEV.Enabled = false;
+            btnAgregarEventoEV.Tag = "1";
+        }
         private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
+           
 
-            int id = Utils.getDataGridViewCellId(dgv, e);
-            if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Editar)
-            {
-                Evento evento = EventoDAO.LeerUno(id);
-                txtTituloEventoEV.Text = evento.titulo;
-                dtpFechaInicioEV.Value = evento.fechaInicio;
-                dtpFechaFinalizacionEV.Value = evento.fechaFin;
-                nudNumeroAsistentesEV.Value = evento.numero_asistentes;
-                btnDejarDeEditarEV.Enabled = true;
-            }
-            else if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Eliminar)
-            {
-                EventoDAO.Eliminar(id);
-            }
+            /* if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Editar)
+             {
+                 Evento evento = EventoDAO.LeerUno(id);
+                 txtTituloEventoEV.Text = evento.titulo;
+                 dtpFechaInicioEV.Value = evento.fechaInicio;
+                 dtpFechaFinalizacionEV.Value = evento.fechaFin;
+                 nudNumeroAsistentesEV.Value = evento.numero_asistentes;
+                 btnDejarDeEditarEV.Enabled = true;
+             }
+             else if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Eliminar)
+             {
+                 EventoDAO.Eliminar(id);
+             }*/
         }
 
         private void btnSalirEdicionEjemplarAG_Click(object sender, EventArgs e)
@@ -196,10 +255,31 @@ namespace BINAES
             btnDejarDeEditarEV.Enabled = false;
         }
 
+        private void picImagenEV_Click(object sender, EventArgs e)
+        {
+            Utils.SeleccionarImagen(picImagenEV);
+        }
+        private void btnAgregarEV_Click(object sender, EventArgs e)
+        {
+            // si es null, estamos en modo edicion
+            if (btnAgregarEventoEV.Tag == null)
+            {
+                String obj = rtbObjetivoEventoEV.Text;
+                obj.Trim();
+                List<string> objetivos = (obj.Split('\n')).ToList();
+                objetivos.RemoveAll(str => str == "");
+                /*objetivos.Take(ObjetivoEventoDAO.ContarElementosPorIdEvento());*/
+            }
+            else
+            {
+
+            }
+        }
+
+
         // Formulario de usuarios
         private void btnTomarFotoUS_Click(object sender, EventArgs e)
         {
-
             btnCancelarFotoUS.Enabled = true;
             if (Camara.Activada())
             {
@@ -209,6 +289,7 @@ namespace BINAES
                 {
                     Camara.GuardarFoto(foto);
                     Camara.Cerrar(picFotoUS);
+                    picFotoUS.Image = foto;
                     btnCancelarFotoUS.Enabled = false;
                 }
                 else
@@ -227,6 +308,7 @@ namespace BINAES
             {
                 btnCancelarFotoUS.Enabled = false;
             }
+            picFotoUS.Image = global::BINAES.Properties.Resources._default;
         }
 
         private void btnAgregarCO_Click(object sender, EventArgs e)
@@ -239,48 +321,9 @@ namespace BINAES
             ColeccionDAO.Insertar(cole);
         }
 
-        private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        //Se implementara con funciones
-
-        //Evento agregar Imagen "Agregar Ejemplar"
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                picAgregarEjemplar.Image = new Bitmap(open.FileName);
-            }
-            else
-                MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
-        }
-    
-        //Evento para implementar Imagen "Eventos"
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                picEventos.Image = new Bitmap(open.FileName);
-            }
-            else
-                MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
-        }
-
         private void picFotoUS_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                picFotoUS.Image = new Bitmap(open.FileName);
-            }
-            else
-                MessageBox.Show(">>>>No ha seleccionado ninguna IMAGEN<<<<");
+            Utils.SeleccionarImagen(picFotoUS);
         }
 
         private void btnAgregarEjemplarAG_Click(object sender, EventArgs e)
@@ -288,27 +331,20 @@ namespace BINAES
            
         }
 
-        private void btnAgregarEV_Click(object sender, EventArgs e)
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
-        private void btnCerrarPrincipal_Click(object sender, EventArgs e)
+        private void label47_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
-        private void btnRestoreWinPrincipal_Click(object sender, EventArgs e)
+        private void btnBuscarCO_Click(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Normal)
-                WindowState = FormWindowState.Maximized;
-            else
-                WindowState = FormWindowState.Normal;
-        }
-
-        private void btnMinimizarPrincipal_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
+            dgvColeccionesCO.DataSource = null;
+            dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
         }
 
 

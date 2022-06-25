@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace BINAES
 {
-    enum FiltroEnumerate
+    public enum FiltroEnumerate
     {
         Titulo,
         PalabrasClave,
         Autor,
-        Formato
+        Digital,
+        Fisico,
+        DigitalFisico,
+        Exacta,
+        Parcial
     }
 }

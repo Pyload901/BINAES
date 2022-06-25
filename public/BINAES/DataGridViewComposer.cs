@@ -15,11 +15,17 @@ namespace BINAES
             PropertyInfo[] properties = obj.GetType().GetProperties();
             foreach (var propertie in properties)
             {
-                if (propertie.GetValue(obj) == null && !indicesNulos.Contains(propertie.Name))
+                if (!indicesNulos.Contains(propertie.Name))
                 {
-                    indicesNulos.Add(propertie.Name);
+                    if (propertie.GetValue(obj) == null)
+                        indicesNulos.Add(propertie.Name);
+                    else if (propertie.GetValue(obj).GetType() == typeof(int))
+                    {
+                        if ((int)propertie.GetValue(obj) == -1)
+                                indicesNulos.Add(propertie.Name);
+                    }
                 }
-                else if (indicesNulos.Contains(propertie.Name))
+                else
                 {
                     indicesNulos.Remove(propertie.Name);
                 }

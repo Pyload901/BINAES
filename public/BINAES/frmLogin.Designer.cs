@@ -64,7 +64,7 @@ namespace BINAES
             this.tableLayoutPanel5.Controls.Add(this.btnIniciarSesionLogin, 1, 8);
             this.tableLayoutPanel5.Cursor = System.Windows.Forms.Cursors.Default;
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 38);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, -16);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 10;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -77,7 +77,7 @@ namespace BINAES
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(485, 666);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(485, 720);
             this.tableLayoutPanel5.TabIndex = 1;
             this.tableLayoutPanel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel5_MouseDown);
             // 
@@ -85,7 +85,7 @@ namespace BINAES
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.pictureBox1, 3);
             this.pictureBox1.Image = global::BINAES.Properties.Resources.LOGOBINAES_nobackground;
-            this.pictureBox1.Location = new System.Drawing.Point(100, 69);
+            this.pictureBox1.Location = new System.Drawing.Point(100, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel5.SetRowSpan(this.pictureBox1, 3);
             this.pictureBox1.Size = new System.Drawing.Size(285, 192);
@@ -99,10 +99,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.SetColumnSpan(this.txtContraseniaLogin, 3);
-            this.txtContraseniaLogin.Location = new System.Drawing.Point(100, 465);
+            this.txtContraseniaLogin.Location = new System.Drawing.Point(100, 507);
             this.txtContraseniaLogin.Name = "txtContraseniaLogin";
             this.txtContraseniaLogin.PasswordChar = '*';
-            this.txtContraseniaLogin.Size = new System.Drawing.Size(285, 43);
+            this.txtContraseniaLogin.Size = new System.Drawing.Size(285, 50);
             this.txtContraseniaLogin.TabIndex = 5;
             this.txtContraseniaLogin.UseSystemPasswordChar = true;
             this.txtContraseniaLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseniaLogin_KeyDown);
@@ -114,9 +114,9 @@ namespace BINAES
             this.label29.AutoSize = true;
             this.tableLayoutPanel5.SetColumnSpan(this.label29, 3);
             this.label29.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(100, 296);
+            this.label29.Location = new System.Drawing.Point(100, 320);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(285, 34);
+            this.label29.Size = new System.Drawing.Size(285, 40);
             this.label29.TabIndex = 2;
             this.label29.Text = "Usuario";
             // 
@@ -127,9 +127,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.SetColumnSpan(this.txtUsuarioLogin, 3);
             this.txtUsuarioLogin.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuarioLogin.Location = new System.Drawing.Point(100, 333);
+            this.txtUsuarioLogin.Location = new System.Drawing.Point(100, 363);
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
-            this.txtUsuarioLogin.Size = new System.Drawing.Size(285, 41);
+            this.txtUsuarioLogin.Size = new System.Drawing.Size(285, 47);
             this.txtUsuarioLogin.TabIndex = 4;
             // 
             // label30
@@ -139,9 +139,9 @@ namespace BINAES
             this.label30.AutoSize = true;
             this.tableLayoutPanel5.SetColumnSpan(this.label30, 2);
             this.label30.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(100, 428);
+            this.label30.Location = new System.Drawing.Point(100, 432);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(188, 34);
+            this.label30.Size = new System.Drawing.Size(188, 72);
             this.label30.TabIndex = 3;
             this.label30.Text = "Contraseña";
             // 
@@ -153,7 +153,7 @@ namespace BINAES
             this.btnIniciarSesionLogin.IconColor = System.Drawing.Color.Black;
             this.btnIniciarSesionLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIniciarSesionLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIniciarSesionLogin.Location = new System.Drawing.Point(100, 531);
+            this.btnIniciarSesionLogin.Location = new System.Drawing.Point(100, 579);
             this.btnIniciarSesionLogin.Name = "btnIniciarSesionLogin";
             this.btnIniciarSesionLogin.Size = new System.Drawing.Size(285, 60);
             this.btnIniciarSesionLogin.TabIndex = 9;
@@ -207,7 +207,7 @@ namespace BINAES
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 45F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(485, 704);
