@@ -149,32 +149,28 @@ namespace BINAES
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.dataGridViewColeccion = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tabColeccion = new System.Windows.Forms.TabPage();
+            this.tblColeccion = new System.Windows.Forms.TableLayoutPanel();
+            this.lblGeneroColeccionCO = new System.Windows.Forms.Label();
+            this.lblTipoColeccionCO = new System.Windows.Forms.Label();
+            this.lblNombreColeccionCO = new System.Windows.Forms.Label();
+            this.dgvColeccionesCO = new System.Windows.Forms.DataGridView();
+            this.cmbTipoColeccionCO = new System.Windows.Forms.ComboBox();
+            this.cmbGeneroColeccionCO = new System.Windows.Forms.ComboBox();
+            this.txtNombreColeccionCO = new System.Windows.Forms.TextBox();
+            this.btnDejarDeEditarCO = new System.Windows.Forms.Button();
+            this.btnBuscarCO = new System.Windows.Forms.Button();
+            this.btnAgregarCO = new System.Windows.Forms.Button();
             this.tlpColeccionCO = new System.Windows.Forms.TableLayoutPanel();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.dgvVistaColeccionCO = new System.Windows.Forms.DataGridView();
             this.txtNombreCO = new System.Windows.Forms.TextBox();
-            this.cmbTipoColeccionCO = new System.Windows.Forms.ComboBox();
-            this.cmbGeneroColeccionCO = new System.Windows.Forms.ComboBox();
-            this.btnAgregarCO = new System.Windows.Forms.Button();
-            this.btnDejardeEditarCO = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.sspStatus = new System.Windows.Forms.StatusStrip();
             this.sspNombre = new System.Windows.Forms.ToolStripStatusLabel();
             this.sspRol = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnBuscarCO = new System.Windows.Forms.Button();
             this.mspMenu.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -203,9 +199,9 @@ namespace BINAES
             this.tableLayoutPanel3.SuspendLayout();
             this.tabIntroduccion.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewColeccion)).BeginInit();
+            this.tabColeccion.SuspendLayout();
+            this.tblColeccion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColeccionesCO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaColeccionCO)).BeginInit();
             this.sspStatus.SuspendLayout();
             this.SuspendLayout();
@@ -286,7 +282,7 @@ namespace BINAES
             this.tabUsuarios.Controls.Add(this.tableLayoutPanel5);
             this.tabUsuarios.Location = new System.Drawing.Point(4, 33);
             this.tabUsuarios.Name = "tabUsuarios";
-            this.tabUsuarios.Size = new System.Drawing.Size(1250, 600);
+            this.tabUsuarios.Size = new System.Drawing.Size(1250, 573);
             this.tabUsuarios.TabIndex = 5;
             this.tabUsuarios.Text = "Usuarios";
             this.tabUsuarios.UseVisualStyleBackColor = true;
@@ -338,7 +334,7 @@ namespace BINAES
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333335F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1256, 606);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1256, 579);
             this.tableLayoutPanel5.TabIndex = 7;
             // 
             // label36
@@ -347,9 +343,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(796, 150);
+            this.label36.Location = new System.Drawing.Point(796, 144);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(328, 50);
+            this.label36.Size = new System.Drawing.Size(328, 48);
             this.label36.TabIndex = 11;
             this.label36.Text = "Rol:";
             // 
@@ -359,9 +355,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(462, 150);
+            this.label35.Location = new System.Drawing.Point(462, 144);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(328, 50);
+            this.label35.Size = new System.Drawing.Size(328, 48);
             this.label35.TabIndex = 10;
             this.label35.Text = "Ocupación:";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -371,7 +367,7 @@ namespace BINAES
             this.txtNombreUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreUS.Location = new System.Drawing.Point(462, 103);
+            this.txtNombreUS.Location = new System.Drawing.Point(462, 99);
             this.txtNombreUS.Name = "txtNombreUS";
             this.txtNombreUS.Size = new System.Drawing.Size(328, 29);
             this.txtNombreUS.TabIndex = 8;
@@ -382,9 +378,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(462, 50);
+            this.label34.Location = new System.Drawing.Point(462, 48);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(328, 50);
+            this.label34.Size = new System.Drawing.Size(328, 48);
             this.label34.TabIndex = 6;
             this.label34.Text = "Nombre:";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -394,7 +390,7 @@ namespace BINAES
             this.txtEmailUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmailUS.Location = new System.Drawing.Point(796, 103);
+            this.txtEmailUS.Location = new System.Drawing.Point(796, 99);
             this.txtEmailUS.Name = "txtEmailUS";
             this.txtEmailUS.Size = new System.Drawing.Size(328, 29);
             this.txtEmailUS.TabIndex = 9;
@@ -405,9 +401,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(796, 50);
+            this.label30.Location = new System.Drawing.Point(796, 48);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(328, 50);
+            this.label30.Size = new System.Drawing.Size(328, 48);
             this.label30.TabIndex = 1;
             this.label30.Text = "E-mail:";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -418,9 +414,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(462, 250);
+            this.label37.Location = new System.Drawing.Point(462, 240);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(328, 50);
+            this.label37.Size = new System.Drawing.Size(328, 48);
             this.label37.TabIndex = 14;
             this.label37.Text = "Dirección:";
             // 
@@ -429,7 +425,7 @@ namespace BINAES
             this.txtDireccionUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDireccionUS.Location = new System.Drawing.Point(462, 303);
+            this.txtDireccionUS.Location = new System.Drawing.Point(462, 291);
             this.txtDireccionUS.Name = "txtDireccionUS";
             this.txtDireccionUS.Size = new System.Drawing.Size(328, 29);
             this.txtDireccionUS.TabIndex = 16;
@@ -440,9 +436,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(796, 250);
+            this.label38.Location = new System.Drawing.Point(796, 240);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(328, 50);
+            this.label38.Size = new System.Drawing.Size(328, 48);
             this.label38.TabIndex = 15;
             this.label38.Text = "Contraseña:";
             // 
@@ -451,7 +447,7 @@ namespace BINAES
             this.txtContraseñaUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtContraseñaUS.Location = new System.Drawing.Point(796, 303);
+            this.txtContraseñaUS.Location = new System.Drawing.Point(796, 291);
             this.txtContraseñaUS.Name = "txtContraseñaUS";
             this.txtContraseñaUS.Size = new System.Drawing.Size(328, 29);
             this.txtContraseñaUS.TabIndex = 17;
@@ -462,9 +458,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(462, 350);
+            this.label40.Location = new System.Drawing.Point(462, 336);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(328, 50);
+            this.label40.Size = new System.Drawing.Size(328, 48);
             this.label40.TabIndex = 18;
             this.label40.Text = "Institución:";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -475,9 +471,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(796, 350);
+            this.label39.Location = new System.Drawing.Point(796, 336);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(328, 50);
+            this.label39.Size = new System.Drawing.Size(328, 48);
             this.label39.TabIndex = 19;
             this.label39.Text = "Teléfono:";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -487,7 +483,7 @@ namespace BINAES
             this.txtTelefonoUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefonoUS.Location = new System.Drawing.Point(796, 403);
+            this.txtTelefonoUS.Location = new System.Drawing.Point(796, 387);
             this.txtTelefonoUS.Name = "txtTelefonoUS";
             this.txtTelefonoUS.Size = new System.Drawing.Size(328, 29);
             this.txtTelefonoUS.TabIndex = 21;
@@ -498,9 +494,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.SetColumnSpan(this.btnAgregarUS, 2);
-            this.btnAgregarUS.Location = new System.Drawing.Point(462, 503);
+            this.btnAgregarUS.Location = new System.Drawing.Point(462, 483);
             this.btnAgregarUS.Name = "btnAgregarUS";
-            this.btnAgregarUS.Size = new System.Drawing.Size(662, 44);
+            this.btnAgregarUS.Size = new System.Drawing.Size(662, 42);
             this.btnAgregarUS.TabIndex = 22;
             this.btnAgregarUS.Text = "Agregar";
             this.btnAgregarUS.UseVisualStyleBackColor = true;
@@ -510,7 +506,7 @@ namespace BINAES
             this.txtInstitucionUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtInstitucionUS.Location = new System.Drawing.Point(462, 403);
+            this.txtInstitucionUS.Location = new System.Drawing.Point(462, 387);
             this.txtInstitucionUS.Name = "txtInstitucionUS";
             this.txtInstitucionUS.Size = new System.Drawing.Size(328, 29);
             this.txtInstitucionUS.TabIndex = 20;
@@ -521,7 +517,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbOcupacionUS.FormattingEnabled = true;
-            this.cmbOcupacionUS.Location = new System.Drawing.Point(462, 203);
+            this.cmbOcupacionUS.Location = new System.Drawing.Point(462, 195);
             this.cmbOcupacionUS.Name = "cmbOcupacionUS";
             this.cmbOcupacionUS.Size = new System.Drawing.Size(328, 29);
             this.cmbOcupacionUS.TabIndex = 23;
@@ -532,7 +528,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbRolUS.FormattingEnabled = true;
-            this.cmbRolUS.Location = new System.Drawing.Point(796, 203);
+            this.cmbRolUS.Location = new System.Drawing.Point(796, 195);
             this.cmbRolUS.Name = "cmbRolUS";
             this.cmbRolUS.Size = new System.Drawing.Size(328, 29);
             this.cmbRolUS.TabIndex = 24;
@@ -544,10 +540,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.SetColumnSpan(this.picFotoUS, 2);
             this.picFotoUS.Image = global::BINAES.Properties.Resources.SubirImagen;
-            this.picFotoUS.Location = new System.Drawing.Point(128, 103);
+            this.picFotoUS.Location = new System.Drawing.Point(128, 99);
             this.picFotoUS.Name = "picFotoUS";
             this.tableLayoutPanel5.SetRowSpan(this.picFotoUS, 6);
-            this.picFotoUS.Size = new System.Drawing.Size(328, 294);
+            this.picFotoUS.Size = new System.Drawing.Size(328, 282);
             this.picFotoUS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFotoUS.TabIndex = 25;
             this.picFotoUS.TabStop = false;
@@ -558,9 +554,9 @@ namespace BINAES
             this.btnTomarFotoUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTomarFotoUS.Location = new System.Drawing.Point(128, 503);
+            this.btnTomarFotoUS.Location = new System.Drawing.Point(128, 483);
             this.btnTomarFotoUS.Name = "btnTomarFotoUS";
-            this.btnTomarFotoUS.Size = new System.Drawing.Size(161, 44);
+            this.btnTomarFotoUS.Size = new System.Drawing.Size(161, 42);
             this.btnTomarFotoUS.TabIndex = 6;
             this.btnTomarFotoUS.Text = "Tomar foto";
             this.btnTomarFotoUS.UseVisualStyleBackColor = true;
@@ -572,9 +568,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelarFotoUS.Enabled = false;
-            this.btnCancelarFotoUS.Location = new System.Drawing.Point(295, 503);
+            this.btnCancelarFotoUS.Location = new System.Drawing.Point(295, 483);
             this.btnCancelarFotoUS.Name = "btnCancelarFotoUS";
-            this.btnCancelarFotoUS.Size = new System.Drawing.Size(161, 44);
+            this.btnCancelarFotoUS.Size = new System.Drawing.Size(161, 42);
             this.btnCancelarFotoUS.TabIndex = 26;
             this.btnCancelarFotoUS.Text = "Cancelar foto";
             this.btnCancelarFotoUS.UseVisualStyleBackColor = true;
@@ -585,7 +581,7 @@ namespace BINAES
             this.tabEventos.Controls.Add(this.tlpAdminEventosEV);
             this.tabEventos.Location = new System.Drawing.Point(4, 33);
             this.tabEventos.Name = "tabEventos";
-            this.tabEventos.Size = new System.Drawing.Size(1250, 600);
+            this.tabEventos.Size = new System.Drawing.Size(1250, 573);
             this.tabEventos.TabIndex = 4;
             this.tabEventos.Text = "Eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
@@ -632,7 +628,7 @@ namespace BINAES
             this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
             this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
             this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.tlpAdminEventosEV.Size = new System.Drawing.Size(1250, 601);
+            this.tlpAdminEventosEV.Size = new System.Drawing.Size(1250, 574);
             this.tlpAdminEventosEV.TabIndex = 0;
             // 
             // btnAgregarEV
@@ -640,9 +636,9 @@ namespace BINAES
             this.btnAgregarEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarEV.Location = new System.Drawing.Point(340, 555);
+            this.btnAgregarEV.Location = new System.Drawing.Point(340, 531);
             this.btnAgregarEV.Name = "btnAgregarEV";
-            this.btnAgregarEV.Size = new System.Drawing.Size(366, 43);
+            this.btnAgregarEV.Size = new System.Drawing.Size(366, 40);
             this.btnAgregarEV.TabIndex = 22;
             this.btnAgregarEV.Text = "Agregar";
             this.btnAgregarEV.UseVisualStyleBackColor = true;
@@ -658,7 +654,7 @@ namespace BINAES
             this.dgvEventosEV.Name = "dgvEventosEV";
             this.dgvEventosEV.RowHeadersWidth = 51;
             this.tlpAdminEventosEV.SetRowSpan(this.dgvEventosEV, 13);
-            this.dgvEventosEV.Size = new System.Drawing.Size(535, 595);
+            this.dgvEventosEV.Size = new System.Drawing.Size(535, 568);
             this.dgvEventosEV.TabIndex = 26;
             this.dgvEventosEV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellContentClick);
             // 
@@ -667,7 +663,7 @@ namespace BINAES
             this.nudNumeroAsistentesEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudNumeroAsistentesEV.Location = new System.Drawing.Point(3, 509);
+            this.nudNumeroAsistentesEV.Location = new System.Drawing.Point(3, 487);
             this.nudNumeroAsistentesEV.Name = "nudNumeroAsistentesEV";
             this.nudNumeroAsistentesEV.Size = new System.Drawing.Size(331, 29);
             this.nudNumeroAsistentesEV.TabIndex = 16;
@@ -678,9 +674,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 460);
+            this.label17.Location = new System.Drawing.Point(3, 440);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(331, 46);
+            this.label17.Size = new System.Drawing.Size(331, 44);
             this.label17.TabIndex = 21;
             this.label17.Text = "Número de asistentes:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -691,7 +687,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTipoSalonEV.FormattingEnabled = true;
-            this.cmbTipoSalonEV.Location = new System.Drawing.Point(3, 417);
+            this.cmbTipoSalonEV.Location = new System.Drawing.Point(3, 399);
             this.cmbTipoSalonEV.Name = "cmbTipoSalonEV";
             this.cmbTipoSalonEV.Size = new System.Drawing.Size(331, 29);
             this.cmbTipoSalonEV.TabIndex = 14;
@@ -702,9 +698,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 368);
+            this.label15.Location = new System.Drawing.Point(3, 352);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(331, 46);
+            this.label15.Size = new System.Drawing.Size(331, 44);
             this.label15.TabIndex = 20;
             this.label15.Text = "Tipo de salón: ";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -714,9 +710,9 @@ namespace BINAES
             this.rtbObjetivoEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbObjetivoEventoEV.Location = new System.Drawing.Point(3, 325);
+            this.rtbObjetivoEventoEV.Location = new System.Drawing.Point(3, 311);
             this.rtbObjetivoEventoEV.Name = "rtbObjetivoEventoEV";
-            this.rtbObjetivoEventoEV.Size = new System.Drawing.Size(331, 40);
+            this.rtbObjetivoEventoEV.Size = new System.Drawing.Size(331, 38);
             this.rtbObjetivoEventoEV.TabIndex = 23;
             this.rtbObjetivoEventoEV.Text = "";
             // 
@@ -726,16 +722,16 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 276);
+            this.label16.Location = new System.Drawing.Point(3, 264);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(331, 46);
+            this.label16.Size = new System.Drawing.Size(331, 44);
             this.label16.TabIndex = 13;
             this.label16.Text = "Objetivos del evento:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtpFechaFinalizacionEV
             // 
-            this.dtpFechaFinalizacionEV.Location = new System.Drawing.Point(3, 233);
+            this.dtpFechaFinalizacionEV.Location = new System.Drawing.Point(3, 223);
             this.dtpFechaFinalizacionEV.Name = "dtpFechaFinalizacionEV";
             this.dtpFechaFinalizacionEV.Size = new System.Drawing.Size(310, 29);
             this.dtpFechaFinalizacionEV.TabIndex = 19;
@@ -746,16 +742,16 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 184);
+            this.label14.Location = new System.Drawing.Point(3, 176);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(331, 46);
+            this.label14.Size = new System.Drawing.Size(331, 44);
             this.label14.TabIndex = 18;
             this.label14.Text = "Fecha de finalización:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtpFechaInicioEV
             // 
-            this.dtpFechaInicioEV.Location = new System.Drawing.Point(3, 141);
+            this.dtpFechaInicioEV.Location = new System.Drawing.Point(3, 135);
             this.dtpFechaInicioEV.Name = "dtpFechaInicioEV";
             this.dtpFechaInicioEV.Size = new System.Drawing.Size(310, 29);
             this.dtpFechaInicioEV.TabIndex = 17;
@@ -766,9 +762,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 92);
+            this.label13.Location = new System.Drawing.Point(3, 88);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(331, 46);
+            this.label13.Size = new System.Drawing.Size(331, 44);
             this.label13.TabIndex = 5;
             this.label13.Text = "Fecha de inicio:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -778,7 +774,7 @@ namespace BINAES
             this.txtTituloEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTituloEventoEV.Location = new System.Drawing.Point(3, 49);
+            this.txtTituloEventoEV.Location = new System.Drawing.Point(3, 47);
             this.txtTituloEventoEV.Name = "txtTituloEventoEV";
             this.txtTituloEventoEV.Size = new System.Drawing.Size(331, 29);
             this.txtTituloEventoEV.TabIndex = 4;
@@ -791,7 +787,7 @@ namespace BINAES
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(331, 46);
+            this.label12.Size = new System.Drawing.Size(331, 44);
             this.label12.TabIndex = 3;
             this.label12.Text = "Titulo del evento:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -801,9 +797,9 @@ namespace BINAES
             this.btnDejarDeEditarEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDejarDeEditarEV.Location = new System.Drawing.Point(3, 555);
+            this.btnDejarDeEditarEV.Location = new System.Drawing.Point(3, 531);
             this.btnDejarDeEditarEV.Name = "btnDejarDeEditarEV";
-            this.btnDejarDeEditarEV.Size = new System.Drawing.Size(331, 43);
+            this.btnDejarDeEditarEV.Size = new System.Drawing.Size(331, 40);
             this.btnDejarDeEditarEV.TabIndex = 24;
             this.btnDejarDeEditarEV.Text = "Dejar de editar";
             this.btnDejarDeEditarEV.UseVisualStyleBackColor = true;
@@ -816,7 +812,7 @@ namespace BINAES
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(340, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(366, 46);
+            this.label11.Size = new System.Drawing.Size(366, 44);
             this.label11.TabIndex = 27;
             this.label11.Text = "Imagen";
             // 
@@ -824,10 +820,10 @@ namespace BINAES
             // 
             this.picEventos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picEventos.Image = global::BINAES.Properties.Resources.SubirImagen;
-            this.picEventos.Location = new System.Drawing.Point(340, 49);
+            this.picEventos.Location = new System.Drawing.Point(340, 47);
             this.picEventos.Name = "picEventos";
             this.tlpAdminEventosEV.SetRowSpan(this.picEventos, 11);
-            this.picEventos.Size = new System.Drawing.Size(366, 500);
+            this.picEventos.Size = new System.Drawing.Size(366, 478);
             this.picEventos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picEventos.TabIndex = 28;
             this.picEventos.TabStop = false;
@@ -838,7 +834,7 @@ namespace BINAES
             this.tabAgregar.Controls.Add(this.tableLayoutPanel1);
             this.tabAgregar.Location = new System.Drawing.Point(4, 33);
             this.tabAgregar.Name = "tabAgregar";
-            this.tabAgregar.Size = new System.Drawing.Size(1250, 600);
+            this.tabAgregar.Size = new System.Drawing.Size(1250, 573);
             this.tabAgregar.TabIndex = 3;
             this.tabAgregar.Text = "Agregar ejemplar";
             this.tabAgregar.UseVisualStyleBackColor = true;
@@ -893,7 +889,7 @@ namespace BINAES
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1250, 600);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1250, 573);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // btnSalirEdicionEjemplarAG
@@ -902,9 +898,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalirEdicionEjemplarAG.Enabled = false;
-            this.btnSalirEdicionEjemplarAG.Location = new System.Drawing.Point(3, 555);
+            this.btnSalirEdicionEjemplarAG.Location = new System.Drawing.Point(3, 531);
             this.btnSalirEdicionEjemplarAG.Name = "btnSalirEdicionEjemplarAG";
-            this.btnSalirEdicionEjemplarAG.Size = new System.Drawing.Size(244, 42);
+            this.btnSalirEdicionEjemplarAG.Size = new System.Drawing.Size(244, 39);
             this.btnSalirEdicionEjemplarAG.TabIndex = 28;
             this.btnSalirEdicionEjemplarAG.Text = "Dejar de editar";
             this.btnSalirEdicionEjemplarAG.UseVisualStyleBackColor = true;
@@ -915,9 +911,9 @@ namespace BINAES
             this.btnAgregarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(253, 555);
+            this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(253, 531);
             this.btnAgregarEjemplarAG.Name = "btnAgregarEjemplarAG";
-            this.btnAgregarEjemplarAG.Size = new System.Drawing.Size(244, 42);
+            this.btnAgregarEjemplarAG.Size = new System.Drawing.Size(244, 39);
             this.btnAgregarEjemplarAG.TabIndex = 27;
             this.btnAgregarEjemplarAG.Text = "Agregar";
             this.btnAgregarEjemplarAG.UseVisualStyleBackColor = true;
@@ -928,7 +924,7 @@ namespace BINAES
             this.txtEditorialEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEditorialEjemplarAG.Location = new System.Drawing.Point(253, 49);
+            this.txtEditorialEjemplarAG.Location = new System.Drawing.Point(253, 47);
             this.txtEditorialEjemplarAG.Name = "txtEditorialEjemplarAG";
             this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(244, 29);
             this.txtEditorialEjemplarAG.TabIndex = 22;
@@ -937,7 +933,7 @@ namespace BINAES
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(253, 301);
+            this.label10.Location = new System.Drawing.Point(253, 287);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 21);
             this.label10.TabIndex = 9;
@@ -947,7 +943,7 @@ namespace BINAES
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 117);
+            this.label3.Location = new System.Drawing.Point(3, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 21);
             this.label3.TabIndex = 2;
@@ -957,7 +953,7 @@ namespace BINAES
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 209);
+            this.label4.Location = new System.Drawing.Point(3, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 21);
             this.label4.TabIndex = 3;
@@ -967,7 +963,7 @@ namespace BINAES
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(253, 117);
+            this.label8.Location = new System.Drawing.Point(253, 111);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(154, 21);
             this.label8.TabIndex = 7;
@@ -977,7 +973,7 @@ namespace BINAES
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 301);
+            this.label5.Location = new System.Drawing.Point(3, 287);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 21);
             this.label5.TabIndex = 4;
@@ -987,7 +983,7 @@ namespace BINAES
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(253, 25);
+            this.label2.Location = new System.Drawing.Point(253, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 21);
             this.label2.TabIndex = 1;
@@ -997,7 +993,7 @@ namespace BINAES
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 485);
+            this.label7.Location = new System.Drawing.Point(3, 463);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 21);
             this.label7.TabIndex = 6;
@@ -1007,7 +1003,7 @@ namespace BINAES
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 393);
+            this.label6.Location = new System.Drawing.Point(3, 375);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 21);
             this.label6.TabIndex = 5;
@@ -1017,7 +1013,7 @@ namespace BINAES
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(253, 209);
+            this.label9.Location = new System.Drawing.Point(253, 199);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(129, 21);
             this.label9.TabIndex = 8;
@@ -1027,7 +1023,7 @@ namespace BINAES
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 25);
+            this.label1.Location = new System.Drawing.Point(3, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 21);
             this.label1.TabIndex = 0;
@@ -1038,7 +1034,7 @@ namespace BINAES
             this.txtCodigoEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodigoEjemplarAG.Location = new System.Drawing.Point(3, 49);
+            this.txtCodigoEjemplarAG.Location = new System.Drawing.Point(3, 47);
             this.txtCodigoEjemplarAG.Name = "txtCodigoEjemplarAG";
             this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(244, 29);
             this.txtCodigoEjemplarAG.TabIndex = 10;
@@ -1050,7 +1046,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbIdiomaEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIdiomaEjemplarAG.FormattingEnabled = true;
-            this.cmbIdiomaEjemplarAG.Location = new System.Drawing.Point(3, 325);
+            this.cmbIdiomaEjemplarAG.Location = new System.Drawing.Point(3, 311);
             this.cmbIdiomaEjemplarAG.Name = "cmbIdiomaEjemplarAG";
             this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(244, 29);
             this.cmbIdiomaEjemplarAG.TabIndex = 13;
@@ -1060,9 +1056,9 @@ namespace BINAES
             this.btnEtiquetasEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEtiquetasEjemplarAG.Location = new System.Drawing.Point(3, 509);
+            this.btnEtiquetasEjemplarAG.Location = new System.Drawing.Point(3, 487);
             this.btnEtiquetasEjemplarAG.Name = "btnEtiquetasEjemplarAG";
-            this.btnEtiquetasEjemplarAG.Size = new System.Drawing.Size(244, 40);
+            this.btnEtiquetasEjemplarAG.Size = new System.Drawing.Size(244, 38);
             this.btnEtiquetasEjemplarAG.TabIndex = 15;
             this.btnEtiquetasEjemplarAG.Text = "Seleccionar";
             this.btnEtiquetasEjemplarAG.UseVisualStyleBackColor = true;
@@ -1072,7 +1068,7 @@ namespace BINAES
             this.txtNombreEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 141);
+            this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 135);
             this.txtNombreEjemplarAG.Name = "txtNombreEjemplarAG";
             this.txtNombreEjemplarAG.Size = new System.Drawing.Size(244, 29);
             this.txtNombreEjemplarAG.TabIndex = 23;
@@ -1082,7 +1078,7 @@ namespace BINAES
             this.txtAutorEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 233);
+            this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 223);
             this.txtAutorEjemplarAG.Name = "txtAutorEjemplarAG";
             this.txtAutorEjemplarAG.Size = new System.Drawing.Size(244, 29);
             this.txtAutorEjemplarAG.TabIndex = 24;
@@ -1094,7 +1090,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTipoColeccionEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoColeccionEjemplarAG.FormattingEnabled = true;
-            this.cmbTipoColeccionEjemplarAG.Location = new System.Drawing.Point(253, 233);
+            this.cmbTipoColeccionEjemplarAG.Location = new System.Drawing.Point(253, 223);
             this.cmbTipoColeccionEjemplarAG.Name = "cmbTipoColeccionEjemplarAG";
             this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(244, 29);
             this.cmbTipoColeccionEjemplarAG.TabIndex = 25;
@@ -1106,7 +1102,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFormatoEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFormatoEjemplarAG.FormattingEnabled = true;
-            this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 417);
+            this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 399);
             this.cmbFormatoEjemplarAG.Name = "cmbFormatoEjemplarAG";
             this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(244, 29);
             this.cmbFormatoEjemplarAG.TabIndex = 26;
@@ -1122,7 +1118,7 @@ namespace BINAES
             this.dgvEjemplaresAG.ReadOnly = true;
             this.dgvEjemplaresAG.RowHeadersWidth = 51;
             this.tableLayoutPanel1.SetRowSpan(this.dgvEjemplaresAG, 13);
-            this.dgvEjemplaresAG.Size = new System.Drawing.Size(744, 594);
+            this.dgvEjemplaresAG.Size = new System.Drawing.Size(744, 567);
             this.dgvEjemplaresAG.TabIndex = 29;
             // 
             // dtpFechaPublicacionEjemplarAG
@@ -1130,7 +1126,7 @@ namespace BINAES
             this.dtpFechaPublicacionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(253, 141);
+            this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(253, 135);
             this.dtpFechaPublicacionEjemplarAG.Name = "dtpFechaPublicacionEjemplarAG";
             this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(244, 29);
             this.dtpFechaPublicacionEjemplarAG.TabIndex = 30;
@@ -1141,10 +1137,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picAgregarEjemplar.Image = global::BINAES.Properties.Resources.SubirImagen;
-            this.picAgregarEjemplar.Location = new System.Drawing.Point(253, 325);
+            this.picAgregarEjemplar.Location = new System.Drawing.Point(253, 311);
             this.picAgregarEjemplar.Name = "picAgregarEjemplar";
             this.tableLayoutPanel1.SetRowSpan(this.picAgregarEjemplar, 5);
-            this.picAgregarEjemplar.Size = new System.Drawing.Size(244, 224);
+            this.picAgregarEjemplar.Size = new System.Drawing.Size(244, 214);
             this.picAgregarEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAgregarEjemplar.TabIndex = 31;
             this.picAgregarEjemplar.TabStop = false;
@@ -1156,7 +1152,7 @@ namespace BINAES
             this.tabReserva.Location = new System.Drawing.Point(4, 33);
             this.tabReserva.Name = "tabReserva";
             this.tabReserva.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReserva.Size = new System.Drawing.Size(1250, 600);
+            this.tabReserva.Size = new System.Drawing.Size(1250, 573);
             this.tabReserva.TabIndex = 2;
             this.tabReserva.Text = "Reservas de ejemplares";
             this.tabReserva.UseVisualStyleBackColor = true;
@@ -1191,7 +1187,7 @@ namespace BINAES
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1247, 557);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1247, 530);
             this.tableLayoutPanel2.TabIndex = 12;
             // 
             // dgvReservasRE
@@ -1200,11 +1196,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReservasRE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservasRE.Location = new System.Drawing.Point(437, 58);
+            this.dgvReservasRE.Location = new System.Drawing.Point(437, 56);
             this.dgvReservasRE.Name = "dgvReservasRE";
             this.dgvReservasRE.RowHeadersWidth = 51;
             this.tableLayoutPanel2.SetRowSpan(this.dgvReservasRE, 6);
-            this.dgvReservasRE.Size = new System.Drawing.Size(679, 438);
+            this.dgvReservasRE.Size = new System.Drawing.Size(679, 414);
             this.dgvReservasRE.TabIndex = 31;
             // 
             // label23
@@ -1213,7 +1209,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label23, 2);
-            this.label23.Location = new System.Drawing.Point(127, 108);
+            this.label23.Location = new System.Drawing.Point(127, 102);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(242, 21);
             this.label23.TabIndex = 1;
@@ -1225,9 +1221,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.SetColumnSpan(this.btnBuscarEjemplarRE, 2);
-            this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(127, 132);
+            this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(127, 126);
             this.btnBuscarEjemplarRE.Name = "btnBuscarEjemplarRE";
-            this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(242, 68);
+            this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(242, 64);
             this.btnBuscarEjemplarRE.TabIndex = 33;
             this.btnBuscarEjemplarRE.Text = "Buscar";
             this.btnBuscarEjemplarRE.UseVisualStyleBackColor = true;
@@ -1239,9 +1235,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.SetColumnSpan(this.btnPrestarRE, 2);
-            this.btnPrestarRE.Location = new System.Drawing.Point(127, 428);
+            this.btnPrestarRE.Location = new System.Drawing.Point(127, 406);
             this.btnPrestarRE.Name = "btnPrestarRE";
-            this.btnPrestarRE.Size = new System.Drawing.Size(242, 68);
+            this.btnPrestarRE.Size = new System.Drawing.Size(242, 64);
             this.btnPrestarRE.TabIndex = 32;
             this.btnPrestarRE.Text = "Completar";
             this.btnPrestarRE.UseVisualStyleBackColor = true;
@@ -1252,7 +1248,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label22, 2);
-            this.label22.Location = new System.Drawing.Point(127, 256);
+            this.label22.Location = new System.Drawing.Point(127, 242);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(242, 21);
             this.label22.TabIndex = 34;
@@ -1264,9 +1260,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.SetColumnSpan(this.btnQrRE, 2);
-            this.btnQrRE.Location = new System.Drawing.Point(127, 280);
+            this.btnQrRE.Location = new System.Drawing.Point(127, 266);
             this.btnQrRE.Name = "btnQrRE";
-            this.btnQrRE.Size = new System.Drawing.Size(242, 68);
+            this.btnQrRE.Size = new System.Drawing.Size(242, 64);
             this.btnQrRE.TabIndex = 35;
             this.btnQrRE.Text = "QR";
             this.btnQrRE.UseVisualStyleBackColor = true;
@@ -1318,7 +1314,7 @@ namespace BINAES
             this.tabPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPrestamo.Name = "tabPrestamo";
             this.tabPrestamo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPrestamo.Size = new System.Drawing.Size(1250, 600);
+            this.tabPrestamo.Size = new System.Drawing.Size(1250, 573);
             this.tabPrestamo.TabIndex = 1;
             this.tabPrestamo.Text = "Préstamo de ejemplares";
             this.tabPrestamo.UseVisualStyleBackColor = true;
@@ -1353,7 +1349,7 @@ namespace BINAES
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.928802F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.090615F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.81877F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1247, 601);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1247, 574);
             this.tableLayoutPanel4.TabIndex = 13;
             // 
             // dataGridView1
@@ -1362,11 +1358,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(346, 77);
+            this.dataGridView1.Location = new System.Drawing.Point(346, 74);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.tableLayoutPanel4.SetRowSpan(this.dataGridView1, 7);
-            this.dataGridView1.Size = new System.Drawing.Size(771, 521);
+            this.dataGridView1.Size = new System.Drawing.Size(771, 497);
             this.dataGridView1.TabIndex = 31;
             // 
             // label18
@@ -1374,7 +1370,7 @@ namespace BINAES
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(127, 127);
+            this.label18.Location = new System.Drawing.Point(127, 121);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(159, 21);
             this.label18.TabIndex = 1;
@@ -1385,16 +1381,16 @@ namespace BINAES
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(127, 353);
+            this.button1.Location = new System.Drawing.Point(127, 337);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 42);
+            this.button1.Size = new System.Drawing.Size(159, 39);
             this.button1.TabIndex = 32;
             this.button1.Text = "Completar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(127, 306);
+            this.textBox3.Location = new System.Drawing.Point(127, 292);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(159, 29);
             this.textBox3.TabIndex = 34;
@@ -1404,7 +1400,7 @@ namespace BINAES
             this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(127, 282);
+            this.label21.Location = new System.Drawing.Point(127, 268);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(159, 21);
             this.label21.TabIndex = 8;
@@ -1415,9 +1411,9 @@ namespace BINAES
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(127, 199);
+            this.button2.Location = new System.Drawing.Point(127, 190);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 34);
+            this.button2.Size = new System.Drawing.Size(159, 32);
             this.button2.TabIndex = 33;
             this.button2.Text = "Búscar";
             this.button2.UseVisualStyleBackColor = true;
@@ -1427,7 +1423,7 @@ namespace BINAES
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(127, 151);
+            this.textBox4.Location = new System.Drawing.Point(127, 145);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(159, 29);
             this.textBox4.TabIndex = 35;
@@ -1440,7 +1436,7 @@ namespace BINAES
             this.tabBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBuscar.Name = "tabBuscar";
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabBuscar.Size = new System.Drawing.Size(1250, 600);
+            this.tabBuscar.Size = new System.Drawing.Size(1250, 573);
             this.tabBuscar.TabIndex = 0;
             this.tabBuscar.Text = "Búsqueda de ejemplares";
             // 
@@ -1475,7 +1471,7 @@ namespace BINAES
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1250, 557);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1250, 530);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
             // dgvEjemplaresBU
@@ -1485,18 +1481,18 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEjemplaresBU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel7.SetColumnSpan(this.dgvEjemplaresBU, 5);
-            this.dgvEjemplaresBU.Location = new System.Drawing.Point(65, 112);
+            this.dgvEjemplaresBU.Location = new System.Drawing.Point(65, 107);
             this.dgvEjemplaresBU.Name = "dgvEjemplaresBU";
             this.dgvEjemplaresBU.RowHeadersWidth = 62;
             this.dgvEjemplaresBU.RowTemplate.Height = 28;
-            this.dgvEjemplaresBU.Size = new System.Drawing.Size(1118, 411);
+            this.dgvEjemplaresBU.Size = new System.Drawing.Size(1118, 391);
             this.dgvEjemplaresBU.TabIndex = 4;
             // 
             // txtBuscarEjemplarBU
             // 
             this.txtBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarEjemplarBU.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(65, 50);
+            this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(65, 47);
             this.txtBuscarEjemplarBU.Name = "txtBuscarEjemplarBU";
             this.tableLayoutPanel7.SetRowSpan(this.txtBuscarEjemplarBU, 2);
             this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(744, 36);
@@ -1506,7 +1502,7 @@ namespace BINAES
             // btnBuscarEjemplarBU
             // 
             this.btnBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarEjemplarBU.Location = new System.Drawing.Point(815, 47);
+            this.btnBuscarEjemplarBU.Location = new System.Drawing.Point(815, 44);
             this.btnBuscarEjemplarBU.Name = "btnBuscarEjemplarBU";
             this.tableLayoutPanel7.SetRowSpan(this.btnBuscarEjemplarBU, 2);
             this.btnBuscarEjemplarBU.Size = new System.Drawing.Size(56, 42);
@@ -1522,7 +1518,7 @@ namespace BINAES
             this.chkBusquedaExactaBU.AutoSize = true;
             this.tableLayoutPanel7.SetColumnSpan(this.chkBusquedaExactaBU, 2);
             this.chkBusquedaExactaBU.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBusquedaExactaBU.Location = new System.Drawing.Point(877, 42);
+            this.chkBusquedaExactaBU.Location = new System.Drawing.Point(877, 39);
             this.chkBusquedaExactaBU.Name = "chkBusquedaExactaBU";
             this.chkBusquedaExactaBU.Size = new System.Drawing.Size(181, 23);
             this.chkBusquedaExactaBU.TabIndex = 5;
@@ -1536,9 +1532,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(877, 68);
+            this.label24.Location = new System.Drawing.Point(877, 65);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(56, 41);
+            this.label24.Size = new System.Drawing.Size(56, 39);
             this.label24.TabIndex = 6;
             this.label24.Text = "Filtro:";
             // 
@@ -1548,7 +1544,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltrarEjemplarBU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(939, 71);
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(939, 68);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
             this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(119, 29);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
@@ -1560,7 +1556,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkFísicoBU.AutoSize = true;
             this.chkFísicoBU.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFísicoBU.Location = new System.Drawing.Point(1064, 42);
+            this.chkFísicoBU.Location = new System.Drawing.Point(1064, 39);
             this.chkFísicoBU.Name = "chkFísicoBU";
             this.chkFísicoBU.Size = new System.Drawing.Size(119, 23);
             this.chkFísicoBU.TabIndex = 7;
@@ -1573,7 +1569,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDigitalBU.AutoSize = true;
             this.chkDigitalBU.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDigitalBU.Location = new System.Drawing.Point(1064, 71);
+            this.chkDigitalBU.Location = new System.Drawing.Point(1064, 68);
             this.chkDigitalBU.Name = "chkDigitalBU";
             this.chkDigitalBU.Size = new System.Drawing.Size(119, 23);
             this.chkDigitalBU.TabIndex = 8;
@@ -1597,13 +1593,13 @@ namespace BINAES
             this.tabAdmin.Controls.Add(this.tabUsuarios);
             this.tabAdmin.Controls.Add(this.tabMisionVision);
             this.tabAdmin.Controls.Add(this.tabIntroduccion);
-            this.tabAdmin.Controls.Add(this.tabPage1);
+            this.tabAdmin.Controls.Add(this.tabColeccion);
             this.tabAdmin.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAdmin.Location = new System.Drawing.Point(0, 28);
             this.tabAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabAdmin.Name = "tabAdmin";
             this.tabAdmin.SelectedIndex = 0;
-            this.tabAdmin.Size = new System.Drawing.Size(1258, 637);
+            this.tabAdmin.Size = new System.Drawing.Size(1258, 610);
             this.tabAdmin.TabIndex = 0;
             this.tabAdmin.TabStop = false;
             this.tabAdmin.Tag = "";
@@ -1616,7 +1612,7 @@ namespace BINAES
             this.tabMisionVision.Location = new System.Drawing.Point(4, 33);
             this.tabMisionVision.Name = "tabMisionVision";
             this.tabMisionVision.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMisionVision.Size = new System.Drawing.Size(1250, 600);
+            this.tabMisionVision.Size = new System.Drawing.Size(1250, 573);
             this.tabMisionVision.TabIndex = 6;
             this.tabMisionVision.Text = "Mision y Vision";
             this.tabMisionVision.UseVisualStyleBackColor = true;
@@ -1639,7 +1635,7 @@ namespace BINAES
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1256, 604);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1256, 577);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // lblMision
@@ -1653,7 +1649,7 @@ namespace BINAES
             this.lblMision.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblMision.Location = new System.Drawing.Point(3, 0);
             this.lblMision.Name = "lblMision";
-            this.lblMision.Size = new System.Drawing.Size(1250, 120);
+            this.lblMision.Size = new System.Drawing.Size(1250, 115);
             this.lblMision.TabIndex = 0;
             this.lblMision.Text = " MISIÓN ";
             this.lblMision.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1667,9 +1663,9 @@ namespace BINAES
             this.lblVision.BackColor = System.Drawing.Color.DodgerBlue;
             this.lblVision.Font = new System.Drawing.Font("Nirmala UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVision.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblVision.Location = new System.Drawing.Point(3, 301);
+            this.lblVision.Location = new System.Drawing.Point(3, 288);
             this.lblVision.Name = "lblVision";
-            this.lblVision.Size = new System.Drawing.Size(1250, 120);
+            this.lblVision.Size = new System.Drawing.Size(1250, 115);
             this.lblVision.TabIndex = 1;
             this.lblVision.Text = " VISIÓN ";
             this.lblVision.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1682,9 +1678,9 @@ namespace BINAES
             this.lblInfoMision.AutoSize = true;
             this.lblInfoMision.BackColor = System.Drawing.Color.LightSkyBlue;
             this.lblInfoMision.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoMision.Location = new System.Drawing.Point(3, 120);
+            this.lblInfoMision.Location = new System.Drawing.Point(3, 115);
             this.lblInfoMision.Name = "lblInfoMision";
-            this.lblInfoMision.Size = new System.Drawing.Size(1250, 181);
+            this.lblInfoMision.Size = new System.Drawing.Size(1250, 173);
             this.lblInfoMision.TabIndex = 2;
             this.lblInfoMision.Text = resources.GetString("lblInfoMision.Text");
             this.lblInfoMision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1697,9 +1693,9 @@ namespace BINAES
             this.lblInfoVision.AutoSize = true;
             this.lblInfoVision.BackColor = System.Drawing.Color.LightSkyBlue;
             this.lblInfoVision.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoVision.Location = new System.Drawing.Point(3, 421);
+            this.lblInfoVision.Location = new System.Drawing.Point(3, 403);
             this.lblInfoVision.Name = "lblInfoVision";
-            this.lblInfoVision.Size = new System.Drawing.Size(1250, 183);
+            this.lblInfoVision.Size = new System.Drawing.Size(1250, 174);
             this.lblInfoVision.TabIndex = 3;
             this.lblInfoVision.Text = resources.GetString("lblInfoVision.Text");
             this.lblInfoVision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1710,7 +1706,7 @@ namespace BINAES
             this.tabIntroduccion.Location = new System.Drawing.Point(4, 33);
             this.tabIntroduccion.Name = "tabIntroduccion";
             this.tabIntroduccion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIntroduccion.Size = new System.Drawing.Size(1250, 600);
+            this.tabIntroduccion.Size = new System.Drawing.Size(1250, 573);
             this.tabIntroduccion.TabIndex = 8;
             this.tabIntroduccion.Text = "Introduccion";
             this.tabIntroduccion.UseVisualStyleBackColor = true;
@@ -1731,7 +1727,7 @@ namespace BINAES
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1256, 604);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1256, 577);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // label31
@@ -1745,7 +1741,7 @@ namespace BINAES
             this.label31.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label31.Location = new System.Drawing.Point(3, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(1250, 120);
+            this.label31.Size = new System.Drawing.Size(1250, 115);
             this.label31.TabIndex = 0;
             this.label31.Text = "Quienes somos?";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1758,9 +1754,9 @@ namespace BINAES
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label32.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(3, 120);
+            this.label32.Location = new System.Drawing.Point(3, 115);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(1250, 241);
+            this.label32.Size = new System.Drawing.Size(1250, 230);
             this.label32.TabIndex = 1;
             this.label32.Text = resources.GetString("label32.Text");
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1773,161 +1769,172 @@ namespace BINAES
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label33.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(3, 361);
+            this.label33.Location = new System.Drawing.Point(3, 345);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(1250, 243);
+            this.label33.Size = new System.Drawing.Size(1250, 232);
             this.label33.TabIndex = 2;
             this.label33.Text = resources.GetString("label33.Text");
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabPage1
+            // tabColeccion
             // 
-            this.tabPage1.Controls.Add(this.tableLayoutPanel8);
-            this.tabPage1.Location = new System.Drawing.Point(4, 33);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1250, 600);
-            this.tabPage1.TabIndex = 9;
-            this.tabPage1.Text = "Colección";
+            this.tabColeccion.Controls.Add(this.tblColeccion);
+            this.tabColeccion.Location = new System.Drawing.Point(4, 33);
+            this.tabColeccion.Name = "tabColeccion";
+            this.tabColeccion.Size = new System.Drawing.Size(1250, 573);
+            this.tabColeccion.TabIndex = 9;
+            this.tabColeccion.Text = "Colecciones";
             // 
-            // tableLayoutPanel8
+            // tblColeccion
             // 
-            this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tblColeccion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel8.ColumnCount = 4;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.48F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.84F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.6F));
-            this.tableLayoutPanel8.Controls.Add(this.label28, 1, 5);
-            this.tableLayoutPanel8.Controls.Add(this.label27, 1, 3);
-            this.tableLayoutPanel8.Controls.Add(this.label47, 1, 1);
-            this.tableLayoutPanel8.Controls.Add(this.dataGridViewColeccion, 3, 1);
-            this.tableLayoutPanel8.Controls.Add(this.comboBox2, 1, 4);
-            this.tableLayoutPanel8.Controls.Add(this.comboBox3, 1, 6);
-            this.tableLayoutPanel8.Controls.Add(this.textBox5, 1, 2);
-            this.tableLayoutPanel8.Controls.Add(this.button3, 1, 8);
-            this.tableLayoutPanel8.Controls.Add(this.btnBuscarCO, 1, 11);
-            this.tableLayoutPanel8.Controls.Add(this.button4, 1, 9);
-            this.tableLayoutPanel8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(8, 4);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 13;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1250, 600);
-            this.tableLayoutPanel8.TabIndex = 12;
+            this.tblColeccion.ColumnCount = 4;
+            this.tblColeccion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6F));
+            this.tblColeccion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.48F));
+            this.tblColeccion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.84F));
+            this.tblColeccion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.6F));
+            this.tblColeccion.Controls.Add(this.lblGeneroColeccionCO, 1, 5);
+            this.tblColeccion.Controls.Add(this.lblTipoColeccionCO, 1, 3);
+            this.tblColeccion.Controls.Add(this.lblNombreColeccionCO, 1, 1);
+            this.tblColeccion.Controls.Add(this.dgvColeccionesCO, 3, 1);
+            this.tblColeccion.Controls.Add(this.cmbTipoColeccionCO, 1, 4);
+            this.tblColeccion.Controls.Add(this.cmbGeneroColeccionCO, 1, 6);
+            this.tblColeccion.Controls.Add(this.txtNombreColeccionCO, 1, 2);
+            this.tblColeccion.Controls.Add(this.btnDejarDeEditarCO, 1, 8);
+            this.tblColeccion.Controls.Add(this.btnBuscarCO, 1, 11);
+            this.tblColeccion.Controls.Add(this.btnAgregarCO, 1, 9);
+            this.tblColeccion.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblColeccion.Location = new System.Drawing.Point(0, 0);
+            this.tblColeccion.Name = "tblColeccion";
+            this.tblColeccion.RowCount = 13;
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblColeccion.Size = new System.Drawing.Size(1250, 573);
+            this.tblColeccion.TabIndex = 12;
             // 
-            // label28
+            // lblGeneroColeccionCO
             // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(78, 255);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(64, 21);
-            this.label28.TabIndex = 3;
-            this.label28.Text = "Genero:";
+            this.lblGeneroColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblGeneroColeccionCO.AutoSize = true;
+            this.lblGeneroColeccionCO.Location = new System.Drawing.Point(78, 243);
+            this.lblGeneroColeccionCO.Name = "lblGeneroColeccionCO";
+            this.lblGeneroColeccionCO.Size = new System.Drawing.Size(64, 21);
+            this.lblGeneroColeccionCO.TabIndex = 3;
+            this.lblGeneroColeccionCO.Text = "Genero:";
             // 
-            // label27
+            // lblTipoColeccionCO
             // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(78, 163);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(132, 21);
-            this.label27.TabIndex = 2;
-            this.label27.Text = "Tipo de colección:";
+            this.lblTipoColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTipoColeccionCO.AutoSize = true;
+            this.lblTipoColeccionCO.Location = new System.Drawing.Point(78, 155);
+            this.lblTipoColeccionCO.Name = "lblTipoColeccionCO";
+            this.lblTipoColeccionCO.Size = new System.Drawing.Size(132, 21);
+            this.lblTipoColeccionCO.TabIndex = 2;
+            this.lblTipoColeccionCO.Text = "Tipo de colección:";
             // 
-            // label47
+            // lblNombreColeccionCO
             // 
-            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(78, 71);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(71, 21);
-            this.label47.TabIndex = 0;
-            this.label47.Text = "Nombre:";
-            this.label47.Click += new System.EventHandler(this.label47_Click);
+            this.lblNombreColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblNombreColeccionCO.AutoSize = true;
+            this.lblNombreColeccionCO.Location = new System.Drawing.Point(78, 67);
+            this.lblNombreColeccionCO.Name = "lblNombreColeccionCO";
+            this.lblNombreColeccionCO.Size = new System.Drawing.Size(71, 21);
+            this.lblNombreColeccionCO.TabIndex = 0;
+            this.lblNombreColeccionCO.Text = "Nombre:";
+            this.lblNombreColeccionCO.Click += new System.EventHandler(this.label47_Click);
             // 
-            // dataGridViewColeccion
+            // dgvColeccionesCO
             // 
-            this.dataGridViewColeccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewColeccion.Location = new System.Drawing.Point(582, 49);
-            this.dataGridViewColeccion.Name = "dataGridViewColeccion";
-            this.tableLayoutPanel8.SetRowSpan(this.dataGridViewColeccion, 12);
-            this.dataGridViewColeccion.Size = new System.Drawing.Size(616, 500);
-            this.dataGridViewColeccion.TabIndex = 29;
+            this.dgvColeccionesCO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvColeccionesCO.Location = new System.Drawing.Point(582, 47);
+            this.dgvColeccionesCO.Name = "dgvColeccionesCO";
+            this.tblColeccion.SetRowSpan(this.dgvColeccionesCO, 12);
+            this.dgvColeccionesCO.Size = new System.Drawing.Size(616, 500);
+            this.dgvColeccionesCO.TabIndex = 29;
             // 
-            // button3
+            // cmbTipoColeccionCO
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(195, 371);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 40);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Dejar de editar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button4.Location = new System.Drawing.Point(195, 417);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 40);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Agregar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbTipoColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(78, 187);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(400, 29);
-            this.comboBox2.TabIndex = 31;
+            this.cmbTipoColeccionCO.FormattingEnabled = true;
+            this.cmbTipoColeccionCO.Location = new System.Drawing.Point(78, 179);
+            this.cmbTipoColeccionCO.Name = "cmbTipoColeccionCO";
+            this.cmbTipoColeccionCO.Size = new System.Drawing.Size(400, 29);
+            this.cmbTipoColeccionCO.TabIndex = 31;
             // 
-            // comboBox3
+            // cmbGeneroColeccionCO
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(78, 279);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(400, 29);
-            this.comboBox3.TabIndex = 32;
+            this.cmbGeneroColeccionCO.FormattingEnabled = true;
+            this.cmbGeneroColeccionCO.Location = new System.Drawing.Point(78, 267);
+            this.cmbGeneroColeccionCO.Name = "cmbGeneroColeccionCO";
+            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(400, 29);
+            this.cmbGeneroColeccionCO.TabIndex = 32;
             // 
-            // textBox5
+            // txtNombreColeccionCO
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtNombreColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(78, 95);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(400, 29);
-            this.textBox5.TabIndex = 33;
+            this.txtNombreColeccionCO.Location = new System.Drawing.Point(78, 91);
+            this.txtNombreColeccionCO.Name = "txtNombreColeccionCO";
+            this.txtNombreColeccionCO.Size = new System.Drawing.Size(400, 29);
+            this.txtNombreColeccionCO.TabIndex = 33;
+            // 
+            // btnDejarDeEditarCO
+            // 
+            this.btnDejarDeEditarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnDejarDeEditarCO.Enabled = false;
+            this.btnDejarDeEditarCO.Location = new System.Drawing.Point(195, 355);
+            this.btnDejarDeEditarCO.Name = "btnDejarDeEditarCO";
+            this.btnDejarDeEditarCO.Size = new System.Drawing.Size(165, 38);
+            this.btnDejarDeEditarCO.TabIndex = 28;
+            this.btnDejarDeEditarCO.Text = "Dejar de editar";
+            this.btnDejarDeEditarCO.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarCO
+            // 
+            this.btnBuscarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnBuscarCO.Location = new System.Drawing.Point(170, 487);
+            this.btnBuscarCO.Name = "btnBuscarCO";
+            this.btnBuscarCO.Size = new System.Drawing.Size(215, 38);
+            this.btnBuscarCO.TabIndex = 34;
+            this.btnBuscarCO.Text = "Colecciones Disponibles";
+            this.btnBuscarCO.UseVisualStyleBackColor = true;
+            this.btnBuscarCO.Click += new System.EventHandler(this.btnBuscarCO_Click);
+            // 
+            // btnAgregarCO
+            // 
+            this.btnAgregarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnAgregarCO.Location = new System.Drawing.Point(195, 399);
+            this.btnAgregarCO.Name = "btnAgregarCO";
+            this.btnAgregarCO.Size = new System.Drawing.Size(166, 38);
+            this.btnAgregarCO.TabIndex = 27;
+            this.btnAgregarCO.Text = "Agregar";
+            this.btnAgregarCO.UseVisualStyleBackColor = true;
             // 
             // tlpColeccionCO
             // 
@@ -1973,34 +1980,6 @@ namespace BINAES
             this.txtNombreCO.Size = new System.Drawing.Size(100, 20);
             this.txtNombreCO.TabIndex = 0;
             // 
-            // cmbTipoColeccionCO
-            // 
-            this.cmbTipoColeccionCO.Location = new System.Drawing.Point(0, 0);
-            this.cmbTipoColeccionCO.Name = "cmbTipoColeccionCO";
-            this.cmbTipoColeccionCO.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoColeccionCO.TabIndex = 0;
-            // 
-            // cmbGeneroColeccionCO
-            // 
-            this.cmbGeneroColeccionCO.Location = new System.Drawing.Point(0, 0);
-            this.cmbGeneroColeccionCO.Name = "cmbGeneroColeccionCO";
-            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(121, 21);
-            this.cmbGeneroColeccionCO.TabIndex = 0;
-            // 
-            // btnAgregarCO
-            // 
-            this.btnAgregarCO.Location = new System.Drawing.Point(0, 0);
-            this.btnAgregarCO.Name = "btnAgregarCO";
-            this.btnAgregarCO.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarCO.TabIndex = 0;
-            // 
-            // btnDejardeEditarCO
-            // 
-            this.btnDejardeEditarCO.Location = new System.Drawing.Point(0, 0);
-            this.btnDejardeEditarCO.Name = "btnDejardeEditarCO";
-            this.btnDejardeEditarCO.Size = new System.Drawing.Size(75, 23);
-            this.btnDejardeEditarCO.TabIndex = 0;
-            // 
             // sspStatus
             // 
             this.sspStatus.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -2023,17 +2002,6 @@ namespace BINAES
             this.sspRol.Name = "sspRol";
             this.sspRol.Size = new System.Drawing.Size(30, 17);
             this.sspRol.Text = "Rol: ";
-            // 
-            // btnBuscarCO
-            // 
-            this.btnBuscarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnBuscarCO.Location = new System.Drawing.Point(170, 509);
-            this.btnBuscarCO.Name = "btnBuscarCO";
-            this.btnBuscarCO.Size = new System.Drawing.Size(215, 40);
-            this.btnBuscarCO.TabIndex = 34;
-            this.btnBuscarCO.Text = "Colecciones Disponibles";
-            this.btnBuscarCO.UseVisualStyleBackColor = true;
-            this.btnBuscarCO.Click += new System.EventHandler(this.btnBuscarCO_Click);
             // 
             // frmPrincipal
             // 
@@ -2088,10 +2056,10 @@ namespace BINAES
             this.tabIntroduccion.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewColeccion)).EndInit();
+            this.tabColeccion.ResumeLayout(false);
+            this.tblColeccion.ResumeLayout(false);
+            this.tblColeccion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColeccionesCO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaColeccionCO)).EndInit();
             this.sspStatus.ResumeLayout(false);
             this.sspStatus.PerformLayout();
@@ -2210,17 +2178,13 @@ namespace BINAES
         private Label label21;
         private Button button2;
         private TextBox textBox4;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabColeccion;
         private System.Windows.Forms.TableLayoutPanel tlpColeccionCO;
         private Label label19;
         private Label label20;
         private Label label29;
         private DataGridView dgvVistaColeccionCO;
         private TextBox txtNombreCO;
-        private ComboBox cmbTipoColeccionCO;
-        private ComboBox cmbGeneroColeccionCO;
-        private Button btnAgregarCO;
-        private Button btnDejardeEditarCO;
         private NumericUpDown nudIdUsuarioRE;
         private Label label22;
         private Button btnQrRE;
@@ -2233,16 +2197,16 @@ namespace BINAES
         private Label label24;
         private CheckBox chkFísicoBU;
         private CheckBox chkDigitalBU;
-        private TableLayoutPanel tableLayoutPanel8;
-        private Button button3;
-        private Button button4;
-        private Label label27;
-        private Label label28;
-        private Label label47;
-        private DataGridView dataGridViewColeccion;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private TextBox textBox5;
+        private TableLayoutPanel tblColeccion;
+        private Button btnDejarDeEditarCO;
+        private Button btnAgregarCO;
+        private Label lblTipoColeccionCO;
+        private Label lblGeneroColeccionCO;
+        private Label lblNombreColeccionCO;
+        private DataGridView dgvColeccionesCO;
+        private ComboBox cmbTipoColeccionCO;
+        private ComboBox cmbGeneroColeccionCO;
+        private TextBox txtNombreColeccionCO;
         private Button btnBuscarCO;
     }
 }
