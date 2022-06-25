@@ -180,20 +180,48 @@ namespace BINAES
         // Formulario de eventos
         private void dgvEventosEV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            txtTituloEventoEV.Text = dgv.Rows[e.RowIndex].Cells["titulo"].Value.ToString();
             try
             {
-                picImagenEV.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + "/" + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
+                DataGridView dgv = (DataGridView)sender;
+                txtTituloEventoEV.Text = dgv.Rows[e.RowIndex].Cells["titulo"].Value.ToString();
+                try
+                {
+                    picImagenEV.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + "/" + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
+                }
+                catch (Exception ex2)
+                {
+                    picImagenEV.Image = Properties.Resources._default;
+                }
+                dtpFechaInicioEV.Text = dgv.Rows[e.RowIndex].Cells["fechaInicio"].Value.ToString();
+                dtpFechaFinalizacionEV.Text = dgv.Rows[e.RowIndex].Cells["fechaFin"].Value.ToString();
+                cmbAreaEventoEV.SelectedValue = dgv.Rows[e.RowIndex].Cells["id_area"].Value;
+                rtbObjetivoEventoEV.Clear();
+                List<ObjetivoEvento> objetivos = ObjetivoEventoDAO.Leer(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["id"].Value));
+                foreach (ObjetivoEvento obj in objetivos)
+                {
+                    rtbObjetivoEventoEV.AppendText(obj.objetivo + Environment.NewLine);
+                }
+                nudNumeroAsistentesEV.Value = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["numero_asistentes"].Value);
+                btnDejarDeEditarEV.Enabled = true;
+                btnEliminarEventoEV.Enabled = true;
+                btnAgregarEventoEV.Tag = null;
             }
-            catch (Exception ex)
+            catch (Exception ex1)
             {
-                picImagenEV.Image = Properties.Resources._default;
+
             }
-            dtpFechaInicioEV.Text = dgv.Rows[e.RowIndex].Cells["fechaInicio"].Value.ToString();
-            dtpFechaFinalizacionEV.Text = dgv.Rows[e.RowIndex].Cells["fechaFin"].Value.ToString();
-            cmbAreaEventoEV.SelectedValue = dgv.Rows[e.RowIndex].Cells["id_area"].Value;
-            nudNumeroAsistentesEV.Value = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["numero_asistentes"].Value);
+        }
+        private void btnDejarDeEditarEV_Click(object sender, EventArgs e)
+        {
+            txtTituloEventoEV.Clear();
+            picImagenEV.Image = Properties.Resources._default;
+            dtpFechaInicioEV.ResetText();
+            dtpFechaFinalizacionEV.ResetText();
+            rtbObjetivoEventoEV.Clear();
+            nudNumeroAsistentesEV.Value = 0;
+            btnDejarDeEditarEV.Enabled = false;
+            btnEliminarEventoEV.Enabled = false;
+            btnAgregarEventoEV.Tag = "1";
         }
         private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -226,6 +254,22 @@ namespace BINAES
         private void picImagenEV_Click(object sender, EventArgs e)
         {
             Utils.SeleccionarImagen(picImagenEV);
+        }
+        private void btnAgregarEV_Click(object sender, EventArgs e)
+        {
+            // si es null, estamos en modo edicion
+            if (btnAgregarEventoEV.Tag == null)
+            {
+                String obj = rtbObjetivoEventoEV.Text;
+                obj.Trim();
+                List<string> objetivos = (obj.Split('\n')).ToList();
+                objetivos.RemoveAll(str => str == "");
+                objetivos.Take(ObjetivoEventoDAO.ContarElementosPorIdEvento());
+            }
+            else
+            {
+
+            }
         }
 
 
@@ -279,11 +323,6 @@ namespace BINAES
         }
 
         private void btnAgregarEjemplarAG_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnAgregarEV_Click(object sender, EventArgs e)
         {
            
         }
