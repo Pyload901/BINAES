@@ -44,21 +44,21 @@ namespace BINAES
             this.tabEventos = new System.Windows.Forms.TabPage();
             this.tblEventos = new System.Windows.Forms.TableLayoutPanel();
             this.dgvEventosEV = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblTituloEventoEV = new System.Windows.Forms.Label();
             this.txtTituloEventoEV = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblFechaInicioEventoEV = new System.Windows.Forms.Label();
             this.dtpFechaInicioEV = new System.Windows.Forms.DateTimePicker();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblFechaFinalizacionEventoEV = new System.Windows.Forms.Label();
             this.dtpFechaFinalizacionEV = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblObjetivosEventoEV = new System.Windows.Forms.Label();
             this.rtbObjetivoEventoEV = new System.Windows.Forms.RichTextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblAreaEventoEV = new System.Windows.Forms.Label();
             this.cmbAreaEventoEV = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblNumeroAsistentesEV = new System.Windows.Forms.Label();
             this.nudNumeroAsistentesEV = new System.Windows.Forms.NumericUpDown();
             this.btnDejarDeEditarEV = new System.Windows.Forms.Button();
             this.picImagenEV = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblImagenEV = new System.Windows.Forms.Label();
             this.btnEliminarEventoEV = new System.Windows.Forms.Button();
             this.btnAgregarEventoEV = new System.Windows.Forms.Button();
             this.btnEditarEventoEV = new System.Windows.Forms.Button();
@@ -67,16 +67,16 @@ namespace BINAES
             this.btnSalirEdicionEjemplarAG = new System.Windows.Forms.Button();
             this.btnAgregarEjemplarAG = new System.Windows.Forms.Button();
             this.txtEditorialEjemplarAG = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblImagenEjemplarEJ = new System.Windows.Forms.Label();
+            this.lblNombreEjemplarEJ = new System.Windows.Forms.Label();
+            this.lblAutorEjemplarEJ = new System.Windows.Forms.Label();
+            this.lblFechaPublicacionEjemplarEJ = new System.Windows.Forms.Label();
+            this.lblIdiomaEjemplarEJ = new System.Windows.Forms.Label();
+            this.lblEditorialEjemplarEJ = new System.Windows.Forms.Label();
+            this.lblEtiquetasEjemplarEJ = new System.Windows.Forms.Label();
+            this.lblFormatoEjemplarEJ = new System.Windows.Forms.Label();
+            this.lblTipoColeccionEjemplarEJ = new System.Windows.Forms.Label();
+            this.lblCodigoEjemplarEJ = new System.Windows.Forms.Label();
             this.txtCodigoEjemplarAG = new System.Windows.Forms.TextBox();
             this.cmbIdiomaEjemplarAG = new System.Windows.Forms.ComboBox();
             this.btnEtiquetasEjemplarAG = new System.Windows.Forms.Button();
@@ -90,10 +90,10 @@ namespace BINAES
             this.tabReserva = new System.Windows.Forms.TabPage();
             this.tblReserva = new System.Windows.Forms.TableLayoutPanel();
             this.dgvReservasRE = new System.Windows.Forms.DataGridView();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblEjemplarRE = new System.Windows.Forms.Label();
             this.btnBuscarEjemplarRE = new System.Windows.Forms.Button();
-            this.btnPrestarRE = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
+            this.btnReservarRE = new System.Windows.Forms.Button();
+            this.lblUsuarioRE = new System.Windows.Forms.Label();
             this.btnQrRE = new System.Windows.Forms.Button();
             this.nudIdUsuarioRE = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
@@ -102,11 +102,11 @@ namespace BINAES
             this.tabPrestamo = new System.Windows.Forms.TabPage();
             this.tblPrestamo = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblEjemplarPR = new System.Windows.Forms.Label();
+            this.btnCompletarPR = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lblUsuarioPR = new System.Windows.Forms.Label();
+            this.btnBuscarPR = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.tblBusqueda = new System.Windows.Forms.TableLayoutPanel();
@@ -114,7 +114,7 @@ namespace BINAES
             this.txtBuscarEjemplarBU = new System.Windows.Forms.TextBox();
             this.btnBuscarEjemplarBU = new System.Windows.Forms.Button();
             this.chkBusquedaExactaBU = new System.Windows.Forms.CheckBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.lblFiltroBU = new System.Windows.Forms.Label();
             this.cmbFiltrarEjemplarBU = new System.Windows.Forms.ComboBox();
             this.chkFísicoBU = new System.Windows.Forms.CheckBox();
             this.chkDigitalBU = new System.Windows.Forms.CheckBox();
@@ -152,9 +152,9 @@ namespace BINAES
             this.lblInfoVision = new System.Windows.Forms.Label();
             this.tabIntroduccion = new System.Windows.Forms.TabPage();
             this.tblQuienesSomos = new System.Windows.Forms.TableLayoutPanel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
+            this.lblQuienesSomos = new System.Windows.Forms.Label();
+            this.lblQuienesSomosTXT = new System.Windows.Forms.Label();
+            this.lblQuienesSomosTXT2 = new System.Windows.Forms.Label();
             this.tabColeccion = new System.Windows.Forms.TabPage();
             this.tblColeccion = new System.Windows.Forms.TableLayoutPanel();
             this.lblGeneroColeccionCO = new System.Windows.Forms.Label();
@@ -319,21 +319,21 @@ namespace BINAES
             this.tblEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tblEventos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblEventos.Controls.Add(this.dgvEventosEV, 4, 0);
-            this.tblEventos.Controls.Add(this.label12, 0, 0);
+            this.tblEventos.Controls.Add(this.lblTituloEventoEV, 0, 0);
             this.tblEventos.Controls.Add(this.txtTituloEventoEV, 0, 1);
-            this.tblEventos.Controls.Add(this.label13, 0, 2);
+            this.tblEventos.Controls.Add(this.lblFechaInicioEventoEV, 0, 2);
             this.tblEventos.Controls.Add(this.dtpFechaInicioEV, 0, 3);
-            this.tblEventos.Controls.Add(this.label14, 0, 4);
+            this.tblEventos.Controls.Add(this.lblFechaFinalizacionEventoEV, 0, 4);
             this.tblEventos.Controls.Add(this.dtpFechaFinalizacionEV, 0, 5);
-            this.tblEventos.Controls.Add(this.label16, 0, 6);
+            this.tblEventos.Controls.Add(this.lblObjetivosEventoEV, 0, 6);
             this.tblEventos.Controls.Add(this.rtbObjetivoEventoEV, 0, 7);
-            this.tblEventos.Controls.Add(this.label15, 0, 8);
+            this.tblEventos.Controls.Add(this.lblAreaEventoEV, 0, 8);
             this.tblEventos.Controls.Add(this.cmbAreaEventoEV, 0, 9);
-            this.tblEventos.Controls.Add(this.label17, 0, 10);
+            this.tblEventos.Controls.Add(this.lblNumeroAsistentesEV, 0, 10);
             this.tblEventos.Controls.Add(this.nudNumeroAsistentesEV, 0, 11);
             this.tblEventos.Controls.Add(this.btnDejarDeEditarEV, 0, 12);
             this.tblEventos.Controls.Add(this.picImagenEV, 2, 1);
-            this.tblEventos.Controls.Add(this.label11, 2, 0);
+            this.tblEventos.Controls.Add(this.lblImagenEV, 2, 0);
             this.tblEventos.Controls.Add(this.btnEliminarEventoEV, 1, 12);
             this.tblEventos.Controls.Add(this.btnAgregarEventoEV, 3, 12);
             this.tblEventos.Controls.Add(this.btnEditarEventoEV, 2, 12);
@@ -371,18 +371,18 @@ namespace BINAES
             this.dgvEventosEV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellClick);
             this.dgvEventosEV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellContentClick);
             // 
-            // label12
+            // lblTituloEventoEV
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTituloEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.tblEventos.SetColumnSpan(this.label12, 2);
-            this.label12.Location = new System.Drawing.Point(3, 25);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(306, 21);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Titulo del evento";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTituloEventoEV.AutoSize = true;
+            this.tblEventos.SetColumnSpan(this.lblTituloEventoEV, 2);
+            this.lblTituloEventoEV.Location = new System.Drawing.Point(3, 25);
+            this.lblTituloEventoEV.Name = "lblTituloEventoEV";
+            this.lblTituloEventoEV.Size = new System.Drawing.Size(306, 21);
+            this.lblTituloEventoEV.TabIndex = 3;
+            this.lblTituloEventoEV.Text = "Titulo del evento";
+            this.lblTituloEventoEV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtTituloEventoEV
             // 
@@ -395,18 +395,18 @@ namespace BINAES
             this.txtTituloEventoEV.Size = new System.Drawing.Size(306, 29);
             this.txtTituloEventoEV.TabIndex = 4;
             // 
-            // label13
+            // lblFechaInicioEventoEV
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblFechaInicioEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.tblEventos.SetColumnSpan(this.label13, 2);
-            this.label13.Location = new System.Drawing.Point(3, 117);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(306, 21);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Fecha de inicio";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblFechaInicioEventoEV.AutoSize = true;
+            this.tblEventos.SetColumnSpan(this.lblFechaInicioEventoEV, 2);
+            this.lblFechaInicioEventoEV.Location = new System.Drawing.Point(3, 117);
+            this.lblFechaInicioEventoEV.Name = "lblFechaInicioEventoEV";
+            this.lblFechaInicioEventoEV.Size = new System.Drawing.Size(306, 21);
+            this.lblFechaInicioEventoEV.TabIndex = 5;
+            this.lblFechaInicioEventoEV.Text = "Fecha de inicio";
+            this.lblFechaInicioEventoEV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtpFechaInicioEV
             // 
@@ -416,18 +416,18 @@ namespace BINAES
             this.dtpFechaInicioEV.Size = new System.Drawing.Size(306, 29);
             this.dtpFechaInicioEV.TabIndex = 17;
             // 
-            // label14
+            // lblFechaFinalizacionEventoEV
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblFechaFinalizacionEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.tblEventos.SetColumnSpan(this.label14, 2);
-            this.label14.Location = new System.Drawing.Point(3, 209);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(306, 21);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Fecha de finalización";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblFechaFinalizacionEventoEV.AutoSize = true;
+            this.tblEventos.SetColumnSpan(this.lblFechaFinalizacionEventoEV, 2);
+            this.lblFechaFinalizacionEventoEV.Location = new System.Drawing.Point(3, 209);
+            this.lblFechaFinalizacionEventoEV.Name = "lblFechaFinalizacionEventoEV";
+            this.lblFechaFinalizacionEventoEV.Size = new System.Drawing.Size(306, 21);
+            this.lblFechaFinalizacionEventoEV.TabIndex = 18;
+            this.lblFechaFinalizacionEventoEV.Text = "Fecha de finalización";
+            this.lblFechaFinalizacionEventoEV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtpFechaFinalizacionEV
             // 
@@ -437,18 +437,18 @@ namespace BINAES
             this.dtpFechaFinalizacionEV.Size = new System.Drawing.Size(306, 29);
             this.dtpFechaFinalizacionEV.TabIndex = 19;
             // 
-            // label16
+            // lblObjetivosEventoEV
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblObjetivosEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.tblEventos.SetColumnSpan(this.label16, 2);
-            this.label16.Location = new System.Drawing.Point(3, 301);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(306, 21);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "Objetivos del evento";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblObjetivosEventoEV.AutoSize = true;
+            this.tblEventos.SetColumnSpan(this.lblObjetivosEventoEV, 2);
+            this.lblObjetivosEventoEV.Location = new System.Drawing.Point(3, 301);
+            this.lblObjetivosEventoEV.Name = "lblObjetivosEventoEV";
+            this.lblObjetivosEventoEV.Size = new System.Drawing.Size(306, 21);
+            this.lblObjetivosEventoEV.TabIndex = 13;
+            this.lblObjetivosEventoEV.Text = "Objetivos del evento";
+            this.lblObjetivosEventoEV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // rtbObjetivoEventoEV
             // 
@@ -462,18 +462,18 @@ namespace BINAES
             this.rtbObjetivoEventoEV.TabIndex = 23;
             this.rtbObjetivoEventoEV.Text = "";
             // 
-            // label15
+            // lblAreaEventoEV
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblAreaEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.tblEventos.SetColumnSpan(this.label15, 2);
-            this.label15.Location = new System.Drawing.Point(3, 393);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(306, 21);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "Área del evento";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAreaEventoEV.AutoSize = true;
+            this.tblEventos.SetColumnSpan(this.lblAreaEventoEV, 2);
+            this.lblAreaEventoEV.Location = new System.Drawing.Point(3, 393);
+            this.lblAreaEventoEV.Name = "lblAreaEventoEV";
+            this.lblAreaEventoEV.Size = new System.Drawing.Size(306, 21);
+            this.lblAreaEventoEV.TabIndex = 20;
+            this.lblAreaEventoEV.Text = "Área del evento";
+            this.lblAreaEventoEV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cmbAreaEventoEV
             // 
@@ -488,18 +488,18 @@ namespace BINAES
             this.cmbAreaEventoEV.Size = new System.Drawing.Size(306, 29);
             this.cmbAreaEventoEV.TabIndex = 14;
             // 
-            // label17
+            // lblNumeroAsistentesEV
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblNumeroAsistentesEV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.tblEventos.SetColumnSpan(this.label17, 2);
-            this.label17.Location = new System.Drawing.Point(3, 485);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(306, 21);
-            this.label17.TabIndex = 21;
-            this.label17.Text = "Número de asistentes";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNumeroAsistentesEV.AutoSize = true;
+            this.tblEventos.SetColumnSpan(this.lblNumeroAsistentesEV, 2);
+            this.lblNumeroAsistentesEV.Location = new System.Drawing.Point(3, 485);
+            this.lblNumeroAsistentesEV.Name = "lblNumeroAsistentesEV";
+            this.lblNumeroAsistentesEV.Size = new System.Drawing.Size(306, 21);
+            this.lblNumeroAsistentesEV.TabIndex = 21;
+            this.lblNumeroAsistentesEV.Text = "Número de asistentes";
+            this.lblNumeroAsistentesEV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudNumeroAsistentesEV
             // 
@@ -542,17 +542,17 @@ namespace BINAES
             this.picImagenEV.TabStop = false;
             this.picImagenEV.Click += new System.EventHandler(this.picImagenEV_Click);
             // 
-            // label11
+            // lblImagenEV
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblImagenEV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.tblEventos.SetColumnSpan(this.label11, 2);
-            this.label11.Location = new System.Drawing.Point(315, 25);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(306, 21);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Imagen";
+            this.lblImagenEV.AutoSize = true;
+            this.tblEventos.SetColumnSpan(this.lblImagenEV, 2);
+            this.lblImagenEV.Location = new System.Drawing.Point(315, 25);
+            this.lblImagenEV.Name = "lblImagenEV";
+            this.lblImagenEV.Size = new System.Drawing.Size(306, 21);
+            this.lblImagenEV.TabIndex = 27;
+            this.lblImagenEV.Text = "Imagen";
             // 
             // btnEliminarEventoEV
             // 
@@ -616,16 +616,16 @@ namespace BINAES
             this.tblEjemplares.Controls.Add(this.btnSalirEdicionEjemplarAG, 0, 12);
             this.tblEjemplares.Controls.Add(this.btnAgregarEjemplarAG, 0, 12);
             this.tblEjemplares.Controls.Add(this.txtEditorialEjemplarAG, 1, 1);
-            this.tblEjemplares.Controls.Add(this.label10, 1, 6);
-            this.tblEjemplares.Controls.Add(this.label3, 0, 2);
-            this.tblEjemplares.Controls.Add(this.label4, 0, 4);
-            this.tblEjemplares.Controls.Add(this.label8, 1, 2);
-            this.tblEjemplares.Controls.Add(this.label5, 0, 6);
-            this.tblEjemplares.Controls.Add(this.label2, 1, 0);
-            this.tblEjemplares.Controls.Add(this.label7, 0, 10);
-            this.tblEjemplares.Controls.Add(this.label6, 0, 8);
-            this.tblEjemplares.Controls.Add(this.label9, 1, 4);
-            this.tblEjemplares.Controls.Add(this.label1, 0, 0);
+            this.tblEjemplares.Controls.Add(this.lblImagenEjemplarEJ, 1, 6);
+            this.tblEjemplares.Controls.Add(this.lblNombreEjemplarEJ, 0, 2);
+            this.tblEjemplares.Controls.Add(this.lblAutorEjemplarEJ, 0, 4);
+            this.tblEjemplares.Controls.Add(this.lblFechaPublicacionEjemplarEJ, 1, 2);
+            this.tblEjemplares.Controls.Add(this.lblIdiomaEjemplarEJ, 0, 6);
+            this.tblEjemplares.Controls.Add(this.lblEditorialEjemplarEJ, 1, 0);
+            this.tblEjemplares.Controls.Add(this.lblEtiquetasEjemplarEJ, 0, 10);
+            this.tblEjemplares.Controls.Add(this.lblFormatoEjemplarEJ, 0, 8);
+            this.tblEjemplares.Controls.Add(this.lblTipoColeccionEjemplarEJ, 1, 4);
+            this.tblEjemplares.Controls.Add(this.lblCodigoEjemplarEJ, 0, 0);
             this.tblEjemplares.Controls.Add(this.txtCodigoEjemplarAG, 0, 1);
             this.tblEjemplares.Controls.Add(this.cmbIdiomaEjemplarAG, 0, 7);
             this.tblEjemplares.Controls.Add(this.btnEtiquetasEjemplarAG, 0, 11);
@@ -694,105 +694,105 @@ namespace BINAES
             this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(244, 29);
             this.txtEditorialEjemplarAG.TabIndex = 22;
             // 
-            // label10
+            // lblImagenEjemplarEJ
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(253, 301);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 21);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Imagen";
+            this.lblImagenEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblImagenEjemplarEJ.AutoSize = true;
+            this.lblImagenEjemplarEJ.Location = new System.Drawing.Point(253, 301);
+            this.lblImagenEjemplarEJ.Name = "lblImagenEjemplarEJ";
+            this.lblImagenEjemplarEJ.Size = new System.Drawing.Size(62, 21);
+            this.lblImagenEjemplarEJ.TabIndex = 9;
+            this.lblImagenEjemplarEJ.Text = "Imagen";
             // 
-            // label3
+            // lblNombreEjemplarEJ
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 117);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nombre";
+            this.lblNombreEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblNombreEjemplarEJ.AutoSize = true;
+            this.lblNombreEjemplarEJ.Location = new System.Drawing.Point(3, 117);
+            this.lblNombreEjemplarEJ.Name = "lblNombreEjemplarEJ";
+            this.lblNombreEjemplarEJ.Size = new System.Drawing.Size(68, 21);
+            this.lblNombreEjemplarEJ.TabIndex = 2;
+            this.lblNombreEjemplarEJ.Text = "Nombre";
             // 
-            // label4
+            // lblAutorEjemplarEJ
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 209);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 21);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Autor";
+            this.lblAutorEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblAutorEjemplarEJ.AutoSize = true;
+            this.lblAutorEjemplarEJ.Location = new System.Drawing.Point(3, 209);
+            this.lblAutorEjemplarEJ.Name = "lblAutorEjemplarEJ";
+            this.lblAutorEjemplarEJ.Size = new System.Drawing.Size(49, 21);
+            this.lblAutorEjemplarEJ.TabIndex = 3;
+            this.lblAutorEjemplarEJ.Text = "Autor";
             // 
-            // label8
+            // lblFechaPublicacionEjemplarEJ
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(253, 117);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(154, 21);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Fecha de publicación";
+            this.lblFechaPublicacionEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblFechaPublicacionEjemplarEJ.AutoSize = true;
+            this.lblFechaPublicacionEjemplarEJ.Location = new System.Drawing.Point(253, 117);
+            this.lblFechaPublicacionEjemplarEJ.Name = "lblFechaPublicacionEjemplarEJ";
+            this.lblFechaPublicacionEjemplarEJ.Size = new System.Drawing.Size(154, 21);
+            this.lblFechaPublicacionEjemplarEJ.TabIndex = 7;
+            this.lblFechaPublicacionEjemplarEJ.Text = "Fecha de publicación";
             // 
-            // label5
+            // lblIdiomaEjemplarEJ
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 301);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 21);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Idioma";
+            this.lblIdiomaEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblIdiomaEjemplarEJ.AutoSize = true;
+            this.lblIdiomaEjemplarEJ.Location = new System.Drawing.Point(3, 301);
+            this.lblIdiomaEjemplarEJ.Name = "lblIdiomaEjemplarEJ";
+            this.lblIdiomaEjemplarEJ.Size = new System.Drawing.Size(58, 21);
+            this.lblIdiomaEjemplarEJ.TabIndex = 4;
+            this.lblIdiomaEjemplarEJ.Text = "Idioma";
             // 
-            // label2
+            // lblEditorialEjemplarEJ
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(253, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Editorial";
+            this.lblEditorialEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblEditorialEjemplarEJ.AutoSize = true;
+            this.lblEditorialEjemplarEJ.Location = new System.Drawing.Point(253, 25);
+            this.lblEditorialEjemplarEJ.Name = "lblEditorialEjemplarEJ";
+            this.lblEditorialEjemplarEJ.Size = new System.Drawing.Size(67, 21);
+            this.lblEditorialEjemplarEJ.TabIndex = 1;
+            this.lblEditorialEjemplarEJ.Text = "Editorial";
             // 
-            // label7
+            // lblEtiquetasEjemplarEJ
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 485);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 21);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Etiquetas";
+            this.lblEtiquetasEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblEtiquetasEjemplarEJ.AutoSize = true;
+            this.lblEtiquetasEjemplarEJ.Location = new System.Drawing.Point(3, 485);
+            this.lblEtiquetasEjemplarEJ.Name = "lblEtiquetasEjemplarEJ";
+            this.lblEtiquetasEjemplarEJ.Size = new System.Drawing.Size(73, 21);
+            this.lblEtiquetasEjemplarEJ.TabIndex = 6;
+            this.lblEtiquetasEjemplarEJ.Text = "Etiquetas";
             // 
-            // label6
+            // lblFormatoEjemplarEJ
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 393);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 21);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Formato";
+            this.lblFormatoEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblFormatoEjemplarEJ.AutoSize = true;
+            this.lblFormatoEjemplarEJ.Location = new System.Drawing.Point(3, 393);
+            this.lblFormatoEjemplarEJ.Name = "lblFormatoEjemplarEJ";
+            this.lblFormatoEjemplarEJ.Size = new System.Drawing.Size(69, 21);
+            this.lblFormatoEjemplarEJ.TabIndex = 5;
+            this.lblFormatoEjemplarEJ.Text = "Formato";
             // 
-            // label9
+            // lblTipoColeccionEjemplarEJ
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(253, 209);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 21);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Tipo de colección";
+            this.lblTipoColeccionEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTipoColeccionEjemplarEJ.AutoSize = true;
+            this.lblTipoColeccionEjemplarEJ.Location = new System.Drawing.Point(253, 209);
+            this.lblTipoColeccionEjemplarEJ.Name = "lblTipoColeccionEjemplarEJ";
+            this.lblTipoColeccionEjemplarEJ.Size = new System.Drawing.Size(129, 21);
+            this.lblTipoColeccionEjemplarEJ.TabIndex = 8;
+            this.lblTipoColeccionEjemplarEJ.Text = "Tipo de colección";
             // 
-            // label1
+            // lblCodigoEjemplarEJ
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Código ejemplar";
+            this.lblCodigoEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCodigoEjemplarEJ.AutoSize = true;
+            this.lblCodigoEjemplarEJ.Location = new System.Drawing.Point(3, 25);
+            this.lblCodigoEjemplarEJ.Name = "lblCodigoEjemplarEJ";
+            this.lblCodigoEjemplarEJ.Size = new System.Drawing.Size(125, 21);
+            this.lblCodigoEjemplarEJ.TabIndex = 0;
+            this.lblCodigoEjemplarEJ.Text = "Código ejemplar";
             // 
             // txtCodigoEjemplarAG
             // 
@@ -935,10 +935,10 @@ namespace BINAES
             this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
             this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tblReserva.Controls.Add(this.dgvReservasRE, 4, 1);
-            this.tblReserva.Controls.Add(this.label23, 1, 1);
+            this.tblReserva.Controls.Add(this.lblEjemplarRE, 1, 1);
             this.tblReserva.Controls.Add(this.btnBuscarEjemplarRE, 1, 2);
-            this.tblReserva.Controls.Add(this.btnPrestarRE, 1, 6);
-            this.tblReserva.Controls.Add(this.label22, 1, 3);
+            this.tblReserva.Controls.Add(this.btnReservarRE, 1, 6);
+            this.tblReserva.Controls.Add(this.lblUsuarioRE, 1, 3);
             this.tblReserva.Controls.Add(this.btnQrRE, 1, 4);
             this.tblReserva.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tblReserva.Location = new System.Drawing.Point(0, 0);
@@ -968,17 +968,17 @@ namespace BINAES
             this.dgvReservasRE.Size = new System.Drawing.Size(681, 474);
             this.dgvReservasRE.TabIndex = 31;
             // 
-            // label23
+            // lblEjemplarRE
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblEjemplarRE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.tblReserva.SetColumnSpan(this.label23, 2);
-            this.label23.Location = new System.Drawing.Point(128, 119);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(244, 21);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "Ejemplar:";
+            this.lblEjemplarRE.AutoSize = true;
+            this.tblReserva.SetColumnSpan(this.lblEjemplarRE, 2);
+            this.lblEjemplarRE.Location = new System.Drawing.Point(128, 119);
+            this.lblEjemplarRE.Name = "lblEjemplarRE";
+            this.lblEjemplarRE.Size = new System.Drawing.Size(244, 21);
+            this.lblEjemplarRE.TabIndex = 1;
+            this.lblEjemplarRE.Text = "Ejemplar:";
             // 
             // btnBuscarEjemplarRE
             // 
@@ -994,30 +994,30 @@ namespace BINAES
             this.btnBuscarEjemplarRE.UseVisualStyleBackColor = true;
             this.btnBuscarEjemplarRE.Click += new System.EventHandler(this.btnBuscarEjemplarRE_Click);
             // 
-            // btnPrestarRE
+            // btnReservarRE
             // 
-            this.btnPrestarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnReservarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblReserva.SetColumnSpan(this.btnPrestarRE, 2);
-            this.btnPrestarRE.Location = new System.Drawing.Point(128, 463);
-            this.btnPrestarRE.Name = "btnPrestarRE";
-            this.btnPrestarRE.Size = new System.Drawing.Size(244, 74);
-            this.btnPrestarRE.TabIndex = 32;
-            this.btnPrestarRE.Text = "Completar";
-            this.btnPrestarRE.UseVisualStyleBackColor = true;
+            this.tblReserva.SetColumnSpan(this.btnReservarRE, 2);
+            this.btnReservarRE.Location = new System.Drawing.Point(128, 463);
+            this.btnReservarRE.Name = "btnReservarRE";
+            this.btnReservarRE.Size = new System.Drawing.Size(244, 74);
+            this.btnReservarRE.TabIndex = 32;
+            this.btnReservarRE.Text = "Completar";
+            this.btnReservarRE.UseVisualStyleBackColor = true;
             // 
-            // label22
+            // lblUsuarioRE
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblUsuarioRE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.tblReserva.SetColumnSpan(this.label22, 2);
-            this.label22.Location = new System.Drawing.Point(128, 279);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(244, 21);
-            this.label22.TabIndex = 34;
-            this.label22.Text = "ID Usuario";
+            this.lblUsuarioRE.AutoSize = true;
+            this.tblReserva.SetColumnSpan(this.lblUsuarioRE, 2);
+            this.lblUsuarioRE.Location = new System.Drawing.Point(128, 279);
+            this.lblUsuarioRE.Name = "lblUsuarioRE";
+            this.lblUsuarioRE.Size = new System.Drawing.Size(244, 21);
+            this.lblUsuarioRE.TabIndex = 34;
+            this.lblUsuarioRE.Text = "ID Usuario";
             // 
             // btnQrRE
             // 
@@ -1096,11 +1096,11 @@ namespace BINAES
             this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.2506F));
             this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tblPrestamo.Controls.Add(this.dataGridView1, 3, 1);
-            this.tblPrestamo.Controls.Add(this.label18, 1, 1);
-            this.tblPrestamo.Controls.Add(this.button1, 1, 6);
+            this.tblPrestamo.Controls.Add(this.lblEjemplarPR, 1, 1);
+            this.tblPrestamo.Controls.Add(this.btnCompletarPR, 1, 6);
             this.tblPrestamo.Controls.Add(this.textBox3, 1, 5);
-            this.tblPrestamo.Controls.Add(this.label21, 1, 4);
-            this.tblPrestamo.Controls.Add(this.button2, 1, 3);
+            this.tblPrestamo.Controls.Add(this.lblUsuarioPR, 1, 4);
+            this.tblPrestamo.Controls.Add(this.btnBuscarPR, 1, 3);
             this.tblPrestamo.Controls.Add(this.textBox4, 1, 2);
             this.tblPrestamo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tblPrestamo.Location = new System.Drawing.Point(0, 0);
@@ -1130,28 +1130,28 @@ namespace BINAES
             this.dataGridView1.Size = new System.Drawing.Size(773, 521);
             this.dataGridView1.TabIndex = 31;
             // 
-            // label18
+            // lblEjemplarPR
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblEjemplarPR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(128, 127);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(159, 21);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Ejemplar:";
+            this.lblEjemplarPR.AutoSize = true;
+            this.lblEjemplarPR.Location = new System.Drawing.Point(128, 127);
+            this.lblEjemplarPR.Name = "lblEjemplarPR";
+            this.lblEjemplarPR.Size = new System.Drawing.Size(159, 21);
+            this.lblEjemplarPR.TabIndex = 1;
+            this.lblEjemplarPR.Text = "Ejemplar:";
             // 
-            // button1
+            // btnCompletarPR
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnCompletarPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(128, 353);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 42);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Completar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCompletarPR.Location = new System.Drawing.Point(128, 353);
+            this.btnCompletarPR.Name = "btnCompletarPR";
+            this.btnCompletarPR.Size = new System.Drawing.Size(159, 42);
+            this.btnCompletarPR.TabIndex = 32;
+            this.btnCompletarPR.Text = "Completar";
+            this.btnCompletarPR.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
@@ -1160,28 +1160,28 @@ namespace BINAES
             this.textBox3.Size = new System.Drawing.Size(159, 29);
             this.textBox3.TabIndex = 34;
             // 
-            // label21
+            // lblUsuarioPR
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblUsuarioPR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(128, 282);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(159, 21);
-            this.label21.TabIndex = 8;
-            this.label21.Text = "ID usuario:";
+            this.lblUsuarioPR.AutoSize = true;
+            this.lblUsuarioPR.Location = new System.Drawing.Point(128, 282);
+            this.lblUsuarioPR.Name = "lblUsuarioPR";
+            this.lblUsuarioPR.Size = new System.Drawing.Size(159, 21);
+            this.lblUsuarioPR.TabIndex = 8;
+            this.lblUsuarioPR.Text = "ID usuario:";
             // 
-            // button2
+            // btnBuscarPR
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnBuscarPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(128, 199);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 34);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Búscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBuscarPR.Location = new System.Drawing.Point(128, 199);
+            this.btnBuscarPR.Name = "btnBuscarPR";
+            this.btnBuscarPR.Size = new System.Drawing.Size(159, 34);
+            this.btnBuscarPR.TabIndex = 33;
+            this.btnBuscarPR.Text = "Búscar";
+            this.btnBuscarPR.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -1224,7 +1224,7 @@ namespace BINAES
             this.tblBusqueda.Controls.Add(this.txtBuscarEjemplarBU, 1, 1);
             this.tblBusqueda.Controls.Add(this.btnBuscarEjemplarBU, 2, 1);
             this.tblBusqueda.Controls.Add(this.chkBusquedaExactaBU, 3, 1);
-            this.tblBusqueda.Controls.Add(this.label24, 3, 2);
+            this.tblBusqueda.Controls.Add(this.lblFiltroBU, 3, 2);
             this.tblBusqueda.Controls.Add(this.cmbFiltrarEjemplarBU, 4, 2);
             this.tblBusqueda.Controls.Add(this.chkFísicoBU, 5, 1);
             this.tblBusqueda.Controls.Add(this.chkDigitalBU, 5, 2);
@@ -1290,18 +1290,18 @@ namespace BINAES
             this.chkBusquedaExactaBU.Text = "Búsqueda exacta";
             this.chkBusquedaExactaBU.UseVisualStyleBackColor = true;
             // 
-            // label24
+            // lblFiltroBU
             // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblFiltroBU.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(877, 75);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(56, 45);
-            this.label24.TabIndex = 6;
-            this.label24.Text = "Filtro:";
+            this.lblFiltroBU.AutoSize = true;
+            this.lblFiltroBU.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltroBU.Location = new System.Drawing.Point(877, 75);
+            this.lblFiltroBU.Name = "lblFiltroBU";
+            this.lblFiltroBU.Size = new System.Drawing.Size(56, 45);
+            this.lblFiltroBU.TabIndex = 6;
+            this.lblFiltroBU.Text = "Filtro:";
             // 
             // cmbFiltrarEjemplarBU
             // 
@@ -1822,9 +1822,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tblQuienesSomos.ColumnCount = 1;
             this.tblQuienesSomos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblQuienesSomos.Controls.Add(this.label31, 0, 0);
-            this.tblQuienesSomos.Controls.Add(this.label32, 0, 1);
-            this.tblQuienesSomos.Controls.Add(this.label33, 0, 2);
+            this.tblQuienesSomos.Controls.Add(this.lblQuienesSomosTXT, 0, 1);
+            this.tblQuienesSomos.Controls.Add(this.lblQuienesSomosTXT2, 0, 2);
+            this.tblQuienesSomos.Controls.Add(this.lblQuienesSomos, 0, 0);
             this.tblQuienesSomos.Location = new System.Drawing.Point(0, 0);
             this.tblQuienesSomos.Name = "tblQuienesSomos";
             this.tblQuienesSomos.RowCount = 3;
@@ -1834,51 +1834,51 @@ namespace BINAES
             this.tblQuienesSomos.Size = new System.Drawing.Size(1256, 605);
             this.tblQuienesSomos.TabIndex = 0;
             // 
-            // label31
+            // lblQuienesSomos
             // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblQuienesSomos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label31.Font = new System.Drawing.Font("Nirmala UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label31.Location = new System.Drawing.Point(3, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(1250, 121);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "Quienes somos?";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblQuienesSomos.AutoSize = true;
+            this.lblQuienesSomos.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblQuienesSomos.Font = new System.Drawing.Font("Nirmala UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuienesSomos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblQuienesSomos.Location = new System.Drawing.Point(3, 0);
+            this.lblQuienesSomos.Name = "lblQuienesSomos";
+            this.lblQuienesSomos.Size = new System.Drawing.Size(1250, 121);
+            this.lblQuienesSomos.TabIndex = 0;
+            this.lblQuienesSomos.Text = "Quienes somos?";
+            this.lblQuienesSomos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label32
+            // lblQuienesSomosTXT
             // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblQuienesSomosTXT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label32.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(3, 121);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(1250, 242);
-            this.label32.TabIndex = 1;
-            this.label32.Text = resources.GetString("label32.Text");
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblQuienesSomosTXT.AutoSize = true;
+            this.lblQuienesSomosTXT.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.lblQuienesSomosTXT.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuienesSomosTXT.Location = new System.Drawing.Point(3, 121);
+            this.lblQuienesSomosTXT.Name = "lblQuienesSomosTXT";
+            this.lblQuienesSomosTXT.Size = new System.Drawing.Size(1250, 242);
+            this.lblQuienesSomosTXT.TabIndex = 1;
+            this.lblQuienesSomosTXT.Text = resources.GetString("lblQuienesSomosTXT.Text");
+            this.lblQuienesSomosTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label33
+            // lblQuienesSomosTXT2
             // 
-            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblQuienesSomosTXT2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label33.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(3, 363);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(1250, 242);
-            this.label33.TabIndex = 2;
-            this.label33.Text = resources.GetString("label33.Text");
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblQuienesSomosTXT2.AutoSize = true;
+            this.lblQuienesSomosTXT2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.lblQuienesSomosTXT2.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuienesSomosTXT2.Location = new System.Drawing.Point(3, 363);
+            this.lblQuienesSomosTXT2.Name = "lblQuienesSomosTXT2";
+            this.lblQuienesSomosTXT2.Size = new System.Drawing.Size(1250, 242);
+            this.lblQuienesSomosTXT2.TabIndex = 2;
+            this.lblQuienesSomosTXT2.Text = resources.GetString("lblQuienesSomosTXT2.Text");
+            this.lblQuienesSomosTXT2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabColeccion
             // 
@@ -2189,34 +2189,34 @@ namespace BINAES
         private System.Windows.Forms.Button btnAgregarEventoEV;
         private System.Windows.Forms.DataGridView dgvEventosEV;
         private System.Windows.Forms.NumericUpDown nudNumeroAsistentesEV;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblNumeroAsistentesEV;
         private System.Windows.Forms.ComboBox cmbAreaEventoEV;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblAreaEventoEV;
         private System.Windows.Forms.RichTextBox rtbObjetivoEventoEV;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblObjetivosEventoEV;
         private System.Windows.Forms.DateTimePicker dtpFechaFinalizacionEV;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblFechaFinalizacionEventoEV;
         private System.Windows.Forms.DateTimePicker dtpFechaInicioEV;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblFechaInicioEventoEV;
         private System.Windows.Forms.TextBox txtTituloEventoEV;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblTituloEventoEV;
         private System.Windows.Forms.Button btnDejarDeEditarEV;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblImagenEV;
         private System.Windows.Forms.TabPage tabAgregar;
         private System.Windows.Forms.TableLayoutPanel tblEjemplares;
         private System.Windows.Forms.Button btnSalirEdicionEjemplarAG;
         private System.Windows.Forms.Button btnAgregarEjemplarAG;
         private System.Windows.Forms.TextBox txtEditorialEjemplarAG;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblImagenEjemplarEJ;
+        private System.Windows.Forms.Label lblNombreEjemplarEJ;
+        private System.Windows.Forms.Label lblAutorEjemplarEJ;
+        private System.Windows.Forms.Label lblFechaPublicacionEjemplarEJ;
+        private System.Windows.Forms.Label lblIdiomaEjemplarEJ;
+        private System.Windows.Forms.Label lblEditorialEjemplarEJ;
+        private System.Windows.Forms.Label lblEtiquetasEjemplarEJ;
+        private System.Windows.Forms.Label lblFormatoEjemplarEJ;
+        private System.Windows.Forms.Label lblTipoColeccionEjemplarEJ;
+        private System.Windows.Forms.Label lblCodigoEjemplarEJ;
         private System.Windows.Forms.TextBox txtCodigoEjemplarAG;
         private System.Windows.Forms.ComboBox cmbIdiomaEjemplarAG;
         private System.Windows.Forms.Button btnEtiquetasEjemplarAG;
@@ -2238,16 +2238,16 @@ namespace BINAES
         private System.Windows.Forms.Label lblInfoVision;
         private System.Windows.Forms.TableLayoutPanel tblReserva;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblEjemplarRE;
         private System.Windows.Forms.DataGridView dgvReservasRE;
-        private System.Windows.Forms.Button btnPrestarRE;
+        private System.Windows.Forms.Button btnReservarRE;
         private System.Windows.Forms.TextBox textBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TabPage tabIntroduccion;
         private System.Windows.Forms.TableLayoutPanel tblQuienesSomos;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label lblQuienesSomos;
+        private System.Windows.Forms.Label lblQuienesSomosTXT;
+        private System.Windows.Forms.Label lblQuienesSomosTXT2;
         private System.Windows.Forms.PictureBox picImagenEV;
         private System.Windows.Forms.PictureBox picEjemplarAG;
         private System.Windows.Forms.Button btnBuscarEjemplarRE;
@@ -2257,11 +2257,11 @@ namespace BINAES
         private System.Windows.Forms.ToolStripStatusLabel sspRol;
         private System.Windows.Forms.TableLayoutPanel tblPrestamo;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label18;
-        private Button button1;
+        private System.Windows.Forms.Label lblEjemplarPR;
+        private Button btnCompletarPR;
         private TextBox textBox3;
-        private Label label21;
-        private Button button2;
+        private Label lblUsuarioPR;
+        private Button btnBuscarPR;
         private TextBox textBox4;
         private System.Windows.Forms.TabPage tabColeccion;
         private System.Windows.Forms.TabPage tabUsuarios;
@@ -2272,7 +2272,7 @@ namespace BINAES
         private DataGridView dgvVistaColeccionCO;
         private TextBox txtNombreCO;
         private NumericUpDown nudIdUsuarioRE;
-        private Label label22;
+        private Label lblUsuarioRE;
         private Button btnQrRE;
         private TableLayoutPanel tblBusqueda;
         private TextBox txtBuscarEjemplarBU;
@@ -2280,7 +2280,7 @@ namespace BINAES
         private DataGridView dgvEjemplaresBU;
         private CheckBox chkBusquedaExactaBU;
         private ComboBox cmbFiltrarEjemplarBU;
-        private Label label24;
+        private Label lblFiltroBU;
         private CheckBox chkFísicoBU;
         private CheckBox chkDigitalBU;
         private TableLayoutPanel tblUsuarios;
