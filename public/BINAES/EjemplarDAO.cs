@@ -101,6 +101,8 @@ namespace BINAES
         public static List<Ejemplar> Leer(string texto, FiltroEnumerate filtroEjemplar, FiltroEnumerate filtroBusqueda, FiltroEnumerate filtroFormato)
         {
             List<Ejemplar> list = new List<Ejemplar>();
+            SqlCommand cmd = null;
+
             using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
             {
 
@@ -130,7 +132,6 @@ namespace BINAES
                     default:
                         break;
                 }
-                SqlCommand cmd = null;
                 switch (filtroEjemplar)
                 {
                     case FiltroEnumerate.Titulo:
@@ -151,10 +152,19 @@ namespace BINAES
                         cmd = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@nombre_autor", texto);
                         break;
+                    case FiltroEnumerate.PalabrasClave:
+                        if (texto.Contains(", "))
+                        {
+                            texto.Replace(", ", ",");
+                        }
+                        texto.Replace(' ', ',');
+                        query += "AND EJ.id IN (SELECT * FROM dbo.GET_EJEMPLARES_IN_PALABRA_CLAVE(@palabras_clave))";
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@palabras_clave", texto);
+                        break;
                     default:
                         break;
                 }
-                Console.WriteLine(query);
 
                 conn.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -163,7 +173,6 @@ namespace BINAES
                     {
                         while (reader.Read())
                         {
-                            Console.WriteLine(reader["nombre_ejemplar"].ToString());
                             Ejemplar ejemplar = new Ejemplar();
                             ejemplar.id = Convert.ToInt32(reader["id"]);
                             ejemplar.nombre = reader["nombre_ejemplar"].ToString();
@@ -187,35 +196,6 @@ namespace BINAES
                 conn.Close();
             }
             return list;
-        }
-
-        public static Ejemplar FiltrarPorTituloExacto(string Titulo)
-        {
-            string cadena = Properties.Resources.CadenaConexion;
-
-            Ejemplar ejem = new Ejemplar();
-
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query = "SELECT * FROM EJEMPLAR where Busqueda.nombre = @nombrebuscado";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@nombrebuscado", Titulo);
-
-                connection.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        ejem.id = Convert.ToInt32(reader["id"].ToString());
-                        ejem.nombre = reader["nombre"].ToString();
-                        ejem.imagen = reader["imagen"].ToString();
-                        ejem.fecha_publicacion = reader["fecha_publicacion"].ToString();
-
-                    }
-                }
-                connection.Close();
-            }
-            return ejem;
         }
     }
 }
