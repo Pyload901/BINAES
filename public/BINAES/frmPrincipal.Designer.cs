@@ -353,7 +353,7 @@ namespace BINAES
             this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
             this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
             this.tlpAdminEventosEV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tlpAdminEventosEV.Size = new System.Drawing.Size(1250, 585);
+            this.tlpAdminEventosEV.Size = new System.Drawing.Size(1250, 601);
             this.tlpAdminEventosEV.TabIndex = 0;
             // 
             // dgvEventosEV
@@ -366,7 +366,7 @@ namespace BINAES
             this.dgvEventosEV.Name = "dgvEventosEV";
             this.dgvEventosEV.RowHeadersWidth = 51;
             this.tlpAdminEventosEV.SetRowSpan(this.dgvEventosEV, 13);
-            this.dgvEventosEV.Size = new System.Drawing.Size(620, 579);
+            this.dgvEventosEV.Size = new System.Drawing.Size(620, 595);
             this.dgvEventosEV.TabIndex = 26;
             this.dgvEventosEV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellClick);
             this.dgvEventosEV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellContentClick);
@@ -377,7 +377,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.tlpAdminEventosEV.SetColumnSpan(this.label12, 2);
-            this.label12.Location = new System.Drawing.Point(3, 24);
+            this.label12.Location = new System.Drawing.Point(3, 25);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(306, 21);
             this.label12.TabIndex = 3;
@@ -390,7 +390,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpAdminEventosEV.SetColumnSpan(this.txtTituloEventoEV, 2);
-            this.txtTituloEventoEV.Location = new System.Drawing.Point(3, 48);
+            this.txtTituloEventoEV.Location = new System.Drawing.Point(3, 49);
             this.txtTituloEventoEV.Name = "txtTituloEventoEV";
             this.txtTituloEventoEV.Size = new System.Drawing.Size(306, 29);
             this.txtTituloEventoEV.TabIndex = 4;
@@ -401,7 +401,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.tlpAdminEventosEV.SetColumnSpan(this.label13, 2);
-            this.label13.Location = new System.Drawing.Point(3, 114);
+            this.label13.Location = new System.Drawing.Point(3, 117);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(306, 21);
             this.label13.TabIndex = 5;
@@ -411,7 +411,7 @@ namespace BINAES
             // dtpFechaInicioEV
             // 
             this.tlpAdminEventosEV.SetColumnSpan(this.dtpFechaInicioEV, 2);
-            this.dtpFechaInicioEV.Location = new System.Drawing.Point(3, 138);
+            this.dtpFechaInicioEV.Location = new System.Drawing.Point(3, 141);
             this.dtpFechaInicioEV.Name = "dtpFechaInicioEV";
             this.dtpFechaInicioEV.Size = new System.Drawing.Size(306, 29);
             this.dtpFechaInicioEV.TabIndex = 17;
@@ -422,7 +422,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.tlpAdminEventosEV.SetColumnSpan(this.label14, 2);
-            this.label14.Location = new System.Drawing.Point(3, 204);
+            this.label14.Location = new System.Drawing.Point(3, 209);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(306, 21);
             this.label14.TabIndex = 18;
@@ -432,7 +432,7 @@ namespace BINAES
             // dtpFechaFinalizacionEV
             // 
             this.tlpAdminEventosEV.SetColumnSpan(this.dtpFechaFinalizacionEV, 2);
-            this.dtpFechaFinalizacionEV.Location = new System.Drawing.Point(3, 228);
+            this.dtpFechaFinalizacionEV.Location = new System.Drawing.Point(3, 233);
             this.dtpFechaFinalizacionEV.Name = "dtpFechaFinalizacionEV";
             this.dtpFechaFinalizacionEV.Size = new System.Drawing.Size(306, 29);
             this.dtpFechaFinalizacionEV.TabIndex = 19;
@@ -443,7 +443,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.tlpAdminEventosEV.SetColumnSpan(this.label16, 2);
-            this.label16.Location = new System.Drawing.Point(3, 294);
+            this.label16.Location = new System.Drawing.Point(3, 301);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(306, 21);
             this.label16.TabIndex = 13;
@@ -456,9 +456,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpAdminEventosEV.SetColumnSpan(this.rtbObjetivoEventoEV, 2);
-            this.rtbObjetivoEventoEV.Location = new System.Drawing.Point(3, 318);
+            this.rtbObjetivoEventoEV.Location = new System.Drawing.Point(3, 325);
             this.rtbObjetivoEventoEV.Name = "rtbObjetivoEventoEV";
-            this.rtbObjetivoEventoEV.Size = new System.Drawing.Size(306, 39);
+            this.rtbObjetivoEventoEV.Size = new System.Drawing.Size(306, 40);
             this.rtbObjetivoEventoEV.TabIndex = 23;
             this.rtbObjetivoEventoEV.Text = "";
             // 
@@ -468,7 +468,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.tlpAdminEventosEV.SetColumnSpan(this.label15, 2);
-            this.label15.Location = new System.Drawing.Point(3, 384);
+            this.label15.Location = new System.Drawing.Point(3, 393);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(306, 21);
             this.label15.TabIndex = 20;
@@ -483,7 +483,7 @@ namespace BINAES
             this.tlpAdminEventosEV.SetColumnSpan(this.cmbAreaEventoEV, 2);
             this.cmbAreaEventoEV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAreaEventoEV.FormattingEnabled = true;
-            this.cmbAreaEventoEV.Location = new System.Drawing.Point(3, 408);
+            this.cmbAreaEventoEV.Location = new System.Drawing.Point(3, 417);
             this.cmbAreaEventoEV.Name = "cmbAreaEventoEV";
             this.cmbAreaEventoEV.Size = new System.Drawing.Size(306, 29);
             this.cmbAreaEventoEV.TabIndex = 14;
@@ -494,7 +494,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.tlpAdminEventosEV.SetColumnSpan(this.label17, 2);
-            this.label17.Location = new System.Drawing.Point(3, 474);
+            this.label17.Location = new System.Drawing.Point(3, 485);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(306, 21);
             this.label17.TabIndex = 21;
@@ -507,7 +507,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpAdminEventosEV.SetColumnSpan(this.nudNumeroAsistentesEV, 2);
-            this.nudNumeroAsistentesEV.Location = new System.Drawing.Point(3, 498);
+            this.nudNumeroAsistentesEV.Location = new System.Drawing.Point(3, 509);
             this.nudNumeroAsistentesEV.Name = "nudNumeroAsistentesEV";
             this.nudNumeroAsistentesEV.Size = new System.Drawing.Size(306, 29);
             this.nudNumeroAsistentesEV.TabIndex = 16;
@@ -518,9 +518,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDejarDeEditarEV.Enabled = false;
-            this.btnDejarDeEditarEV.Location = new System.Drawing.Point(3, 543);
+            this.btnDejarDeEditarEV.Location = new System.Drawing.Point(3, 555);
             this.btnDejarDeEditarEV.Name = "btnDejarDeEditarEV";
-            this.btnDejarDeEditarEV.Size = new System.Drawing.Size(150, 39);
+            this.btnDejarDeEditarEV.Size = new System.Drawing.Size(150, 43);
             this.btnDejarDeEditarEV.TabIndex = 24;
             this.btnDejarDeEditarEV.Text = "Dejar de editar";
             this.btnDejarDeEditarEV.UseVisualStyleBackColor = true;
@@ -533,10 +533,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpAdminEventosEV.SetColumnSpan(this.picImagenEV, 2);
             this.picImagenEV.Image = global::BINAES.Properties.Resources._default;
-            this.picImagenEV.Location = new System.Drawing.Point(315, 48);
+            this.picImagenEV.Location = new System.Drawing.Point(315, 49);
             this.picImagenEV.Name = "picImagenEV";
             this.tlpAdminEventosEV.SetRowSpan(this.picImagenEV, 11);
-            this.picImagenEV.Size = new System.Drawing.Size(306, 489);
+            this.picImagenEV.Size = new System.Drawing.Size(306, 500);
             this.picImagenEV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImagenEV.TabIndex = 28;
             this.picImagenEV.TabStop = false;
@@ -548,7 +548,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.tlpAdminEventosEV.SetColumnSpan(this.label11, 2);
-            this.label11.Location = new System.Drawing.Point(315, 24);
+            this.label11.Location = new System.Drawing.Point(315, 25);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(306, 21);
             this.label11.TabIndex = 27;
@@ -560,9 +560,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarEventoEV.Enabled = false;
-            this.btnEliminarEventoEV.Location = new System.Drawing.Point(159, 543);
+            this.btnEliminarEventoEV.Location = new System.Drawing.Point(159, 555);
             this.btnEliminarEventoEV.Name = "btnEliminarEventoEV";
-            this.btnEliminarEventoEV.Size = new System.Drawing.Size(150, 39);
+            this.btnEliminarEventoEV.Size = new System.Drawing.Size(150, 43);
             this.btnEliminarEventoEV.TabIndex = 29;
             this.btnEliminarEventoEV.Text = "Eliminar";
             this.btnEliminarEventoEV.UseVisualStyleBackColor = true;
@@ -572,9 +572,9 @@ namespace BINAES
             this.btnAgregarEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarEventoEV.Location = new System.Drawing.Point(471, 543);
+            this.btnAgregarEventoEV.Location = new System.Drawing.Point(471, 555);
             this.btnAgregarEventoEV.Name = "btnAgregarEventoEV";
-            this.btnAgregarEventoEV.Size = new System.Drawing.Size(150, 39);
+            this.btnAgregarEventoEV.Size = new System.Drawing.Size(150, 43);
             this.btnAgregarEventoEV.TabIndex = 22;
             this.btnAgregarEventoEV.Tag = "1";
             this.btnAgregarEventoEV.Text = "Agregar";
@@ -586,9 +586,9 @@ namespace BINAES
             this.btnEditarEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditarEventoEV.Location = new System.Drawing.Point(315, 543);
+            this.btnEditarEventoEV.Location = new System.Drawing.Point(315, 555);
             this.btnEditarEventoEV.Name = "btnEditarEventoEV";
-            this.btnEditarEventoEV.Size = new System.Drawing.Size(150, 39);
+            this.btnEditarEventoEV.Size = new System.Drawing.Size(150, 43);
             this.btnEditarEventoEV.TabIndex = 30;
             this.btnEditarEventoEV.Text = "Actualizar";
             this.btnEditarEventoEV.UseVisualStyleBackColor = true;
@@ -1201,7 +1201,7 @@ namespace BINAES
             this.tabBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBuscar.Name = "tabBuscar";
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabBuscar.Size = new System.Drawing.Size(1250, 614);
+            this.tabBuscar.Size = new System.Drawing.Size(1250, 601);
             this.tabBuscar.TabIndex = 0;
             this.tabBuscar.Text = "Búsqueda de ejemplares";
             // 

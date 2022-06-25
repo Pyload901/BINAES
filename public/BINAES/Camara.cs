@@ -28,13 +28,13 @@ namespace BINAES
         {
             try
             {
-                string filepath = Properties.Resources.RutaImagenesUsuarios + '/' + Path.GetRandomFileName() + ".png";
+                string filepath = Properties.Resources.RutaImagenesUsuarios + Path.GetRandomFileName() + ".png";
                 if (!Directory.Exists(Properties.Resources.RutaImagenesUsuarios))
                     Directory.CreateDirectory(Properties.Resources.RutaImagenesUsuarios);
             
                 while (File.Exists(filepath))
                 {
-                    filepath = Properties.Resources.RutaImagenesUsuarios + '/' + Path.GetRandomFileName() + ".png";
+                    filepath = Properties.Resources.RutaImagenesUsuarios + Path.GetRandomFileName() + ".png";
                 }
                 imagen.Save(filepath);
 

@@ -120,7 +120,7 @@ namespace BINAES.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a ../../Resources/ejemplares.
+        ///   Busca una cadena traducida similar a ../../Resources/ejemplares/.
         /// </summary>
         internal static string RutaImagenesEjemplares {
             get {
@@ -129,7 +129,7 @@ namespace BINAES.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a ../../Resources/eventos.
+        ///   Busca una cadena traducida similar a ../../Resources/eventos/.
         /// </summary>
         internal static string RutaImagenesEventos {
             get {
@@ -138,7 +138,7 @@ namespace BINAES.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a ../../Resources/usuarios.
+        ///   Busca una cadena traducida similar a ../../Resources/usuarios/.
         /// </summary>
         internal static string RutaImagenesUsuarios {
             get {

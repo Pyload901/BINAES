@@ -268,22 +268,13 @@ namespace BINAES
         private void btnEditarEventoEV_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(btnEditarEventoEV.Tag);
-            String obj = (rtbObjetivoEventoEV.Text).Trim();
-            obj.Trim();
-            List<string> objetivos = (obj.Split('\n')).ToList();
+            List<string> objetivos = rtbObjetivoEventoEV.Text.Trim().Split('\n').ToList();
             objetivos.RemoveAll(str => str == "");
             int objetivosEnBaseDeDatos = ObjetivoEventoDAO.ContarElementosPorIdEvento(id);
             int objetivos_nuevos = objetivos.Count - objetivosEnBaseDeDatos;
             List<string> objetivosActualizar = objetivos.GetRange(0, objetivosEnBaseDeDatos);
             List<string> objetivosNuevos = objetivos.GetRange(objetivosEnBaseDeDatos, objetivos.Count);
-            foreach(var ob in objetivosActualizar)
-            {
-                Console.WriteLine(ob);
-            }
-            foreach (var ob in objetivosNuevos)
-            {
-                Console.WriteLine(ob);
-            }
+            
         }
 
 
