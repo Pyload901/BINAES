@@ -264,7 +264,7 @@ namespace BINAES
                 obj.Trim();
                 List<string> objetivos = (obj.Split('\n')).ToList();
                 objetivos.RemoveAll(str => str == "");
-                objetivos.Take(ObjetivoEventoDAO.ContarElementosPorIdEvento());
+                /*objetivos.Take(ObjetivoEventoDAO.ContarElementosPorIdEvento());*/
             }
             else
             {
