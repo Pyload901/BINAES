@@ -200,7 +200,6 @@ namespace BINAES
             // 
             // mspMenu
             // 
-            this.mspMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mspMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.búsquedaToolStripMenuItem,
@@ -209,7 +208,7 @@ namespace BINAES
             this.mspMenu.Location = new System.Drawing.Point(0, 0);
             this.mspMenu.Name = "mspMenu";
             this.mspMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mspMenu.Size = new System.Drawing.Size(1258, 33);
+            this.mspMenu.Size = new System.Drawing.Size(1258, 28);
             this.mspMenu.TabIndex = 1;
             this.mspMenu.Text = "menuStrip1";
             this.mspMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mspMenu_ItemClicked);
@@ -222,7 +221,7 @@ namespace BINAES
             this.devolucionesToolStripMenuItem,
             this.añadirToolStripMenuItem});
             this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
-            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(257, 29);
+            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
             this.búsquedaToolStripMenuItem.Tag = "";
             this.búsquedaToolStripMenuItem.Text = "Administrador de ejemplares";
             this.búsquedaToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.búsquedaToolStripMenuItem_DropDownItemClicked);
@@ -231,51 +230,51 @@ namespace BINAES
             // búscarToolStripMenuItem
             // 
             this.búscarToolStripMenuItem.Name = "búscarToolStripMenuItem";
-            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.búscarToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.búscarToolStripMenuItem.Tag = "0";
             this.búscarToolStripMenuItem.Text = "Buscar [Ctrl + F]";
             // 
             // prestarToolStripMenuItem
             // 
             this.prestarToolStripMenuItem.Name = "prestarToolStripMenuItem";
-            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.prestarToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.prestarToolStripMenuItem.Tag = "1";
             this.prestarToolStripMenuItem.Text = "Préstamos";
             // 
             // devolucionesToolStripMenuItem
             // 
             this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.devolucionesToolStripMenuItem.Tag = "2";
             this.devolucionesToolStripMenuItem.Text = "Reservas";
             // 
             // añadirToolStripMenuItem
             // 
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.añadirToolStripMenuItem.Tag = "3";
             this.añadirToolStripMenuItem.Text = "Agregar [Ctrl + N]";
             // 
             // administradorDeEventosToolStripMenuItem
             // 
             this.administradorDeEventosToolStripMenuItem.Name = "administradorDeEventosToolStripMenuItem";
-            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(234, 29);
+            this.administradorDeEventosToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
             this.administradorDeEventosToolStripMenuItem.Tag = "4";
             this.administradorDeEventosToolStripMenuItem.Text = "Administrador de eventos";
             // 
             // administradorDeUsuariosToolStripMenuItem
             // 
             this.administradorDeUsuariosToolStripMenuItem.Name = "administradorDeUsuariosToolStripMenuItem";
-            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(238, 29);
+            this.administradorDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
             this.administradorDeUsuariosToolStripMenuItem.Tag = "5";
             this.administradorDeUsuariosToolStripMenuItem.Text = "Administrador de usuarios";
             // 
             // tabUsuarios
             // 
             this.tabUsuarios.Controls.Add(this.tableLayoutPanel5);
-            this.tabUsuarios.Location = new System.Drawing.Point(4, 44);
+            this.tabUsuarios.Location = new System.Drawing.Point(4, 40);
             this.tabUsuarios.Name = "tabUsuarios";
-            this.tabUsuarios.Size = new System.Drawing.Size(1250, 589);
+            this.tabUsuarios.Size = new System.Drawing.Size(1250, 593);
             this.tabUsuarios.TabIndex = 5;
             this.tabUsuarios.Text = "Usuarios";
             this.tabUsuarios.UseVisualStyleBackColor = true;
@@ -362,7 +361,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreUS.Location = new System.Drawing.Point(462, 103);
             this.txtNombreUS.Name = "txtNombreUS";
-            this.txtNombreUS.Size = new System.Drawing.Size(328, 39);
+            this.txtNombreUS.Size = new System.Drawing.Size(328, 34);
             this.txtNombreUS.TabIndex = 8;
             // 
             // label34
@@ -385,7 +384,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmailUS.Location = new System.Drawing.Point(796, 103);
             this.txtEmailUS.Name = "txtEmailUS";
-            this.txtEmailUS.Size = new System.Drawing.Size(328, 39);
+            this.txtEmailUS.Size = new System.Drawing.Size(328, 34);
             this.txtEmailUS.TabIndex = 9;
             // 
             // label30
@@ -420,7 +419,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccionUS.Location = new System.Drawing.Point(462, 303);
             this.txtDireccionUS.Name = "txtDireccionUS";
-            this.txtDireccionUS.Size = new System.Drawing.Size(328, 39);
+            this.txtDireccionUS.Size = new System.Drawing.Size(328, 34);
             this.txtDireccionUS.TabIndex = 16;
             // 
             // label38
@@ -442,7 +441,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContraseñaUS.Location = new System.Drawing.Point(796, 303);
             this.txtContraseñaUS.Name = "txtContraseñaUS";
-            this.txtContraseñaUS.Size = new System.Drawing.Size(328, 39);
+            this.txtContraseñaUS.Size = new System.Drawing.Size(328, 34);
             this.txtContraseñaUS.TabIndex = 17;
             // 
             // label40
@@ -478,7 +477,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefonoUS.Location = new System.Drawing.Point(796, 403);
             this.txtTelefonoUS.Name = "txtTelefonoUS";
-            this.txtTelefonoUS.Size = new System.Drawing.Size(328, 39);
+            this.txtTelefonoUS.Size = new System.Drawing.Size(328, 34);
             this.txtTelefonoUS.TabIndex = 21;
             // 
             // btnAgregarUS
@@ -501,7 +500,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInstitucionUS.Location = new System.Drawing.Point(462, 403);
             this.txtInstitucionUS.Name = "txtInstitucionUS";
-            this.txtInstitucionUS.Size = new System.Drawing.Size(328, 39);
+            this.txtInstitucionUS.Size = new System.Drawing.Size(328, 34);
             this.txtInstitucionUS.TabIndex = 20;
             // 
             // cmbOcupacionUS
@@ -512,7 +511,7 @@ namespace BINAES
             this.cmbOcupacionUS.FormattingEnabled = true;
             this.cmbOcupacionUS.Location = new System.Drawing.Point(462, 203);
             this.cmbOcupacionUS.Name = "cmbOcupacionUS";
-            this.cmbOcupacionUS.Size = new System.Drawing.Size(328, 40);
+            this.cmbOcupacionUS.Size = new System.Drawing.Size(328, 36);
             this.cmbOcupacionUS.TabIndex = 23;
             // 
             // cmbRolUS
@@ -523,7 +522,7 @@ namespace BINAES
             this.cmbRolUS.FormattingEnabled = true;
             this.cmbRolUS.Location = new System.Drawing.Point(796, 203);
             this.cmbRolUS.Name = "cmbRolUS";
-            this.cmbRolUS.Size = new System.Drawing.Size(328, 40);
+            this.cmbRolUS.Size = new System.Drawing.Size(328, 36);
             this.cmbRolUS.TabIndex = 24;
             // 
             // picFotoUS
@@ -572,9 +571,9 @@ namespace BINAES
             // tabEventos
             // 
             this.tabEventos.Controls.Add(this.tlpAdminEventosEV);
-            this.tabEventos.Location = new System.Drawing.Point(4, 44);
+            this.tabEventos.Location = new System.Drawing.Point(4, 40);
             this.tabEventos.Name = "tabEventos";
-            this.tabEventos.Size = new System.Drawing.Size(1250, 589);
+            this.tabEventos.Size = new System.Drawing.Size(1250, 593);
             this.tabEventos.TabIndex = 4;
             this.tabEventos.Text = "Eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
@@ -658,7 +657,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nudNumeroAsistentesEV.Location = new System.Drawing.Point(3, 509);
             this.nudNumeroAsistentesEV.Name = "nudNumeroAsistentesEV";
-            this.nudNumeroAsistentesEV.Size = new System.Drawing.Size(331, 39);
+            this.nudNumeroAsistentesEV.Size = new System.Drawing.Size(331, 34);
             this.nudNumeroAsistentesEV.TabIndex = 16;
             // 
             // label17
@@ -682,7 +681,7 @@ namespace BINAES
             this.cmbTipoSalonEV.FormattingEnabled = true;
             this.cmbTipoSalonEV.Location = new System.Drawing.Point(3, 417);
             this.cmbTipoSalonEV.Name = "cmbTipoSalonEV";
-            this.cmbTipoSalonEV.Size = new System.Drawing.Size(331, 40);
+            this.cmbTipoSalonEV.Size = new System.Drawing.Size(331, 36);
             this.cmbTipoSalonEV.TabIndex = 14;
             // 
             // label15
@@ -726,7 +725,7 @@ namespace BINAES
             // 
             this.dtpFechaFinalizacionEV.Location = new System.Drawing.Point(3, 233);
             this.dtpFechaFinalizacionEV.Name = "dtpFechaFinalizacionEV";
-            this.dtpFechaFinalizacionEV.Size = new System.Drawing.Size(310, 39);
+            this.dtpFechaFinalizacionEV.Size = new System.Drawing.Size(310, 34);
             this.dtpFechaFinalizacionEV.TabIndex = 19;
             // 
             // label14
@@ -746,7 +745,7 @@ namespace BINAES
             // 
             this.dtpFechaInicioEV.Location = new System.Drawing.Point(3, 141);
             this.dtpFechaInicioEV.Name = "dtpFechaInicioEV";
-            this.dtpFechaInicioEV.Size = new System.Drawing.Size(310, 39);
+            this.dtpFechaInicioEV.Size = new System.Drawing.Size(310, 34);
             this.dtpFechaInicioEV.TabIndex = 17;
             // 
             // label13
@@ -769,7 +768,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTituloEventoEV.Location = new System.Drawing.Point(3, 49);
             this.txtTituloEventoEV.Name = "txtTituloEventoEV";
-            this.txtTituloEventoEV.Size = new System.Drawing.Size(331, 39);
+            this.txtTituloEventoEV.Size = new System.Drawing.Size(331, 34);
             this.txtTituloEventoEV.TabIndex = 4;
             // 
             // label12
@@ -825,9 +824,9 @@ namespace BINAES
             // tabAgregar
             // 
             this.tabAgregar.Controls.Add(this.tableLayoutPanel1);
-            this.tabAgregar.Location = new System.Drawing.Point(4, 44);
+            this.tabAgregar.Location = new System.Drawing.Point(4, 40);
             this.tabAgregar.Name = "tabAgregar";
-            this.tabAgregar.Size = new System.Drawing.Size(1250, 589);
+            this.tabAgregar.Size = new System.Drawing.Size(1250, 593);
             this.tabAgregar.TabIndex = 3;
             this.tabAgregar.Text = "Agregar ejemplar";
             this.tabAgregar.UseVisualStyleBackColor = true;
@@ -919,16 +918,16 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditorialEjemplarAG.Location = new System.Drawing.Point(253, 49);
             this.txtEditorialEjemplarAG.Name = "txtEditorialEjemplarAG";
-            this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(244, 39);
+            this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(244, 34);
             this.txtEditorialEjemplarAG.TabIndex = 22;
             // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(253, 290);
+            this.label10.Location = new System.Drawing.Point(253, 294);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 32);
+            this.label10.Size = new System.Drawing.Size(77, 28);
             this.label10.TabIndex = 9;
             this.label10.Text = "Imagen";
             // 
@@ -936,9 +935,9 @@ namespace BINAES
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 106);
+            this.label3.Location = new System.Drawing.Point(3, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 32);
+            this.label3.Size = new System.Drawing.Size(85, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre";
             // 
@@ -946,9 +945,9 @@ namespace BINAES
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 198);
+            this.label4.Location = new System.Drawing.Point(3, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 32);
+            this.label4.Size = new System.Drawing.Size(62, 28);
             this.label4.TabIndex = 3;
             this.label4.Text = "Autor";
             // 
@@ -956,9 +955,9 @@ namespace BINAES
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(253, 106);
+            this.label8.Location = new System.Drawing.Point(253, 110);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(239, 32);
+            this.label8.Size = new System.Drawing.Size(195, 28);
             this.label8.TabIndex = 7;
             this.label8.Text = "Fecha de publicación";
             // 
@@ -966,9 +965,9 @@ namespace BINAES
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 290);
+            this.label5.Location = new System.Drawing.Point(3, 294);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 32);
+            this.label5.Size = new System.Drawing.Size(73, 28);
             this.label5.TabIndex = 4;
             this.label5.Text = "Idioma";
             // 
@@ -976,9 +975,9 @@ namespace BINAES
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(253, 14);
+            this.label2.Location = new System.Drawing.Point(253, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 32);
+            this.label2.Size = new System.Drawing.Size(85, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Editorial";
             // 
@@ -986,9 +985,9 @@ namespace BINAES
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 474);
+            this.label7.Location = new System.Drawing.Point(3, 478);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 32);
+            this.label7.Size = new System.Drawing.Size(92, 28);
             this.label7.TabIndex = 6;
             this.label7.Text = "Etiquetas";
             // 
@@ -996,9 +995,9 @@ namespace BINAES
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 382);
+            this.label6.Location = new System.Drawing.Point(3, 386);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 32);
+            this.label6.Size = new System.Drawing.Size(87, 28);
             this.label6.TabIndex = 5;
             this.label6.Text = "Formato";
             // 
@@ -1006,9 +1005,9 @@ namespace BINAES
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(253, 198);
+            this.label9.Location = new System.Drawing.Point(253, 202);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(202, 32);
+            this.label9.Size = new System.Drawing.Size(165, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "Tipo de colección";
             // 
@@ -1016,9 +1015,9 @@ namespace BINAES
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 14);
+            this.label1.Location = new System.Drawing.Point(3, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 32);
+            this.label1.Size = new System.Drawing.Size(158, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código ejemplar";
             // 
@@ -1029,7 +1028,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodigoEjemplarAG.Location = new System.Drawing.Point(3, 49);
             this.txtCodigoEjemplarAG.Name = "txtCodigoEjemplarAG";
-            this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(244, 39);
+            this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(244, 34);
             this.txtCodigoEjemplarAG.TabIndex = 10;
             // 
             // cmbIdiomaEjemplarAG
@@ -1041,7 +1040,7 @@ namespace BINAES
             this.cmbIdiomaEjemplarAG.FormattingEnabled = true;
             this.cmbIdiomaEjemplarAG.Location = new System.Drawing.Point(3, 325);
             this.cmbIdiomaEjemplarAG.Name = "cmbIdiomaEjemplarAG";
-            this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(244, 40);
+            this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(244, 36);
             this.cmbIdiomaEjemplarAG.TabIndex = 13;
             // 
             // btnEtiquetasEjemplarAG
@@ -1063,7 +1062,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 141);
             this.txtNombreEjemplarAG.Name = "txtNombreEjemplarAG";
-            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(244, 39);
+            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(244, 34);
             this.txtNombreEjemplarAG.TabIndex = 23;
             // 
             // txtAutorEjemplarAG
@@ -1073,7 +1072,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 233);
             this.txtAutorEjemplarAG.Name = "txtAutorEjemplarAG";
-            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(244, 39);
+            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(244, 34);
             this.txtAutorEjemplarAG.TabIndex = 24;
             // 
             // cmbTipoColeccionEjemplarAG
@@ -1085,7 +1084,7 @@ namespace BINAES
             this.cmbTipoColeccionEjemplarAG.FormattingEnabled = true;
             this.cmbTipoColeccionEjemplarAG.Location = new System.Drawing.Point(253, 233);
             this.cmbTipoColeccionEjemplarAG.Name = "cmbTipoColeccionEjemplarAG";
-            this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(244, 40);
+            this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(244, 36);
             this.cmbTipoColeccionEjemplarAG.TabIndex = 25;
             // 
             // cmbFormatoEjemplarAG
@@ -1097,7 +1096,7 @@ namespace BINAES
             this.cmbFormatoEjemplarAG.FormattingEnabled = true;
             this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 417);
             this.cmbFormatoEjemplarAG.Name = "cmbFormatoEjemplarAG";
-            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(244, 40);
+            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(244, 36);
             this.cmbFormatoEjemplarAG.TabIndex = 26;
             // 
             // dgvEjemplaresAG
@@ -1121,7 +1120,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(253, 141);
             this.dtpFechaPublicacionEjemplarAG.Name = "dtpFechaPublicacionEjemplarAG";
-            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(244, 39);
+            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(244, 34);
             this.dtpFechaPublicacionEjemplarAG.TabIndex = 30;
             // 
             // picAgregarEjemplar
@@ -1142,10 +1141,10 @@ namespace BINAES
             // tabReserva
             // 
             this.tabReserva.Controls.Add(this.tableLayoutPanel2);
-            this.tabReserva.Location = new System.Drawing.Point(4, 44);
+            this.tabReserva.Location = new System.Drawing.Point(4, 40);
             this.tabReserva.Name = "tabReserva";
             this.tabReserva.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReserva.Size = new System.Drawing.Size(1250, 589);
+            this.tabReserva.Size = new System.Drawing.Size(1250, 593);
             this.tabReserva.TabIndex = 2;
             this.tabReserva.Text = "Reservas de ejemplares";
             this.tabReserva.UseVisualStyleBackColor = true;
@@ -1203,9 +1202,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label23, 2);
-            this.label23.Location = new System.Drawing.Point(127, 97);
+            this.label23.Location = new System.Drawing.Point(127, 101);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(242, 32);
+            this.label23.Size = new System.Drawing.Size(242, 28);
             this.label23.TabIndex = 1;
             this.label23.Text = "Ejemplar:";
             // 
@@ -1242,9 +1241,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label22, 2);
-            this.label22.Location = new System.Drawing.Point(127, 245);
+            this.label22.Location = new System.Drawing.Point(127, 249);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(242, 32);
+            this.label22.Size = new System.Drawing.Size(242, 28);
             this.label22.TabIndex = 34;
             this.label22.Text = "ID Usuario";
             // 
@@ -1265,7 +1264,7 @@ namespace BINAES
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(127, 280);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(118, 39);
+            this.numericUpDown1.Size = new System.Drawing.Size(118, 34);
             this.numericUpDown1.TabIndex = 36;
             // 
             // nudIdUsuarioRE
@@ -1275,7 +1274,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nudIdUsuarioRE.Location = new System.Drawing.Point(128, 311);
             this.nudIdUsuarioRE.Name = "nudIdUsuarioRE";
-            this.nudIdUsuarioRE.Size = new System.Drawing.Size(368, 26);
+            this.nudIdUsuarioRE.Size = new System.Drawing.Size(368, 22);
             this.nudIdUsuarioRE.TabIndex = 30;
             // 
             // label26
@@ -1293,7 +1292,7 @@ namespace BINAES
             // 
             this.textBox1.Location = new System.Drawing.Point(128, 314);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 26);
+            this.textBox1.Size = new System.Drawing.Size(160, 22);
             this.textBox1.TabIndex = 34;
             // 
             // textBox2
@@ -1303,18 +1302,18 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(128, 155);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 26);
+            this.textBox2.Size = new System.Drawing.Size(160, 22);
             this.textBox2.TabIndex = 35;
             // 
             // tabPrestamo
             // 
             this.tabPrestamo.Controls.Add(this.tableLayoutPanel4);
             this.tabPrestamo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tabPrestamo.Location = new System.Drawing.Point(4, 44);
+            this.tabPrestamo.Location = new System.Drawing.Point(4, 40);
             this.tabPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPrestamo.Name = "tabPrestamo";
             this.tabPrestamo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPrestamo.Size = new System.Drawing.Size(1250, 589);
+            this.tabPrestamo.Size = new System.Drawing.Size(1250, 593);
             this.tabPrestamo.TabIndex = 1;
             this.tabPrestamo.Text = "Préstamo de ejemplares";
             this.tabPrestamo.UseVisualStyleBackColor = true;
@@ -1370,9 +1369,9 @@ namespace BINAES
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(127, 116);
+            this.label18.Location = new System.Drawing.Point(127, 120);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(159, 32);
+            this.label18.Size = new System.Drawing.Size(159, 28);
             this.label18.TabIndex = 1;
             this.label18.Text = "Ejemplar:";
             // 
@@ -1392,7 +1391,7 @@ namespace BINAES
             // 
             this.textBox3.Location = new System.Drawing.Point(127, 306);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 39);
+            this.textBox3.Size = new System.Drawing.Size(159, 34);
             this.textBox3.TabIndex = 34;
             // 
             // label21
@@ -1400,9 +1399,9 @@ namespace BINAES
             this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(127, 271);
+            this.label21.Location = new System.Drawing.Point(127, 275);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(159, 32);
+            this.label21.Size = new System.Drawing.Size(159, 28);
             this.label21.TabIndex = 8;
             this.label21.Text = "ID usuario:";
             // 
@@ -1425,18 +1424,18 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Location = new System.Drawing.Point(127, 151);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(159, 39);
+            this.textBox4.Size = new System.Drawing.Size(159, 34);
             this.textBox4.TabIndex = 35;
             // 
             // tabBuscar
             // 
             this.tabBuscar.BackColor = System.Drawing.Color.Transparent;
             this.tabBuscar.Controls.Add(this.tableLayoutPanel7);
-            this.tabBuscar.Location = new System.Drawing.Point(4, 44);
+            this.tabBuscar.Location = new System.Drawing.Point(4, 40);
             this.tabBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBuscar.Name = "tabBuscar";
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabBuscar.Size = new System.Drawing.Size(1250, 589);
+            this.tabBuscar.Size = new System.Drawing.Size(1250, 593);
             this.tabBuscar.TabIndex = 0;
             this.tabBuscar.Text = "Búsqueda de ejemplares";
             // 
@@ -1492,10 +1491,10 @@ namespace BINAES
             // 
             this.txtBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarEjemplarBU.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(65, 43);
+            this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(65, 46);
             this.txtBuscarEjemplarBU.Name = "txtBuscarEjemplarBU";
             this.tableLayoutPanel7.SetRowSpan(this.txtBuscarEjemplarBU, 2);
-            this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(744, 50);
+            this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(744, 43);
             this.txtBuscarEjemplarBU.TabIndex = 0;
             this.txtBuscarEjemplarBU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarEjemplarBU_KeyDown);
             // 
@@ -1518,9 +1517,9 @@ namespace BINAES
             this.chkBusquedaExactaBU.AutoSize = true;
             this.tableLayoutPanel7.SetColumnSpan(this.chkBusquedaExactaBU, 2);
             this.chkBusquedaExactaBU.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBusquedaExactaBU.Location = new System.Drawing.Point(877, 33);
+            this.chkBusquedaExactaBU.Location = new System.Drawing.Point(877, 38);
             this.chkBusquedaExactaBU.Name = "chkBusquedaExactaBU";
-            this.chkBusquedaExactaBU.Size = new System.Drawing.Size(181, 32);
+            this.chkBusquedaExactaBU.Size = new System.Drawing.Size(181, 27);
             this.chkBusquedaExactaBU.TabIndex = 5;
             this.chkBusquedaExactaBU.Text = "Búsqueda exacta";
             this.chkBusquedaExactaBU.UseVisualStyleBackColor = true;
@@ -1546,7 +1545,7 @@ namespace BINAES
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
             this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(939, 71);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
-            this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(119, 40);
+            this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(119, 36);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
             this.cmbFiltrarEjemplarBU.SelectedIndexChanged += new System.EventHandler(this.cmbFiltrarEjemplarBU_SelectedIndexChanged);
             // 
@@ -1556,9 +1555,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkFísicoBU.AutoSize = true;
             this.chkFísicoBU.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFísicoBU.Location = new System.Drawing.Point(1064, 33);
+            this.chkFísicoBU.Location = new System.Drawing.Point(1064, 38);
             this.chkFísicoBU.Name = "chkFísicoBU";
-            this.chkFísicoBU.Size = new System.Drawing.Size(119, 32);
+            this.chkFísicoBU.Size = new System.Drawing.Size(119, 27);
             this.chkFísicoBU.TabIndex = 7;
             this.chkFísicoBU.Text = "Físico";
             this.chkFísicoBU.UseVisualStyleBackColor = true;
@@ -1571,7 +1570,7 @@ namespace BINAES
             this.chkDigitalBU.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDigitalBU.Location = new System.Drawing.Point(1064, 71);
             this.chkDigitalBU.Name = "chkDigitalBU";
-            this.chkDigitalBU.Size = new System.Drawing.Size(119, 32);
+            this.chkDigitalBU.Size = new System.Drawing.Size(119, 27);
             this.chkDigitalBU.TabIndex = 8;
             this.chkDigitalBU.Text = "Digital";
             this.chkDigitalBU.UseVisualStyleBackColor = true;
@@ -1609,10 +1608,10 @@ namespace BINAES
             // tabMisionVision
             // 
             this.tabMisionVision.Controls.Add(this.tableLayoutPanel3);
-            this.tabMisionVision.Location = new System.Drawing.Point(4, 44);
+            this.tabMisionVision.Location = new System.Drawing.Point(4, 40);
             this.tabMisionVision.Name = "tabMisionVision";
             this.tabMisionVision.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMisionVision.Size = new System.Drawing.Size(1250, 589);
+            this.tabMisionVision.Size = new System.Drawing.Size(1250, 593);
             this.tabMisionVision.TabIndex = 6;
             this.tabMisionVision.Text = "Mision y Vision";
             this.tabMisionVision.UseVisualStyleBackColor = true;
@@ -1703,10 +1702,10 @@ namespace BINAES
             // tabIntroduccion
             // 
             this.tabIntroduccion.Controls.Add(this.tableLayoutPanel6);
-            this.tabIntroduccion.Location = new System.Drawing.Point(4, 44);
+            this.tabIntroduccion.Location = new System.Drawing.Point(4, 40);
             this.tabIntroduccion.Name = "tabIntroduccion";
             this.tabIntroduccion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIntroduccion.Size = new System.Drawing.Size(1250, 589);
+            this.tabIntroduccion.Size = new System.Drawing.Size(1250, 593);
             this.tabIntroduccion.TabIndex = 8;
             this.tabIntroduccion.Text = "Introduccion";
             this.tabIntroduccion.UseVisualStyleBackColor = true;
@@ -1778,9 +1777,9 @@ namespace BINAES
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 44);
+            this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1250, 589);
+            this.tabPage1.Size = new System.Drawing.Size(1250, 593);
             this.tabPage1.TabIndex = 9;
             // 
             // tlpColeccionCO
@@ -1824,21 +1823,21 @@ namespace BINAES
             // 
             this.txtNombreCO.Location = new System.Drawing.Point(0, 0);
             this.txtNombreCO.Name = "txtNombreCO";
-            this.txtNombreCO.Size = new System.Drawing.Size(100, 26);
+            this.txtNombreCO.Size = new System.Drawing.Size(100, 22);
             this.txtNombreCO.TabIndex = 0;
             // 
             // cmbTipoColeccionCO
             // 
             this.cmbTipoColeccionCO.Location = new System.Drawing.Point(0, 0);
             this.cmbTipoColeccionCO.Name = "cmbTipoColeccionCO";
-            this.cmbTipoColeccionCO.Size = new System.Drawing.Size(121, 28);
+            this.cmbTipoColeccionCO.Size = new System.Drawing.Size(121, 24);
             this.cmbTipoColeccionCO.TabIndex = 0;
             // 
             // cmbGeneroColeccionCO
             // 
             this.cmbGeneroColeccionCO.Location = new System.Drawing.Point(0, 0);
             this.cmbGeneroColeccionCO.Name = "cmbGeneroColeccionCO";
-            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(121, 28);
+            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(121, 24);
             this.cmbGeneroColeccionCO.TabIndex = 0;
             // 
             // btnAgregarCO
@@ -1861,26 +1860,26 @@ namespace BINAES
             this.sspStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sspNombre,
             this.sspRol});
-            this.sspStatus.Location = new System.Drawing.Point(0, 632);
+            this.sspStatus.Location = new System.Drawing.Point(0, 638);
             this.sspStatus.Name = "sspStatus";
-            this.sspStatus.Size = new System.Drawing.Size(1258, 32);
+            this.sspStatus.Size = new System.Drawing.Size(1258, 26);
             this.sspStatus.TabIndex = 2;
             // 
             // sspNombre
             // 
             this.sspNombre.Name = "sspNombre";
-            this.sspNombre.Size = new System.Drawing.Size(87, 25);
+            this.sspNombre.Size = new System.Drawing.Size(71, 20);
             this.sspNombre.Text = "Nombre: ";
             // 
             // sspRol
             // 
             this.sspRol.Name = "sspRol";
-            this.sspRol.Size = new System.Drawing.Size(46, 25);
+            this.sspRol.Size = new System.Drawing.Size(38, 20);
             this.sspRol.Text = "Rol: ";
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 45F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.sspStatus);
