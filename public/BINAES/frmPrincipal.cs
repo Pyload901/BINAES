@@ -301,5 +301,11 @@ namespace BINAES
         {
 
         }
+
+        private void btnBuscarCO_Click(object sender, EventArgs e)
+        {
+            dataGridViewColeccion.DataSource = null;
+            dataGridViewColeccion.DataSource = ColeccionDAO.Buscar();
+        }
     }
 }
