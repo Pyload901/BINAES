@@ -61,7 +61,7 @@ namespace BINAES
             this.label11 = new System.Windows.Forms.Label();
             this.btnEliminarEventoEV = new System.Windows.Forms.Button();
             this.btnAgregarEventoEV = new System.Windows.Forms.Button();
-            this.btnActualizarEventoEV = new System.Windows.Forms.Button();
+            this.btnEditarEventoEV = new System.Windows.Forms.Button();
             this.tabAgregar = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalirEdicionEjemplarAG = new System.Windows.Forms.Button();
@@ -340,7 +340,7 @@ namespace BINAES
             this.tlpAdminEventosEV.Controls.Add(this.label11, 2, 0);
             this.tlpAdminEventosEV.Controls.Add(this.btnEliminarEventoEV, 1, 12);
             this.tlpAdminEventosEV.Controls.Add(this.btnAgregarEventoEV, 3, 12);
-            this.tlpAdminEventosEV.Controls.Add(this.btnActualizarEventoEV, 2, 12);
+            this.tlpAdminEventosEV.Controls.Add(this.btnEditarEventoEV, 2, 12);
             this.tlpAdminEventosEV.Location = new System.Drawing.Point(0, 0);
             this.tlpAdminEventosEV.Name = "tlpAdminEventosEV";
             this.tlpAdminEventosEV.RowCount = 13;
@@ -585,17 +585,18 @@ namespace BINAES
             this.btnAgregarEventoEV.UseVisualStyleBackColor = true;
             this.btnAgregarEventoEV.Click += new System.EventHandler(this.btnAgregarEV_Click);
             // 
-            // btnActualizarEventoEV
+            // btnEditarEventoEV
             // 
-            this.btnActualizarEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnEditarEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizarEventoEV.Location = new System.Drawing.Point(315, 507);
-            this.btnActualizarEventoEV.Name = "btnActualizarEventoEV";
-            this.btnActualizarEventoEV.Size = new System.Drawing.Size(150, 47);
-            this.btnActualizarEventoEV.TabIndex = 30;
-            this.btnActualizarEventoEV.Text = "Actualizar";
-            this.btnActualizarEventoEV.UseVisualStyleBackColor = true;
+            this.btnEditarEventoEV.Location = new System.Drawing.Point(315, 507);
+            this.btnEditarEventoEV.Name = "btnEditarEventoEV";
+            this.btnEditarEventoEV.Size = new System.Drawing.Size(150, 47);
+            this.btnEditarEventoEV.TabIndex = 30;
+            this.btnEditarEventoEV.Text = "Actualizar";
+            this.btnEditarEventoEV.UseVisualStyleBackColor = true;
+            this.btnEditarEventoEV.Click += new System.EventHandler(this.btnEditarEventoEV_Click);
             // 
             // tabAgregar
             // 
@@ -2326,7 +2327,7 @@ namespace BINAES
         private ComboBox cmbGeneroColeccionCO;
         private TextBox txtNombreColeccionCO;
         private Button btnBuscarCO;
-        private Button btnActualizarEventoEV;
+        private Button btnEditarEventoEV;
         private Button btnActualizarUS;
     }
 }

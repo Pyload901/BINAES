@@ -187,6 +187,7 @@ namespace BINAES
             try
             {
                 DataGridView dgv = (DataGridView)sender;
+                btnEditarEventoEV.Tag = dgv.Rows[e.RowIndex].Cells["id"].Value.ToString();
                 txtTituloEventoEV.Text = dgv.Rows[e.RowIndex].Cells["titulo"].Value.ToString();
                 try
                 {
@@ -208,7 +209,8 @@ namespace BINAES
                 nudNumeroAsistentesEV.Value = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["numero_asistentes"].Value);
                 btnDejarDeEditarEV.Enabled = true;
                 btnEliminarEventoEV.Enabled = true;
-                btnAgregarEventoEV.Tag = null;
+                btnAgregarEventoEV.Enabled = false;
+
             }
             catch (Exception ex1)
             {
@@ -223,9 +225,9 @@ namespace BINAES
             dtpFechaFinalizacionEV.ResetText();
             rtbObjetivoEventoEV.Clear();
             nudNumeroAsistentesEV.Value = 0;
+            btnAgregarEventoEV.Enabled = true;
             btnDejarDeEditarEV.Enabled = false;
             btnEliminarEventoEV.Enabled = false;
-            btnAgregarEventoEV.Tag = "1";
         }
         private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -261,18 +263,26 @@ namespace BINAES
         }
         private void btnAgregarEV_Click(object sender, EventArgs e)
         {
-            // si es null, estamos en modo edicion
-            if (btnAgregarEventoEV.Tag == null)
+            
+        }
+        private void btnEditarEventoEV_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(btnEditarEventoEV.Tag);
+            String obj = (rtbObjetivoEventoEV.Text).Trim();
+            obj.Trim();
+            List<string> objetivos = (obj.Split('\n')).ToList();
+            objetivos.RemoveAll(str => str == "");
+            int objetivosEnBaseDeDatos = ObjetivoEventoDAO.ContarElementosPorIdEvento(id);
+            int objetivos_nuevos = objetivos.Count - objetivosEnBaseDeDatos;
+            List<string> objetivosActualizar = objetivos.GetRange(0, objetivosEnBaseDeDatos);
+            List<string> objetivosNuevos = objetivos.GetRange(objetivosEnBaseDeDatos, objetivos.Count);
+            foreach(var ob in objetivosActualizar)
             {
-                String obj = rtbObjetivoEventoEV.Text;
-                obj.Trim();
-                List<string> objetivos = (obj.Split('\n')).ToList();
-                objetivos.RemoveAll(str => str == "");
-                /*objetivos.Take(ObjetivoEventoDAO.ContarElementosPorIdEvento());*/
+                Console.WriteLine(ob);
             }
-            else
+            foreach (var ob in objetivosNuevos)
             {
-
+                Console.WriteLine(ob);
             }
         }
 
@@ -347,6 +357,6 @@ namespace BINAES
             dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
         }
 
-
+        
     }
 }
