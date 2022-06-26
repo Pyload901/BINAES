@@ -200,7 +200,7 @@ namespace BINAES
             this.tabAdmin.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.tblUsuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosUS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).BeginInit();
             this.tabMisionVision.SuspendLayout();
             this.tblMisionVision.SuspendLayout();
