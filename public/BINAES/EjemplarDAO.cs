@@ -197,6 +197,28 @@ namespace BINAES
             }
             return list;
         }
+        public static bool VerificarDisponibilidad (int id)
+        {
+            bool result = false;
+            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            {
+                string query = @"SELECT stock FROM EJEMPLAR WHERE id = @id";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (Convert.ToInt32(reader["stock"]) > 0)
+                            result = true;
+                    }
+                }
+                conn.Close();
+            }
+            return result;
+        }
 
         //Evento de Buscar ejemplar Prestamo
         public static Ejemplar Buscar()

@@ -12,7 +12,7 @@ namespace BINAES
     {
         public static int getDataGridViewCellId(DataGridView dgv, DataGridViewCellEventArgs e)
         {
-            return Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Tag);
+            return Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[0].Value);
         }
         public static OpcionesEnumerate VerificarOpcion(DataGridView dgv, DataGridViewCellEventArgs e)
         {

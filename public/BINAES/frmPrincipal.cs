@@ -102,6 +102,10 @@ namespace BINAES
             this.Text = tabAdmin.SelectedTab.Text;
             switch (tabAdmin.SelectedIndex)
             {
+                case 2:
+                    dgvReservasRE.DataSource = ReservaDAO.Leer();
+                    DataGridViewComposer.Compose(dgvReservasRE);
+                    break;
                 case 4:
                     cmbAreaEventoEV.ValueMember = "id";
                     cmbAreaEventoEV.DisplayMember = "nombre";
@@ -158,6 +162,7 @@ namespace BINAES
         {
             tabAdmin.SelectedIndex = 0;
             txtBuscarEjemplarBU.Select();
+            MessageBox.Show("Doble click al ejemplar que quiere prestar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void cmbFiltrarEjemplarBU_SelectedIndexChanged(object sender, EventArgs e)
@@ -174,6 +179,22 @@ namespace BINAES
             {
                 DialogResult resultado = ventana.ShowDialog();
             }
+        }
+
+        private void btnReservarRE_Click(object sender, EventArgs e)
+        {
+            if (nudIdEjemplarRE.Value != 0 && nudIdUsuarioRE.Value != 0)
+                if (!ReservaDAO.Create(Convert.ToInt32(nudIdEjemplarRE.Value), Convert.ToInt32(nudIdUsuarioRE.Value)))
+                    MessageBox.Show("No se pudo realizar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    DataGridViewComposer.LimpiarDataGridView(dgvReservasRE);
+                    dgvReservasRE.DataSource = ReservaDAO.Leer();
+                    DataGridViewComposer.Compose(dgvReservasRE);
+                }
+
+            else
+                MessageBox.Show("No se ha ingresado usuario o ejemplar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         // Formulario de ejemplares
@@ -207,7 +228,7 @@ namespace BINAES
                 txtTituloEventoEV.Text = dgv.Rows[e.RowIndex].Cells["titulo"].Value.ToString();
                 try
                 {
-                    picImagenEV.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + "/" + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
+                    picImagenEV.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
                 }
                 catch (Exception ex2)
                 {
@@ -279,19 +300,29 @@ namespace BINAES
         }
         private void btnAgregarEV_Click(object sender, EventArgs e)
         {
-            // si es null, estamos en modo edicion
-            if (btnAgregarEventoEV.Tag == null)
+            if (txtTituloEventoEV.Text != "" && dtpFechaInicioEV.Text != "" && dtpFechaFinalizacionEV.Text != "" && rtbObjetivoEventoEV.Text != "" && nudNumeroAsistentesEV.Value != 0 && picImagenEV.Image != Properties.Resources._default)
             {
-                String obj = rtbObjetivoEventoEV.Text;
-                obj.Trim();
-                List<string> objetivos = (obj.Split('\n')).ToList();
+                List<string> objetivos = rtbObjetivoEventoEV.Text.Trim().Split('\n').ToList();
                 objetivos.RemoveAll(str => str == "");
-                /*objetivos.Take(ObjetivoEventoDAO.ContarElementosPorIdEvento());*/
-            }
-            else
-            {
+                Evento evento = new Evento();
+                evento.titulo = txtTituloEventoEV.Text;
+                evento.fechaInicio = Convert.ToDateTime(dtpFechaInicioEV.Text);
+                evento.fechaFin = Convert.ToDateTime(dtpFechaFinalizacionEV.Text);
+                evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
+                evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
+                evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
 
+                if (EventoDAO.Crear(evento))
+                {
+                    DataGridViewComposer.LimpiarDataGridView(dgvEventosEV);
+                    dgvEventosEV.DataSource = EventoDAO.Leer();
+                    DataGridViewComposer.Compose(dgvEventosEV);
+                }
+            } else
+            {
+                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            /*objetivos.Take(ObjetivoEventoDAO.ContarElementosPorIdEvento());*/
 
             //Falta implementar Bussines Object para Create
         }
@@ -441,18 +472,25 @@ namespace BINAES
         {
 
         }
-
-        private void label47_Click(object sender, EventArgs e)
-        {
-
-        }
-      
         private void btnBuscarCO_Click(object sender, EventArgs e)
         {
             dgvColeccionesCO.DataSource = null;
             dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
         }
 
+        private void dgvEjemplaresBU_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = Utils.getDataGridViewCellId(sender as DataGridView, e);
+            if (EjemplarDAO.VerificarDisponibilidad(id))
+            {
+                tabAdmin.SelectedIndex = 1;
+            }
+            else
+            {
+                tabAdmin.SelectedIndex = 2;
+                nudIdEjemplarRE.Value = id;
+            }
+        }
         private void btnBuscarPR_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;

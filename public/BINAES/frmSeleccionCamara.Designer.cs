@@ -46,10 +46,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
-            this.label1.Location = new System.Drawing.Point(6, 22);
+            this.label1.Location = new System.Drawing.Point(6, 82);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(422, 90);
+            this.label1.Size = new System.Drawing.Size(422, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Seleccione la cámara para tomar fotografías";
             // 
@@ -63,7 +63,7 @@
             this.cmbCamara.FormattingEnabled = true;
             this.cmbCamara.Location = new System.Drawing.Point(3, 115);
             this.cmbCamara.Name = "cmbCamara";
-            this.cmbCamara.Size = new System.Drawing.Size(428, 53);
+            this.cmbCamara.Size = new System.Drawing.Size(428, 38);
             this.cmbCamara.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -73,7 +73,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -149,29 +148,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label2, 2);
-            this.label2.Location = new System.Drawing.Point(6, 22);
+            this.label2.Location = new System.Drawing.Point(6, 82);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(422, 90);
+            this.label2.Size = new System.Drawing.Size(422, 30);
             this.label2.TabIndex = 0;
             this.label2.Text = "Seleccione la cámara para tomar fotografías";
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Location = new System.Drawing.Point(220, 227);
-            this.btnAceptar.Name = "button2";
-            this.btnAceptar.Size = new System.Drawing.Size(211, 50);
-            this.btnAceptar.TabIndex = 2;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
             // frmSeleccionCamara
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 45F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 304);
             this.Controls.Add(this.tableLayoutPanel2);

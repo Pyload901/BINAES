@@ -60,6 +60,5 @@ namespace BINAES
                 row.Cells[dgv.Columns.Count - 1].Tag = row.Cells[0].Value;
             }
         }
-
     }
 }
