@@ -123,7 +123,7 @@ namespace BINAES
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.lblFotoUsuarioUS = new System.Windows.Forms.Label();
             this.btnDejarDeEditarUS = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvUsuariosUS = new System.Windows.Forms.DataGridView();
             this.lblNombreUsuarioUS = new System.Windows.Forms.Label();
             this.txtNombreUS = new System.Windows.Forms.TextBox();
             this.lblInstitucionUsuarioUS = new System.Windows.Forms.Label();
@@ -200,7 +200,7 @@ namespace BINAES
             this.tabAdmin.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosUS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).BeginInit();
             this.tabMisionVision.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -1393,7 +1393,7 @@ namespace BINAES
             this.tableLayoutPanel8.Controls.Add(this.lblFotoUsuarioUS, 1, 4);
             this.tableLayoutPanel8.Controls.Add(this.btnDejarDeEditarUS, 0, 12);
             this.tableLayoutPanel8.Controls.Add(this.btnAgregarUS, 0, 12);
-            this.tableLayoutPanel8.Controls.Add(this.dataGridView2, 3, 0);
+            this.tableLayoutPanel8.Controls.Add(this.dgvUsuariosUS, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.lblNombreUsuarioUS, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.txtNombreUS, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.lblInstitucionUsuarioUS, 0, 6);
@@ -1464,19 +1464,20 @@ namespace BINAES
             this.btnDejarDeEditarUS.Text = "Dejar de editar";
             this.btnDejarDeEditarUS.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgvUsuariosUS
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(627, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.tableLayoutPanel8.SetRowSpan(this.dataGridView2, 13);
-            this.dataGridView2.Size = new System.Drawing.Size(620, 567);
-            this.dataGridView2.TabIndex = 29;
+            this.dgvUsuariosUS.AllowUserToAddRows = false;
+            this.dgvUsuariosUS.AllowUserToDeleteRows = false;
+            this.dgvUsuariosUS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuariosUS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUsuariosUS.Location = new System.Drawing.Point(627, 3);
+            this.dgvUsuariosUS.Name = "dgvUsuariosUS";
+            this.dgvUsuariosUS.ReadOnly = true;
+            this.dgvUsuariosUS.RowHeadersWidth = 51;
+            this.tableLayoutPanel8.SetRowSpan(this.dgvUsuariosUS, 13);
+            this.dgvUsuariosUS.Size = new System.Drawing.Size(620, 567);
+            this.dgvUsuariosUS.TabIndex = 29;
+            this.dgvUsuariosUS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuariosUS_CellContentClick);
             // 
             // lblNombreUsuarioUS
             // 
@@ -1708,6 +1709,7 @@ namespace BINAES
             this.btnActualizarUS.TabIndex = 50;
             this.btnActualizarUS.Text = "Actualizar";
             this.btnActualizarUS.UseVisualStyleBackColor = true;
+            this.btnActualizarUS.Click += new System.EventHandler(this.btnActualizarUS_Click);
             // 
             // tabMisionVision
             // 
@@ -2153,7 +2155,7 @@ namespace BINAES
             this.tabUsuarios.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosUS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).EndInit();
             this.tabMisionVision.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -2284,7 +2286,7 @@ namespace BINAES
         private TableLayoutPanel tableLayoutPanel8;
         private Button btnDejarDeEditarUS;
         private Button btnAgregarUS;
-        private DataGridView dataGridView2;
+        private DataGridView dgvUsuariosUS;
         private Label lblNombreUsuarioUS;
         private TextBox txtNombreUS;
         private Label lblInstitucionUsuarioUS;

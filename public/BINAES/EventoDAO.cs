@@ -10,9 +10,10 @@ namespace BINAES
 {
     public static class EventoDAO
     {
-        public static void Crear()
-        {
-        }
+        // CRUDE
+
+        // CREATE
+       
         public static List<Evento> Leer()
         {
             List<Evento> list = new List<Evento>();
