@@ -683,7 +683,15 @@ namespace BINAES
             tabAdmin.SelectedIndex = 7;
         }
 
+        private void btnAgregarCO_Click_1(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnDejarDeEditarCO_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
      

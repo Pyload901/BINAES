@@ -111,13 +111,13 @@ namespace BINAES
             this.nudIdUsuarioPR = new System.Windows.Forms.NumericUpDown();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.tblBusqueda = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvEjemplaresBU = new System.Windows.Forms.DataGridView();
             this.txtBuscarEjemplarBU = new System.Windows.Forms.TextBox();
-            this.chkDigitalBU = new System.Windows.Forms.CheckBox();
-            this.btnBuscarEjemplarBU = new System.Windows.Forms.Button();
             this.cmbFiltrarEjemplarBU = new System.Windows.Forms.ComboBox();
-            this.chkBusquedaExactaBU = new System.Windows.Forms.CheckBox();
+            this.btnBuscarEjemplarBU = new System.Windows.Forms.Button();
+            this.dgvEjemplaresBU = new System.Windows.Forms.DataGridView();
+            this.chkDigitalBU = new System.Windows.Forms.CheckBox();
             this.chkFísicoBU = new System.Windows.Forms.CheckBox();
+            this.chkBusquedaExactaBU = new System.Windows.Forms.CheckBox();
             this.tabAdmin = new System.Windows.Forms.TabControl();
             this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.tblUsuarios = new System.Windows.Forms.TableLayoutPanel();
@@ -1397,6 +1397,45 @@ namespace BINAES
             this.tblBusqueda.Size = new System.Drawing.Size(958, 538);
             this.tblBusqueda.TabIndex = 2;
             // 
+            // txtBuscarEjemplarBU
+            // 
+            this.txtBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblBusqueda.SetColumnSpan(this.txtBuscarEjemplarBU, 13);
+            this.txtBuscarEjemplarBU.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(50, 56);
+            this.txtBuscarEjemplarBU.Multiline = true;
+            this.txtBuscarEjemplarBU.Name = "txtBuscarEjemplarBU";
+            this.tblBusqueda.SetRowSpan(this.txtBuscarEjemplarBU, 2);
+            this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(605, 38);
+            this.txtBuscarEjemplarBU.TabIndex = 0;
+            this.txtBuscarEjemplarBU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarEjemplarBU_KeyDown);
+            // 
+            // cmbFiltrarEjemplarBU
+            // 
+            this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblBusqueda.SetColumnSpan(this.cmbFiltrarEjemplarBU, 4);
+            this.cmbFiltrarEjemplarBU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltrarEjemplarBU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(708, 61);
+            this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
+            this.tblBusqueda.SetRowSpan(this.cmbFiltrarEjemplarBU, 2);
+            this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 28);
+            this.cmbFiltrarEjemplarBU.TabIndex = 2;
+            this.cmbFiltrarEjemplarBU.SelectedIndexChanged += new System.EventHandler(this.cmbFiltrarEjemplarBU_SelectedIndexChanged);
+            // 
+            // btnBuscarEjemplarBU
+            // 
+            this.btnBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarEjemplarBU.Location = new System.Drawing.Point(661, 57);
+            this.btnBuscarEjemplarBU.Name = "btnBuscarEjemplarBU";
+            this.tblBusqueda.SetRowSpan(this.btnBuscarEjemplarBU, 2);
+            this.btnBuscarEjemplarBU.Size = new System.Drawing.Size(41, 36);
+            this.btnBuscarEjemplarBU.TabIndex = 3;
+            this.btnBuscarEjemplarBU.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarEjemplarBU.UseVisualStyleBackColor = true;
+            this.btnBuscarEjemplarBU.Click += new System.EventHandler(this.btnBuscarEjemplarBU_Click);
+            // 
             // dgvEjemplaresBU
             // 
             this.dgvEjemplaresBU.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1412,19 +1451,6 @@ namespace BINAES
             this.dgvEjemplaresBU.Size = new System.Drawing.Size(840, 369);
             this.dgvEjemplaresBU.TabIndex = 4;
             this.dgvEjemplaresBU.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEjemplaresBU_CellDoubleClick);
-            // 
-            // txtBuscarEjemplarBU
-            // 
-            this.txtBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblBusqueda.SetColumnSpan(this.txtBuscarEjemplarBU, 13);
-            this.txtBuscarEjemplarBU.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(50, 56);
-            this.txtBuscarEjemplarBU.Multiline = true;
-            this.txtBuscarEjemplarBU.Name = "txtBuscarEjemplarBU";
-            this.tblBusqueda.SetRowSpan(this.txtBuscarEjemplarBU, 2);
-            this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(605, 38);
-            this.txtBuscarEjemplarBU.TabIndex = 0;
-            this.txtBuscarEjemplarBU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarEjemplarBU_KeyDown);
             // 
             // chkDigitalBU
             // 
@@ -1442,31 +1468,21 @@ namespace BINAES
             this.chkDigitalBU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkDigitalBU.UseVisualStyleBackColor = true;
             // 
-            // btnBuscarEjemplarBU
+            // chkFísicoBU
             // 
-            this.btnBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarEjemplarBU.Location = new System.Drawing.Point(661, 57);
-            this.btnBuscarEjemplarBU.Name = "btnBuscarEjemplarBU";
-            this.tblBusqueda.SetRowSpan(this.btnBuscarEjemplarBU, 2);
-            this.btnBuscarEjemplarBU.Size = new System.Drawing.Size(41, 36);
-            this.btnBuscarEjemplarBU.TabIndex = 3;
-            this.btnBuscarEjemplarBU.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarEjemplarBU.UseVisualStyleBackColor = true;
-            this.btnBuscarEjemplarBU.Click += new System.EventHandler(this.btnBuscarEjemplarBU_Click);
-            // 
-            // cmbFiltrarEjemplarBU
-            // 
-            this.cmbFiltrarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblBusqueda.SetColumnSpan(this.cmbFiltrarEjemplarBU, 4);
-            this.cmbFiltrarEjemplarBU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFiltrarEjemplarBU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(708, 61);
-            this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
-            this.tblBusqueda.SetRowSpan(this.cmbFiltrarEjemplarBU, 2);
-            this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 28);
-            this.cmbFiltrarEjemplarBU.TabIndex = 2;
-            this.cmbFiltrarEjemplarBU.SelectedIndexChanged += new System.EventHandler(this.cmbFiltrarEjemplarBU_SelectedIndexChanged);
+            this.chkFísicoBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkFísicoBU.AutoSize = true;
+            this.tblBusqueda.SetColumnSpan(this.chkFísicoBU, 3);
+            this.chkFísicoBU.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFísicoBU.ForeColor = System.Drawing.Color.Transparent;
+            this.chkFísicoBU.Location = new System.Drawing.Point(614, 488);
+            this.chkFísicoBU.Name = "chkFísicoBU";
+            this.tblBusqueda.SetRowSpan(this.chkFísicoBU, 2);
+            this.chkFísicoBU.Size = new System.Drawing.Size(135, 36);
+            this.chkFísicoBU.TabIndex = 7;
+            this.chkFísicoBU.Text = "Físico";
+            this.chkFísicoBU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkFísicoBU.UseVisualStyleBackColor = true;
             // 
             // chkBusquedaExactaBU
             // 
@@ -1483,22 +1499,6 @@ namespace BINAES
             this.chkBusquedaExactaBU.Text = "Búsqueda exacta";
             this.chkBusquedaExactaBU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkBusquedaExactaBU.UseVisualStyleBackColor = true;
-            // 
-            // chkFísicoBU
-            // 
-            this.chkFísicoBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkFísicoBU.AutoSize = true;
-            this.tblBusqueda.SetColumnSpan(this.chkFísicoBU, 3);
-            this.chkFísicoBU.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFísicoBU.ForeColor = System.Drawing.Color.Transparent;
-            this.chkFísicoBU.Location = new System.Drawing.Point(614, 488);
-            this.chkFísicoBU.Name = "chkFísicoBU";
-            this.tblBusqueda.SetRowSpan(this.chkFísicoBU, 2);
-            this.chkFísicoBU.Size = new System.Drawing.Size(135, 36);
-            this.chkFísicoBU.TabIndex = 7;
-            this.chkFísicoBU.Text = "Físico";
-            this.chkFísicoBU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkFísicoBU.UseVisualStyleBackColor = true;
             // 
             // tabAdmin
             // 
@@ -1983,6 +1983,7 @@ namespace BINAES
             this.btnDejarDeEditarCO.TabIndex = 28;
             this.btnDejarDeEditarCO.Text = "Dejar de editar";
             this.btnDejarDeEditarCO.UseVisualStyleBackColor = true;
+            this.btnDejarDeEditarCO.Click += new System.EventHandler(this.btnDejarDeEditarCO_Click);
             // 
             // btnAgregarCO
             // 
@@ -1994,6 +1995,7 @@ namespace BINAES
             this.btnAgregarCO.TabIndex = 27;
             this.btnAgregarCO.Text = "Agregar";
             this.btnAgregarCO.UseVisualStyleBackColor = true;
+            this.btnAgregarCO.Click += new System.EventHandler(this.btnAgregarCO_Click_1);
             // 
             // cmbGeneroColeccionCO
             // 
