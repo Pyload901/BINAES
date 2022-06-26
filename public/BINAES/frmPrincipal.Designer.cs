@@ -175,7 +175,7 @@ namespace BINAES
             this.sspNombre = new System.Windows.Forms.ToolStripStatusLabel();
             this.sspRol = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnColeccionesPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnIntroPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnAddUsuarioPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnAddEventoPPrincipal = new FontAwesome.Sharp.IconButton();
@@ -2273,7 +2273,7 @@ namespace BINAES
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.btnColeccionesPPrincipal);
             this.panel1.Controls.Add(this.btnIntroPPrincipal);
             this.panel1.Controls.Add(this.btnAddUsuarioPPrincipal);
             this.panel1.Controls.Add(this.btnAddEventoPPrincipal);
@@ -2288,25 +2288,25 @@ namespace BINAES
             this.panel1.Size = new System.Drawing.Size(292, 655);
             this.panel1.TabIndex = 3;
             // 
-            // iconButton1
+            // btnColeccionesPPrincipal
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 585);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(303, 59);
-            this.iconButton1.TabIndex = 9;
-            this.iconButton1.Text = "Colecciones";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnColeccionesPPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.btnColeccionesPPrincipal.FlatAppearance.BorderSize = 0;
+            this.btnColeccionesPPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColeccionesPPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnColeccionesPPrincipal.ForeColor = System.Drawing.Color.White;
+            this.btnColeccionesPPrincipal.IconChar = FontAwesome.Sharp.IconChar.Server;
+            this.btnColeccionesPPrincipal.IconColor = System.Drawing.Color.White;
+            this.btnColeccionesPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnColeccionesPPrincipal.IconSize = 40;
+            this.btnColeccionesPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnColeccionesPPrincipal.Location = new System.Drawing.Point(0, 585);
+            this.btnColeccionesPPrincipal.Name = "btnColeccionesPPrincipal";
+            this.btnColeccionesPPrincipal.Size = new System.Drawing.Size(303, 59);
+            this.btnColeccionesPPrincipal.TabIndex = 9;
+            this.btnColeccionesPPrincipal.Text = "Colecciones";
+            this.btnColeccionesPPrincipal.UseVisualStyleBackColor = false;
+            this.btnColeccionesPPrincipal.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btnIntroPPrincipal
             // 
@@ -2335,10 +2335,10 @@ namespace BINAES
             this.btnAddUsuarioPPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUsuarioPPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUsuarioPPrincipal.ForeColor = System.Drawing.Color.White;
-            this.btnAddUsuarioPPrincipal.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnAddUsuarioPPrincipal.IconChar = FontAwesome.Sharp.IconChar.UserCog;
             this.btnAddUsuarioPPrincipal.IconColor = System.Drawing.Color.White;
             this.btnAddUsuarioPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddUsuarioPPrincipal.IconSize = 40;
+            this.btnAddUsuarioPPrincipal.IconSize = 45;
             this.btnAddUsuarioPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddUsuarioPPrincipal.Location = new System.Drawing.Point(0, 531);
             this.btnAddUsuarioPPrincipal.Name = "btnAddUsuarioPPrincipal";
@@ -2763,6 +2763,6 @@ namespace BINAES
         private Label label6;
         private ComboBox cmbEditorialEjemplarAG;
         private CheckBox chkDisponibilidadEjemplarAG;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnColeccionesPPrincipal;
     }
 }
