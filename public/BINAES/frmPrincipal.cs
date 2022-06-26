@@ -198,11 +198,28 @@ namespace BINAES
                     /*DataGridViewComposer.BuildDataGridView_Editar(dgvEventosEV);
                     DataGridViewComposer.BuildDataGridView_Eliminar(dgvEventosEV);*/
                     break;
+
                 case 5:
+
+                   
+                    cmbOcupacionUS.ValueMember = "id";
+                    cmbOcupacionUS.DisplayMember = "nombre.nombre";
+                    cmbOcupacionUS.DataSource = OcupacionDAO.Leer();
+
+                    List<Ocupacion> list = OcupacionDAO.Leer();
+                    foreach (var ocupacion in list)
+                    {
+                        Console.WriteLine(ocupacion.nombre);
+                    }
+
+                    cmbRolUS.ValueMember = "id";
+                    cmbRolUS.DisplayMember = "nombre";
+
+                    cmbRolUS.DataSource = RolDAO.Leer();
+
                     dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
                     DataGridViewComposer.Compose(dgvUsuariosUS);
                    
-                    
 
                     break;
 

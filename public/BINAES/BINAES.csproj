@@ -153,6 +153,8 @@
     <Compile Include="IdiomaDAO.cs" />
     <Compile Include="ObjetivoEvento.cs" />
     <Compile Include="ObjetivoEventoDAO.cs" />
+    <Compile Include="Ocupacion.cs" />
+    <Compile Include="OcupacionDAO.cs" />
     <Compile Include="OpcionesEnumerate.cs" />
     <Compile Include="Prestamo.cs" />
     <Compile Include="PrestamoDAO.cs" />
@@ -165,6 +167,8 @@
     </Compile>
     <Compile Include="Reserva.cs" />
     <Compile Include="ReservaDAO.cs" />
+    <Compile Include="Rol.cs" />
+    <Compile Include="RolDAO.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioDAO.cs" />
     <Compile Include="Utils.cs" />
