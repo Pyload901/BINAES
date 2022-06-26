@@ -1,8 +1,8 @@
-INSERT INTO EJEMPLAR(nombre, imagen, fecha_publicacion, disponibilidad, id_coleccion,
+INSERT INTO EJEMPLAR(nombre, imagen, autor, fecha_publicacion, disponibilidad, id_coleccion,
 	id_idioma,
 	id_editorial,
-	id_formato) VALUES ('eJE', 'ejemplar.png', GETDATE(), 1, 2, 2, 1, 1);
-
+	id_formato) VALUES ('Nuevo', 'ejemplar.png', 'Ana Sofia', CONVERT(varchar, '26/06/2022 12:00:00 a. m.', 103), 1, 2, 2, 1, 1);
+SELECT GETDATE();
 INSERT INTO PALABRA_CLAVE (palabra, id_ejemplar) VALUES ('test', 1);
 INSERT INTO PALABRA_CLAVE (palabra, id_ejemplar) VALUES ('ejemplos', 1);
 INSERT INTO PALABRA_CLAVE (palabra, id_ejemplar) VALUES ('nuevo', 1);
@@ -166,3 +166,23 @@ INSERT INTO RESERVA (fecha_reserva, fecha_prestamo, fecha_devolucion, id_ejempla
 
 
 SELECT P.id, P.fecha_prestamo, P.fecha_devolucion, U.nombre 'usuario', E.nombre 'ejemplar'  FROM PRESTAMO P INNER JOIN USUARIO U ON U.id = P.id_usuario INNER JOIN EJEMPLAR E ON E.id = P.id_ejemplar;
+
+SELECT E.id, E.etiqueta, NE.nombre
+FROM ETIQUETA E
+INNER JOIN NOMBRE_ETIQUETA NE 
+    ON E.id_nombre_etiqueta = NE.id
+WHERE E.id = 1
+
+
+
+SELECT E.id, E.nombre, E.imagen, E.autor, E.fecha_publicacion, E.disponibilidad, C.nombre 'coleccion', I.idioma, ED.editorial, F.formato  FROM EJEMPLAR E
+    INNER JOIN COLECCION C
+        ON C.id = E.id_coleccion
+    INNER JOIN IDIOMA_EJEMPLAR I
+        ON I.id = E.id_idioma
+    INNER JOIN EDITORIAL ED
+        ON ED.id = E.id_editorial
+    INNER JOIN FORMATO_EJEMPLAR F
+        ON F.id = E.id_formato
+
+        SELECT * FROM EJEMPLAR;

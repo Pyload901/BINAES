@@ -46,16 +46,16 @@ INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('El dia y la noche', 
 INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('Cuentos asombrosos', 3, 5);
 
 
-INSERT INTO AUTOR (nombre) VALUES ('Malissia Siggs');
-INSERT INTO AUTOR (nombre) VALUES ('Alta Wolverson');
-INSERT INTO AUTOR (nombre) VALUES ('Kingsly McClelland');
-INSERT INTO AUTOR (nombre) VALUES ('Priscella Andrasch');
-INSERT INTO AUTOR (nombre) VALUES ('Chlo Garvie');
-INSERT INTO AUTOR (nombre) VALUES ('Dan Candish');
-INSERT INTO AUTOR (nombre) VALUES ('Christiana Childs');
-INSERT INTO AUTOR (nombre) VALUES ('Janaya Georgot');
-INSERT INTO AUTOR (nombre) VALUES ('Merwin Eaklee');
-INSERT INTO AUTOR (nombre) VALUES ('Korie Goble');
+-- INSERT INTO AUTOR (nombre) VALUES ('Malissia Siggs');
+-- INSERT INTO AUTOR (nombre) VALUES ('Alta Wolverson');
+-- INSERT INTO AUTOR (nombre) VALUES ('Kingsly McClelland');
+-- INSERT INTO AUTOR (nombre) VALUES ('Priscella Andrasch');
+-- INSERT INTO AUTOR (nombre) VALUES ('Chlo Garvie');
+-- INSERT INTO AUTOR (nombre) VALUES ('Dan Candish');
+-- INSERT INTO AUTOR (nombre) VALUES ('Christiana Childs');
+-- INSERT INTO AUTOR (nombre) VALUES ('Janaya Georgot');
+-- INSERT INTO AUTOR (nombre) VALUES ('Merwin Eaklee');
+-- INSERT INTO AUTOR (nombre) VALUES ('Korie Goble');
 
 
 INSERT INTO OCUPACION_USUARIO (ocupacion) VALUES ('Admin');

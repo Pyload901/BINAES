@@ -26,7 +26,6 @@ namespace BINAES
                             Area area = new Area ();
                             area.id = Convert.ToInt32(reader["id"]);
                             area.nombre = reader["id"].ToString() + ". Piso " + reader["piso"].ToString() + ' ' + reader["nombre"].ToString();
-                            DataGridViewComposer.GetNullProperties(area);
                             list.Add(area);
                         }
                         DataGridViewComposer.GetNullProperties(list[0]);
