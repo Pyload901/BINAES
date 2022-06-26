@@ -503,6 +503,7 @@ namespace BINAES
         }
         private void btnBuscarPR_Click(object sender, EventArgs e)
         {
+            //Boton de Buscar Prestamo Ejemplar
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = PrestamoEjemplarDAO.Buscar();
         }
