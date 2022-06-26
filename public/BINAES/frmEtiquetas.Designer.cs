@@ -39,8 +39,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panelPrincipalEtiquetas = new System.Windows.Forms.Panel();
-            this.btnCerrarEtiqueta = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarEtiqueta = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelPrincipalEtiquetas.SuspendLayout();
             this.SuspendLayout();
@@ -188,21 +188,6 @@
             this.panelPrincipalEtiquetas.TabIndex = 1;
             this.panelPrincipalEtiquetas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelPrincipalEtiquetas_MouseDown);
             // 
-            // btnCerrarEtiqueta
-            // 
-            this.btnCerrarEtiqueta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarEtiqueta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarEtiqueta.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnCerrarEtiqueta.IconColor = System.Drawing.Color.White;
-            this.btnCerrarEtiqueta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarEtiqueta.IconSize = 30;
-            this.btnCerrarEtiqueta.Location = new System.Drawing.Point(570, 3);
-            this.btnCerrarEtiqueta.Name = "btnCerrarEtiqueta";
-            this.btnCerrarEtiqueta.Size = new System.Drawing.Size(47, 38);
-            this.btnCerrarEtiqueta.TabIndex = 0;
-            this.btnCerrarEtiqueta.UseVisualStyleBackColor = true;
-            this.btnCerrarEtiqueta.Click += new System.EventHandler(this.btnCerrarEtiqueta_Click);
-            // 
             // iconButton1
             // 
             this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -217,6 +202,21 @@
             this.iconButton1.TabIndex = 1;
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // btnCerrarEtiqueta
+            // 
+            this.btnCerrarEtiqueta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarEtiqueta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarEtiqueta.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrarEtiqueta.IconColor = System.Drawing.Color.White;
+            this.btnCerrarEtiqueta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarEtiqueta.IconSize = 30;
+            this.btnCerrarEtiqueta.Location = new System.Drawing.Point(570, 3);
+            this.btnCerrarEtiqueta.Name = "btnCerrarEtiqueta";
+            this.btnCerrarEtiqueta.Size = new System.Drawing.Size(47, 38);
+            this.btnCerrarEtiqueta.TabIndex = 0;
+            this.btnCerrarEtiqueta.UseVisualStyleBackColor = true;
+            this.btnCerrarEtiqueta.Click += new System.EventHandler(this.btnCerrarEtiqueta_Click);
             // 
             // frmEtiquetas
             // 
