@@ -307,7 +307,6 @@ namespace BINAES
             this.btnAgregarUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarUS.Location = new System.Drawing.Point(243, 507);
             this.btnAgregarUS.Name = "btnAgregarUS";
@@ -711,7 +710,6 @@ namespace BINAES
             // 
             this.btnSalirEdicionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalirEdicionEjemplarAG.Enabled = false;
-            this.btnSalirEdicionEjemplarAG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalirEdicionEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalirEdicionEjemplarAG.Location = new System.Drawing.Point(3, 501);
             this.btnSalirEdicionEjemplarAG.Name = "btnSalirEdicionEjemplarAG";
@@ -724,7 +722,6 @@ namespace BINAES
             // btnAgregarEjemplarAG
             // 
             this.btnAgregarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarEjemplarAG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(208, 501);
             this.btnAgregarEjemplarAG.Name = "btnAgregarEjemplarAG";
@@ -852,7 +849,6 @@ namespace BINAES
             this.btnEtiquetasEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEtiquetasEjemplarAG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEtiquetasEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEtiquetasEjemplarAG.Location = new System.Drawing.Point(3, 454);
             this.btnEtiquetasEjemplarAG.Name = "btnEtiquetasEjemplarAG";
@@ -1080,8 +1076,8 @@ namespace BINAES
             this.btnBuscarEjemplarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarEjemplarRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarEjemplarRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarEjemplarRE.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarEjemplarRE.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(193, 166);
             this.btnBuscarEjemplarRE.Name = "btnBuscarEjemplarRE";
             this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(89, 30);
@@ -1095,8 +1091,7 @@ namespace BINAES
             this.btnQrRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQrRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnQrRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQrRE.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQrRE.Location = new System.Drawing.Point(193, 316);
             this.btnQrRE.Name = "btnQrRE";
             this.btnQrRE.Size = new System.Drawing.Size(89, 29);
@@ -1133,7 +1128,6 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tblReserva.SetColumnSpan(this.btnReservarRE, 2);
-            this.btnReservarRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReservarRE.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservarRE.Location = new System.Drawing.Point(50, 351);
             this.btnReservarRE.Name = "btnReservarRE";
@@ -1210,8 +1204,8 @@ namespace BINAES
             this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.33493F));
             this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.877324F));
             this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.18959F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.455711F));
             this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.69145F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.434944F));
             this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.434944F));
             this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.96654F));
             this.tblPrestamo.Size = new System.Drawing.Size(958, 538);
@@ -1251,7 +1245,6 @@ namespace BINAES
             this.btnBuscarPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarPR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarPR.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscarPR.Location = new System.Drawing.Point(193, 213);
@@ -1283,12 +1276,11 @@ namespace BINAES
             this.btnQrPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQrPR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnQrPR.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQrPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQrPR.Location = new System.Drawing.Point(193, 364);
             this.btnQrPR.Name = "btnQrPR";
-            this.btnQrPR.Size = new System.Drawing.Size(89, 34);
+            this.btnQrPR.Size = new System.Drawing.Size(89, 30);
             this.btnQrPR.TabIndex = 32;
             this.btnQrPR.Text = "QR";
             this.btnQrPR.UseVisualStyleBackColor = true;
@@ -1602,7 +1594,6 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDejarDeEditarUS.Enabled = false;
-            this.btnDejarDeEditarUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDejarDeEditarUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDejarDeEditarUS.Location = new System.Drawing.Point(3, 507);
             this.btnDejarDeEditarUS.Name = "btnDejarDeEditarUS";
@@ -1846,7 +1837,6 @@ namespace BINAES
             this.btnTomarFotoUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTomarFotoUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTomarFotoUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTomarFotoUS.Location = new System.Drawing.Point(243, 465);
             this.btnTomarFotoUS.Name = "btnTomarFotoUS";
@@ -1862,7 +1852,6 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelarFotoUS.Enabled = false;
-            this.btnCancelarFotoUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarFotoUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarFotoUS.Location = new System.Drawing.Point(363, 465);
             this.btnCancelarFotoUS.Name = "btnCancelarFotoUS";
@@ -1877,7 +1866,6 @@ namespace BINAES
             this.btnActualizarUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizarUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizarUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarUS.Location = new System.Drawing.Point(363, 507);
             this.btnActualizarUS.Name = "btnActualizarUS";
@@ -1986,11 +1974,14 @@ namespace BINAES
             // 
             // cmbGeneroColeccionCO
             // 
+            this.cmbGeneroColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbGeneroColeccionCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGeneroColeccionCO.FormattingEnabled = true;
             this.cmbGeneroColeccionCO.Location = new System.Drawing.Point(57, 276);
             this.cmbGeneroColeccionCO.Name = "cmbGeneroColeccionCO";
-            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(291, 28);
+            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(336, 28);
             this.cmbGeneroColeccionCO.TabIndex = 32;
             // 
             // lblGeneroColeccionCO

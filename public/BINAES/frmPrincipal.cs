@@ -101,7 +101,7 @@ namespace BINAES
             tabPrestamo.BackColor = col1;
             //tab reserva
             tabReserva.BackColor = col1;
-            btnBuscarEjemplarRE.BackColor = col2;
+          
             //tab usuario
             tabUsuarios.BackColor = col1;
             //tab Coleccion
