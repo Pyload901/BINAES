@@ -79,21 +79,35 @@ namespace BINAES
 
 
         private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-
-            //Conversion de colores Hexadecimales 
-            System.Drawing.Color col1= System.Drawing.ColorTranslator.FromHtml("#238bba");
-            System.Drawing.Color col2= System.Drawing.ColorTranslator.FromHtml("#19384b"); //Buen Color
-            System.Drawing.Color col3= System.Drawing.ColorTranslator.FromHtml("#237cba");
+        {;
 
             /*DatagridViewComposer.BuildDataGridView_Editar(dgvEventosEV, EventoDAO.getType());*/
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
 
-            //Cambios de color a ciertas partes
-          
-            //tabBuscar.BackColor = Color.FromArgb(50, 149, 196);
-            //tabEventos.BackColor = col1;
+            System.Drawing.Color col1 = System.Drawing.ColorTranslator.FromHtml("#214962"); // #52b7f5 - #19384b
+            System.Drawing.Color col2 = System.Drawing.ColorTranslator.FromHtml("#214962");
+
+            //Cambios de color a todos los tab y sus componentes
+
+            //tab eventos
+            tabEventos.BackColor = col1;
+            //tab buscar
+            tabBuscar.BackColor = col1;
+            txtBuscarEjemplarBU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            //tab agregar
+            tabAgregar.BackColor = col1;
+            //tab intro
+            tabIntroduccion.BackColor = col1;
+            //tab prestamo
+            tabPrestamo.BackColor = col1;
+            //tab reserva
+            tabReserva.BackColor = col1;
+            btnBuscarEjemplarRE.BackColor = col2;
+            //tab usuario
+            tabUsuarios.BackColor = col1;
+            //tab Coleccion
+            tabColeccion.BackColor = col1;
 
 
             // Renderizar imagen de btnBuscarEjemplar
@@ -550,7 +564,6 @@ namespace BINAES
             //dataGridView1.DataSource = null;
             //dataGridView1.DataSource = PrestamoEjemplarDAO.Insertar();
         }
-
 
     }
 }
