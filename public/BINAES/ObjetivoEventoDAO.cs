@@ -53,5 +53,49 @@ namespace BINAES
             }
             return cont;
         }
+        public static bool Crear(ObjetivoEvento objetivo)
+        {
+            bool result = true;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+                {
+                    string query = "INSERT INTO OBJETIVO_EVENTO (objetivo, id_evento) VALUES (@objetivo, @id_evento)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@objetivo", objetivo.objetivo);
+                    cmd.Parameters.AddWithValue("@id_evento", objetivo.id_evento);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                result = false;
+            }
+            return result;
+        }
+        public static bool Actualizar(ObjetivoEvento objetivo)
+        {
+            bool result = true;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+                {
+                    string query = "UPDATE OBJETIVO_EVENTO SET objetivo = @objetivo WHERE id = @id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id", objetivo.id);
+                    cmd.Parameters.AddWithValue("@objetivo", objetivo.objetivo);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                result = false;
+            }
+            return result;
+        }
     }
 }

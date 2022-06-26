@@ -56,19 +56,22 @@ namespace BINAES
                 conn.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (reader.HasRows)
                     {
-                        Evento evento = new Evento(
-                           Convert.ToInt32(reader["id"]),
-                           reader["titulo"].ToString(),
-                           reader["imagen"].ToString(),
-                           Convert.ToDateTime(reader["fecha_inicio"]),
-                           Convert.ToDateTime(reader["fecha_fin"]),
-                           Convert.ToInt32(reader["numero_asistentes"]),
-                           Convert.ToInt32(reader["id_area"])
-                        );
-                        DataGridViewComposer.GetNullProperties(evento);
-                        list.Add(evento);
+                        while (reader.Read())
+                        {
+                            Evento evento = new Evento(
+                               Convert.ToInt32(reader["id"]),
+                               reader["titulo"].ToString(),
+                               reader["imagen"].ToString(),
+                               Convert.ToDateTime(reader["fecha_inicio"]),
+                               Convert.ToDateTime(reader["fecha_fin"]),
+                               Convert.ToInt32(reader["numero_asistentes"]),
+                               Convert.ToInt32(reader["id_area"])
+                            );
+                            list.Add(evento);
+                        }
+                        DataGridViewComposer.GetNullProperties(list[0]);
                     }
                 }
                 conn.Close();

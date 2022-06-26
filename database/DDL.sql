@@ -9,7 +9,7 @@ CREATE TABLE EJEMPLAR(
 	nombre VARCHAR(100) NOT NULL,
 	imagen VARCHAR(100) NOT NULL,
 	fecha_publicacion DATETIME NOT NULL,
-	stock INT NOT NULL,
+	disponibilidad BIT NOT NULL,
 	id_coleccion INT NOT NULL,
 	id_idioma INT NULL,
 	id_editorial INT NOT NULL,

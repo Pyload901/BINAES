@@ -79,8 +79,7 @@ namespace BINAES
 
 
         private void frmPrincipal_Load(object sender, EventArgs e)
-        {;
-
+        {
             /*DatagridViewComposer.BuildDataGridView_Editar(dgvEventosEV, EventoDAO.getType());*/
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
@@ -97,8 +96,7 @@ namespace BINAES
             txtBuscarEjemplarBU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             //tab agregar
             tabAgregar.BackColor = col1;
-            //tab intro
-            tabIntroduccion.BackColor = col1;
+     
             //tab prestamo
             tabPrestamo.BackColor = col1;
             //tab reserva
@@ -108,6 +106,9 @@ namespace BINAES
             tabUsuarios.BackColor = col1;
             //tab Coleccion
             tabColeccion.BackColor = col1;
+            //Tab Acerca 
+            TabAcerca.BackColor = col1;
+
 
 
             // Renderizar imagen de btnBuscarEjemplar
@@ -163,9 +164,30 @@ namespace BINAES
             this.Text = tabAdmin.SelectedTab.Text;
             switch (tabAdmin.SelectedIndex)
             {
+                case 1:
+                    dgvPrestamosPR.DataSource = PrestamoDAO.Leer();
+                    DataGridViewComposer.Compose(dgvPrestamosPR);
+                    break;
                 case 2:
                     dgvReservasRE.DataSource = ReservaDAO.Leer();
                     DataGridViewComposer.Compose(dgvReservasRE);
+                    break;
+                case 3:
+                    cmbIdiomaEjemplarAG.ValueMember = "id";
+                    cmbIdiomaEjemplarAG.DisplayMember = "idioma";
+                    cmbIdiomaEjemplarAG.DataSource = IdiomaDAO.Leer();
+
+                    cmbFormatoEjemplarAG.ValueMember = "id";
+                    cmbFormatoEjemplarAG.DisplayMember = "formato";
+                    cmbFormatoEjemplarAG.DataSource = FormatoDAO.Leer();
+
+                    cmbColeccionEjemplarAG.ValueMember = "id";
+                    cmbColeccionEjemplarAG.DisplayMember = "nombre";
+                    cmbColeccionEjemplarAG.DataSource = ColeccionDAO.LeerCatalogo();
+
+                    cmbEditorialEjemplarAG.ValueMember = "id";
+                    cmbEditorialEjemplarAG.DisplayMember = "editorial";
+                    cmbEditorialEjemplarAG.DataSource = EditorialDAO.Leer();
                     break;
                 case 4:
                     cmbAreaEventoEV.ValueMember = "id";
@@ -223,7 +245,7 @@ namespace BINAES
         {
             tabAdmin.SelectedIndex = 0;
             txtBuscarEjemplarBU.Select();
-            MessageBox.Show("Doble click al ejemplar que quiere prestar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Doble click al ejemplar que quiere reservar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void cmbFiltrarEjemplarBU_SelectedIndexChanged(object sender, EventArgs e)
@@ -232,6 +254,44 @@ namespace BINAES
         }
 
         // Formulario de prestamo
+        private void btnBuscarPR_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 0;
+            txtBuscarEjemplarBU.Select();
+            MessageBox.Show("Doble click al ejemplar que quiere prestar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnQrPR_Click(object sender, EventArgs e)
+        {
+            using (frmEscanerQR ventana = new frmEscanerQR())
+            {
+                DialogResult resultado = ventana.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    nudIdUsuarioRE.Value = ventana.codigo;
+                }
+            }
+        }
+
+        private void btnPrestarPR_Click(object sender, EventArgs e)
+        {
+            if (nudIdEjemplarPR.Value > 0 && nudIdUsuarioPR.Value > 0)
+            {
+                Prestamo prestamo = new Prestamo();
+                prestamo.fechaPrestamo = DateTime.Now;
+                prestamo.fechaDevolucion = prestamo.fechaPrestamo.AddDays(15);
+                prestamo.id_ejemplar = Convert.ToInt32(nudIdEjemplarPR.Value);
+                prestamo.id_usuario = Convert.ToInt32(nudIdUsuarioPR.Value);
+                if (!PrestamoDAO.Crear(prestamo))
+                    MessageBox.Show("No se pudo realizar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    DataGridViewComposer.LimpiarDataGridView(dgvPrestamosPR);
+                    dgvPrestamosPR.DataSource = PrestamoDAO.Leer();
+                    DataGridViewComposer.Compose(dgvPrestamosPR);
+                }
+            }
+        }
 
         // Formulario de reserva
         private void btnQrRE_Click(object sender, EventArgs e)
@@ -239,12 +299,16 @@ namespace BINAES
             using (frmEscanerQR ventana = new frmEscanerQR())
             {
                 DialogResult resultado = ventana.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    nudIdUsuarioRE.Value = ventana.codigo;
+                }
             }
         }
 
         private void btnReservarRE_Click(object sender, EventArgs e)
         {
-            if (nudIdEjemplarRE.Value != 0 && nudIdUsuarioRE.Value != 0)
+            if (nudIdEjemplarRE.Value > 0 && nudIdUsuarioRE.Value > 0)
                 if (!ReservaDAO.Create(Convert.ToInt32(nudIdEjemplarRE.Value), Convert.ToInt32(nudIdUsuarioRE.Value)))
                     MessageBox.Show("No se pudo realizar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
@@ -264,6 +328,29 @@ namespace BINAES
             Utils.SeleccionarImagen(picEjemplarAG);
         }
 
+        private void btnAgregarEjemplarAG_Click(object sender, EventArgs e)
+        {
+            if (txtNombreEjemplarAG.Text != "" && txtAutorEjemplarAG.Text != "" && dtpFechaPublicacionEjemplarAG.Text != "" && picEjemplarAG.Image != Properties.Resources._default)
+            {
+                string imagen = Utils.GuardarImagen(Properties.Resources.RutaImagenesEjemplares, picEjemplarAG.Image);
+                Ejemplar ejemplar = new Ejemplar();
+                ejemplar.nombre = txtNombreEjemplarAG.Text;
+                ejemplar.imagen = imagen;
+                ejemplar.fecha_publicacion = dtpFechaPublicacionEjemplarAG.Text;
+                ejemplar.disponibilidad = chkDisponibilidadEjemplarAG.Checked;
+                ejemplar.id_editorial = Convert.ToInt32(cmbEditorialEjemplarAG.SelectedValue);
+                ejemplar.id_coleccion = Convert.ToInt32(cmbColeccionEjemplarAG.SelectedValue);
+                ejemplar.id_idioma = Convert.ToInt32(cmbIdiomaEjemplarAG.SelectedValue);
+                ejemplar.id_formato = Convert.ToInt32(cmbFormatoEjemplarAG.SelectedValue);
+                ejemplar.autor = txtAutorEjemplarAG.Text;
+                /*using ()*/
+            }
+            else
+            {
+                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         // Formulario coleccion
         private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -276,7 +363,7 @@ namespace BINAES
             cole.id_genero = Convert.ToInt32(cmbGeneroColeccionCO.ValueMember);
             cole.id_coleccion = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
 
-            ColeccionDAO.Insertar(cole);
+            ColeccionDAO.Crear(cole);
         }
 
         // Formulario de eventos
@@ -514,7 +601,7 @@ namespace BINAES
             user.institucion = txtInstitucionUS.Text;
             user.direccion = txtDireccionUS.Text;
 
-            if (UsuarioDAO.Update(user))
+            if (UsuarioDAO.Editar(user))
                 MessageBox.Show("Actualizada con éxito!");
             else
                 MessageBox.Show("Ha ocurrido un error!");
@@ -524,10 +611,7 @@ namespace BINAES
  // ---------------------------------------------------------------------------------------------------
 
 
-        private void btnAgregarEjemplarAG_Click(object sender, EventArgs e)
-        {
-           
-        }
+        
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -536,7 +620,7 @@ namespace BINAES
         private void btnBuscarCO_Click(object sender, EventArgs e)
         {
             dgvColeccionesCO.DataSource = null;
-            dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
+            dgvColeccionesCO.DataSource = ColeccionDAO.Leer();
         }
 
         private void dgvEjemplaresBU_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -545,6 +629,7 @@ namespace BINAES
             if (EjemplarDAO.VerificarDisponibilidad(id))
             {
                 tabAdmin.SelectedIndex = 1;
+                nudIdEjemplarPR.Value = id;
             }
             else
             {
@@ -552,18 +637,52 @@ namespace BINAES
                 nudIdEjemplarRE.Value = id;
             }
         }
-        private void btnBuscarPR_Click(object sender, EventArgs e)
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            //Boton de Buscar Prestamo Ejemplar
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = PrestamoEjemplarDAO.Buscar();
+
         }
 
-        private void btnCompletarPR_Click(object sender, EventArgs e)
+        private void btnBusquedaPPrincipal_Click(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = null;
-            //dataGridView1.DataSource = PrestamoEjemplarDAO.Insertar();
+            tabAdmin.SelectedIndex = 0;
         }
+
+        private void btnPrestamosPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 1;
+        }
+
+        private void btnReservasPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 2;
+        }
+
+        private void btnAddEjemplarPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 3;
+        }
+
+        private void btnAddEventoPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 4;
+        }
+
+        private void btnAddUsuarioPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 5;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 6;
+        }
+
+        private void btnIntroPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 7;
+        }
+
 
     }
 }

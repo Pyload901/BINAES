@@ -22,12 +22,8 @@ namespace BINAES
                     else if (propertie.GetValue(obj).GetType() == typeof(int))
                     {
                         if ((int)propertie.GetValue(obj) == -1)
-                                indicesNulos.Add(propertie.Name);
+                            indicesNulos.Add(propertie.Name);
                     }
-                }
-                else
-                {
-                    indicesNulos.Remove(propertie.Name);
                 }
             }
         }

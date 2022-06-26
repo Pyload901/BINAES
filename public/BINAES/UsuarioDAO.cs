@@ -85,22 +85,25 @@ namespace BINAES
                 conn.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (!reader.HasRows)
                     {
-                        Usuario usuario = new Usuario();
+                        while (reader.Read())
+                        {
+                            Usuario usuario = new Usuario();
 
-                        usuario.id = Convert.ToInt32(reader["id"]);
-                        usuario.nombre = reader["nombre"].ToString();
-                        usuario.institucion = reader["institucion"].ToString();
-                        usuario.direccion = reader["direccion"].ToString();
-                        usuario.telefono = reader["telefono"].ToString();
-                        usuario.fotografia = reader["fotografia"].ToString();
-                        usuario.email = reader["email"].ToString();
-                        usuario.id_rol = reader["id_rol"].ToString();
-                        usuario.id_ocupacion = Convert.ToInt32(reader["id_ocupacion"]);
+                            usuario.id = Convert.ToInt32(reader["id"]);
+                            usuario.nombre = reader["nombre"].ToString();
+                            usuario.institucion = reader["institucion"].ToString();
+                            usuario.direccion = reader["direccion"].ToString();
+                            usuario.telefono = reader["telefono"].ToString();
+                            usuario.fotografia = reader["fotografia"].ToString();
+                            usuario.email = reader["email"].ToString();
+                            usuario.id_rol = reader["id_rol"].ToString();
+                            usuario.id_ocupacion = Convert.ToInt32(reader["id_ocupacion"]);
 
-                        DataGridViewComposer.GetNullProperties(usuario);
-                        list.Add(usuario);
+                            list.Add(usuario);
+                        }
+                        DataGridViewComposer.GetNullProperties(list[0]);
                     }
                 }
                 conn.Close();
@@ -110,7 +113,7 @@ namespace BINAES
 
         // UPDATE
 
-        public static bool Update(Usuario user)
+        public static bool Editar(Usuario user)
         {
             bool exito = true;
             try
