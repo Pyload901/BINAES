@@ -1417,10 +1417,10 @@ namespace BINAES
             this.cmbFiltrarEjemplarBU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltrarEjemplarBU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(708, 62);
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(708, 61);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
             this.tblBusqueda.SetRowSpan(this.cmbFiltrarEjemplarBU, 2);
-            this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 25);
+            this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(182, 28);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
             this.cmbFiltrarEjemplarBU.SelectedIndexChanged += new System.EventHandler(this.cmbFiltrarEjemplarBU_SelectedIndexChanged);
             // 
@@ -1475,10 +1475,10 @@ namespace BINAES
             this.tblBusqueda.SetColumnSpan(this.chkFísicoBU, 3);
             this.chkFísicoBU.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkFísicoBU.ForeColor = System.Drawing.Color.Transparent;
-            this.chkFísicoBU.Location = new System.Drawing.Point(614, 492);
+            this.chkFísicoBU.Location = new System.Drawing.Point(614, 488);
             this.chkFísicoBU.Name = "chkFísicoBU";
             this.tblBusqueda.SetRowSpan(this.chkFísicoBU, 2);
-            this.chkFísicoBU.Size = new System.Drawing.Size(135, 29);
+            this.chkFísicoBU.Size = new System.Drawing.Size(135, 36);
             this.chkFísicoBU.TabIndex = 7;
             this.chkFísicoBU.Text = "Físico";
             this.chkFísicoBU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1983,6 +1983,7 @@ namespace BINAES
             this.btnDejarDeEditarCO.TabIndex = 28;
             this.btnDejarDeEditarCO.Text = "Dejar de editar";
             this.btnDejarDeEditarCO.UseVisualStyleBackColor = true;
+            this.btnDejarDeEditarCO.Click += new System.EventHandler(this.btnDejarDeEditarCO_Click);
             // 
             // btnAgregarCO
             // 
@@ -1994,6 +1995,7 @@ namespace BINAES
             this.btnAgregarCO.TabIndex = 27;
             this.btnAgregarCO.Text = "Agregar";
             this.btnAgregarCO.UseVisualStyleBackColor = true;
+            this.btnAgregarCO.Click += new System.EventHandler(this.btnAgregarCO_Click_1);
             // 
             // cmbGeneroColeccionCO
             // 
