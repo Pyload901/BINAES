@@ -15,7 +15,6 @@ namespace BINAES
             PropertyInfo[] properties = obj.GetType().GetProperties();
             foreach (var propertie in properties)
             {
-                Console.WriteLine(propertie.Name);
                 if (!indicesNulos.Contains(propertie.Name))
                 {
                     if (propertie.GetValue(obj) == null)
@@ -61,6 +60,5 @@ namespace BINAES
                 row.Cells[dgv.Columns.Count - 1].Tag = row.Cells[0].Value;
             }
         }
-
     }
 }

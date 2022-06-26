@@ -42,5 +42,32 @@ namespace BINAES
             }
             return list;
         }
+        public static bool Create(int idEjemplar, int idUsuario)
+        {
+            bool result = true;
+            DateTime fecha_prestamo = DateTime.Now;
+            DateTime fecha_devolucion = fecha_prestamo.AddDays(15);
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+                {
+                    string query = "INSERT INTO RESERVA (fecha_reserva, fecha_prestamo, fecha_devolucion, id_ejemplar, id_usuario) VALUES (GETDATE(), @fecha_prestamo, @fecha_devolucion, @id_ejemplar, @id_usuario)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@fecha_prestamo", fecha_prestamo);
+                    cmd.Parameters.AddWithValue("@fecha_devolucion", fecha_devolucion);
+                    cmd.Parameters.AddWithValue("@id_ejemplar", idEjemplar);
+                    cmd.Parameters.AddWithValue("@id_usuario", idUsuario);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                result = false;
+            }
+            return result;
+        }
     }
 }

@@ -160,3 +160,6 @@ FROM RESERVA R
         ON EJ.id = R.id_ejemplar
     INNER JOIN USUARIO U
         ON U.id = R.id_usuario;
+SELECT stock FROM EJEMPLAR WHERE id = 1
+
+INSERT INTO RESERVA (fecha_reserva, fecha_prestamo, fecha_devolucion, id_ejemplar, id_usuario) VALUES (GETDATE(), GETDATE(), GETDATE(), 1, 1)

@@ -104,7 +104,6 @@ namespace BINAES
             {
                 case 2:
                     dgvReservasRE.DataSource = ReservaDAO.Leer();
-
                     DataGridViewComposer.Compose(dgvReservasRE);
                     break;
                 case 4:
@@ -182,6 +181,22 @@ namespace BINAES
             }
         }
 
+        private void btnReservarRE_Click(object sender, EventArgs e)
+        {
+            if (nudIdEjemplarRE.Value != 0 && nudIdUsuarioRE.Value != 0)
+                if (!ReservaDAO.Create(Convert.ToInt32(nudIdEjemplarRE.Value), Convert.ToInt32(nudIdUsuarioRE.Value)))
+                    MessageBox.Show("No se pudo realizar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    DataGridViewComposer.LimpiarDataGridView(dgvReservasRE);
+                    dgvReservasRE.DataSource = ReservaDAO.Leer();
+                    DataGridViewComposer.Compose(dgvReservasRE);
+                }
+
+            else
+                MessageBox.Show("No se ha ingresado usuario o ejemplar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
         // Formulario de ejemplares
         private void picEjemplarAG_Click(object sender, EventArgs e)
         {
@@ -213,7 +228,7 @@ namespace BINAES
                 txtTituloEventoEV.Text = dgv.Rows[e.RowIndex].Cells["titulo"].Value.ToString();
                 try
                 {
-                    picImagenEV.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + "/" + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
+                    picImagenEV.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
                 }
                 catch (Exception ex2)
                 {
@@ -285,21 +300,64 @@ namespace BINAES
         }
         private void btnAgregarEV_Click(object sender, EventArgs e)
         {
-            
-        }
-        private void btnEditarEventoEV_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(btnEditarEventoEV.Tag);
-            List<string> objetivos = rtbObjetivoEventoEV.Text.Trim().Split('\n').ToList();
-            objetivos.RemoveAll(str => str == "");
-            int objetivosEnBaseDeDatos = ObjetivoEventoDAO.ContarElementosPorIdEvento(id);
-            int objetivos_nuevos = objetivos.Count - objetivosEnBaseDeDatos;
-            List<string> objetivosActualizar = objetivos.GetRange(0, objetivosEnBaseDeDatos);
-            List<string> objetivosNuevos = objetivos.GetRange(objetivosEnBaseDeDatos, objetivos.Count);
-            
+            if (txtTituloEventoEV.Text != "" && dtpFechaInicioEV.Text != "" && dtpFechaFinalizacionEV.Text != "" && rtbObjetivoEventoEV.Text != "" && nudNumeroAsistentesEV.Value != 0 && picImagenEV.Image != Properties.Resources._default)
+            {
+                List<string> objetivos = rtbObjetivoEventoEV.Text.Trim().Split('\n').ToList();
+                objetivos.RemoveAll(str => str == "");
+                Evento evento = new Evento();
+                evento.titulo = txtTituloEventoEV.Text;
+                evento.fechaInicio = Convert.ToDateTime(dtpFechaInicioEV.Text);
+                evento.fechaFin = Convert.ToDateTime(dtpFechaFinalizacionEV.Text);
+                evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
+                evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
+                evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
+
+                if (EventoDAO.Crear(evento))
+                {
+                    DataGridViewComposer.LimpiarDataGridView(dgvEventosEV);
+                    dgvEventosEV.DataSource = EventoDAO.Leer();
+                    DataGridViewComposer.Compose(dgvEventosEV);
+                }
+            } else
+            {
+                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            /*objetivos.Take(ObjetivoEventoDAO.ContarElementosPorIdEvento());*/
+
+            //Falta implementar Bussines Object para Create
         }
 
-// ---------------------------------------------------------------------------------------------------
+        // Update
+        private void btnActualizarEventoEV_Click(object sender, EventArgs e)
+        {
+            Evento evento = new Evento();
+
+            evento.titulo = txtTituloEventoEV.Text;
+            evento.fechaInicio = dtpFechaInicioEV.Value;
+            evento.fechaFin = dtpFechaFinalizacionEV.Value;
+            evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
+            // Agregar id_area
+
+            if (EventoDAO.Editar(evento))
+                MessageBox.Show("Actualizada con éxito!");
+            else
+                MessageBox.Show("Ha ocurrido un error!");
+        }
+
+
+        //Delete
+        private void btnEliminarEventoEV_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+
+            if (EventoDAO.Eliminar(id))
+                MessageBox.Show("Eliminada con éxito!");
+            else
+                MessageBox.Show("Ha ocurrido un error!");
+
+        }
+
+        // ---------------------------------------------------------------------------------------------------
 
         // Formulario de usuarios
 
@@ -422,7 +480,29 @@ namespace BINAES
 
         private void dgvEjemplaresBU_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            int id = Utils.getDataGridViewCellId(sender as DataGridView, e);
+            if (EjemplarDAO.VerificarDisponibilidad(id))
+            {
+                tabAdmin.SelectedIndex = 1;
+            }
+            else
+            {
+                tabAdmin.SelectedIndex = 2;
+                nudIdEjemplarRE.Value = id;
+            }
+        }
+        private void btnBuscarPR_Click(object sender, EventArgs e)
+        {
+            
+
+
+        }
+
+        private void btnCompletarPR_Click(object sender, EventArgs e)
+        {
 
         }
     }
 }
+     
+    
