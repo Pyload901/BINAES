@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Data.SqlClient;
 namespace BINAES
 {
     public static class Utils
@@ -39,6 +40,9 @@ namespace BINAES
         }
         public static string GuardarImagen(string ruta, Image imagen)
         {
+            if (!Directory.Exists(ruta))
+                Directory.CreateDirectory(ruta);
+
             string nombreImagen = Path.GetRandomFileName() + ".png";
             imagen.Save(ruta + nombreImagen);
             return nombreImagen;

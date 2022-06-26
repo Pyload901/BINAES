@@ -11,7 +11,7 @@ namespace BINAES
         public int id { get; set; }
         public string nombre { get; set; }
         public string imagen { get; set; }
-        public string fecha_publicacion { get; set; }
+        public DateTime fecha_publicacion { get; set; }
         public bool disponibilidad { get; set; }
         public int id_coleccion { get; set; }
         public string coleccion { get; set; }
@@ -28,7 +28,7 @@ namespace BINAES
         public string autor { get; set; }
         public string palabras_clave { get; set; }
 
-        public Ejemplar(int id, string nombre, string imagen, string fecha_publicacion, bool disponibilidad,
+        public Ejemplar(int id, string nombre, string imagen, DateTime fecha_publicacion, bool disponibilidad,
             int id_coleccion, int id_idioma, int id_editorial, int id_formato)
         {
             this.id = id;

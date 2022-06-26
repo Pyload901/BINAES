@@ -108,6 +108,8 @@
     <Compile Include="EjemplarDAO.cs" />
     <Compile Include="Camara.cs" />
     <Compile Include="DataGridViewComposer.cs" />
+    <Compile Include="Etiqueta.cs" />
+    <Compile Include="EtiquetaDAO.cs" />
     <Compile Include="Evento.cs" />
     <Compile Include="EventoDAO.cs" />
     <Compile Include="FiltroEnumerate.cs" />
@@ -154,6 +156,8 @@
     <Compile Include="ObjetivoEvento.cs" />
     <Compile Include="ObjetivoEventoDAO.cs" />
     <Compile Include="OpcionesEnumerate.cs" />
+    <Compile Include="PalabraClave.cs" />
+    <Compile Include="PalabraClaveDAO.cs" />
     <Compile Include="Prestamo.cs" />
     <Compile Include="PrestamoDAO.cs" />
     <Compile Include="Program.cs" />

@@ -106,7 +106,7 @@ namespace BINAES
             using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
             {
 
-                string query = @"SELECT EJ.id, EJ.nombre 'nombre_ejemplar', EJ.imagen, EJ.fecha_publicacion, EJ.disponibilidad, C.nombre 'coleccion', IE.idioma 'idioma', ED.editorial 'editorial', F.formato 'formato'
+                string query = @"SELECT EJ.id, EJ.nombre 'nombre_ejemplar', EJ.imagen, EJ.autor, EJ.fecha_publicacion, EJ.disponibilidad, C.nombre 'coleccion', IE.idioma 'idioma', ED.editorial 'editorial', F.formato 'formato'
                                 FROM EJEMPLAR EJ
                                     INNER JOIN COLECCION C
                                         ON EJ.id_coleccion = C.id
@@ -116,11 +116,6 @@ namespace BINAES
                                         ON EJ.id_editorial = ED.id
                                     INNER JOIN FORMATO_EJEMPLAR F
                                         ON EJ.id_formato = F.id ";
-                if (filtroEjemplar == FiltroEnumerate.Autor)
-                    query += @"INNER JOIN AUTORXEJEMPLAR AXE
-                                    ON AXE.id_ejemplar = EJ.id
-                                INNER JOIN AUTOR A
-                                    ON AXE.id_autor = A.id ";
                 switch (filtroFormato)
                 {
                     case FiltroEnumerate.Digital:
@@ -144,7 +139,7 @@ namespace BINAES
                         cmd.Parameters.AddWithValue("@titulo", texto);
                         break;
                     case FiltroEnumerate.Autor:
-                        query += "AND A.nombre ";
+                        query += "AND EJ.nombre ";
                         if (filtroBusqueda == FiltroEnumerate.Exacta)
                             query += "= @nombre_autor";
                         else
@@ -177,13 +172,13 @@ namespace BINAES
                             ejemplar.id = Convert.ToInt32(reader["id"]);
                             ejemplar.nombre = reader["nombre_ejemplar"].ToString();
                             ejemplar.imagen = reader["imagen"].ToString();
-                            ejemplar.fecha_publicacion = reader["fecha_publicacion"].ToString();
+                            ejemplar.autor = reader["autor"].ToString();
+                            ejemplar.fecha_publicacion = Convert.ToDateTime(reader["fecha_publicacion"]).Date;
                             ejemplar.disponibilidad = Convert.ToBoolean(reader["disponibilidad"]);
                             ejemplar.coleccion = reader["coleccion"].ToString();
                             ejemplar.idioma = reader["idioma"].ToString();
                             ejemplar.editorial = reader["editorial"].ToString();
                             ejemplar.formato = reader["formato"].ToString();
-                            ejemplar.autor = LeerAutores(ejemplar.id);
 
                             ejemplar.palabras_clave = LeerPalabrasClave(ejemplar.id);
 
@@ -241,73 +236,39 @@ namespace BINAES
             }
             return result;
         }
-        //Evento de Buscar ejemplar Prestamo
-        public static Ejemplar Buscar()
-        {
-            Ejemplar prestamo = new Ejemplar();
-            string cadena = Properties.Resources.CadenaConexion;
-
-            using (SqlConnection conn = new SqlConnection(cadena))
-            {
-                //Falta la query
-                string query = "";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                conn.Open();
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        prestamo.id = Convert.ToInt32(reader["id"]);
-                        prestamo.nombre = reader["nombre_ejemplar"].ToString();
-                        prestamo.imagen = reader["imagen"].ToString();
-                        prestamo.fecha_publicacion = reader["fecha_publicacion"].ToString();
-                        prestamo.disponibilidad = Convert.ToBoolean(reader["disponibilidad"]);
-                        prestamo.coleccion = reader["coleccion"].ToString();
-                        prestamo.idioma = reader["idioma"].ToString();
-                        prestamo.editorial = reader["editorial"].ToString();
-                        prestamo.formato = reader["formato"].ToString();
-                    }
-                }
-
-                conn.Close();
-            }
-            return prestamo;
-        }
         //Para insertar datos en Al darle al boton de commpletar "Prestamo Ejemplar"
-        public static void Insertar(Ejemplar ejemplar)
+        public static int Crear(Ejemplar ejemplar)
         {
-            string cadena = Properties.Resources.CadenaConexion;
-
-            using (SqlConnection conn = new SqlConnection(cadena))
+            int result = 0;
+            try
             {
-                //Falta la query correspondiente
-                string query = @"SELECT EJ.id, EJ.nombre 'nombre_ejemplar', EJ.imagen, EJ.fecha_publicacion, EJ.disponibilidad, C.nombre 'coleccion', IE.idioma 'idioma', ED.editorial 'editorial', F.formato 'formato'
-                                FROM EJEMPLAR EJ
-                                    INNER JOIN COLECCION C
-                                        ON EJ.id_coleccion = C.id
-                                    INNER JOIN IDIOMA_EJEMPLAR IE
-                                        ON EJ.id_idioma = IE.id
-                                    INNER JOIN EDITORIAL ED
-                                        ON EJ.id_editorial = ED.id
-                                    INNER JOIN FORMATO_EJEMPLAR F
-                                        ON EJ.id_formato = F.id";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                //Mostrar informacion
-                cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
-                cmd.Parameters.AddWithValue("@imagen", ejemplar.imagen);
-                cmd.Parameters.AddWithValue("@fecha_publicacion", ejemplar.fecha_publicacion);
-                cmd.Parameters.AddWithValue("@disponibilidad", ejemplar.disponibilidad);
-                cmd.Parameters.AddWithValue("@id_coleccion", ejemplar.id_coleccion);
-                cmd.Parameters.AddWithValue("@id_idioma", ejemplar.id_idioma);
-                cmd.Parameters.AddWithValue("@id_editorial", ejemplar.id_editorial);
-                cmd.Parameters.AddWithValue("@id_formato", ejemplar.id_formato);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                string cadena = Properties.Resources.CadenaConexion;
+                using (SqlConnection conn = new SqlConnection(cadena))
+                {
+                    //Falta la query correspondiente
+                    string query = @"INSERT INTO EJEMPLAR (nombre, imagen, autor, fecha_publicacion, disponibilidad, id_coleccion, id_idioma, id_editorial, id_formato) OUTPUT INSERTED.ID VALUES (@nombre, @imagen, @autor, CONVERT(DATE, @fecha_publicacion, 103), @disponibilidad, @id_coleccion, @id_idioma, @id_editorial, @id_formato)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    //Mostrar informacion
+                    cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
+                    cmd.Parameters.AddWithValue("@imagen", ejemplar.imagen);
+                    cmd.Parameters.AddWithValue("@autor", ejemplar.autor);
+                    cmd.Parameters.AddWithValue("@fecha_publicacion", ejemplar.fecha_publicacion);
+                    cmd.Parameters.AddWithValue("@disponibilidad", ejemplar.disponibilidad);
+                    cmd.Parameters.AddWithValue("@id_coleccion", ejemplar.id_coleccion);
+                    cmd.Parameters.AddWithValue("@id_idioma", ejemplar.id_idioma);
+                    cmd.Parameters.AddWithValue("@id_editorial", ejemplar.id_editorial);
+                    cmd.Parameters.AddWithValue("@id_formato", ejemplar.id_formato);
+                    conn.Open();
+                    result = Convert.ToInt32(cmd.ExecuteScalar());
+                    conn.Close();
+                }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                result = 0;
+            }
+            return result;
         }
     }
 }
