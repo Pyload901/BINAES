@@ -587,13 +587,13 @@ namespace BINAES
             this.btnEditarEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizarEventoEV.Location = new System.Drawing.Point(315, 507);
-            this.btnActualizarEventoEV.Name = "btnActualizarEventoEV";
-            this.btnActualizarEventoEV.Size = new System.Drawing.Size(150, 47);
-            this.btnActualizarEventoEV.TabIndex = 30;
-            this.btnActualizarEventoEV.Text = "Actualizar";
-            this.btnActualizarEventoEV.UseVisualStyleBackColor = true;
-            this.btnActualizarEventoEV.Click += new System.EventHandler(this.btnActualizarEventoEV_Click);
+            this.btnEditarEventoEV.Location = new System.Drawing.Point(315, 507);
+            this.btnEditarEventoEV.Name = "btnActualizarEventoEV";
+            this.btnEditarEventoEV.Size = new System.Drawing.Size(150, 47);
+            this.btnEditarEventoEV.TabIndex = 30;
+            this.btnEditarEventoEV.Text = "Actualizar";
+            this.btnEditarEventoEV.UseVisualStyleBackColor = true;
+            this.btnEditarEventoEV.Click += new System.EventHandler(this.btnActualizarEventoEV_Click);
             // 
             // tabAgregar
             // 
