@@ -461,8 +461,8 @@ namespace BINAES
 
         private void btnCompletarPR_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = EjemplarDAO.Insertar();
+            //dataGridView1.DataSource = null;
+            //dataGridView1.DataSource = EjemplarDAO.Insertar();
         }
     }
 }
