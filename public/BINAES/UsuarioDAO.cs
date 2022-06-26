@@ -49,7 +49,7 @@ namespace BINAES
                 string cadena = Properties.Resources.CadenaConexion;
                 using (SqlConnection connection = new SqlConnection(cadena))
                 {
-                    string query = "INSERT INTO USUARIO (nombre, institucion, direccion, telefono, fotografia, email, contrasenia, id_rol, id_ocupacion) VALUES (@nombre, @institucion, @direccion, @telefono, @email, @contrasenia, @id_rol, @id_ocupacion)";
+                    string query = "INSERT INTO USUARIO (nombre, institucion, direccion, telefono, fotografia, email, contrasenia, id_rol, id_ocupacion) VALUES (@nombre, @institucion, @direccion, @telefono, @fotografia, @email, @contrasenia, @id_rol, @id_ocupacion)";
 
                     SqlCommand command = new SqlCommand(query, connection);
 
@@ -57,6 +57,7 @@ namespace BINAES
                     command.Parameters.AddWithValue("@institucion", user.institucion);
                     command.Parameters.AddWithValue("@direccion", user.direccion);
                     command.Parameters.AddWithValue("@telefono", user.telefono);
+                    command.Parameters.AddWithValue("@fotografia", user.fotografia);
                     command.Parameters.AddWithValue("@email", user.email);
                     command.Parameters.AddWithValue("@contrasenia", user.contrasenia);
                     command.Parameters.AddWithValue("@id_rol", user.id_rol);
@@ -70,6 +71,7 @@ namespace BINAES
             catch (Exception e)
             {
                 exito = false;
+                Console.WriteLine(e.Message);
             }
             return exito;
         }
@@ -85,7 +87,7 @@ namespace BINAES
                 conn.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    if (!reader.HasRows)
+                    if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
@@ -121,7 +123,7 @@ namespace BINAES
                 string cadena = Properties.Resources.CadenaConexion;
                 using (SqlConnection connection = new SqlConnection(cadena))
                 {
-                    string query = "UPDATE USUARIO SET nombre = @nombre, institucion = @institucion, direccion = @direccion, telefono = @telefono, fotografia = @fotografia, email = @email, id_rol = @id_rol, id_ocupacion = @id_ocupacion";
+                    string query = "UPDATE USUARIO SET nombre = @nombre, institucion = @institucion, direccion = @direccion, telefono = @telefono, fotografia = @fotografia, email = @email, id_rol = @id_rol, id_ocupacion = @id_ocupacion WHERE id = 5";
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@nombre", user.nombre);

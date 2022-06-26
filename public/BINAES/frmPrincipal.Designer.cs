@@ -143,6 +143,7 @@ namespace BINAES
             this.btnTomarFotoUS = new System.Windows.Forms.Button();
             this.btnCancelarFotoUS = new System.Windows.Forms.Button();
             this.btnActualizarUS = new System.Windows.Forms.Button();
+            this.cmbOcupacionUS = new System.Windows.Forms.ComboBox();
             this.tabColeccion = new System.Windows.Forms.TabPage();
             this.tblColeccion = new System.Windows.Forms.TableLayoutPanel();
             this.dgvColeccionesCO = new System.Windows.Forms.DataGridView();
@@ -188,7 +189,6 @@ namespace BINAES
             this.btnMinPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnMaxPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnCerrarPrincipal = new FontAwesome.Sharp.IconButton();
-            this.cmbOcupacionUS = new System.Windows.Forms.ComboBox();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tblEventos.SuspendLayout();
@@ -1904,6 +1904,14 @@ namespace BINAES
             this.btnActualizarUS.UseVisualStyleBackColor = true;
             this.btnActualizarUS.Click += new System.EventHandler(this.btnActualizarUS_Click);
             // 
+            // cmbOcupacionUS
+            // 
+            this.cmbOcupacionUS.FormattingEnabled = true;
+            this.cmbOcupacionUS.Location = new System.Drawing.Point(3, 465);
+            this.cmbOcupacionUS.Name = "cmbOcupacionUS";
+            this.cmbOcupacionUS.Size = new System.Drawing.Size(121, 29);
+            this.cmbOcupacionUS.TabIndex = 51;
+            // 
             // tabColeccion
             // 
             this.tabColeccion.Controls.Add(this.tblColeccion);
@@ -2545,14 +2553,6 @@ namespace BINAES
             this.btnCerrarPrincipal.TabIndex = 0;
             this.btnCerrarPrincipal.UseVisualStyleBackColor = true;
             this.btnCerrarPrincipal.Click += new System.EventHandler(this.btnCerrarPrincipal_Click);
-            // 
-            // cmbOcupacionUS
-            // 
-            this.cmbOcupacionUS.FormattingEnabled = true;
-            this.cmbOcupacionUS.Location = new System.Drawing.Point(3, 465);
-            this.cmbOcupacionUS.Name = "cmbOcupacionUS";
-            this.cmbOcupacionUS.Size = new System.Drawing.Size(121, 29);
-            this.cmbOcupacionUS.TabIndex = 51;
             // 
             // frmPrincipal
             // 
