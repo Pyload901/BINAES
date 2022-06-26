@@ -143,17 +143,6 @@ namespace BINAES
             this.btnTomarFotoUS = new System.Windows.Forms.Button();
             this.btnCancelarFotoUS = new System.Windows.Forms.Button();
             this.btnActualizarUS = new System.Windows.Forms.Button();
-            this.tabMisionVision = new System.Windows.Forms.TabPage();
-            this.tblMisionVision = new System.Windows.Forms.TableLayoutPanel();
-            this.lblVision = new System.Windows.Forms.Label();
-            this.lblInfoVision = new System.Windows.Forms.Label();
-            this.lblMision = new System.Windows.Forms.Label();
-            this.lblInfoMision = new System.Windows.Forms.Label();
-            this.tabIntroduccion = new System.Windows.Forms.TabPage();
-            this.tblQuienesSomos = new System.Windows.Forms.TableLayoutPanel();
-            this.lblQuienesSomosTXT = new System.Windows.Forms.Label();
-            this.lblQuienesSomosTXT2 = new System.Windows.Forms.Label();
-            this.lblQuienesSomos = new System.Windows.Forms.Label();
             this.tabColeccion = new System.Windows.Forms.TabPage();
             this.tblColeccion = new System.Windows.Forms.TableLayoutPanel();
             this.lblGeneroColeccionCO = new System.Windows.Forms.Label();
@@ -191,6 +180,14 @@ namespace BINAES
             this.btnMinPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnMaxPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnCerrarPrincipal = new FontAwesome.Sharp.IconButton();
+            this.TabAcerca = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.cmbEditorialEjemplarAG = new System.Windows.Forms.ComboBox();
             this.chkDisponibilidadEjemplarAG = new System.Windows.Forms.CheckBox();
             this.mspMenu.SuspendLayout();
@@ -221,10 +218,6 @@ namespace BINAES
             this.tblUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosUS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).BeginInit();
-            this.tabMisionVision.SuspendLayout();
-            this.tblMisionVision.SuspendLayout();
-            this.tabIntroduccion.SuspendLayout();
-            this.tblQuienesSomos.SuspendLayout();
             this.tabColeccion.SuspendLayout();
             this.tblColeccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColeccionesCO)).BeginInit();
@@ -234,6 +227,8 @@ namespace BINAES
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelPrincipal.SuspendLayout();
+            this.TabAcerca.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mspMenu
@@ -1423,15 +1418,14 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabAdmin.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabAdmin.CausesValidation = false;
+            this.tabAdmin.Controls.Add(this.tabUsuarios);
             this.tabAdmin.Controls.Add(this.tabBuscar);
             this.tabAdmin.Controls.Add(this.tabPrestamo);
             this.tabAdmin.Controls.Add(this.tabReserva);
             this.tabAdmin.Controls.Add(this.tabAgregar);
             this.tabAdmin.Controls.Add(this.tabEventos);
-            this.tabAdmin.Controls.Add(this.tabUsuarios);
-            this.tabAdmin.Controls.Add(this.tabMisionVision);
-            this.tabAdmin.Controls.Add(this.tabIntroduccion);
             this.tabAdmin.Controls.Add(this.tabColeccion);
+            this.tabAdmin.Controls.Add(this.TabAcerca);
             this.tabAdmin.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAdmin.Location = new System.Drawing.Point(292, 47);
             this.tabAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1806,172 +1800,6 @@ namespace BINAES
             this.btnActualizarUS.UseVisualStyleBackColor = true;
             this.btnActualizarUS.Click += new System.EventHandler(this.btnActualizarUS_Click);
             // 
-            // tabMisionVision
-            // 
-            this.tabMisionVision.Controls.Add(this.tblMisionVision);
-            this.tabMisionVision.Location = new System.Drawing.Point(4, 33);
-            this.tabMisionVision.Name = "tabMisionVision";
-            this.tabMisionVision.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMisionVision.Size = new System.Drawing.Size(964, 567);
-            this.tabMisionVision.TabIndex = 6;
-            this.tabMisionVision.Text = "Mision y Vision";
-            this.tabMisionVision.UseVisualStyleBackColor = true;
-            // 
-            // tblMisionVision
-            // 
-            this.tblMisionVision.ColumnCount = 1;
-            this.tblMisionVision.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblMisionVision.Controls.Add(this.lblVision, 0, 2);
-            this.tblMisionVision.Controls.Add(this.lblInfoVision, 0, 3);
-            this.tblMisionVision.Controls.Add(this.lblMision, 0, 0);
-            this.tblMisionVision.Controls.Add(this.lblInfoMision, 0, 1);
-            this.tblMisionVision.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblMisionVision.Location = new System.Drawing.Point(3, 3);
-            this.tblMisionVision.Name = "tblMisionVision";
-            this.tblMisionVision.RowCount = 4;
-            this.tblMisionVision.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblMisionVision.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tblMisionVision.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblMisionVision.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tblMisionVision.Size = new System.Drawing.Size(958, 561);
-            this.tblMisionVision.TabIndex = 0;
-            // 
-            // lblVision
-            // 
-            this.lblVision.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVision.AutoSize = true;
-            this.lblVision.BackColor = System.Drawing.Color.DodgerBlue;
-            this.lblVision.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVision.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblVision.Location = new System.Drawing.Point(3, 280);
-            this.lblVision.Name = "lblVision";
-            this.lblVision.Size = new System.Drawing.Size(952, 112);
-            this.lblVision.TabIndex = 1;
-            this.lblVision.Text = " VISIÓN ";
-            this.lblVision.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblInfoVision
-            // 
-            this.lblInfoVision.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblInfoVision.AutoSize = true;
-            this.lblInfoVision.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.lblInfoVision.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoVision.Location = new System.Drawing.Point(3, 392);
-            this.lblInfoVision.Name = "lblInfoVision";
-            this.lblInfoVision.Size = new System.Drawing.Size(952, 169);
-            this.lblInfoVision.TabIndex = 3;
-            this.lblInfoVision.Text = resources.GetString("lblInfoVision.Text");
-            this.lblInfoVision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblMision
-            // 
-            this.lblMision.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMision.AutoSize = true;
-            this.lblMision.BackColor = System.Drawing.Color.DodgerBlue;
-            this.lblMision.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMision.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMision.Location = new System.Drawing.Point(3, 0);
-            this.lblMision.Name = "lblMision";
-            this.lblMision.Size = new System.Drawing.Size(952, 112);
-            this.lblMision.TabIndex = 0;
-            this.lblMision.Text = " MISIÓN ";
-            this.lblMision.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblInfoMision
-            // 
-            this.lblInfoMision.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblInfoMision.AutoSize = true;
-            this.lblInfoMision.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.lblInfoMision.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoMision.Location = new System.Drawing.Point(3, 112);
-            this.lblInfoMision.Name = "lblInfoMision";
-            this.lblInfoMision.Size = new System.Drawing.Size(952, 168);
-            this.lblInfoMision.TabIndex = 2;
-            this.lblInfoMision.Text = resources.GetString("lblInfoMision.Text");
-            this.lblInfoMision.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // tabIntroduccion
-            // 
-            this.tabIntroduccion.Controls.Add(this.tblQuienesSomos);
-            this.tabIntroduccion.Location = new System.Drawing.Point(4, 33);
-            this.tabIntroduccion.Name = "tabIntroduccion";
-            this.tabIntroduccion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIntroduccion.Size = new System.Drawing.Size(964, 567);
-            this.tabIntroduccion.TabIndex = 8;
-            this.tabIntroduccion.Text = "Introduccion";
-            this.tabIntroduccion.UseVisualStyleBackColor = true;
-            // 
-            // tblQuienesSomos
-            // 
-            this.tblQuienesSomos.ColumnCount = 1;
-            this.tblQuienesSomos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblQuienesSomos.Controls.Add(this.lblQuienesSomosTXT, 0, 1);
-            this.tblQuienesSomos.Controls.Add(this.lblQuienesSomosTXT2, 0, 2);
-            this.tblQuienesSomos.Controls.Add(this.lblQuienesSomos, 0, 0);
-            this.tblQuienesSomos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblQuienesSomos.Location = new System.Drawing.Point(3, 3);
-            this.tblQuienesSomos.Name = "tblQuienesSomos";
-            this.tblQuienesSomos.RowCount = 3;
-            this.tblQuienesSomos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblQuienesSomos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tblQuienesSomos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tblQuienesSomos.Size = new System.Drawing.Size(958, 561);
-            this.tblQuienesSomos.TabIndex = 0;
-            // 
-            // lblQuienesSomosTXT
-            // 
-            this.lblQuienesSomosTXT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblQuienesSomosTXT.AutoSize = true;
-            this.lblQuienesSomosTXT.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.lblQuienesSomosTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuienesSomosTXT.Location = new System.Drawing.Point(3, 112);
-            this.lblQuienesSomosTXT.Name = "lblQuienesSomosTXT";
-            this.lblQuienesSomosTXT.Size = new System.Drawing.Size(952, 224);
-            this.lblQuienesSomosTXT.TabIndex = 1;
-            this.lblQuienesSomosTXT.Text = resources.GetString("lblQuienesSomosTXT.Text");
-            this.lblQuienesSomosTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblQuienesSomosTXT2
-            // 
-            this.lblQuienesSomosTXT2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblQuienesSomosTXT2.AutoSize = true;
-            this.lblQuienesSomosTXT2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.lblQuienesSomosTXT2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuienesSomosTXT2.Location = new System.Drawing.Point(3, 336);
-            this.lblQuienesSomosTXT2.Name = "lblQuienesSomosTXT2";
-            this.lblQuienesSomosTXT2.Size = new System.Drawing.Size(952, 225);
-            this.lblQuienesSomosTXT2.TabIndex = 2;
-            this.lblQuienesSomosTXT2.Text = resources.GetString("lblQuienesSomosTXT2.Text");
-            this.lblQuienesSomosTXT2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblQuienesSomos
-            // 
-            this.lblQuienesSomos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblQuienesSomos.AutoSize = true;
-            this.lblQuienesSomos.BackColor = System.Drawing.Color.DodgerBlue;
-            this.lblQuienesSomos.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuienesSomos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblQuienesSomos.Location = new System.Drawing.Point(3, 0);
-            this.lblQuienesSomos.Name = "lblQuienesSomos";
-            this.lblQuienesSomos.Size = new System.Drawing.Size(952, 112);
-            this.lblQuienesSomos.TabIndex = 0;
-            this.lblQuienesSomos.Text = "Quienes somos?";
-            this.lblQuienesSomos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tabColeccion
             // 
             this.tabColeccion.Controls.Add(this.tblColeccion);
@@ -2256,6 +2084,7 @@ namespace BINAES
             this.btnMisionVisionPPrincipal.TabIndex = 7;
             this.btnMisionVisionPPrincipal.Text = "Mision y Vision";
             this.btnMisionVisionPPrincipal.UseVisualStyleBackColor = false;
+            this.btnMisionVisionPPrincipal.Click += new System.EventHandler(this.btnMisionVisionPPrincipal_Click);
             // 
             // btnAddUsuarioPPrincipal
             // 
@@ -2455,6 +2284,134 @@ namespace BINAES
             this.btnCerrarPrincipal.UseVisualStyleBackColor = true;
             this.btnCerrarPrincipal.Click += new System.EventHandler(this.btnCerrarPrincipal_Click);
             // 
+            // TabAcerca
+            // 
+            this.TabAcerca.Controls.Add(this.tableLayoutPanel1);
+            this.TabAcerca.Location = new System.Drawing.Point(4, 33);
+            this.TabAcerca.Name = "TabAcerca";
+            this.TabAcerca.Size = new System.Drawing.Size(964, 567);
+            this.TabAcerca.TabIndex = 10;
+            this.TabAcerca.Text = "Acerca de BINAES";
+            this.TabAcerca.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.16749F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.2549F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.01248F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.35688F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(956, 561);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(472, 57);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Misión";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(3, 266);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(472, 73);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Visión";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(481, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(472, 57);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "¿Quiénes Somos?";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(481, 57);
+            this.label4.Name = "label4";
+            this.tableLayoutPanel1.SetRowSpan(this.label4, 3);
+            this.label4.Size = new System.Drawing.Size(472, 504);
+            this.label4.TabIndex = 3;
+            this.label4.Text = resources.GetString("label4.Text");
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(3, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(472, 209);
+            this.label5.TabIndex = 4;
+            this.label5.Text = resources.GetString("label5.Text");
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(3, 339);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(472, 222);
+            this.label6.TabIndex = 5;
+            this.label6.Text = resources.GetString("label6.Text");
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // cmbEditorialEjemplarAG
             // 
             this.cmbEditorialEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2536,12 +2493,6 @@ namespace BINAES
             this.tblUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosUS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).EndInit();
-            this.tabMisionVision.ResumeLayout(false);
-            this.tblMisionVision.ResumeLayout(false);
-            this.tblMisionVision.PerformLayout();
-            this.tabIntroduccion.ResumeLayout(false);
-            this.tblQuienesSomos.ResumeLayout(false);
-            this.tblQuienesSomos.PerformLayout();
             this.tabColeccion.ResumeLayout(false);
             this.tblColeccion.ResumeLayout(false);
             this.tblColeccion.PerformLayout();
@@ -2553,6 +2504,9 @@ namespace BINAES
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelPrincipal.ResumeLayout(false);
+            this.TabAcerca.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2610,12 +2564,6 @@ namespace BINAES
         private System.Windows.Forms.TabPage tabPrestamo;
         private System.Windows.Forms.TabPage tabBuscar;
         private System.Windows.Forms.TabControl tabAdmin;
-        private System.Windows.Forms.TabPage tabMisionVision;
-        private System.Windows.Forms.TableLayoutPanel tblMisionVision;
-        private System.Windows.Forms.Label lblMision;
-        private System.Windows.Forms.Label lblVision;
-        private System.Windows.Forms.Label lblInfoMision;
-        private System.Windows.Forms.Label lblInfoVision;
         private System.Windows.Forms.TableLayoutPanel tblReserva;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label lblEjemplarRE;
@@ -2623,11 +2571,6 @@ namespace BINAES
         private System.Windows.Forms.Button btnReservarRE;
         private System.Windows.Forms.TextBox textBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.TabPage tabIntroduccion;
-        private System.Windows.Forms.TableLayoutPanel tblQuienesSomos;
-        private System.Windows.Forms.Label lblQuienesSomos;
-        private System.Windows.Forms.Label lblQuienesSomosTXT;
-        private System.Windows.Forms.Label lblQuienesSomosTXT2;
         private System.Windows.Forms.PictureBox picImagenEV;
         private System.Windows.Forms.PictureBox picEjemplarAG;
         private System.Windows.Forms.Button btnBuscarEjemplarRE;
@@ -2718,6 +2661,14 @@ namespace BINAES
         private Button btnPrestarPR;
         private NumericUpDown nudIdEjemplarPR;
         private NumericUpDown nudIdUsuarioPR;
+        private TabPage TabAcerca;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
         private ComboBox cmbEditorialEjemplarAG;
         private CheckBox chkDisponibilidadEjemplarAG;
     }
