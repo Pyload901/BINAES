@@ -587,9 +587,9 @@ namespace BINAES
             this.btnEditarEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditarEventoEV.Location = new System.Drawing.Point(315, 507);
-            this.btnEditarEventoEV.Name = "btnActualizarEventoEV";
-            this.btnEditarEventoEV.Size = new System.Drawing.Size(150, 47);
+            this.btnEditarEventoEV.Location = new System.Drawing.Point(315, 555);
+            this.btnEditarEventoEV.Name = "btnEditarEventoEV";
+            this.btnEditarEventoEV.Size = new System.Drawing.Size(150, 43);
             this.btnEditarEventoEV.TabIndex = 30;
             this.btnEditarEventoEV.Text = "Actualizar";
             this.btnEditarEventoEV.UseVisualStyleBackColor = true;
@@ -1479,7 +1479,7 @@ namespace BINAES
             this.dgvUsuariosUS.ReadOnly = true;
             this.dgvUsuariosUS.RowHeadersWidth = 51;
             this.tblUsuarios.SetRowSpan(this.dgvUsuariosUS, 13);
-            this.dgvUsuariosUS.Size = new System.Drawing.Size(620, 567);
+            this.dgvUsuariosUS.Size = new System.Drawing.Size(620, 595);
             this.dgvUsuariosUS.TabIndex = 29;
             this.dgvUsuariosUS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuariosUS_CellContentClick);
             // 
