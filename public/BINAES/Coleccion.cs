@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace BINAES
 {
     public class Coleccion{
+        public int id { get; set; }
         public int id_coleccion { get; set; }
         public string nombre { get; set; }
         public string tipo_coleccion { set; get; }

@@ -37,5 +37,11 @@ namespace BINAES
                 }
             }
         }
+        public static string GuardarImagen(string ruta, Image imagen)
+        {
+            string nombreImagen = Path.GetRandomFileName() + ".png";
+            imagen.Save(ruta + nombreImagen);
+            return nombreImagen;
+        }
     }
 }

@@ -10,9 +10,35 @@ namespace BINAES
 
     public static class ColeccionDAO
     {
-        public static Coleccion Leer()
+        public static List<Coleccion> LeerCatalogo ()
         {
-            Coleccion cole = new Coleccion();
+            List<Coleccion> list = new List<Coleccion>();
+            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            {
+                string query = @"SELECT id, nombre FROM COLECCION";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                conn.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Coleccion cole = new Coleccion();
+                        cole.id = Convert.ToInt32(reader["id"]);
+                        cole.nombre = reader["nombre"].ToString();
+                        list.Add(cole);
+                    }
+                }
+
+                conn.Close();
+            }
+            return list;
+        }
+        public static List<Coleccion> Leer()
+        {
+            List<Coleccion> list = new List<Coleccion>();
             string cadena = Properties.Resources.CadenaConexion;
 
             using (SqlConnection conn = new SqlConnection(cadena))
@@ -32,15 +58,17 @@ namespace BINAES
                 {
                     while (reader.Read())
                     {
+                        Coleccion cole = new Coleccion();
                         cole.nombre = reader["nombre"].ToString();
                         cole.tipo_coleccion = reader["tipo"].ToString();
                         cole.genero_coleccion = reader["genero"].ToString();
+                        list.Add(cole);
                     }
                 }
 
                 conn.Close();
             }
-            return cole;
+            return list;
         } 
 
         public static void Crear(Coleccion coleccion)

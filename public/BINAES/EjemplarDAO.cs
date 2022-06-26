@@ -178,12 +178,12 @@ namespace BINAES
                             ejemplar.nombre = reader["nombre_ejemplar"].ToString();
                             ejemplar.imagen = reader["imagen"].ToString();
                             ejemplar.fecha_publicacion = reader["fecha_publicacion"].ToString();
-                            ejemplar.stock = Convert.ToInt32(reader["disponibilidad"]);
+                            ejemplar.disponibilidad = Convert.ToInt32(reader["disponibilidad"]);
                             ejemplar.coleccion = reader["coleccion"].ToString();
                             ejemplar.idioma = reader["idioma"].ToString();
                             ejemplar.editorial = reader["editorial"].ToString();
                             ejemplar.formato = reader["formato"].ToString();
-                            ejemplar.autores = LeerAutores(ejemplar.id);
+                            ejemplar.autor = LeerAutores(ejemplar.id);
 
                             ejemplar.palabras_clave = LeerPalabrasClave(ejemplar.id);
 
@@ -264,7 +264,7 @@ namespace BINAES
                         prestamo.nombre = reader["nombre_ejemplar"].ToString();
                         prestamo.imagen = reader["imagen"].ToString();
                         prestamo.fecha_publicacion = reader["fecha_publicacion"].ToString();
-                        prestamo.stock = Convert.ToInt32(reader["stock"]);
+                        prestamo.disponibilidad = Convert.ToInt32(reader["stock"]);
                         prestamo.coleccion = reader["coleccion"].ToString();
                         prestamo.idioma = reader["idioma"].ToString();
                         prestamo.editorial = reader["editorial"].ToString();
@@ -284,7 +284,7 @@ namespace BINAES
             using (SqlConnection conn = new SqlConnection(cadena))
             {
                 //Falta la query correspondiente
-                string query = @"SELECT EJ.id, EJ.nombre 'nombre_ejemplar', EJ.imagen, EJ.fecha_publicacion, EJ.stock, C.nombre 'coleccion', IE.idioma 'idioma', ED.editorial 'editorial', F.formato 'formato'
+                string query = @"SELECT EJ.id, EJ.nombre 'nombre_ejemplar', EJ.imagen, EJ.fecha_publicacion, EJ.disponibilidad, C.nombre 'coleccion', IE.idioma 'idioma', ED.editorial 'editorial', F.formato 'formato'
                                 FROM EJEMPLAR EJ
                                     INNER JOIN COLECCION C
                                         ON EJ.id_coleccion = C.id
@@ -299,7 +299,7 @@ namespace BINAES
                 cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
                 cmd.Parameters.AddWithValue("@imagen", ejemplar.imagen);
                 cmd.Parameters.AddWithValue("@fecha_publicacion", ejemplar.fecha_publicacion);
-                cmd.Parameters.AddWithValue("@stock", ejemplar.stock);
+                cmd.Parameters.AddWithValue("@disponibilidad", ejemplar.disponibilidad);
                 cmd.Parameters.AddWithValue("@id_coleccion", ejemplar.id_coleccion);
                 cmd.Parameters.AddWithValue("@id_idioma", ejemplar.id_idioma);
                 cmd.Parameters.AddWithValue("@id_editorial", ejemplar.id_editorial);

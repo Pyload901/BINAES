@@ -66,7 +66,6 @@ namespace BINAES
             this.tblEjemplares = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalirEdicionEjemplarAG = new System.Windows.Forms.Button();
             this.btnAgregarEjemplarAG = new System.Windows.Forms.Button();
-            this.txtEditorialEjemplarAG = new System.Windows.Forms.TextBox();
             this.lblImagenEjemplarEJ = new System.Windows.Forms.Label();
             this.lblNombreEjemplarEJ = new System.Windows.Forms.Label();
             this.lblAutorEjemplarEJ = new System.Windows.Forms.Label();
@@ -76,13 +75,11 @@ namespace BINAES
             this.lblEtiquetasEjemplarEJ = new System.Windows.Forms.Label();
             this.lblFormatoEjemplarEJ = new System.Windows.Forms.Label();
             this.lblTipoColeccionEjemplarEJ = new System.Windows.Forms.Label();
-            this.lblCodigoEjemplarEJ = new System.Windows.Forms.Label();
-            this.txtCodigoEjemplarAG = new System.Windows.Forms.TextBox();
             this.cmbIdiomaEjemplarAG = new System.Windows.Forms.ComboBox();
             this.btnEtiquetasEjemplarAG = new System.Windows.Forms.Button();
             this.txtNombreEjemplarAG = new System.Windows.Forms.TextBox();
             this.txtAutorEjemplarAG = new System.Windows.Forms.TextBox();
-            this.cmbTipoColeccionEjemplarAG = new System.Windows.Forms.ComboBox();
+            this.cmbColeccionEjemplarAG = new System.Windows.Forms.ComboBox();
             this.cmbFormatoEjemplarAG = new System.Windows.Forms.ComboBox();
             this.dgvEjemplaresAG = new System.Windows.Forms.DataGridView();
             this.dtpFechaPublicacionEjemplarAG = new System.Windows.Forms.DateTimePicker();
@@ -194,6 +191,8 @@ namespace BINAES
             this.btnMinPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnMaxPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnCerrarPrincipal = new FontAwesome.Sharp.IconButton();
+            this.cmbEditorialEjemplarAG = new System.Windows.Forms.ComboBox();
+            this.chkDisponibilidadEjemplarAG = new System.Windows.Forms.CheckBox();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tblEventos.SuspendLayout();
@@ -657,27 +656,26 @@ namespace BINAES
             this.tblEjemplares.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tblEjemplares.Controls.Add(this.btnSalirEdicionEjemplarAG, 0, 12);
             this.tblEjemplares.Controls.Add(this.btnAgregarEjemplarAG, 0, 12);
-            this.tblEjemplares.Controls.Add(this.txtEditorialEjemplarAG, 1, 1);
             this.tblEjemplares.Controls.Add(this.lblImagenEjemplarEJ, 1, 6);
-            this.tblEjemplares.Controls.Add(this.lblNombreEjemplarEJ, 0, 2);
-            this.tblEjemplares.Controls.Add(this.lblAutorEjemplarEJ, 0, 4);
             this.tblEjemplares.Controls.Add(this.lblFechaPublicacionEjemplarEJ, 1, 2);
-            this.tblEjemplares.Controls.Add(this.lblIdiomaEjemplarEJ, 0, 6);
             this.tblEjemplares.Controls.Add(this.lblEditorialEjemplarEJ, 1, 0);
-            this.tblEjemplares.Controls.Add(this.lblEtiquetasEjemplarEJ, 0, 10);
-            this.tblEjemplares.Controls.Add(this.lblFormatoEjemplarEJ, 0, 8);
             this.tblEjemplares.Controls.Add(this.lblTipoColeccionEjemplarEJ, 1, 4);
-            this.tblEjemplares.Controls.Add(this.lblCodigoEjemplarEJ, 0, 0);
-            this.tblEjemplares.Controls.Add(this.txtCodigoEjemplarAG, 0, 1);
-            this.tblEjemplares.Controls.Add(this.cmbIdiomaEjemplarAG, 0, 7);
-            this.tblEjemplares.Controls.Add(this.btnEtiquetasEjemplarAG, 0, 11);
-            this.tblEjemplares.Controls.Add(this.txtNombreEjemplarAG, 0, 3);
-            this.tblEjemplares.Controls.Add(this.txtAutorEjemplarAG, 0, 5);
-            this.tblEjemplares.Controls.Add(this.cmbTipoColeccionEjemplarAG, 1, 5);
-            this.tblEjemplares.Controls.Add(this.cmbFormatoEjemplarAG, 0, 9);
+            this.tblEjemplares.Controls.Add(this.cmbColeccionEjemplarAG, 1, 5);
             this.tblEjemplares.Controls.Add(this.dgvEjemplaresAG, 2, 0);
             this.tblEjemplares.Controls.Add(this.dtpFechaPublicacionEjemplarAG, 1, 3);
             this.tblEjemplares.Controls.Add(this.picEjemplarAG, 1, 7);
+            this.tblEjemplares.Controls.Add(this.cmbEditorialEjemplarAG, 1, 1);
+            this.tblEjemplares.Controls.Add(this.btnEtiquetasEjemplarAG, 0, 11);
+            this.tblEjemplares.Controls.Add(this.lblEtiquetasEjemplarEJ, 0, 10);
+            this.tblEjemplares.Controls.Add(this.cmbFormatoEjemplarAG, 0, 9);
+            this.tblEjemplares.Controls.Add(this.lblFormatoEjemplarEJ, 0, 8);
+            this.tblEjemplares.Controls.Add(this.cmbIdiomaEjemplarAG, 0, 7);
+            this.tblEjemplares.Controls.Add(this.lblIdiomaEjemplarEJ, 0, 6);
+            this.tblEjemplares.Controls.Add(this.txtAutorEjemplarAG, 0, 5);
+            this.tblEjemplares.Controls.Add(this.lblAutorEjemplarEJ, 0, 4);
+            this.tblEjemplares.Controls.Add(this.txtNombreEjemplarAG, 0, 3);
+            this.tblEjemplares.Controls.Add(this.lblNombreEjemplarEJ, 0, 2);
+            this.tblEjemplares.Controls.Add(this.chkDisponibilidadEjemplarAG, 0, 1);
             this.tblEjemplares.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tblEjemplares.Location = new System.Drawing.Point(0, 0);
             this.tblEjemplares.Name = "tblEjemplares";
@@ -725,17 +723,6 @@ namespace BINAES
             this.btnAgregarEjemplarAG.Text = "Agregar";
             this.btnAgregarEjemplarAG.UseVisualStyleBackColor = true;
             this.btnAgregarEjemplarAG.Click += new System.EventHandler(this.btnAgregarEjemplarAG_Click);
-            // 
-            // txtEditorialEjemplarAG
-            // 
-            this.txtEditorialEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEditorialEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditorialEjemplarAG.Location = new System.Drawing.Point(208, 46);
-            this.txtEditorialEjemplarAG.Name = "txtEditorialEjemplarAG";
-            this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(199, 26);
-            this.txtEditorialEjemplarAG.TabIndex = 22;
             // 
             // lblImagenEjemplarEJ
             // 
@@ -832,29 +819,9 @@ namespace BINAES
             this.lblTipoColeccionEjemplarEJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoColeccionEjemplarEJ.Location = new System.Drawing.Point(208, 195);
             this.lblTipoColeccionEjemplarEJ.Name = "lblTipoColeccionEjemplarEJ";
-            this.lblTipoColeccionEjemplarEJ.Size = new System.Drawing.Size(131, 20);
+            this.lblTipoColeccionEjemplarEJ.Size = new System.Drawing.Size(78, 20);
             this.lblTipoColeccionEjemplarEJ.TabIndex = 8;
-            this.lblTipoColeccionEjemplarEJ.Text = "Tipo de colección";
-            // 
-            // lblCodigoEjemplarEJ
-            // 
-            this.lblCodigoEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblCodigoEjemplarEJ.AutoSize = true;
-            this.lblCodigoEjemplarEJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoEjemplarEJ.Location = new System.Drawing.Point(3, 23);
-            this.lblCodigoEjemplarEJ.Name = "lblCodigoEjemplarEJ";
-            this.lblCodigoEjemplarEJ.Size = new System.Drawing.Size(123, 20);
-            this.lblCodigoEjemplarEJ.TabIndex = 0;
-            this.lblCodigoEjemplarEJ.Text = "Código ejemplar";
-            // 
-            // txtCodigoEjemplarAG
-            // 
-            this.txtCodigoEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodigoEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoEjemplarAG.Location = new System.Drawing.Point(3, 55);
-            this.txtCodigoEjemplarAG.Name = "txtCodigoEjemplarAG";
-            this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(199, 19);
-            this.txtCodigoEjemplarAG.TabIndex = 10;
+            this.lblTipoColeccionEjemplarEJ.Text = "Colección";
             // 
             // cmbIdiomaEjemplarAG
             // 
@@ -905,18 +872,18 @@ namespace BINAES
             this.txtAutorEjemplarAG.Size = new System.Drawing.Size(199, 26);
             this.txtAutorEjemplarAG.TabIndex = 24;
             // 
-            // cmbTipoColeccionEjemplarAG
+            // cmbColeccionEjemplarAG
             // 
-            this.cmbTipoColeccionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbColeccionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbTipoColeccionEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoColeccionEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTipoColeccionEjemplarAG.FormattingEnabled = true;
-            this.cmbTipoColeccionEjemplarAG.Location = new System.Drawing.Point(208, 218);
-            this.cmbTipoColeccionEjemplarAG.Name = "cmbTipoColeccionEjemplarAG";
-            this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(199, 28);
-            this.cmbTipoColeccionEjemplarAG.TabIndex = 25;
+            this.cmbColeccionEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbColeccionEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbColeccionEjemplarAG.FormattingEnabled = true;
+            this.cmbColeccionEjemplarAG.Location = new System.Drawing.Point(208, 218);
+            this.cmbColeccionEjemplarAG.Name = "cmbColeccionEjemplarAG";
+            this.cmbColeccionEjemplarAG.Size = new System.Drawing.Size(199, 28);
+            this.cmbColeccionEjemplarAG.TabIndex = 25;
             // 
             // cmbFormatoEjemplarAG
             // 
@@ -2488,6 +2455,32 @@ namespace BINAES
             this.btnCerrarPrincipal.UseVisualStyleBackColor = true;
             this.btnCerrarPrincipal.Click += new System.EventHandler(this.btnCerrarPrincipal_Click);
             // 
+            // cmbEditorialEjemplarAG
+            // 
+            this.cmbEditorialEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbEditorialEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditorialEjemplarAG.FormattingEnabled = true;
+            this.cmbEditorialEjemplarAG.Location = new System.Drawing.Point(208, 46);
+            this.cmbEditorialEjemplarAG.Name = "cmbEditorialEjemplarAG";
+            this.cmbEditorialEjemplarAG.Size = new System.Drawing.Size(199, 29);
+            this.cmbEditorialEjemplarAG.TabIndex = 32;
+            // 
+            // chkDisponibilidadEjemplarAG
+            // 
+            this.chkDisponibilidadEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkDisponibilidadEjemplarAG.AutoSize = true;
+            this.chkDisponibilidadEjemplarAG.Checked = true;
+            this.chkDisponibilidadEjemplarAG.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkDisponibilidadEjemplarAG.Location = new System.Drawing.Point(3, 46);
+            this.chkDisponibilidadEjemplarAG.Name = "chkDisponibilidadEjemplarAG";
+            this.chkDisponibilidadEjemplarAG.Size = new System.Drawing.Size(199, 25);
+            this.chkDisponibilidadEjemplarAG.TabIndex = 33;
+            this.chkDisponibilidadEjemplarAG.Text = "Disponibilidad";
+            this.chkDisponibilidadEjemplarAG.UseVisualStyleBackColor = true;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
@@ -2596,7 +2589,6 @@ namespace BINAES
         private System.Windows.Forms.TableLayoutPanel tblEjemplares;
         private System.Windows.Forms.Button btnSalirEdicionEjemplarAG;
         private System.Windows.Forms.Button btnAgregarEjemplarAG;
-        private System.Windows.Forms.TextBox txtEditorialEjemplarAG;
         private System.Windows.Forms.Label lblImagenEjemplarEJ;
         private System.Windows.Forms.Label lblNombreEjemplarEJ;
         private System.Windows.Forms.Label lblAutorEjemplarEJ;
@@ -2606,13 +2598,11 @@ namespace BINAES
         private System.Windows.Forms.Label lblEtiquetasEjemplarEJ;
         private System.Windows.Forms.Label lblFormatoEjemplarEJ;
         private System.Windows.Forms.Label lblTipoColeccionEjemplarEJ;
-        private System.Windows.Forms.Label lblCodigoEjemplarEJ;
-        private System.Windows.Forms.TextBox txtCodigoEjemplarAG;
         private System.Windows.Forms.ComboBox cmbIdiomaEjemplarAG;
         private System.Windows.Forms.Button btnEtiquetasEjemplarAG;
         private System.Windows.Forms.TextBox txtNombreEjemplarAG;
         private System.Windows.Forms.TextBox txtAutorEjemplarAG;
-        private System.Windows.Forms.ComboBox cmbTipoColeccionEjemplarAG;
+        private System.Windows.Forms.ComboBox cmbColeccionEjemplarAG;
         private System.Windows.Forms.ComboBox cmbFormatoEjemplarAG;
         private System.Windows.Forms.DataGridView dgvEjemplaresAG;
         private System.Windows.Forms.DateTimePicker dtpFechaPublicacionEjemplarAG;
@@ -2728,5 +2718,7 @@ namespace BINAES
         private Button btnPrestarPR;
         private NumericUpDown nudIdEjemplarPR;
         private NumericUpDown nudIdUsuarioPR;
+        private ComboBox cmbEditorialEjemplarAG;
+        private CheckBox chkDisponibilidadEjemplarAG;
     }
 }

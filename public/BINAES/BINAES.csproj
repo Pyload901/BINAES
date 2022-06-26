@@ -102,6 +102,8 @@
     <Compile Include="AreaDAO.cs" />
     <Compile Include="Coleccion.cs" />
     <Compile Include="ColeccionDAO.cs" />
+    <Compile Include="Editorial.cs" />
+    <Compile Include="EditorialDAO.cs" />
     <Compile Include="Ejemplar.cs" />
     <Compile Include="EjemplarDAO.cs" />
     <Compile Include="Camara.cs" />
@@ -123,6 +125,12 @@
     <Compile Include="frmEtiquetas.Designer.cs">
       <DependentUpon>frmEtiquetas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMultivaluadosEjemplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMultivaluadosEjemplar.Designer.cs">
+      <DependentUpon>frmMultivaluadosEjemplar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +149,8 @@
     <Compile Include="frmSeleccionCamara.Designer.cs">
       <DependentUpon>frmSeleccionCamara.cs</DependentUpon>
     </Compile>
+    <Compile Include="Idioma.cs" />
+    <Compile Include="IdiomaDAO.cs" />
     <Compile Include="ObjetivoEvento.cs" />
     <Compile Include="ObjetivoEventoDAO.cs" />
     <Compile Include="OpcionesEnumerate.cs" />
@@ -163,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEtiquetas.resx">
       <DependentUpon>frmEtiquetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMultivaluadosEjemplar.resx">
+      <DependentUpon>frmMultivaluadosEjemplar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

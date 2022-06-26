@@ -170,6 +170,23 @@ namespace BINAES
                     dgvReservasRE.DataSource = ReservaDAO.Leer();
                     DataGridViewComposer.Compose(dgvReservasRE);
                     break;
+                case 3:
+                    cmbIdiomaEjemplarAG.ValueMember = "id";
+                    cmbIdiomaEjemplarAG.DisplayMember = "idioma";
+                    cmbIdiomaEjemplarAG.DataSource = IdiomaDAO.Leer();
+
+                    cmbFormatoEjemplarAG.ValueMember = "id";
+                    cmbFormatoEjemplarAG.DisplayMember = "formato";
+                    cmbFormatoEjemplarAG.DataSource = FormatoDAO.Leer();
+
+                    cmbColeccionEjemplarAG.ValueMember = "id";
+                    cmbColeccionEjemplarAG.DisplayMember = "nombre";
+                    cmbColeccionEjemplarAG.DataSource = ColeccionDAO.LeerCatalogo();
+
+                    cmbEditorialEjemplarAG.ValueMember = "id";
+                    cmbEditorialEjemplarAG.DisplayMember = "editorial";
+                    cmbEditorialEjemplarAG.DataSource = EditorialDAO.Leer();
+                    break;
                 case 4:
                     cmbAreaEventoEV.ValueMember = "id";
                     cmbAreaEventoEV.DisplayMember = "nombre";
@@ -226,7 +243,7 @@ namespace BINAES
         {
             tabAdmin.SelectedIndex = 0;
             txtBuscarEjemplarBU.Select();
-            MessageBox.Show("Doble click al ejemplar que quiere prestar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Doble click al ejemplar que quiere reservar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void cmbFiltrarEjemplarBU_SelectedIndexChanged(object sender, EventArgs e)
@@ -307,6 +324,29 @@ namespace BINAES
         private void picEjemplarAG_Click(object sender, EventArgs e)
         {
             Utils.SeleccionarImagen(picEjemplarAG);
+        }
+
+        private void btnAgregarEjemplarAG_Click(object sender, EventArgs e)
+        {
+            if (txtNombreEjemplarAG.Text != "" && txtAutorEjemplarAG.Text != "" && dtpFechaPublicacionEjemplarAG.Text != "" && picEjemplarAG.Image != Properties.Resources._default)
+            {
+                string imagen = Utils.GuardarImagen(Properties.Resources.RutaImagenesEjemplares, picEjemplarAG.Image);
+                Ejemplar ejemplar = new Ejemplar();
+                ejemplar.nombre = txtNombreEjemplarAG.Text;
+                ejemplar.imagen = imagen;
+                ejemplar.fecha_publicacion = dtpFechaPublicacionEjemplarAG.Text;
+                ejemplar.disponibilidad = chkDisponibilidadEjemplarAG.Checked;
+                ejemplar.id_editorial = Convert.ToInt32(cmbEditorialEjemplarAG.SelectedValue);
+                ejemplar.id_coleccion = Convert.ToInt32(cmbColeccionEjemplarAG.SelectedValue);
+                ejemplar.id_idioma = Convert.ToInt32(cmbIdiomaEjemplarAG.SelectedValue);
+                ejemplar.id_formato = Convert.ToInt32(cmbFormatoEjemplarAG.SelectedValue);
+                ejemplar.autor = txtAutorEjemplarAG.Text;
+                using ()
+            }
+            else
+            {
+                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         // Formulario coleccion
@@ -569,10 +609,7 @@ namespace BINAES
  // ---------------------------------------------------------------------------------------------------
 
 
-        private void btnAgregarEjemplarAG_Click(object sender, EventArgs e)
-        {
-           
-        }
+        
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

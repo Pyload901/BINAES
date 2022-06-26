@@ -24,17 +24,20 @@ namespace BINAES
                 conn.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (reader.HasRows)
                     {
-                        Reserva reserva = new Reserva();
-                        reserva.id = Convert.ToInt32(reader["id"]);
-                        reserva.fechaReserva = Convert.ToDateTime(reader["fecha_reserva"]);
-                        reserva.fechaPrestamo = Convert.ToDateTime(reader["fecha_prestamo"]);
-                        reserva.fechaDevolucion = Convert.ToDateTime(reader["fecha_devolucion"]);
-                        reserva.ejemplar = reader["ejemplar"].ToString();
-                        reserva.usuario = reader["usuario"].ToString();
-                        DataGridViewComposer.GetNullProperties(reserva);
-                        list.Add(reserva);
+                        while (reader.Read())
+                        {
+                            Reserva reserva = new Reserva();
+                            reserva.id = Convert.ToInt32(reader["id"]);
+                            reserva.fechaReserva = Convert.ToDateTime(reader["fecha_reserva"]);
+                            reserva.fechaPrestamo = Convert.ToDateTime(reader["fecha_prestamo"]);
+                            reserva.fechaDevolucion = Convert.ToDateTime(reader["fecha_devolucion"]);
+                            reserva.ejemplar = reader["ejemplar"].ToString();
+                            reserva.usuario = reader["usuario"].ToString();
+                            list.Add(reserva);
+                        }
+                        DataGridViewComposer.GetNullProperties(list[0]);
                     }
 
                 }

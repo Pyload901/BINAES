@@ -12,7 +12,7 @@ namespace BINAES
         public string nombre { get; set; }
         public string imagen { get; set; }
         public string fecha_publicacion { get; set; }
-        public int stock { get; set; }
+        public bool disponibilidad { get; set; }
         public int id_coleccion { get; set; }
         public string coleccion { get; set; }
         public int id_idioma { get; set; }
@@ -25,17 +25,17 @@ namespace BINAES
         public string ISSN { get; set; }
         public string ISBN { get; set; }
         public string DOI { get; set; }
-        public string autores { get; set; }
+        public string autor { get; set; }
         public string palabras_clave { get; set; }
 
-        public Ejemplar(int id, string nombre, string imagen, string fecha_publicacion, int stock,
+        public Ejemplar(int id, string nombre, string imagen, string fecha_publicacion, bool disponibilidad,
             int id_coleccion, int id_idioma, int id_editorial, int id_formato)
         {
             this.id = id;
             this.nombre = nombre;
             this.imagen = imagen;
             this.fecha_publicacion = fecha_publicacion;
-            this.stock = stock;
+            this.disponibilidad = disponibilidad;
             this.id_coleccion = id_coleccion;
             this.id_idioma = id_idioma;
             this.id_editorial = id_editorial;
