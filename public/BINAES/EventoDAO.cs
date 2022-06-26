@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace BINAES
+    
 {
     public static class EventoDAO
     {
