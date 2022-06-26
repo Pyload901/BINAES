@@ -206,6 +206,7 @@ namespace BINAES
 
             using (SqlConnection conn = new SqlConnection(cadena))
             {
+                //Falta la query
                 string query = "";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -216,10 +217,15 @@ namespace BINAES
                 {
                     while (reader.Read())
                     {
-                        /* Agregar set y get para recopilar esos datos en la query
-                        prestamo.nombre = reader["nombre"].ToString();
-                        prestamo.tipo_coleccion = reader["tipo"].ToString();
-                        prestamo.genero_coleccion = reader["genero"].ToString();*/
+                        prestamo.id = Convert.ToInt32(reader["id"]);
+                        prestamo.nombre = reader["nombre_ejemplar"].ToString();
+                        prestamo.imagen = reader["imagen"].ToString();
+                        prestamo.fecha_publicacion = reader["fecha_publicacion"].ToString();
+                        prestamo.stock = Convert.ToInt32(reader["stock"]);
+                        prestamo.coleccion = reader["coleccion"].ToString();
+                        prestamo.idioma = reader["idioma"].ToString();
+                        prestamo.editorial = reader["editorial"].ToString();
+                        prestamo.formato = reader["formato"].ToString();
                     }
                 }
 
@@ -234,12 +240,18 @@ namespace BINAES
 
             using (SqlConnection conn = new SqlConnection(cadena))
             {
+                //Falta la query
                 string query = " ";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 //Mostrar informacion
                 cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
-                cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
-                cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
+                cmd.Parameters.AddWithValue("@imagen", ejemplar.imagen);
+                cmd.Parameters.AddWithValue("@fecha_publicacion", ejemplar.fecha_publicacion);
+                cmd.Parameters.AddWithValue("@stock", ejemplar.stock);
+                cmd.Parameters.AddWithValue("@id_coleccion", ejemplar.id_coleccion);
+                cmd.Parameters.AddWithValue("@id_idioma", ejemplar.id_idioma);
+                cmd.Parameters.AddWithValue("@id_editorial", ejemplar.id_editorial);
+                cmd.Parameters.AddWithValue("@id_formato", ejemplar.id_formato);
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
