@@ -106,6 +106,9 @@ namespace BINAES
             tabUsuarios.BackColor = col1;
             //tab Coleccion
             tabColeccion.BackColor = col1;
+            //Tab Acerca 
+            TabAcerca.BackColor = col1;
+
 
 
             // Renderizar imagen de btnBuscarEjemplar
@@ -679,6 +682,8 @@ namespace BINAES
         {
             tabAdmin.SelectedIndex = 7;
         }
+
+
     }
 }
      

@@ -90,12 +90,12 @@ namespace BINAES
             this.tblReserva = new System.Windows.Forms.TableLayoutPanel();
             this.dgvReservasRE = new System.Windows.Forms.DataGridView();
             this.lblEjemplarRE = new System.Windows.Forms.Label();
-            this.btnReservarRE = new System.Windows.Forms.Button();
             this.lblUsuarioRE = new System.Windows.Forms.Label();
             this.btnBuscarEjemplarRE = new System.Windows.Forms.Button();
             this.btnQrRE = new System.Windows.Forms.Button();
             this.nudIdUsuarioRE = new System.Windows.Forms.NumericUpDown();
             this.nudIdEjemplarRE = new System.Windows.Forms.NumericUpDown();
+            this.btnReservarRE = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -147,16 +147,16 @@ namespace BINAES
             this.btnActualizarUS = new System.Windows.Forms.Button();
             this.tabColeccion = new System.Windows.Forms.TabPage();
             this.tblColeccion = new System.Windows.Forms.TableLayoutPanel();
-            this.lblGeneroColeccionCO = new System.Windows.Forms.Label();
-            this.lblTipoColeccionCO = new System.Windows.Forms.Label();
-            this.lblNombreColeccionCO = new System.Windows.Forms.Label();
             this.dgvColeccionesCO = new System.Windows.Forms.DataGridView();
-            this.cmbTipoColeccionCO = new System.Windows.Forms.ComboBox();
-            this.cmbGeneroColeccionCO = new System.Windows.Forms.ComboBox();
-            this.txtNombreColeccionCO = new System.Windows.Forms.TextBox();
-            this.btnDejarDeEditarCO = new System.Windows.Forms.Button();
             this.btnBuscarCO = new System.Windows.Forms.Button();
+            this.btnDejarDeEditarCO = new System.Windows.Forms.Button();
             this.btnAgregarCO = new System.Windows.Forms.Button();
+            this.cmbGeneroColeccionCO = new System.Windows.Forms.ComboBox();
+            this.lblGeneroColeccionCO = new System.Windows.Forms.Label();
+            this.cmbTipoColeccionCO = new System.Windows.Forms.ComboBox();
+            this.lblTipoColeccionCO = new System.Windows.Forms.Label();
+            this.txtNombreColeccionCO = new System.Windows.Forms.TextBox();
+            this.lblNombreColeccionCO = new System.Windows.Forms.Label();
             this.TabAcerca = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -176,6 +176,7 @@ namespace BINAES
             this.sspNombre = new System.Windows.Forms.ToolStripStatusLabel();
             this.sspRol = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnIntroPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnAddUsuarioPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnAddEventoPPrincipal = new FontAwesome.Sharp.IconButton();
@@ -189,7 +190,6 @@ namespace BINAES
             this.btnMinPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnMaxPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnCerrarPrincipal = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tblEventos.SuspendLayout();
@@ -311,7 +311,7 @@ namespace BINAES
             this.btnAgregarUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarUS.Location = new System.Drawing.Point(243, 507);
             this.btnAgregarUS.Name = "btnAgregarUS";
-            this.btnAgregarUS.Size = new System.Drawing.Size(114, 48);
+            this.btnAgregarUS.Size = new System.Drawing.Size(114, 36);
             this.btnAgregarUS.TabIndex = 27;
             this.btnAgregarUS.Text = "Agregar";
             this.btnAgregarUS.UseVisualStyleBackColor = true;
@@ -320,9 +320,9 @@ namespace BINAES
             // tabEventos
             // 
             this.tabEventos.Controls.Add(this.tblEventos);
-            this.tabEventos.Location = new System.Drawing.Point(4, 42);
+            this.tabEventos.Location = new System.Drawing.Point(4, 54);
             this.tabEventos.Name = "tabEventos";
-            this.tabEventos.Size = new System.Drawing.Size(964, 558);
+            this.tabEventos.Size = new System.Drawing.Size(964, 546);
             this.tabEventos.TabIndex = 4;
             this.tabEventos.Text = "Eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
@@ -371,7 +371,7 @@ namespace BINAES
             this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
             this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
             this.tblEventos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692309F));
-            this.tblEventos.Size = new System.Drawing.Size(964, 558);
+            this.tblEventos.Size = new System.Drawing.Size(964, 546);
             this.tblEventos.TabIndex = 0;
             // 
             // dgvEventosEV
@@ -384,7 +384,7 @@ namespace BINAES
             this.dgvEventosEV.Name = "dgvEventosEV";
             this.dgvEventosEV.RowHeadersWidth = 51;
             this.tblEventos.SetRowSpan(this.dgvEventosEV, 13);
-            this.dgvEventosEV.Size = new System.Drawing.Size(449, 552);
+            this.dgvEventosEV.Size = new System.Drawing.Size(449, 540);
             this.dgvEventosEV.TabIndex = 26;
             this.dgvEventosEV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellClick);
             this.dgvEventosEV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellContentClick);
@@ -396,6 +396,7 @@ namespace BINAES
             this.lblTituloEventoEV.AutoSize = true;
             this.tblEventos.SetColumnSpan(this.lblTituloEventoEV, 2);
             this.lblTituloEventoEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloEventoEV.ForeColor = System.Drawing.Color.Transparent;
             this.lblTituloEventoEV.Location = new System.Drawing.Point(3, 17);
             this.lblTituloEventoEV.Name = "lblTituloEventoEV";
             this.lblTituloEventoEV.Size = new System.Drawing.Size(272, 25);
@@ -422,6 +423,7 @@ namespace BINAES
             this.lblFechaInicioEventoEV.AutoSize = true;
             this.tblEventos.SetColumnSpan(this.lblFechaInicioEventoEV, 2);
             this.lblFechaInicioEventoEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInicioEventoEV.ForeColor = System.Drawing.Color.Transparent;
             this.lblFechaInicioEventoEV.Location = new System.Drawing.Point(3, 101);
             this.lblFechaInicioEventoEV.Name = "lblFechaInicioEventoEV";
             this.lblFechaInicioEventoEV.Size = new System.Drawing.Size(272, 25);
@@ -448,6 +450,7 @@ namespace BINAES
             this.lblFechaFinalizacionEventoEV.AutoSize = true;
             this.tblEventos.SetColumnSpan(this.lblFechaFinalizacionEventoEV, 2);
             this.lblFechaFinalizacionEventoEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaFinalizacionEventoEV.ForeColor = System.Drawing.Color.Transparent;
             this.lblFechaFinalizacionEventoEV.Location = new System.Drawing.Point(3, 185);
             this.lblFechaFinalizacionEventoEV.Name = "lblFechaFinalizacionEventoEV";
             this.lblFechaFinalizacionEventoEV.Size = new System.Drawing.Size(272, 25);
@@ -474,6 +477,7 @@ namespace BINAES
             this.lblObjetivosEventoEV.AutoSize = true;
             this.tblEventos.SetColumnSpan(this.lblObjetivosEventoEV, 2);
             this.lblObjetivosEventoEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObjetivosEventoEV.ForeColor = System.Drawing.Color.Transparent;
             this.lblObjetivosEventoEV.Location = new System.Drawing.Point(3, 269);
             this.lblObjetivosEventoEV.Name = "lblObjetivosEventoEV";
             this.lblObjetivosEventoEV.Size = new System.Drawing.Size(272, 25);
@@ -501,6 +505,7 @@ namespace BINAES
             this.lblAreaEventoEV.AutoSize = true;
             this.tblEventos.SetColumnSpan(this.lblAreaEventoEV, 2);
             this.lblAreaEventoEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAreaEventoEV.ForeColor = System.Drawing.Color.Transparent;
             this.lblAreaEventoEV.Location = new System.Drawing.Point(3, 353);
             this.lblAreaEventoEV.Name = "lblAreaEventoEV";
             this.lblAreaEventoEV.Size = new System.Drawing.Size(272, 25);
@@ -529,6 +534,7 @@ namespace BINAES
             this.lblNumeroAsistentesEV.AutoSize = true;
             this.tblEventos.SetColumnSpan(this.lblNumeroAsistentesEV, 2);
             this.lblNumeroAsistentesEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroAsistentesEV.ForeColor = System.Drawing.Color.Transparent;
             this.lblNumeroAsistentesEV.Location = new System.Drawing.Point(3, 437);
             this.lblNumeroAsistentesEV.Name = "lblNumeroAsistentesEV";
             this.lblNumeroAsistentesEV.Size = new System.Drawing.Size(272, 25);
@@ -557,7 +563,7 @@ namespace BINAES
             this.btnDejarDeEditarEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDejarDeEditarEV.Location = new System.Drawing.Point(3, 507);
             this.btnDejarDeEditarEV.Name = "btnDejarDeEditarEV";
-            this.btnDejarDeEditarEV.Size = new System.Drawing.Size(176, 48);
+            this.btnDejarDeEditarEV.Size = new System.Drawing.Size(176, 36);
             this.btnDejarDeEditarEV.TabIndex = 24;
             this.btnDejarDeEditarEV.Text = "Dejar de editar";
             this.btnDejarDeEditarEV.UseVisualStyleBackColor = true;
@@ -587,6 +593,7 @@ namespace BINAES
             this.lblImagenEV.AutoSize = true;
             this.tblEventos.SetColumnSpan(this.lblImagenEV, 2);
             this.lblImagenEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImagenEV.ForeColor = System.Drawing.Color.Transparent;
             this.lblImagenEV.Location = new System.Drawing.Point(281, 0);
             this.lblImagenEV.Name = "lblImagenEV";
             this.lblImagenEV.Size = new System.Drawing.Size(225, 42);
@@ -603,7 +610,7 @@ namespace BINAES
             this.btnEliminarEventoEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarEventoEV.Location = new System.Drawing.Point(185, 507);
             this.btnEliminarEventoEV.Name = "btnEliminarEventoEV";
-            this.btnEliminarEventoEV.Size = new System.Drawing.Size(90, 48);
+            this.btnEliminarEventoEV.Size = new System.Drawing.Size(90, 36);
             this.btnEliminarEventoEV.TabIndex = 29;
             this.btnEliminarEventoEV.Text = "Eliminar";
             this.btnEliminarEventoEV.UseVisualStyleBackColor = true;
@@ -617,7 +624,7 @@ namespace BINAES
             this.btnAgregarEventoEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarEventoEV.Location = new System.Drawing.Point(404, 507);
             this.btnAgregarEventoEV.Name = "btnAgregarEventoEV";
-            this.btnAgregarEventoEV.Size = new System.Drawing.Size(102, 48);
+            this.btnAgregarEventoEV.Size = new System.Drawing.Size(102, 36);
             this.btnAgregarEventoEV.TabIndex = 22;
             this.btnAgregarEventoEV.Tag = "1";
             this.btnAgregarEventoEV.Text = "Agregar";
@@ -632,7 +639,7 @@ namespace BINAES
             this.btnEditarEventoEV.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarEventoEV.Location = new System.Drawing.Point(281, 507);
             this.btnEditarEventoEV.Name = "btnEditarEventoEV";
-            this.btnEditarEventoEV.Size = new System.Drawing.Size(117, 48);
+            this.btnEditarEventoEV.Size = new System.Drawing.Size(117, 36);
             this.btnEditarEventoEV.TabIndex = 30;
             this.btnEditarEventoEV.Text = "Actualizar";
             this.btnEditarEventoEV.UseVisualStyleBackColor = true;
@@ -641,9 +648,9 @@ namespace BINAES
             // tabAgregar
             // 
             this.tabAgregar.Controls.Add(this.tblEjemplares);
-            this.tabAgregar.Location = new System.Drawing.Point(4, 42);
+            this.tabAgregar.Location = new System.Drawing.Point(4, 54);
             this.tabAgregar.Name = "tabAgregar";
-            this.tabAgregar.Size = new System.Drawing.Size(964, 558);
+            this.tabAgregar.Size = new System.Drawing.Size(964, 546);
             this.tabAgregar.TabIndex = 3;
             this.tabAgregar.Text = "Agregar ejemplar";
             this.tabAgregar.UseVisualStyleBackColor = true;
@@ -697,7 +704,7 @@ namespace BINAES
             this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.781362F));
             this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.422939F));
             this.tblEjemplares.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEjemplares.Size = new System.Drawing.Size(1029, 558);
+            this.tblEjemplares.Size = new System.Drawing.Size(1029, 546);
             this.tblEjemplares.TabIndex = 11;
             // 
             // btnSalirEdicionEjemplarAG
@@ -706,7 +713,7 @@ namespace BINAES
             this.btnSalirEdicionEjemplarAG.Enabled = false;
             this.btnSalirEdicionEjemplarAG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalirEdicionEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalirEdicionEjemplarAG.Location = new System.Drawing.Point(3, 513);
+            this.btnSalirEdicionEjemplarAG.Location = new System.Drawing.Point(3, 501);
             this.btnSalirEdicionEjemplarAG.Name = "btnSalirEdicionEjemplarAG";
             this.btnSalirEdicionEjemplarAG.Size = new System.Drawing.Size(199, 42);
             this.btnSalirEdicionEjemplarAG.TabIndex = 28;
@@ -719,7 +726,7 @@ namespace BINAES
             this.btnAgregarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregarEjemplarAG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(208, 513);
+            this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(208, 501);
             this.btnAgregarEjemplarAG.Name = "btnAgregarEjemplarAG";
             this.btnAgregarEjemplarAG.Size = new System.Drawing.Size(199, 42);
             this.btnAgregarEjemplarAG.TabIndex = 27;
@@ -732,7 +739,8 @@ namespace BINAES
             this.lblImagenEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblImagenEjemplarEJ.AutoSize = true;
             this.lblImagenEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagenEjemplarEJ.Location = new System.Drawing.Point(208, 269);
+            this.lblImagenEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblImagenEjemplarEJ.Location = new System.Drawing.Point(208, 262);
             this.lblImagenEjemplarEJ.Name = "lblImagenEjemplarEJ";
             this.lblImagenEjemplarEJ.Size = new System.Drawing.Size(75, 25);
             this.lblImagenEjemplarEJ.TabIndex = 9;
@@ -743,7 +751,8 @@ namespace BINAES
             this.lblFechaPublicacionEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblFechaPublicacionEjemplarEJ.AutoSize = true;
             this.lblFechaPublicacionEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaPublicacionEjemplarEJ.Location = new System.Drawing.Point(208, 101);
+            this.lblFechaPublicacionEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblFechaPublicacionEjemplarEJ.Location = new System.Drawing.Point(208, 98);
             this.lblFechaPublicacionEjemplarEJ.Name = "lblFechaPublicacionEjemplarEJ";
             this.lblFechaPublicacionEjemplarEJ.Size = new System.Drawing.Size(190, 25);
             this.lblFechaPublicacionEjemplarEJ.TabIndex = 7;
@@ -753,10 +762,11 @@ namespace BINAES
             // 
             this.lblEditorialEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblEditorialEjemplarEJ.AutoSize = true;
-            this.lblEditorialEjemplarEJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditorialEjemplarEJ.Location = new System.Drawing.Point(208, 22);
+            this.lblEditorialEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditorialEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblEditorialEjemplarEJ.Location = new System.Drawing.Point(208, 16);
             this.lblEditorialEjemplarEJ.Name = "lblEditorialEjemplarEJ";
-            this.lblEditorialEjemplarEJ.Size = new System.Drawing.Size(66, 20);
+            this.lblEditorialEjemplarEJ.Size = new System.Drawing.Size(82, 25);
             this.lblEditorialEjemplarEJ.TabIndex = 1;
             this.lblEditorialEjemplarEJ.Text = "Editorial";
             // 
@@ -765,7 +775,8 @@ namespace BINAES
             this.lblTipoColeccionEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTipoColeccionEjemplarEJ.AutoSize = true;
             this.lblTipoColeccionEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoColeccionEjemplarEJ.Location = new System.Drawing.Point(208, 185);
+            this.lblTipoColeccionEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblTipoColeccionEjemplarEJ.Location = new System.Drawing.Point(208, 180);
             this.lblTipoColeccionEjemplarEJ.Name = "lblTipoColeccionEjemplarEJ";
             this.lblTipoColeccionEjemplarEJ.Size = new System.Drawing.Size(95, 25);
             this.lblTipoColeccionEjemplarEJ.TabIndex = 8;
@@ -779,7 +790,7 @@ namespace BINAES
             this.cmbColeccionEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbColeccionEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbColeccionEjemplarAG.FormattingEnabled = true;
-            this.cmbColeccionEjemplarAG.Location = new System.Drawing.Point(208, 213);
+            this.cmbColeccionEjemplarAG.Location = new System.Drawing.Point(208, 208);
             this.cmbColeccionEjemplarAG.Name = "cmbColeccionEjemplarAG";
             this.cmbColeccionEjemplarAG.Size = new System.Drawing.Size(199, 28);
             this.cmbColeccionEjemplarAG.TabIndex = 25;
@@ -795,7 +806,7 @@ namespace BINAES
             this.dgvEjemplaresAG.ReadOnly = true;
             this.dgvEjemplaresAG.RowHeadersWidth = 51;
             this.tblEjemplares.SetRowSpan(this.dgvEjemplaresAG, 13);
-            this.dgvEjemplaresAG.Size = new System.Drawing.Size(613, 552);
+            this.dgvEjemplaresAG.Size = new System.Drawing.Size(613, 540);
             this.dgvEjemplaresAG.TabIndex = 29;
             // 
             // dtpFechaPublicacionEjemplarAG
@@ -804,7 +815,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaPublicacionEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(208, 129);
+            this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(208, 126);
             this.dtpFechaPublicacionEjemplarAG.Name = "dtpFechaPublicacionEjemplarAG";
             this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(199, 26);
             this.dtpFechaPublicacionEjemplarAG.TabIndex = 30;
@@ -815,10 +826,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picEjemplarAG.Image = global::BINAES.Properties.Resources._default;
-            this.picEjemplarAG.Location = new System.Drawing.Point(208, 297);
+            this.picEjemplarAG.Location = new System.Drawing.Point(208, 290);
             this.picEjemplarAG.Name = "picEjemplarAG";
             this.tblEjemplares.SetRowSpan(this.picEjemplarAG, 5);
-            this.picEjemplarAG.Size = new System.Drawing.Size(199, 210);
+            this.picEjemplarAG.Size = new System.Drawing.Size(199, 205);
             this.picEjemplarAG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picEjemplarAG.TabIndex = 31;
             this.picEjemplarAG.TabStop = false;
@@ -831,7 +842,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbEditorialEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEditorialEjemplarAG.FormattingEnabled = true;
-            this.cmbEditorialEjemplarAG.Location = new System.Drawing.Point(208, 45);
+            this.cmbEditorialEjemplarAG.Location = new System.Drawing.Point(208, 44);
             this.cmbEditorialEjemplarAG.Name = "cmbEditorialEjemplarAG";
             this.cmbEditorialEjemplarAG.Size = new System.Drawing.Size(199, 29);
             this.cmbEditorialEjemplarAG.TabIndex = 32;
@@ -843,9 +854,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEtiquetasEjemplarAG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEtiquetasEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEtiquetasEjemplarAG.Location = new System.Drawing.Point(3, 465);
+            this.btnEtiquetasEjemplarAG.Location = new System.Drawing.Point(3, 454);
             this.btnEtiquetasEjemplarAG.Name = "btnEtiquetasEjemplarAG";
-            this.btnEtiquetasEjemplarAG.Size = new System.Drawing.Size(199, 42);
+            this.btnEtiquetasEjemplarAG.Size = new System.Drawing.Size(199, 41);
             this.btnEtiquetasEjemplarAG.TabIndex = 15;
             this.btnEtiquetasEjemplarAG.Text = "Seleccionar";
             this.btnEtiquetasEjemplarAG.UseVisualStyleBackColor = true;
@@ -857,9 +868,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEtiquetasEjemplarEJ.AutoSize = true;
             this.lblEtiquetasEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtiquetasEjemplarEJ.Location = new System.Drawing.Point(3, 420);
+            this.lblEtiquetasEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblEtiquetasEjemplarEJ.Location = new System.Drawing.Point(3, 410);
             this.lblEtiquetasEjemplarEJ.Name = "lblEtiquetasEjemplarEJ";
-            this.lblEtiquetasEjemplarEJ.Size = new System.Drawing.Size(199, 42);
+            this.lblEtiquetasEjemplarEJ.Size = new System.Drawing.Size(199, 41);
             this.lblEtiquetasEjemplarEJ.TabIndex = 6;
             this.lblEtiquetasEjemplarEJ.Text = "Etiquetas";
             this.lblEtiquetasEjemplarEJ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -872,7 +884,7 @@ namespace BINAES
             this.cmbFormatoEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFormatoEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFormatoEjemplarAG.FormattingEnabled = true;
-            this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 381);
+            this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 372);
             this.cmbFormatoEjemplarAG.Name = "cmbFormatoEjemplarAG";
             this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(199, 28);
             this.cmbFormatoEjemplarAG.TabIndex = 26;
@@ -882,7 +894,8 @@ namespace BINAES
             this.lblFormatoEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblFormatoEjemplarEJ.AutoSize = true;
             this.lblFormatoEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormatoEjemplarEJ.Location = new System.Drawing.Point(3, 353);
+            this.lblFormatoEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblFormatoEjemplarEJ.Location = new System.Drawing.Point(3, 344);
             this.lblFormatoEjemplarEJ.Name = "lblFormatoEjemplarEJ";
             this.lblFormatoEjemplarEJ.Size = new System.Drawing.Size(82, 25);
             this.lblFormatoEjemplarEJ.TabIndex = 5;
@@ -896,7 +909,7 @@ namespace BINAES
             this.cmbIdiomaEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIdiomaEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbIdiomaEjemplarAG.FormattingEnabled = true;
-            this.cmbIdiomaEjemplarAG.Location = new System.Drawing.Point(3, 297);
+            this.cmbIdiomaEjemplarAG.Location = new System.Drawing.Point(3, 290);
             this.cmbIdiomaEjemplarAG.Name = "cmbIdiomaEjemplarAG";
             this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(199, 28);
             this.cmbIdiomaEjemplarAG.TabIndex = 13;
@@ -906,7 +919,8 @@ namespace BINAES
             this.lblIdiomaEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblIdiomaEjemplarEJ.AutoSize = true;
             this.lblIdiomaEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdiomaEjemplarEJ.Location = new System.Drawing.Point(3, 269);
+            this.lblIdiomaEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblIdiomaEjemplarEJ.Location = new System.Drawing.Point(3, 262);
             this.lblIdiomaEjemplarEJ.Name = "lblIdiomaEjemplarEJ";
             this.lblIdiomaEjemplarEJ.Size = new System.Drawing.Size(70, 25);
             this.lblIdiomaEjemplarEJ.TabIndex = 4;
@@ -918,7 +932,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAutorEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 213);
+            this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 208);
             this.txtAutorEjemplarAG.Name = "txtAutorEjemplarAG";
             this.txtAutorEjemplarAG.Size = new System.Drawing.Size(199, 26);
             this.txtAutorEjemplarAG.TabIndex = 24;
@@ -928,7 +942,8 @@ namespace BINAES
             this.lblAutorEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblAutorEjemplarEJ.AutoSize = true;
             this.lblAutorEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAutorEjemplarEJ.Location = new System.Drawing.Point(3, 185);
+            this.lblAutorEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblAutorEjemplarEJ.Location = new System.Drawing.Point(3, 180);
             this.lblAutorEjemplarEJ.Name = "lblAutorEjemplarEJ";
             this.lblAutorEjemplarEJ.Size = new System.Drawing.Size(59, 25);
             this.lblAutorEjemplarEJ.TabIndex = 3;
@@ -940,7 +955,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 129);
+            this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 126);
             this.txtNombreEjemplarAG.Name = "txtNombreEjemplarAG";
             this.txtNombreEjemplarAG.Size = new System.Drawing.Size(199, 26);
             this.txtNombreEjemplarAG.TabIndex = 23;
@@ -950,7 +965,8 @@ namespace BINAES
             this.lblNombreEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblNombreEjemplarEJ.AutoSize = true;
             this.lblNombreEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEjemplarEJ.Location = new System.Drawing.Point(3, 101);
+            this.lblNombreEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblNombreEjemplarEJ.Location = new System.Drawing.Point(3, 98);
             this.lblNombreEjemplarEJ.Name = "lblNombreEjemplarEJ";
             this.lblNombreEjemplarEJ.Size = new System.Drawing.Size(81, 25);
             this.lblNombreEjemplarEJ.TabIndex = 2;
@@ -964,7 +980,8 @@ namespace BINAES
             this.chkDisponibilidadEjemplarAG.Checked = true;
             this.chkDisponibilidadEjemplarAG.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkDisponibilidadEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDisponibilidadEjemplarAG.Location = new System.Drawing.Point(3, 45);
+            this.chkDisponibilidadEjemplarAG.ForeColor = System.Drawing.Color.Transparent;
+            this.chkDisponibilidadEjemplarAG.Location = new System.Drawing.Point(3, 44);
             this.chkDisponibilidadEjemplarAG.Name = "chkDisponibilidadEjemplarAG";
             this.chkDisponibilidadEjemplarAG.Size = new System.Drawing.Size(199, 29);
             this.chkDisponibilidadEjemplarAG.TabIndex = 33;
@@ -974,10 +991,10 @@ namespace BINAES
             // tabReserva
             // 
             this.tabReserva.Controls.Add(this.tblReserva);
-            this.tabReserva.Location = new System.Drawing.Point(4, 42);
+            this.tabReserva.Location = new System.Drawing.Point(4, 54);
             this.tabReserva.Name = "tabReserva";
             this.tabReserva.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReserva.Size = new System.Drawing.Size(964, 558);
+            this.tabReserva.Size = new System.Drawing.Size(964, 546);
             this.tabReserva.TabIndex = 2;
             this.tabReserva.Text = "Reservas de ejemplares";
             this.tabReserva.UseVisualStyleBackColor = true;
@@ -1012,7 +1029,7 @@ namespace BINAES
             this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.884058F));
             this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.48551F));
             this.tblReserva.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.5942F));
-            this.tblReserva.Size = new System.Drawing.Size(958, 552);
+            this.tblReserva.Size = new System.Drawing.Size(958, 540);
             this.tblReserva.TabIndex = 12;
             // 
             // dgvReservasRE
@@ -1021,11 +1038,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReservasRE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservasRE.Location = new System.Drawing.Point(335, 56);
+            this.dgvReservasRE.Location = new System.Drawing.Point(335, 54);
             this.dgvReservasRE.Name = "dgvReservasRE";
             this.dgvReservasRE.RowHeadersWidth = 51;
             this.tblReserva.SetRowSpan(this.dgvReservasRE, 6);
-            this.dgvReservasRE.Size = new System.Drawing.Size(568, 428);
+            this.dgvReservasRE.Size = new System.Drawing.Size(568, 417);
             this.dgvReservasRE.TabIndex = 31;
             // 
             // lblEjemplarRE
@@ -1035,28 +1052,13 @@ namespace BINAES
             this.lblEjemplarRE.AutoSize = true;
             this.tblReserva.SetColumnSpan(this.lblEjemplarRE, 2);
             this.lblEjemplarRE.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEjemplarRE.Location = new System.Drawing.Point(50, 143);
+            this.lblEjemplarRE.ForeColor = System.Drawing.Color.Transparent;
+            this.lblEjemplarRE.Location = new System.Drawing.Point(50, 138);
             this.lblEjemplarRE.Name = "lblEjemplarRE";
             this.lblEjemplarRE.Size = new System.Drawing.Size(232, 25);
             this.lblEjemplarRE.TabIndex = 1;
             this.lblEjemplarRE.Text = "Ejemplar";
             this.lblEjemplarRE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnReservarRE
-            // 
-            this.btnReservarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblReserva.SetColumnSpan(this.btnReservarRE, 2);
-            this.btnReservarRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReservarRE.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservarRE.Location = new System.Drawing.Point(50, 361);
-            this.btnReservarRE.Name = "btnReservarRE";
-            this.btnReservarRE.Size = new System.Drawing.Size(232, 32);
-            this.btnReservarRE.TabIndex = 32;
-            this.btnReservarRE.Text = "Reservar";
-            this.btnReservarRE.UseVisualStyleBackColor = true;
-            this.btnReservarRE.Click += new System.EventHandler(this.btnReservarRE_Click);
             // 
             // lblUsuarioRE
             // 
@@ -1065,7 +1067,8 @@ namespace BINAES
             this.lblUsuarioRE.AutoSize = true;
             this.tblReserva.SetColumnSpan(this.lblUsuarioRE, 2);
             this.lblUsuarioRE.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioRE.Location = new System.Drawing.Point(50, 297);
+            this.lblUsuarioRE.ForeColor = System.Drawing.Color.Transparent;
+            this.lblUsuarioRE.Location = new System.Drawing.Point(50, 288);
             this.lblUsuarioRE.Name = "lblUsuarioRE";
             this.lblUsuarioRE.Size = new System.Drawing.Size(232, 25);
             this.lblUsuarioRE.TabIndex = 34;
@@ -1079,9 +1082,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarEjemplarRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarEjemplarRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(193, 171);
+            this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(193, 166);
             this.btnBuscarEjemplarRE.Name = "btnBuscarEjemplarRE";
-            this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(89, 31);
+            this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(89, 30);
             this.btnBuscarEjemplarRE.TabIndex = 33;
             this.btnBuscarEjemplarRE.Text = "Buscar";
             this.btnBuscarEjemplarRE.UseVisualStyleBackColor = true;
@@ -1094,9 +1097,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQrRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnQrRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQrRE.Location = new System.Drawing.Point(193, 325);
+            this.btnQrRE.Location = new System.Drawing.Point(193, 316);
             this.btnQrRE.Name = "btnQrRE";
-            this.btnQrRE.Size = new System.Drawing.Size(89, 30);
+            this.btnQrRE.Size = new System.Drawing.Size(89, 29);
             this.btnQrRE.TabIndex = 35;
             this.btnQrRE.Text = "QR";
             this.btnQrRE.UseVisualStyleBackColor = true;
@@ -1108,7 +1111,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nudIdUsuarioRE.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudIdUsuarioRE.Location = new System.Drawing.Point(50, 325);
+            this.nudIdUsuarioRE.Location = new System.Drawing.Point(50, 316);
             this.nudIdUsuarioRE.Name = "nudIdUsuarioRE";
             this.nudIdUsuarioRE.Size = new System.Drawing.Size(137, 29);
             this.nudIdUsuarioRE.TabIndex = 37;
@@ -1119,10 +1122,26 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nudIdEjemplarRE.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudIdEjemplarRE.Location = new System.Drawing.Point(50, 171);
+            this.nudIdEjemplarRE.Location = new System.Drawing.Point(50, 166);
             this.nudIdEjemplarRE.Name = "nudIdEjemplarRE";
             this.nudIdEjemplarRE.Size = new System.Drawing.Size(137, 29);
             this.nudIdEjemplarRE.TabIndex = 36;
+            // 
+            // btnReservarRE
+            // 
+            this.btnReservarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblReserva.SetColumnSpan(this.btnReservarRE, 2);
+            this.btnReservarRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReservarRE.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservarRE.Location = new System.Drawing.Point(50, 351);
+            this.btnReservarRE.Name = "btnReservarRE";
+            this.btnReservarRE.Size = new System.Drawing.Size(232, 31);
+            this.btnReservarRE.TabIndex = 32;
+            this.btnReservarRE.Text = "Reservar";
+            this.btnReservarRE.UseVisualStyleBackColor = true;
+            this.btnReservarRE.Click += new System.EventHandler(this.btnReservarRE_Click);
             // 
             // label26
             // 
@@ -1156,11 +1175,11 @@ namespace BINAES
             // 
             this.tabPrestamo.Controls.Add(this.tblPrestamo);
             this.tabPrestamo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tabPrestamo.Location = new System.Drawing.Point(4, 42);
+            this.tabPrestamo.Location = new System.Drawing.Point(4, 54);
             this.tabPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPrestamo.Name = "tabPrestamo";
             this.tabPrestamo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPrestamo.Size = new System.Drawing.Size(964, 558);
+            this.tabPrestamo.Size = new System.Drawing.Size(964, 546);
             this.tabPrestamo.TabIndex = 1;
             this.tabPrestamo.Text = "Préstamo de ejemplares";
             this.tabPrestamo.UseVisualStyleBackColor = true;
@@ -1187,16 +1206,15 @@ namespace BINAES
             this.tblPrestamo.Location = new System.Drawing.Point(3, 4);
             this.tblPrestamo.Name = "tblPrestamo";
             this.tblPrestamo.RowCount = 8;
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.27273F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.72727F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.727273F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.545455F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.090909F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.27273F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblPrestamo.Size = new System.Drawing.Size(958, 550);
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.62201F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.33493F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.877324F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.18959F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.455711F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.69145F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.434944F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.96654F));
+            this.tblPrestamo.Size = new System.Drawing.Size(958, 538);
             this.tblPrestamo.TabIndex = 13;
             // 
             // lblEjemplarPR
@@ -1207,10 +1225,10 @@ namespace BINAES
             this.lblEjemplarPR.AutoSize = true;
             this.tblPrestamo.SetColumnSpan(this.lblEjemplarPR, 2);
             this.lblEjemplarPR.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEjemplarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEjemplarPR.Location = new System.Drawing.Point(50, 93);
+            this.lblEjemplarPR.ForeColor = System.Drawing.Color.Transparent;
+            this.lblEjemplarPR.Location = new System.Drawing.Point(50, 41);
             this.lblEjemplarPR.Name = "lblEjemplarPR";
-            this.lblEjemplarPR.Size = new System.Drawing.Size(232, 101);
+            this.lblEjemplarPR.Size = new System.Drawing.Size(232, 169);
             this.lblEjemplarPR.TabIndex = 1;
             this.lblEjemplarPR.Text = "Ejemplar";
             this.lblEjemplarPR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1221,11 +1239,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPrestamosPR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrestamosPR.Location = new System.Drawing.Point(335, 96);
+            this.dgvPrestamosPR.Location = new System.Drawing.Point(335, 44);
             this.dgvPrestamosPR.Name = "dgvPrestamosPR";
             this.dgvPrestamosPR.RowHeadersWidth = 51;
             this.tblPrestamo.SetRowSpan(this.dgvPrestamosPR, 6);
-            this.dgvPrestamosPR.Size = new System.Drawing.Size(568, 333);
+            this.dgvPrestamosPR.Size = new System.Drawing.Size(568, 430);
             this.dgvPrestamosPR.TabIndex = 31;
             // 
             // btnBuscarPR
@@ -1236,9 +1254,9 @@ namespace BINAES
             this.btnBuscarPR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarPR.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBuscarPR.Location = new System.Drawing.Point(193, 197);
+            this.btnBuscarPR.Location = new System.Drawing.Point(193, 213);
             this.btnBuscarPR.Name = "btnBuscarPR";
-            this.btnBuscarPR.Size = new System.Drawing.Size(89, 30);
+            this.btnBuscarPR.Size = new System.Drawing.Size(89, 31);
             this.btnBuscarPR.TabIndex = 33;
             this.btnBuscarPR.Text = "Buscar";
             this.btnBuscarPR.UseVisualStyleBackColor = true;
@@ -1252,10 +1270,10 @@ namespace BINAES
             this.lblUsuarioPR.AutoSize = true;
             this.tblPrestamo.SetColumnSpan(this.lblUsuarioPR, 2);
             this.lblUsuarioPR.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUsuarioPR.Location = new System.Drawing.Point(50, 230);
+            this.lblUsuarioPR.ForeColor = System.Drawing.Color.Transparent;
+            this.lblUsuarioPR.Location = new System.Drawing.Point(50, 247);
             this.lblUsuarioPR.Name = "lblUsuarioPR";
-            this.lblUsuarioPR.Size = new System.Drawing.Size(232, 97);
+            this.lblUsuarioPR.Size = new System.Drawing.Size(232, 114);
             this.lblUsuarioPR.TabIndex = 8;
             this.lblUsuarioPR.Text = "ID Usuario";
             this.lblUsuarioPR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1268,9 +1286,9 @@ namespace BINAES
             this.btnQrPR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnQrPR.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQrPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQrPR.Location = new System.Drawing.Point(193, 330);
+            this.btnQrPR.Location = new System.Drawing.Point(193, 364);
             this.btnQrPR.Name = "btnQrPR";
-            this.btnQrPR.Size = new System.Drawing.Size(89, 29);
+            this.btnQrPR.Size = new System.Drawing.Size(89, 34);
             this.btnQrPR.TabIndex = 32;
             this.btnQrPR.Text = "QR";
             this.btnQrPR.UseVisualStyleBackColor = true;
@@ -1284,9 +1302,9 @@ namespace BINAES
             this.tblPrestamo.SetColumnSpan(this.btnPrestarPR, 2);
             this.btnPrestarPR.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrestarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPrestarPR.Location = new System.Drawing.Point(50, 392);
+            this.btnPrestarPR.Location = new System.Drawing.Point(50, 440);
             this.btnPrestarPR.Name = "btnPrestarPR";
-            this.btnPrestarPR.Size = new System.Drawing.Size(232, 37);
+            this.btnPrestarPR.Size = new System.Drawing.Size(232, 34);
             this.btnPrestarPR.TabIndex = 36;
             this.btnPrestarPR.Text = "Prestar";
             this.btnPrestarPR.UseVisualStyleBackColor = true;
@@ -1297,7 +1315,7 @@ namespace BINAES
             this.nudIdEjemplarPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudIdEjemplarPR.Location = new System.Drawing.Point(50, 197);
+            this.nudIdEjemplarPR.Location = new System.Drawing.Point(50, 213);
             this.nudIdEjemplarPR.Name = "nudIdEjemplarPR";
             this.nudIdEjemplarPR.Size = new System.Drawing.Size(137, 29);
             this.nudIdEjemplarPR.TabIndex = 34;
@@ -1307,7 +1325,7 @@ namespace BINAES
             this.nudIdUsuarioPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudIdUsuarioPR.Location = new System.Drawing.Point(50, 330);
+            this.nudIdUsuarioPR.Location = new System.Drawing.Point(50, 364);
             this.nudIdUsuarioPR.Name = "nudIdUsuarioPR";
             this.nudIdUsuarioPR.Size = new System.Drawing.Size(137, 29);
             this.nudIdUsuarioPR.TabIndex = 35;
@@ -1316,11 +1334,11 @@ namespace BINAES
             // 
             this.tabBuscar.BackColor = System.Drawing.Color.Transparent;
             this.tabBuscar.Controls.Add(this.tblBusqueda);
-            this.tabBuscar.Location = new System.Drawing.Point(4, 42);
+            this.tabBuscar.Location = new System.Drawing.Point(4, 54);
             this.tabBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBuscar.Name = "tabBuscar";
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabBuscar.Size = new System.Drawing.Size(964, 558);
+            this.tabBuscar.Size = new System.Drawing.Size(964, 546);
             this.tabBuscar.TabIndex = 0;
             this.tabBuscar.Text = "Búsqueda de ejemplares";
             // 
@@ -1332,8 +1350,8 @@ namespace BINAES
             this.tblBusqueda.AutoSize = true;
             this.tblBusqueda.BackColor = System.Drawing.Color.Transparent;
             this.tblBusqueda.ColumnCount = 7;
-            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.761905F));
-            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.14286F));
+            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.109705F));
+            this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.81013F));
             this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.761905F));
             this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.540084F));
             this.tblBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.66245F));
@@ -1355,7 +1373,7 @@ namespace BINAES
             this.tblBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.391608F));
             this.tblBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tblBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tblBusqueda.Size = new System.Drawing.Size(948, 563);
+            this.tblBusqueda.Size = new System.Drawing.Size(948, 551);
             this.tblBusqueda.TabIndex = 2;
             // 
             // dgvEjemplaresBU
@@ -1365,11 +1383,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEjemplaresBU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblBusqueda.SetColumnSpan(this.dgvEjemplaresBU, 5);
-            this.dgvEjemplaresBU.Location = new System.Drawing.Point(48, 112);
+            this.dgvEjemplaresBU.Location = new System.Drawing.Point(23, 110);
             this.dgvEjemplaresBU.Name = "dgvEjemplaresBU";
             this.dgvEjemplaresBU.RowHeadersWidth = 62;
             this.dgvEjemplaresBU.RowTemplate.Height = 28;
-            this.dgvEjemplaresBU.Size = new System.Drawing.Size(878, 418);
+            this.dgvEjemplaresBU.Size = new System.Drawing.Size(903, 408);
             this.dgvEjemplaresBU.TabIndex = 4;
             this.dgvEjemplaresBU.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEjemplaresBU_CellDoubleClick);
             // 
@@ -1377,10 +1395,10 @@ namespace BINAES
             // 
             this.txtBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarEjemplarBU.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(48, 50);
+            this.txtBuscarEjemplarBU.Location = new System.Drawing.Point(23, 49);
             this.txtBuscarEjemplarBU.Name = "txtBuscarEjemplarBU";
             this.tblBusqueda.SetRowSpan(this.txtBuscarEjemplarBU, 2);
-            this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(536, 36);
+            this.txtBuscarEjemplarBU.Size = new System.Drawing.Size(561, 36);
             this.txtBuscarEjemplarBU.TabIndex = 0;
             this.txtBuscarEjemplarBU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarEjemplarBU_KeyDown);
             // 
@@ -1390,7 +1408,8 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDigitalBU.AutoSize = true;
             this.chkDigitalBU.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDigitalBU.Location = new System.Drawing.Point(836, 65);
+            this.chkDigitalBU.ForeColor = System.Drawing.Color.Transparent;
+            this.chkDigitalBU.Location = new System.Drawing.Point(836, 64);
             this.chkDigitalBU.Name = "chkDigitalBU";
             this.chkDigitalBU.Size = new System.Drawing.Size(90, 29);
             this.chkDigitalBU.TabIndex = 8;
@@ -1400,10 +1419,10 @@ namespace BINAES
             // btnBuscarEjemplarBU
             // 
             this.btnBuscarEjemplarBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarEjemplarBU.Location = new System.Drawing.Point(590, 47);
+            this.btnBuscarEjemplarBU.Location = new System.Drawing.Point(590, 54);
             this.btnBuscarEjemplarBU.Name = "btnBuscarEjemplarBU";
             this.tblBusqueda.SetRowSpan(this.btnBuscarEjemplarBU, 2);
-            this.btnBuscarEjemplarBU.Size = new System.Drawing.Size(39, 42);
+            this.btnBuscarEjemplarBU.Size = new System.Drawing.Size(39, 27);
             this.btnBuscarEjemplarBU.TabIndex = 3;
             this.btnBuscarEjemplarBU.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarEjemplarBU.UseVisualStyleBackColor = true;
@@ -1416,7 +1435,7 @@ namespace BINAES
             this.cmbFiltrarEjemplarBU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltrarEjemplarBU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFiltrarEjemplarBU.FormattingEnabled = true;
-            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(697, 65);
+            this.cmbFiltrarEjemplarBU.Location = new System.Drawing.Point(697, 64);
             this.cmbFiltrarEjemplarBU.Name = "cmbFiltrarEjemplarBU";
             this.cmbFiltrarEjemplarBU.Size = new System.Drawing.Size(133, 25);
             this.cmbFiltrarEjemplarBU.TabIndex = 2;
@@ -1429,11 +1448,12 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFiltroBU.AutoSize = true;
             this.lblFiltroBU.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltroBU.Location = new System.Drawing.Point(635, 62);
+            this.lblFiltroBU.ForeColor = System.Drawing.Color.Transparent;
+            this.lblFiltroBU.Location = new System.Drawing.Point(635, 61);
             this.lblFiltroBU.Name = "lblFiltroBU";
-            this.lblFiltroBU.Size = new System.Drawing.Size(56, 47);
+            this.lblFiltroBU.Size = new System.Drawing.Size(56, 46);
             this.lblFiltroBU.TabIndex = 6;
-            this.lblFiltroBU.Text = "Filtro:";
+            this.lblFiltroBU.Text = "Filtro";
             // 
             // chkBusquedaExactaBU
             // 
@@ -1442,11 +1462,13 @@ namespace BINAES
             this.chkBusquedaExactaBU.AutoSize = true;
             this.tblBusqueda.SetColumnSpan(this.chkBusquedaExactaBU, 2);
             this.chkBusquedaExactaBU.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBusquedaExactaBU.ForeColor = System.Drawing.Color.Transparent;
             this.chkBusquedaExactaBU.Location = new System.Drawing.Point(635, 31);
             this.chkBusquedaExactaBU.Name = "chkBusquedaExactaBU";
-            this.chkBusquedaExactaBU.Size = new System.Drawing.Size(195, 28);
+            this.chkBusquedaExactaBU.Size = new System.Drawing.Size(195, 27);
             this.chkBusquedaExactaBU.TabIndex = 5;
             this.chkBusquedaExactaBU.Text = "Búsqueda exacta";
+            this.chkBusquedaExactaBU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkBusquedaExactaBU.UseVisualStyleBackColor = true;
             // 
             // chkFísicoBU
@@ -1455,9 +1477,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkFísicoBU.AutoSize = true;
             this.chkFísicoBU.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFísicoBU.ForeColor = System.Drawing.Color.Transparent;
             this.chkFísicoBU.Location = new System.Drawing.Point(836, 31);
             this.chkFísicoBU.Name = "chkFísicoBU";
-            this.chkFísicoBU.Size = new System.Drawing.Size(90, 28);
+            this.chkFísicoBU.Size = new System.Drawing.Size(90, 27);
             this.chkFísicoBU.TabIndex = 7;
             this.chkFísicoBU.Text = "Físico";
             this.chkFísicoBU.UseVisualStyleBackColor = true;
@@ -1480,11 +1503,13 @@ namespace BINAES
             this.tabAdmin.Controls.Add(this.tabColeccion);
             this.tabAdmin.Controls.Add(this.TabAcerca);
             this.tabAdmin.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabAdmin.ItemSize = new System.Drawing.Size(75, 50);
             this.tabAdmin.Location = new System.Drawing.Point(292, 47);
             this.tabAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabAdmin.Name = "tabAdmin";
             this.tabAdmin.SelectedIndex = 0;
             this.tabAdmin.Size = new System.Drawing.Size(972, 604);
+            this.tabAdmin.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabAdmin.TabIndex = 0;
             this.tabAdmin.TabStop = false;
             this.tabAdmin.Tag = "";
@@ -1494,9 +1519,9 @@ namespace BINAES
             // tabUsuarios
             // 
             this.tabUsuarios.Controls.Add(this.tblUsuarios);
-            this.tabUsuarios.Location = new System.Drawing.Point(4, 42);
+            this.tabUsuarios.Location = new System.Drawing.Point(4, 54);
             this.tabUsuarios.Name = "tabUsuarios";
-            this.tabUsuarios.Size = new System.Drawing.Size(964, 558);
+            this.tabUsuarios.Size = new System.Drawing.Size(964, 546);
             this.tabUsuarios.TabIndex = 9;
             this.tabUsuarios.Text = "Usuarios";
             // 
@@ -1554,7 +1579,7 @@ namespace BINAES
             this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblUsuarios.Size = new System.Drawing.Size(964, 558);
+            this.tblUsuarios.Size = new System.Drawing.Size(964, 546);
             this.tblUsuarios.TabIndex = 12;
             // 
             // lblFotoUsuarioUS
@@ -1564,6 +1589,7 @@ namespace BINAES
             this.lblFotoUsuarioUS.AutoSize = true;
             this.tblUsuarios.SetColumnSpan(this.lblFotoUsuarioUS, 2);
             this.lblFotoUsuarioUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFotoUsuarioUS.ForeColor = System.Drawing.Color.Transparent;
             this.lblFotoUsuarioUS.Location = new System.Drawing.Point(243, 185);
             this.lblFotoUsuarioUS.Name = "lblFotoUsuarioUS";
             this.lblFotoUsuarioUS.Size = new System.Drawing.Size(241, 25);
@@ -1580,7 +1606,7 @@ namespace BINAES
             this.btnDejarDeEditarUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDejarDeEditarUS.Location = new System.Drawing.Point(3, 507);
             this.btnDejarDeEditarUS.Name = "btnDejarDeEditarUS";
-            this.btnDejarDeEditarUS.Size = new System.Drawing.Size(234, 48);
+            this.btnDejarDeEditarUS.Size = new System.Drawing.Size(234, 36);
             this.btnDejarDeEditarUS.TabIndex = 28;
             this.btnDejarDeEditarUS.Text = "Dejar de editar";
             this.btnDejarDeEditarUS.UseVisualStyleBackColor = true;
@@ -1596,7 +1622,7 @@ namespace BINAES
             this.dgvUsuariosUS.ReadOnly = true;
             this.dgvUsuariosUS.RowHeadersWidth = 51;
             this.tblUsuarios.SetRowSpan(this.dgvUsuariosUS, 13);
-            this.dgvUsuariosUS.Size = new System.Drawing.Size(471, 552);
+            this.dgvUsuariosUS.Size = new System.Drawing.Size(471, 540);
             this.dgvUsuariosUS.TabIndex = 29;
             this.dgvUsuariosUS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuariosUS_CellContentClick);
             // 
@@ -1606,6 +1632,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombreUsuarioUS.AutoSize = true;
             this.lblNombreUsuarioUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreUsuarioUS.ForeColor = System.Drawing.Color.Transparent;
             this.lblNombreUsuarioUS.Location = new System.Drawing.Point(3, 17);
             this.lblNombreUsuarioUS.Name = "lblNombreUsuarioUS";
             this.lblNombreUsuarioUS.Size = new System.Drawing.Size(234, 25);
@@ -1629,6 +1656,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInstitucionUsuarioUS.AutoSize = true;
             this.lblInstitucionUsuarioUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstitucionUsuarioUS.ForeColor = System.Drawing.Color.Transparent;
             this.lblInstitucionUsuarioUS.Location = new System.Drawing.Point(3, 269);
             this.lblInstitucionUsuarioUS.Name = "lblInstitucionUsuarioUS";
             this.lblInstitucionUsuarioUS.Size = new System.Drawing.Size(234, 25);
@@ -1665,6 +1693,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOcupacionUsuarioUS.AutoSize = true;
             this.lblOcupacionUsuarioUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcupacionUsuarioUS.ForeColor = System.Drawing.Color.Transparent;
             this.lblOcupacionUsuarioUS.Location = new System.Drawing.Point(3, 437);
             this.lblOcupacionUsuarioUS.Name = "lblOcupacionUsuarioUS";
             this.lblOcupacionUsuarioUS.Size = new System.Drawing.Size(234, 25);
@@ -1678,6 +1707,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblContraseniaUsuarioUS.AutoSize = true;
             this.lblContraseniaUsuarioUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseniaUsuarioUS.ForeColor = System.Drawing.Color.Transparent;
             this.lblContraseniaUsuarioUS.Location = new System.Drawing.Point(3, 101);
             this.lblContraseniaUsuarioUS.Name = "lblContraseniaUsuarioUS";
             this.lblContraseniaUsuarioUS.Size = new System.Drawing.Size(234, 25);
@@ -1701,6 +1731,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDireccionUsuarioUS.AutoSize = true;
             this.lblDireccionUsuarioUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccionUsuarioUS.ForeColor = System.Drawing.Color.Transparent;
             this.lblDireccionUsuarioUS.Location = new System.Drawing.Point(3, 353);
             this.lblDireccionUsuarioUS.Name = "lblDireccionUsuarioUS";
             this.lblDireccionUsuarioUS.Size = new System.Drawing.Size(234, 25);
@@ -1735,6 +1766,7 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmailUsuarioUS.AutoSize = true;
             this.lblEmailUsuarioUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailUsuarioUS.ForeColor = System.Drawing.Color.Transparent;
             this.lblEmailUsuarioUS.Location = new System.Drawing.Point(3, 185);
             this.lblEmailUsuarioUS.Name = "lblEmailUsuarioUS";
             this.lblEmailUsuarioUS.Size = new System.Drawing.Size(234, 25);
@@ -1761,6 +1793,7 @@ namespace BINAES
             this.lblTelefonoUsuarioUS.AutoSize = true;
             this.tblUsuarios.SetColumnSpan(this.lblTelefonoUsuarioUS, 2);
             this.lblTelefonoUsuarioUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefonoUsuarioUS.ForeColor = System.Drawing.Color.Transparent;
             this.lblTelefonoUsuarioUS.Location = new System.Drawing.Point(243, 17);
             this.lblTelefonoUsuarioUS.Name = "lblTelefonoUsuarioUS";
             this.lblTelefonoUsuarioUS.Size = new System.Drawing.Size(241, 25);
@@ -1775,6 +1808,7 @@ namespace BINAES
             this.lblRolUsuarioUS.AutoSize = true;
             this.tblUsuarios.SetColumnSpan(this.lblRolUsuarioUS, 2);
             this.lblRolUsuarioUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRolUsuarioUS.ForeColor = System.Drawing.Color.Transparent;
             this.lblRolUsuarioUS.Location = new System.Drawing.Point(243, 101);
             this.lblRolUsuarioUS.Name = "lblRolUsuarioUS";
             this.lblRolUsuarioUS.Size = new System.Drawing.Size(241, 25);
@@ -1847,7 +1881,7 @@ namespace BINAES
             this.btnActualizarUS.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarUS.Location = new System.Drawing.Point(363, 507);
             this.btnActualizarUS.Name = "btnActualizarUS";
-            this.btnActualizarUS.Size = new System.Drawing.Size(121, 48);
+            this.btnActualizarUS.Size = new System.Drawing.Size(121, 36);
             this.btnActualizarUS.TabIndex = 50;
             this.btnActualizarUS.Text = "Actualizar";
             this.btnActualizarUS.UseVisualStyleBackColor = true;
@@ -1856,9 +1890,9 @@ namespace BINAES
             // tabColeccion
             // 
             this.tabColeccion.Controls.Add(this.tblColeccion);
-            this.tabColeccion.Location = new System.Drawing.Point(4, 42);
+            this.tabColeccion.Location = new System.Drawing.Point(4, 54);
             this.tabColeccion.Name = "tabColeccion";
-            this.tabColeccion.Size = new System.Drawing.Size(964, 558);
+            this.tabColeccion.Size = new System.Drawing.Size(964, 546);
             this.tabColeccion.TabIndex = 9;
             this.tabColeccion.Text = "Colecciones";
             // 
@@ -1899,8 +1933,65 @@ namespace BINAES
             this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.256894F));
             this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.256894F));
             this.tblColeccion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.660377F));
-            this.tblColeccion.Size = new System.Drawing.Size(964, 558);
+            this.tblColeccion.Size = new System.Drawing.Size(964, 546);
             this.tblColeccion.TabIndex = 12;
+            // 
+            // dgvColeccionesCO
+            // 
+            this.dgvColeccionesCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvColeccionesCO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvColeccionesCO.Location = new System.Drawing.Point(425, 42);
+            this.dgvColeccionesCO.Name = "dgvColeccionesCO";
+            this.dgvColeccionesCO.RowHeadersWidth = 62;
+            this.tblColeccion.SetRowSpan(this.dgvColeccionesCO, 12);
+            this.dgvColeccionesCO.Size = new System.Drawing.Size(484, 462);
+            this.dgvColeccionesCO.TabIndex = 29;
+            // 
+            // btnBuscarCO
+            // 
+            this.btnBuscarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnBuscarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCO.Location = new System.Drawing.Point(153, 432);
+            this.btnBuscarCO.Name = "btnBuscarCO";
+            this.btnBuscarCO.Size = new System.Drawing.Size(144, 33);
+            this.btnBuscarCO.TabIndex = 34;
+            this.btnBuscarCO.Text = "Colecciones Disponibles";
+            this.btnBuscarCO.UseVisualStyleBackColor = true;
+            this.btnBuscarCO.Click += new System.EventHandler(this.btnBuscarCO_Click);
+            // 
+            // btnDejarDeEditarCO
+            // 
+            this.btnDejarDeEditarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnDejarDeEditarCO.Enabled = false;
+            this.btnDejarDeEditarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDejarDeEditarCO.Location = new System.Drawing.Point(154, 393);
+            this.btnDejarDeEditarCO.Name = "btnDejarDeEditarCO";
+            this.btnDejarDeEditarCO.Size = new System.Drawing.Size(141, 33);
+            this.btnDejarDeEditarCO.TabIndex = 28;
+            this.btnDejarDeEditarCO.Text = "Dejar de editar";
+            this.btnDejarDeEditarCO.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarCO
+            // 
+            this.btnAgregarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnAgregarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCO.Location = new System.Drawing.Point(154, 354);
+            this.btnAgregarCO.Name = "btnAgregarCO";
+            this.btnAgregarCO.Size = new System.Drawing.Size(142, 33);
+            this.btnAgregarCO.TabIndex = 27;
+            this.btnAgregarCO.Text = "Agregar";
+            this.btnAgregarCO.UseVisualStyleBackColor = true;
+            // 
+            // cmbGeneroColeccionCO
+            // 
+            this.cmbGeneroColeccionCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbGeneroColeccionCO.FormattingEnabled = true;
+            this.cmbGeneroColeccionCO.Location = new System.Drawing.Point(57, 276);
+            this.cmbGeneroColeccionCO.Name = "cmbGeneroColeccionCO";
+            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(291, 28);
+            this.cmbGeneroColeccionCO.TabIndex = 32;
             // 
             // lblGeneroColeccionCO
             // 
@@ -1909,53 +2000,13 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGeneroColeccionCO.AutoSize = true;
             this.lblGeneroColeccionCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGeneroColeccionCO.Location = new System.Drawing.Point(57, 240);
+            this.lblGeneroColeccionCO.ForeColor = System.Drawing.Color.Transparent;
+            this.lblGeneroColeccionCO.Location = new System.Drawing.Point(57, 234);
             this.lblGeneroColeccionCO.Name = "lblGeneroColeccionCO";
-            this.lblGeneroColeccionCO.Size = new System.Drawing.Size(336, 40);
+            this.lblGeneroColeccionCO.Size = new System.Drawing.Size(336, 39);
             this.lblGeneroColeccionCO.TabIndex = 3;
             this.lblGeneroColeccionCO.Text = "Genero:";
             this.lblGeneroColeccionCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTipoColeccionCO
-            // 
-            this.lblTipoColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTipoColeccionCO.AutoSize = true;
-            this.lblTipoColeccionCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoColeccionCO.Location = new System.Drawing.Point(57, 160);
-            this.lblTipoColeccionCO.Name = "lblTipoColeccionCO";
-            this.lblTipoColeccionCO.Size = new System.Drawing.Size(336, 40);
-            this.lblTipoColeccionCO.TabIndex = 2;
-            this.lblTipoColeccionCO.Text = "Tipo de colección:";
-            this.lblTipoColeccionCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblNombreColeccionCO
-            // 
-            this.lblNombreColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNombreColeccionCO.AutoSize = true;
-            this.lblNombreColeccionCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreColeccionCO.Location = new System.Drawing.Point(57, 80);
-            this.lblNombreColeccionCO.Name = "lblNombreColeccionCO";
-            this.lblNombreColeccionCO.Size = new System.Drawing.Size(336, 40);
-            this.lblNombreColeccionCO.TabIndex = 0;
-            this.lblNombreColeccionCO.Text = "Nombre:";
-            this.lblNombreColeccionCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgvColeccionesCO
-            // 
-            this.dgvColeccionesCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvColeccionesCO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvColeccionesCO.Location = new System.Drawing.Point(425, 43);
-            this.dgvColeccionesCO.Name = "dgvColeccionesCO";
-            this.dgvColeccionesCO.RowHeadersWidth = 62;
-            this.tblColeccion.SetRowSpan(this.dgvColeccionesCO, 12);
-            this.dgvColeccionesCO.Size = new System.Drawing.Size(484, 474);
-            this.dgvColeccionesCO.TabIndex = 29;
             // 
             // cmbTipoColeccionCO
             // 
@@ -1964,19 +2015,25 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTipoColeccionCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoColeccionCO.FormattingEnabled = true;
-            this.cmbTipoColeccionCO.Location = new System.Drawing.Point(57, 203);
+            this.cmbTipoColeccionCO.Location = new System.Drawing.Point(57, 198);
             this.cmbTipoColeccionCO.Name = "cmbTipoColeccionCO";
             this.cmbTipoColeccionCO.Size = new System.Drawing.Size(336, 28);
             this.cmbTipoColeccionCO.TabIndex = 31;
             // 
-            // cmbGeneroColeccionCO
+            // lblTipoColeccionCO
             // 
-            this.cmbGeneroColeccionCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbGeneroColeccionCO.FormattingEnabled = true;
-            this.cmbGeneroColeccionCO.Location = new System.Drawing.Point(57, 283);
-            this.cmbGeneroColeccionCO.Name = "cmbGeneroColeccionCO";
-            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(291, 28);
-            this.cmbGeneroColeccionCO.TabIndex = 32;
+            this.lblTipoColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTipoColeccionCO.AutoSize = true;
+            this.lblTipoColeccionCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoColeccionCO.ForeColor = System.Drawing.Color.Transparent;
+            this.lblTipoColeccionCO.Location = new System.Drawing.Point(57, 156);
+            this.lblTipoColeccionCO.Name = "lblTipoColeccionCO";
+            this.lblTipoColeccionCO.Size = new System.Drawing.Size(336, 39);
+            this.lblTipoColeccionCO.TabIndex = 2;
+            this.lblTipoColeccionCO.Text = "Tipo de colección:";
+            this.lblTipoColeccionCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNombreColeccionCO
             // 
@@ -1984,52 +2041,32 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreColeccionCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreColeccionCO.Location = new System.Drawing.Point(57, 123);
+            this.txtNombreColeccionCO.Location = new System.Drawing.Point(57, 120);
             this.txtNombreColeccionCO.Name = "txtNombreColeccionCO";
             this.txtNombreColeccionCO.Size = new System.Drawing.Size(336, 26);
             this.txtNombreColeccionCO.TabIndex = 33;
             // 
-            // btnDejarDeEditarCO
+            // lblNombreColeccionCO
             // 
-            this.btnDejarDeEditarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnDejarDeEditarCO.Enabled = false;
-            this.btnDejarDeEditarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDejarDeEditarCO.Location = new System.Drawing.Point(154, 403);
-            this.btnDejarDeEditarCO.Name = "btnDejarDeEditarCO";
-            this.btnDejarDeEditarCO.Size = new System.Drawing.Size(141, 34);
-            this.btnDejarDeEditarCO.TabIndex = 28;
-            this.btnDejarDeEditarCO.Text = "Dejar de editar";
-            this.btnDejarDeEditarCO.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarCO
-            // 
-            this.btnBuscarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnBuscarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCO.Location = new System.Drawing.Point(153, 443);
-            this.btnBuscarCO.Name = "btnBuscarCO";
-            this.btnBuscarCO.Size = new System.Drawing.Size(144, 34);
-            this.btnBuscarCO.TabIndex = 34;
-            this.btnBuscarCO.Text = "Colecciones Disponibles";
-            this.btnBuscarCO.UseVisualStyleBackColor = true;
-            this.btnBuscarCO.Click += new System.EventHandler(this.btnBuscarCO_Click);
-            // 
-            // btnAgregarCO
-            // 
-            this.btnAgregarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnAgregarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCO.Location = new System.Drawing.Point(154, 363);
-            this.btnAgregarCO.Name = "btnAgregarCO";
-            this.btnAgregarCO.Size = new System.Drawing.Size(142, 34);
-            this.btnAgregarCO.TabIndex = 27;
-            this.btnAgregarCO.Text = "Agregar";
-            this.btnAgregarCO.UseVisualStyleBackColor = true;
+            this.lblNombreColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombreColeccionCO.AutoSize = true;
+            this.lblNombreColeccionCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreColeccionCO.ForeColor = System.Drawing.Color.Transparent;
+            this.lblNombreColeccionCO.Location = new System.Drawing.Point(57, 78);
+            this.lblNombreColeccionCO.Name = "lblNombreColeccionCO";
+            this.lblNombreColeccionCO.Size = new System.Drawing.Size(336, 39);
+            this.lblNombreColeccionCO.TabIndex = 0;
+            this.lblNombreColeccionCO.Text = "Nombre:";
+            this.lblNombreColeccionCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TabAcerca
             // 
             this.TabAcerca.Controls.Add(this.tableLayoutPanel1);
-            this.TabAcerca.Location = new System.Drawing.Point(4, 42);
+            this.TabAcerca.Location = new System.Drawing.Point(4, 54);
             this.TabAcerca.Name = "TabAcerca";
-            this.TabAcerca.Size = new System.Drawing.Size(964, 558);
+            this.TabAcerca.Size = new System.Drawing.Size(964, 546);
             this.TabAcerca.TabIndex = 10;
             this.TabAcerca.Text = "Acerca de BINAES";
             this.TabAcerca.UseVisualStyleBackColor = true;
@@ -2048,10 +2085,10 @@ namespace BINAES
             this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.16749F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.2549F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.01248F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.35688F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.5021F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.48097F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.3648F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.65213F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(956, 561);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -2061,12 +2098,12 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(472, 57);
+            this.label1.Size = new System.Drawing.Size(472, 58);
             this.label1.TabIndex = 0;
             this.label1.Text = "Misión";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2077,12 +2114,12 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(3, 266);
+            this.label2.Location = new System.Drawing.Point(3, 273);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(472, 73);
+            this.label2.Size = new System.Drawing.Size(472, 58);
             this.label2.TabIndex = 1;
             this.label2.Text = "Visión";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2093,12 +2130,12 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(481, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(472, 57);
+            this.label3.Size = new System.Drawing.Size(472, 58);
             this.label3.TabIndex = 2;
             this.label3.Text = "¿Quiénes Somos?";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2109,13 +2146,13 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(481, 57);
+            this.label4.Location = new System.Drawing.Point(481, 58);
             this.label4.Name = "label4";
             this.tableLayoutPanel1.SetRowSpan(this.label4, 3);
-            this.label4.Size = new System.Drawing.Size(472, 504);
+            this.label4.Size = new System.Drawing.Size(472, 503);
             this.label4.TabIndex = 3;
             this.label4.Text = resources.GetString("label4.Text");
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2126,12 +2163,12 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(3, 57);
+            this.label5.Location = new System.Drawing.Point(3, 58);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(472, 209);
+            this.label5.Size = new System.Drawing.Size(472, 215);
             this.label5.TabIndex = 4;
             this.label5.Text = resources.GetString("label5.Text");
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2142,12 +2179,12 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(3, 339);
+            this.label6.Location = new System.Drawing.Point(3, 331);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(472, 222);
+            this.label6.Size = new System.Drawing.Size(472, 230);
             this.label6.TabIndex = 5;
             this.label6.Text = resources.GetString("label6.Text");
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2236,6 +2273,26 @@ namespace BINAES
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 659);
             this.panel1.TabIndex = 3;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 40;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 585);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(303, 59);
+            this.iconButton1.TabIndex = 9;
+            this.iconButton1.Text = "Colecciones";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btnIntroPPrincipal
             // 
@@ -2460,26 +2517,6 @@ namespace BINAES
             this.btnCerrarPrincipal.TabIndex = 0;
             this.btnCerrarPrincipal.UseVisualStyleBackColor = true;
             this.btnCerrarPrincipal.Click += new System.EventHandler(this.btnCerrarPrincipal_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 585);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(303, 59);
-            this.iconButton1.TabIndex = 9;
-            this.iconButton1.Text = "Colecciones";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // frmPrincipal
             // 
