@@ -286,9 +286,41 @@ namespace BINAES
             {
 
             }
+
+            //Falta implementar Bussines Object para Create
         }
 
-// ---------------------------------------------------------------------------------------------------
+        // Update
+        private void btnActualizarEventoEV_Click(object sender, EventArgs e)
+        {
+            Evento evento = new Evento();
+
+            evento.titulo = txtTituloEventoEV.Text;
+            evento.fechaInicio = dtpFechaInicioEV.Value;
+            evento.fechaFin = dtpFechaFinalizacionEV.Value;
+            evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
+            // Agregar id_area
+
+            if (EventoDAO.Editar(evento))
+                MessageBox.Show("Actualizada con éxito!");
+            else
+                MessageBox.Show("Ha ocurrido un error!");
+        }
+
+
+        //Delete
+        private void btnEliminarEventoEV_Click(object sender, EventArgs e)
+        {
+            int id = // Obtener id de algun lado // Sacatelo de algun lado .l.
+
+            if (EventoDAO.Eliminar(id))
+                MessageBox.Show("Eliminada con éxito!");
+            else
+                MessageBox.Show("Ha ocurrido un error!");
+
+        }
+
+        // ---------------------------------------------------------------------------------------------------
 
         // Formulario de usuarios
 
@@ -415,6 +447,9 @@ namespace BINAES
             dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
         }
 
+        private void btnEliminarEventoEV_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

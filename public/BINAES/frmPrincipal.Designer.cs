@@ -566,6 +566,7 @@ namespace BINAES
             this.btnEliminarEventoEV.TabIndex = 29;
             this.btnEliminarEventoEV.Text = "Eliminar";
             this.btnEliminarEventoEV.UseVisualStyleBackColor = true;
+            this.btnEliminarEventoEV.Click += new System.EventHandler(this.btnEliminarEventoEV_Click);
             // 
             // btnAgregarEventoEV
             // 
@@ -592,6 +593,7 @@ namespace BINAES
             this.btnActualizarEventoEV.TabIndex = 30;
             this.btnActualizarEventoEV.Text = "Actualizar";
             this.btnActualizarEventoEV.UseVisualStyleBackColor = true;
+            this.btnActualizarEventoEV.Click += new System.EventHandler(this.btnActualizarEventoEV_Click);
             // 
             // tabAgregar
             // 

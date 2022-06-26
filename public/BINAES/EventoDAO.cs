@@ -13,7 +13,39 @@ namespace BINAES
         // CRUDE
 
         // CREATE
-       
+        public static bool Crear(Evento evento)
+        {
+            bool exito = true;
+            try
+            {
+                string cadena = Properties.Resources.CadenaConexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query = "INSERT INTO USUARIO (nombre, imagen, fecha_inicio, fecha_fin, numero_asistentes, id_area) VALUES (@nombre, @imagen, @fecha_inicio, @fecha_fin, @numero_asistentes, @id_area)";
+
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    command.Parameters.AddWithValue("@nombre", evento.titulo);
+                    command.Parameters.AddWithValue("@imagen", evento.imagen);
+                    command.Parameters.AddWithValue("@fecha_inicio", evento.fechaInicio);
+                    command.Parameters.AddWithValue("@fecha_fin", evento.fechaFin);
+                    command.Parameters.AddWithValue("@numero_asistentes", evento.numero_asistentes);
+                    command.Parameters.AddWithValue("@id_area", evento.id_area);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                exito = false;
+            }
+            return exito;
+        }
+
+        // READ
+
         public static List<Evento> Leer()
         {
             List<Evento> list = new List<Evento>();
@@ -43,14 +75,65 @@ namespace BINAES
             }
             return list;
         }
-        public static void Editar(int id)
-        {
 
-        }
-        public static void Eliminar(int id)
+        //UPDATE
+        public static bool Editar(Evento evento)
         {
-            Console.WriteLine("Eliminando...");
+            bool exito = true;
+            try
+            {
+                string cadena = Properties.Resources.CadenaConexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query = "UPDATE EVENTO SET titulo = @titulo, imagen = @imagen, fecha_inicio = @fecha_inicio, fecha_fin = @fecha_fin, numero_asistentes = @numero_asistentes, id_area = @id_area";
+
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@titulo", evento.titulo);
+                    command.Parameters.AddWithValue("@imagen", evento.imagen);
+                    command.Parameters.AddWithValue("@fecha_inicio", evento.fechaInicio);
+                    command.Parameters.AddWithValue("@fecha_fin", evento.fechaFin);
+                    command.Parameters.AddWithValue("@numero_asistentes", evento.numero_asistentes);
+                    command.Parameters.AddWithValue("@id_area", evento.id_area);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                exito = false;
+            }
+            return exito;
         }
+
+        // DELETE
+
+        public static bool Eliminar(int id)
+        {
+            bool exito = true;
+            try
+            {
+                string cadena = Properties.Resources.CadenaConexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query = "DELETE FROM EVENTO WHERE id = @id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@id", id);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                exito = false;
+            }
+            return exito;
+        }
+
+        // ----------------------------------------------------------------------------
         public static Evento LeerUno (int id)
         {
             Evento evento = null;
