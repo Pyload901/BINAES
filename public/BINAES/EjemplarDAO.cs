@@ -197,5 +197,54 @@ namespace BINAES
             }
             return list;
         }
+
+        //Evento de Buscar ejemplar Prestamo
+        public static Ejemplar Buscar()
+        {
+            Ejemplar prestamo = new Ejemplar();
+            string cadena = Properties.Resources.CadenaConexion;
+
+            using (SqlConnection conn = new SqlConnection(cadena))
+            {
+                string query = "";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                conn.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        /* Agregar set y get para recopilar esos datos en la query
+                        prestamo.nombre = reader["nombre"].ToString();
+                        prestamo.tipo_coleccion = reader["tipo"].ToString();
+                        prestamo.genero_coleccion = reader["genero"].ToString();*/
+                    }
+                }
+
+                conn.Close();
+            }
+            return prestamo;
+        }
+        //Para insertar datos en Al darle al boton de commpletar "Prestamo Ejemplar"
+        public static void Insertar(Ejemplar ejemplar)
+        {
+            string cadena = Properties.Resources.CadenaConexion;
+
+            using (SqlConnection conn = new SqlConnection(cadena))
+            {
+                string query = " ";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                //Mostrar informacion
+                cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
+                cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
+                cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
     }
 }
+

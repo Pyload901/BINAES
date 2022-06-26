@@ -351,6 +351,16 @@ namespace BINAES
             dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
         }
 
-        
+        private void btnBuscarPR_Click(object sender, EventArgs e)
+        {
+            dvgEjemplarPR.DataSource = EjemplarDAO.Buscar();
+
+
+        }
+
+        private void btnCompletarPR_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
