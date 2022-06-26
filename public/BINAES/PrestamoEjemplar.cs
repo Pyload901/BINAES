@@ -8,6 +8,7 @@ namespace BINAES
 {
     internal class PrestamoEjemplar
     {
+        //Clase
         public int id { get; set; }
         public string nombre { get; set; }
         public string imagen { get; set; }
@@ -21,7 +22,6 @@ namespace BINAES
         public string editorial { get; set; }
         public int id_formato { get; set; }
         public string formato { get; set; }
-
 
         public PrestamoEjemplar (int id, string nombre, string imagen, string fecha_publicacion, int stock,
             int id_coleccion, int id_idioma, int id_editorial, int id_formato)
