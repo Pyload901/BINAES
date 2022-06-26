@@ -96,8 +96,7 @@ namespace BINAES
             txtBuscarEjemplarBU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             //tab agregar
             tabAgregar.BackColor = col1;
-            //tab intro
-            tabIntroduccion.BackColor = col1;
+     
             //tab prestamo
             tabPrestamo.BackColor = col1;
             //tab reserva
@@ -602,6 +601,11 @@ namespace BINAES
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnMisionVisionPPrincipal_Click(object sender, EventArgs e)
+        {
+            //tabAdmin.SelectedIndex = 
         }
     }
 }

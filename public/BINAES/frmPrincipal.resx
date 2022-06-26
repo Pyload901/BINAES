@@ -120,6 +120,12 @@
   <metadata name="mspMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>226, 17</value>
+  </metadata>
+  <metadata name="sspStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>123, 17</value>
+  </metadata>
   <data name="label4.Text" xml:space="preserve">
     <value>BINAES es miembro del Consorcio de Bibliotecas Universitarias de El Salvador (CBUES), lo que le ha permitido ampliar sus colecciones en formato electrónico, gozar de beneficios como subvención de ayudas y capacitaciones; así como ser parte del Repositorio de Ciencia y Cultura de El Salvador REDICCES brindándole la visibilidad a una parte de sus colecciones antiguas a nivel mundial, las que han tenido un número considerable de consultas según reportes estadísticos.
 
@@ -132,12 +138,6 @@ Además es miembro del Comité de Memoria del Mundo, de la Asociación de Biblio
   <data name="label6.Text" xml:space="preserve">
     <value>La Biblioteca Nacional de El Salvador (BINAES) estara orientada a la prestacion de servicios  de calidad, buscando consolidarse como un espacio activo, cultural, educativo y ludico donde se formen personas criticas, creativas y autonomas que sean referentes en todos los sentidos del conocimiento.</value>
   </data>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>226, 17</value>
-  </metadata>
-  <metadata name="sspStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>123, 17</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>27</value>
   </metadata>

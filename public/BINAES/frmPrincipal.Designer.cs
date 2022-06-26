@@ -2117,6 +2117,7 @@ namespace BINAES
             this.btnMisionVisionPPrincipal.TabIndex = 7;
             this.btnMisionVisionPPrincipal.Text = "Mision y Vision";
             this.btnMisionVisionPPrincipal.UseVisualStyleBackColor = false;
+            this.btnMisionVisionPPrincipal.Click += new System.EventHandler(this.btnMisionVisionPPrincipal_Click);
             // 
             // btnAddUsuarioPPrincipal
             // 
