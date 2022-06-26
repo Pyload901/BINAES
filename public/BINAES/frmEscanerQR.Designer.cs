@@ -34,8 +34,8 @@
             this.btnEscanear = new System.Windows.Forms.Button();
             this.picEscanerQR = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrarScanerQR = new FontAwesome.Sharp.IconButton();
             this.btnMinimizarScanerQR = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarScanerQR = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEscanerQR)).BeginInit();
             this.panel1.SuspendLayout();
@@ -91,6 +91,7 @@
             this.picEscanerQR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.picEscanerQR.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel2.SetColumnSpan(this.picEscanerQR, 2);
             this.picEscanerQR.Location = new System.Drawing.Point(3, 3);
             this.picEscanerQR.Name = "picEscanerQR";
@@ -111,21 +112,6 @@
             this.panel1.Size = new System.Drawing.Size(458, 41);
             this.panel1.TabIndex = 4;
             // 
-            // btnCerrarScanerQR
-            // 
-            this.btnCerrarScanerQR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarScanerQR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarScanerQR.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnCerrarScanerQR.IconColor = System.Drawing.Color.White;
-            this.btnCerrarScanerQR.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarScanerQR.IconSize = 30;
-            this.btnCerrarScanerQR.Location = new System.Drawing.Point(411, 0);
-            this.btnCerrarScanerQR.Name = "btnCerrarScanerQR";
-            this.btnCerrarScanerQR.Size = new System.Drawing.Size(47, 41);
-            this.btnCerrarScanerQR.TabIndex = 1;
-            this.btnCerrarScanerQR.UseVisualStyleBackColor = true;
-            this.btnCerrarScanerQR.Click += new System.EventHandler(this.btnCerrarScanerQR_Click);
-            // 
             // btnMinimizarScanerQR
             // 
             this.btnMinimizarScanerQR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -141,10 +127,26 @@
             this.btnMinimizarScanerQR.UseVisualStyleBackColor = true;
             this.btnMinimizarScanerQR.Click += new System.EventHandler(this.btnMinimizarScanerQR_Click);
             // 
+            // btnCerrarScanerQR
+            // 
+            this.btnCerrarScanerQR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarScanerQR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarScanerQR.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrarScanerQR.IconColor = System.Drawing.Color.White;
+            this.btnCerrarScanerQR.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarScanerQR.IconSize = 30;
+            this.btnCerrarScanerQR.Location = new System.Drawing.Point(411, 0);
+            this.btnCerrarScanerQR.Name = "btnCerrarScanerQR";
+            this.btnCerrarScanerQR.Size = new System.Drawing.Size(47, 41);
+            this.btnCerrarScanerQR.TabIndex = 1;
+            this.btnCerrarScanerQR.UseVisualStyleBackColor = true;
+            this.btnCerrarScanerQR.Click += new System.EventHandler(this.btnCerrarScanerQR_Click);
+            // 
             // frmEscanerQR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(458, 304);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel2);
