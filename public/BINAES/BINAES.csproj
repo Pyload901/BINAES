@@ -151,6 +151,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reserva.cs" />
+    <Compile Include="ReservaDAO.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioDAO.cs" />
     <Compile Include="Utils.cs" />

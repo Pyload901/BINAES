@@ -152,4 +152,11 @@ SELECT P.id_ejemplar FROM PALABRA_CLAVE P
 WHERE P.palabra IN(SELECT * FROM STRING_SPLIT('nuevo,test', ','));
 
 SELECT P.id_ejemplar FROM PALABRA_CLAVE P
-    WHERE P.palabra IN('nuevo', 'test')
+    WHERE P.palabra IN('nuevo', 'test');
+
+SELECT R.id, R.fecha_reserva, R.fecha_prestamo, R.fecha_devolucion, EJ.nombre 'ejemplar', U.nombre 'usuario'
+FROM RESERVA R
+    INNER JOIN EJEMPLAR EJ
+        ON EJ.id = R.id_ejemplar
+    INNER JOIN USUARIO U
+        ON U.id = R.id_usuario;

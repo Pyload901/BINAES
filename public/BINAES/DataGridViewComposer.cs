@@ -15,6 +15,7 @@ namespace BINAES
             PropertyInfo[] properties = obj.GetType().GetProperties();
             foreach (var propertie in properties)
             {
+                Console.WriteLine(propertie.Name);
                 if (!indicesNulos.Contains(propertie.Name))
                 {
                     if (propertie.GetValue(obj) == null)

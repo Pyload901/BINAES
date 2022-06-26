@@ -1252,6 +1252,7 @@ namespace BINAES
             this.dgvEjemplaresBU.RowTemplate.Height = 28;
             this.dgvEjemplaresBU.Size = new System.Drawing.Size(1118, 448);
             this.dgvEjemplaresBU.TabIndex = 4;
+            this.dgvEjemplaresBU.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEjemplaresBU_CellDoubleClick);
             // 
             // txtBuscarEjemplarBU
             // 
@@ -1970,7 +1971,6 @@ namespace BINAES
             this.lblNombreColeccionCO.Size = new System.Drawing.Size(71, 21);
             this.lblNombreColeccionCO.TabIndex = 0;
             this.lblNombreColeccionCO.Text = "Nombre:";
-            this.lblNombreColeccionCO.Click += new System.EventHandler(this.label47_Click);
             // 
             // dgvColeccionesCO
             // 

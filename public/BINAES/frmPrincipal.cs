@@ -102,6 +102,11 @@ namespace BINAES
             this.Text = tabAdmin.SelectedTab.Text;
             switch (tabAdmin.SelectedIndex)
             {
+                case 2:
+                    dgvReservasRE.DataSource = ReservaDAO.Leer();
+
+                    DataGridViewComposer.Compose(dgvReservasRE);
+                    break;
                 case 4:
                     cmbAreaEventoEV.ValueMember = "id";
                     cmbAreaEventoEV.DisplayMember = "nombre";
@@ -158,6 +163,7 @@ namespace BINAES
         {
             tabAdmin.SelectedIndex = 0;
             txtBuscarEjemplarBU.Select();
+            MessageBox.Show("Doble click al ejemplar que quiere prestar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void cmbFiltrarEjemplarBU_SelectedIndexChanged(object sender, EventArgs e)
@@ -408,17 +414,15 @@ namespace BINAES
         {
 
         }
-
-        private void label47_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnBuscarCO_Click(object sender, EventArgs e)
         {
             dgvColeccionesCO.DataSource = null;
             dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
         }
 
-        
+        private void dgvEjemplaresBU_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
