@@ -200,7 +200,7 @@ namespace BINAES
             this.tabAdmin.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.tblUsuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosUS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).BeginInit();
             this.tabMisionVision.SuspendLayout();
             this.tblMisionVision.SuspendLayout();
@@ -1396,7 +1396,7 @@ namespace BINAES
             this.tblUsuarios.Controls.Add(this.lblFotoUsuarioUS, 1, 4);
             this.tblUsuarios.Controls.Add(this.btnDejarDeEditarUS, 0, 12);
             this.tblUsuarios.Controls.Add(this.btnAgregarUS, 0, 12);
-            this.tblUsuarios.Controls.Add(this.dataGridView2, 3, 0);
+            this.tblUsuarios.Controls.Add(this.dgvUsuariosUS, 3, 0);
             this.tblUsuarios.Controls.Add(this.lblNombreUsuarioUS, 0, 0);
             this.tblUsuarios.Controls.Add(this.txtNombreUS, 0, 1);
             this.tblUsuarios.Controls.Add(this.lblInstitucionUsuarioUS, 0, 6);
@@ -1477,7 +1477,7 @@ namespace BINAES
             this.dgvUsuariosUS.Name = "dgvUsuariosUS";
             this.dgvUsuariosUS.ReadOnly = true;
             this.dgvUsuariosUS.RowHeadersWidth = 51;
-            this.tableLayoutPanel8.SetRowSpan(this.dgvUsuariosUS, 13);
+            this.tblUsuarios.SetRowSpan(this.dgvUsuariosUS, 13);
             this.dgvUsuariosUS.Size = new System.Drawing.Size(620, 567);
             this.dgvUsuariosUS.TabIndex = 29;
             this.dgvUsuariosUS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuariosUS_CellContentClick);
@@ -2159,7 +2159,7 @@ namespace BINAES
             this.tabUsuarios.ResumeLayout(false);
             this.tblUsuarios.ResumeLayout(false);
             this.tblUsuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosUS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).EndInit();
             this.tabMisionVision.ResumeLayout(false);
             this.tblMisionVision.ResumeLayout(false);
