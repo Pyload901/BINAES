@@ -111,6 +111,13 @@ namespace BINAES
                     /*DataGridViewComposer.BuildDataGridView_Editar(dgvEventosEV);
                     DataGridViewComposer.BuildDataGridView_Eliminar(dgvEventosEV);*/
                     break;
+                case 5:
+                    dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
+                    DataGridViewComposer.Compose(dgvUsuariosUS);
+                   
+                    
+
+                    break;
 
                 case 8:
                     /*dgvVistaColeccionCO.DataSource = ColeccionDAO.Leer();
@@ -179,6 +186,15 @@ namespace BINAES
         private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void btnAgregarCO_Click(object sender, EventArgs e)
+        {
+            Coleccion cole = new Coleccion();
+            cole.nombre = txtNombreCO.Text;
+            cole.id_genero = Convert.ToInt32(cmbGeneroColeccionCO.ValueMember);
+            cole.id_coleccion = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
+
+            ColeccionDAO.Insertar(cole);
         }
 
         // Formulario de eventos
@@ -277,8 +293,11 @@ namespace BINAES
             
         }
 
+// ---------------------------------------------------------------------------------------------------
 
         // Formulario de usuarios
+
+        // Implementación para la captura de fotos
         private void btnTomarFotoUS_Click(object sender, EventArgs e)
         {
             btnCancelarFotoUS.Enabled = true;
@@ -312,20 +331,73 @@ namespace BINAES
             picFotoUS.Image = global::BINAES.Properties.Resources._default;
         }
 
-        private void btnAgregarCO_Click(object sender, EventArgs e)
-        {
-            Coleccion cole = new Coleccion();
-            cole.nombre = txtNombreCO.Text;
-            cole.id_genero = Convert.ToInt32(cmbGeneroColeccionCO.ValueMember);
-            cole.id_coleccion = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
-
-            ColeccionDAO.Insertar(cole);
-        }
-
         private void picFotoUS_Click(object sender, EventArgs e)
         {
             Utils.SeleccionarImagen(picFotoUS);
         }
+
+        //CRUDE
+
+        // Create
+        private void btnAgregarUS_Click(object sender, EventArgs e)
+        {
+            Usuario user = new Usuario();
+            user.nombre = txtNombreUS.Text;
+            user.telefono = txtTelefonoUS.Text;
+            user.email = txtEmailUS.Text;
+            user.institucion = txtInstitucionUS.Text;
+            user.direccion = txtDireccionUS.Text;
+
+            if (UsuarioDAO.Crear(user))
+            {
+                MessageBox.Show("Registro agregado con éxito!");
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error!");
+            }
+        }
+
+        // Read
+        private void dgvUsuariosUS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridView dgv = (DataGridView)sender;
+                txtNombreUS.Text = dgv.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+                txtTelefonoUS.Text = dgv.Rows[e.RowIndex].Cells["telefono"].Value.ToString();
+                txtEmailUS.Text = dgv.Rows[e.RowIndex].Cells["email"].Value.ToString();
+                txtInstitucionUS.Text = dgv.Rows[e.RowIndex].Cells["institucion"].Value.ToString();
+                txtDireccionUS.Text = dgv.Rows[e.RowIndex].Cells["direccion"].Value.ToString();
+                
+            }
+            catch (Exception ex1)
+            {
+
+            }
+        }
+
+        // Update
+        private void btnActualizarUS_Click(object sender, EventArgs e)
+        {
+
+            Usuario user = new Usuario();
+
+            user.nombre = txtNombreUS.Text;
+            user.telefono = txtTelefonoUS.Text;
+            user.email = txtEmailUS.Text;
+            user.institucion = txtInstitucionUS.Text;
+            user.direccion = txtDireccionUS.Text;
+
+            if (UsuarioDAO.Update(user))
+                MessageBox.Show("Actualizada con éxito!");
+            else
+                MessageBox.Show("Ha ocurrido un error!");
+            
+        }   
+
+ // ---------------------------------------------------------------------------------------------------
+
 
         private void btnAgregarEjemplarAG_Click(object sender, EventArgs e)
         {
@@ -361,6 +433,27 @@ namespace BINAES
         private void btnCompletarPR_Click(object sender, EventArgs e)
         {
 
+        }
+    }
+}
+        }
+    }
+}
+        }
+    }
+}
+        }
+    }
+}
+        }
+    }
+}
+        }
+    }
+}
+        }
+    }
+}
         }
     }
 }
