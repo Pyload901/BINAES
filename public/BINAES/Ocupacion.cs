@@ -8,13 +8,13 @@ namespace BINAES
 {
     public class Ocupacion
     {
-        public int id;
-        public string nombre;
+        public int id { set; get; }
+        public string ocupacion { set; get; }
 
-        public Ocupacion(int id, string nombre)
+        public Ocupacion(int id, string ocupacion)
         {
             this.id = id;
-            this.nombre = nombre;
+            this.ocupacion = ocupacion;
         }
 
         public Ocupacion()

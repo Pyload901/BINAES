@@ -26,7 +26,7 @@ namespace BINAES
                             Ocupacion ocupacion = new Ocupacion();
 
                             ocupacion.id = Convert.ToInt32(reader["id"]);
-                            ocupacion.nombre = reader["ocupacion"].ToString();
+                            ocupacion.ocupacion = reader["ocupacion"].ToString();
 
                             list.Add(ocupacion);
                         }

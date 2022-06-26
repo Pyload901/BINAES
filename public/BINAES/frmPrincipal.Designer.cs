@@ -64,25 +64,27 @@ namespace BINAES
             this.btnEditarEventoEV = new System.Windows.Forms.Button();
             this.tabAgregar = new System.Windows.Forms.TabPage();
             this.tblEjemplares = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDejarDeEditarEjemplarAG = new System.Windows.Forms.Button();
-            this.btnAgregarEjemplarAG = new System.Windows.Forms.Button();
-            this.lblImagenEjemplarEJ = new System.Windows.Forms.Label();
-            this.lblFechaPublicacionEjemplarEJ = new System.Windows.Forms.Label();
+            this.dgvEjemplaresAG = new System.Windows.Forms.DataGridView();
             this.lblEditorialEjemplarEJ = new System.Windows.Forms.Label();
+            this.cmbEditorialEjemplarAG = new System.Windows.Forms.ComboBox();
+            this.lblFechaPublicacionEjemplarEJ = new System.Windows.Forms.Label();
+            this.dtpFechaPublicacionEjemplarAG = new System.Windows.Forms.DateTimePicker();
             this.lblTipoColeccionEjemplarEJ = new System.Windows.Forms.Label();
             this.cmbColeccionEjemplarAG = new System.Windows.Forms.ComboBox();
-            this.dgvEjemplaresAG = new System.Windows.Forms.DataGridView();
-            this.dtpFechaPublicacionEjemplarAG = new System.Windows.Forms.DateTimePicker();
+            this.lblImagenEjemplarEJ = new System.Windows.Forms.Label();
             this.picEjemplarAG = new System.Windows.Forms.PictureBox();
-            this.cmbEditorialEjemplarAG = new System.Windows.Forms.ComboBox();
-            this.cmbFormatoEjemplarAG = new System.Windows.Forms.ComboBox();
-            this.lblFormatoEjemplarEJ = new System.Windows.Forms.Label();
-            this.cmbIdiomaEjemplarAG = new System.Windows.Forms.ComboBox();
-            this.lblIdiomaEjemplarEJ = new System.Windows.Forms.Label();
-            this.txtAutorEjemplarAG = new System.Windows.Forms.TextBox();
-            this.lblAutorEjemplarEJ = new System.Windows.Forms.Label();
-            this.txtNombreEjemplarAG = new System.Windows.Forms.TextBox();
             this.lblNombreEjemplarEJ = new System.Windows.Forms.Label();
+            this.txtNombreEjemplarAG = new System.Windows.Forms.TextBox();
+            this.lblAutorEjemplarEJ = new System.Windows.Forms.Label();
+            this.txtAutorEjemplarAG = new System.Windows.Forms.TextBox();
+            this.lblIdiomaEjemplarEJ = new System.Windows.Forms.Label();
+            this.cmbIdiomaEjemplarAG = new System.Windows.Forms.ComboBox();
+            this.lblFormatoEjemplarEJ = new System.Windows.Forms.Label();
+            this.cmbFormatoEjemplarAG = new System.Windows.Forms.ComboBox();
+            this.btnDejarDeEditarEjemplarAG = new System.Windows.Forms.Button();
+            this.btnEliminarEjemplarAG = new System.Windows.Forms.Button();
+            this.btnEditarEjemplarAG = new System.Windows.Forms.Button();
+            this.btnAgregarEjemplarAG = new System.Windows.Forms.Button();
             this.chkDisponibilidadEjemplarAG = new System.Windows.Forms.CheckBox();
             this.tabReserva = new System.Windows.Forms.TabPage();
             this.tblReserva = new System.Windows.Forms.TableLayoutPanel();
@@ -126,7 +128,6 @@ namespace BINAES
             this.txtNombreUS = new System.Windows.Forms.TextBox();
             this.lblInstitucionUsuarioUS = new System.Windows.Forms.Label();
             this.txtInstitucionUS = new System.Windows.Forms.TextBox();
-            this.cmbOcupacionUS = new System.Windows.Forms.ComboBox();
             this.lblOcupacionUsuarioUS = new System.Windows.Forms.Label();
             this.lblContraseniaUsuarioUS = new System.Windows.Forms.Label();
             this.txtContraseñaUS = new System.Windows.Forms.TextBox();
@@ -187,8 +188,7 @@ namespace BINAES
             this.btnMinPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnMaxPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnCerrarPrincipal = new FontAwesome.Sharp.IconButton();
-            this.btnEditarEjemplarAG = new System.Windows.Forms.Button();
-            this.btnEliminarEjemplarAG = new System.Windows.Forms.Button();
+            this.cmbOcupacionUS = new System.Windows.Forms.ComboBox();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tblEventos.SuspendLayout();
@@ -707,45 +707,46 @@ namespace BINAES
             this.tblEjemplares.Size = new System.Drawing.Size(964, 546);
             this.tblEjemplares.TabIndex = 11;
             // 
-            // btnDejarDeEditarEjemplarAG
+            // dgvEjemplaresAG
             // 
-            this.btnDejarDeEditarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblEjemplares.SetColumnSpan(this.btnDejarDeEditarEjemplarAG, 2);
-            this.btnDejarDeEditarEjemplarAG.Enabled = false;
-            this.btnDejarDeEditarEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDejarDeEditarEjemplarAG.Location = new System.Drawing.Point(3, 454);
-            this.btnDejarDeEditarEjemplarAG.Name = "btnDejarDeEditarEjemplarAG";
-            this.btnDejarDeEditarEjemplarAG.Size = new System.Drawing.Size(186, 41);
-            this.btnDejarDeEditarEjemplarAG.TabIndex = 28;
-            this.btnDejarDeEditarEjemplarAG.Text = "Dejar de editar";
-            this.btnDejarDeEditarEjemplarAG.UseVisualStyleBackColor = true;
-            this.btnDejarDeEditarEjemplarAG.Click += new System.EventHandler(this.btnSalirEdicionEjemplarAG_Click);
+            this.dgvEjemplaresAG.AllowUserToAddRows = false;
+            this.dgvEjemplaresAG.AllowUserToDeleteRows = false;
+            this.dgvEjemplaresAG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEjemplaresAG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEjemplaresAG.Location = new System.Drawing.Point(387, 3);
+            this.dgvEjemplaresAG.Name = "dgvEjemplaresAG";
+            this.dgvEjemplaresAG.ReadOnly = true;
+            this.dgvEjemplaresAG.RowHeadersWidth = 51;
+            this.tblEjemplares.SetRowSpan(this.dgvEjemplaresAG, 13);
+            this.dgvEjemplaresAG.Size = new System.Drawing.Size(574, 540);
+            this.dgvEjemplaresAG.TabIndex = 29;
+            this.dgvEjemplaresAG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEjemplaresAG_CellClick);
             // 
-            // btnAgregarEjemplarAG
+            // lblEditorialEjemplarEJ
             // 
-            this.btnAgregarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblEjemplares.SetColumnSpan(this.btnAgregarEjemplarAG, 2);
-            this.btnAgregarEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(195, 501);
-            this.btnAgregarEjemplarAG.Name = "btnAgregarEjemplarAG";
-            this.btnAgregarEjemplarAG.Size = new System.Drawing.Size(186, 42);
-            this.btnAgregarEjemplarAG.TabIndex = 27;
-            this.btnAgregarEjemplarAG.Text = "Agregar";
-            this.btnAgregarEjemplarAG.UseVisualStyleBackColor = true;
-            this.btnAgregarEjemplarAG.Click += new System.EventHandler(this.btnAgregarEjemplarAG_Click);
+            this.lblEditorialEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblEditorialEjemplarEJ.AutoSize = true;
+            this.tblEjemplares.SetColumnSpan(this.lblEditorialEjemplarEJ, 2);
+            this.lblEditorialEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditorialEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblEditorialEjemplarEJ.Location = new System.Drawing.Point(195, 16);
+            this.lblEditorialEjemplarEJ.Name = "lblEditorialEjemplarEJ";
+            this.lblEditorialEjemplarEJ.Size = new System.Drawing.Size(82, 25);
+            this.lblEditorialEjemplarEJ.TabIndex = 1;
+            this.lblEditorialEjemplarEJ.Text = "Editorial";
             // 
-            // lblImagenEjemplarEJ
+            // cmbEditorialEjemplarAG
             // 
-            this.lblImagenEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblImagenEjemplarEJ.AutoSize = true;
-            this.tblEjemplares.SetColumnSpan(this.lblImagenEjemplarEJ, 2);
-            this.lblImagenEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagenEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
-            this.lblImagenEjemplarEJ.Location = new System.Drawing.Point(195, 262);
-            this.lblImagenEjemplarEJ.Name = "lblImagenEjemplarEJ";
-            this.lblImagenEjemplarEJ.Size = new System.Drawing.Size(75, 25);
-            this.lblImagenEjemplarEJ.TabIndex = 9;
-            this.lblImagenEjemplarEJ.Text = "Imagen";
+            this.cmbEditorialEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblEjemplares.SetColumnSpan(this.cmbEditorialEjemplarAG, 2);
+            this.cmbEditorialEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditorialEjemplarAG.FormattingEnabled = true;
+            this.cmbEditorialEjemplarAG.Location = new System.Drawing.Point(195, 44);
+            this.cmbEditorialEjemplarAG.Name = "cmbEditorialEjemplarAG";
+            this.cmbEditorialEjemplarAG.Size = new System.Drawing.Size(186, 29);
+            this.cmbEditorialEjemplarAG.TabIndex = 32;
             // 
             // lblFechaPublicacionEjemplarEJ
             // 
@@ -760,18 +761,17 @@ namespace BINAES
             this.lblFechaPublicacionEjemplarEJ.TabIndex = 7;
             this.lblFechaPublicacionEjemplarEJ.Text = "Fecha de publicación";
             // 
-            // lblEditorialEjemplarEJ
+            // dtpFechaPublicacionEjemplarAG
             // 
-            this.lblEditorialEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblEditorialEjemplarEJ.AutoSize = true;
-            this.tblEjemplares.SetColumnSpan(this.lblEditorialEjemplarEJ, 2);
-            this.lblEditorialEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditorialEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
-            this.lblEditorialEjemplarEJ.Location = new System.Drawing.Point(195, 16);
-            this.lblEditorialEjemplarEJ.Name = "lblEditorialEjemplarEJ";
-            this.lblEditorialEjemplarEJ.Size = new System.Drawing.Size(82, 25);
-            this.lblEditorialEjemplarEJ.TabIndex = 1;
-            this.lblEditorialEjemplarEJ.Text = "Editorial";
+            this.dtpFechaPublicacionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblEjemplares.SetColumnSpan(this.dtpFechaPublicacionEjemplarAG, 2);
+            this.dtpFechaPublicacionEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(195, 126);
+            this.dtpFechaPublicacionEjemplarAG.Name = "dtpFechaPublicacionEjemplarAG";
+            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(186, 26);
+            this.dtpFechaPublicacionEjemplarAG.TabIndex = 30;
             // 
             // lblTipoColeccionEjemplarEJ
             // 
@@ -800,33 +800,18 @@ namespace BINAES
             this.cmbColeccionEjemplarAG.Size = new System.Drawing.Size(186, 28);
             this.cmbColeccionEjemplarAG.TabIndex = 25;
             // 
-            // dgvEjemplaresAG
+            // lblImagenEjemplarEJ
             // 
-            this.dgvEjemplaresAG.AllowUserToAddRows = false;
-            this.dgvEjemplaresAG.AllowUserToDeleteRows = false;
-            this.dgvEjemplaresAG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEjemplaresAG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEjemplaresAG.Location = new System.Drawing.Point(387, 3);
-            this.dgvEjemplaresAG.Name = "dgvEjemplaresAG";
-            this.dgvEjemplaresAG.ReadOnly = true;
-            this.dgvEjemplaresAG.RowHeadersWidth = 51;
-            this.tblEjemplares.SetRowSpan(this.dgvEjemplaresAG, 13);
-            this.dgvEjemplaresAG.Size = new System.Drawing.Size(574, 540);
-            this.dgvEjemplaresAG.TabIndex = 29;
-            this.dgvEjemplaresAG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEjemplaresAG_CellClick);
-            this.dgvEjemplaresAG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEjemplaresAG_CellContentClick);
-            // 
-            // dtpFechaPublicacionEjemplarAG
-            // 
-            this.dtpFechaPublicacionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblEjemplares.SetColumnSpan(this.dtpFechaPublicacionEjemplarAG, 2);
-            this.dtpFechaPublicacionEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(195, 126);
-            this.dtpFechaPublicacionEjemplarAG.Name = "dtpFechaPublicacionEjemplarAG";
-            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(186, 26);
-            this.dtpFechaPublicacionEjemplarAG.TabIndex = 30;
+            this.lblImagenEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblImagenEjemplarEJ.AutoSize = true;
+            this.tblEjemplares.SetColumnSpan(this.lblImagenEjemplarEJ, 2);
+            this.lblImagenEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImagenEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblImagenEjemplarEJ.Location = new System.Drawing.Point(195, 262);
+            this.lblImagenEjemplarEJ.Name = "lblImagenEjemplarEJ";
+            this.lblImagenEjemplarEJ.Size = new System.Drawing.Size(75, 25);
+            this.lblImagenEjemplarEJ.TabIndex = 9;
+            this.lblImagenEjemplarEJ.Text = "Imagen";
             // 
             // picEjemplarAG
             // 
@@ -844,45 +829,68 @@ namespace BINAES
             this.picEjemplarAG.TabStop = false;
             this.picEjemplarAG.Click += new System.EventHandler(this.picEjemplarAG_Click);
             // 
-            // cmbEditorialEjemplarAG
+            // lblNombreEjemplarEJ
             // 
-            this.cmbEditorialEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblNombreEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblNombreEjemplarEJ.AutoSize = true;
+            this.tblEjemplares.SetColumnSpan(this.lblNombreEjemplarEJ, 2);
+            this.lblNombreEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblNombreEjemplarEJ.Location = new System.Drawing.Point(3, 16);
+            this.lblNombreEjemplarEJ.Name = "lblNombreEjemplarEJ";
+            this.lblNombreEjemplarEJ.Size = new System.Drawing.Size(81, 25);
+            this.lblNombreEjemplarEJ.TabIndex = 2;
+            this.lblNombreEjemplarEJ.Text = "Nombre";
+            // 
+            // txtNombreEjemplarAG
+            // 
+            this.txtNombreEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblEjemplares.SetColumnSpan(this.cmbEditorialEjemplarAG, 2);
-            this.cmbEditorialEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEditorialEjemplarAG.FormattingEnabled = true;
-            this.cmbEditorialEjemplarAG.Location = new System.Drawing.Point(195, 44);
-            this.cmbEditorialEjemplarAG.Name = "cmbEditorialEjemplarAG";
-            this.cmbEditorialEjemplarAG.Size = new System.Drawing.Size(186, 29);
-            this.cmbEditorialEjemplarAG.TabIndex = 32;
+            this.tblEjemplares.SetColumnSpan(this.txtNombreEjemplarAG, 2);
+            this.txtNombreEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 44);
+            this.txtNombreEjemplarAG.Name = "txtNombreEjemplarAG";
+            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(186, 26);
+            this.txtNombreEjemplarAG.TabIndex = 23;
             // 
-            // cmbFormatoEjemplarAG
+            // lblAutorEjemplarEJ
             // 
-            this.cmbFormatoEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblAutorEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblAutorEjemplarEJ.AutoSize = true;
+            this.tblEjemplares.SetColumnSpan(this.lblAutorEjemplarEJ, 2);
+            this.lblAutorEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutorEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblAutorEjemplarEJ.Location = new System.Drawing.Point(3, 98);
+            this.lblAutorEjemplarEJ.Name = "lblAutorEjemplarEJ";
+            this.lblAutorEjemplarEJ.Size = new System.Drawing.Size(59, 25);
+            this.lblAutorEjemplarEJ.TabIndex = 3;
+            this.lblAutorEjemplarEJ.Text = "Autor";
+            // 
+            // txtAutorEjemplarAG
+            // 
+            this.txtAutorEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblEjemplares.SetColumnSpan(this.cmbFormatoEjemplarAG, 2);
-            this.cmbFormatoEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFormatoEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFormatoEjemplarAG.FormattingEnabled = true;
-            this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 290);
-            this.cmbFormatoEjemplarAG.Name = "cmbFormatoEjemplarAG";
-            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(186, 28);
-            this.cmbFormatoEjemplarAG.TabIndex = 26;
+            this.tblEjemplares.SetColumnSpan(this.txtAutorEjemplarAG, 2);
+            this.txtAutorEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 126);
+            this.txtAutorEjemplarAG.Name = "txtAutorEjemplarAG";
+            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(186, 26);
+            this.txtAutorEjemplarAG.TabIndex = 24;
             // 
-            // lblFormatoEjemplarEJ
+            // lblIdiomaEjemplarEJ
             // 
-            this.lblFormatoEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblFormatoEjemplarEJ.AutoSize = true;
-            this.tblEjemplares.SetColumnSpan(this.lblFormatoEjemplarEJ, 2);
-            this.lblFormatoEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormatoEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
-            this.lblFormatoEjemplarEJ.Location = new System.Drawing.Point(3, 262);
-            this.lblFormatoEjemplarEJ.Name = "lblFormatoEjemplarEJ";
-            this.lblFormatoEjemplarEJ.Size = new System.Drawing.Size(82, 25);
-            this.lblFormatoEjemplarEJ.TabIndex = 5;
-            this.lblFormatoEjemplarEJ.Text = "Formato";
+            this.lblIdiomaEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblIdiomaEjemplarEJ.AutoSize = true;
+            this.tblEjemplares.SetColumnSpan(this.lblIdiomaEjemplarEJ, 2);
+            this.lblIdiomaEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdiomaEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblIdiomaEjemplarEJ.Location = new System.Drawing.Point(3, 180);
+            this.lblIdiomaEjemplarEJ.Name = "lblIdiomaEjemplarEJ";
+            this.lblIdiomaEjemplarEJ.Size = new System.Drawing.Size(70, 25);
+            this.lblIdiomaEjemplarEJ.TabIndex = 4;
+            this.lblIdiomaEjemplarEJ.Text = "Idioma";
             // 
             // cmbIdiomaEjemplarAG
             // 
@@ -898,68 +906,83 @@ namespace BINAES
             this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(186, 28);
             this.cmbIdiomaEjemplarAG.TabIndex = 13;
             // 
-            // lblIdiomaEjemplarEJ
+            // lblFormatoEjemplarEJ
             // 
-            this.lblIdiomaEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblIdiomaEjemplarEJ.AutoSize = true;
-            this.tblEjemplares.SetColumnSpan(this.lblIdiomaEjemplarEJ, 2);
-            this.lblIdiomaEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdiomaEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
-            this.lblIdiomaEjemplarEJ.Location = new System.Drawing.Point(3, 180);
-            this.lblIdiomaEjemplarEJ.Name = "lblIdiomaEjemplarEJ";
-            this.lblIdiomaEjemplarEJ.Size = new System.Drawing.Size(70, 25);
-            this.lblIdiomaEjemplarEJ.TabIndex = 4;
-            this.lblIdiomaEjemplarEJ.Text = "Idioma";
+            this.lblFormatoEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblFormatoEjemplarEJ.AutoSize = true;
+            this.tblEjemplares.SetColumnSpan(this.lblFormatoEjemplarEJ, 2);
+            this.lblFormatoEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormatoEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
+            this.lblFormatoEjemplarEJ.Location = new System.Drawing.Point(3, 262);
+            this.lblFormatoEjemplarEJ.Name = "lblFormatoEjemplarEJ";
+            this.lblFormatoEjemplarEJ.Size = new System.Drawing.Size(82, 25);
+            this.lblFormatoEjemplarEJ.TabIndex = 5;
+            this.lblFormatoEjemplarEJ.Text = "Formato";
             // 
-            // txtAutorEjemplarAG
+            // cmbFormatoEjemplarAG
             // 
-            this.txtAutorEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbFormatoEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblEjemplares.SetColumnSpan(this.txtAutorEjemplarAG, 2);
-            this.txtAutorEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 126);
-            this.txtAutorEjemplarAG.Name = "txtAutorEjemplarAG";
-            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(186, 26);
-            this.txtAutorEjemplarAG.TabIndex = 24;
+            this.tblEjemplares.SetColumnSpan(this.cmbFormatoEjemplarAG, 2);
+            this.cmbFormatoEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFormatoEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFormatoEjemplarAG.FormattingEnabled = true;
+            this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 290);
+            this.cmbFormatoEjemplarAG.Name = "cmbFormatoEjemplarAG";
+            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(186, 28);
+            this.cmbFormatoEjemplarAG.TabIndex = 26;
             // 
-            // lblAutorEjemplarEJ
+            // btnDejarDeEditarEjemplarAG
             // 
-            this.lblAutorEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblAutorEjemplarEJ.AutoSize = true;
-            this.tblEjemplares.SetColumnSpan(this.lblAutorEjemplarEJ, 2);
-            this.lblAutorEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAutorEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
-            this.lblAutorEjemplarEJ.Location = new System.Drawing.Point(3, 98);
-            this.lblAutorEjemplarEJ.Name = "lblAutorEjemplarEJ";
-            this.lblAutorEjemplarEJ.Size = new System.Drawing.Size(59, 25);
-            this.lblAutorEjemplarEJ.TabIndex = 3;
-            this.lblAutorEjemplarEJ.Text = "Autor";
+            this.btnDejarDeEditarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblEjemplares.SetColumnSpan(this.btnDejarDeEditarEjemplarAG, 2);
+            this.btnDejarDeEditarEjemplarAG.Enabled = false;
+            this.btnDejarDeEditarEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDejarDeEditarEjemplarAG.Location = new System.Drawing.Point(3, 454);
+            this.btnDejarDeEditarEjemplarAG.Name = "btnDejarDeEditarEjemplarAG";
+            this.btnDejarDeEditarEjemplarAG.Size = new System.Drawing.Size(186, 41);
+            this.btnDejarDeEditarEjemplarAG.TabIndex = 28;
+            this.btnDejarDeEditarEjemplarAG.Text = "Dejar de editar";
+            this.btnDejarDeEditarEjemplarAG.UseVisualStyleBackColor = true;
+            this.btnDejarDeEditarEjemplarAG.Click += new System.EventHandler(this.btnSalirEdicionEjemplarAG_Click);
             // 
-            // txtNombreEjemplarAG
+            // btnEliminarEjemplarAG
             // 
-            this.txtNombreEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblEjemplares.SetColumnSpan(this.txtNombreEjemplarAG, 2);
-            this.txtNombreEjemplarAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 44);
-            this.txtNombreEjemplarAG.Name = "txtNombreEjemplarAG";
-            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(186, 26);
-            this.txtNombreEjemplarAG.TabIndex = 23;
+            this.btnEliminarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblEjemplares.SetColumnSpan(this.btnEliminarEjemplarAG, 2);
+            this.btnEliminarEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarEjemplarAG.Location = new System.Drawing.Point(3, 501);
+            this.btnEliminarEjemplarAG.Name = "btnEliminarEjemplarAG";
+            this.btnEliminarEjemplarAG.Size = new System.Drawing.Size(186, 41);
+            this.btnEliminarEjemplarAG.TabIndex = 35;
+            this.btnEliminarEjemplarAG.Text = "Eliminar";
+            this.btnEliminarEjemplarAG.UseVisualStyleBackColor = true;
             // 
-            // lblNombreEjemplarEJ
+            // btnEditarEjemplarAG
             // 
-            this.lblNombreEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblNombreEjemplarEJ.AutoSize = true;
-            this.tblEjemplares.SetColumnSpan(this.lblNombreEjemplarEJ, 2);
-            this.lblNombreEjemplarEJ.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEjemplarEJ.ForeColor = System.Drawing.Color.Transparent;
-            this.lblNombreEjemplarEJ.Location = new System.Drawing.Point(3, 16);
-            this.lblNombreEjemplarEJ.Name = "lblNombreEjemplarEJ";
-            this.lblNombreEjemplarEJ.Size = new System.Drawing.Size(81, 25);
-            this.lblNombreEjemplarEJ.TabIndex = 2;
-            this.lblNombreEjemplarEJ.Text = "Nombre";
+            this.btnEditarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblEjemplares.SetColumnSpan(this.btnEditarEjemplarAG, 2);
+            this.btnEditarEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarEjemplarAG.Location = new System.Drawing.Point(195, 454);
+            this.btnEditarEjemplarAG.Name = "btnEditarEjemplarAG";
+            this.btnEditarEjemplarAG.Size = new System.Drawing.Size(186, 41);
+            this.btnEditarEjemplarAG.TabIndex = 34;
+            this.btnEditarEjemplarAG.Text = "Editar";
+            this.btnEditarEjemplarAG.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarEjemplarAG
+            // 
+            this.btnAgregarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblEjemplares.SetColumnSpan(this.btnAgregarEjemplarAG, 2);
+            this.btnAgregarEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(195, 501);
+            this.btnAgregarEjemplarAG.Name = "btnAgregarEjemplarAG";
+            this.btnAgregarEjemplarAG.Size = new System.Drawing.Size(186, 42);
+            this.btnAgregarEjemplarAG.TabIndex = 27;
+            this.btnAgregarEjemplarAG.Text = "Agregar";
+            this.btnAgregarEjemplarAG.UseVisualStyleBackColor = true;
+            this.btnAgregarEjemplarAG.Click += new System.EventHandler(this.btnAgregarEjemplarAG_Click);
             // 
             // chkDisponibilidadEjemplarAG
             // 
@@ -1479,7 +1502,7 @@ namespace BINAES
             this.chkFísicoBU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkFísicoBU.UseVisualStyleBackColor = true;
             // 
-            // chkDigitalBU
+            // chkBusquedaExactaBU
             // 
             this.chkBusquedaExactaBU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.chkBusquedaExactaBU.AutoSize = true;
@@ -1550,7 +1573,6 @@ namespace BINAES
             this.tblUsuarios.Controls.Add(this.txtNombreUS, 0, 1);
             this.tblUsuarios.Controls.Add(this.lblInstitucionUsuarioUS, 0, 6);
             this.tblUsuarios.Controls.Add(this.txtInstitucionUS, 0, 7);
-            this.tblUsuarios.Controls.Add(this.cmbOcupacionUS, 0, 11);
             this.tblUsuarios.Controls.Add(this.lblOcupacionUsuarioUS, 0, 10);
             this.tblUsuarios.Controls.Add(this.lblContraseniaUsuarioUS, 0, 2);
             this.tblUsuarios.Controls.Add(this.txtContraseñaUS, 0, 3);
@@ -1566,6 +1588,7 @@ namespace BINAES
             this.tblUsuarios.Controls.Add(this.btnTomarFotoUS, 1, 11);
             this.tblUsuarios.Controls.Add(this.btnCancelarFotoUS, 2, 11);
             this.tblUsuarios.Controls.Add(this.btnActualizarUS, 2, 12);
+            this.tblUsuarios.Controls.Add(this.cmbOcupacionUS, 0, 11);
             this.tblUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblUsuarios.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tblUsuarios.Location = new System.Drawing.Point(0, 0);
@@ -1683,18 +1706,6 @@ namespace BINAES
             this.txtInstitucionUS.Name = "txtInstitucionUS";
             this.txtInstitucionUS.Size = new System.Drawing.Size(234, 26);
             this.txtInstitucionUS.TabIndex = 37;
-            // 
-            // cmbOcupacionUS
-            // 
-            this.cmbOcupacionUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbOcupacionUS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbOcupacionUS.FormattingEnabled = true;
-            this.cmbOcupacionUS.Location = new System.Drawing.Point(3, 465);
-            this.cmbOcupacionUS.Name = "cmbOcupacionUS";
-            this.cmbOcupacionUS.Size = new System.Drawing.Size(234, 28);
-            this.cmbOcupacionUS.TabIndex = 33;
             // 
             // lblOcupacionUsuarioUS
             // 
@@ -2535,29 +2546,13 @@ namespace BINAES
             this.btnCerrarPrincipal.UseVisualStyleBackColor = true;
             this.btnCerrarPrincipal.Click += new System.EventHandler(this.btnCerrarPrincipal_Click);
             // 
-            // btnEditarEjemplarAG
+            // cmbOcupacionUS
             // 
-            this.btnEditarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblEjemplares.SetColumnSpan(this.btnEditarEjemplarAG, 2);
-            this.btnEditarEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarEjemplarAG.Location = new System.Drawing.Point(195, 454);
-            this.btnEditarEjemplarAG.Name = "btnEditarEjemplarAG";
-            this.btnEditarEjemplarAG.Size = new System.Drawing.Size(186, 41);
-            this.btnEditarEjemplarAG.TabIndex = 34;
-            this.btnEditarEjemplarAG.Text = "Editar";
-            this.btnEditarEjemplarAG.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarEjemplarAG
-            // 
-            this.btnEliminarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblEjemplares.SetColumnSpan(this.btnEliminarEjemplarAG, 2);
-            this.btnEliminarEjemplarAG.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarEjemplarAG.Location = new System.Drawing.Point(3, 501);
-            this.btnEliminarEjemplarAG.Name = "btnEliminarEjemplarAG";
-            this.btnEliminarEjemplarAG.Size = new System.Drawing.Size(186, 41);
-            this.btnEliminarEjemplarAG.TabIndex = 35;
-            this.btnEliminarEjemplarAG.Text = "Eliminar";
-            this.btnEliminarEjemplarAG.UseVisualStyleBackColor = true;
+            this.cmbOcupacionUS.FormattingEnabled = true;
+            this.cmbOcupacionUS.Location = new System.Drawing.Point(3, 465);
+            this.cmbOcupacionUS.Name = "cmbOcupacionUS";
+            this.cmbOcupacionUS.Size = new System.Drawing.Size(121, 29);
+            this.cmbOcupacionUS.TabIndex = 51;
             // 
             // frmPrincipal
             // 
@@ -2729,7 +2724,6 @@ namespace BINAES
         private TextBox txtNombreUS;
         private Label lblInstitucionUsuarioUS;
         private TextBox txtInstitucionUS;
-        private ComboBox cmbOcupacionUS;
         private Label lblOcupacionUsuarioUS;
         private Label lblContraseniaUsuarioUS;
         private TextBox txtContraseñaUS;
@@ -2791,5 +2785,6 @@ namespace BINAES
         private FontAwesome.Sharp.IconButton btnColeccionesPPrincipal;
         private Button btnEditarEjemplarAG;
         private Button btnEliminarEjemplarAG;
+        private ComboBox cmbOcupacionUS;
     }
 }

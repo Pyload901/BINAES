@@ -24,7 +24,7 @@ namespace BINAES
                         {
                             Rol rol = new Rol (
                                reader["id"].ToString(),
-                               reader["nombre"].ToString()
+                               reader["rol"].ToString()
                 
                             );
                             list.Add(rol);

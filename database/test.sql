@@ -186,3 +186,6 @@ SELECT E.id, E.nombre, E.imagen, E.autor, E.fecha_publicacion, E.disponibilidad,
         ON F.id = E.id_formato
 
         SELECT * FROM EJEMPLAR;
+
+        SELECT * FROM ROL;
+        SELECT * FROM OCUPACION_USUARIO;

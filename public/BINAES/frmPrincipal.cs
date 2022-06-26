@@ -207,14 +207,13 @@ namespace BINAES
 
                    
                     cmbOcupacionUS.ValueMember = "id";
-                    cmbOcupacionUS.DisplayMember = "nombre.nombre";
+                    cmbOcupacionUS.DisplayMember = "ocupacion";
                     cmbOcupacionUS.DataSource = OcupacionDAO.Leer();
 
-                    List<Ocupacion> list = OcupacionDAO.Leer();
-                    foreach (var ocupacion in list)
+                    /*foreach (var ocupacion in list)
                     {
-                        Console.WriteLine(ocupacion.nombre);
-                    }
+                        Console.WriteLine(ocupacion.ocupacion);
+                    }*/
 
                     cmbRolUS.ValueMember = "id";
                     cmbRolUS.DisplayMember = "nombre";
