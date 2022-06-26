@@ -551,15 +551,7 @@ namespace BINAES
             //dataGridView1.DataSource = PrestamoEjemplarDAO.Insertar();
         }
 
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnAddEjemplarPPrincipal_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
      

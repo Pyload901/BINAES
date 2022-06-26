@@ -179,6 +179,8 @@ namespace BINAES
             this.sspNombre = new System.Windows.Forms.ToolStripStatusLabel();
             this.sspRol = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnIntroPPrincipal = new FontAwesome.Sharp.IconButton();
+            this.btnMisionVisionPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnAddUsuarioPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnAddEventoPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnAddEjemplarPPrincipal = new FontAwesome.Sharp.IconButton();
@@ -191,8 +193,6 @@ namespace BINAES
             this.btnMinPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnMaxPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnCerrarPrincipal = new FontAwesome.Sharp.IconButton();
-            this.btnMisionVisionPPrincipal = new FontAwesome.Sharp.IconButton();
-            this.btnIntroPPrincipal = new FontAwesome.Sharp.IconButton();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tblEventos.SuspendLayout();
@@ -310,6 +310,8 @@ namespace BINAES
             this.btnAgregarUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarUS.Location = new System.Drawing.Point(244, 519);
             this.btnAgregarUS.Name = "btnAgregarUS";
             this.btnAgregarUS.Size = new System.Drawing.Size(114, 38);
@@ -679,10 +681,10 @@ namespace BINAES
             // 
             // btnSalirEdicionEjemplarAG
             // 
-            this.btnSalirEdicionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalirEdicionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalirEdicionEjemplarAG.Enabled = false;
+            this.btnSalirEdicionEjemplarAG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalirEdicionEjemplarAG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalirEdicionEjemplarAG.Location = new System.Drawing.Point(3, 519);
             this.btnSalirEdicionEjemplarAG.Name = "btnSalirEdicionEjemplarAG";
             this.btnSalirEdicionEjemplarAG.Size = new System.Drawing.Size(199, 45);
@@ -693,9 +695,9 @@ namespace BINAES
             // 
             // btnAgregarEjemplarAG
             // 
-            this.btnAgregarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarEjemplarAG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarEjemplarAG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarEjemplarAG.Location = new System.Drawing.Point(208, 519);
             this.btnAgregarEjemplarAG.Name = "btnAgregarEjemplarAG";
             this.btnAgregarEjemplarAG.Size = new System.Drawing.Size(199, 45);
@@ -709,18 +711,20 @@ namespace BINAES
             this.txtEditorialEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEditorialEjemplarAG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEditorialEjemplarAG.Location = new System.Drawing.Point(208, 46);
             this.txtEditorialEjemplarAG.Name = "txtEditorialEjemplarAG";
-            this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(199, 34);
+            this.txtEditorialEjemplarAG.Size = new System.Drawing.Size(199, 32);
             this.txtEditorialEjemplarAG.TabIndex = 22;
             // 
             // lblImagenEjemplarEJ
             // 
             this.lblImagenEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblImagenEjemplarEJ.AutoSize = true;
-            this.lblImagenEjemplarEJ.Location = new System.Drawing.Point(208, 273);
+            this.lblImagenEjemplarEJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImagenEjemplarEJ.Location = new System.Drawing.Point(208, 278);
             this.lblImagenEjemplarEJ.Name = "lblImagenEjemplarEJ";
-            this.lblImagenEjemplarEJ.Size = new System.Drawing.Size(77, 28);
+            this.lblImagenEjemplarEJ.Size = new System.Drawing.Size(86, 23);
             this.lblImagenEjemplarEJ.TabIndex = 9;
             this.lblImagenEjemplarEJ.Text = "Imagen";
             // 
@@ -728,9 +732,10 @@ namespace BINAES
             // 
             this.lblNombreEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblNombreEjemplarEJ.AutoSize = true;
-            this.lblNombreEjemplarEJ.Location = new System.Drawing.Point(3, 101);
+            this.lblNombreEjemplarEJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEjemplarEJ.Location = new System.Drawing.Point(3, 106);
             this.lblNombreEjemplarEJ.Name = "lblNombreEjemplarEJ";
-            this.lblNombreEjemplarEJ.Size = new System.Drawing.Size(85, 28);
+            this.lblNombreEjemplarEJ.Size = new System.Drawing.Size(90, 23);
             this.lblNombreEjemplarEJ.TabIndex = 2;
             this.lblNombreEjemplarEJ.Text = "Nombre";
             // 
@@ -738,9 +743,10 @@ namespace BINAES
             // 
             this.lblAutorEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblAutorEjemplarEJ.AutoSize = true;
-            this.lblAutorEjemplarEJ.Location = new System.Drawing.Point(3, 187);
+            this.lblAutorEjemplarEJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutorEjemplarEJ.Location = new System.Drawing.Point(3, 192);
             this.lblAutorEjemplarEJ.Name = "lblAutorEjemplarEJ";
-            this.lblAutorEjemplarEJ.Size = new System.Drawing.Size(62, 28);
+            this.lblAutorEjemplarEJ.Size = new System.Drawing.Size(63, 23);
             this.lblAutorEjemplarEJ.TabIndex = 3;
             this.lblAutorEjemplarEJ.Text = "Autor";
             // 
@@ -748,9 +754,10 @@ namespace BINAES
             // 
             this.lblFechaPublicacionEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblFechaPublicacionEjemplarEJ.AutoSize = true;
-            this.lblFechaPublicacionEjemplarEJ.Location = new System.Drawing.Point(208, 101);
+            this.lblFechaPublicacionEjemplarEJ.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaPublicacionEjemplarEJ.Location = new System.Drawing.Point(208, 87);
             this.lblFechaPublicacionEjemplarEJ.Name = "lblFechaPublicacionEjemplarEJ";
-            this.lblFechaPublicacionEjemplarEJ.Size = new System.Drawing.Size(195, 28);
+            this.lblFechaPublicacionEjemplarEJ.Size = new System.Drawing.Size(113, 42);
             this.lblFechaPublicacionEjemplarEJ.TabIndex = 7;
             this.lblFechaPublicacionEjemplarEJ.Text = "Fecha de publicación";
             // 
@@ -758,9 +765,10 @@ namespace BINAES
             // 
             this.lblIdiomaEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblIdiomaEjemplarEJ.AutoSize = true;
-            this.lblIdiomaEjemplarEJ.Location = new System.Drawing.Point(3, 273);
+            this.lblIdiomaEjemplarEJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdiomaEjemplarEJ.Location = new System.Drawing.Point(3, 278);
             this.lblIdiomaEjemplarEJ.Name = "lblIdiomaEjemplarEJ";
-            this.lblIdiomaEjemplarEJ.Size = new System.Drawing.Size(73, 28);
+            this.lblIdiomaEjemplarEJ.Size = new System.Drawing.Size(78, 23);
             this.lblIdiomaEjemplarEJ.TabIndex = 4;
             this.lblIdiomaEjemplarEJ.Text = "Idioma";
             // 
@@ -768,9 +776,10 @@ namespace BINAES
             // 
             this.lblEditorialEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblEditorialEjemplarEJ.AutoSize = true;
-            this.lblEditorialEjemplarEJ.Location = new System.Drawing.Point(208, 15);
+            this.lblEditorialEjemplarEJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditorialEjemplarEJ.Location = new System.Drawing.Point(208, 20);
             this.lblEditorialEjemplarEJ.Name = "lblEditorialEjemplarEJ";
-            this.lblEditorialEjemplarEJ.Size = new System.Drawing.Size(85, 28);
+            this.lblEditorialEjemplarEJ.Size = new System.Drawing.Size(86, 23);
             this.lblEditorialEjemplarEJ.TabIndex = 1;
             this.lblEditorialEjemplarEJ.Text = "Editorial";
             // 
@@ -778,9 +787,10 @@ namespace BINAES
             // 
             this.lblEtiquetasEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblEtiquetasEjemplarEJ.AutoSize = true;
-            this.lblEtiquetasEjemplarEJ.Location = new System.Drawing.Point(3, 445);
+            this.lblEtiquetasEjemplarEJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEtiquetasEjemplarEJ.Location = new System.Drawing.Point(3, 450);
             this.lblEtiquetasEjemplarEJ.Name = "lblEtiquetasEjemplarEJ";
-            this.lblEtiquetasEjemplarEJ.Size = new System.Drawing.Size(92, 28);
+            this.lblEtiquetasEjemplarEJ.Size = new System.Drawing.Size(99, 23);
             this.lblEtiquetasEjemplarEJ.TabIndex = 6;
             this.lblEtiquetasEjemplarEJ.Text = "Etiquetas";
             // 
@@ -788,9 +798,10 @@ namespace BINAES
             // 
             this.lblFormatoEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblFormatoEjemplarEJ.AutoSize = true;
-            this.lblFormatoEjemplarEJ.Location = new System.Drawing.Point(3, 359);
+            this.lblFormatoEjemplarEJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormatoEjemplarEJ.Location = new System.Drawing.Point(3, 364);
             this.lblFormatoEjemplarEJ.Name = "lblFormatoEjemplarEJ";
-            this.lblFormatoEjemplarEJ.Size = new System.Drawing.Size(87, 28);
+            this.lblFormatoEjemplarEJ.Size = new System.Drawing.Size(92, 23);
             this.lblFormatoEjemplarEJ.TabIndex = 5;
             this.lblFormatoEjemplarEJ.Text = "Formato";
             // 
@@ -798,9 +809,10 @@ namespace BINAES
             // 
             this.lblTipoColeccionEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTipoColeccionEjemplarEJ.AutoSize = true;
-            this.lblTipoColeccionEjemplarEJ.Location = new System.Drawing.Point(208, 187);
+            this.lblTipoColeccionEjemplarEJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoColeccionEjemplarEJ.Location = new System.Drawing.Point(208, 192);
             this.lblTipoColeccionEjemplarEJ.Name = "lblTipoColeccionEjemplarEJ";
-            this.lblTipoColeccionEjemplarEJ.Size = new System.Drawing.Size(165, 28);
+            this.lblTipoColeccionEjemplarEJ.Size = new System.Drawing.Size(185, 23);
             this.lblTipoColeccionEjemplarEJ.TabIndex = 8;
             this.lblTipoColeccionEjemplarEJ.Text = "Tipo de colección";
             // 
@@ -808,20 +820,20 @@ namespace BINAES
             // 
             this.lblCodigoEjemplarEJ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCodigoEjemplarEJ.AutoSize = true;
-            this.lblCodigoEjemplarEJ.Location = new System.Drawing.Point(3, 15);
+            this.lblCodigoEjemplarEJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoEjemplarEJ.Location = new System.Drawing.Point(3, 20);
             this.lblCodigoEjemplarEJ.Name = "lblCodigoEjemplarEJ";
-            this.lblCodigoEjemplarEJ.Size = new System.Drawing.Size(158, 28);
+            this.lblCodigoEjemplarEJ.Size = new System.Drawing.Size(175, 23);
             this.lblCodigoEjemplarEJ.TabIndex = 0;
             this.lblCodigoEjemplarEJ.Text = "Código ejemplar";
             // 
             // txtCodigoEjemplarAG
             // 
-            this.txtCodigoEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodigoEjemplarAG.Location = new System.Drawing.Point(3, 46);
+            this.txtCodigoEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodigoEjemplarAG.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoEjemplarAG.Location = new System.Drawing.Point(3, 53);
             this.txtCodigoEjemplarAG.Name = "txtCodigoEjemplarAG";
-            this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(199, 34);
+            this.txtCodigoEjemplarAG.Size = new System.Drawing.Size(199, 23);
             this.txtCodigoEjemplarAG.TabIndex = 10;
             // 
             // cmbIdiomaEjemplarAG
@@ -830,10 +842,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbIdiomaEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdiomaEjemplarAG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbIdiomaEjemplarAG.FormattingEnabled = true;
             this.cmbIdiomaEjemplarAG.Location = new System.Drawing.Point(3, 304);
             this.cmbIdiomaEjemplarAG.Name = "cmbIdiomaEjemplarAG";
-            this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(199, 36);
+            this.cmbIdiomaEjemplarAG.Size = new System.Drawing.Size(199, 31);
             this.cmbIdiomaEjemplarAG.TabIndex = 13;
             // 
             // btnEtiquetasEjemplarAG
@@ -841,6 +854,8 @@ namespace BINAES
             this.btnEtiquetasEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEtiquetasEjemplarAG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEtiquetasEjemplarAG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEtiquetasEjemplarAG.Location = new System.Drawing.Point(3, 476);
             this.btnEtiquetasEjemplarAG.Name = "btnEtiquetasEjemplarAG";
             this.btnEtiquetasEjemplarAG.Size = new System.Drawing.Size(199, 37);
@@ -853,9 +868,10 @@ namespace BINAES
             this.txtNombreEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreEjemplarAG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreEjemplarAG.Location = new System.Drawing.Point(3, 132);
             this.txtNombreEjemplarAG.Name = "txtNombreEjemplarAG";
-            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(199, 34);
+            this.txtNombreEjemplarAG.Size = new System.Drawing.Size(199, 32);
             this.txtNombreEjemplarAG.TabIndex = 23;
             // 
             // txtAutorEjemplarAG
@@ -863,9 +879,10 @@ namespace BINAES
             this.txtAutorEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAutorEjemplarAG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAutorEjemplarAG.Location = new System.Drawing.Point(3, 218);
             this.txtAutorEjemplarAG.Name = "txtAutorEjemplarAG";
-            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(199, 34);
+            this.txtAutorEjemplarAG.Size = new System.Drawing.Size(199, 32);
             this.txtAutorEjemplarAG.TabIndex = 24;
             // 
             // cmbTipoColeccionEjemplarAG
@@ -874,10 +891,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTipoColeccionEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoColeccionEjemplarAG.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoColeccionEjemplarAG.FormattingEnabled = true;
             this.cmbTipoColeccionEjemplarAG.Location = new System.Drawing.Point(208, 218);
             this.cmbTipoColeccionEjemplarAG.Name = "cmbTipoColeccionEjemplarAG";
-            this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(199, 36);
+            this.cmbTipoColeccionEjemplarAG.Size = new System.Drawing.Size(199, 31);
             this.cmbTipoColeccionEjemplarAG.TabIndex = 25;
             // 
             // cmbFormatoEjemplarAG
@@ -886,10 +904,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFormatoEjemplarAG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFormatoEjemplarAG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFormatoEjemplarAG.FormattingEnabled = true;
             this.cmbFormatoEjemplarAG.Location = new System.Drawing.Point(3, 390);
             this.cmbFormatoEjemplarAG.Name = "cmbFormatoEjemplarAG";
-            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(199, 36);
+            this.cmbFormatoEjemplarAG.Size = new System.Drawing.Size(199, 31);
             this.cmbFormatoEjemplarAG.TabIndex = 26;
             // 
             // dgvEjemplaresAG
@@ -911,9 +930,10 @@ namespace BINAES
             this.dtpFechaPublicacionEjemplarAG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFechaPublicacionEjemplarAG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaPublicacionEjemplarAG.Location = new System.Drawing.Point(208, 132);
             this.dtpFechaPublicacionEjemplarAG.Name = "dtpFechaPublicacionEjemplarAG";
-            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(199, 34);
+            this.dtpFechaPublicacionEjemplarAG.Size = new System.Drawing.Size(199, 32);
             this.dtpFechaPublicacionEjemplarAG.TabIndex = 30;
             // 
             // picEjemplarAG
@@ -994,9 +1014,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEjemplarRE.AutoSize = true;
             this.tblReserva.SetColumnSpan(this.lblEjemplarRE, 2);
-            this.lblEjemplarRE.Location = new System.Drawing.Point(98, 100);
+            this.lblEjemplarRE.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEjemplarRE.Location = new System.Drawing.Point(98, 105);
             this.lblEjemplarRE.Name = "lblEjemplarRE";
-            this.lblEjemplarRE.Size = new System.Drawing.Size(184, 28);
+            this.lblEjemplarRE.Size = new System.Drawing.Size(184, 23);
             this.lblEjemplarRE.TabIndex = 1;
             this.lblEjemplarRE.Text = "Ejemplar:";
             // 
@@ -1006,6 +1027,8 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tblReserva.SetColumnSpan(this.btnReservarRE, 2);
+            this.btnReservarRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReservarRE.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservarRE.Location = new System.Drawing.Point(98, 423);
             this.btnReservarRE.Name = "btnReservarRE";
             this.btnReservarRE.Size = new System.Drawing.Size(184, 67);
@@ -1020,9 +1043,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuarioRE.AutoSize = true;
             this.tblReserva.SetColumnSpan(this.lblUsuarioRE, 2);
-            this.lblUsuarioRE.Location = new System.Drawing.Point(98, 246);
+            this.lblUsuarioRE.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioRE.Location = new System.Drawing.Point(98, 251);
             this.lblUsuarioRE.Name = "lblUsuarioRE";
-            this.lblUsuarioRE.Size = new System.Drawing.Size(184, 28);
+            this.lblUsuarioRE.Size = new System.Drawing.Size(184, 23);
             this.lblUsuarioRE.TabIndex = 34;
             this.lblUsuarioRE.Text = "ID Usuario";
             // 
@@ -1030,6 +1054,8 @@ namespace BINAES
             // 
             this.btnBuscarEjemplarRE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarEjemplarRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarEjemplarRE.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(193, 131);
             this.btnBuscarEjemplarRE.Name = "btnBuscarEjemplarRE";
             this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(89, 67);
@@ -1043,6 +1069,8 @@ namespace BINAES
             this.btnQrRE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQrRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnQrRE.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQrRE.Location = new System.Drawing.Point(193, 277);
             this.btnQrRE.Name = "btnQrRE";
             this.btnQrRE.Size = new System.Drawing.Size(89, 67);
@@ -1054,17 +1082,19 @@ namespace BINAES
             // nudIdEjemplarRE
             // 
             this.nudIdEjemplarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudIdEjemplarRE.Location = new System.Drawing.Point(98, 147);
+            this.nudIdEjemplarRE.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudIdEjemplarRE.Location = new System.Drawing.Point(98, 148);
             this.nudIdEjemplarRE.Name = "nudIdEjemplarRE";
-            this.nudIdEjemplarRE.Size = new System.Drawing.Size(89, 34);
+            this.nudIdEjemplarRE.Size = new System.Drawing.Size(89, 32);
             this.nudIdEjemplarRE.TabIndex = 36;
             // 
             // nudIdUsuarioRE
             // 
             this.nudIdUsuarioRE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudIdUsuarioRE.Location = new System.Drawing.Point(98, 293);
+            this.nudIdUsuarioRE.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudIdUsuarioRE.Location = new System.Drawing.Point(98, 294);
             this.nudIdUsuarioRE.Name = "nudIdUsuarioRE";
-            this.nudIdUsuarioRE.Size = new System.Drawing.Size(89, 34);
+            this.nudIdUsuarioRE.Size = new System.Drawing.Size(89, 32);
             this.nudIdUsuarioRE.TabIndex = 37;
             // 
             // label26
@@ -1111,31 +1141,32 @@ namespace BINAES
             // tblPrestamo
             // 
             this.tblPrestamo.ColumnCount = 5;
-            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.2482F));
-            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.389465F));
-            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.2506F));
-            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.34888F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.00127F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.103657F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.19732F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.348877F));
             this.tblPrestamo.Controls.Add(this.dataGridView1, 3, 1);
             this.tblPrestamo.Controls.Add(this.lblEjemplarPR, 1, 1);
-            this.tblPrestamo.Controls.Add(this.btnCompletarPR, 1, 6);
             this.tblPrestamo.Controls.Add(this.textBox3, 1, 5);
             this.tblPrestamo.Controls.Add(this.lblUsuarioPR, 1, 4);
             this.tblPrestamo.Controls.Add(this.btnBuscarPR, 1, 3);
             this.tblPrestamo.Controls.Add(this.textBox4, 1, 2);
+            this.tblPrestamo.Controls.Add(this.btnCompletarPR, 1, 6);
             this.tblPrestamo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPrestamo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tblPrestamo.Location = new System.Drawing.Point(3, 4);
             this.tblPrestamo.Name = "tblPrestamo";
-            this.tblPrestamo.RowCount = 8;
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.090615F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.796116F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.32686F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.928802F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.090615F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.81877F));
+            this.tblPrestamo.RowCount = 9;
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.25746F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.25747F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.639136F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.318028F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.318028F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.506353F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.694468F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.75159F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.25747F));
             this.tblPrestamo.Size = new System.Drawing.Size(958, 552);
             this.tblPrestamo.TabIndex = 13;
             // 
@@ -1145,11 +1176,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(267, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(313, 59);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.tblPrestamo.SetRowSpan(this.dataGridView1, 7);
-            this.dataGridView1.Size = new System.Drawing.Size(591, 478);
+            this.dataGridView1.Size = new System.Drawing.Size(551, 429);
             this.dataGridView1.TabIndex = 31;
             // 
             // lblEjemplarPR
@@ -1157,9 +1188,11 @@ namespace BINAES
             this.lblEjemplarPR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEjemplarPR.AutoSize = true;
-            this.lblEjemplarPR.Location = new System.Drawing.Point(98, 108);
+            this.lblEjemplarPR.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEjemplarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEjemplarPR.Location = new System.Drawing.Point(92, 89);
             this.lblEjemplarPR.Name = "lblEjemplarPR";
-            this.lblEjemplarPR.Size = new System.Drawing.Size(121, 28);
+            this.lblEjemplarPR.Size = new System.Drawing.Size(176, 23);
             this.lblEjemplarPR.TabIndex = 1;
             this.lblEjemplarPR.Text = "Ejemplar:";
             // 
@@ -1168,9 +1201,12 @@ namespace BINAES
             this.btnCompletarPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCompletarPR.Location = new System.Drawing.Point(98, 324);
+            this.btnCompletarPR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCompletarPR.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompletarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCompletarPR.Location = new System.Drawing.Point(92, 288);
             this.btnCompletarPR.Name = "btnCompletarPR";
-            this.btnCompletarPR.Size = new System.Drawing.Size(121, 38);
+            this.btnCompletarPR.Size = new System.Drawing.Size(176, 47);
             this.btnCompletarPR.TabIndex = 32;
             this.btnCompletarPR.Text = "Completar";
             this.btnCompletarPR.UseVisualStyleBackColor = true;
@@ -1178,9 +1214,9 @@ namespace BINAES
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(98, 281);
+            this.textBox3.Location = new System.Drawing.Point(92, 253);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 34);
+            this.textBox3.Size = new System.Drawing.Size(176, 34);
             this.textBox3.TabIndex = 34;
             // 
             // lblUsuarioPR
@@ -1188,9 +1224,11 @@ namespace BINAES
             this.lblUsuarioPR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuarioPR.AutoSize = true;
-            this.lblUsuarioPR.Location = new System.Drawing.Point(98, 250);
+            this.lblUsuarioPR.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUsuarioPR.Location = new System.Drawing.Point(92, 227);
             this.lblUsuarioPR.Name = "lblUsuarioPR";
-            this.lblUsuarioPR.Size = new System.Drawing.Size(121, 28);
+            this.lblUsuarioPR.Size = new System.Drawing.Size(176, 23);
             this.lblUsuarioPR.TabIndex = 8;
             this.lblUsuarioPR.Text = "ID usuario:";
             // 
@@ -1199,9 +1237,12 @@ namespace BINAES
             this.btnBuscarPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarPR.Location = new System.Drawing.Point(98, 183);
+            this.btnBuscarPR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarPR.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscarPR.Location = new System.Drawing.Point(92, 151);
             this.btnBuscarPR.Name = "btnBuscarPR";
-            this.btnBuscarPR.Size = new System.Drawing.Size(121, 31);
+            this.btnBuscarPR.Size = new System.Drawing.Size(176, 45);
             this.btnBuscarPR.TabIndex = 33;
             this.btnBuscarPR.Text = "Búscar";
             this.btnBuscarPR.UseVisualStyleBackColor = true;
@@ -1212,9 +1253,9 @@ namespace BINAES
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(98, 139);
+            this.textBox4.Location = new System.Drawing.Point(92, 115);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 34);
+            this.textBox4.Size = new System.Drawing.Size(176, 34);
             this.textBox4.TabIndex = 35;
             // 
             // tabBuscar
@@ -1396,6 +1437,7 @@ namespace BINAES
             this.tabAdmin.Tag = "";
             this.tabAdmin.SelectedIndexChanged += new System.EventHandler(this.tabAdmin_SelectedIndexChanged);
             this.tabAdmin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabAdmin_KeyDown);
+           
             // 
             // tabUsuarios
             // 
@@ -1469,9 +1511,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFotoUsuarioUS.AutoSize = true;
             this.tblUsuarios.SetColumnSpan(this.lblFotoUsuarioUS, 2);
-            this.lblFotoUsuarioUS.Location = new System.Drawing.Point(244, 187);
+            this.lblFotoUsuarioUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFotoUsuarioUS.Location = new System.Drawing.Point(244, 192);
             this.lblFotoUsuarioUS.Name = "lblFotoUsuarioUS";
-            this.lblFotoUsuarioUS.Size = new System.Drawing.Size(234, 28);
+            this.lblFotoUsuarioUS.Size = new System.Drawing.Size(234, 23);
             this.lblFotoUsuarioUS.TabIndex = 49;
             this.lblFotoUsuarioUS.Text = "Foto";
             // 
@@ -1481,6 +1524,8 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDejarDeEditarUS.Enabled = false;
+            this.btnDejarDeEditarUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDejarDeEditarUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDejarDeEditarUS.Location = new System.Drawing.Point(3, 519);
             this.btnDejarDeEditarUS.Name = "btnDejarDeEditarUS";
             this.btnDejarDeEditarUS.Size = new System.Drawing.Size(235, 38);
@@ -1508,9 +1553,10 @@ namespace BINAES
             this.lblNombreUsuarioUS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombreUsuarioUS.AutoSize = true;
-            this.lblNombreUsuarioUS.Location = new System.Drawing.Point(3, 15);
+            this.lblNombreUsuarioUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreUsuarioUS.Location = new System.Drawing.Point(3, 20);
             this.lblNombreUsuarioUS.Name = "lblNombreUsuarioUS";
-            this.lblNombreUsuarioUS.Size = new System.Drawing.Size(235, 28);
+            this.lblNombreUsuarioUS.Size = new System.Drawing.Size(235, 23);
             this.lblNombreUsuarioUS.TabIndex = 30;
             this.lblNombreUsuarioUS.Text = "Nombre";
             // 
@@ -1519,9 +1565,10 @@ namespace BINAES
             this.txtNombreUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreUS.Location = new System.Drawing.Point(3, 46);
             this.txtNombreUS.Name = "txtNombreUS";
-            this.txtNombreUS.Size = new System.Drawing.Size(235, 34);
+            this.txtNombreUS.Size = new System.Drawing.Size(235, 32);
             this.txtNombreUS.TabIndex = 31;
             // 
             // lblInstitucionUsuarioUS
@@ -1529,9 +1576,10 @@ namespace BINAES
             this.lblInstitucionUsuarioUS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInstitucionUsuarioUS.AutoSize = true;
-            this.lblInstitucionUsuarioUS.Location = new System.Drawing.Point(3, 273);
+            this.lblInstitucionUsuarioUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstitucionUsuarioUS.Location = new System.Drawing.Point(3, 278);
             this.lblInstitucionUsuarioUS.Name = "lblInstitucionUsuarioUS";
-            this.lblInstitucionUsuarioUS.Size = new System.Drawing.Size(235, 28);
+            this.lblInstitucionUsuarioUS.Size = new System.Drawing.Size(235, 23);
             this.lblInstitucionUsuarioUS.TabIndex = 36;
             this.lblInstitucionUsuarioUS.Text = "Institución";
             this.lblInstitucionUsuarioUS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1541,9 +1589,10 @@ namespace BINAES
             this.txtInstitucionUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtInstitucionUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInstitucionUS.Location = new System.Drawing.Point(3, 304);
             this.txtInstitucionUS.Name = "txtInstitucionUS";
-            this.txtInstitucionUS.Size = new System.Drawing.Size(235, 34);
+            this.txtInstitucionUS.Size = new System.Drawing.Size(235, 32);
             this.txtInstitucionUS.TabIndex = 37;
             // 
             // cmbOcupacionUS
@@ -1551,10 +1600,11 @@ namespace BINAES
             this.cmbOcupacionUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbOcupacionUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbOcupacionUS.FormattingEnabled = true;
             this.cmbOcupacionUS.Location = new System.Drawing.Point(3, 476);
             this.cmbOcupacionUS.Name = "cmbOcupacionUS";
-            this.cmbOcupacionUS.Size = new System.Drawing.Size(235, 36);
+            this.cmbOcupacionUS.Size = new System.Drawing.Size(235, 31);
             this.cmbOcupacionUS.TabIndex = 33;
             // 
             // lblOcupacionUsuarioUS
@@ -1562,9 +1612,10 @@ namespace BINAES
             this.lblOcupacionUsuarioUS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOcupacionUsuarioUS.AutoSize = true;
-            this.lblOcupacionUsuarioUS.Location = new System.Drawing.Point(3, 445);
+            this.lblOcupacionUsuarioUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcupacionUsuarioUS.Location = new System.Drawing.Point(3, 450);
             this.lblOcupacionUsuarioUS.Name = "lblOcupacionUsuarioUS";
-            this.lblOcupacionUsuarioUS.Size = new System.Drawing.Size(235, 28);
+            this.lblOcupacionUsuarioUS.Size = new System.Drawing.Size(235, 23);
             this.lblOcupacionUsuarioUS.TabIndex = 32;
             this.lblOcupacionUsuarioUS.Text = "Ocupación";
             this.lblOcupacionUsuarioUS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1574,9 +1625,10 @@ namespace BINAES
             this.lblContraseniaUsuarioUS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblContraseniaUsuarioUS.AutoSize = true;
-            this.lblContraseniaUsuarioUS.Location = new System.Drawing.Point(3, 101);
+            this.lblContraseniaUsuarioUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseniaUsuarioUS.Location = new System.Drawing.Point(3, 106);
             this.lblContraseniaUsuarioUS.Name = "lblContraseniaUsuarioUS";
-            this.lblContraseniaUsuarioUS.Size = new System.Drawing.Size(235, 28);
+            this.lblContraseniaUsuarioUS.Size = new System.Drawing.Size(235, 23);
             this.lblContraseniaUsuarioUS.TabIndex = 42;
             this.lblContraseniaUsuarioUS.Text = "Contraseña";
             // 
@@ -1585,9 +1637,10 @@ namespace BINAES
             this.txtContraseñaUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtContraseñaUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseñaUS.Location = new System.Drawing.Point(3, 132);
             this.txtContraseñaUS.Name = "txtContraseñaUS";
-            this.txtContraseñaUS.Size = new System.Drawing.Size(235, 34);
+            this.txtContraseñaUS.Size = new System.Drawing.Size(235, 32);
             this.txtContraseñaUS.TabIndex = 43;
             // 
             // lblDireccionUsuarioUS
@@ -1595,9 +1648,10 @@ namespace BINAES
             this.lblDireccionUsuarioUS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDireccionUsuarioUS.AutoSize = true;
-            this.lblDireccionUsuarioUS.Location = new System.Drawing.Point(3, 359);
+            this.lblDireccionUsuarioUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccionUsuarioUS.Location = new System.Drawing.Point(3, 364);
             this.lblDireccionUsuarioUS.Name = "lblDireccionUsuarioUS";
-            this.lblDireccionUsuarioUS.Size = new System.Drawing.Size(235, 28);
+            this.lblDireccionUsuarioUS.Size = new System.Drawing.Size(235, 23);
             this.lblDireccionUsuarioUS.TabIndex = 34;
             this.lblDireccionUsuarioUS.Text = "Dirección";
             // 
@@ -1606,9 +1660,10 @@ namespace BINAES
             this.txtDireccionUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDireccionUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccionUS.Location = new System.Drawing.Point(3, 390);
             this.txtDireccionUS.Name = "txtDireccionUS";
-            this.txtDireccionUS.Size = new System.Drawing.Size(235, 34);
+            this.txtDireccionUS.Size = new System.Drawing.Size(235, 32);
             this.txtDireccionUS.TabIndex = 35;
             // 
             // txtEmailUS
@@ -1616,9 +1671,10 @@ namespace BINAES
             this.txtEmailUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmailUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailUS.Location = new System.Drawing.Point(3, 218);
             this.txtEmailUS.Name = "txtEmailUS";
-            this.txtEmailUS.Size = new System.Drawing.Size(235, 34);
+            this.txtEmailUS.Size = new System.Drawing.Size(235, 32);
             this.txtEmailUS.TabIndex = 39;
             // 
             // lblEmailUsuarioUS
@@ -1626,9 +1682,10 @@ namespace BINAES
             this.lblEmailUsuarioUS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmailUsuarioUS.AutoSize = true;
-            this.lblEmailUsuarioUS.Location = new System.Drawing.Point(3, 187);
+            this.lblEmailUsuarioUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailUsuarioUS.Location = new System.Drawing.Point(3, 192);
             this.lblEmailUsuarioUS.Name = "lblEmailUsuarioUS";
-            this.lblEmailUsuarioUS.Size = new System.Drawing.Size(235, 28);
+            this.lblEmailUsuarioUS.Size = new System.Drawing.Size(235, 23);
             this.lblEmailUsuarioUS.TabIndex = 38;
             this.lblEmailUsuarioUS.Text = "E-mail";
             this.lblEmailUsuarioUS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1639,9 +1696,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tblUsuarios.SetColumnSpan(this.txtTelefonoUS, 2);
+            this.txtTelefonoUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoUS.Location = new System.Drawing.Point(244, 46);
             this.txtTelefonoUS.Name = "txtTelefonoUS";
-            this.txtTelefonoUS.Size = new System.Drawing.Size(234, 34);
+            this.txtTelefonoUS.Size = new System.Drawing.Size(234, 32);
             this.txtTelefonoUS.TabIndex = 45;
             // 
             // lblTelefonoUsuarioUS
@@ -1650,9 +1708,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTelefonoUsuarioUS.AutoSize = true;
             this.tblUsuarios.SetColumnSpan(this.lblTelefonoUsuarioUS, 2);
-            this.lblTelefonoUsuarioUS.Location = new System.Drawing.Point(244, 15);
+            this.lblTelefonoUsuarioUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefonoUsuarioUS.Location = new System.Drawing.Point(244, 20);
             this.lblTelefonoUsuarioUS.Name = "lblTelefonoUsuarioUS";
-            this.lblTelefonoUsuarioUS.Size = new System.Drawing.Size(234, 28);
+            this.lblTelefonoUsuarioUS.Size = new System.Drawing.Size(234, 23);
             this.lblTelefonoUsuarioUS.TabIndex = 44;
             this.lblTelefonoUsuarioUS.Text = "Teléfono";
             this.lblTelefonoUsuarioUS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1663,9 +1722,10 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRolUsuarioUS.AutoSize = true;
             this.tblUsuarios.SetColumnSpan(this.lblRolUsuarioUS, 2);
-            this.lblRolUsuarioUS.Location = new System.Drawing.Point(244, 101);
+            this.lblRolUsuarioUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRolUsuarioUS.Location = new System.Drawing.Point(244, 106);
             this.lblRolUsuarioUS.Name = "lblRolUsuarioUS";
-            this.lblRolUsuarioUS.Size = new System.Drawing.Size(234, 28);
+            this.lblRolUsuarioUS.Size = new System.Drawing.Size(234, 23);
             this.lblRolUsuarioUS.TabIndex = 40;
             this.lblRolUsuarioUS.Text = "Rol";
             // 
@@ -1700,6 +1760,8 @@ namespace BINAES
             this.btnTomarFotoUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTomarFotoUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTomarFotoUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTomarFotoUS.Location = new System.Drawing.Point(244, 476);
             this.btnTomarFotoUS.Name = "btnTomarFotoUS";
             this.btnTomarFotoUS.Size = new System.Drawing.Size(114, 37);
@@ -1714,6 +1776,8 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelarFotoUS.Enabled = false;
+            this.btnCancelarFotoUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelarFotoUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarFotoUS.Location = new System.Drawing.Point(364, 476);
             this.btnCancelarFotoUS.Name = "btnCancelarFotoUS";
             this.btnCancelarFotoUS.Size = new System.Drawing.Size(114, 37);
@@ -1727,6 +1791,8 @@ namespace BINAES
             this.btnActualizarUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizarUS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarUS.Location = new System.Drawing.Point(364, 519);
             this.btnActualizarUS.Name = "btnActualizarUS";
             this.btnActualizarUS.Size = new System.Drawing.Size(114, 38);
@@ -1741,7 +1807,7 @@ namespace BINAES
             this.tabMisionVision.Location = new System.Drawing.Point(4, 40);
             this.tabMisionVision.Name = "tabMisionVision";
             this.tabMisionVision.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMisionVision.Size = new System.Drawing.Size(861, 445);
+            this.tabMisionVision.Size = new System.Drawing.Size(964, 560);
             this.tabMisionVision.TabIndex = 6;
             this.tabMisionVision.Text = "Mision y Vision";
             this.tabMisionVision.UseVisualStyleBackColor = true;
@@ -1966,7 +2032,7 @@ namespace BINAES
             // 
             this.lblGeneroColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblGeneroColeccionCO.AutoSize = true;
-            this.lblGeneroColeccionCO.Location = new System.Drawing.Point(84, 302);
+            this.lblGeneroColeccionCO.Location = new System.Drawing.Point(60, 230);
             this.lblGeneroColeccionCO.Name = "lblGeneroColeccionCO";
             this.lblGeneroColeccionCO.Size = new System.Drawing.Size(80, 28);
             this.lblGeneroColeccionCO.TabIndex = 3;
@@ -1976,7 +2042,7 @@ namespace BINAES
             // 
             this.lblTipoColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTipoColeccionCO.AutoSize = true;
-            this.lblTipoColeccionCO.Location = new System.Drawing.Point(84, 192);
+            this.lblTipoColeccionCO.Location = new System.Drawing.Point(60, 144);
             this.lblTipoColeccionCO.Name = "lblTipoColeccionCO";
             this.lblTipoColeccionCO.Size = new System.Drawing.Size(169, 28);
             this.lblTipoColeccionCO.TabIndex = 2;
@@ -1986,7 +2052,7 @@ namespace BINAES
             // 
             this.lblNombreColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblNombreColeccionCO.AutoSize = true;
-            this.lblNombreColeccionCO.Location = new System.Drawing.Point(84, 82);
+            this.lblNombreColeccionCO.Location = new System.Drawing.Point(60, 58);
             this.lblNombreColeccionCO.Name = "lblNombreColeccionCO";
             this.lblNombreColeccionCO.Size = new System.Drawing.Size(89, 28);
             this.lblNombreColeccionCO.TabIndex = 0;
@@ -1998,11 +2064,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvColeccionesCO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvColeccionesCO.Location = new System.Drawing.Point(629, 58);
+            this.dgvColeccionesCO.Location = new System.Drawing.Point(448, 46);
             this.dgvColeccionesCO.Name = "dgvColeccionesCO";
             this.dgvColeccionesCO.RowHeadersWidth = 62;
             this.tblColeccion.SetRowSpan(this.dgvColeccionesCO, 12);
-            this.dgvColeccionesCO.Size = new System.Drawing.Size(616, 500);
+            this.dgvColeccionesCO.Size = new System.Drawing.Size(513, 511);
             this.dgvColeccionesCO.TabIndex = 29;
             // 
             // cmbTipoColeccionCO
@@ -2011,17 +2077,17 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTipoColeccionCO.FormattingEnabled = true;
-            this.cmbTipoColeccionCO.Location = new System.Drawing.Point(84, 223);
+            this.cmbTipoColeccionCO.Location = new System.Drawing.Point(60, 175);
             this.cmbTipoColeccionCO.Name = "cmbTipoColeccionCO";
-            this.cmbTipoColeccionCO.Size = new System.Drawing.Size(433, 36);
+            this.cmbTipoColeccionCO.Size = new System.Drawing.Size(307, 36);
             this.cmbTipoColeccionCO.TabIndex = 31;
             // 
             // cmbGeneroColeccionCO
             // 
             this.cmbGeneroColeccionCO.FormattingEnabled = true;
-            this.cmbGeneroColeccionCO.Location = new System.Drawing.Point(84, 333);
+            this.cmbGeneroColeccionCO.Location = new System.Drawing.Point(60, 261);
             this.cmbGeneroColeccionCO.Name = "cmbGeneroColeccionCO";
-            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(433, 36);
+            this.cmbGeneroColeccionCO.Size = new System.Drawing.Size(307, 36);
             this.cmbGeneroColeccionCO.TabIndex = 32;
             // 
             // txtNombreColeccionCO
@@ -2029,18 +2095,18 @@ namespace BINAES
             this.txtNombreColeccionCO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreColeccionCO.Location = new System.Drawing.Point(84, 113);
+            this.txtNombreColeccionCO.Location = new System.Drawing.Point(60, 89);
             this.txtNombreColeccionCO.Name = "txtNombreColeccionCO";
-            this.txtNombreColeccionCO.Size = new System.Drawing.Size(433, 34);
+            this.txtNombreColeccionCO.Size = new System.Drawing.Size(307, 34);
             this.txtNombreColeccionCO.TabIndex = 33;
             // 
             // btnDejarDeEditarCO
             // 
             this.btnDejarDeEditarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnDejarDeEditarCO.Enabled = false;
-            this.btnDejarDeEditarCO.Location = new System.Drawing.Point(218, 443);
+            this.btnDejarDeEditarCO.Location = new System.Drawing.Point(131, 347);
             this.btnDejarDeEditarCO.Name = "btnDejarDeEditarCO";
-            this.btnDejarDeEditarCO.Size = new System.Drawing.Size(165, 49);
+            this.btnDejarDeEditarCO.Size = new System.Drawing.Size(165, 37);
             this.btnDejarDeEditarCO.TabIndex = 28;
             this.btnDejarDeEditarCO.Text = "Dejar de editar";
             this.btnDejarDeEditarCO.UseVisualStyleBackColor = true;
@@ -2048,9 +2114,9 @@ namespace BINAES
             // btnBuscarCO
             // 
             this.btnBuscarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnBuscarCO.Location = new System.Drawing.Point(193, 608);
+            this.btnBuscarCO.Location = new System.Drawing.Point(106, 476);
             this.btnBuscarCO.Name = "btnBuscarCO";
-            this.btnBuscarCO.Size = new System.Drawing.Size(215, 49);
+            this.btnBuscarCO.Size = new System.Drawing.Size(215, 37);
             this.btnBuscarCO.TabIndex = 34;
             this.btnBuscarCO.Text = "Colecciones Disponibles";
             this.btnBuscarCO.UseVisualStyleBackColor = true;
@@ -2059,9 +2125,9 @@ namespace BINAES
             // btnAgregarCO
             // 
             this.btnAgregarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnAgregarCO.Location = new System.Drawing.Point(217, 498);
+            this.btnAgregarCO.Location = new System.Drawing.Point(130, 390);
             this.btnAgregarCO.Name = "btnAgregarCO";
-            this.btnAgregarCO.Size = new System.Drawing.Size(166, 49);
+            this.btnAgregarCO.Size = new System.Drawing.Size(166, 37);
             this.btnAgregarCO.TabIndex = 27;
             this.btnAgregarCO.Text = "Agregar";
             this.btnAgregarCO.UseVisualStyleBackColor = true;
@@ -2151,6 +2217,44 @@ namespace BINAES
             this.panel1.Size = new System.Drawing.Size(292, 655);
             this.panel1.TabIndex = 3;
             // 
+            // btnIntroPPrincipal
+            // 
+            this.btnIntroPPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.btnIntroPPrincipal.FlatAppearance.BorderSize = 0;
+            this.btnIntroPPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIntroPPrincipal.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIntroPPrincipal.ForeColor = System.Drawing.Color.White;
+            this.btnIntroPPrincipal.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
+            this.btnIntroPPrincipal.IconColor = System.Drawing.Color.White;
+            this.btnIntroPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIntroPPrincipal.IconSize = 40;
+            this.btnIntroPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIntroPPrincipal.Location = new System.Drawing.Point(3, 228);
+            this.btnIntroPPrincipal.Name = "btnIntroPPrincipal";
+            this.btnIntroPPrincipal.Size = new System.Drawing.Size(292, 54);
+            this.btnIntroPPrincipal.TabIndex = 8;
+            this.btnIntroPPrincipal.Text = "Introduccion";
+            this.btnIntroPPrincipal.UseVisualStyleBackColor = false;
+            // 
+            // btnMisionVisionPPrincipal
+            // 
+            this.btnMisionVisionPPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.btnMisionVisionPPrincipal.FlatAppearance.BorderSize = 0;
+            this.btnMisionVisionPPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMisionVisionPPrincipal.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMisionVisionPPrincipal.ForeColor = System.Drawing.Color.White;
+            this.btnMisionVisionPPrincipal.IconChar = FontAwesome.Sharp.IconChar.Medapps;
+            this.btnMisionVisionPPrincipal.IconColor = System.Drawing.Color.White;
+            this.btnMisionVisionPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMisionVisionPPrincipal.IconSize = 40;
+            this.btnMisionVisionPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMisionVisionPPrincipal.Location = new System.Drawing.Point(3, 168);
+            this.btnMisionVisionPPrincipal.Name = "btnMisionVisionPPrincipal";
+            this.btnMisionVisionPPrincipal.Size = new System.Drawing.Size(303, 54);
+            this.btnMisionVisionPPrincipal.TabIndex = 7;
+            this.btnMisionVisionPPrincipal.Text = "Mision y Vision";
+            this.btnMisionVisionPPrincipal.UseVisualStyleBackColor = false;
+            // 
             // btnAddUsuarioPPrincipal
             // 
             this.btnAddUsuarioPPrincipal.BackColor = System.Drawing.Color.Transparent;
@@ -2188,7 +2292,6 @@ namespace BINAES
             this.btnAddEventoPPrincipal.TabIndex = 5;
             this.btnAddEventoPPrincipal.Text = "Añadir Evento";
             this.btnAddEventoPPrincipal.UseVisualStyleBackColor = false;
-            this.btnAddEventoPPrincipal.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // btnAddEjemplarPPrincipal
             // 
@@ -2208,7 +2311,6 @@ namespace BINAES
             this.btnAddEjemplarPPrincipal.TabIndex = 4;
             this.btnAddEjemplarPPrincipal.Text = "Añadir Ejemplar";
             this.btnAddEjemplarPPrincipal.UseVisualStyleBackColor = false;
-            this.btnAddEjemplarPPrincipal.Click += new System.EventHandler(this.btnAddEjemplarPPrincipal_Click);
             // 
             // btnReservasPPrincipal
             // 
@@ -2350,44 +2452,6 @@ namespace BINAES
             this.btnCerrarPrincipal.TabIndex = 0;
             this.btnCerrarPrincipal.UseVisualStyleBackColor = true;
             this.btnCerrarPrincipal.Click += new System.EventHandler(this.btnCerrarPrincipal_Click);
-            // 
-            // btnMisionVisionPPrincipal
-            // 
-            this.btnMisionVisionPPrincipal.BackColor = System.Drawing.Color.Transparent;
-            this.btnMisionVisionPPrincipal.FlatAppearance.BorderSize = 0;
-            this.btnMisionVisionPPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMisionVisionPPrincipal.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMisionVisionPPrincipal.ForeColor = System.Drawing.Color.White;
-            this.btnMisionVisionPPrincipal.IconChar = FontAwesome.Sharp.IconChar.Medapps;
-            this.btnMisionVisionPPrincipal.IconColor = System.Drawing.Color.White;
-            this.btnMisionVisionPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMisionVisionPPrincipal.IconSize = 40;
-            this.btnMisionVisionPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMisionVisionPPrincipal.Location = new System.Drawing.Point(3, 168);
-            this.btnMisionVisionPPrincipal.Name = "btnMisionVisionPPrincipal";
-            this.btnMisionVisionPPrincipal.Size = new System.Drawing.Size(303, 54);
-            this.btnMisionVisionPPrincipal.TabIndex = 7;
-            this.btnMisionVisionPPrincipal.Text = "Mision y Vision";
-            this.btnMisionVisionPPrincipal.UseVisualStyleBackColor = false;
-            // 
-            // btnIntroPPrincipal
-            // 
-            this.btnIntroPPrincipal.BackColor = System.Drawing.Color.Transparent;
-            this.btnIntroPPrincipal.FlatAppearance.BorderSize = 0;
-            this.btnIntroPPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIntroPPrincipal.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIntroPPrincipal.ForeColor = System.Drawing.Color.White;
-            this.btnIntroPPrincipal.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
-            this.btnIntroPPrincipal.IconColor = System.Drawing.Color.White;
-            this.btnIntroPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIntroPPrincipal.IconSize = 40;
-            this.btnIntroPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIntroPPrincipal.Location = new System.Drawing.Point(3, 228);
-            this.btnIntroPPrincipal.Name = "btnIntroPPrincipal";
-            this.btnIntroPPrincipal.Size = new System.Drawing.Size(292, 54);
-            this.btnIntroPPrincipal.TabIndex = 8;
-            this.btnIntroPPrincipal.Text = "Introduccion";
-            this.btnIntroPPrincipal.UseVisualStyleBackColor = false;
             // 
             // frmPrincipal
             // 
