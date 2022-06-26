@@ -196,7 +196,98 @@ namespace BINAES
                 conn.Close();
             }
             return list;
-        }   
+        }
+        public static bool VerificarDisponibilidad(int id)
+        {
+            bool result = false;
+            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            {
+                string query = @"SELECT stock FROM EJEMPLAR WHERE id = @id";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (Convert.ToInt32(reader["stock"]) > 0)
+                            result = true;
+                    }
+                }
+                conn.Close();
+            }
+            return result;
+        }
+
+        //Evento de Buscar ejemplar Prestamo
+        public static Ejemplar Buscar()
+        {
+            Ejemplar prestamo = new Ejemplar();
+            string cadena = Properties.Resources.CadenaConexion;
+
+            using (SqlConnection conn = new SqlConnection(cadena))
+            {
+                //Falta la query
+                string query = "";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                conn.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        prestamo.id = Convert.ToInt32(reader["id"]);
+                        prestamo.nombre = reader["nombre_ejemplar"].ToString();
+                        prestamo.imagen = reader["imagen"].ToString();
+                        prestamo.fecha_publicacion = reader["fecha_publicacion"].ToString();
+                        prestamo.stock = Convert.ToInt32(reader["stock"]);
+                        prestamo.coleccion = reader["coleccion"].ToString();
+                        prestamo.idioma = reader["idioma"].ToString();
+                        prestamo.editorial = reader["editorial"].ToString();
+                        prestamo.formato = reader["formato"].ToString();
+                    }
+                }
+
+                conn.Close();
+            }
+            return prestamo;
+        }
+        //Para insertar datos en Al darle al boton de commpletar "Prestamo Ejemplar"
+        public static void Insertar(Ejemplar ejemplar)
+        {
+            string cadena = Properties.Resources.CadenaConexion;
+
+            using (SqlConnection conn = new SqlConnection(cadena))
+            {
+                //Falta la query correspondiente
+                string query = @"SELECT EJ.id, EJ.nombre 'nombre_ejemplar', EJ.imagen, EJ.fecha_publicacion, EJ.stock, C.nombre 'coleccion', IE.idioma 'idioma', ED.editorial 'editorial', F.formato 'formato'
+                                FROM EJEMPLAR EJ
+                                    INNER JOIN COLECCION C
+                                        ON EJ.id_coleccion = C.id
+                                    INNER JOIN IDIOMA_EJEMPLAR IE
+                                        ON EJ.id_idioma = IE.id
+                                    INNER JOIN EDITORIAL ED
+                                        ON EJ.id_editorial = ED.id
+                                    INNER JOIN FORMATO_EJEMPLAR F
+                                        ON EJ.id_formato = F.id";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                //Mostrar informacion
+                cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
+                cmd.Parameters.AddWithValue("@imagen", ejemplar.imagen);
+                cmd.Parameters.AddWithValue("@fecha_publicacion", ejemplar.fecha_publicacion);
+                cmd.Parameters.AddWithValue("@stock", ejemplar.stock);
+                cmd.Parameters.AddWithValue("@id_coleccion", ejemplar.id_coleccion);
+                cmd.Parameters.AddWithValue("@id_idioma", ejemplar.id_idioma);
+                cmd.Parameters.AddWithValue("@id_editorial", ejemplar.id_editorial);
+                cmd.Parameters.AddWithValue("@id_formato", ejemplar.id_formato);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
     }
 }
 
