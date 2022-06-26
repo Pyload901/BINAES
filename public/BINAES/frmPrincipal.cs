@@ -79,8 +79,7 @@ namespace BINAES
 
 
         private void frmPrincipal_Load(object sender, EventArgs e)
-        {;
-
+        {
             /*DatagridViewComposer.BuildDataGridView_Editar(dgvEventosEV, EventoDAO.getType());*/
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
@@ -236,6 +235,44 @@ namespace BINAES
         }
 
         // Formulario de prestamo
+        private void btnBuscarPR_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 0;
+            txtBuscarEjemplarBU.Select();
+            MessageBox.Show("Doble click al ejemplar que quiere prestar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnQrPR_Click(object sender, EventArgs e)
+        {
+            using (frmEscanerQR ventana = new frmEscanerQR())
+            {
+                DialogResult resultado = ventana.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    nudIdUsuarioRE.Value = ventana.codigo;
+                }
+            }
+        }
+
+        private void btnPrestarPR_Click(object sender, EventArgs e)
+        {
+            if (nudIdEjemplarPR.Value > 0 && nudIdUsuarioPR.Value > 0)
+            {
+                Prestamo prestamo = new Prestamo();
+                prestamo.fechaPrestamo = DateTime.Now;
+                prestamo.fechaDevolucion = prestamo.fechaPrestamo.AddDays(15);
+                prestamo.id_ejemplar = Convert.ToInt32(nudIdEjemplarPR.Value);
+                prestamo.id_usuario = Convert.ToInt32(nudIdUsuarioPR.Value);
+                if (!PrestamoDAO.Crear(prestamo))
+                    MessageBox.Show("No se pudo realizar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    DataGridViewComposer.LimpiarDataGridView(dgvPrestamosPR);
+                    dgvPrestamosPR.DataSource = PrestamoDAO.Leer();
+                    DataGridViewComposer.Compose(dgvPrestamosPR);
+                }
+            }
+        }
 
         // Formulario de reserva
         private void btnQrRE_Click(object sender, EventArgs e)
@@ -243,12 +280,16 @@ namespace BINAES
             using (frmEscanerQR ventana = new frmEscanerQR())
             {
                 DialogResult resultado = ventana.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    nudIdUsuarioRE.Value = ventana.codigo;
+                }
             }
         }
 
         private void btnReservarRE_Click(object sender, EventArgs e)
         {
-            if (nudIdEjemplarRE.Value != 0 && nudIdUsuarioRE.Value != 0)
+            if (nudIdEjemplarRE.Value > 0 && nudIdUsuarioRE.Value > 0)
                 if (!ReservaDAO.Create(Convert.ToInt32(nudIdEjemplarRE.Value), Convert.ToInt32(nudIdUsuarioRE.Value)))
                     MessageBox.Show("No se pudo realizar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
@@ -280,7 +321,7 @@ namespace BINAES
             cole.id_genero = Convert.ToInt32(cmbGeneroColeccionCO.ValueMember);
             cole.id_coleccion = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
 
-            ColeccionDAO.Insertar(cole);
+            ColeccionDAO.Crear(cole);
         }
 
         // Formulario de eventos
@@ -540,7 +581,7 @@ namespace BINAES
         private void btnBuscarCO_Click(object sender, EventArgs e)
         {
             dgvColeccionesCO.DataSource = null;
-            dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
+            dgvColeccionesCO.DataSource = ColeccionDAO.Leer();
         }
 
         private void dgvEjemplaresBU_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -549,6 +590,7 @@ namespace BINAES
             if (EjemplarDAO.VerificarDisponibilidad(id))
             {
                 tabAdmin.SelectedIndex = 1;
+                nudIdEjemplarPR.Value = id;
             }
             else
             {
@@ -556,19 +598,6 @@ namespace BINAES
                 nudIdEjemplarRE.Value = id;
             }
         }
-        private void btnBuscarPR_Click(object sender, EventArgs e)
-        {
-            //Boton de Buscar Prestamo Ejemplar
-            dgvPrestamosPR.DataSource = null;
-            dgvPrestamosPR.DataSource = PrestamoDAO.Leer();
-        }
-
-        private void btnCompletarPR_Click(object sender, EventArgs e)
-        {
-            //dataGridView1.DataSource = null;
-            //dataGridView1.DataSource = PrestamoEjemplarDAO.Insertar();
-        }
-
     }
 }
      

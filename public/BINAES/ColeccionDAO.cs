@@ -10,7 +10,7 @@ namespace BINAES
 
     public static class ColeccionDAO
     {
-        public static Coleccion Buscar()
+        public static Coleccion Leer()
         {
             Coleccion cole = new Coleccion();
             string cadena = Properties.Resources.CadenaConexion;
@@ -43,7 +43,7 @@ namespace BINAES
             return cole;
         } 
 
-        public static void Insertar(Coleccion coleccion)
+        public static void Crear(Coleccion coleccion)
         {
             string cadena = Properties.Resources.CadenaConexion;
 
@@ -77,7 +77,7 @@ namespace BINAES
             }
         }
 
-        public static void Update(Coleccion coleccion)
+        public static void Actualizar(Coleccion coleccion)
         {
             string cadena = Properties.Resources.CadenaConexion;
 

@@ -9,9 +9,9 @@ namespace BINAES
 {
     internal class PrestamoDAO
     {
-        public static Ejemplar Leer()
+        public static List<Prestamo> Leer()
         {
-            Ejemplar prestamo = new Ejemplar();
+            List<Prestamo> list = new List<Prestamo>();
             string cadena = Properties.Resources.CadenaConexion;
 
             using (SqlConnection conn = new SqlConnection(cadena))
@@ -19,25 +19,27 @@ namespace BINAES
                 try
                 {
                     //Falta la query
-                    string query = "SELECT ";
-
+                    string query = "SELECT P.id, P.fecha_prestamo, P.fecha_devolucion, U.nombre 'usuario', E.nombre 'ejemplar'  FROM PRESTAMO P INNER JOIN USUARIO U ON U.id = P.id_usuario INNER JOIN EJEMPLAR E ON E.id = P.id_ejemplar";
                     SqlCommand cmd = new SqlCommand(query, conn);
 
                     conn.Open();
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            prestamo.id = Convert.ToInt32(reader["id"]);
-                            prestamo.nombre = reader["nombre_ejemplar"].ToString();
-                            prestamo.imagen = reader["imagen"].ToString();
-                            prestamo.fecha_publicacion = reader["fecha_publicacion"].ToString();
-                            prestamo.stock = Convert.ToInt32(reader["stock"]);
-                            prestamo.coleccion = reader["coleccion"].ToString();
-                            prestamo.idioma = reader["idioma"].ToString();
-                            prestamo.editorial = reader["editorial"].ToString();
-                            prestamo.formato = reader["formato"].ToString();
+                            while (reader.Read())
+                            {
+                                Prestamo prestamo = new Prestamo();
+
+                                prestamo.id = Convert.ToInt32(reader["id"]);
+                                prestamo.fechaPrestamo = Convert.ToDateTime(reader["fecha_prestamo"]);
+                                prestamo.fechaDevolucion = Convert.ToDateTime(reader["fecha_devolucion"]);
+                                prestamo.usuario = reader["usuario"].ToString();
+                                prestamo.ejemplar = reader["ejemplar"].ToString();
+                                list.Add(prestamo);
+                            }
+                            DataGridViewComposer.GetNullProperties(list[0]);
                         }
                     }
 
@@ -49,39 +51,35 @@ namespace BINAES
                     Console.WriteLine(ex.Message);
                 }
             }
-            return prestamo;
+            return list;
         }
-        public static void Crear(Ejemplar ejemplar)
+        public static bool Crear(Prestamo prestamo)
         {
-            string cadena = Properties.Resources.CadenaConexion;
-
-            using (SqlConnection conn = new SqlConnection(cadena))
+            bool result = true;
+            try
             {
-                //Falta la query correspondiente
-                string query = @"SELECT EJ.id, EJ.nombre 'nombre_ejemplar', EJ.imagen, EJ.fecha_publicacion, EJ.stock, C.nombre 'coleccion', IE.idioma 'idioma', ED.editorial 'editorial', F.formato 'formato'
-                                FROM EJEMPLAR EJ
-                                    INNER JOIN COLECCION C
-                                        ON EJ.id_coleccion = C.id
-                                    INNER JOIN IDIOMA_EJEMPLAR IE
-                                        ON EJ.id_idioma = IE.id
-                                    INNER JOIN EDITORIAL ED
-                                        ON EJ.id_editorial = ED.id
-                                    INNER JOIN FORMATO_EJEMPLAR F
-                                        ON EJ.id_formato = F.id";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                //Mostrar informacion
-                cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
-                cmd.Parameters.AddWithValue("@imagen", ejemplar.imagen);
-                cmd.Parameters.AddWithValue("@fecha_publicacion", ejemplar.fecha_publicacion);
-                cmd.Parameters.AddWithValue("@stock", ejemplar.stock);
-                cmd.Parameters.AddWithValue("@id_coleccion", ejemplar.id_coleccion);
-                cmd.Parameters.AddWithValue("@id_idioma", ejemplar.id_idioma);
-                cmd.Parameters.AddWithValue("@id_editorial", ejemplar.id_editorial);
-                cmd.Parameters.AddWithValue("@id_formato", ejemplar.id_formato);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+                {
+                    //Falta la query correspondiente
+                    string query = @"INSERT INTO PRESTAMO (fecha_prestamo, fecha_devolucion, id_ejemplar, id_usuario) VALUES (@fecha_prestamo, @fecha_devolucion, @id_ejemplar, @id_usuario)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    //Mostrar informacion
+                    cmd.Parameters.AddWithValue("@fecha_prestamo", prestamo.fechaPrestamo);
+                    cmd.Parameters.AddWithValue("@fecha_devolucion", prestamo.fechaDevolucion);
+                    cmd.Parameters.AddWithValue("@id_ejemplar", prestamo.id_ejemplar);
+                    cmd.Parameters.AddWithValue("@id_usuario", prestamo.id_usuario);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+
+                EjemplarDAO.ActualizarDisponibilidad(false, prestamo.id_ejemplar);
             }
+            catch (Exception e)
+            {
+                result = false;
+            }
+            return result;
         }
     }
 }

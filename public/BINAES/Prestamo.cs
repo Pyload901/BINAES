@@ -10,39 +10,27 @@ namespace BINAES
     {
         //Clase
         public int id { get; set; }
-        public string nombre { get; set; }
-        public string imagen { get; set; }
-        public string fecha_publicacion { get; set; }
-        public int stock { get; set; }
-        public int id_coleccion { get; set; }
-        public string coleccion { get; set; }
-        public int id_idioma { get; set; }
-        public string idioma { get; set; }
-        public int id_editorial { get; set; }
-        public string editorial { get; set; }
-        public int id_formato { get; set; }
-        public string formato { get; set; }
+        public DateTime fechaPrestamo { get; set; }
+        public DateTime fechaDevolucion { get; set; }
+        public int id_ejemplar { get; set; }
+        public string ejemplar { get; set; }
+        public int id_usuario { get; set; }
+        public string usuario { get; set; }
 
-        public Prestamo (int id, string nombre, string imagen, string fecha_publicacion, int stock,
-            int id_coleccion, int id_idioma, int id_editorial, int id_formato)
+
+        public Prestamo (int id, DateTime fechaPrestamo, DateTime fechaDevolucion, int id_ejemplar, int id_usuario)
         {
             this.id = id;
-            this.nombre = nombre;
-            this.imagen = imagen;
-            this.fecha_publicacion = fecha_publicacion;
-            this.stock = stock;
-            this.id_coleccion = id_coleccion;
-            this.id_idioma = id_idioma;
-            this.id_editorial = id_editorial;
-            this.id_formato = id_formato;
+            this.fechaPrestamo = fechaPrestamo;
+            this.fechaDevolucion = fechaDevolucion;
+            this.id_ejemplar = id_ejemplar;
+            this.id_usuario = id_usuario;
         }
 
         public Prestamo ()
         {
-            id_coleccion = -1;
-            id_editorial = -1;
-            id_formato = -1;
-            id_idioma = -1;
+            this.id_ejemplar = -1;
+            this.id_usuario = -1;
         }
     }
 }

@@ -19,13 +19,17 @@ namespace BINAES
                 conn.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (reader.HasRows)
                     {
-                        Area area = new Area ();
-                        area.id = Convert.ToInt32(reader["id"]);
-                        area.nombre = reader["id"].ToString() + ". Piso " + reader["piso"].ToString() + ' ' + reader["nombre"].ToString();
-                        DataGridViewComposer.GetNullProperties(area);
-                        list.Add(area);
+                        while (reader.Read())
+                        {
+                            Area area = new Area ();
+                            area.id = Convert.ToInt32(reader["id"]);
+                            area.nombre = reader["id"].ToString() + ". Piso " + reader["piso"].ToString() + ' ' + reader["nombre"].ToString();
+                            DataGridViewComposer.GetNullProperties(area);
+                            list.Add(area);
+                        }
+                        DataGridViewComposer.GetNullProperties(list[0]);
                     }
                 }
                 conn.Close();

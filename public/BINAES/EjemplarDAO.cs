@@ -106,7 +106,7 @@ namespace BINAES
             using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
             {
 
-                string query = @"SELECT EJ.id, EJ.nombre 'nombre_ejemplar', EJ.imagen, EJ.fecha_publicacion, EJ.stock, C.nombre 'coleccion', IE.idioma 'idioma', ED.editorial 'editorial', F.formato 'formato'
+                string query = @"SELECT EJ.id, EJ.nombre 'nombre_ejemplar', EJ.imagen, EJ.fecha_publicacion, EJ.disponibilidad, C.nombre 'coleccion', IE.idioma 'idioma', ED.editorial 'editorial', F.formato 'formato'
                                 FROM EJEMPLAR EJ
                                     INNER JOIN COLECCION C
                                         ON EJ.id_coleccion = C.id
@@ -178,7 +178,7 @@ namespace BINAES
                             ejemplar.nombre = reader["nombre_ejemplar"].ToString();
                             ejemplar.imagen = reader["imagen"].ToString();
                             ejemplar.fecha_publicacion = reader["fecha_publicacion"].ToString();
-                            ejemplar.stock = Convert.ToInt32(reader["stock"]);
+                            ejemplar.stock = Convert.ToInt32(reader["disponibilidad"]);
                             ejemplar.coleccion = reader["coleccion"].ToString();
                             ejemplar.idioma = reader["idioma"].ToString();
                             ejemplar.editorial = reader["editorial"].ToString();
@@ -188,9 +188,9 @@ namespace BINAES
                             ejemplar.palabras_clave = LeerPalabrasClave(ejemplar.id);
 
                             LeerEtiquetas(ejemplar);
-                            DataGridViewComposer.GetNullProperties(ejemplar);
                             list.Add(ejemplar);
                         }
+                        DataGridViewComposer.GetNullProperties(list[0]);
                     }
                 }
                 conn.Close();
@@ -202,7 +202,7 @@ namespace BINAES
             bool result = false;
             using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
             {
-                string query = @"SELECT stock FROM EJEMPLAR WHERE id = @id";
+                string query = @"SELECT disponibilidad FROM EJEMPLAR WHERE id = @id";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", id);
@@ -211,7 +211,7 @@ namespace BINAES
                 {
                     while (reader.Read())
                     {
-                        if (Convert.ToInt32(reader["stock"]) > 0)
+                        if (Convert.ToInt32(reader["disponibilidad"]) > 0)
                             result = true;
                     }
                 }
@@ -219,7 +219,28 @@ namespace BINAES
             }
             return result;
         }
+        public static bool ActualizarDisponibilidad (bool disponible, int id)
+        {
+            bool result = true;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+                {
+                    string query = @"UPDATE EJEMPLAR SET disponibilidad = "+ Convert.ToInt32(disponible).ToString() +" WHERE id = @id";
 
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                result = false;
+            }
+            return result;
+        }
         //Evento de Buscar ejemplar Prestamo
         public static Ejemplar Buscar()
         {

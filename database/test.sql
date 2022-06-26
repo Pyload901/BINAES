@@ -1,4 +1,4 @@
-INSERT INTO EJEMPLAR(nombre, imagen, fecha_publicacion, stock, id_coleccion,
+INSERT INTO EJEMPLAR(nombre, imagen, fecha_publicacion, disponibilidad, id_coleccion,
 	id_idioma,
 	id_editorial,
 	id_formato) VALUES ('eJE', 'ejemplar.png', GETDATE(), 1, 2, 2, 1, 1);
@@ -163,3 +163,6 @@ FROM RESERVA R
 SELECT stock FROM EJEMPLAR WHERE id = 1
 
 INSERT INTO RESERVA (fecha_reserva, fecha_prestamo, fecha_devolucion, id_ejemplar, id_usuario) VALUES (GETDATE(), GETDATE(), GETDATE(), 1, 1)
+
+
+SELECT P.id, P.fecha_prestamo, P.fecha_devolucion, U.nombre 'usuario', E.nombre 'ejemplar'  FROM PRESTAMO P INNER JOIN USUARIO U ON U.id = P.id_usuario INNER JOIN EJEMPLAR E ON E.id = P.id_ejemplar;

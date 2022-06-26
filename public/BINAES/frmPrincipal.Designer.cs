@@ -95,20 +95,21 @@ namespace BINAES
             this.lblUsuarioRE = new System.Windows.Forms.Label();
             this.btnBuscarEjemplarRE = new System.Windows.Forms.Button();
             this.btnQrRE = new System.Windows.Forms.Button();
-            this.nudIdEjemplarRE = new System.Windows.Forms.NumericUpDown();
             this.nudIdUsuarioRE = new System.Windows.Forms.NumericUpDown();
+            this.nudIdEjemplarRE = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPrestamo = new System.Windows.Forms.TabPage();
             this.tblPrestamo = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvPrestamosPR = new System.Windows.Forms.DataGridView();
             this.lblEjemplarPR = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lblUsuarioPR = new System.Windows.Forms.Label();
+            this.dgvPrestamosPR = new System.Windows.Forms.DataGridView();
             this.btnBuscarPR = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.btnCompletarPR = new System.Windows.Forms.Button();
+            this.lblUsuarioPR = new System.Windows.Forms.Label();
+            this.btnQrPR = new System.Windows.Forms.Button();
+            this.btnPrestarPR = new System.Windows.Forms.Button();
+            this.nudIdEjemplarPR = new System.Windows.Forms.NumericUpDown();
+            this.nudIdUsuarioPR = new System.Windows.Forms.NumericUpDown();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.tblBusqueda = new System.Windows.Forms.TableLayoutPanel();
             this.dgvEjemplaresBU = new System.Windows.Forms.DataGridView();
@@ -206,11 +207,13 @@ namespace BINAES
             this.tabReserva.SuspendLayout();
             this.tblReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIdEjemplarRE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdEjemplarRE)).BeginInit();
             this.tabPrestamo.SuspendLayout();
             this.tblPrestamo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamosPR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdEjemplarPR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioPR)).BeginInit();
             this.tabBuscar.SuspendLayout();
             this.tblBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEjemplaresBU)).BeginInit();
@@ -982,20 +985,20 @@ namespace BINAES
             // tblReserva
             // 
             this.tblReserva.ColumnCount = 6;
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.83925F));
-            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.88309F));
-            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.356994F));
-            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.45512F));
-            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.444676F));
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tblReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tblReserva.Controls.Add(this.dgvReservasRE, 4, 1);
             this.tblReserva.Controls.Add(this.lblEjemplarRE, 1, 1);
             this.tblReserva.Controls.Add(this.btnReservarRE, 1, 6);
             this.tblReserva.Controls.Add(this.lblUsuarioRE, 1, 3);
             this.tblReserva.Controls.Add(this.btnBuscarEjemplarRE, 2, 2);
             this.tblReserva.Controls.Add(this.btnQrRE, 2, 4);
-            this.tblReserva.Controls.Add(this.nudIdEjemplarRE, 1, 2);
             this.tblReserva.Controls.Add(this.nudIdUsuarioRE, 1, 4);
+            this.tblReserva.Controls.Add(this.nudIdEjemplarRE, 1, 2);
             this.tblReserva.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblReserva.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tblReserva.Location = new System.Drawing.Point(3, 3);
@@ -1018,11 +1021,11 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReservasRE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservasRE.Location = new System.Drawing.Point(367, 59);
+            this.dgvReservasRE.Location = new System.Drawing.Point(335, 59);
             this.dgvReservasRE.Name = "dgvReservasRE";
             this.dgvReservasRE.RowHeadersWidth = 51;
             this.tblReserva.SetRowSpan(this.dgvReservasRE, 6);
-            this.dgvReservasRE.Size = new System.Drawing.Size(554, 438);
+            this.dgvReservasRE.Size = new System.Drawing.Size(568, 438);
             this.dgvReservasRE.TabIndex = 31;
             // 
             // lblEjemplarRE
@@ -1032,9 +1035,9 @@ namespace BINAES
             this.lblEjemplarRE.AutoSize = true;
             this.tblReserva.SetColumnSpan(this.lblEjemplarRE, 2);
             this.lblEjemplarRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEjemplarRE.Location = new System.Drawing.Point(98, 110);
+            this.lblEjemplarRE.Location = new System.Drawing.Point(50, 110);
             this.lblEjemplarRE.Name = "lblEjemplarRE";
-            this.lblEjemplarRE.Size = new System.Drawing.Size(250, 20);
+            this.lblEjemplarRE.Size = new System.Drawing.Size(232, 20);
             this.lblEjemplarRE.TabIndex = 1;
             this.lblEjemplarRE.Text = "Ejemplar:";
             // 
@@ -1045,12 +1048,12 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tblReserva.SetColumnSpan(this.btnReservarRE, 2);
             this.btnReservarRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReservarRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservarRE.Location = new System.Drawing.Point(98, 429);
+            this.btnReservarRE.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservarRE.Location = new System.Drawing.Point(50, 429);
             this.btnReservarRE.Name = "btnReservarRE";
-            this.btnReservarRE.Size = new System.Drawing.Size(250, 68);
+            this.btnReservarRE.Size = new System.Drawing.Size(232, 68);
             this.btnReservarRE.TabIndex = 32;
-            this.btnReservarRE.Text = "Completar";
+            this.btnReservarRE.Text = "Reservar";
             this.btnReservarRE.UseVisualStyleBackColor = true;
             this.btnReservarRE.Click += new System.EventHandler(this.btnReservarRE_Click);
             // 
@@ -1061,9 +1064,9 @@ namespace BINAES
             this.lblUsuarioRE.AutoSize = true;
             this.tblReserva.SetColumnSpan(this.lblUsuarioRE, 2);
             this.lblUsuarioRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioRE.Location = new System.Drawing.Point(98, 258);
+            this.lblUsuarioRE.Location = new System.Drawing.Point(50, 258);
             this.lblUsuarioRE.Name = "lblUsuarioRE";
-            this.lblUsuarioRE.Size = new System.Drawing.Size(250, 20);
+            this.lblUsuarioRE.Size = new System.Drawing.Size(232, 20);
             this.lblUsuarioRE.TabIndex = 34;
             this.lblUsuarioRE.Text = "ID Usuario";
             // 
@@ -1073,9 +1076,9 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarEjemplarRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarEjemplarRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(221, 133);
+            this.btnBuscarEjemplarRE.Location = new System.Drawing.Point(193, 133);
             this.btnBuscarEjemplarRE.Name = "btnBuscarEjemplarRE";
-            this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(127, 68);
+            this.btnBuscarEjemplarRE.Size = new System.Drawing.Size(89, 68);
             this.btnBuscarEjemplarRE.TabIndex = 33;
             this.btnBuscarEjemplarRE.Text = "Buscar";
             this.btnBuscarEjemplarRE.UseVisualStyleBackColor = true;
@@ -1088,31 +1091,31 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQrRE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnQrRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQrRE.Location = new System.Drawing.Point(221, 281);
+            this.btnQrRE.Location = new System.Drawing.Point(193, 281);
             this.btnQrRE.Name = "btnQrRE";
-            this.btnQrRE.Size = new System.Drawing.Size(127, 68);
+            this.btnQrRE.Size = new System.Drawing.Size(89, 68);
             this.btnQrRE.TabIndex = 35;
             this.btnQrRE.Text = "QR";
             this.btnQrRE.UseVisualStyleBackColor = true;
             this.btnQrRE.Click += new System.EventHandler(this.btnQrRE_Click);
             // 
-            // nudIdEjemplarRE
-            // 
-            this.nudIdEjemplarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudIdEjemplarRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudIdEjemplarRE.Location = new System.Drawing.Point(98, 154);
-            this.nudIdEjemplarRE.Name = "nudIdEjemplarRE";
-            this.nudIdEjemplarRE.Size = new System.Drawing.Size(117, 26);
-            this.nudIdEjemplarRE.TabIndex = 36;
-            // 
             // nudIdUsuarioRE
             // 
             this.nudIdUsuarioRE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudIdUsuarioRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudIdUsuarioRE.Location = new System.Drawing.Point(98, 302);
+            this.nudIdUsuarioRE.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudIdUsuarioRE.Location = new System.Drawing.Point(50, 300);
             this.nudIdUsuarioRE.Name = "nudIdUsuarioRE";
-            this.nudIdUsuarioRE.Size = new System.Drawing.Size(117, 26);
+            this.nudIdUsuarioRE.Size = new System.Drawing.Size(137, 29);
             this.nudIdUsuarioRE.TabIndex = 37;
+            // 
+            // nudIdEjemplarRE
+            // 
+            this.nudIdEjemplarRE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudIdEjemplarRE.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudIdEjemplarRE.Location = new System.Drawing.Point(50, 152);
+            this.nudIdEjemplarRE.Name = "nudIdEjemplarRE";
+            this.nudIdEjemplarRE.Size = new System.Drawing.Size(137, 29);
+            this.nudIdEjemplarRE.TabIndex = 36;
             // 
             // label26
             // 
@@ -1157,35 +1160,51 @@ namespace BINAES
             // 
             // tblPrestamo
             // 
-            this.tblPrestamo.ColumnCount = 5;
-            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.34888F));
-            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.00127F));
-            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.103657F));
-            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.19732F));
-            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.348877F));
-            this.tblPrestamo.Controls.Add(this.dgvPrestamosPR, 3, 1);
+            this.tblPrestamo.ColumnCount = 6;
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tblPrestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tblPrestamo.Controls.Add(this.lblEjemplarPR, 1, 1);
-            this.tblPrestamo.Controls.Add(this.textBox3, 1, 5);
-            this.tblPrestamo.Controls.Add(this.lblUsuarioPR, 1, 4);
-            this.tblPrestamo.Controls.Add(this.btnBuscarPR, 1, 3);
-            this.tblPrestamo.Controls.Add(this.textBox4, 1, 2);
-            this.tblPrestamo.Controls.Add(this.btnCompletarPR, 1, 6);
+            this.tblPrestamo.Controls.Add(this.dgvPrestamosPR, 4, 1);
+            this.tblPrestamo.Controls.Add(this.btnBuscarPR, 2, 2);
+            this.tblPrestamo.Controls.Add(this.lblUsuarioPR, 1, 3);
+            this.tblPrestamo.Controls.Add(this.btnQrPR, 2, 4);
+            this.tblPrestamo.Controls.Add(this.btnPrestarPR, 1, 6);
+            this.tblPrestamo.Controls.Add(this.nudIdEjemplarPR, 1, 2);
+            this.tblPrestamo.Controls.Add(this.nudIdUsuarioPR, 1, 4);
             this.tblPrestamo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPrestamo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tblPrestamo.Location = new System.Drawing.Point(3, 4);
             this.tblPrestamo.Name = "tblPrestamo";
-            this.tblPrestamo.RowCount = 9;
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.25746F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.25747F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.639136F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.318028F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.318028F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.506353F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.14493F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.10145F));
-            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.21739F));
+            this.tblPrestamo.RowCount = 8;
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33267F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
+            this.tblPrestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblPrestamo.Size = new System.Drawing.Size(958, 559);
             this.tblPrestamo.TabIndex = 13;
+            // 
+            // lblEjemplarPR
+            // 
+            this.lblEjemplarPR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEjemplarPR.AutoSize = true;
+            this.tblPrestamo.SetColumnSpan(this.lblEjemplarPR, 2);
+            this.lblEjemplarPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEjemplarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEjemplarPR.Location = new System.Drawing.Point(50, 109);
+            this.lblEjemplarPR.Name = "lblEjemplarPR";
+            this.lblEjemplarPR.Size = new System.Drawing.Size(232, 20);
+            this.lblEjemplarPR.TabIndex = 1;
+            this.lblEjemplarPR.Text = "Ejemplar:";
             // 
             // dgvPrestamosPR
             // 
@@ -1193,45 +1212,12 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPrestamosPR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrestamosPR.Location = new System.Drawing.Point(313, 60);
+            this.dgvPrestamosPR.Location = new System.Drawing.Point(335, 58);
             this.dgvPrestamosPR.Name = "dgvPrestamosPR";
             this.dgvPrestamosPR.RowHeadersWidth = 51;
-            this.tblPrestamo.SetRowSpan(this.dgvPrestamosPR, 7);
-            this.dgvPrestamosPR.Size = new System.Drawing.Size(551, 407);
+            this.tblPrestamo.SetRowSpan(this.dgvPrestamosPR, 6);
+            this.dgvPrestamosPR.Size = new System.Drawing.Size(568, 438);
             this.dgvPrestamosPR.TabIndex = 31;
-            // 
-            // lblEjemplarPR
-            // 
-            this.lblEjemplarPR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEjemplarPR.AutoSize = true;
-            this.lblEjemplarPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEjemplarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEjemplarPR.Location = new System.Drawing.Point(92, 94);
-            this.lblEjemplarPR.Name = "lblEjemplarPR";
-            this.lblEjemplarPR.Size = new System.Drawing.Size(176, 20);
-            this.lblEjemplarPR.TabIndex = 1;
-            this.lblEjemplarPR.Text = "Ejemplar:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(92, 258);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 29);
-            this.textBox3.TabIndex = 34;
-            // 
-            // lblUsuarioPR
-            // 
-            this.lblUsuarioPR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUsuarioPR.AutoSize = true;
-            this.lblUsuarioPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUsuarioPR.Location = new System.Drawing.Point(92, 235);
-            this.lblUsuarioPR.Name = "lblUsuarioPR";
-            this.lblUsuarioPR.Size = new System.Drawing.Size(176, 20);
-            this.lblUsuarioPR.TabIndex = 8;
-            this.lblUsuarioPR.Text = "ID usuario:";
             // 
             // btnBuscarPR
             // 
@@ -1241,39 +1227,75 @@ namespace BINAES
             this.btnBuscarPR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBuscarPR.Location = new System.Drawing.Point(92, 154);
+            this.btnBuscarPR.Location = new System.Drawing.Point(193, 132);
             this.btnBuscarPR.Name = "btnBuscarPR";
-            this.btnBuscarPR.Size = new System.Drawing.Size(176, 46);
+            this.btnBuscarPR.Size = new System.Drawing.Size(89, 68);
             this.btnBuscarPR.TabIndex = 33;
-            this.btnBuscarPR.Text = "Búscar";
+            this.btnBuscarPR.Text = "Buscar";
             this.btnBuscarPR.UseVisualStyleBackColor = true;
             this.btnBuscarPR.Click += new System.EventHandler(this.btnBuscarPR_Click);
             // 
-            // textBox4
+            // lblUsuarioPR
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblUsuarioPR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuarioPR.AutoSize = true;
+            this.tblPrestamo.SetColumnSpan(this.lblUsuarioPR, 2);
+            this.lblUsuarioPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUsuarioPR.Location = new System.Drawing.Point(50, 257);
+            this.lblUsuarioPR.Name = "lblUsuarioPR";
+            this.lblUsuarioPR.Size = new System.Drawing.Size(232, 20);
+            this.lblUsuarioPR.TabIndex = 8;
+            this.lblUsuarioPR.Text = "ID Usuario:";
+            // 
+            // btnQrPR
+            // 
+            this.btnQrPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(92, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(176, 29);
-            this.textBox4.TabIndex = 35;
+            this.btnQrPR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnQrPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQrPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnQrPR.Location = new System.Drawing.Point(193, 280);
+            this.btnQrPR.Name = "btnQrPR";
+            this.btnQrPR.Size = new System.Drawing.Size(89, 68);
+            this.btnQrPR.TabIndex = 32;
+            this.btnQrPR.Text = "QR";
+            this.btnQrPR.UseVisualStyleBackColor = true;
+            this.btnQrPR.Click += new System.EventHandler(this.btnQrPR_Click);
             // 
-            // btnCompletarPR
+            // btnPrestarPR
             // 
-            this.btnCompletarPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnPrestarPR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCompletarPR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCompletarPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompletarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCompletarPR.Location = new System.Drawing.Point(92, 294);
-            this.btnCompletarPR.Name = "btnCompletarPR";
-            this.btnCompletarPR.Size = new System.Drawing.Size(176, 50);
-            this.btnCompletarPR.TabIndex = 32;
-            this.btnCompletarPR.Text = "Completar";
-            this.btnCompletarPR.UseVisualStyleBackColor = true;
-            this.btnCompletarPR.Click += new System.EventHandler(this.btnCompletarPR_Click);
+            this.tblPrestamo.SetColumnSpan(this.btnPrestarPR, 2);
+            this.btnPrestarPR.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrestarPR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPrestarPR.Location = new System.Drawing.Point(50, 428);
+            this.btnPrestarPR.Name = "btnPrestarPR";
+            this.btnPrestarPR.Size = new System.Drawing.Size(232, 68);
+            this.btnPrestarPR.TabIndex = 36;
+            this.btnPrestarPR.Text = "Prestar";
+            this.btnPrestarPR.UseVisualStyleBackColor = true;
+            this.btnPrestarPR.Click += new System.EventHandler(this.btnPrestarPR_Click);
+            // 
+            // nudIdEjemplarPR
+            // 
+            this.nudIdEjemplarPR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudIdEjemplarPR.Location = new System.Drawing.Point(50, 151);
+            this.nudIdEjemplarPR.Name = "nudIdEjemplarPR";
+            this.nudIdEjemplarPR.Size = new System.Drawing.Size(137, 29);
+            this.nudIdEjemplarPR.TabIndex = 34;
+            // 
+            // nudIdUsuarioPR
+            // 
+            this.nudIdUsuarioPR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudIdUsuarioPR.Location = new System.Drawing.Point(50, 299);
+            this.nudIdUsuarioPR.Name = "nudIdUsuarioPR";
+            this.nudIdUsuarioPR.Size = new System.Drawing.Size(137, 29);
+            this.nudIdUsuarioPR.TabIndex = 35;
             // 
             // tabBuscar
             // 
@@ -2502,12 +2524,14 @@ namespace BINAES
             this.tblReserva.ResumeLayout(false);
             this.tblReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasRE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIdEjemplarRE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioRE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdEjemplarRE)).EndInit();
             this.tabPrestamo.ResumeLayout(false);
             this.tblPrestamo.ResumeLayout(false);
             this.tblPrestamo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamosPR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdEjemplarPR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIdUsuarioPR)).EndInit();
             this.tabBuscar.ResumeLayout(false);
             this.tabBuscar.PerformLayout();
             this.tblBusqueda.ResumeLayout(false);
@@ -2624,11 +2648,9 @@ namespace BINAES
         private System.Windows.Forms.TableLayoutPanel tblPrestamo;
         private System.Windows.Forms.DataGridView dgvPrestamosPR;
         private System.Windows.Forms.Label lblEjemplarPR;
-        private Button btnCompletarPR;
-        private TextBox textBox3;
+        private Button btnQrPR;
         private Label lblUsuarioPR;
         private Button btnBuscarPR;
-        private TextBox textBox4;
         private System.Windows.Forms.TabPage tabColeccion;
         private System.Windows.Forms.TabPage tabUsuarios;
         private System.Windows.Forms.TableLayoutPanel tlpColeccionCO;
@@ -2703,5 +2725,8 @@ namespace BINAES
         private FontAwesome.Sharp.IconButton btnBusquedaPPrincipal;
         private FontAwesome.Sharp.IconButton btnMisionVisionPPrincipal;
         private FontAwesome.Sharp.IconButton btnIntroPPrincipal;
+        private Button btnPrestarPR;
+        private NumericUpDown nudIdEjemplarPR;
+        private NumericUpDown nudIdUsuarioPR;
     }
 }
