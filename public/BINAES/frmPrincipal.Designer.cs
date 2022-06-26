@@ -152,9 +152,9 @@ namespace BINAES
             this.lblInfoVision = new System.Windows.Forms.Label();
             this.tabIntroduccion = new System.Windows.Forms.TabPage();
             this.tblQuienesSomos = new System.Windows.Forms.TableLayoutPanel();
-            this.lblQuienesSomos = new System.Windows.Forms.Label();
             this.lblQuienesSomosTXT = new System.Windows.Forms.Label();
             this.lblQuienesSomosTXT2 = new System.Windows.Forms.Label();
+            this.lblQuienesSomos = new System.Windows.Forms.Label();
             this.tabColeccion = new System.Windows.Forms.TabPage();
             this.tblColeccion = new System.Windows.Forms.TableLayoutPanel();
             this.lblGeneroColeccionCO = new System.Windows.Forms.Label();
@@ -200,7 +200,7 @@ namespace BINAES
             this.tabAdmin.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.tblUsuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosUS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).BeginInit();
             this.tabMisionVision.SuspendLayout();
             this.tblMisionVision.SuspendLayout();
@@ -1394,7 +1394,7 @@ namespace BINAES
             this.tblUsuarios.Controls.Add(this.lblFotoUsuarioUS, 1, 4);
             this.tblUsuarios.Controls.Add(this.btnDejarDeEditarUS, 0, 12);
             this.tblUsuarios.Controls.Add(this.btnAgregarUS, 0, 12);
-            this.tblUsuarios.Controls.Add(this.dataGridView2, 3, 0);
+            this.tblUsuarios.Controls.Add(this.dgvUsuariosUS, 3, 0);
             this.tblUsuarios.Controls.Add(this.lblNombreUsuarioUS, 0, 0);
             this.tblUsuarios.Controls.Add(this.txtNombreUS, 0, 1);
             this.tblUsuarios.Controls.Add(this.lblInstitucionUsuarioUS, 0, 6);
@@ -1475,8 +1475,8 @@ namespace BINAES
             this.dgvUsuariosUS.Name = "dgvUsuariosUS";
             this.dgvUsuariosUS.ReadOnly = true;
             this.dgvUsuariosUS.RowHeadersWidth = 51;
-            this.tableLayoutPanel8.SetRowSpan(this.dgvUsuariosUS, 13);
-            this.dgvUsuariosUS.Size = new System.Drawing.Size(620, 567);
+            this.tblUsuarios.SetRowSpan(this.dgvUsuariosUS, 13);
+            this.dgvUsuariosUS.Size = new System.Drawing.Size(620, 595);
             this.dgvUsuariosUS.TabIndex = 29;
             this.dgvUsuariosUS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuariosUS_CellContentClick);
             // 
@@ -1836,22 +1836,6 @@ namespace BINAES
             this.tblQuienesSomos.Size = new System.Drawing.Size(1256, 605);
             this.tblQuienesSomos.TabIndex = 0;
             // 
-            // lblQuienesSomos
-            // 
-            this.lblQuienesSomos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblQuienesSomos.AutoSize = true;
-            this.lblQuienesSomos.BackColor = System.Drawing.Color.DodgerBlue;
-            this.lblQuienesSomos.Font = new System.Drawing.Font("Nirmala UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuienesSomos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblQuienesSomos.Location = new System.Drawing.Point(3, 0);
-            this.lblQuienesSomos.Name = "lblQuienesSomos";
-            this.lblQuienesSomos.Size = new System.Drawing.Size(1250, 121);
-            this.lblQuienesSomos.TabIndex = 0;
-            this.lblQuienesSomos.Text = "Quienes somos?";
-            this.lblQuienesSomos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblQuienesSomosTXT
             // 
             this.lblQuienesSomosTXT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1881,6 +1865,22 @@ namespace BINAES
             this.lblQuienesSomosTXT2.TabIndex = 2;
             this.lblQuienesSomosTXT2.Text = resources.GetString("lblQuienesSomosTXT2.Text");
             this.lblQuienesSomosTXT2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblQuienesSomos
+            // 
+            this.lblQuienesSomos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblQuienesSomos.AutoSize = true;
+            this.lblQuienesSomos.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblQuienesSomos.Font = new System.Drawing.Font("Nirmala UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuienesSomos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblQuienesSomos.Location = new System.Drawing.Point(3, 0);
+            this.lblQuienesSomos.Name = "lblQuienesSomos";
+            this.lblQuienesSomos.Size = new System.Drawing.Size(1250, 121);
+            this.lblQuienesSomos.TabIndex = 0;
+            this.lblQuienesSomos.Text = "Quienes somos?";
+            this.lblQuienesSomos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabColeccion
             // 
@@ -2157,7 +2157,7 @@ namespace BINAES
             this.tabUsuarios.ResumeLayout(false);
             this.tblUsuarios.ResumeLayout(false);
             this.tblUsuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosUS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).EndInit();
             this.tabMisionVision.ResumeLayout(false);
             this.tblMisionVision.ResumeLayout(false);

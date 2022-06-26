@@ -413,10 +413,6 @@ namespace BINAES
         {
 
         }
-        public void btnAgregarUS_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnBuscarCO_Click(object sender, EventArgs e)
         {
             dgvColeccionesCO.DataSource = null;
@@ -424,26 +420,5 @@ namespace BINAES
         }
 
         
-    }
-}
-        }
-    }
-}
-        }
-    }
-}
-        }
-    }
-}
-        }
-    }
-}
-        }
-    }
-}
-        }
-    }
-}
-        }
     }
 }
