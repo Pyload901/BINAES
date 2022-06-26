@@ -188,6 +188,10 @@ namespace BINAES
                     cmbEditorialEjemplarAG.ValueMember = "id";
                     cmbEditorialEjemplarAG.DisplayMember = "editorial";
                     cmbEditorialEjemplarAG.DataSource = EditorialDAO.Leer();
+
+                    dgvEjemplaresAG.DataSource = EjemplarDAO.Leer();
+                    DataGridViewComposer.Compose(dgvEjemplaresAG);
+
                     break;
                 case 4:
                     cmbAreaEventoEV.ValueMember = "id";
@@ -236,7 +240,7 @@ namespace BINAES
 
             FiltroEnumerate filtroBusqueda = (chkBusquedaExactaBU.Checked ? FiltroEnumerate.Exacta : FiltroEnumerate.Parcial);
 
-            List<Ejemplar> list = EjemplarDAO.Leer(txtBuscarEjemplarBU.Text, (FiltroEnumerate)cmbFiltrarEjemplarBU.SelectedValue, filtroBusqueda, filtroFormato);
+            List<Ejemplar> list = EjemplarDAO.LeerFiltrado(txtBuscarEjemplarBU.Text, (FiltroEnumerate)cmbFiltrarEjemplarBU.SelectedValue, filtroBusqueda, filtroFormato);
 
             dgvEjemplaresBU.DataSource =  list;
             DataGridViewComposer.Compose(dgvEjemplaresBU);
@@ -729,7 +733,48 @@ namespace BINAES
             tabAdmin.SelectedIndex = 7;
         }
 
+        private void dgvEjemplaresAG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (picEjemplarAG.Image != null)
+                picEjemplarAG.Image.Dispose();
+            DataGridView dgv = (DataGridView)sender;
+            int idEjemplar = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["id"].Value);
+            Ejemplar ejemplar = EjemplarDAO.LeerPorId(idEjemplar);
+            txtNombreEjemplarAG.Text = ejemplar.nombre;
+            txtAutorEjemplarAG.Text = ejemplar.autor;
+            cmbColeccionEjemplarAG.SelectedValue = ejemplar.id_coleccion;
+            cmbFormatoEjemplarAG.SelectedValue = ejemplar.id_formato;
+            cmbEditorialEjemplarAG.SelectedValue = ejemplar.id_editorial;
+            cmbIdiomaEjemplarAG.SelectedValue = ejemplar.id_idioma;
+            dtpFechaPublicacionEjemplarAG.Text = ejemplar.fecha_publicacion.ToString();
+            chkDisponibilidadEjemplarAG.Checked = ejemplar.disponibilidad;
+            picEjemplarAG.Image = Image.FromFile(Properties.Resources.RutaImagenesEjemplares + ejemplar.imagen);
+        }
 
+        private void dgvEjemplaresAG_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (picEjemplarAG.Image != null)
+                    picEjemplarAG.Image.Dispose();
+                DataGridView dgv = (DataGridView)sender;
+                int idEjemplar = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["id"].Value);
+                btnEditarEjemplarAG.Tag = idEjemplar;
+                Ejemplar ejemplar = EjemplarDAO.LeerPorId(idEjemplar);
+                txtNombreEjemplarAG.Text = ejemplar.nombre;
+                txtAutorEjemplarAG.Text = ejemplar.autor;
+                cmbColeccionEjemplarAG.SelectedValue = ejemplar.id_coleccion;
+                cmbFormatoEjemplarAG.SelectedValue = ejemplar.id_formato;
+                cmbEditorialEjemplarAG.SelectedValue = ejemplar.id_editorial;
+                cmbIdiomaEjemplarAG.SelectedValue = ejemplar.id_idioma;
+                dtpFechaPublicacionEjemplarAG.Text = ejemplar.fecha_publicacion.ToString();
+                chkDisponibilidadEjemplarAG.Checked = ejemplar.disponibilidad;
+                picEjemplarAG.Image = Image.FromFile(Properties.Resources.RutaImagenesEjemplares + ejemplar.imagen);
+            }
+            catch(Exception ex)
+            {
+            }
+        }
     }
 }
      

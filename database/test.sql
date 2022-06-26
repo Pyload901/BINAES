@@ -172,3 +172,17 @@ FROM ETIQUETA E
 INNER JOIN NOMBRE_ETIQUETA NE 
     ON E.id_nombre_etiqueta = NE.id
 WHERE E.id = 1
+
+
+
+SELECT E.id, E.nombre, E.imagen, E.autor, E.fecha_publicacion, E.disponibilidad, C.nombre 'coleccion', I.idioma, ED.editorial, F.formato  FROM EJEMPLAR E
+    INNER JOIN COLECCION C
+        ON C.id = E.id_coleccion
+    INNER JOIN IDIOMA_EJEMPLAR I
+        ON I.id = E.id_idioma
+    INNER JOIN EDITORIAL ED
+        ON ED.id = E.id_editorial
+    INNER JOIN FORMATO_EJEMPLAR F
+        ON F.id = E.id_formato
+
+        SELECT * FROM EJEMPLAR;

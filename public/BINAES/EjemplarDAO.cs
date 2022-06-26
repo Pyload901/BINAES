@@ -98,7 +98,7 @@ namespace BINAES
             }
         }
 
-        public static List<Ejemplar> Leer(string texto, FiltroEnumerate filtroEjemplar, FiltroEnumerate filtroBusqueda, FiltroEnumerate filtroFormato)
+        public static List<Ejemplar> LeerFiltrado(string texto, FiltroEnumerate filtroEjemplar, FiltroEnumerate filtroBusqueda, FiltroEnumerate filtroFormato)
         {
             List<Ejemplar> list = new List<Ejemplar>();
             SqlCommand cmd = null;
@@ -191,6 +191,75 @@ namespace BINAES
                 conn.Close();
             }
             return list;
+        }
+        public static List<Ejemplar> Leer ()
+        {
+            List<Ejemplar> list = new List<Ejemplar>();
+            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            {
+                string query = @"SELECT E.id, E.nombre, E.imagen, E.autor, E.fecha_publicacion, E.disponibilidad, C.nombre 'coleccion', I.idioma, ED.editorial, F.formato  FROM EJEMPLAR E
+                    INNER JOIN COLECCION C
+                        ON C.id = E.id_coleccion
+                    INNER JOIN IDIOMA_EJEMPLAR I
+                        ON I.id = E.id_idioma
+                    INNER JOIN EDITORIAL ED
+                        ON ED.id = E.id_editorial
+                    INNER JOIN FORMATO_EJEMPLAR F
+                        ON F.id = E.id_formato";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Ejemplar ejemplar = new Ejemplar();
+                        ejemplar.id = Convert.ToInt32(reader["id"]);
+                        ejemplar.nombre = reader["nombre"].ToString();
+                        ejemplar.imagen = reader["imagen"].ToString();
+                        ejemplar.autor = reader["autor"].ToString();
+                        ejemplar.fecha_publicacion = Convert.ToDateTime(reader["fecha_publicacion"]);
+                        ejemplar.disponibilidad = Convert.ToBoolean(reader["disponibilidad"]);
+                        ejemplar.coleccion = reader["coleccion"].ToString();
+                        ejemplar.formato = reader["formato"].ToString();
+                        list.Add(ejemplar);
+                    }
+                    DataGridViewComposer.GetNullProperties(list[0]);
+                }
+                conn.Close();
+            }
+            return list;
+        }
+        public static Ejemplar LeerPorId(int id)
+        {
+            Ejemplar ejemplar = new Ejemplar();
+            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            {
+                string query = @"SELECT * FROM EJEMPLAR WHERE id = @id";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ejemplar.id = Convert.ToInt32(reader["id"]);
+                        ejemplar.nombre = reader["nombre"].ToString();
+                        ejemplar.nombre = reader["nombre"].ToString();
+                        ejemplar.imagen = reader["imagen"].ToString();
+                        ejemplar.autor = reader["autor"].ToString();
+                        ejemplar.fecha_publicacion = Convert.ToDateTime(reader["fecha_publicacion"]);
+                        ejemplar.disponibilidad = Convert.ToBoolean(reader["disponibilidad"]);
+                        ejemplar.id_coleccion = Convert.ToInt32(reader["id_coleccion"]);
+                        ejemplar.id_idioma = Convert.ToInt32(reader["id_idioma"]);
+                        ejemplar.id_editorial = Convert.ToInt32(reader["id_editorial"]);
+                        ejemplar.id_formato = Convert.ToInt32(reader["id_formato"]);
+                    }
+                }
+                conn.Close();
+            }
+            return ejemplar;
         }
         public static bool VerificarDisponibilidad(int id)
         {
