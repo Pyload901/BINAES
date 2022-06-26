@@ -494,13 +494,13 @@ namespace BINAES
         private void btnBuscarPR_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = EjemplarDAO.Buscar();
+            dataGridView1.DataSource = PrestamoEjemplarDAO.Buscar();
         }
 
         private void btnCompletarPR_Click(object sender, EventArgs e)
         {
             //dataGridView1.DataSource = null;
-            //dataGridView1.DataSource = EjemplarDAO.Insertar();
+            //dataGridView1.DataSource = PrestamoEjemplarDAO.Insertar();
         }
     }
 }
