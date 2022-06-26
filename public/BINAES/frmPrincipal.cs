@@ -311,7 +311,7 @@ namespace BINAES
         //Delete
         private void btnEliminarEventoEV_Click(object sender, EventArgs e)
         {
-            int id = // Obtener id de algun lado // Sacatelo de algun lado .l.
+            int id = 0;
 
             if (EventoDAO.Eliminar(id))
                 MessageBox.Show("Eliminada con éxito!");
@@ -447,9 +447,5 @@ namespace BINAES
             dgvColeccionesCO.DataSource = ColeccionDAO.Buscar();
         }
 
-        private void btnEliminarEventoEV_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
