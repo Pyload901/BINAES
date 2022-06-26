@@ -67,9 +67,9 @@
             this.cmbCamara.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCamara.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCamara.FormattingEnabled = true;
-            this.cmbCamara.Location = new System.Drawing.Point(3, 104);
+            this.cmbCamara.Location = new System.Drawing.Point(3, 114);
             this.cmbCamara.Name = "cmbCamara";
-            this.cmbCamara.Size = new System.Drawing.Size(428, 41);
+            this.cmbCamara.Size = new System.Drawing.Size(449, 41);
             this.cmbCamara.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -107,9 +107,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(220, 205);
+            this.btnAceptar.Location = new System.Drawing.Point(230, 210);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(211, 46);
+            this.btnAceptar.Size = new System.Drawing.Size(222, 47);
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -120,6 +120,7 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -127,13 +128,13 @@
             this.tableLayoutPanel2.Controls.Add(this.cmbCamara, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAceptar, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 38);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 32);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.51968F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.00787F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(434, 254);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(455, 260);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // button1
@@ -142,9 +143,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 205);
+            this.button1.Location = new System.Drawing.Point(3, 210);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 46);
+            this.button1.Size = new System.Drawing.Size(221, 47);
             this.button1.TabIndex = 3;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
@@ -152,15 +153,14 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label2, 2);
             this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 33);
+            this.label2.Location = new System.Drawing.Point(6, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(422, 68);
+            this.label2.Size = new System.Drawing.Size(443, 68);
             this.label2.TabIndex = 0;
             this.label2.Text = "Seleccione la cámara para tomar fotografías";
             // 
@@ -212,6 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(458, 304);
             this.Controls.Add(this.panelPrincipalCamara);
             this.Controls.Add(this.tableLayoutPanel2);
