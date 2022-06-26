@@ -241,7 +241,16 @@ namespace BINAES
             using (SqlConnection conn = new SqlConnection(cadena))
             {
                 //Falta la query correspondiente
-                string query = " ";
+                string query = @"SELECT EJ.id, EJ.nombre 'nombre_ejemplar', EJ.imagen, EJ.fecha_publicacion, EJ.stock, C.nombre 'coleccion', IE.idioma 'idioma', ED.editorial 'editorial', F.formato 'formato'
+                                FROM EJEMPLAR EJ
+                                    INNER JOIN COLECCION C
+                                        ON EJ.id_coleccion = C.id
+                                    INNER JOIN IDIOMA_EJEMPLAR IE
+                                        ON EJ.id_idioma = IE.id
+                                    INNER JOIN EDITORIAL ED
+                                        ON EJ.id_editorial = ED.id
+                                    INNER JOIN FORMATO_EJEMPLAR F
+                                        ON EJ.id_formato = F.id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 //Mostrar informacion
                 cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
