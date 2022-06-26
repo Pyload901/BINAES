@@ -757,19 +757,20 @@ namespace BINAES
             col.tipo_coleccion = cmbTipoColeccionCO.Text;
             col.genero_coleccion = cmbGeneroColeccionCO.Text;
             //Da error en el parametro
-            if (ColeccionDAO.Crear(col))
+            /*if (ColeccionDAO.Crear(col))
             {
                 MessageBox.Show("Registro coleccion agregada con éxito!");
             }
             else
             {
                 MessageBox.Show("Ha ocurrido un error al intentar agregar la coleccion!");
-            }
+            }*/
         }
 
         private void btnDejarDeEditarCO_Click(object sender, EventArgs e)
         {
 
+        }
         private void dgvEjemplaresAG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
