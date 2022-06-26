@@ -7,43 +7,51 @@ using System.Threading.Tasks;
 
 namespace BINAES
 {
-    internal class PrestamoEjemplarDAO
+    internal class PrestamoDAO
     {
-        public static Ejemplar Buscar()
+        public static Ejemplar Leer()
         {
             Ejemplar prestamo = new Ejemplar();
             string cadena = Properties.Resources.CadenaConexion;
 
             using (SqlConnection conn = new SqlConnection(cadena))
             {
-                //Falta la query
-                string query = "";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                conn.Open();
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                try
                 {
-                    while (reader.Read())
-                    {
-                        prestamo.id = Convert.ToInt32(reader["id"]);
-                        prestamo.nombre = reader["nombre_ejemplar"].ToString();
-                        prestamo.imagen = reader["imagen"].ToString();
-                        prestamo.fecha_publicacion = reader["fecha_publicacion"].ToString();
-                        prestamo.stock = Convert.ToInt32(reader["stock"]);
-                        prestamo.coleccion = reader["coleccion"].ToString();
-                        prestamo.idioma = reader["idioma"].ToString();
-                        prestamo.editorial = reader["editorial"].ToString();
-                        prestamo.formato = reader["formato"].ToString();
-                    }
-                }
+                    //Falta la query
+                    string query = "SELECT ";
 
-                conn.Close();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    conn.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            prestamo.id = Convert.ToInt32(reader["id"]);
+                            prestamo.nombre = reader["nombre_ejemplar"].ToString();
+                            prestamo.imagen = reader["imagen"].ToString();
+                            prestamo.fecha_publicacion = reader["fecha_publicacion"].ToString();
+                            prestamo.stock = Convert.ToInt32(reader["stock"]);
+                            prestamo.coleccion = reader["coleccion"].ToString();
+                            prestamo.idioma = reader["idioma"].ToString();
+                            prestamo.editorial = reader["editorial"].ToString();
+                            prestamo.formato = reader["formato"].ToString();
+                        }
+                    }
+
+                    conn.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
             return prestamo;
         }
-        public static void Insertar(Ejemplar ejemplar)
+        public static void Crear(Ejemplar ejemplar)
         {
             string cadena = Properties.Resources.CadenaConexion;
 

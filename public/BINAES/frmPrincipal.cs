@@ -163,6 +163,10 @@ namespace BINAES
             this.Text = tabAdmin.SelectedTab.Text;
             switch (tabAdmin.SelectedIndex)
             {
+                case 1:
+                    dgvPrestamosPR.DataSource = PrestamoDAO.Leer();
+                    DataGridViewComposer.Compose(dgvPrestamosPR);
+                    break;
                 case 2:
                     dgvReservasRE.DataSource = ReservaDAO.Leer();
                     DataGridViewComposer.Compose(dgvReservasRE);
@@ -555,8 +559,8 @@ namespace BINAES
         private void btnBuscarPR_Click(object sender, EventArgs e)
         {
             //Boton de Buscar Prestamo Ejemplar
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = PrestamoEjemplarDAO.Buscar();
+            dgvPrestamosPR.DataSource = null;
+            dgvPrestamosPR.DataSource = PrestamoDAO.Leer();
         }
 
         private void btnCompletarPR_Click(object sender, EventArgs e)

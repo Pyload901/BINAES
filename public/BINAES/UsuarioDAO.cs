@@ -110,7 +110,7 @@ namespace BINAES
 
         // UPDATE
 
-        public static bool Update(Usuario user)
+        public static bool Editar(Usuario user)
         {
             bool exito = true;
             try

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BINAES
 {
-    internal class PrestamoEjemplar
+    internal class Prestamo
     {
         //Clase
         public int id { get; set; }
@@ -23,7 +23,7 @@ namespace BINAES
         public int id_formato { get; set; }
         public string formato { get; set; }
 
-        public PrestamoEjemplar (int id, string nombre, string imagen, string fecha_publicacion, int stock,
+        public Prestamo (int id, string nombre, string imagen, string fecha_publicacion, int stock,
             int id_coleccion, int id_idioma, int id_editorial, int id_formato)
         {
             this.id = id;
@@ -37,7 +37,7 @@ namespace BINAES
             this.id_formato = id_formato;
         }
 
-        public PrestamoEjemplar ()
+        public Prestamo ()
         {
             id_coleccion = -1;
             id_editorial = -1;
