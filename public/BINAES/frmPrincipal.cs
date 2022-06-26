@@ -518,7 +518,7 @@ namespace BINAES
             user.institucion = txtInstitucionUS.Text;
             user.direccion = txtDireccionUS.Text;
 
-            if (UsuarioDAO.Update(user))
+            if (UsuarioDAO.Editar(user))
                 MessageBox.Show("Actualizada con éxito!");
             else
                 MessageBox.Show("Ha ocurrido un error!");
