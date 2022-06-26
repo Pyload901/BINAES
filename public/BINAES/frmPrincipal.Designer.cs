@@ -566,6 +566,7 @@ namespace BINAES
             this.btnEliminarEventoEV.TabIndex = 29;
             this.btnEliminarEventoEV.Text = "Eliminar";
             this.btnEliminarEventoEV.UseVisualStyleBackColor = true;
+            this.btnEliminarEventoEV.Click += new System.EventHandler(this.btnEliminarEventoEV_Click);
             // 
             // btnAgregarEventoEV
             // 
@@ -586,13 +587,13 @@ namespace BINAES
             this.btnEditarEventoEV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditarEventoEV.Location = new System.Drawing.Point(315, 555);
-            this.btnEditarEventoEV.Name = "btnEditarEventoEV";
-            this.btnEditarEventoEV.Size = new System.Drawing.Size(150, 43);
-            this.btnEditarEventoEV.TabIndex = 30;
-            this.btnEditarEventoEV.Text = "Actualizar";
-            this.btnEditarEventoEV.UseVisualStyleBackColor = true;
-            this.btnEditarEventoEV.Click += new System.EventHandler(this.btnEditarEventoEV_Click);
+            this.btnActualizarEventoEV.Location = new System.Drawing.Point(315, 507);
+            this.btnActualizarEventoEV.Name = "btnActualizarEventoEV";
+            this.btnActualizarEventoEV.Size = new System.Drawing.Size(150, 47);
+            this.btnActualizarEventoEV.TabIndex = 30;
+            this.btnActualizarEventoEV.Text = "Actualizar";
+            this.btnActualizarEventoEV.UseVisualStyleBackColor = true;
+            this.btnActualizarEventoEV.Click += new System.EventHandler(this.btnActualizarEventoEV_Click);
             // 
             // tabAgregar
             // 
@@ -1396,7 +1397,7 @@ namespace BINAES
             this.tblUsuarios.Controls.Add(this.lblFotoUsuarioUS, 1, 4);
             this.tblUsuarios.Controls.Add(this.btnDejarDeEditarUS, 0, 12);
             this.tblUsuarios.Controls.Add(this.btnAgregarUS, 0, 12);
-            this.tblUsuarios.Controls.Add(this.dataGridView2, 3, 0);
+            this.tblUsuarios.Controls.Add(this.dgvUsuariosUS, 3, 0);
             this.tblUsuarios.Controls.Add(this.lblNombreUsuarioUS, 0, 0);
             this.tblUsuarios.Controls.Add(this.txtNombreUS, 0, 1);
             this.tblUsuarios.Controls.Add(this.lblInstitucionUsuarioUS, 0, 6);
@@ -1477,7 +1478,7 @@ namespace BINAES
             this.dgvUsuariosUS.Name = "dgvUsuariosUS";
             this.dgvUsuariosUS.ReadOnly = true;
             this.dgvUsuariosUS.RowHeadersWidth = 51;
-            this.tableLayoutPanel8.SetRowSpan(this.dgvUsuariosUS, 13);
+            this.tblUsuarios.SetRowSpan(this.dgvUsuariosUS, 13);
             this.dgvUsuariosUS.Size = new System.Drawing.Size(620, 567);
             this.dgvUsuariosUS.TabIndex = 29;
             this.dgvUsuariosUS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuariosUS_CellContentClick);
@@ -2159,7 +2160,7 @@ namespace BINAES
             this.tabUsuarios.ResumeLayout(false);
             this.tblUsuarios.ResumeLayout(false);
             this.tblUsuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosUS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoUS)).EndInit();
             this.tabMisionVision.ResumeLayout(false);
             this.tblMisionVision.ResumeLayout(false);

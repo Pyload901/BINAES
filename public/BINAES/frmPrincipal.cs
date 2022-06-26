@@ -279,21 +279,54 @@ namespace BINAES
         }
         private void btnAgregarEV_Click(object sender, EventArgs e)
         {
-            
-        }
-        private void btnEditarEventoEV_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(btnEditarEventoEV.Tag);
-            List<string> objetivos = rtbObjetivoEventoEV.Text.Trim().Split('\n').ToList();
-            objetivos.RemoveAll(str => str == "");
-            int objetivosEnBaseDeDatos = ObjetivoEventoDAO.ContarElementosPorIdEvento(id);
-            int objetivos_nuevos = objetivos.Count - objetivosEnBaseDeDatos;
-            List<string> objetivosActualizar = objetivos.GetRange(0, objetivosEnBaseDeDatos);
-            List<string> objetivosNuevos = objetivos.GetRange(objetivosEnBaseDeDatos, objetivos.Count);
-            
+            // si es null, estamos en modo edicion
+            if (btnAgregarEventoEV.Tag == null)
+            {
+                String obj = rtbObjetivoEventoEV.Text;
+                obj.Trim();
+                List<string> objetivos = (obj.Split('\n')).ToList();
+                objetivos.RemoveAll(str => str == "");
+                /*objetivos.Take(ObjetivoEventoDAO.ContarElementosPorIdEvento());*/
+            }
+            else
+            {
+
+            }
+
+            //Falta implementar Bussines Object para Create
         }
 
-// ---------------------------------------------------------------------------------------------------
+        // Update
+        private void btnActualizarEventoEV_Click(object sender, EventArgs e)
+        {
+            Evento evento = new Evento();
+
+            evento.titulo = txtTituloEventoEV.Text;
+            evento.fechaInicio = dtpFechaInicioEV.Value;
+            evento.fechaFin = dtpFechaFinalizacionEV.Value;
+            evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
+            // Agregar id_area
+
+            if (EventoDAO.Editar(evento))
+                MessageBox.Show("Actualizada con éxito!");
+            else
+                MessageBox.Show("Ha ocurrido un error!");
+        }
+
+
+        //Delete
+        private void btnEliminarEventoEV_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+
+            if (EventoDAO.Eliminar(id))
+                MessageBox.Show("Eliminada con éxito!");
+            else
+                MessageBox.Show("Ha ocurrido un error!");
+
+        }
+
+        // ---------------------------------------------------------------------------------------------------
 
         // Formulario de usuarios
 
