@@ -28,35 +28,86 @@ namespace BINAES
             idUsuario = usuario.id;
             nombreUsuario = usuario.nombre;
             rolUsuario = usuario.rol;
+
+            // Quitar Bordes
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Name = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        // Mover Form
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void frmPrincipal_MouseDown(object sender, MouseEventArgs e)
+        // Modificaciones al frmPrincipal
+            
+            //Mover Form
+
+            [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+            private extern static void ReleaseCapture();
+            [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+            private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+            private void frmPrincipal_MouseDown(object sender, MouseEventArgs e)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            }
+            private void panelPrincipal_MouseDown(object sender, MouseEventArgs e)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            }
+
+        // Botones cerrar/maximizar/minimizar
+
+        private void btnCerrarPrincipal_Click(object sender, EventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            Application.Exit();
         }
+
+        private void btnMaxPrincipal_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMinPrincipal_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+
 
         private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-
-            //Conversion de colores Hexadecimales 
-            System.Drawing.Color col1= System.Drawing.ColorTranslator.FromHtml("#238bba");
-            System.Drawing.Color col2= System.Drawing.ColorTranslator.FromHtml("#19384b"); //Buen Color
-            System.Drawing.Color col3= System.Drawing.ColorTranslator.FromHtml("#237cba");
+        {;
 
             /*DatagridViewComposer.BuildDataGridView_Editar(dgvEventosEV, EventoDAO.getType());*/
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
 
-            //Cambios de color a ciertas partes
-          
-            //tabBuscar.BackColor = Color.FromArgb(50, 149, 196);
-            //tabEventos.BackColor = col1;
+            System.Drawing.Color col1 = System.Drawing.ColorTranslator.FromHtml("#214962"); // #52b7f5 - #19384b
+            System.Drawing.Color col2 = System.Drawing.ColorTranslator.FromHtml("#214962");
+
+            //Cambios de color a todos los tab y sus componentes
+
+            //tab eventos
+            tabEventos.BackColor = col1;
+            //tab buscar
+            tabBuscar.BackColor = col1;
+            txtBuscarEjemplarBU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            //tab agregar
+            tabAgregar.BackColor = col1;
+            //tab intro
+            tabIntroduccion.BackColor = col1;
+            //tab prestamo
+            tabPrestamo.BackColor = col1;
+            //tab reserva
+            tabReserva.BackColor = col1;
+            btnBuscarEjemplarRE.BackColor = col2;
+            //tab usuario
+            tabUsuarios.BackColor = col1;
+            //tab Coleccion
+            tabColeccion.BackColor = col1;
 
 
             // Renderizar imagen de btnBuscarEjemplar
@@ -513,6 +564,7 @@ namespace BINAES
             //dataGridView1.DataSource = null;
             //dataGridView1.DataSource = PrestamoEjemplarDAO.Insertar();
         }
+
     }
 }
      

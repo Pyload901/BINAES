@@ -102,7 +102,7 @@ namespace BINAES
             this.txtContraseniaLogin.Location = new System.Drawing.Point(100, 507);
             this.txtContraseniaLogin.Name = "txtContraseniaLogin";
             this.txtContraseniaLogin.PasswordChar = '*';
-            this.txtContraseniaLogin.Size = new System.Drawing.Size(285, 50);
+            this.txtContraseniaLogin.Size = new System.Drawing.Size(285, 43);
             this.txtContraseniaLogin.TabIndex = 5;
             this.txtContraseniaLogin.UseSystemPasswordChar = true;
             this.txtContraseniaLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseniaLogin_KeyDown);
@@ -114,9 +114,9 @@ namespace BINAES
             this.label29.AutoSize = true;
             this.tableLayoutPanel5.SetColumnSpan(this.label29, 3);
             this.label29.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(100, 320);
+            this.label29.Location = new System.Drawing.Point(100, 326);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(285, 40);
+            this.label29.Size = new System.Drawing.Size(285, 34);
             this.label29.TabIndex = 2;
             this.label29.Text = "Usuario";
             // 
@@ -129,7 +129,7 @@ namespace BINAES
             this.txtUsuarioLogin.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuarioLogin.Location = new System.Drawing.Point(100, 363);
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
-            this.txtUsuarioLogin.Size = new System.Drawing.Size(285, 47);
+            this.txtUsuarioLogin.Size = new System.Drawing.Size(285, 41);
             this.txtUsuarioLogin.TabIndex = 4;
             // 
             // label30
@@ -139,9 +139,9 @@ namespace BINAES
             this.label30.AutoSize = true;
             this.tableLayoutPanel5.SetColumnSpan(this.label30, 2);
             this.label30.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(100, 432);
+            this.label30.Location = new System.Drawing.Point(100, 470);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(188, 72);
+            this.label30.Size = new System.Drawing.Size(188, 34);
             this.label30.TabIndex = 3;
             this.label30.Text = "Contraseña";
             // 
@@ -207,7 +207,7 @@ namespace BINAES
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 45F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(485, 704);
