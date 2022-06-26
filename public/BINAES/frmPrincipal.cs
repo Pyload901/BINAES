@@ -685,7 +685,19 @@ namespace BINAES
 
         private void btnAgregarCO_Click_1(object sender, EventArgs e)
         {
-
+            Coleccion col = new Coleccion();
+            col.nombre = txtNombreCO.Text;
+            col.tipo_coleccion = cmbTipoColeccionCO.Text;
+            col.genero_coleccion = cmbGeneroColeccionCO.Text;
+            //Da error en el parametro
+            if (ColeccionDAO.Crear(col))
+            {
+                MessageBox.Show("Registro coleccion agregada con éxito!");
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error al intentar agregar la coleccion!");
+            }
         }
 
         private void btnDejarDeEditarCO_Click(object sender, EventArgs e)
