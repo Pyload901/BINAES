@@ -340,7 +340,7 @@ namespace BINAES
                 ejemplar.id_idioma = Convert.ToInt32(cmbIdiomaEjemplarAG.SelectedValue);
                 ejemplar.id_formato = Convert.ToInt32(cmbFormatoEjemplarAG.SelectedValue);
                 ejemplar.autor = txtAutorEjemplarAG.Text;
-                using ()
+                /*using ()*/
             }
             else
             {

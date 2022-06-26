@@ -178,7 +178,7 @@ namespace BINAES
                             ejemplar.nombre = reader["nombre_ejemplar"].ToString();
                             ejemplar.imagen = reader["imagen"].ToString();
                             ejemplar.fecha_publicacion = reader["fecha_publicacion"].ToString();
-                            ejemplar.disponibilidad = Convert.ToInt32(reader["disponibilidad"]);
+                            ejemplar.disponibilidad = Convert.ToBoolean(reader["disponibilidad"]);
                             ejemplar.coleccion = reader["coleccion"].ToString();
                             ejemplar.idioma = reader["idioma"].ToString();
                             ejemplar.editorial = reader["editorial"].ToString();
@@ -264,7 +264,7 @@ namespace BINAES
                         prestamo.nombre = reader["nombre_ejemplar"].ToString();
                         prestamo.imagen = reader["imagen"].ToString();
                         prestamo.fecha_publicacion = reader["fecha_publicacion"].ToString();
-                        prestamo.disponibilidad = Convert.ToInt32(reader["stock"]);
+                        prestamo.disponibilidad = Convert.ToBoolean(reader["disponibilidad"]);
                         prestamo.coleccion = reader["coleccion"].ToString();
                         prestamo.idioma = reader["idioma"].ToString();
                         prestamo.editorial = reader["editorial"].ToString();
