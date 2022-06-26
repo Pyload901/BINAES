@@ -640,9 +640,44 @@ namespace BINAES
 
         }
 
-        private void btnMisionVisionPPrincipal_Click(object sender, EventArgs e)
+        private void btnBusquedaPPrincipal_Click(object sender, EventArgs e)
         {
-            //tabAdmin.SelectedIndex = 
+            tabAdmin.SelectedIndex = 0;
+        }
+
+        private void btnPrestamosPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 1;
+        }
+
+        private void btnReservasPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 2;
+        }
+
+        private void btnAddEjemplarPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 3;
+        }
+
+        private void btnAddEventoPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 4;
+        }
+
+        private void btnAddUsuarioPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 5;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 6;
+        }
+
+        private void btnIntroPPrincipal_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedIndex = 7;
         }
     }
 }

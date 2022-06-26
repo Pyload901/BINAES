@@ -177,7 +177,6 @@ namespace BINAES
             this.sspRol = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIntroPPrincipal = new FontAwesome.Sharp.IconButton();
-            this.btnMisionVisionPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnAddUsuarioPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnAddEventoPPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnAddEjemplarPPrincipal = new FontAwesome.Sharp.IconButton();
@@ -190,6 +189,7 @@ namespace BINAES
             this.btnMinPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnMaxPrincipal = new FontAwesome.Sharp.IconButton();
             this.btnCerrarPrincipal = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.mspMenu.SuspendLayout();
             this.tabEventos.SuspendLayout();
             this.tblEventos.SuspendLayout();
@@ -1471,12 +1471,12 @@ namespace BINAES
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabAdmin.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabAdmin.CausesValidation = false;
-            this.tabAdmin.Controls.Add(this.tabUsuarios);
             this.tabAdmin.Controls.Add(this.tabBuscar);
             this.tabAdmin.Controls.Add(this.tabPrestamo);
             this.tabAdmin.Controls.Add(this.tabReserva);
             this.tabAdmin.Controls.Add(this.tabAgregar);
             this.tabAdmin.Controls.Add(this.tabEventos);
+            this.tabAdmin.Controls.Add(this.tabUsuarios);
             this.tabAdmin.Controls.Add(this.tabColeccion);
             this.tabAdmin.Controls.Add(this.TabAcerca);
             this.tabAdmin.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2222,8 +2222,8 @@ namespace BINAES
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.btnIntroPPrincipal);
-            this.panel1.Controls.Add(this.btnMisionVisionPPrincipal);
             this.panel1.Controls.Add(this.btnAddUsuarioPPrincipal);
             this.panel1.Controls.Add(this.btnAddEventoPPrincipal);
             this.panel1.Controls.Add(this.btnAddEjemplarPPrincipal);
@@ -2249,32 +2249,13 @@ namespace BINAES
             this.btnIntroPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIntroPPrincipal.IconSize = 40;
             this.btnIntroPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIntroPPrincipal.Location = new System.Drawing.Point(3, 228);
+            this.btnIntroPPrincipal.Location = new System.Drawing.Point(0, 162);
             this.btnIntroPPrincipal.Name = "btnIntroPPrincipal";
             this.btnIntroPPrincipal.Size = new System.Drawing.Size(292, 54);
             this.btnIntroPPrincipal.TabIndex = 8;
             this.btnIntroPPrincipal.Text = "Introduccion";
             this.btnIntroPPrincipal.UseVisualStyleBackColor = false;
-            // 
-            // btnMisionVisionPPrincipal
-            // 
-            this.btnMisionVisionPPrincipal.BackColor = System.Drawing.Color.Transparent;
-            this.btnMisionVisionPPrincipal.FlatAppearance.BorderSize = 0;
-            this.btnMisionVisionPPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMisionVisionPPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMisionVisionPPrincipal.ForeColor = System.Drawing.Color.White;
-            this.btnMisionVisionPPrincipal.IconChar = FontAwesome.Sharp.IconChar.Medapps;
-            this.btnMisionVisionPPrincipal.IconColor = System.Drawing.Color.White;
-            this.btnMisionVisionPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMisionVisionPPrincipal.IconSize = 40;
-            this.btnMisionVisionPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMisionVisionPPrincipal.Location = new System.Drawing.Point(3, 168);
-            this.btnMisionVisionPPrincipal.Name = "btnMisionVisionPPrincipal";
-            this.btnMisionVisionPPrincipal.Size = new System.Drawing.Size(303, 54);
-            this.btnMisionVisionPPrincipal.TabIndex = 7;
-            this.btnMisionVisionPPrincipal.Text = "Mision y Vision";
-            this.btnMisionVisionPPrincipal.UseVisualStyleBackColor = false;
-            this.btnMisionVisionPPrincipal.Click += new System.EventHandler(this.btnMisionVisionPPrincipal_Click);
+            this.btnIntroPPrincipal.Click += new System.EventHandler(this.btnIntroPPrincipal_Click);
             // 
             // btnAddUsuarioPPrincipal
             // 
@@ -2288,12 +2269,13 @@ namespace BINAES
             this.btnAddUsuarioPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddUsuarioPPrincipal.IconSize = 40;
             this.btnAddUsuarioPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddUsuarioPPrincipal.Location = new System.Drawing.Point(6, 534);
+            this.btnAddUsuarioPPrincipal.Location = new System.Drawing.Point(0, 531);
             this.btnAddUsuarioPPrincipal.Name = "btnAddUsuarioPPrincipal";
             this.btnAddUsuarioPPrincipal.Size = new System.Drawing.Size(303, 59);
             this.btnAddUsuarioPPrincipal.TabIndex = 6;
-            this.btnAddUsuarioPPrincipal.Text = "Añadir Usuario";
+            this.btnAddUsuarioPPrincipal.Text = "Usuarios";
             this.btnAddUsuarioPPrincipal.UseVisualStyleBackColor = false;
+            this.btnAddUsuarioPPrincipal.Click += new System.EventHandler(this.btnAddUsuarioPPrincipal_Click);
             // 
             // btnAddEventoPPrincipal
             // 
@@ -2307,12 +2289,13 @@ namespace BINAES
             this.btnAddEventoPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddEventoPPrincipal.IconSize = 40;
             this.btnAddEventoPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEventoPPrincipal.Location = new System.Drawing.Point(6, 466);
+            this.btnAddEventoPPrincipal.Location = new System.Drawing.Point(0, 470);
             this.btnAddEventoPPrincipal.Name = "btnAddEventoPPrincipal";
             this.btnAddEventoPPrincipal.Size = new System.Drawing.Size(303, 62);
             this.btnAddEventoPPrincipal.TabIndex = 5;
-            this.btnAddEventoPPrincipal.Text = "Añadir Evento";
+            this.btnAddEventoPPrincipal.Text = "Eventos";
             this.btnAddEventoPPrincipal.UseVisualStyleBackColor = false;
+            this.btnAddEventoPPrincipal.Click += new System.EventHandler(this.btnAddEventoPPrincipal_Click);
             // 
             // btnAddEjemplarPPrincipal
             // 
@@ -2326,12 +2309,13 @@ namespace BINAES
             this.btnAddEjemplarPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddEjemplarPPrincipal.IconSize = 40;
             this.btnAddEjemplarPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEjemplarPPrincipal.Location = new System.Drawing.Point(3, 594);
+            this.btnAddEjemplarPPrincipal.Location = new System.Drawing.Point(0, 406);
             this.btnAddEjemplarPPrincipal.Name = "btnAddEjemplarPPrincipal";
             this.btnAddEjemplarPPrincipal.Size = new System.Drawing.Size(331, 58);
             this.btnAddEjemplarPPrincipal.TabIndex = 4;
             this.btnAddEjemplarPPrincipal.Text = "Añadir Ejemplar";
             this.btnAddEjemplarPPrincipal.UseVisualStyleBackColor = false;
+            this.btnAddEjemplarPPrincipal.Click += new System.EventHandler(this.btnAddEjemplarPPrincipal_Click);
             // 
             // btnReservasPPrincipal
             // 
@@ -2345,12 +2329,13 @@ namespace BINAES
             this.btnReservasPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReservasPPrincipal.IconSize = 40;
             this.btnReservasPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReservasPPrincipal.Location = new System.Drawing.Point(6, 403);
+            this.btnReservasPPrincipal.Location = new System.Drawing.Point(4, 340);
             this.btnReservasPPrincipal.Name = "btnReservasPPrincipal";
             this.btnReservasPPrincipal.Size = new System.Drawing.Size(289, 60);
             this.btnReservasPPrincipal.TabIndex = 3;
             this.btnReservasPPrincipal.Text = "Reservas";
             this.btnReservasPPrincipal.UseVisualStyleBackColor = false;
+            this.btnReservasPPrincipal.Click += new System.EventHandler(this.btnReservasPPrincipal_Click);
             // 
             // btnPrestamosPPrincipal
             // 
@@ -2364,12 +2349,13 @@ namespace BINAES
             this.btnPrestamosPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPrestamosPPrincipal.IconSize = 40;
             this.btnPrestamosPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrestamosPPrincipal.Location = new System.Drawing.Point(6, 338);
+            this.btnPrestamosPPrincipal.Location = new System.Drawing.Point(4, 274);
             this.btnPrestamosPPrincipal.Name = "btnPrestamosPPrincipal";
             this.btnPrestamosPPrincipal.Size = new System.Drawing.Size(289, 59);
             this.btnPrestamosPPrincipal.TabIndex = 2;
             this.btnPrestamosPPrincipal.Text = "Prestamos";
             this.btnPrestamosPPrincipal.UseVisualStyleBackColor = false;
+            this.btnPrestamosPPrincipal.Click += new System.EventHandler(this.btnPrestamosPPrincipal_Click);
             // 
             // btnBusquedaPPrincipal
             // 
@@ -2383,12 +2369,13 @@ namespace BINAES
             this.btnBusquedaPPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBusquedaPPrincipal.IconSize = 40;
             this.btnBusquedaPPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBusquedaPPrincipal.Location = new System.Drawing.Point(3, 279);
+            this.btnBusquedaPPrincipal.Location = new System.Drawing.Point(4, 218);
             this.btnBusquedaPPrincipal.Name = "btnBusquedaPPrincipal";
             this.btnBusquedaPPrincipal.Size = new System.Drawing.Size(289, 60);
             this.btnBusquedaPPrincipal.TabIndex = 1;
             this.btnBusquedaPPrincipal.Text = "Busqueda";
             this.btnBusquedaPPrincipal.UseVisualStyleBackColor = false;
+            this.btnBusquedaPPrincipal.Click += new System.EventHandler(this.btnBusquedaPPrincipal_Click);
             // 
             // panel3
             // 
@@ -2473,6 +2460,26 @@ namespace BINAES
             this.btnCerrarPrincipal.TabIndex = 0;
             this.btnCerrarPrincipal.UseVisualStyleBackColor = true;
             this.btnCerrarPrincipal.Click += new System.EventHandler(this.btnCerrarPrincipal_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 40;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 585);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(303, 59);
+            this.iconButton1.TabIndex = 9;
+            this.iconButton1.Text = "Colecciones";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // frmPrincipal
             // 
@@ -2692,7 +2699,6 @@ namespace BINAES
         private FontAwesome.Sharp.IconButton btnReservasPPrincipal;
         private FontAwesome.Sharp.IconButton btnPrestamosPPrincipal;
         private FontAwesome.Sharp.IconButton btnBusquedaPPrincipal;
-        private FontAwesome.Sharp.IconButton btnMisionVisionPPrincipal;
         private FontAwesome.Sharp.IconButton btnIntroPPrincipal;
         private Button btnPrestarPR;
         private NumericUpDown nudIdEjemplarPR;
@@ -2707,5 +2713,6 @@ namespace BINAES
         private Label label6;
         private ComboBox cmbEditorialEjemplarAG;
         private CheckBox chkDisponibilidadEjemplarAG;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
