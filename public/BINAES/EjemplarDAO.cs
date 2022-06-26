@@ -240,7 +240,7 @@ namespace BINAES
 
             using (SqlConnection conn = new SqlConnection(cadena))
             {
-                //Falta la query
+                //Falta la query correspondiente
                 string query = " ";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 //Mostrar informacion
