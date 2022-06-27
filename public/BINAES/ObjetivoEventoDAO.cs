@@ -11,24 +11,31 @@ namespace BINAES
         public static List<ObjetivoEvento> Leer (int id_evento)
         {
             List<ObjetivoEvento> list = new List<ObjetivoEvento>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+
+            try
             {
-                string query = "SELECT * FROM OBJETIVO_EVENTO WHERE id_evento = @id_evento";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@id_evento", id_evento);
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    while (reader.Read())
+                    string query = "SELECT * FROM OBJETIVO_EVENTO WHERE id_evento = @id_evento";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id_evento", id_evento);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        list.Add(new ObjetivoEvento(
-                            Convert.ToInt32(reader["id"]),
-                            reader["objetivo"].ToString(),
-                            Convert.ToInt32(reader["id_evento"])
-                        ));
+                        while (reader.Read())
+                        {
+                            list.Add(new ObjetivoEvento(
+                                Convert.ToInt32(reader["id"]),
+                                reader["objetivo"].ToString(),
+                                Convert.ToInt32(reader["id_evento"])
+                            ));
+                        }
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            }catch (Exception ex)
+            {
+
             }
             return list;
         }
@@ -36,20 +43,27 @@ namespace BINAES
         public static int ContarElementosPorIdEvento (int id_evento)
         {
             int cont = 0;
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+
+            try
             {
-                string query = "SELECT COUNT(O.id) 'cont' FROM OBJETIVO_EVENTO O WHERE id_evento = @id_evento";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@id_evento", id_evento);
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    while (reader.Read())
+                    string query = "SELECT COUNT(O.id) 'cont' FROM OBJETIVO_EVENTO O WHERE id_evento = @id_evento";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id_evento", id_evento);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        cont = Convert.ToInt32(reader["cont"]);
+                        while (reader.Read())
+                        {
+                            cont = Convert.ToInt32(reader["cont"]);
+                        }
                     }
-                }
-                conn.Close();
+                    conn.Close();
+            }
+            }catch(Exception ex)
+            {
+
             }
             return cont;
         }
