@@ -493,6 +493,7 @@ namespace BINAES
                 try
                 {
                     picImagenEV.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
+                    picImagenEV.Tag = Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString();
                 }
                 catch (Exception ex2)
                 {
@@ -502,11 +503,7 @@ namespace BINAES
                 dtpFechaFinalizacionEV.Text = dgv.Rows[e.RowIndex].Cells["fechaFin"].Value.ToString();
                 cmbAreaEventoEV.SelectedValue = dgv.Rows[e.RowIndex].Cells["id_area"].Value;
                 rtbObjetivoEventoEV.Clear();
-                List<ObjetivoEvento> objetivos = ObjetivoEventoDAO.Leer(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["id"].Value));
-                foreach (ObjetivoEvento obj in objetivos)
-                {
-                    rtbObjetivoEventoEV.AppendText(obj.objetivo + Environment.NewLine);
-                }
+                rtbObjetivoEventoEV.Text = dgv.Rows[e.RowIndex].Cells["objetivos"].Value.ToString();
                 nudNumeroAsistentesEV.Value = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["numero_asistentes"].Value);
                 btnDejarDeEditarEV.Enabled = true;
                 btnEliminarEventoEV.Enabled = true;
@@ -530,31 +527,10 @@ namespace BINAES
             btnDejarDeEditarEV.Enabled = false;
             btnEliminarEventoEV.Enabled = false;
         }
-        private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-
-            /* if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Editar)
-             {
-                 Evento evento = EventoDAO.LeerUno(id);
-                 txtTituloEventoEV.Text = evento.titulo;
-                 dtpFechaInicioEV.Value = evento.fechaInicio;
-                 dtpFechaFinalizacionEV.Value = evento.fechaFin;
-                 nudNumeroAsistentesEV.Value = evento.numero_asistentes;
-                 btnDejarDeEditarEV.Enabled = true;
-             }
-             else if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Eliminar)
-             {
-                 EventoDAO.Eliminar(id);
-             }*/
-        }
 
         private void btnSalirEdicionEjemplarAG_Click(object sender, EventArgs e)
         {
             txtTituloEventoEV.Clear();
-            /*dtpFechaInicioEV;
-            dtpFechaFinalizacionEV.Value = evento.fechaFin;
-            nudNumeroAsistentesEV.Value = evento.numero_asistentes;*/
             btnDejarDeEditarEV.Enabled = false;
         }
 
@@ -566,23 +542,35 @@ namespace BINAES
         {
             if (txtTituloEventoEV.Text != "" && dtpFechaInicioEV.Text != "" && dtpFechaFinalizacionEV.Text != "" && rtbObjetivoEventoEV.Text != "" && nudNumeroAsistentesEV.Value != 0 && picImagenEV.Image != Properties.Resources._default)
             {
-                List<string> objetivos = rtbObjetivoEventoEV.Text.Trim().Split('\n').ToList();
-                objetivos.RemoveAll(str => str == "");
-                Evento evento = new Evento();
-                evento.titulo = txtTituloEventoEV.Text;
-                evento.fechaInicio = Convert.ToDateTime(dtpFechaInicioEV.Text);
-                evento.fechaFin = Convert.ToDateTime(dtpFechaFinalizacionEV.Text);
-                evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
-                evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
-                evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
-
-                if (EventoDAO.Crear(evento))
+                if (nudNumeroAsistentesEV.Value > 358 && cmbAreaEventoEV.Text.Contains("Auditórium"))
                 {
-                    DataGridViewComposer.LimpiarDataGridView(dgvEventosEV);
-                    dgvEventosEV.DataSource = EventoDAO.Leer();
-                    DataGridViewComposer.Compose(dgvEventosEV);
+                    MessageBox.Show("No hay espacio para más de 358 personas en el Auditórium", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            } else
+                else if (nudNumeroAsistentesEV.Value > 200 && cmbAreaEventoEV.Text.Contains("Sala de proyección"))
+                {
+                    MessageBox.Show("No hay espacio para más de 200 personas en la Sala de proyección", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else 
+                {
+                    Evento evento = new Evento();
+                    evento.titulo = txtTituloEventoEV.Text;
+                    evento.fechaInicio = Convert.ToDateTime(dtpFechaInicioEV.Text);
+                    evento.fechaFin = Convert.ToDateTime(dtpFechaFinalizacionEV.Text);
+                    evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
+                    evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
+                    evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
+                    evento.objetivos = rtbObjetivoEventoEV.Text;
+                    Utils.EliminarImagen(picImagenEV.Tag.ToString());
+                    evento.imagen = Utils.GuardarImagen(Properties.Resources.RutaImagenesEventos, picImagenEV.Image);
+                    if (EventoDAO.Crear(evento))
+                    {
+                        DataGridViewComposer.LimpiarDataGridView(dgvEventosEV);
+                        dgvEventosEV.DataSource = EventoDAO.Leer();
+                        DataGridViewComposer.Compose(dgvEventosEV);
+                    }
+                }
+            }
+            else
             {
                 MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -595,17 +583,34 @@ namespace BINAES
         private void btnActualizarEventoEV_Click(object sender, EventArgs e)
         {
             Evento evento = new Evento();
+            if (txtTituloEventoEV.Text != "" && dtpFechaInicioEV.Text != "" && dtpFechaFinalizacionEV.Text != "" && rtbObjetivoEventoEV.Text != "" && nudNumeroAsistentesEV.Value != 0 && picImagenEV.Image != Properties.Resources._default)
+            {
+                evento.titulo = txtTituloEventoEV.Text;
+                evento.fechaInicio = dtpFechaInicioEV.Value;
+                evento.fechaFin = dtpFechaFinalizacionEV.Value;
+                evento.objetivos = rtbObjetivoEventoEV.Text;
+                evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
 
-            evento.titulo = txtTituloEventoEV.Text;
-            evento.fechaInicio = dtpFechaInicioEV.Value;
-            evento.fechaFin = dtpFechaFinalizacionEV.Value;
-            evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
-            // Agregar id_area
-
-            if (EventoDAO.Editar(evento))
-                MessageBox.Show("Actualizada con éxito!");
+                evento.imagen = Utils.GuardarImagen(Properties.Resources.RutaImagenesEventos, picImagenEV.Image);
+                evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
+                // Agregar id_area
+                if (nudNumeroAsistentesEV.Value > 358 && cmbAreaEventoEV.Text.Contains("Auditórium"))
+                {
+                    MessageBox.Show("No hay espacio para más de 358 personas en el Auditórium", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (nudNumeroAsistentesEV.Value > 200 && cmbAreaEventoEV.Text.Contains("Sala de proyección"))
+                {
+                    MessageBox.Show("No hay espacio para más de 200 personas en la Sala de proyección", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                if (EventoDAO.Editar(evento))
+                    MessageBox.Show("Actualizada con éxito!");
+                else
+                    MessageBox.Show("Ha ocurrido un error!");
+            }
             else
-                MessageBox.Show("Ha ocurrido un error!");
+            {
+                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
 
@@ -617,7 +622,12 @@ namespace BINAES
             int id = coleccion.id;
 
             if (EventoDAO.Eliminar(id))
+            {
                 MessageBox.Show("Eliminada con éxito!");
+                DataGridViewComposer.LimpiarDataGridView(dgvEventosEV);
+                dgvEventosEV.DataSource = EventoDAO.Leer();
+                DataGridViewComposer.Compose(dgvEventosEV);
+            }
             else
                 MessageBox.Show("Ha ocurrido un error!");
 
@@ -672,28 +682,28 @@ namespace BINAES
         private void btnAgregarUS_Click(object sender, EventArgs e)
         {
             Usuario user = new Usuario();
-            user.nombre = txtNombreUS.Text;
-            user.telefono = txtTelefonoUS.Text;
-            user.email = txtEmailUS.Text;
-            user.institucion = txtInstitucionUS.Text;
-            user.direccion = txtDireccionUS.Text;
-            user.contrasenia = txtContraseñaUS.Text;
-            user.fotografia = "foto";
-            user.id_ocupacion = Convert.ToInt32(cmbOcupacionUS.SelectedValue);
-            user.id_rol = cmbRolUS.SelectedValue.ToString();
-            
-
-            if (UsuarioDAO.Crear(user))
+            if (txtNombreUS.Text != "" && txtTelefonoUS.Text != "" && txtEmailUS.Text != "" && txtInstitucionUS.Text != "" && txtDireccionUS.Text != "" && picFotoUS.Image != Properties.Resources._default)
             {
-                MessageBox.Show("Registro agregado con éxito!");
-                DataGridViewComposer.LimpiarDataGridView(dgvUsuariosUS);
-                dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
-                DataGridViewComposer.Compose(dgvUsuariosUS);
+                user.nombre = txtNombreUS.Text;
+                user.telefono = txtTelefonoUS.Text;
+                user.email = txtEmailUS.Text;
+                user.institucion = txtInstitucionUS.Text;
+                user.direccion = txtDireccionUS.Text;
+                Utils.GuardarImagen(Properties.Resources.RutaImagenesUsuarios, picFotoUS.Image);
+                if (UsuarioDAO.Crear(user))
+                {
+                    MessageBox.Show("Registro agregado con éxito!");
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error!");
+                }
             }
             else
             {
-                MessageBox.Show("Ha ocurrido un error!");
+                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
 
         // Read
@@ -708,7 +718,15 @@ namespace BINAES
                 txtEmailUS.Text = dgv.Rows[e.RowIndex].Cells["email"].Value.ToString();
                 txtInstitucionUS.Text = dgv.Rows[e.RowIndex].Cells["institucion"].Value.ToString();
                 txtDireccionUS.Text = dgv.Rows[e.RowIndex].Cells["direccion"].Value.ToString();
-                
+                try
+                {
+                    picFotoUS.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
+                    picFotoUS.Image.Tag = Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString();
+                }
+                catch (Exception ex2)
+                {
+                    picFotoUS.Image = Properties.Resources._default;
+                }
             }
             catch (Exception ex1)
             {
@@ -719,31 +737,27 @@ namespace BINAES
         // Update
         private void btnActualizarUS_Click(object sender, EventArgs e)
         {
-
-            Usuario user = new Usuario();
-            user.id = Convert.ToInt32(btnActualizarUS.Tag);
-            user.nombre = txtNombreUS.Text;
-            user.telefono = txtTelefonoUS.Text;
-            user.email = txtEmailUS.Text;
-            user.institucion = txtInstitucionUS.Text;
-            user.direccion = txtDireccionUS.Text;
-            user.contrasenia = txtContraseñaUS.Text;
-            user.fotografia = "foto";
-            user.id_ocupacion = Convert.ToInt32(cmbOcupacionUS.SelectedValue);
-            user.id_rol = cmbRolUS.SelectedValue.ToString();
-
-            if (UsuarioDAO.Editar(user))
+            if (txtNombreUS.Text != "" && txtTelefonoUS.Text != "" && txtEmailUS.Text != "" && txtInstitucionUS.Text != "" && txtDireccionUS.Text != "" && picFotoUS.Image != Properties.Resources._default)
             {
-                MessageBox.Show("Actualizada con éxito!");
-                DataGridViewComposer.LimpiarDataGridView(dgvUsuariosUS);
-                dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
-                DataGridViewComposer.Compose(dgvUsuariosUS);
+                Usuario user = new Usuario();
 
+                user.nombre = txtNombreUS.Text;
+                user.telefono = txtTelefonoUS.Text;
+                user.email = txtEmailUS.Text;
+                user.institucion = txtInstitucionUS.Text;
+                user.direccion = txtDireccionUS.Text;
+                Utils.EliminarImagen(picFotoUS.Tag.ToString());
+                user.fotografia = Utils.GuardarImagen(Properties.Resources.RutaImagenesUsuarios, picFotoUS.Image);
+
+                if (UsuarioDAO.Editar(user))
+                    MessageBox.Show("Actualizada con éxito!");
+                else
+                    MessageBox.Show("Ha ocurrido un error!");
             }
-                
             else
-                MessageBox.Show("Ha ocurrido un error!");
-            
+            {
+                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }   
 
  // ---------------------------------------------------------------------------------------------------
@@ -857,6 +871,1086 @@ namespace BINAES
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void btnEditarEjemplarAG_Click(object sender, EventArgs e)
+        {
+            if (txtNombreEjemplarAG.Text != "" && txtAutorEjemplarAG.Text != "" && dtpFechaPublicacionEjemplarAG.Text != "" && picEjemplarAG.Image != Properties.Resources._default)
+            {
+                string imagen = Utils.GuardarImagen(Properties.Resources.RutaImagenesEjemplares, picEjemplarAG.Image);
+                Ejemplar ejemplar = new Ejemplar();
+                ejemplar.id = Convert.ToInt32(btnEditarEjemplarAG.Tag);
+                ejemplar.nombre = txtNombreEjemplarAG.Text;
+                ejemplar.imagen = imagen;
+                ejemplar.fecha_publicacion = Convert.ToDateTime(dtpFechaPublicacionEjemplarAG.Value).Date;
+                ejemplar.disponibilidad = chkDisponibilidadEjemplarAG.Checked;
+                ejemplar.id_editorial = Convert.ToInt32(cmbEditorialEjemplarAG.SelectedValue);
+                ejemplar.id_coleccion = Convert.ToInt32(cmbColeccionEjemplarAG.SelectedValue);
+                ejemplar.id_idioma = Convert.ToInt32(cmbIdiomaEjemplarAG.SelectedValue);
+                ejemplar.id_formato = Convert.ToInt32(cmbFormatoEjemplarAG.SelectedValue);
+                ejemplar.autor = txtAutorEjemplarAG.Text;
+                if (EjemplarDAO.Actualizar(ejemplar))
+                {
+
+                    using (frmMultivaluadosEjemplar ventana = new frmMultivaluadosEjemplar(ejemplar.id))
+                    {
+                        ventana.ShowDialog();
+                        if (ventana.ISBN != "")
+                        {
+                            Etiqueta etiqueta = new Etiqueta();
+                            etiqueta.id = ventana.id_ISBN;
+                            etiqueta.etiqueta = ventana.ISBN;
+                            EtiquetaDAO.Actualizar(etiqueta);
+                        }
+                        if (ventana.ISSN != "")
+                        {
+                            Etiqueta etiqueta = new Etiqueta();
+                            etiqueta.id = ventana.id_ISSN;
+                            etiqueta.etiqueta = ventana.ISSN;
+                            EtiquetaDAO.Actualizar(etiqueta);
+                        }
+                        if (ventana.DOI != "")
+                        {
+                            Etiqueta etiqueta = new Etiqueta();
+                            etiqueta.id = ventana.id_DOI;
+                            etiqueta.etiqueta = ventana.DOI;
+                            EtiquetaDAO.Actualizar(etiqueta);
+                        }
+                        if (ventana.PalabrasClave != "")
+                        {
+                            PalabraClaveDAO.Eliminar(ejemplar.id);
+                            List<string> listaPalabrasClave = ventana.PalabrasClave.Trim().Replace(", ", ",").Split(',').ToList();
+                            foreach (string palabra in listaPalabrasClave)
+                            {
+                                PalabraClave palabraClave = new PalabraClave();
+                                palabraClave.palabra = palabra;
+                                palabraClave.id_ejemplar = ejemplar.id;
+                                PalabraClaveDAO.Crear(palabraClave);
+                            }
+                        }
+                    }
+                }
+                DataGridViewComposer.LimpiarDataGridView(dgvEjemplaresAG);
+                dgvEjemplaresAG.DataSource = EjemplarDAO.Leer();
+                DataGridViewComposer.Compose(dgvEjemplaresAG);
+
+            }
+        }
     }
 }
      

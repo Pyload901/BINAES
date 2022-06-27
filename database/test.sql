@@ -189,3 +189,15 @@ SELECT E.id, E.nombre, E.imagen, E.autor, E.fecha_publicacion, E.disponibilidad,
 
         SELECT * FROM ROL;
         SELECT * FROM OCUPACION_USUARIO;
+
+SELECT * FROM TIPO_COLECCION;
+SELECT * FROM GENERO_COLECCION;
+select * from usuario;
+SELECT * FROM PALABRA_CLAVE;
+SELECT * FROM ETIQUETA;
+UPDATE USUARIO SET email='admin@gmail.com' WHERE id=1;
+
+Select * from PALABRA_CLAVE;
+
+SELECT E.id, E.etiqueta, NE.nombre FROM ETIQUETA E INNER JOIN NOMBRE_ETIQUETA NE ON E.id_nombre_etiqueta = NE.id WHERE E.id_ejemplar = 25;
+SELECT * FROM EVENTO

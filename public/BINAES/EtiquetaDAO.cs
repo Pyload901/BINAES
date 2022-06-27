@@ -34,7 +34,7 @@ namespace BINAES
             }
             return result;
         }
-        public static List<Etiqueta> Leer(int id)
+        public static List<Etiqueta> Leer(int id_ejemplar)
         {
             List<Etiqueta> list = new List<Etiqueta>();
 
@@ -68,6 +68,30 @@ namespace BINAES
 
             }
             return list;
+        }
+        public static bool Actualizar(Etiqueta etiqueta)
+        {
+            bool result = true;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+                {
+                    string query = @"UPDATE ETIQUETA SET etiqueta = @etiqueta WHERE id = @id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@id", etiqueta.id);
+                    cmd.Parameters.AddWithValue("@etiqueta", etiqueta.etiqueta);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                result = false;
+            }
+            return result;
         }
     }
 }

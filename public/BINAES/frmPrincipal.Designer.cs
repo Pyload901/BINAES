@@ -386,7 +386,6 @@ namespace BINAES
             this.dgvEventosEV.Size = new System.Drawing.Size(449, 540);
             this.dgvEventosEV.TabIndex = 26;
             this.dgvEventosEV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellClick);
-            this.dgvEventosEV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventosEV_CellContentClick);
             // 
             // lblTituloEventoEV
             // 
@@ -549,6 +548,11 @@ namespace BINAES
             this.tblEventos.SetColumnSpan(this.nudNumeroAsistentesEV, 2);
             this.nudNumeroAsistentesEV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudNumeroAsistentesEV.Location = new System.Drawing.Point(3, 465);
+            this.nudNumeroAsistentesEV.Maximum = new decimal(new int[] {
+            358,
+            0,
+            0,
+            0});
             this.nudNumeroAsistentesEV.Name = "nudNumeroAsistentesEV";
             this.nudNumeroAsistentesEV.Size = new System.Drawing.Size(272, 26);
             this.nudNumeroAsistentesEV.TabIndex = 16;
@@ -971,6 +975,7 @@ namespace BINAES
             this.btnEditarEjemplarAG.TabIndex = 34;
             this.btnEditarEjemplarAG.Text = "Editar";
             this.btnEditarEjemplarAG.UseVisualStyleBackColor = true;
+            this.btnEditarEjemplarAG.Click += new System.EventHandler(this.btnEditarEjemplarAG_Click);
             // 
             // btnAgregarEjemplarAG
             // 

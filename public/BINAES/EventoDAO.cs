@@ -22,12 +22,13 @@ namespace BINAES
                 string cadena = Properties.Resources.CadenaConexion;
                 using (SqlConnection connection = new SqlConnection(cadena))
                 {
-                    string query = "INSERT INTO USUARIO (nombre, imagen, fecha_inicio, fecha_fin, numero_asistentes, id_area) VALUES (@nombre, @imagen, @fecha_inicio, @fecha_fin, @numero_asistentes, @id_area)";
+                    string query = "INSERT INTO EVENTO (titulo, imagen, objetivos, fecha_inicio, fecha_fin, numero_asistentes, id_area) VALUES (@titulo, @imagen, @objetivos, @fecha_inicio, @fecha_fin, @numero_asistentes, @id_area)";
 
                     SqlCommand command = new SqlCommand(query, connection);
 
-                    command.Parameters.AddWithValue("@nombre", evento.titulo);
+                    command.Parameters.AddWithValue("@titulo", evento.titulo);
                     command.Parameters.AddWithValue("@imagen", evento.imagen);
+                    command.Parameters.AddWithValue("@objetivos", evento.objetivos);
                     command.Parameters.AddWithValue("@fecha_inicio", evento.fechaInicio);
                     command.Parameters.AddWithValue("@fecha_fin", evento.fechaFin);
                     command.Parameters.AddWithValue("@numero_asistentes", evento.numero_asistentes);
@@ -40,6 +41,7 @@ namespace BINAES
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 exito = false;
             }
             return exito;
@@ -72,6 +74,7 @@ namespace BINAES
                                Convert.ToInt32(reader["numero_asistentes"]),
                                Convert.ToInt32(reader["id_area"])
                             );
+                            evento.objetivos = reader["objetivos"].ToString();
                             list.Add(evento);
                         }
                         DataGridViewComposer.GetNullProperties(list[0]);
@@ -95,15 +98,17 @@ namespace BINAES
                 string cadena = Properties.Resources.CadenaConexion;
                 using (SqlConnection connection = new SqlConnection(cadena))
                 {
-                    string query = "UPDATE EVENTO SET titulo = @titulo, imagen = @imagen, fecha_inicio = @fecha_inicio, fecha_fin = @fecha_fin, numero_asistentes = @numero_asistentes, id_area = @id_area";
+                    string query = "UPDATE EVENTO SET titulo = @titulo, imagen = @imagen, fecha_inicio = @fecha_inicio, fecha_fin = @fecha_fin, objetivos = @objetivos, numero_asistentes = @numero_asistentes, id_area = @id_area WHERE id = @id";
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@titulo", evento.titulo);
                     command.Parameters.AddWithValue("@imagen", evento.imagen);
+                    command.Parameters.AddWithValue("@objetivos", evento.objetivos);
                     command.Parameters.AddWithValue("@fecha_inicio", evento.fechaInicio);
                     command.Parameters.AddWithValue("@fecha_fin", evento.fechaFin);
                     command.Parameters.AddWithValue("@numero_asistentes", evento.numero_asistentes);
                     command.Parameters.AddWithValue("@id_area", evento.id_area);
+                    command.Parameters.AddWithValue("@id", evento.id);
 
                     connection.Open();
                     command.ExecuteNonQuery();
@@ -112,6 +117,7 @@ namespace BINAES
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 exito = false;
             }
             return exito;

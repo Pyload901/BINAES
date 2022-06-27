@@ -11,6 +11,7 @@ namespace BINAES
         public int id { get; set; }
         public string titulo { get; set; }
         public string imagen { get; set; }
+        public string objetivos { get; set; }
         public DateTime fechaInicio { get; set; }
         public DateTime fechaFin { get; set; }
         public int numero_asistentes { get; set; }

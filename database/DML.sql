@@ -131,4 +131,4 @@ INSERT INTO AREA (horario_abierto, nombre_responsable, piso, id_descripcion_area
 
 INSERT INTO USUARIO (nombre, institucion, direccion, telefono, fotografia, email, contrasenia, id_rol, id_ocupacion) VALUES ('admin', 'Institucion', 'BINAES', 70756423, 'user.png', 'admin@gmail.com', '$2a$11$jK8uFrwOMi5l5gz99ksFaecw1oZ.dZyAZnD2RgtroeTGSx.MmZy0G', 'ROL_01', 1);
 
-INSERT INTO EVENTO (titulo, imagen, fecha_inicio, fecha_fin, numero_asistentes, id_area) VALUES ('mi envento', 'evento.png', GETDATE(), GETDATE(), 10, 1);
+INSERT INTO EVENTO (titulo, imagen, objetivos, fecha_inicio, fecha_fin, numero_asistentes, id_area) VALUES ('mi envento', 'evento.png', 'mis objetivos',GETDATE(), GETDATE(), 10, 1);

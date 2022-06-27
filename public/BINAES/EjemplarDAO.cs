@@ -390,6 +390,40 @@ namespace BINAES
             }
             return result;
         }
+        public static bool Actualizar(Ejemplar ejemplar)
+        {
+            bool result = true;
+            try
+            {
+                string cadena = Properties.Resources.CadenaConexion;
+                using (SqlConnection conn = new SqlConnection(cadena))
+                {
+                    //Falta la query correspondiente
+                    string query = @"UPDATE EJEMPLAR SET nombre = @nombre, imagen = @imagen, autor = @autor, fecha_publicacion = CONVERT(DATE, @fecha_publicacion, 103), disponibilidad = @disponibilidad, id_coleccion = @id_coleccion, id_idioma = @id_idioma, id_editorial = @id_editorial, id_formato = @id_formato WHERE id = @id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    //Mostrar informacion
+                    cmd.Parameters.AddWithValue("@id", ejemplar.id);
+                    cmd.Parameters.AddWithValue("@nombre", ejemplar.nombre);
+                    cmd.Parameters.AddWithValue("@imagen", ejemplar.imagen);
+                    cmd.Parameters.AddWithValue("@autor", ejemplar.autor);
+                    cmd.Parameters.AddWithValue("@fecha_publicacion", ejemplar.fecha_publicacion);
+                    cmd.Parameters.AddWithValue("@disponibilidad", ejemplar.disponibilidad);
+                    cmd.Parameters.AddWithValue("@id_coleccion", ejemplar.id_coleccion);
+                    cmd.Parameters.AddWithValue("@id_idioma", ejemplar.id_idioma);
+                    cmd.Parameters.AddWithValue("@id_editorial", ejemplar.id_editorial);
+                    cmd.Parameters.AddWithValue("@id_formato", ejemplar.id_formato);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                result = false;
+            }
+            return result;
+        }
     }
 }
 
