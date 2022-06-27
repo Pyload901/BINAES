@@ -11,22 +11,29 @@ namespace BINAES
         public static List<Editorial> Leer()
         {
             List<Editorial> list = new List<Editorial>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            try
             {
-                string query = @"SELECT * FROM EDITORIAL";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    while (reader.Read())
+                    string query = @"SELECT * FROM EDITORIAL";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        list.Add(new Editorial(
-                            Convert.ToInt32(reader["id"]),
-                            reader["editorial"].ToString()
-                        ));
+                        while (reader.Read())
+                        {
+                            list.Add(new Editorial(
+                                Convert.ToInt32(reader["id"]),
+                                reader["editorial"].ToString()
+                            ));
+                        }
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            catch(Exception e)
+            {
+
             }
             return list;
         }
