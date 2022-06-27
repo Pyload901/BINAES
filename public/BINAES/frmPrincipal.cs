@@ -730,24 +730,19 @@ namespace BINAES
 
                 }*/
                 user.fotografia = Utils.GuardarImagen(Properties.Resources.RutaImagenesUsuarios, picFotoUS.Image);
-                Console.WriteLine(user.fotografia);
                 if (UsuarioDAO.Editar(user))
-                    MessageBox.Show("Actualizada con éxito!");
+                {
+                    MessageBox.Show("Registro actualizado con éxito!", "Registro actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataGridViewComposer.LimpiarDataGridView(dgvUsuariosUS);
+                    dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
+                    DataGridViewComposer.Compose(dgvUsuariosUS);
+                }
                 else
-                    MessageBox.Show("Ha ocurrido un error!");
-            if (UsuarioDAO.Editar(user))
-            {
-                MessageBox.Show("Registro actualizado con éxito!", "Registro actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DataGridViewComposer.LimpiarDataGridView(dgvUsuariosUS);
-                dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
-                DataGridViewComposer.Compose(dgvUsuariosUS);
-
+                {
+                    MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
-            {
-                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }   
+        }
 
  // ---------------------------------------------------------------------------------------------------
 

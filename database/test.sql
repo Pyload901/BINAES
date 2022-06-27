@@ -198,7 +198,8 @@ SELECT * FROM ETIQUETA;
 UPDATE USUARIO SET email='admin@gmail.com' WHERE id=1;
 
 Select * from COLECCION;
-SELECT * FROM ROL;
+SELECT * FROM USUARIO;
+update USUARIO SET id_rol ='ROL_01';
 SELECT E.id, E.etiqueta, NE.nombre FROM ETIQUETA E INNER JOIN NOMBRE_ETIQUETA NE ON E.id_nombre_etiqueta = NE.id WHERE E.id_ejemplar = 25;
 SELECT * FROM EVENTO
 
