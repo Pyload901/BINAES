@@ -210,11 +210,6 @@ namespace BINAES
                     cmbOcupacionUS.DisplayMember = "ocupacion";
                     cmbOcupacionUS.DataSource = OcupacionDAO.Leer();
 
-                    /*foreach (var ocupacion in list)
-                    {
-                        Console.WriteLine(ocupacion.ocupacion);
-                    }*/
-
                     cmbRolUS.ValueMember = "id";
                     cmbRolUS.DisplayMember = "nombre";
 
@@ -427,7 +422,7 @@ namespace BINAES
             Coleccion cole = new Coleccion();
             cole.nombre = txtNombreCO.Text;
             cole.id_genero = Convert.ToInt32(cmbGeneroColeccionCO.ValueMember);
-            cole.id_coleccion = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
+            cole.id = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
 
             ColeccionDAO.Crear(cole);
         }
@@ -625,6 +620,11 @@ namespace BINAES
             user.email = txtEmailUS.Text;
             user.institucion = txtInstitucionUS.Text;
             user.direccion = txtDireccionUS.Text;
+            user.contrasenia = txtContraseñaUS.Text;
+            user.fotografia = "foto";
+            user.id_ocupacion = Convert.ToInt32(cmbOcupacionUS.SelectedValue);
+            user.id_rol = cmbRolUS.SelectedValue.ToString();
+            
 
             if (UsuarioDAO.Crear(user))
             {
@@ -660,12 +660,15 @@ namespace BINAES
         {
 
             Usuario user = new Usuario();
-
             user.nombre = txtNombreUS.Text;
             user.telefono = txtTelefonoUS.Text;
             user.email = txtEmailUS.Text;
             user.institucion = txtInstitucionUS.Text;
             user.direccion = txtDireccionUS.Text;
+            user.contrasenia = txtContraseñaUS.Text;
+            user.fotografia = "foto";
+            user.id_ocupacion = Convert.ToInt32(cmbOcupacionUS.SelectedValue);
+            user.id_rol = cmbRolUS.SelectedValue.ToString();
 
             if (UsuarioDAO.Editar(user))
                 MessageBox.Show("Actualizada con éxito!");

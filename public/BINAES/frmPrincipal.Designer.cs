@@ -1909,7 +1909,7 @@ namespace BINAES
             this.cmbOcupacionUS.FormattingEnabled = true;
             this.cmbOcupacionUS.Location = new System.Drawing.Point(3, 465);
             this.cmbOcupacionUS.Name = "cmbOcupacionUS";
-            this.cmbOcupacionUS.Size = new System.Drawing.Size(121, 36);
+            this.cmbOcupacionUS.Size = new System.Drawing.Size(121, 29);
             this.cmbOcupacionUS.TabIndex = 51;
             // 
             // tabColeccion

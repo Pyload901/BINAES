@@ -10,7 +10,46 @@ namespace BINAES
 
     public static class ColeccionDAO
     {
-        public static List<Coleccion> LeerCatalogo()
+
+        public static List<Coleccion> Leer()
+        {
+            List<Coleccion> list = new List<Coleccion>();
+            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            {
+                string query = @"SELECT c.id, c.nombre 'nombre', tc.tipo 'tipo', tc.id 'id_tipo',gc.genero 'genero', gc.id 'id_genero' FROM
+                    COLECCION c
+                    INNER JOIN TIPO_COLECCION tc
+                        ON c.id_tipo = tc.id
+                    INNER JOIN GENERO_COLECCION gc
+                        ON c.id_genero = gc.id";
+
+                SqlCommand command = new SqlCommand(query, conn);
+                conn.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Coleccion coleccion = new Coleccion();
+
+                            coleccion.id = Convert.ToInt32(reader["id"]);
+                            coleccion.nombre = reader["nombre"].ToString();
+                            coleccion.tipo_coleccion = reader["tipo"].ToString();
+                            coleccion.id_tipo_coleccion = Convert.ToInt32(reader["id_tipo"]);
+                            coleccion.genero_coleccion = reader["genero"].ToString();
+                            coleccion.id_genero = Convert.ToInt32(reader["id_genero"]);
+
+                            list.Add(coleccion);
+                        }
+                        DataGridViewComposer.GetNullProperties(list[0]);
+                    }
+                }
+                conn.Close();
+            }
+            return list;
+        }
+        public static List<Coleccion> LeerCatalogo ()
         {
             List<Coleccion> list = new List<Coleccion>();
             using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
@@ -36,7 +75,7 @@ namespace BINAES
             }
             return list;
         }
-        public static List<Coleccion> Leer()
+        public static List<Coleccion> Leer_2()
         {
             List<Coleccion> list = new List<Coleccion>();
             string cadena = Properties.Resources.CadenaConexion;
