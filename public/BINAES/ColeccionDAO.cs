@@ -10,7 +10,7 @@ namespace BINAES
 
     public static class ColeccionDAO
     {
-        public static List<Coleccion> LeerCatalogo ()
+        public static List<Coleccion> LeerCatalogo()
         {
             List<Coleccion> list = new List<Coleccion>();
             using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
@@ -69,23 +69,57 @@ namespace BINAES
                 conn.Close();
             }
             return list;
-        } 
+        }
 
         public static void Crear(Coleccion coleccion)
         {
-            string cadena = Properties.Resources.CadenaConexion;
-
-            using (SqlConnection conn = new SqlConnection(cadena))
             {
-                string query = "INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES (@nombre, @id_tipo, @id_genero)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@nombre", coleccion.nombre);
-                cmd.Parameters.AddWithValue("@id_tipo", coleccion.id_tipo_coleccion);
-                cmd.Parameters.AddWithValue("@id_genero", coleccion.id_genero);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                string cadena = Properties.Resources.CadenaConexion;
+
+                using (SqlConnection conn = new SqlConnection(cadena))
+                {
+                    string query = "INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES (@nombre, @id_tipo, @id_genero)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@nombre", coleccion.nombre);
+                    cmd.Parameters.AddWithValue("@id_tipo", coleccion.id_tipo_coleccion);
+                    cmd.Parameters.AddWithValue("@id_genero", coleccion.id_genero);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+         }
+  }
+        //Consulta para agregar coleccion
+        public static bool Agregar(Coleccion coleccion)
+        {
+            bool col = true;
+            try
+            {
+                string cadena = Properties.Resources.CadenaConexion;
+
+                using (SqlConnection conn = new SqlConnection(cadena))
+                {
+                    string query = @"SELECT c.nombre, tc.tipo, gc.genero FROM
+                    COLECCION c
+                    INNER JOIN TIPO_COLECCION tc
+                        ON c.id_tipo = tc.id
+                    INNER JOIN GENERO_COLECCION gc
+                        ON c.id_genero = gc.id ";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@nombre", coleccion.nombre);
+                    cmd.Parameters.AddWithValue("@id_tipo", coleccion.tipo_coleccion);
+                    cmd.Parameters.AddWithValue("@id_genero", coleccion.genero_coleccion);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
             }
+
+            catch (Exception e)
+            {
+                col = false;
+            }
+            return col;
         }
 
         public static void Eliminar(Coleccion coleccion)
