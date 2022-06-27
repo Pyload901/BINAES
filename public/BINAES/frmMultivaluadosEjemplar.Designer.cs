@@ -33,8 +33,8 @@
             this.lblISBN = new System.Windows.Forms.Label();
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.lblISSN = new System.Windows.Forms.Label();
-            this.lblDOI = new System.Windows.Forms.Label();
             this.txtISSN = new System.Windows.Forms.TextBox();
+            this.lblDOI = new System.Windows.Forms.Label();
             this.txtDOI = new System.Windows.Forms.TextBox();
             this.lblPalabrasClave = new System.Windows.Forms.Label();
             this.txtPalabrasClave = new System.Windows.Forms.TextBox();
@@ -116,15 +116,6 @@
             this.lblISSN.TabIndex = 5;
             this.lblISSN.Text = "ISSN";
             // 
-            // lblDOI
-            // 
-            this.lblDOI.AutoSize = true;
-            this.lblDOI.Location = new System.Drawing.Point(3, 149);
-            this.lblDOI.Name = "lblDOI";
-            this.lblDOI.Size = new System.Drawing.Size(44, 25);
-            this.lblDOI.TabIndex = 6;
-            this.lblDOI.Text = "DOI";
-            // 
             // txtISSN
             // 
             this.txtISSN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -136,6 +127,15 @@
             this.txtISSN.Name = "txtISSN";
             this.txtISSN.Size = new System.Drawing.Size(417, 32);
             this.txtISSN.TabIndex = 7;
+            // 
+            // lblDOI
+            // 
+            this.lblDOI.AutoSize = true;
+            this.lblDOI.Location = new System.Drawing.Point(3, 149);
+            this.lblDOI.Name = "lblDOI";
+            this.lblDOI.Size = new System.Drawing.Size(44, 25);
+            this.lblDOI.TabIndex = 6;
+            this.lblDOI.Text = "DOI";
             // 
             // txtDOI
             // 
@@ -192,9 +192,10 @@
             this.ClientSize = new System.Drawing.Size(444, 421);
             this.Controls.Add(this.tblMultivaluadosEjemplar);
             this.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmMultivaluadosEjemplar";
             this.Text = "Campos extra para ejemplar";
+            this.Load += new System.EventHandler(this.frmMultivaluadosEjemplar_Load);
             this.tblMultivaluadosEjemplar.ResumeLayout(false);
             this.tblMultivaluadosEjemplar.PerformLayout();
             this.ResumeLayout(false);
