@@ -12,27 +12,35 @@ namespace BINAES
         public static List<Ocupacion> Leer()
         {
             List<Ocupacion> list = new List<Ocupacion>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+
+            try
             {
-                string query = "SELECT * FROM OCUPACION_USUARIO";
-                SqlCommand command = new SqlCommand(query, conn);
-                conn.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    if (reader.HasRows)
+                    string query = "SELECT * FROM OCUPACION_USUARIO";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            Ocupacion ocupacion = new Ocupacion();
+                            while (reader.Read())
+                            {
+                                Ocupacion ocupacion = new Ocupacion();
 
-                            ocupacion.id = Convert.ToInt32(reader["id"]);
-                            ocupacion.ocupacion = reader["ocupacion"].ToString();
+                                ocupacion.id = Convert.ToInt32(reader["id"]);
+                                ocupacion.ocupacion = reader["ocupacion"].ToString();
 
-                            list.Add(ocupacion);
+                                list.Add(ocupacion);
+                            }
                         }
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            catch(Exception e)
+            {
+
             }
             return list;
         }
