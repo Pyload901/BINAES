@@ -281,3 +281,21 @@ FOREIGN KEY (id_descripcion_area) REFERENCES DESCRIPCION_AREA(id)
 ON DELETE CASCADE; 
 GO
 
+
+SELECT * FROM ROL;
+SELECT * FROM USUARIO;
+SELECT * FROM COLECCION; 
+SELECT * FROM TIPO_COLECCION;
+
+@nombre = ""
+
+UPDATE USUARIO SET nombre = @nombre, institucion = @institucion, direccion = @direccion, telefono = @telefono, fotografia = @fotografia, email = @email, id_rol = @id_rol, id_ocupacion = @id_ocupacion
+
+SELECT c.id, c.nombre 'nombre', tc.tipo 'tipo', tc.id 'id_tipo',gc.genero 'genero', gc.id 'id_genero' FROM 
+                    COLECCION c
+                    INNER JOIN TIPO_COLECCION tc
+                        ON c.id_tipo = tc.id
+                    INNER JOIN GENERO_COLECCION gc
+                        ON c.id_genero = gc.id 
+
+SELECT * FROM GENERO_COLECCION;

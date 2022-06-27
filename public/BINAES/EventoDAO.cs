@@ -50,6 +50,8 @@ namespace BINAES
         public static List<Evento> Leer()
         {
             List<Evento> list = new List<Evento>();
+            try
+            {
             using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
             {
                 string query = "SELECT * FROM EVENTO";
@@ -76,6 +78,10 @@ namespace BINAES
                     }
                 }
                 conn.Close();
+            }
+            }catch(Exception e)
+            {
+
             }
             return list;
         }
@@ -141,28 +147,35 @@ namespace BINAES
         public static Evento LeerUno (int id)
         {
             Evento evento = null;
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+
+            try
             {
-                string query = "SELECT * FROM EVENTO WHERE id = @id";
-                SqlCommand command = new SqlCommand(query, conn);
-                command.Parameters.AddWithValue("@id", id);
-                conn.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
+               using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    while (reader.Read())
+                    string query = "SELECT * FROM EVENTO WHERE id = @id";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    command.Parameters.AddWithValue("@id", id);
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        evento = new Evento(
-                            Convert.ToInt32(reader["id"]),
-                            reader["titulo"].ToString(),
-                            reader["imagen"].ToString(),
-                            Convert.ToDateTime(reader["fecha_inicio"]),
-                            Convert.ToDateTime(reader["fecha_fin"]),
-                            Convert.ToInt32(reader["numero_asistentes"]),
-                            Convert.ToInt32(reader["id_area"])
-                        );
+                        while (reader.Read())
+                        {
+                            evento = new Evento(
+                                Convert.ToInt32(reader["id"]),
+                                reader["titulo"].ToString(),
+                                reader["imagen"].ToString(),
+                                Convert.ToDateTime(reader["fecha_inicio"]),
+                                Convert.ToDateTime(reader["fecha_fin"]),
+                                Convert.ToInt32(reader["numero_asistentes"]),
+                                Convert.ToInt32(reader["id_area"])
+                            );
+                        }
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            }catch(Exception e)
+            {
+
             }
             return evento;
         }
