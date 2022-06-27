@@ -47,5 +47,11 @@ namespace BINAES
             imagen.Save(ruta + nombreImagen);
             return nombreImagen;
         }
+        public static void EliminarImagen(string ruta)
+        {
+            if (Directory.Exists(ruta))
+                Directory.Delete(ruta);
+
+        }
     }
 }

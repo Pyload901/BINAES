@@ -443,6 +443,7 @@ namespace BINAES
                 try
                 {
                     picImagenEV.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
+                    picImagenEV.Tag = Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString();
                 }
                 catch (Exception ex2)
                 {
@@ -509,6 +510,7 @@ namespace BINAES
                     evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
                     evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
                     evento.objetivos = rtbObjetivoEventoEV.Text;
+                    Utils.EliminarImagen(picImagenEV.Tag.ToString());
                     evento.imagen = Utils.GuardarImagen(Properties.Resources.RutaImagenesEventos, picImagenEV.Image);
                     if (EventoDAO.Crear(evento))
                     {
@@ -628,20 +630,28 @@ namespace BINAES
         private void btnAgregarUS_Click(object sender, EventArgs e)
         {
             Usuario user = new Usuario();
-            user.nombre = txtNombreUS.Text;
-            user.telefono = txtTelefonoUS.Text;
-            user.email = txtEmailUS.Text;
-            user.institucion = txtInstitucionUS.Text;
-            user.direccion = txtDireccionUS.Text;
-
-            if (UsuarioDAO.Crear(user))
+            if (txtNombreUS.Text != "" && txtTelefonoUS.Text != "" && txtEmailUS.Text != "" && txtInstitucionUS.Text != "" && txtDireccionUS.Text != "" && picFotoUS.Image != Properties.Resources._default)
             {
-                MessageBox.Show("Registro agregado con éxito!");
+                user.nombre = txtNombreUS.Text;
+                user.telefono = txtTelefonoUS.Text;
+                user.email = txtEmailUS.Text;
+                user.institucion = txtInstitucionUS.Text;
+                user.direccion = txtDireccionUS.Text;
+                Utils.GuardarImagen(Properties.Resources.RutaImagenesUsuarios, picFotoUS.Image);
+                if (UsuarioDAO.Crear(user))
+                {
+                    MessageBox.Show("Registro agregado con éxito!");
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error!");
+                }
             }
             else
             {
-                MessageBox.Show("Ha ocurrido un error!");
+                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
 
         // Read
@@ -655,7 +665,15 @@ namespace BINAES
                 txtEmailUS.Text = dgv.Rows[e.RowIndex].Cells["email"].Value.ToString();
                 txtInstitucionUS.Text = dgv.Rows[e.RowIndex].Cells["institucion"].Value.ToString();
                 txtDireccionUS.Text = dgv.Rows[e.RowIndex].Cells["direccion"].Value.ToString();
-                
+                try
+                {
+                    picFotoUS.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
+                    picFotoUS.Image.Tag = Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString();
+                }
+                catch (Exception ex2)
+                {
+                    picFotoUS.Image = Properties.Resources._default;
+                }
             }
             catch (Exception ex1)
             {
@@ -666,20 +684,27 @@ namespace BINAES
         // Update
         private void btnActualizarUS_Click(object sender, EventArgs e)
         {
+            if (txtNombreUS.Text != "" && txtTelefonoUS.Text != "" && txtEmailUS.Text != "" && txtInstitucionUS.Text != "" && txtDireccionUS.Text != "" && picFotoUS.Image != Properties.Resources._default)
+            {
+                Usuario user = new Usuario();
 
-            Usuario user = new Usuario();
+                user.nombre = txtNombreUS.Text;
+                user.telefono = txtTelefonoUS.Text;
+                user.email = txtEmailUS.Text;
+                user.institucion = txtInstitucionUS.Text;
+                user.direccion = txtDireccionUS.Text;
+                Utils.EliminarImagen(picFotoUS.Tag.ToString());
+                user.fotografia = Utils.GuardarImagen(Properties.Resources.RutaImagenesUsuarios, picFotoUS.Image);
 
-            user.nombre = txtNombreUS.Text;
-            user.telefono = txtTelefonoUS.Text;
-            user.email = txtEmailUS.Text;
-            user.institucion = txtInstitucionUS.Text;
-            user.direccion = txtDireccionUS.Text;
-
-            if (UsuarioDAO.Editar(user))
-                MessageBox.Show("Actualizada con éxito!");
+                if (UsuarioDAO.Editar(user))
+                    MessageBox.Show("Actualizada con éxito!");
+                else
+                    MessageBox.Show("Ha ocurrido un error!");
+            }
             else
-                MessageBox.Show("Ha ocurrido un error!");
-            
+            {
+                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }   
 
  // ---------------------------------------------------------------------------------------------------
