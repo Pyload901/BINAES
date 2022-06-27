@@ -10,42 +10,48 @@ namespace BINAES
 
     public static class ColeccionDAO
     {
-
         public static List<Coleccion> Leer()
         {
             List<Coleccion> list = new List<Coleccion>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            try
             {
-                string query = @"SELECT c.id, c.nombre 'nombre', tc.tipo 'tipo', tc.id 'id_tipo',gc.genero 'genero', gc.id 'id_genero' FROM
+                
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+                {
+                    string query = @"SELECT c.id, c.nombre 'nombre', tc.tipo 'tipo', tc.id 'id_tipo',gc.genero 'genero', gc.id 'id_genero' FROM
                     COLECCION c
                     INNER JOIN TIPO_COLECCION tc
                         ON c.id_tipo = tc.id
                     INNER JOIN GENERO_COLECCION gc
                         ON c.id_genero = gc.id";
 
-                SqlCommand command = new SqlCommand(query, conn);
-                conn.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.HasRows)
+                    SqlCommand command = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            Coleccion coleccion = new Coleccion();
+                            while (reader.Read())
+                            {
+                                Coleccion coleccion = new Coleccion();
 
-                            coleccion.id = Convert.ToInt32(reader["id"]);
-                            coleccion.nombre = reader["nombre"].ToString();
-                            coleccion.tipo_coleccion = reader["tipo"].ToString();
-                            coleccion.id_tipo_coleccion = Convert.ToInt32(reader["id_tipo"]);
-                            coleccion.genero_coleccion = reader["genero"].ToString();
-                            coleccion.id_genero = Convert.ToInt32(reader["id_genero"]);
+                                coleccion.id = Convert.ToInt32(reader["id"]);
+                                coleccion.nombre = reader["nombre"].ToString();
+                                coleccion.tipo_coleccion = reader["tipo"].ToString();
+                                coleccion.id_tipo_coleccion = Convert.ToInt32(reader["id_tipo"]);
+                                coleccion.genero_coleccion = reader["genero"].ToString();
+                                coleccion.id_genero = Convert.ToInt32(reader["id_genero"]);
 
-                            list.Add(coleccion);
+                                list.Add(coleccion);
+                            }
+                            DataGridViewComposer.GetNullProperties(list[0]);
                         }
-                        DataGridViewComposer.GetNullProperties(list[0]);
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            } catch (Exception ex)
+            {
+
             }
             return list;
         }
@@ -107,20 +113,25 @@ namespace BINAES
 
         public static void Actualizar(Coleccion coleccion)
         {
-            string cadena = Properties.Resources.CadenaConexion;
-
-            using (SqlConnection conn = new SqlConnection(cadena))
+            try
             {
-                string query = "";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@nombre", coleccion.nombre);
-                cmd.Parameters.AddWithValue("@id_tipo", coleccion.id_tipo_coleccion);
-                cmd.Parameters.AddWithValue("@id_genero", coleccion.id_genero);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-            }
+                string cadena = Properties.Resources.CadenaConexion;
 
+                using (SqlConnection conn = new SqlConnection(cadena))
+                {
+                    string query = "";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@nombre", coleccion.nombre);
+                    cmd.Parameters.AddWithValue("@id_tipo", coleccion.id_tipo_coleccion);
+                    cmd.Parameters.AddWithValue("@id_genero", coleccion.id_genero);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            } catch(Exception e)
+            {
+
+            }
         }
     }
 
