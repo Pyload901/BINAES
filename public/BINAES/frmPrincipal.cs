@@ -83,7 +83,15 @@ namespace BINAES
             /*DatagridViewComposer.BuildDataGridView_Editar(dgvEventosEV, EventoDAO.getType());*/
             tabAdmin.Select();
             this.Text = tabAdmin.SelectedTab.Text;
-
+            if (rolUsuario == "Usuario")
+            {
+                btnPrestamosPPrincipal.Visible = false;
+                btnReservasPPrincipal.Visible = false;
+                btnAddEjemplarPPrincipal.Visible = false;
+                btnAddEventoPPrincipal.Visible = false;
+                btnAddUsuarioPPrincipal.Visible = false;
+                btnColeccionesPPrincipal.Visible = false;
+            }
             System.Drawing.Color col1 = System.Drawing.ColorTranslator.FromHtml("#214962"); // #52b7f5 - #19384b
             System.Drawing.Color col2 = System.Drawing.ColorTranslator.FromHtml("#214962");
 
@@ -204,8 +212,6 @@ namespace BINAES
                     break;
 
                 case 5:
-
-                   
                     cmbOcupacionUS.ValueMember = "id";
                     cmbOcupacionUS.DisplayMember = "ocupacion";
                     cmbOcupacionUS.DataSource = OcupacionDAO.Leer();
@@ -213,7 +219,9 @@ namespace BINAES
                     cmbRolUS.ValueMember = "id";
                     cmbRolUS.DisplayMember = "nombre";
                     cmbRolUS.DataSource = RolDAO.Leer();
-                   
+
+                    dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
+                    DataGridViewComposer.Compose(dgvUsuariosUS);
 
                     break;
 
@@ -474,13 +482,7 @@ namespace BINAES
 
         }
 
-        private void dgvColeccionesCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridView dgv = (DataGridView)sender;
-            btnEliminarCO.Tag = dgv.Rows[e.RowIndex].Cells["id"].Value.ToString();
-            btnDejarDeEditarCO.Enabled = true;
-
-        }
+        
 
         // Formulario de eventos
         private void dgvEventosEV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -706,49 +708,27 @@ namespace BINAES
 
         }
 
-        // Read
-        private void dgvUsuariosUS_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                DataGridView dgv = (DataGridView)sender;
-                txtNombreUS.Text = dgv.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
-                btnActualizarUS.Tag = dgv.Rows[e.RowIndex].Cells["id"].Value.ToString();
-                txtTelefonoUS.Text = dgv.Rows[e.RowIndex].Cells["telefono"].Value.ToString();
-                txtEmailUS.Text = dgv.Rows[e.RowIndex].Cells["email"].Value.ToString();
-                txtInstitucionUS.Text = dgv.Rows[e.RowIndex].Cells["institucion"].Value.ToString();
-                txtDireccionUS.Text = dgv.Rows[e.RowIndex].Cells["direccion"].Value.ToString();
-                try
-                {
-                    picFotoUS.Image = Image.FromFile(Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString());
-                    picFotoUS.Image.Tag = Properties.Resources.RutaImagenesEventos + dgv.Rows[e.RowIndex].Cells["imagen"].Value.ToString();
-                }
-                catch (Exception ex2)
-                {
-                    picFotoUS.Image = Properties.Resources._default;
-                }
-            }
-            catch (Exception ex1)
-            {
-
-            }
-        }
-
         // Update
         private void btnActualizarUS_Click(object sender, EventArgs e)
         {
             if (txtNombreUS.Text != "" && txtTelefonoUS.Text != "" && txtEmailUS.Text != "" && txtInstitucionUS.Text != "" && txtDireccionUS.Text != "" && picFotoUS.Image != Properties.Resources._default)
             {
                 Usuario user = new Usuario();
-
+                user.id = Convert.ToInt32(btnActualizarUS.Tag);
                 user.nombre = txtNombreUS.Text;
                 user.telefono = txtTelefonoUS.Text;
                 user.email = txtEmailUS.Text;
                 user.institucion = txtInstitucionUS.Text;
                 user.direccion = txtDireccionUS.Text;
-                Utils.EliminarImagen(picFotoUS.Tag.ToString());
-                user.fotografia = Utils.GuardarImagen(Properties.Resources.RutaImagenesUsuarios, picFotoUS.Image);
+                user.id_rol = cmbRolUS.SelectedValue.ToString();
+                user.id_ocupacion = Convert.ToInt32(cmbOcupacionUS.SelectedValue);
+                /*if (picFotoUS.Image.Tag != null)
+                {
+                    Utils.EliminarImagen(picFotoUS.Tag.ToString());
 
+                }*/
+                user.fotografia = Utils.GuardarImagen(Properties.Resources.RutaImagenesUsuarios, picFotoUS.Image);
+                Console.WriteLine(user.fotografia);
                 if (UsuarioDAO.Editar(user))
                     MessageBox.Show("Actualizada con éxito!");
                 else
@@ -768,11 +748,6 @@ namespace BINAES
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-        private void btnBuscarCO_Click(object sender, EventArgs e)
-        {
-            dgvColeccionesCO.DataSource = null;
-            dgvColeccionesCO.DataSource = ColeccionDAO.Leer();
         }
 
         private void dgvEjemplaresBU_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -842,7 +817,8 @@ namespace BINAES
 
             btnAgregarCO.Enabled = true;
             btnEliminarCO.Enabled = false;
-            btnBuscarCO.Enabled = false;
+            btnEditarCO.Enabled = false;
+
 
         }
         private void dgvEjemplaresAG_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -869,1024 +845,6 @@ namespace BINAES
             {
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         private void btnEditarEjemplarAG_Click(object sender, EventArgs e)
         {
@@ -1950,6 +908,88 @@ namespace BINAES
                 DataGridViewComposer.Compose(dgvEjemplaresAG);
 
             }
+        }
+
+        private void dgvUsuariosUS_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridView dgv = sender as DataGridView;
+                Usuario usuario = UsuarioDAO.LeerPorId(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["id"].Value));
+                btnDejarDeEditarUS.Enabled = true;
+                btnActualizarUS.Tag = usuario.id;
+                txtNombreUS.Text = usuario.nombre;
+                txtTelefonoUS.Text = usuario.telefono;
+                txtEmailUS.Text = usuario.email;
+                txtInstitucionUS.Text = usuario.institucion;
+                txtDireccionUS.Text = usuario.direccion;
+                if (picFotoUS.Image != null)
+                {
+                    picFotoUS.Image.Dispose();
+                }
+                try
+                {
+                    picFotoUS.Image = Image.FromFile(Properties.Resources.RutaImagenesUsuarios + usuario.fotografia);
+                    picFotoUS.Image.Tag = Properties.Resources.RutaImagenesUsuarios + usuario.fotografia;
+                }
+                catch (Exception ex2)
+                {
+                    picFotoUS.Image = Properties.Resources._default;
+                }
+                btnDejarDeEditarUS.Enabled = true;
+                btnActualizarUS.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void btnDejarDeEditarUS_Click(object sender, EventArgs e)
+        {
+            txtNombreUS.Clear();
+            txtContraseñaUS.Clear();
+            txtEmailUS.Clear();
+            txtInstitucionUS.Clear();
+            txtTelefonoUS.Clear();
+            if (picFotoUS.Image != null)
+                picFotoUS.Image.Dispose();
+            btnActualizarUS.Enabled = false;
+            btnDejarDeEditarUS.Enabled = false;
+        }
+
+        private void dgvColeccionesCO_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                btnDejarDeEditarCO.Enabled = true;
+                btnDejarDeEditarCO.Enabled = true;
+                DataGridView dgv = (DataGridView)sender;
+                btnEliminarCO.Tag = dgv.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                btnEditarCO.Tag = dgv.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                txtNombreColeccionCO.Text = dgv.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+                cmbTipoColeccionCO.SelectedValue = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["id_tipo_coleccion"].Value);
+                cmbGeneroColeccionCO.SelectedValue = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["id_genero"].Value);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+        }
+
+        private void btnEditarCO_Click(object sender, EventArgs e)
+        {
+            Coleccion coleccion = new Coleccion();
+            coleccion.id = Convert.ToInt32(btnEditarCO.Tag);
+            coleccion.nombre = txtNombreColeccionCO.Text;
+            coleccion.id_genero = Convert.ToInt32(cmbGeneroColeccionCO.SelectedValue);
+            coleccion.id_tipo_coleccion = Convert.ToInt32(cmbTipoColeccionCO.SelectedValue);
+            ColeccionDAO.Actualizar(coleccion);
+            DataGridViewComposer.LimpiarDataGridView(dgvColeccionesCO);
+            dgvColeccionesCO.DataSource = ColeccionDAO.Leer();
+            DataGridViewComposer.Compose(dgvColeccionesCO);
         }
     }
 }

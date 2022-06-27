@@ -241,20 +241,23 @@ namespace BINAES
                     conn.Open();
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            Ejemplar ejemplar = new Ejemplar();
-                            ejemplar.id = Convert.ToInt32(reader["id"]);
-                            ejemplar.nombre = reader["nombre"].ToString();
-                            ejemplar.imagen = reader["imagen"].ToString();
-                            ejemplar.autor = reader["autor"].ToString();
-                            ejemplar.fecha_publicacion = Convert.ToDateTime(reader["fecha_publicacion"]);
-                            ejemplar.disponibilidad = Convert.ToBoolean(reader["disponibilidad"]);
-                            ejemplar.coleccion = reader["coleccion"].ToString();
-                            ejemplar.formato = reader["formato"].ToString();
-                            list.Add(ejemplar);
+                            while (reader.Read())
+                            {
+                                Ejemplar ejemplar = new Ejemplar();
+                                ejemplar.id = Convert.ToInt32(reader["id"]);
+                                ejemplar.nombre = reader["nombre"].ToString();
+                                ejemplar.imagen = reader["imagen"].ToString();
+                                ejemplar.autor = reader["autor"].ToString();
+                                ejemplar.fecha_publicacion = Convert.ToDateTime(reader["fecha_publicacion"]);
+                                ejemplar.disponibilidad = Convert.ToBoolean(reader["disponibilidad"]);
+                                ejemplar.coleccion = reader["coleccion"].ToString();
+                                ejemplar.formato = reader["formato"].ToString();
+                                list.Add(ejemplar);
+                            }
+                            DataGridViewComposer.GetNullProperties(list[0]);
                         }
-                        DataGridViewComposer.GetNullProperties(list[0]);
                     }
                     conn.Close();
                 }

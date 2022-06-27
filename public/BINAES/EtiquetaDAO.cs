@@ -44,7 +44,7 @@ namespace BINAES
                 {
                     string query = "SELECT E.id, E.etiqueta, NE.nombre FROM ETIQUETA E INNER JOIN NOMBRE_ETIQUETA NE ON E.id_nombre_etiqueta = NE.id WHERE E.id = @id";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@id", id_ejemplar);
                     conn.Open();
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {

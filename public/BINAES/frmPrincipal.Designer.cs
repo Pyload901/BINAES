@@ -147,8 +147,7 @@ namespace BINAES
             this.tabColeccion = new System.Windows.Forms.TabPage();
             this.tblColeccion = new System.Windows.Forms.TableLayoutPanel();
             this.dgvColeccionesCO = new System.Windows.Forms.DataGridView();
-            this.btnBuscarCO = new System.Windows.Forms.Button();
-            this.btnDejarDeEditarCO = new System.Windows.Forms.Button();
+            this.btnEditarCO = new System.Windows.Forms.Button();
             this.btnAgregarCO = new System.Windows.Forms.Button();
             this.cmbGeneroColeccionCO = new System.Windows.Forms.ComboBox();
             this.lblGeneroColeccionCO = new System.Windows.Forms.Label();
@@ -156,6 +155,7 @@ namespace BINAES
             this.lblTipoColeccionCO = new System.Windows.Forms.Label();
             this.txtNombreColeccionCO = new System.Windows.Forms.TextBox();
             this.lblNombreColeccionCO = new System.Windows.Forms.Label();
+            this.btnDejarDeEditarCO = new System.Windows.Forms.Button();
             this.btnEliminarCO = new System.Windows.Forms.Button();
             this.TabAcerca = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -1648,6 +1648,7 @@ namespace BINAES
             this.btnDejarDeEditarUS.TabIndex = 28;
             this.btnDejarDeEditarUS.Text = "Dejar de editar";
             this.btnDejarDeEditarUS.UseVisualStyleBackColor = true;
+            this.btnDejarDeEditarUS.Click += new System.EventHandler(this.btnDejarDeEditarUS_Click);
             // 
             // dgvUsuariosUS
             // 
@@ -1662,7 +1663,7 @@ namespace BINAES
             this.tblUsuarios.SetRowSpan(this.dgvUsuariosUS, 13);
             this.dgvUsuariosUS.Size = new System.Drawing.Size(471, 540);
             this.dgvUsuariosUS.TabIndex = 29;
-            this.dgvUsuariosUS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuariosUS_CellContentClick);
+            this.dgvUsuariosUS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuariosUS_CellClick);
             // 
             // lblNombreUsuarioUS
             // 
@@ -1936,7 +1937,7 @@ namespace BINAES
             this.tblColeccion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.84636F));
             this.tblColeccion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.21327F));
             this.tblColeccion.Controls.Add(this.dgvColeccionesCO, 3, 1);
-            this.tblColeccion.Controls.Add(this.btnBuscarCO, 1, 11);
+            this.tblColeccion.Controls.Add(this.btnEditarCO, 1, 11);
             this.tblColeccion.Controls.Add(this.btnAgregarCO, 1, 9);
             this.tblColeccion.Controls.Add(this.cmbGeneroColeccionCO, 1, 7);
             this.tblColeccion.Controls.Add(this.lblGeneroColeccionCO, 1, 6);
@@ -1980,32 +1981,19 @@ namespace BINAES
             this.tblColeccion.SetRowSpan(this.dgvColeccionesCO, 12);
             this.dgvColeccionesCO.Size = new System.Drawing.Size(484, 462);
             this.dgvColeccionesCO.TabIndex = 29;
-            this.dgvColeccionesCO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvColeccionesCO_CellContentClick);
+            this.dgvColeccionesCO.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvColeccionesCO_CellClick);
             // 
-            // btnBuscarCO
+            // btnEditarCO
             // 
-            this.btnBuscarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnBuscarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCO.Location = new System.Drawing.Point(153, 432);
-            this.btnBuscarCO.Name = "btnBuscarCO";
-            this.btnBuscarCO.Size = new System.Drawing.Size(143, 33);
-            this.btnBuscarCO.TabIndex = 34;
-            this.btnBuscarCO.Text = "Colecciones Disponibles";
-            this.btnBuscarCO.UseVisualStyleBackColor = true;
-            this.btnBuscarCO.Click += new System.EventHandler(this.btnBuscarCO_Click);
-            // 
-            // btnDejarDeEditarCO
-            // 
-            this.btnDejarDeEditarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnDejarDeEditarCO.Enabled = false;
-            this.btnDejarDeEditarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDejarDeEditarCO.Location = new System.Drawing.Point(136, 471);
-            this.btnDejarDeEditarCO.Name = "btnDejarDeEditarCO";
-            this.btnDejarDeEditarCO.Size = new System.Drawing.Size(178, 33);
-            this.btnDejarDeEditarCO.TabIndex = 28;
-            this.btnDejarDeEditarCO.Text = "Dejar de editar";
-            this.btnDejarDeEditarCO.UseVisualStyleBackColor = true;
-            this.btnDejarDeEditarCO.Click += new System.EventHandler(this.btnDejarDeEditarCO_Click);
+            this.btnEditarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnEditarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarCO.Location = new System.Drawing.Point(153, 432);
+            this.btnEditarCO.Name = "btnEditarCO";
+            this.btnEditarCO.Size = new System.Drawing.Size(143, 33);
+            this.btnEditarCO.TabIndex = 34;
+            this.btnEditarCO.Text = "Editar";
+            this.btnEditarCO.UseVisualStyleBackColor = true;
+            this.btnEditarCO.Click += new System.EventHandler(this.btnEditarCO_Click);
             // 
             // btnAgregarCO
             // 
@@ -2098,6 +2086,19 @@ namespace BINAES
             this.lblNombreColeccionCO.TabIndex = 0;
             this.lblNombreColeccionCO.Text = "Nombre:";
             this.lblNombreColeccionCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnDejarDeEditarCO
+            // 
+            this.btnDejarDeEditarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnDejarDeEditarCO.Enabled = false;
+            this.btnDejarDeEditarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDejarDeEditarCO.Location = new System.Drawing.Point(136, 471);
+            this.btnDejarDeEditarCO.Name = "btnDejarDeEditarCO";
+            this.btnDejarDeEditarCO.Size = new System.Drawing.Size(178, 33);
+            this.btnDejarDeEditarCO.TabIndex = 28;
+            this.btnDejarDeEditarCO.Text = "Dejar de editar";
+            this.btnDejarDeEditarCO.UseVisualStyleBackColor = true;
+            this.btnDejarDeEditarCO.Click += new System.EventHandler(this.btnDejarDeEditarCO_Click);
             // 
             // btnEliminarCO
             // 
@@ -2770,7 +2771,7 @@ namespace BINAES
         private ComboBox cmbTipoColeccionCO;
         private ComboBox cmbGeneroColeccionCO;
         private TextBox txtNombreColeccionCO;
-        private Button btnBuscarCO;
+        private Button btnEditarCO;
         private Button btnEditarEventoEV;
         private Button btnActualizarUS;
         private NumericUpDown nudIdEjemplarRE;

@@ -36,7 +36,7 @@ namespace BINAES
         }
         public Usuario()
         {
-
+            this.id_ocupacion = -1;
         }
     }
 }

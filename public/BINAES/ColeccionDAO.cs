@@ -119,8 +119,9 @@ namespace BINAES
 
                 using (SqlConnection conn = new SqlConnection(cadena))
                 {
-                    string query = "";
+                    string query = "UPDATE COLECCION SET nombre = @nombre, id_tipo = @id_tipo, id_genero = @id_genero WHERE id = @id";
                     SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id", coleccion.id);
                     cmd.Parameters.AddWithValue("@nombre", coleccion.nombre);
                     cmd.Parameters.AddWithValue("@id_tipo", coleccion.id_tipo_coleccion);
                     cmd.Parameters.AddWithValue("@id_genero", coleccion.id_genero);
@@ -130,7 +131,7 @@ namespace BINAES
                 }
             } catch(Exception e)
             {
-
+                Console.WriteLine(e.Message);
             }
         }
     }

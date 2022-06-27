@@ -197,7 +197,13 @@ SELECT * FROM PALABRA_CLAVE;
 SELECT * FROM ETIQUETA;
 UPDATE USUARIO SET email='admin@gmail.com' WHERE id=1;
 
-Select * from PALABRA_CLAVE;
-
+Select * from COLECCION;
+SELECT * FROM ROL;
 SELECT E.id, E.etiqueta, NE.nombre FROM ETIQUETA E INNER JOIN NOMBRE_ETIQUETA NE ON E.id_nombre_etiqueta = NE.id WHERE E.id_ejemplar = 25;
 SELECT * FROM EVENTO
+
+SELECT U.id, U.nombre, U.institucion, U.direccion, U.telefono, U.fotografia, U.email, R.rol, O.ocupacion FROM USUARIO U
+INNER JOIN ROL R
+    ON R.id = U.id_rol
+INNER JOIN OCUPACION_USUARIO O
+    ON O.id = U.id_ocupacion;

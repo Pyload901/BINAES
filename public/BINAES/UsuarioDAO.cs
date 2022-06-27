@@ -52,6 +52,7 @@ namespace BINAES
             bool exito = true;
             try
             {
+                user.contrasenia = BCrypt.Net.BCrypt.HashPassword(user.contrasenia);
                 string cadena = Properties.Resources.CadenaConexion;
                 using (SqlConnection connection = new SqlConnection(cadena))
                 {
@@ -91,7 +92,11 @@ namespace BINAES
                 
                 using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    string query = "SELECT * FROM USUARIO";
+                    string query = @"SELECT U.id, U.nombre, U.institucion, U.direccion, U.telefono, U.fotografia, U.email, R.rol, O.ocupacion FROM USUARIO U
+                        INNER JOIN ROL R
+                            ON R.id = U.id_rol
+                        INNER JOIN OCUPACION_USUARIO O
+                            ON O.id = U.id_ocupacion";
                     SqlCommand command = new SqlCommand(query, conn);
                     conn.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
@@ -101,7 +106,6 @@ namespace BINAES
                             while (reader.Read())
                             {
                                 Usuario usuario = new Usuario();
-
                                 usuario.id = Convert.ToInt32(reader["id"]);
                                 usuario.nombre = reader["nombre"].ToString();
                                 usuario.institucion = reader["institucion"].ToString();
@@ -109,9 +113,8 @@ namespace BINAES
                                 usuario.telefono = reader["telefono"].ToString();
                                 usuario.fotografia = reader["fotografia"].ToString();
                                 usuario.email = reader["email"].ToString();
-                                usuario.id_rol = reader["id_rol"].ToString();
-                                usuario.id_ocupacion = Convert.ToInt32(reader["id_ocupacion"]);
-
+                                usuario.rol = reader["rol"].ToString();
+                                usuario.ocupacion = reader["ocupacion"].ToString();
                                 list.Add(usuario);
                             }
                             DataGridViewComposer.GetNullProperties(list[0]);
@@ -126,6 +129,43 @@ namespace BINAES
             }
             return list;
         }
+        public static Usuario LeerPorId(int id)
+        {
+            Usuario usuario = new Usuario();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+                {
+                    string query = "SELECT * FROM USUARIO";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                usuario.id = Convert.ToInt32(reader["id"]);
+                                usuario.nombre = reader["nombre"].ToString();
+                                usuario.institucion = reader["institucion"].ToString();
+                                usuario.direccion = reader["direccion"].ToString();
+                                usuario.telefono = reader["telefono"].ToString();
+                                usuario.fotografia = reader["fotografia"].ToString();
+                                usuario.email = reader["email"].ToString();
+                                usuario.id_rol = reader["id_rol"].ToString();
+                                usuario.id_ocupacion = Convert.ToInt32(reader["id_ocupacion"]);
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
+            return usuario;
+        }
 
         // UPDATE
 
@@ -138,7 +178,6 @@ namespace BINAES
                 using (SqlConnection connection = new SqlConnection(cadena))
                 {
                     string query = "UPDATE USUARIO SET nombre = @nombre, institucion = @institucion, direccion = @direccion, telefono = @telefono, fotografia = @fotografia, email = @email, id_rol = @id_rol, id_ocupacion = @id_ocupacion WHERE id = @id";
-
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@nombre", user.nombre);
                     command.Parameters.AddWithValue("@institucion", user.institucion);
@@ -157,6 +196,7 @@ namespace BINAES
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 exito = false;
             }
             return exito;
