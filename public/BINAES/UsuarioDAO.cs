@@ -123,7 +123,7 @@ namespace BINAES
                 string cadena = Properties.Resources.CadenaConexion;
                 using (SqlConnection connection = new SqlConnection(cadena))
                 {
-                    string query = "UPDATE USUARIO SET nombre = @nombre, institucion = @institucion, direccion = @direccion, telefono = @telefono, fotografia = @fotografia, email = @email, id_rol = @id_rol, id_ocupacion = @id_ocupacion WHERE id = 5";
+                    string query = "UPDATE USUARIO SET nombre = @nombre, institucion = @institucion, direccion = @direccion, telefono = @telefono, fotografia = @fotografia, email = @email, id_rol = @id_rol, id_ocupacion = @id_ocupacion WHERE id = @id";
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@nombre", user.nombre);
@@ -134,6 +134,7 @@ namespace BINAES
                     command.Parameters.AddWithValue("@email", user.email);
                     command.Parameters.AddWithValue("@id_rol", user.id_rol);
                     command.Parameters.AddWithValue("@id_ocupacion", user.id_ocupacion);
+                    command.Parameters.AddWithValue("@id", user.id);
 
                     connection.Open();
                     command.ExecuteNonQuery();

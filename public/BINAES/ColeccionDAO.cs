@@ -49,99 +49,60 @@ namespace BINAES
             }
             return list;
         }
-        public static List<Coleccion> LeerCatalogo ()
+
+        public static bool Crear(Coleccion coleccion)
         {
-            List<Coleccion> list = new List<Coleccion>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            bool exito = true;
+            try
             {
-                string query = @"SELECT id, nombre FROM COLECCION";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                conn.Open();
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                string cadena = Properties.Resources.CadenaConexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
                 {
-                    while (reader.Read())
-                    {
-                        Coleccion cole = new Coleccion();
-                        cole.id = Convert.ToInt32(reader["id"]);
-                        cole.nombre = reader["nombre"].ToString();
-                        list.Add(cole);
-                    }
+                    string query = "INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES (@nombre, @id_tipo, @id_genero)";
+
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    command.Parameters.AddWithValue("@nombre", coleccion.nombre);
+                    command.Parameters.AddWithValue("@id_tipo", coleccion.id_tipo_coleccion);
+                    command.Parameters.AddWithValue("@id_genero", coleccion.id_genero);
+       
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
                 }
-
-                conn.Close();
             }
-            return list;
-        }
-        public static List<Coleccion> Leer_2()
-        {
-            List<Coleccion> list = new List<Coleccion>();
-            string cadena = Properties.Resources.CadenaConexion;
-
-            using (SqlConnection conn = new SqlConnection(cadena))
+            catch (Exception e)
             {
-                string query = @"SELECT c.nombre, tc.tipo, gc.genero FROM
-                    COLECCION c
-                    INNER JOIN TIPO_COLECCION tc
-                        ON c.id_tipo = tc.id
-                    INNER JOIN GENERO_COLECCION gc
-                        ON c.id_genero = gc.id ";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                conn.Open();
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Coleccion cole = new Coleccion();
-                        cole.nombre = reader["nombre"].ToString();
-                        cole.tipo_coleccion = reader["tipo"].ToString();
-                        cole.genero_coleccion = reader["genero"].ToString();
-                        list.Add(cole);
-                    }
-                }
-
-                conn.Close();
+                exito = false;
+                Console.WriteLine(e.Message);
             }
-            return list;
-        } 
-
-        public static void Crear(Coleccion coleccion)
-        {
-            string cadena = Properties.Resources.CadenaConexion;
-
-            using (SqlConnection conn = new SqlConnection(cadena))
-            {
-                string query = "INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES (@nombre, @id_tipo, @id_genero)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@nombre", coleccion.nombre);
-                cmd.Parameters.AddWithValue("@id_tipo", coleccion.id_tipo_coleccion);
-                cmd.Parameters.AddWithValue("@id_genero", coleccion.id_genero);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-            }
+            return exito;
         }
 
-        public static void Eliminar(Coleccion coleccion)
+        public static bool Eliminar(int id)
         {
-            string cadena = Properties.Resources.CadenaConexion;
-
-            using (SqlConnection conn = new SqlConnection(cadena))
+            bool exito = true;
+            try
             {
-                string query = "";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@nombre", coleccion.nombre);
-                cmd.Parameters.AddWithValue("@id_tipo", coleccion.id_tipo_coleccion);
-                cmd.Parameters.AddWithValue("@id_genero", coleccion.id_genero);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                string cadena = Properties.Resources.CadenaConexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query = "DELETE FROM COLECCION WHERE id = @id";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    command.Parameters.AddWithValue("@id", id);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
             }
+            catch (Exception e)
+            {
+                exito = false;
+            }
+            return exito;
         }
 
         public static void Actualizar(Coleccion coleccion)

@@ -183,7 +183,7 @@ namespace BINAES
 
                     cmbColeccionEjemplarAG.ValueMember = "id";
                     cmbColeccionEjemplarAG.DisplayMember = "nombre";
-                    cmbColeccionEjemplarAG.DataSource = ColeccionDAO.LeerCatalogo();
+                    cmbColeccionEjemplarAG.DataSource = ColeccionDAO.Leer();
 
                     cmbEditorialEjemplarAG.ValueMember = "id";
                     cmbEditorialEjemplarAG.DisplayMember = "editorial";
@@ -212,14 +212,24 @@ namespace BINAES
 
                     cmbRolUS.ValueMember = "id";
                     cmbRolUS.DisplayMember = "nombre";
-
                     cmbRolUS.DataSource = RolDAO.Leer();
-
-                    dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
-                    DataGridViewComposer.Compose(dgvUsuariosUS);
                    
 
                     break;
+
+                case 6:
+                    cmbTipoColeccionCO.ValueMember = "id";
+                    cmbTipoColeccionCO.DisplayMember = "tipo";
+                    cmbTipoColeccionCO.DataSource = TipoColeccionDAO.Leer();
+
+                    cmbGeneroColeccionCO.ValueMember = "id";
+                    cmbGeneroColeccionCO.DisplayMember = "genero";
+                    cmbGeneroColeccionCO.DataSource = GeneroDAO.Leer();
+
+                    dgvColeccionesCO.DataSource = ColeccionDAO.Leer();
+                    DataGridViewComposer.Compose(dgvColeccionesCO);
+
+                    break; 
 
                 case 8:
                     /*dgvVistaColeccionCO.DataSource = ColeccionDAO.Leer();
@@ -413,6 +423,27 @@ namespace BINAES
         }
 
         // Formulario coleccion
+
+        private void btnAgregarCO_Click_1(object sender, EventArgs e)
+        {
+            Coleccion col = new Coleccion();
+            col.nombre = txtNombreColeccionCO.Text;
+            col.id_tipo_coleccion = Convert.ToInt32(cmbTipoColeccionCO.SelectedValue);
+            col.id_genero = Convert.ToInt32(cmbGeneroColeccionCO.SelectedValue);
+
+       
+            if (ColeccionDAO.Crear(col))
+            {
+                MessageBox.Show("Registro coleccion agregada con éxito!");
+                DataGridViewComposer.LimpiarDataGridView(dgvColeccionesCO);
+                dgvColeccionesCO.DataSource = ColeccionDAO.Leer();
+                DataGridViewComposer.Compose(dgvColeccionesCO);
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error al intentar agregar la coleccion!");
+            }
+        }
         private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -425,6 +456,30 @@ namespace BINAES
             cole.id = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
 
             ColeccionDAO.Crear(cole);
+        }
+
+        private void btnEliminarCO_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(btnEliminarCO.Tag);
+
+            if (ColeccionDAO.Eliminar(id))
+            {
+                MessageBox.Show("Eliminada con éxito!");
+                DataGridViewComposer.LimpiarDataGridView(dgvColeccionesCO);
+                dgvColeccionesCO.DataSource = ColeccionDAO.Leer();
+                DataGridViewComposer.Compose(dgvColeccionesCO);
+            }
+            else
+                MessageBox.Show("Ha ocurrido un error!");
+
+        }
+
+        private void dgvColeccionesCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            btnEliminarCO.Tag = dgv.Rows[e.RowIndex].Cells["id"].Value.ToString();
+            btnDejarDeEditarCO.Enabled = true;
+
         }
 
         // Formulario de eventos
@@ -557,7 +612,9 @@ namespace BINAES
         //Delete
         private void btnEliminarEventoEV_Click(object sender, EventArgs e)
         {
-            int id = 0;
+            Coleccion coleccion = new Coleccion();
+            coleccion.id = Convert.ToInt32(btnEliminarCO.Tag);
+            int id = coleccion.id;
 
             if (EventoDAO.Eliminar(id))
                 MessageBox.Show("Eliminada con éxito!");
@@ -629,6 +686,9 @@ namespace BINAES
             if (UsuarioDAO.Crear(user))
             {
                 MessageBox.Show("Registro agregado con éxito!");
+                DataGridViewComposer.LimpiarDataGridView(dgvUsuariosUS);
+                dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
+                DataGridViewComposer.Compose(dgvUsuariosUS);
             }
             else
             {
@@ -643,6 +703,7 @@ namespace BINAES
             {
                 DataGridView dgv = (DataGridView)sender;
                 txtNombreUS.Text = dgv.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+                btnActualizarUS.Tag = dgv.Rows[e.RowIndex].Cells["id"].Value.ToString();
                 txtTelefonoUS.Text = dgv.Rows[e.RowIndex].Cells["telefono"].Value.ToString();
                 txtEmailUS.Text = dgv.Rows[e.RowIndex].Cells["email"].Value.ToString();
                 txtInstitucionUS.Text = dgv.Rows[e.RowIndex].Cells["institucion"].Value.ToString();
@@ -660,6 +721,7 @@ namespace BINAES
         {
 
             Usuario user = new Usuario();
+            user.id = Convert.ToInt32(btnActualizarUS.Tag);
             user.nombre = txtNombreUS.Text;
             user.telefono = txtTelefonoUS.Text;
             user.email = txtEmailUS.Text;
@@ -671,7 +733,14 @@ namespace BINAES
             user.id_rol = cmbRolUS.SelectedValue.ToString();
 
             if (UsuarioDAO.Editar(user))
+            {
                 MessageBox.Show("Actualizada con éxito!");
+                DataGridViewComposer.LimpiarDataGridView(dgvUsuariosUS);
+                dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
+                DataGridViewComposer.Compose(dgvUsuariosUS);
+
+            }
+                
             else
                 MessageBox.Show("Ha ocurrido un error!");
             
@@ -752,25 +821,14 @@ namespace BINAES
             tabAdmin.SelectedIndex = 7;
         }
 
-        private void btnAgregarCO_Click_1(object sender, EventArgs e)
-        {
-            Coleccion col = new Coleccion();
-            col.nombre = txtNombreCO.Text;
-            col.tipo_coleccion = cmbTipoColeccionCO.Text;
-            col.genero_coleccion = cmbGeneroColeccionCO.Text;
-            //Da error en el parametro
-            /*if (ColeccionDAO.Crear(col))
-            {
-                MessageBox.Show("Registro coleccion agregada con éxito!");
-            }
-            else
-            {
-                MessageBox.Show("Ha ocurrido un error al intentar agregar la coleccion!");
-            }*/
-        }
 
         private void btnDejarDeEditarCO_Click(object sender, EventArgs e)
         {
+            txtNombreColeccionCO.Clear();
+
+            btnAgregarCO.Enabled = true;
+            btnEliminarCO.Enabled = false;
+            btnBuscarCO.Enabled = false;
 
         }
         private void dgvEjemplaresAG_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -797,6 +855,8 @@ namespace BINAES
             {
             }
         }
+
+
     }
 }
      

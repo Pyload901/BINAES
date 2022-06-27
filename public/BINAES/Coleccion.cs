@@ -9,10 +9,10 @@ namespace BINAES
     public class Coleccion{
         public int id { get; set; }
         public string nombre { get; set; }
-        public string tipo_coleccion { set; get; }
-        public int id_tipo_coleccion { set; get; }
-        public string genero_coleccion { set; get; }
-        public int id_genero { set; get; }
+        public string tipo_coleccion { get; set; }
+        public int id_tipo_coleccion { get; set; }
+        public string genero_coleccion { get; set; }
+        public int id_genero { get; set; }
 
         public Coleccion(int id, string nombre, string tipo_coleccion, int id_tipo_coleccion, string genero_coleccion, int id_genero)
         {
