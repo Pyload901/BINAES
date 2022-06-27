@@ -759,7 +759,7 @@ namespace BINAES
             col.tipo_coleccion = cmbTipoColeccionCO.Text;
             col.genero_coleccion = cmbGeneroColeccionCO.Text;
             //Da error en el parametro
-            if (ColeccionDAO.Agregar(col))
+            //if (ColeccionDAO.Leer_2(col))
             {
                 MessageBox.Show("Registro coleccion agregada con éxito!");
             }
