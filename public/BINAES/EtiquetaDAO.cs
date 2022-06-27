@@ -37,27 +37,35 @@ namespace BINAES
         public static List<Etiqueta> Leer(int id)
         {
             List<Etiqueta> list = new List<Etiqueta>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+
+            try
             {
-                string query = "SELECT E.id, E.etiqueta, NE.nombre FROM ETIQUETA E INNER JOIN NOMBRE_ETIQUETA NE ON E.id_nombre_etiqueta = NE.id WHERE E.id = @id";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@id", id);
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    if (reader.HasRows)
+                    string query = "SELECT E.id, E.etiqueta, NE.nombre FROM ETIQUETA E INNER JOIN NOMBRE_ETIQUETA NE ON E.id_nombre_etiqueta = NE.id WHERE E.id = @id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            Etiqueta etiqueta = new Etiqueta();
-                            etiqueta.id = Convert.ToInt32(reader["id"]);
-                            etiqueta.etiqueta = reader["etiqueta"].ToString();
-                            etiqueta.nombre_etiqueta = reader["nombre"].ToString();
-                            list.Add(etiqueta);
+                            while (reader.Read())
+                            {
+                                Etiqueta etiqueta = new Etiqueta();
+                                etiqueta.id = Convert.ToInt32(reader["id"]);
+                                etiqueta.etiqueta = reader["etiqueta"].ToString();
+                                etiqueta.nombre_etiqueta = reader["nombre"].ToString();
+                                list.Add(etiqueta);
+                            }
                         }
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            catch(Exception e)
+            {
+
             }
             return list;
         }
