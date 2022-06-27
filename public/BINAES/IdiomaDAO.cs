@@ -11,22 +11,30 @@ namespace BINAES
         public static List<Idioma> Leer ()
         {
             List<Idioma> list = new List<Idioma>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+
+            try
             {
-                string query = @"SELECT * FROM IDIOMA_EJEMPLAR";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    while (reader.Read())
+                    string query = @"SELECT * FROM IDIOMA_EJEMPLAR";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        list.Add(new Idioma(
-                            Convert.ToInt32(reader["id"]),
-                            reader["idioma"].ToString()
-                        ));
+                        while (reader.Read())
+                        {
+                            list.Add(new Idioma(
+                                Convert.ToInt32(reader["id"]),
+                                reader["idioma"].ToString()
+                            ));
+                        }
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            catch(Exception e)
+            {
+
             }
             return list;
         }
