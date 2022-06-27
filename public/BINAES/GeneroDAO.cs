@@ -12,14 +12,17 @@ namespace BINAES
         public static List<Genero> Leer()
         {
             List<Genero> list = new List<Genero>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
-            {
-                string query = @"SELECT * FROM GENERO_COLECCION";
 
-                SqlCommand command = new SqlCommand(query, conn);
-                conn.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
+                    string query = @"SELECT * FROM GENERO_COLECCION";
+
+                    SqlCommand command = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
                         while (reader.Read())
                         {
                             Genero genero = new Genero();
@@ -31,8 +34,13 @@ namespace BINAES
                             list.Add(genero);
                         }
 
+                    }
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            catch(Exception e)
+            {
+
             }
             return list;
         }
