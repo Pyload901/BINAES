@@ -12,7 +12,12 @@ INSERT INTO NOMBRE_ETIQUETA(nombre) VALUES ('DOI');
 
 INSERT INTO IDIOMA_EJEMPLAR (idioma) VALUES ('Español');
 INSERT INTO IDIOMA_EJEMPLAR (idioma) VALUES ('English');
-
+INSERT INTO IDIOMA_EJEMPLAR (idioma) VALUES ('Frances');
+INSERT INTO IDIOMA_EJEMPLAR (idioma) VALUES ('Italiano');
+INSERT INTO IDIOMA_EJEMPLAR (idioma) VALUES ('Japones');
+INSERT INTO IDIOMA_EJEMPLAR (idioma) VALUES ('Ruso');
+INSERT INTO IDIOMA_EJEMPLAR (idioma) VALUES ('Portugues');
+INSERT INTO IDIOMA_EJEMPLAR (idioma) VALUES ('Aleman');
 
 INSERT INTO FORMATO_EJEMPLAR (formato) VALUES ('Físico');
 INSERT INTO FORMATO_EJEMPLAR (formato) VALUES ('Digital');
@@ -23,7 +28,11 @@ INSERT INTO GENERO_COLECCION (genero) VALUES ('Drama');
 INSERT INTO GENERO_COLECCION (genero) VALUES ('Action');
 INSERT INTO GENERO_COLECCION (genero) VALUES ('Adventure');
 INSERT INTO GENERO_COLECCION (genero) VALUES ('Animation');
-
+INSERT INTO GENERO_COLECCION (genero) VALUES ('Ficcion');
+INSERT INTO GENERO_COLECCION (genero) VALUES ('Terror');
+INSERT INTO GENERO_COLECCION (genero) VALUES ('Misterio');
+INSERT INTO GENERO_COLECCION (genero) VALUES ('Fantasia');
+INSERT INTO GENERO_COLECCION (genero) VALUES ('Romance');
 
 INSERT INTO TIPO_COLECCION (tipo) VALUES ('Educación');
 INSERT INTO TIPO_COLECCION (tipo) VALUES ('Juvenil');
@@ -37,6 +46,12 @@ INSERT INTO EDITORIAL (editorial) VALUES ('Santillana');
 INSERT INTO EDITORIAL (editorial) VALUES ('ESE Ediciones');
 INSERT INTO EDITORIAL (editorial) VALUES ('Edisal');
 INSERT INTO EDITORIAL (editorial) VALUES ('Ocean Sur');
+INSERT INTO EDITORIAL (editorial) VALUES ('Editorial Planeta');
+INSERT INTO EDITORIAL (editorial) VALUES ('Lumen');
+INSERT INTO EDITORIAL (editorial) VALUES ('Editorial Simon and Schuster');
+INSERT INTO EDITORIAL (editorial) VALUES ('Pearson');
+INSERT INTO EDITORIAL (editorial) VALUES ('HarpensCollins');
+INSERT INTO EDITORIAL (editorial) VALUES ('Berterlsmann');
 
 
 INSERT INTO COLECCION (nombre, id_tipo, id_genero) VALUES ('National Geographic', 1, 1);
