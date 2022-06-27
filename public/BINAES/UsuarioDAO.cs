@@ -13,28 +13,34 @@ namespace BINAES
         // Validación del Login
         public static Usuario Login (Usuario usuario)
         {
-            
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            try
             {
-                string query = "SELECT U.nombre, U.contrasenia, R.rol 'rol' FROM USUARIO U INNER JOIN ROL R ON U.id_rol = R.id WHERE nombre = @nombre";
-                SqlCommand command = new SqlCommand(query, conn);
-                command.Parameters.AddWithValue("@nombre", usuario.nombre);
-                conn.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    while (reader.Read())
+                    string query = "SELECT U.nombre, U.contrasenia, R.rol 'rol' FROM USUARIO U INNER JOIN ROL R ON U.id_rol = R.id WHERE nombre = @nombre";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    command.Parameters.AddWithValue("@nombre", usuario.nombre);
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        if (!BCrypt.Net.BCrypt.Verify(usuario.contrasenia, reader["contrasenia"].ToString()))
+                        while (reader.Read())
                         {
-                            usuario = null;
-                        }
-                        else
-                        {
-                            usuario.rol = reader["rol"].ToString();
+                            if (!BCrypt.Net.BCrypt.Verify(usuario.contrasenia, reader["contrasenia"].ToString()))
+                            {
+                                usuario = null;
+                            }
+                            else
+                            {
+                                usuario.rol = reader["rol"].ToString();
+                            }
                         }
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            catch (Exception e)
+            {
+
             }
             return usuario;
         }
@@ -80,35 +86,43 @@ namespace BINAES
         public static List<Usuario> Leer()
         {
             List<Usuario> list = new List<Usuario>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            try
             {
-                string query = "SELECT * FROM USUARIO";
-                SqlCommand command = new SqlCommand(query, conn);
-                conn.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
+                
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    if (reader.HasRows)
+                    string query = "SELECT * FROM USUARIO";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            Usuario usuario = new Usuario();
+                            while (reader.Read())
+                            {
+                                Usuario usuario = new Usuario();
 
-                            usuario.id = Convert.ToInt32(reader["id"]);
-                            usuario.nombre = reader["nombre"].ToString();
-                            usuario.institucion = reader["institucion"].ToString();
-                            usuario.direccion = reader["direccion"].ToString();
-                            usuario.telefono = reader["telefono"].ToString();
-                            usuario.fotografia = reader["fotografia"].ToString();
-                            usuario.email = reader["email"].ToString();
-                            usuario.id_rol = reader["id_rol"].ToString();
-                            usuario.id_ocupacion = Convert.ToInt32(reader["id_ocupacion"]);
+                                usuario.id = Convert.ToInt32(reader["id"]);
+                                usuario.nombre = reader["nombre"].ToString();
+                                usuario.institucion = reader["institucion"].ToString();
+                                usuario.direccion = reader["direccion"].ToString();
+                                usuario.telefono = reader["telefono"].ToString();
+                                usuario.fotografia = reader["fotografia"].ToString();
+                                usuario.email = reader["email"].ToString();
+                                usuario.id_rol = reader["id_rol"].ToString();
+                                usuario.id_ocupacion = Convert.ToInt32(reader["id_ocupacion"]);
 
-                            list.Add(usuario);
+                                list.Add(usuario);
+                            }
+                            DataGridViewComposer.GetNullProperties(list[0]);
                         }
-                        DataGridViewComposer.GetNullProperties(list[0]);
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            } 
+            catch (Exception e)
+            {
+
             }
             return list;
         }
@@ -149,3 +163,5 @@ namespace BINAES
         }
     }
 }
+
+
