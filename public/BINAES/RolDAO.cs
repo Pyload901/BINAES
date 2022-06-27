@@ -12,26 +12,34 @@ namespace BINAES
         public static List<Rol> Leer()
         {
             List<Rol> list = new List<Rol>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+
+            try
             {
-                string query = "SELECT * FROM ROL";
-                SqlCommand command = new SqlCommand(query, conn);
-                conn.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                 
+                    string query = "SELECT * FROM ROL";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+
                         while (reader.Read())
                         {
-                            Rol rol = new Rol (
+                            Rol rol = new Rol(
                                reader["id"].ToString(),
                                reader["rol"].ToString()
-                
+
                             );
                             list.Add(rol);
                         }
-                        
+
+                    }
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            catch(Exception e)
+            {
+
             }
             return list;
         }
