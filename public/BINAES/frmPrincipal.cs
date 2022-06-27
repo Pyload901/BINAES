@@ -452,11 +452,7 @@ namespace BINAES
                 dtpFechaFinalizacionEV.Text = dgv.Rows[e.RowIndex].Cells["fechaFin"].Value.ToString();
                 cmbAreaEventoEV.SelectedValue = dgv.Rows[e.RowIndex].Cells["id_area"].Value;
                 rtbObjetivoEventoEV.Clear();
-                List<ObjetivoEvento> objetivos = ObjetivoEventoDAO.Leer(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["id"].Value));
-                foreach (ObjetivoEvento obj in objetivos)
-                {
-                    rtbObjetivoEventoEV.AppendText(obj.objetivo + Environment.NewLine);
-                }
+                rtbObjetivoEventoEV.Text = dgv.Rows[e.RowIndex].Cells["objetivos"].Value.ToString();
                 nudNumeroAsistentesEV.Value = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["numero_asistentes"].Value);
                 btnDejarDeEditarEV.Enabled = true;
                 btnEliminarEventoEV.Enabled = true;
@@ -480,31 +476,10 @@ namespace BINAES
             btnDejarDeEditarEV.Enabled = false;
             btnEliminarEventoEV.Enabled = false;
         }
-        private void dgvEventosEV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-
-            /* if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Editar)
-             {
-                 Evento evento = EventoDAO.LeerUno(id);
-                 txtTituloEventoEV.Text = evento.titulo;
-                 dtpFechaInicioEV.Value = evento.fechaInicio;
-                 dtpFechaFinalizacionEV.Value = evento.fechaFin;
-                 nudNumeroAsistentesEV.Value = evento.numero_asistentes;
-                 btnDejarDeEditarEV.Enabled = true;
-             }
-             else if (Utils.VerificarOpcion(dgv, e) == OpcionesEnumerate.Eliminar)
-             {
-                 EventoDAO.Eliminar(id);
-             }*/
-        }
 
         private void btnSalirEdicionEjemplarAG_Click(object sender, EventArgs e)
         {
             txtTituloEventoEV.Clear();
-            /*dtpFechaInicioEV;
-            dtpFechaFinalizacionEV.Value = evento.fechaFin;
-            nudNumeroAsistentesEV.Value = evento.numero_asistentes;*/
             btnDejarDeEditarEV.Enabled = false;
         }
 
@@ -516,23 +491,34 @@ namespace BINAES
         {
             if (txtTituloEventoEV.Text != "" && dtpFechaInicioEV.Text != "" && dtpFechaFinalizacionEV.Text != "" && rtbObjetivoEventoEV.Text != "" && nudNumeroAsistentesEV.Value != 0 && picImagenEV.Image != Properties.Resources._default)
             {
-                List<string> objetivos = rtbObjetivoEventoEV.Text.Trim().Split('\n').ToList();
-                objetivos.RemoveAll(str => str == "");
-                Evento evento = new Evento();
-                evento.titulo = txtTituloEventoEV.Text;
-                evento.fechaInicio = Convert.ToDateTime(dtpFechaInicioEV.Text);
-                evento.fechaFin = Convert.ToDateTime(dtpFechaFinalizacionEV.Text);
-                evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
-                evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
-                evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
-
-                if (EventoDAO.Crear(evento))
+                if (nudNumeroAsistentesEV.Value > 358 && cmbAreaEventoEV.Text.Contains("Auditórium"))
                 {
-                    DataGridViewComposer.LimpiarDataGridView(dgvEventosEV);
-                    dgvEventosEV.DataSource = EventoDAO.Leer();
-                    DataGridViewComposer.Compose(dgvEventosEV);
+                    MessageBox.Show("No hay espacio para más de 358 personas en el Auditórium", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            } else
+                else if (nudNumeroAsistentesEV.Value > 200 && cmbAreaEventoEV.Text.Contains("Sala de proyección"))
+                {
+                    MessageBox.Show("No hay espacio para más de 200 personas en la Sala de proyección", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else 
+                {
+                    Evento evento = new Evento();
+                    evento.titulo = txtTituloEventoEV.Text;
+                    evento.fechaInicio = Convert.ToDateTime(dtpFechaInicioEV.Text);
+                    evento.fechaFin = Convert.ToDateTime(dtpFechaFinalizacionEV.Text);
+                    evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
+                    evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
+                    evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
+                    evento.objetivos = rtbObjetivoEventoEV.Text;
+                    evento.imagen = Utils.GuardarImagen(Properties.Resources.RutaImagenesEventos, picImagenEV.Image);
+                    if (EventoDAO.Crear(evento))
+                    {
+                        DataGridViewComposer.LimpiarDataGridView(dgvEventosEV);
+                        dgvEventosEV.DataSource = EventoDAO.Leer();
+                        DataGridViewComposer.Compose(dgvEventosEV);
+                    }
+                }
+            }
+            else
             {
                 MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -545,27 +531,49 @@ namespace BINAES
         private void btnActualizarEventoEV_Click(object sender, EventArgs e)
         {
             Evento evento = new Evento();
+            if (txtTituloEventoEV.Text != "" && dtpFechaInicioEV.Text != "" && dtpFechaFinalizacionEV.Text != "" && rtbObjetivoEventoEV.Text != "" && nudNumeroAsistentesEV.Value != 0 && picImagenEV.Image != Properties.Resources._default)
+            {
+                evento.titulo = txtTituloEventoEV.Text;
+                evento.fechaInicio = dtpFechaInicioEV.Value;
+                evento.fechaFin = dtpFechaFinalizacionEV.Value;
+                evento.objetivos = rtbObjetivoEventoEV.Text;
+                evento.id_area = Convert.ToInt32(cmbAreaEventoEV.SelectedValue);
 
-            evento.titulo = txtTituloEventoEV.Text;
-            evento.fechaInicio = dtpFechaInicioEV.Value;
-            evento.fechaFin = dtpFechaFinalizacionEV.Value;
-            evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
-            // Agregar id_area
-
-            if (EventoDAO.Editar(evento))
-                MessageBox.Show("Actualizada con éxito!");
+                evento.imagen = Utils.GuardarImagen(Properties.Resources.RutaImagenesEventos, picImagenEV.Image);
+                evento.numero_asistentes = Convert.ToInt32(nudNumeroAsistentesEV.Value);
+                // Agregar id_area
+                if (nudNumeroAsistentesEV.Value > 358 && cmbAreaEventoEV.Text.Contains("Auditórium"))
+                {
+                    MessageBox.Show("No hay espacio para más de 358 personas en el Auditórium", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (nudNumeroAsistentesEV.Value > 200 && cmbAreaEventoEV.Text.Contains("Sala de proyección"))
+                {
+                    MessageBox.Show("No hay espacio para más de 200 personas en la Sala de proyección", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                if (EventoDAO.Editar(evento))
+                    MessageBox.Show("Actualizada con éxito!");
+                else
+                    MessageBox.Show("Ha ocurrido un error!");
+            }
             else
-                MessageBox.Show("Ha ocurrido un error!");
+            {
+                MessageBox.Show("No se han llenado todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
 
         //Delete
         private void btnEliminarEventoEV_Click(object sender, EventArgs e)
         {
-            int id = 0;
+            int id = Convert.ToInt32(btnEditarEventoEV.Tag);
 
             if (EventoDAO.Eliminar(id))
+            {
                 MessageBox.Show("Eliminada con éxito!");
+                DataGridViewComposer.LimpiarDataGridView(dgvEventosEV);
+                dgvEventosEV.DataSource = EventoDAO.Leer();
+                DataGridViewComposer.Compose(dgvEventosEV);
+            }
             else
                 MessageBox.Show("Ha ocurrido un error!");
 

@@ -151,17 +151,18 @@ CREATE TABLE EVENTO(
 	id INT PRIMARY KEY IDENTITY,
 	titulo VARCHAR(50) NOT NULL,
     imagen VARCHAR(100) NOT NULL,
+    objetivos TEXT NOT NULL,
 	fecha_inicio DATETIME NOT NULL,
 	fecha_fin DATETIME NOT NULL,
 	numero_asistentes INT NOT NULL,
 	id_area INT NULL
 );
 
-CREATE TABLE OBJETIVO_EVENTO(
-	id INT PRIMARY KEY IDENTITY,
-	objetivo VARCHAR(150) NOT NULL,
-	id_evento INT NOT NULL
-);
+-- CREATE TABLE OBJETIVO_EVENTO(
+-- 	id INT PRIMARY KEY IDENTITY,
+-- 	objetivo VARCHAR(150) NOT NULL,
+-- 	id_evento INT NOT NULL
+-- );
 GO
 
 --Creacion de llaves foraneas
@@ -270,10 +271,10 @@ ADD CONSTRAINT fk_evento_area
 FOREIGN KEY (id_area) REFERENCES AREA(id)
 ON DELETE SET NULL;
 
-ALTER TABLE OBJETIVO_EVENTO 
-ADD CONSTRAINT fk_objetivo_evento_evento 
-FOREIGN KEY (id_evento) REFERENCES EVENTO(id)
-ON DELETE CASCADE;
+-- ALTER TABLE OBJETIVO_EVENTO 
+-- ADD CONSTRAINT fk_objetivo_evento_evento 
+-- FOREIGN KEY (id_evento) REFERENCES EVENTO(id)
+-- ON DELETE CASCADE;
 
 ALTER TABLE AREA
 ADD CONSTRAINT fk_area_descripcion_area
