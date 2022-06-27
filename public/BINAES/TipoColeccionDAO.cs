@@ -12,27 +12,35 @@ namespace BINAES
         public static List<TipoColeccion> Leer()
         {
             List<TipoColeccion> list = new List<TipoColeccion>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+
+            try
             {
-                string query = @"SELECT * FROM TIPO_COLECCION";
-
-                SqlCommand command = new SqlCommand(query, conn);
-                conn.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    while (reader.Read())
+                    string query = @"SELECT * FROM TIPO_COLECCION";
+
+                    SqlCommand command = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        TipoColeccion tipo = new TipoColeccion();
+                        while (reader.Read())
+                        {
+                            TipoColeccion tipo = new TipoColeccion();
 
-                        tipo.id = Convert.ToInt32(reader["id"]);
-                        tipo.tipo = reader["tipo"].ToString();
+                            tipo.id = Convert.ToInt32(reader["id"]);
+                            tipo.tipo = reader["tipo"].ToString();
 
 
-                        list.Add(tipo);
+                            list.Add(tipo);
+                        }
+
                     }
-
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            catch (Exception e)
+            {
+
             }
             return list;
         }
