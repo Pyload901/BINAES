@@ -11,22 +11,29 @@ namespace BINAES
         public static List<Formato> Leer ()
         {
             List<Formato> list = new List<Formato>();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+
+            try
             {
-                string query = "SELECT * FROM FORMATO_EJEMPLAR";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    while (reader.Read())
+                    string query = "SELECT * FROM FORMATO_EJEMPLAR";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        list.Add(new Formato(
-                            Convert.ToInt32(reader["id"]),
-                            reader["formato"].ToString()
-                        ));
+                        while (reader.Read())
+                        {
+                            list.Add(new Formato(
+                                Convert.ToInt32(reader["id"]),
+                                reader["formato"].ToString()
+                            ));
+                        }
                     }
-                }
-                conn.Close();
+                    conn.Close();
+            }
+            }catch (Exception ex)
+            {
+
             }
             return list;
         }
