@@ -1870,6 +1870,10 @@ namespace BINAES
                         }
                     }
                 }
+                DataGridViewComposer.LimpiarDataGridView(dgvEjemplaresAG);
+                dgvEjemplaresAG.DataSource = EjemplarDAO.Leer();
+                DataGridViewComposer.Compose(dgvEjemplaresAG);
+
             }
         }
     }
