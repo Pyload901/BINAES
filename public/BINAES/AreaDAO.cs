@@ -11,27 +11,35 @@ namespace BINAES
     {
         public static List<Area> Leer ()
         {
-            List<Area> list = new List<Area> ();
-            using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
+            List<Area> list = new List<Area>();
+
+            try
             {
-                string query = "SELECT  A.id, DA.nombre, A.piso FROM AREA A INNER JOIN DESCRIPCION_AREA DA ON DA.id = A.id_descripcion_area";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlConnection conn = new SqlConnection(Properties.Resources.CadenaConexion))
                 {
-                    if (reader.HasRows)
+                    string query = "SELECT  A.id, DA.nombre, A.piso FROM AREA A INNER JOIN DESCRIPCION_AREA DA ON DA.id = A.id_descripcion_area";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            Area area = new Area ();
-                            area.id = Convert.ToInt32(reader["id"]);
-                            area.nombre = reader["id"].ToString() + ". Piso " + reader["piso"].ToString() + ' ' + reader["nombre"].ToString();
-                            list.Add(area);
+                            while (reader.Read())
+                            {
+                                Area area = new Area();
+                                area.id = Convert.ToInt32(reader["id"]);
+                                area.nombre = reader["id"].ToString() + ". Piso " + reader["piso"].ToString() + ' ' + reader["nombre"].ToString();
+                                list.Add(area);
+                            }
+                            DataGridViewComposer.GetNullProperties(list[0]);
                         }
-                        DataGridViewComposer.GetNullProperties(list[0]);
                     }
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            catch (Exception ex)
+            {
+
             }
             return list;
         }
