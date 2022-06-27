@@ -434,14 +434,16 @@ namespace BINAES
        
             if (ColeccionDAO.Crear(col))
             {
-                MessageBox.Show("Registro coleccion agregada con éxito!");
+                MessageBox.Show("Colección agregada con éxito!", "Colección registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
                 DataGridViewComposer.LimpiarDataGridView(dgvColeccionesCO);
                 dgvColeccionesCO.DataSource = ColeccionDAO.Leer();
                 DataGridViewComposer.Compose(dgvColeccionesCO);
             }
             else
             {
-                MessageBox.Show("Ha ocurrido un error al intentar agregar la coleccion!");
+                MessageBox.Show("Hubo un error!", "Colección no registrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
             }
         }
         private void dgvVistaColeccionCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -464,13 +466,14 @@ namespace BINAES
 
             if (ColeccionDAO.Eliminar(id))
             {
-                MessageBox.Show("Eliminada con éxito!");
+                MessageBox.Show("Colección eliminada con éxito!", "Colección eliminada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 DataGridViewComposer.LimpiarDataGridView(dgvColeccionesCO);
                 dgvColeccionesCO.DataSource = ColeccionDAO.Leer();
                 DataGridViewComposer.Compose(dgvColeccionesCO);
             }
             else
-                MessageBox.Show("Ha ocurrido un error!");
+                MessageBox.Show("Hubo un error!", "Colección no eliminada", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -603,9 +606,9 @@ namespace BINAES
             // Agregar id_area
 
             if (EventoDAO.Editar(evento))
-                MessageBox.Show("Actualizada con éxito!");
+                MessageBox.Show("Evento agregado con éxito!", "Evento registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MessageBox.Show("Ha ocurrido un error!");
+                MessageBox.Show("Hubo un error!", "Evento no registrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
 
@@ -617,10 +620,11 @@ namespace BINAES
             int id = coleccion.id;
 
             if (EventoDAO.Eliminar(id))
-                MessageBox.Show("Eliminada con éxito!");
-            else
-                MessageBox.Show("Ha ocurrido un error!");
 
+                MessageBox.Show("Registro eliminado con éxito!", "Registro eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            else
+                MessageBox.Show("Ha ocurrido un error!", "Registro no eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         // ---------------------------------------------------------------------------------------------------
@@ -685,14 +689,14 @@ namespace BINAES
 
             if (UsuarioDAO.Crear(user))
             {
-                MessageBox.Show("Registro agregado con éxito!");
+                MessageBox.Show("Registro agregado con éxito!", "Registro completo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataGridViewComposer.LimpiarDataGridView(dgvUsuariosUS);
                 dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
                 DataGridViewComposer.Compose(dgvUsuariosUS);
             }
             else
             {
-                MessageBox.Show("Ha ocurrido un error!");
+                MessageBox.Show("Ha ocurrido un error!", "Registro incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -734,15 +738,18 @@ namespace BINAES
 
             if (UsuarioDAO.Editar(user))
             {
-                MessageBox.Show("Actualizada con éxito!");
+                MessageBox.Show("Registro actualizado con éxito!", "Registro actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataGridViewComposer.LimpiarDataGridView(dgvUsuariosUS);
                 dgvUsuariosUS.DataSource = UsuarioDAO.Leer();
                 DataGridViewComposer.Compose(dgvUsuariosUS);
 
             }
-                
+
             else
-                MessageBox.Show("Ha ocurrido un error!");
+            {
+                MessageBox.Show("Hubo un error!", "Registro No actualizado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                
             
         }   
 

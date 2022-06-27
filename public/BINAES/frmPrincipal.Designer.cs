@@ -148,7 +148,6 @@ namespace BINAES
             this.tblColeccion = new System.Windows.Forms.TableLayoutPanel();
             this.dgvColeccionesCO = new System.Windows.Forms.DataGridView();
             this.btnBuscarCO = new System.Windows.Forms.Button();
-            this.btnDejarDeEditarCO = new System.Windows.Forms.Button();
             this.btnAgregarCO = new System.Windows.Forms.Button();
             this.cmbGeneroColeccionCO = new System.Windows.Forms.ComboBox();
             this.lblGeneroColeccionCO = new System.Windows.Forms.Label();
@@ -156,6 +155,7 @@ namespace BINAES
             this.lblTipoColeccionCO = new System.Windows.Forms.Label();
             this.txtNombreColeccionCO = new System.Windows.Forms.TextBox();
             this.lblNombreColeccionCO = new System.Windows.Forms.Label();
+            this.btnDejarDeEditarCO = new System.Windows.Forms.Button();
             this.btnEliminarCO = new System.Windows.Forms.Button();
             this.TabAcerca = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -1537,7 +1537,7 @@ namespace BINAES
             this.tabAdmin.Controls.Add(this.tabColeccion);
             this.tabAdmin.Controls.Add(this.TabAcerca);
             this.tabAdmin.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabAdmin.ItemSize = new System.Drawing.Size(75, 50);
+            this.tabAdmin.ItemSize = new System.Drawing.Size(0, 1);
             this.tabAdmin.Location = new System.Drawing.Point(292, 47);
             this.tabAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabAdmin.Name = "tabAdmin";
@@ -1989,19 +1989,6 @@ namespace BINAES
             this.btnBuscarCO.UseVisualStyleBackColor = true;
             this.btnBuscarCO.Click += new System.EventHandler(this.btnBuscarCO_Click);
             // 
-            // btnDejarDeEditarCO
-            // 
-            this.btnDejarDeEditarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnDejarDeEditarCO.Enabled = false;
-            this.btnDejarDeEditarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDejarDeEditarCO.Location = new System.Drawing.Point(136, 471);
-            this.btnDejarDeEditarCO.Name = "btnDejarDeEditarCO";
-            this.btnDejarDeEditarCO.Size = new System.Drawing.Size(178, 33);
-            this.btnDejarDeEditarCO.TabIndex = 28;
-            this.btnDejarDeEditarCO.Text = "Dejar de editar";
-            this.btnDejarDeEditarCO.UseVisualStyleBackColor = true;
-            this.btnDejarDeEditarCO.Click += new System.EventHandler(this.btnDejarDeEditarCO_Click);
-            // 
             // btnAgregarCO
             // 
             this.btnAgregarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -2094,6 +2081,19 @@ namespace BINAES
             this.lblNombreColeccionCO.Text = "Nombre:";
             this.lblNombreColeccionCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnDejarDeEditarCO
+            // 
+            this.btnDejarDeEditarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnDejarDeEditarCO.Enabled = false;
+            this.btnDejarDeEditarCO.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDejarDeEditarCO.Location = new System.Drawing.Point(136, 471);
+            this.btnDejarDeEditarCO.Name = "btnDejarDeEditarCO";
+            this.btnDejarDeEditarCO.Size = new System.Drawing.Size(178, 33);
+            this.btnDejarDeEditarCO.TabIndex = 28;
+            this.btnDejarDeEditarCO.Text = "Dejar de editar";
+            this.btnDejarDeEditarCO.UseVisualStyleBackColor = true;
+            this.btnDejarDeEditarCO.Click += new System.EventHandler(this.btnDejarDeEditarCO_Click);
+            // 
             // btnEliminarCO
             // 
             this.btnEliminarCO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -2109,9 +2109,9 @@ namespace BINAES
             // TabAcerca
             // 
             this.TabAcerca.Controls.Add(this.tableLayoutPanel1);
-            this.TabAcerca.Location = new System.Drawing.Point(4, 54);
+            this.TabAcerca.Location = new System.Drawing.Point(4, 5);
             this.TabAcerca.Name = "TabAcerca";
-            this.TabAcerca.Size = new System.Drawing.Size(964, 546);
+            this.TabAcerca.Size = new System.Drawing.Size(964, 595);
             this.TabAcerca.TabIndex = 10;
             this.TabAcerca.Text = "Acerca de BINAES";
             this.TabAcerca.UseVisualStyleBackColor = true;
