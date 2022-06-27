@@ -422,7 +422,7 @@ namespace BINAES
             Coleccion cole = new Coleccion();
             cole.nombre = txtNombreCO.Text;
             cole.id_genero = Convert.ToInt32(cmbGeneroColeccionCO.ValueMember);
-            cole.id_coleccion = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
+            cole.id = Convert.ToInt32(cmbTipoColeccionCO.ValueMember);
 
             ColeccionDAO.Crear(cole);
         }
